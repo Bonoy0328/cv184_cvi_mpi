@@ -1,0 +1,23 @@
+
+Module: [MIPI_RX], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+
+------------Combo DEV ATTR--------------
+   Devno  WorkMode  DataType   WDRMode  SyncMode  DataEndian  SyncCodeEndian
+       0INPUT_MODE_BT601   Devno  WorkMode  DataType   WDRMode  SyncMode  DataEndian  SyncCodeEndian
+       1      MIPI     RAW10      NONE       N/A         N/A             N/A
+           LinkId                     PN Swap
+  5, 4, 3,-1,-1                 0, 0, 0, 0, 0
+
+------------MIPI info-------------------
+ Devno EccErr CrcErr HdrErr WcErr fifofull   decode
+     0      0      0      0     0        0  unknown
+  Physical:       D0       D1       D2       D3       D4       D5
+                  ff        0        0        0        0        0
+   Digital:       D0       D1       D2       D3    CK_HS  CK_ULPS  CK_STOP   CK_ERR   Deskew
+             hs_idle  hs_idle   hs_hst   hs_hst        0        0        0        0     idle
+ Devno EccErr CrcErr HdrErr WcErr fifofull   decode
+     1      0      1      0     0        0    raw10
+  Physical:       D0       D1       D2       D3       D4       D5
+                  ff        0        0        0        0        0
+   Digital:       D0       D1       D2       D3    CK_HS  CK_ULPS  CK_STOP   CK_ERR   Deskew
+             hs_idle  hs_idle   hs_hst   hs_hst        0        1        0        0     idle

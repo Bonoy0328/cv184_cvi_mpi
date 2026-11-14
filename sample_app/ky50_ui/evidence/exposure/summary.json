@@ -1,0 +1,32 @@
+{
+  "release": "ky50_ir_ae_20261111",
+  "runtime_log": "/tmp/ky50-ir-ae.log",
+  "binary_sha256": "46c868498eac775568ca54f4d058a729a4406f9a3841c90acac03f48baac7502",
+  "pipe": 0,
+  "controlled_parameter": "ISP_EXPOSURE_ATTR_S.stAuto.u8Compensation",
+  "target_sequence": [
+    56,
+    52,
+    48,
+    44,
+    40,
+    36,
+    32
+  ],
+  "persisted_success_target": 32,
+  "restart_restore": [
+    56,
+    32
+  ],
+  "board_bright_adjustments": 6,
+  "board_dark_adjustments": 0,
+  "recognitions_before_restart": 3,
+  "recognitions_after_restart": 4,
+  "user_feedback": "是的，目前全部正常；仍可正常识别",
+  "preserved_pva_brightness_thresholds": [
+    60,
+    160
+  ],
+  "dark_branch_validation": "host policy test; no STATUS_TOO_DARK adjustment observed in this board log",
+  "cold_power_cycle_tested": false
+}

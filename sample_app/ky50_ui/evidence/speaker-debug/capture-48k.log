@@ -1,0 +1,4 @@
+[cvi_info] cvi_sample_audio:Enter command id =[4]
+[platform_audio_init][37]
+vqe has not been already inited yet.
+AudioInputThread exit

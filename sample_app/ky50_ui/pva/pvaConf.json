@@ -1,0 +1,70 @@
+{
+    "name": "PVA_LIB_CONF",
+    "version": "2.2",
+    "debug": false,
+    "isSaveImg": false,
+    "keyPath": "/mnt/cfg/ky50-ui/pva/deviceID.key",
+    "model_path": "/tmp/ky50-ui/pva/pva.model",
+    "handpose": {
+        "input_w": 128,
+        "input_h": 128,
+        "model_probability_threshold": 0.76,
+        "brightness_threshold_min": 60,
+        "brightness_threshold_max": 160,
+        "brightness_range_threshold": 75,
+        "blur_threshold": 3.2,
+        "roll_angle_threshold": 0.7,
+        "horizontal_offset_tolerance": 0.01,
+        "vertical_offset_tolerance": 0.01,
+        "hand_size_width_min": 0.4,
+        "hand_size_width_max": 1,
+        "hand_size_height_min": 0.4,
+        "hand_size_height_max": 1,
+        "enable_enhance": false,
+        "use_keypoint": true,
+        "dynamic_detection_level": 2,
+        "glove_threshold": 0.5
+    },
+    "feature": {
+        "input_w": 128,
+        "input_h": 128,
+        "feature_len": 512,
+        "auth_threshold": 0.52,
+        "filter_threshold": 0.52,
+        "security_level": 1
+    },
+    "database": {
+        "database_path": "/mnt/system/ky50-data/pva/pvis_cv184x_fused_20261111.bin",
+        "search_index_path": "/mnt/system/ky50-data/pva/pvis_cv184x_fused_20261111.usearch",
+        "max_database_count": 100,
+        "regis_max_count": 10,
+        "regis_center_count": 3
+    },
+    "facepose": {
+        "enable": true,
+        "model_path": "/tmp/ky50-ui/pva/pva_face.model",
+        "input_w": 640,
+        "input_h": 480,
+        "model_probability_threshold": 0.5,
+        "nms_threshold": 0.4,
+        "pad": 0.5,
+        "quality_enable": true,
+        "quality_threshold": 0.3,
+        "liveness_enable": true,
+        "liveness_threshold": 0.5
+    },
+    "facefeature": {
+        "input_w": 112,
+        "input_h": 112,
+        "feature_len": 512,
+        "auth_threshold": 0.24,
+        "filter_threshold": 0.24,
+        "security_level": 1
+    },
+    "facedatabase": {
+        "database_path": "/mnt/system/ky50-data/pva/pvis_face_1000_3tpl_20261113.bin",
+        "max_database_count": 100,
+        "regis_max_count": 1,
+        "regis_center_count": 3
+    }
+}

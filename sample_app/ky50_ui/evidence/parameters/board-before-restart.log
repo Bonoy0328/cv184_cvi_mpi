@@ -1,0 +1,12 @@
+UI page=0 feature=0
+PALM defaults brightness=60..160 offset=0.01/0.01
+PALM ready: encrypted pva.model, input=IR Y only, RGB planar conversion inside libpva
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+UI page=1 feature=0
+UI page=5 feature=0
+UI page=15 feature=0
+PALM_PARAMETERS hand=0.70 auth=0.50 dynamic=1 applied
+ACCESS parameters saved hand=70 auth=50 dynamic=1
+UI page=5 feature=0
+UI page=1 feature=0
+UI page=0 feature=0

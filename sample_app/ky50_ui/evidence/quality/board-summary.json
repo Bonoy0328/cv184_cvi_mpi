@@ -1,0 +1,42 @@
+{
+  "states": [
+    [
+      0,
+      11,
+      "hidden"
+    ],
+    [
+      1,
+      0,
+      "green"
+    ],
+    [
+      1,
+      3,
+      "red"
+    ],
+    [
+      1,
+      4,
+      "red"
+    ],
+    [
+      1,
+      7,
+      "red"
+    ],
+    [
+      1,
+      11,
+      "red"
+    ],
+    [
+      1,
+      17,
+      "red"
+    ]
+  ],
+  "transition_count": 174,
+  "enrollment_successes": 1,
+  "user_confirmation": "颜色、状态提示和进度控制都正常"
+}

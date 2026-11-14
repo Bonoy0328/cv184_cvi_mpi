@@ -1,0 +1,15 @@
+C25 saved_mux=0x00000003 saved_direction=0x02040000 saved_data=0x00000000
+C25_MUX0_HIGH_START
+1777.09 1759.05
+[cvi_info] cvi_sample_audio:Enter command id =[5]
+[platform_audio_init][37]
+[cvi_info] sr:16000,channels:2,period:320,s32FrameBytes:1280.
+[end] create ao chnid:0, channels:2,iShmMemIndex:1,sr:16000,bufsize:102400
+num_framebytes 0.
+[warn]<platform_ao_disablechn,342> check the thread status,refFlag(1) state(2)
+AudioOutputThread out.
+C25_MUX0_HIGH_PLAYER_EXIT=0
+C25_MUX0_HIGH_RESTORED
+2387.10 2363.17
+0x00000003
+0x02040000

@@ -1,0 +1,13 @@
+PASS 168 exact NV12 ROI cases: gray/color, odd origin, borders, outside, live resize
+PASS Y-only crop/live resize, 64 detection canvases, area rounding and large-tap fallback
+BENCH IR ROI side=128 full_cpu_ms=44.558 roi_cpu_ms=35.456 y_only_cpu_ms=11.367
+BENCH IR ROI side=270 full_cpu_ms=31.144 roi_cpu_ms=22.418 y_only_cpu_ms=9.415
+BENCH IR ROI side=480 full_cpu_ms=49.166 roi_cpu_ms=41.997 y_only_cpu_ms=18.392
+BENCH IR ROI side=720 full_cpu_ms=81.910 roi_cpu_ms=76.946 y_only_cpu_ms=33.099
+PASS 228 area resizes: random, near-half, border, constant, noninteger ratios, >32 tap fallback
+BENCH area 256 reference_cpu_ms=18.481 optimized_cpu_ms=16.710
+BENCH area 320 reference_cpu_ms=23.903 optimized_cpu_ms=20.162
+BENCH area 384 reference_cpu_ms=29.939 optimized_cpu_ms=24.616
+BENCH area 512 reference_cpu_ms=43.157 optimized_cpu_ms=32.783
+BENCH area 640 reference_cpu_ms=58.581 optimized_cpu_ms=43.144
+BENCH area 768 reference_cpu_ms=77.808 optimized_cpu_ms=55.137

@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-12",
+  "purpose": "C25 LCD reset and AOUTR software coexistence assessment",
+  "sources_sha256": {
+    "SDK/linux_5.10/sound/soc/cvitek/codec_dac.c": "0ebf18dc887e862ea6c8a200eb40528d3502914cac714aa5e3816415bb742fb2",
+    "SDK/linux_5.10/sound/soc/cvitek/codec_common.h": "3e8837d8f0be86b47c8a0d06970a9e827d55878fc36ec75e5025c0b2b604bed1",
+    "SDK/u-boot-2021.10/board/cvitek/cv184x/cv184x_pinlist_swconfig.h": "51189552ba083fabe660cb11d0496b47bb148cba9f08fd4f699c089dbea37923",
+    "Doc/M050-0287-1B0规格书(1).pdf": "eab3f70e1e4dba20905ac0c9e99c56529b64d4ee2aeffb152f1732f58cbafc72",
+    "Doc/KY50-V1.0(1).pdf": "5a2cf9d0706541b37963ec532578b518e4c93e45d7b58968c05af636b4e26a2d"
+  },
+  "official_pinmux_guide": "https://doc.sophgo.com/cvitek-develop-docs/master/docs_latest_release/CV184x/zh/01.software/BSP/Peripheral_Driver/build/html/12_CVI_PINMUX_Operation_Guide.html",
+  "scope": "Hashes identify reviewed local sources; do not imply a new kernel build or flash. No applicable hardware prohibition or complete audio pad isolation register description found in reviewed materials."
+}

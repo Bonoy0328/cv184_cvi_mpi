@@ -1,0 +1,12 @@
+Fri Nov 13 09:42:29 UTC 2026
+5.10.4-tag--g79534ab146b7
+PID=311
+/tmp/ky50-ui/ky50_ui
+ gpio-488 (                    |ky50-ir-light       ) out hi 
+ gpio-499 (                    |ky50-white-light    ) out lo 
+version=1
+palm_leave_frames=3
+face_leave_frames=3
+192.168.31.57:/home/bonoy/NFS_Files /mnt/data/opt nfs rw,relatime,vers=3,rsize=1048576,wsize=1048576,namlen=255,hard,nolock,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.31.57,mountvers=3,mountproto=tcp,local_lock=all,addr=192.168.31.57 0 0
+Filesystem                Size      Used Available Use% Mounted on
+tmpfs                    71.5M     22.0M     49.5M  31% /tmp

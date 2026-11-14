@@ -1,0 +1,385 @@
+[  607.529574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  607.639580] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  607.749578] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  607.859571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  607.969573] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.079575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.189572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.299572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.409572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.519572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.629574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.739572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.849571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  608.959573] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.069571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.179571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.289572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.399572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.509575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.619571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.729572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.839570] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  609.949583] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.059575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.169571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.279572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.389571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.499574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.609571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.719571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.829573] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  610.939576] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.049575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.159574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.269569] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.379572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.489572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.599571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.709574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.819570] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  611.929575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.039574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.149575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.259572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.369570] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.479575] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.589572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.699573] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.809573] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  612.919574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.029579] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.139572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.249580] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.359571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.469569] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.579572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.689571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.799574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  613.909585] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.019571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.129572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.239571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.349571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.459572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.569569] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.679572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.789614] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  614.899578] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.009572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.119572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.229571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.339571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.449571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.559571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.669588] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.779571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.889579] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  615.999572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.109571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.219570] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.329573] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.439572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.549572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.659571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.769570] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.879577] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  616.989572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  617.099571] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  617.209570] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  617.319569] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  617.429579] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  617.539572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  617.649572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  644.955013] misc cv184x-mipi-rx: devno = 0, input_mode = CMOS, mac_clk = 400MHZ
+[  644.955025] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  644.955037] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  644.955051] cif a0a0000.cif: ratio 21, set rate 618M
+[  644.955129] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  644.961039] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  644.971392] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  644.977237] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  645.080559] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.080598] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 1 times
+[  645.159572] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.181239] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x0
+[  645.181267] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.189570] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.199587] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.209603] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.219619] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.229641] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 2 times
+[  645.269577] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.281233] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.281257] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.289568] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.299567] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.309583] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.319599] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.329573] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 3 times
+[  645.379579] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.381229] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.381253] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.389571] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.399567] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.409567] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.419583] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.429573] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 4 times
+[  645.481225] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.481247] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.489566] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.489579] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.499572] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.509570] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.519567] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.529589] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 5 times
+[  645.581220] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.581242] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.591259] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.599566] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.599580] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.609572] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.619567] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.629574] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 6 times
+[  645.681219] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.681241] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.691258] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.701274] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.709565] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.709579] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.719573] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.729574] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 7 times
+[  645.781216] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.781237] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.791255] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.801270] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.811286] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.819565] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.819578] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.829586] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 8 times
+[  645.881216] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.881245] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.889568] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.899585] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.909601] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  645.919616] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  645.929572] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 9 times
+[  645.929591] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  645.969089] vi_err_wake_up_th:3139(): dbg_0=0x18d80, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x0
+[  645.969133] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[  645.979149] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[  645.989164] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[  645.999178] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[  646.009191] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[  646.019216] _vi_err_retrig_pre_fe:2883(): fe_0 trig retry 10 times
+[  646.039578] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  838.285707] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  838.285719] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  838.285731] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  838.285745] cif a0a0000.cif: ratio 21, set rate 618M
+[  838.285823] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  838.291738] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  838.302088] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  838.307967] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1037.358585] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1037.358597] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1037.358609] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1037.358623] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1037.358716] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1037.364572] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1037.375655] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1037.381560] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1433.564839] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1434.207694] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1434.207706] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1434.207718] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1434.207732] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1434.207826] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1434.213683] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1434.224074] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1434.229970] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1434.370751] vpss_send_frame:851(): Grp(0) Size(640 * 480) mismatch.
+[ 1434.734332] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1479.474651] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1479.474663] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1479.474675] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1479.474688] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1479.474781] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1479.480694] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1479.491080] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1479.496962] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1758.883568] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1759.541430] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1759.541442] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1759.541454] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1759.541467] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1759.541560] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1759.547477] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1759.557877] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1759.563743] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1762.743258] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[ 1762.743270] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[ 1762.743282] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1762.743290] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1762.743298] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[ 1762.743306] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[ 1762.743314] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[ 1762.743322] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1762.743330] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1762.743338] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1762.743345] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1762.743352] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1762.743359] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1762.743372] cif a0a0000.cif: ratio 18, set rate 534M
+[ 1762.743428] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1762.749284] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1762.759639] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1762.765499] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1762.776273] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 1762.776284] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1762.776295] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1762.776303] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1762.776311] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 1762.776319] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 1762.776326] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 1762.776335] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1762.776342] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1762.776350] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1762.776357] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1762.776364] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1762.776372] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1762.776384] cif a0a0000.cif: ratio 10, set rate 309M
+[ 1763.141734] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[ 1763.251696] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[ 1765.770572] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1766.130411] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[ 1766.131339] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[ 1766.131350] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[ 1766.131362] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1766.131369] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1766.131377] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[ 1766.131385] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[ 1766.131393] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[ 1766.131401] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1766.131409] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1766.131417] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1766.131424] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1766.131432] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1766.131439] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1766.131452] cif a0a0000.cif: ratio 18, set rate 534M
+[ 1766.131508] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1766.137364] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1766.147720] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1766.153580] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1766.164353] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 1766.164362] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1766.164374] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1766.164381] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1766.164389] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 1766.164397] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 1766.164405] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 1766.164413] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1766.164421] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1766.164429] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1766.164436] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1766.164443] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1766.164451] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1766.164462] cif a0a0000.cif: ratio 10, set rate 309M
+[ 1766.530264] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1769.378997] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1769.738847] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[ 1769.739378] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1769.739389] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1769.739401] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1769.739414] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1769.739517] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1769.745374] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1769.755723] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1769.761630] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1772.938085] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1772.938097] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1772.938109] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1772.938123] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1772.938219] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1772.944076] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1772.954423] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1772.960342] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1776.137129] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[ 1776.137141] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[ 1776.137154] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1776.137161] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1776.137169] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[ 1776.137177] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[ 1776.137185] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[ 1776.137193] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1776.137201] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1776.137209] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1776.137216] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1776.137223] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1776.137231] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1776.137244] cif a0a0000.cif: ratio 18, set rate 534M
+[ 1776.137300] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1776.143156] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1776.153509] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1776.159370] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1776.170134] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 1776.170145] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1776.170156] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1776.170164] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1776.170172] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 1776.170180] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 1776.170188] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 1776.170196] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1776.170203] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1776.170211] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1776.170218] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1776.170226] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1776.170233] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1776.170245] cif a0a0000.cif: ratio 10, set rate 309M
+[ 1776.535919] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[ 1776.645877] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[ 1779.574578] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1779.934421] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[ 1779.935389] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[ 1779.935400] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[ 1779.935412] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1779.935420] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1779.935428] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[ 1779.935436] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[ 1779.935444] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[ 1779.935452] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1779.935460] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1779.935468] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1779.935475] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1779.935482] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1779.935490] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1779.935502] cif a0a0000.cif: ratio 18, set rate 534M
+[ 1779.935558] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1779.941414] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1779.951768] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1779.957627] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1779.968389] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 1779.968399] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1779.968411] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1779.968418] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1779.968427] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 1779.968435] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 1779.968442] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 1779.968450] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1779.968458] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1779.968466] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1779.968473] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1779.968480] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1779.968488] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1779.968499] cif a0a0000.cif: ratio 10, set rate 309M
+[ 1780.334247] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1783.183011] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1783.542849] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[ 1783.543384] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1783.543395] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1783.543407] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1783.543420] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1783.543525] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1783.549381] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1783.559728] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1783.565589] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.

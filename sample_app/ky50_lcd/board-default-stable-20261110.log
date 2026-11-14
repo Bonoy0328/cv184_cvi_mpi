@@ -1,0 +1,97 @@
+Tue Nov 10 08:42:34 UTC 2026
+ 08:42:34 up 20 min,  load average: 4.00, 3.95, 2.96
+/mnt/data/opt/ky50_lcd/sample_ky50_lcd
+./sample_ky50_lcd --vendor-test 2,40,40,2,9,193,60 0 
+KY50 LCD is not running
+KY50 supplier initialization test: 480x854, RGB888, 2 lanes, pixel clock 35675 kHz
+Timing 2,40,40,2,9,193,60; LCD reset C25, touch reset C18.
+HS prepare/zero/trail: 4/16/8
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+Actual MIPI timing 2,40,54,2,9,193; pixel clock 36563 kHz
+reset DCS read da: 80
+reset DCS read db: a0
+reset DCS read dc: fb
+reset DCS read 0a: 08
+reset DCS read 0c: 00
+reset DCS read 05: 00
+reset DCS read 0f: 00
+reset DCS read b0: 00
+reset DCS read b7: 00
+reset DCS read bf: 00
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+RGB video A submitted: 480x854 stride=1472, private pool=16.
+Test active; check the physical screen for a centered white A on black.
+SIGUSR1 cycles: A -> hardware colorbar -> red -> green -> blue -> black -> A.
+0x08100401
+cat: can't open '/proc/cvitek/vo': No such file or directory
+80f97b86b5006afb9140ead6270cb6ca843ba2722d363e42d4b6a01a11befcc9  /mnt/data/opt/ky50_lcd/sample_ky50_lcd
+d24c45e4f0d39d429d51665a350567ce20c409450574e63486c04634f1402b3c  /mnt/data/opt/ky50_lcd/run.sh
+
+Read from /proc/soph/vo and /proc/soph/vo_disp:
+
+-------------------------------DEVICE CONFIG------------------------------
+     DevID     DevEn           intf_type            IntfSync     BkClr    DevFrt
+       # 0         Y                MIPI         User timing         0        60
+
+-------------------------------VIDEO LAYER STATUS 1-----------------------
+   LayerId   VideoEn              pixfmt      ImgW      ImgH     DispX     DispY     DispW     DispH
+       # 0         Y             RGB_888       480       854         0         0       480       854
+
+-------------------------------VIDEO LAYER STATUS 2 (continue)------------
+   LayerId BindDevId   EnChNum      Luma      Cont       Hue      Satu          DispalyPts          PreDonePts
+       # 0         0         1         0         0         0         0                   0                   0
+
+-------------------------------VIDEO LAYER STATUS 3 (continue)------------
+   LayerId    BufLen    SrcFrt   RealFrt    BwFail OsdBwFail
+       # 0         2         0         0         0         0
+
+-------------------------------GRAPHIC LAYER STATUS 1-----------------------
+   LayerId GraphicEn BindDevId      Prio
+       # 1         0         0         0
+
+-------------------------------CHN BASIC INFO 1---------------------------
+   LayerId     ChnId     ChnEn      Prio      SrcW      SrcH      ChnX      ChnY      ChnW      ChnH  RotAngle    Thrshd
+       # 0       # 0         Y         0       480       854         0         0       480       854         0         2
+
+-------------------------------CHN PLAY INFO------------------------------
+   LayerId     ChnId      Show     Pause ChnSrcFrt    ChnFrt          ChnGap(us)          DispalyPts          PreDonePts
+       # 0       # 0         Y         N         0         0                   0                   0                   0
+--------------DISP(0)-------------------------
+disp_from_sc(0)		sync_ext(0)		tgen_en(1)		fmt(BGR888_PACKED)
+in_csc(        Disable)	out_csc(        Disable)	burst(15)	y_thresh(120)	c_thresh(0)
+start_x(  0)		start_y(  0)		width( 480)		height( 854)
+pitch_y(1472)		pitch_c(  0)
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+--------------DISP-TIMING(0))------------------
+total( 575 * 1057)	hsync_pol(   0)	vsync_pol(   0)
+hsync_start( 575)	hsync_end(1057)	vsync_start(   0)	vsync_end(   1)
+hde-start(  42)		hde-end( 521)	vde-start(  11)		vde-end( 864)	
+

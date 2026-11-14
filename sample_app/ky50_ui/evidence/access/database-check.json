@@ -1,0 +1,74 @@
+{
+  "size": 53248,
+  "permissions": "0o600",
+  "integrity": [
+    [
+      "ok"
+    ]
+  ],
+  "foreign_key_errors": [],
+  "tables": [
+    [
+      "attendance_events"
+    ],
+    [
+      "audit_events"
+    ],
+    [
+      "credentials"
+    ],
+    [
+      "device_meta"
+    ],
+    [
+      "operations"
+    ],
+    [
+      "sqlite_sequence"
+    ],
+    [
+      "users"
+    ]
+  ],
+  "users": 0,
+  "credentials": 0,
+  "pending_operations": 0,
+  "events": [
+    [
+      "matched",
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      "unmatched",
+      2,
+      2,
+      0,
+      2
+    ]
+  ],
+  "audit": [
+    [
+      "create",
+      1
+    ],
+    [
+      "delete_begin",
+      1
+    ],
+    [
+      "delete_success",
+      1
+    ],
+    [
+      "enroll_begin",
+      1
+    ],
+    [
+      "enroll_success",
+      1
+    ]
+  ]
+}

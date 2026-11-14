@@ -1,0 +1,53 @@
+STORE_BENCH config_run=0 journal=delete synchronous=2
+STORE_BENCH mode=DELETE run=0 sample=0 warmup=1 elapsed_us=63913
+STORE_BENCH mode=DELETE run=0 sample=1 warmup=1 elapsed_us=63966
+STORE_BENCH mode=DELETE run=0 sample=2 warmup=0 elapsed_us=57159
+STORE_BENCH mode=DELETE run=0 sample=3 warmup=0 elapsed_us=62109
+STORE_BENCH mode=DELETE run=0 sample=4 warmup=0 elapsed_us=50349
+STORE_BENCH mode=DELETE run=0 sample=5 warmup=0 elapsed_us=66829
+STORE_BENCH mode=DELETE run=0 sample=6 warmup=0 elapsed_us=53270
+STORE_BENCH mode=DELETE run=0 sample=7 warmup=0 elapsed_us=64477
+STORE_BENCH mode=DELETE run=0 sample=8 warmup=0 elapsed_us=66685
+STORE_BENCH mode=DELETE run=0 sample=9 warmup=0 elapsed_us=55902
+STORE_BENCH mode=DELETE run=0 sample=10 warmup=0 elapsed_us=55226
+STORE_BENCH mode=DELETE run=0 sample=11 warmup=0 elapsed_us=56584
+STORE_BENCH config_run=1 journal=wal synchronous=2
+STORE_BENCH mode=WAL run=1 sample=0 warmup=1 elapsed_us=22187
+STORE_BENCH mode=WAL run=1 sample=1 warmup=1 elapsed_us=22399
+STORE_BENCH mode=WAL run=1 sample=2 warmup=0 elapsed_us=26880
+STORE_BENCH mode=WAL run=1 sample=3 warmup=0 elapsed_us=28563
+STORE_BENCH mode=WAL run=1 sample=4 warmup=0 elapsed_us=23317
+STORE_BENCH mode=WAL run=1 sample=5 warmup=0 elapsed_us=39177
+STORE_BENCH mode=WAL run=1 sample=6 warmup=0 elapsed_us=23580
+STORE_BENCH mode=WAL run=1 sample=7 warmup=0 elapsed_us=24422
+STORE_BENCH mode=WAL run=1 sample=8 warmup=0 elapsed_us=28691
+STORE_BENCH mode=WAL run=1 sample=9 warmup=0 elapsed_us=22144
+STORE_BENCH mode=WAL run=1 sample=10 warmup=0 elapsed_us=23118
+STORE_BENCH mode=WAL run=1 sample=11 warmup=0 elapsed_us=23709
+STORE_BENCH config_run=2 journal=wal synchronous=2
+STORE_BENCH mode=WAL run=2 sample=0 warmup=1 elapsed_us=29943
+STORE_BENCH mode=WAL run=2 sample=1 warmup=1 elapsed_us=26079
+STORE_BENCH mode=WAL run=2 sample=2 warmup=0 elapsed_us=37022
+STORE_BENCH mode=WAL run=2 sample=3 warmup=0 elapsed_us=30081
+STORE_BENCH mode=WAL run=2 sample=4 warmup=0 elapsed_us=33720
+STORE_BENCH mode=WAL run=2 sample=5 warmup=0 elapsed_us=34433
+STORE_BENCH mode=WAL run=2 sample=6 warmup=0 elapsed_us=27207
+STORE_BENCH mode=WAL run=2 sample=7 warmup=0 elapsed_us=34738
+STORE_BENCH mode=WAL run=2 sample=8 warmup=0 elapsed_us=21145
+STORE_BENCH mode=WAL run=2 sample=9 warmup=0 elapsed_us=28383
+STORE_BENCH mode=WAL run=2 sample=10 warmup=0 elapsed_us=23746
+STORE_BENCH mode=WAL run=2 sample=11 warmup=0 elapsed_us=28292
+STORE_BENCH config_run=3 journal=delete synchronous=2
+STORE_BENCH mode=DELETE run=3 sample=0 warmup=1 elapsed_us=76469
+STORE_BENCH mode=DELETE run=3 sample=1 warmup=1 elapsed_us=65127
+STORE_BENCH mode=DELETE run=3 sample=2 warmup=0 elapsed_us=48826
+STORE_BENCH mode=DELETE run=3 sample=3 warmup=0 elapsed_us=52330
+STORE_BENCH mode=DELETE run=3 sample=4 warmup=0 elapsed_us=60343
+STORE_BENCH mode=DELETE run=3 sample=5 warmup=0 elapsed_us=63781
+STORE_BENCH mode=DELETE run=3 sample=6 warmup=0 elapsed_us=53550
+STORE_BENCH mode=DELETE run=3 sample=7 warmup=0 elapsed_us=59447
+STORE_BENCH mode=DELETE run=3 sample=8 warmup=0 elapsed_us=63068
+STORE_BENCH mode=DELETE run=3 sample=9 warmup=0 elapsed_us=61628
+STORE_BENCH mode=DELETE run=3 sample=10 warmup=0 elapsed_us=59726
+STORE_BENCH mode=DELETE run=3 sample=11 warmup=0 elapsed_us=72630
+STORE_BENCH cleanup=ok

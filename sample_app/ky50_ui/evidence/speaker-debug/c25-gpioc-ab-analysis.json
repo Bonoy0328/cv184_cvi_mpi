@@ -1,0 +1,36 @@
+{
+  "gpio_c17_readback_in_all_stages": "0x00000000",
+  "interpretation": "Requested bit17 was not reflected in readback. This is not proof of its semantics or an effective configuration change.",
+  "stages": [
+    {
+      "stage": "A_ANALOG_INPUT",
+      "rms": 357.63226577127057,
+      "peak400": 505.76718415027887
+    },
+    {
+      "stage": "B_GPIO_HIGH_ORIGINAL",
+      "rms": 2.822120010512069,
+      "peak400": 0.02690234264804522
+    },
+    {
+      "stage": "C_GPIO_HIGH_GPIO_C17_SET",
+      "rms": 0.7583640329752042,
+      "peak400": 0.014267018751288503
+    },
+    {
+      "stage": "B2_GPIO_HIGH_ORIGINAL",
+      "rms": 0.6926754691452236,
+      "peak400": 0.019076997137554817
+    },
+    {
+      "stage": "C2_GPIO_HIGH_GPIO_C17_SET",
+      "rms": 0.6292607973183032,
+      "peak400": 0.019613898965548215
+    },
+    {
+      "stage": "A2_ANALOG_INPUT",
+      "rms": 357.69043341422844,
+      "peak400": 505.82709628407014
+    }
+  ]
+}

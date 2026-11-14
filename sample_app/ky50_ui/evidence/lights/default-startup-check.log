@@ -1,0 +1,20 @@
+Fri Nov 13 09:45:35 UTC 2026
+PID=577
+/tmp/ky50-ui/ky50_ui
+4a57450bdec33b7e8949815dddb29f7ccad6a2cd8f0be3a17e0e1b5f11159876  /proc/577/exe
+b4a22e5b866861f94d067ea0d7d7a8835de7c0d9f6676780a455a52c4417f806  /tmp/ky50-ui/ky50_lights.ko
+version=1
+palm_leave_frames=3
+face_leave_frames=3
+ gpio-488 (                    |ky50-ir-light       ) out hi 
+ gpio-499 (                    |ky50-white-light    ) out lo 
+mux_white=0x00000003 mux_ir=0x00000003 DR=0x00008194 DDR=0x40288194 EXT=0x3D97FDFC
+PASS startup WHITE=0 IR=1 output and input
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+FACTORY_LIGHT IR=ON
+KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 palm + RGB pipe1 face; dual overlays, raw palm priority
+PVA ready: palm=IR Y, face=RGB camera NV12; unified init and serial worker
+ACCESS departure palm=3 face=3 consecutive misses config=/mnt/system/ky50-data/app.conf ready=1
+SOURCE switching none -> RGB
+STATS elapsed=5 capture_fps=11.40 display_fps=12.00 frames=57 page=0 eth=1
+STATS elapsed=10 capture_fps=15.60 display_fps=16.00 frames=135 page=0 eth=1

@@ -1,0 +1,146 @@
+2447
+90d59c5106b0d555aa0fd1688ad561dbd794d1e56dcb31016ea5aa0b4edb75cd  /tmp/ky50-ui/ky50_ui
+PALM defaults brightness=60..160 offset=0.01/0.01
+ACCESS parameters loaded source=database hand=70 auth=50 dynamic=1
+IR_AE saved_target=32; apply only after hand detection
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=5 capture_fps=15.18 display_fps=29.55 frames=76 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=10 capture_fps=17.80 display_fps=29.59 frames=165 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=15 capture_fps=17.53 display_fps=29.29 frames=253 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=20 capture_fps=17.39 display_fps=29.58 frames=340 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=25 capture_fps=18.39 display_fps=29.58 frames=432 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=30 capture_fps=18.53 display_fps=29.69 frames=525 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=35 capture_fps=18.17 display_fps=29.75 frames=616 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=40 capture_fps=17.79 display_fps=29.79 frames=705 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=45 capture_fps=18.60 display_fps=29.39 frames=798 page=0 eth=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+STATS elapsed=50 capture_fps=18.19 display_fps=29.58 frames=889 page=0 eth=1
+PALM_SESSION entered true_frames=2
+IR_AE found=1 status=1 reason=restore_success target=56->32 settle_ms=500
+PALM_QUALITY found=1 status=1 overlay=red
+PALM_QUALITY found=1 status=7 overlay=red
+PALM_PIPELINE features=3 auth=0 held=0 present=1 entry=0 missing=0 success_hold=0
+IR_AE measured target=32 luma=41 time_us=5007 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=32->28 settle_ms=500
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.6701
+PALM_SESSION success_hold features=18 auth=2
+IR_AE recognition_success target=28 luma=33 time_us=4148 gain=1024/1024/1024
+IR_AE persisted_success target=28
+PALM_QUALITY found=1 status=3 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=55 capture_fps=12.79 display_fps=29.59 frames=953 page=0 eth=1
+PALM_QUALITY found=1 status=3 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_PIPELINE features=65 auth=2 held=47 present=1 entry=0 missing=0 success_hold=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=5 success_hold=1 features=71 auth=2 held=53
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+ACCESS match uuid=0 score=0.7539
+PALM_SESSION success_hold features=74 auth=4
+IR_AE recognition_success target=28 luma=32 time_us=4148 gain=1024/1024/1024
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=60 capture_fps=10.96 display_fps=29.48 frames=1008 page=0 eth=1
+PALM_PIPELINE features=110 auth=4 held=89 present=1 entry=0 missing=0 success_hold=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=2 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=65 capture_fps=12.60 display_fps=29.60 frames=1071 page=0 eth=1
+PALM_PIPELINE features=171 auth=4 held=150 present=1 entry=0 missing=0 success_hold=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=5 success_hold=1 features=174 auth=4 held=153
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=70 capture_fps=12.37 display_fps=29.32 frames=1133 page=0 eth=1
+ACCESS match uuid=0 score=0.5855
+PALM_SESSION success_hold features=189 auth=12
+IR_AE recognition_success target=28 luma=30 time_us=4237 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=5 success_hold=1 features=190 auth=12 held=154
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_PIPELINE features=191 auth=13 held=154 present=1 entry=0 missing=0 success_hold=0
+ACCESS match uuid=0 score=0.7206
+PALM_SESSION success_hold features=211 auth=21
+IR_AE recognition_success target=28 luma=32 time_us=4237 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=75 capture_fps=11.16 display_fps=29.50 frames=1189 page=0 eth=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_PIPELINE features=244 auth=21 held=187 present=1 entry=0 missing=0 success_hold=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=5 success_hold=1 features=261 auth=21 held=204
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+ACCESS match uuid=0 score=0.5800
+PALM_SESSION success_hold features=263 auth=23
+IR_AE recognition_success target=28 luma=31 time_us=4237 gain=1024/1024/1024
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=80 capture_fps=14.00 display_fps=29.59 frames=1259 page=0 eth=1
+PALM_PIPELINE features=298 auth=23 held=239 present=1 entry=0 missing=0 success_hold=1
+PALM_QUALITY found=1 status=1 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=5 success_hold=1 features=299 auth=23 held=240
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.8424
+PALM_SESSION success_hold features=306 auth=26
+IR_AE recognition_success target=28 luma=30 time_us=4088 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=5 success_hold=1 features=317 auth=26 held=251
+STATS elapsed=85 capture_fps=15.00 display_fps=29.40 frames=1334 page=0 eth=1
+PALM_PIPELINE features=317 auth=26 held=251 present=0 entry=0 missing=5 success_hold=0
+STATS elapsed=90 capture_fps=18.19 display_fps=29.59 frames=1425 page=0 eth=1
+PALM_PIPELINE features=317 auth=26 held=251 present=0 entry=0 missing=5 success_hold=0
+STATS elapsed=95 capture_fps=19.15 display_fps=29.72 frames=1521 page=0 eth=1
+PALM_PIPELINE features=317 auth=26 held=251 present=0 entry=0 missing=5 success_hold=0
+STATS elapsed=100 capture_fps=18.18 display_fps=29.56 frames=1612 page=0 eth=1
+PALM_PIPELINE features=317 auth=26 held=251 present=0 entry=0 missing=5 success_hold=0
+STATS elapsed=105 capture_fps=18.00 display_fps=29.40 frames=1702 page=0 eth=1
+PALM_PIPELINE features=317 auth=26 held=251 present=0 entry=0 missing=5 success_hold=0
+STATS elapsed=110 capture_fps=17.94 display_fps=29.49 frames=1792 page=0 eth=1
+PALM_PIPELINE features=317 auth=26 held=251 present=0 entry=0 missing=5 success_hold=0
+STATS elapsed=115 capture_fps=16.54 display_fps=29.29 frames=1875 page=0 eth=1

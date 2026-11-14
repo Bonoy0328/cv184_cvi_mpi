@@ -1,0 +1,4 @@
+mkdir -p build/tests
+gcc -I. -Ipva/include -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/hand_overlay_test.c hand_overlay.c -lm -o build/tests/hand_overlay_test
+./build/tests/hand_overlay_test
+PASS full half-size Y, CCW90 Y/VU, padded stride, viewport transform, clipped drawing, immutable algorithm result

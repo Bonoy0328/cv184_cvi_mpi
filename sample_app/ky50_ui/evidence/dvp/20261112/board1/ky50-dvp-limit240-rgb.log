@@ -1,0 +1,54 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 -> pvaGetHandPose -> selected preview overlay
+ETHERNET carrier=1 uptime_ms=7165362
+PALM_DRAW visible=0 misses=0 result_age_ms=7165362
+SOURCE switching none -> RGB
+ISP Vipipe(0) Allocate pa(0x8a6dd000) va(0x0xb6402000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8a715000) va(0x0xb61df000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8a6dd000) va(0x0xb6402000)
+ISP Vipipe(1) Free pa(0x8a715000) va(0x0xb61df000)
+CVI_ISP_Run(1) returned 0
+KY50_UI stopped rc=0

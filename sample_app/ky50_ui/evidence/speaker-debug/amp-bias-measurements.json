@@ -1,0 +1,375 @@
+{
+  "date_local": "2026-11-12",
+  "configuration": "User removed display, cameras and other peripherals; only speaker connected.",
+  "measurements_source": "User multimeter readings, not software estimates",
+  "speaker": {
+    "connector": "J14 pins 1 and 2",
+    "impedance_ohm": 8,
+    "rated_power_w": 0.5
+  },
+  "amp_enable_window": {
+    "start_uptime_s": 243.27,
+    "end_uptime_s": 543.28,
+    "audio_playing": false,
+    "gpio_a15_during": "low",
+    "gpio_a15_after": "high"
+  },
+  "u17_lm4871_voltage_to_gnd_v": {
+    "pin_1_shutdown": 0.0,
+    "pin_2_bypass": 2.5,
+    "pin_6_vdd_previous_measurement": 5.2,
+    "pin_5_output_plus": 2.6,
+    "pin_8_output_minus": 2.6
+  },
+  "conclusion": "User physically heard 400Hz tone with C24/C25 configured as inputs. Controlled analog feedback A/B ties disappearance of right output to C25 GPIO output enable. Production simultaneous LCD/Speaker operation is not fixed.",
+  "next_test": {
+    "frequency_hz": 400,
+    "sample_rate_hz": 16000,
+    "channels": 2,
+    "format": "S16_LE",
+    "peak_amplitude": 4096,
+    "duration_s": 300,
+    "start_uptime_s": 748.1,
+    "physical_results": {
+      "j14_pins_1_2_ac_v": 0.001,
+      "c133_lineout_to_gnd_ac_v": 0.001,
+      "multimeter_range": "not supplied",
+      "audibility": "not explicitly repeated in this reply"
+    },
+    "end_uptime_s": 1058.11,
+    "exit_code": 0,
+    "post_test_state": {
+      "gpio_a15": "high",
+      "dac": "off"
+    },
+    "pcm_sha256": "3d113ca7f6e37203ae7cd520fde826b2e6b8b6610fccd14d7062a66547f60b7c",
+    "program_sha256": "fb3d6eec179cfe72af4b121910287656c7879d1ec45295301cfc208b8a6d4d7f"
+  },
+  "c2_followup": {
+    "start_uptime_s": 1234.52,
+    "same_pcm_and_program": true,
+    "physical_results": {
+      "soc_side": {
+        "ac_v": 0.001,
+        "dc_v": 0.0
+      },
+      "lineout_side": {
+        "ac_v": 0.001,
+        "dc_v": 1.2
+      },
+      "side_identification": "User confirmed by PCB traces",
+      "avref_dc_v": null
+    },
+    "end_uptime_s": 1544.53,
+    "exit_code": 0,
+    "post_test_state": {
+      "gpio_a15": "high",
+      "dac": "off"
+    }
+  },
+  "multimeter": {
+    "model": "FLUKE 17B MAX",
+    "ac_range": "not supplied"
+  },
+  "avref_followup": {
+    "start_uptime_s": 1777.03,
+    "duration_s": 600,
+    "guard_s": 610,
+    "same_tone_level": true,
+    "physical_results": {
+      "c5_or_c6_avref_dc_v": 1.39,
+      "c38_or_c39_vdd1v8a_dc_v": 1.79
+    },
+    "end_uptime_s": 2387.03,
+    "exit_code": 0,
+    "post_test_state": {
+      "gpio_a15": "high",
+      "dac": "off"
+    }
+  },
+  "measurement_window_preference": "User requests minimum 10-minute stable measurement windows from now on.",
+  "dac_dem_check": {
+    "csv": "ky50-dac-dem-tone.csv",
+    "analysis": "dac-dem-analysis.json",
+    "tone_detected_hz": 400.0,
+    "left_amplitude_popcount": 0.5006967137705892,
+    "right_amplitude_popcount": 0.48671834268117103,
+    "analog_output_proven": false
+  },
+  "power_off_resistance": {
+    "aud_soc_side_to_gnd_ohm": 12300,
+    "lineout_side_to_gnd": "OL",
+    "clarification": "User confirmed these are the two different C2 pads, each measured to GND. They are not reverse-polarity measurements of a single pad.",
+    "both_polarities_same_aud_pad": "not measured/reported",
+    "interpretation": "No obvious near-short measured at AUD; LINEOUT OL is compatible with the two DC-blocking capacitors. This does not prove AC continuity or DAC output."
+  },
+  "lr_comparison": {
+    "date_local": "2026-11-12",
+    "kernel": "5.10.4-tag--g79534ab146b7",
+    "start_uptime_s": 208.1,
+    "tone_duration_s": 600,
+    "guard_s": 610,
+    "lcd_physically_disconnected": true,
+    "left_test_point": "J10 pin 12 / RST_LCD / AOUTL (SoC F2)",
+    "right_test_point": "C2 AUD side / AOUTR (SoC G2)",
+    "c25_saved": {
+      "mux": "0x00000003",
+      "gpio_direction_register": "0x02040000",
+      "gpio_data_register": "0x00000000"
+    },
+    "active_readback": {
+      "aoutl_mux": "0x00000000",
+      "aoutr_mux": "0x00000000",
+      "gpio_direction_register": "0x00040000",
+      "c24": "input",
+      "c25": "input",
+      "dac": "on",
+      "muted": false
+    },
+    "physical_results": {
+      "j10_pin12_aoutl": {
+        "dc_v": 0.896,
+        "ac_mv": 73
+      },
+      "c2_aud_aoutr": {
+        "dc_v": 0.879,
+        "ac_mv": 73
+      },
+      "instrument": "FLUKE 17B MAX, AC millivolt range requested",
+      "audibility": "User confirmed continuous tone is audible, but quiet"
+    },
+    "restoration": {
+      "aoutl_mux": "0x00000003",
+      "gpio_direction_register": "0x02040000",
+      "c25_export_removed": true,
+      "dac": "off"
+    },
+    "interpretation": "Physical left/right DAC output and speaker tone confirmed with LCD absent. Subsequent controlled A/B identifies C25 output direction as the reproducible silence condition, independent of mux 0 or 3 while input.",
+    "end_uptime_s": 818.11,
+    "player_exit_code": 0
+  },
+  "c25_direction_ab": {
+    "analysis": "c25-ab-analysis.json",
+    "input_400hz_peak_pcm_approx": 505.9,
+    "gpio_output_low_or_high": "400Hz disappears into noise",
+    "restored": true
+  },
+  "c25_left_mute_ab": {
+    "analysis": "c25-mute-ab-analysis.json",
+    "result": "Left digital mute did not restore right audio while C25 GPIO output-high",
+    "restored": true
+  },
+  "c25_gpio_c17_ab": {
+    "analysis": "c25-gpioc-ab-analysis.json",
+    "result": "Bit17 request did not read back; no right audio with C25 output-high",
+    "start_uptime_s": 1827.6,
+    "end_uptime_s": 1894.62,
+    "restored": true,
+    "production_fix": false
+  },
+  "voice_comparison": {
+    "script": "voice_compare_10min.sh",
+    "start_uptime_s": 2081.04,
+    "gpio_mux_unchanged": 3,
+    "c25_direction": "temporary input",
+    "volume_first": 16,
+    "volume_second": 32,
+    "source": "Unchanged factory.c for first; only volume constant changed in temporary source copy for second",
+    "asset_sha256": "af1d156d08b0b7a9fd75c3b341fadda5d688b302711288de43817ad81e962604",
+    "physical_result": "User heard no sound; only first volume16 ran. Second was not executed because the board shell wait blocked on the watchdog child.",
+    "restoration": "confirmed at uptime2206.22",
+    "end_uptime_s": 2206.22
+  },
+  "voice_path_ab": {
+    "start_uptime_s": 2323.97,
+    "end_uptime_s": 2364.0,
+    "restored": true,
+    "correlation": "voice-path-correlation.json",
+    "configuration": "C25 input and mux0; C22 analog input",
+    "physical_audibility": "not separately confirmed"
+  },
+  "voice_hold": {
+    "start_uptime_s": 2522.3,
+    "configuration": "C25 input mux0; continuous DAC and amp on; original voice volume32; first10s silence;600s max sample count",
+    "physical_audibility": "User confirmed audible and intelligible original speech; volume still quiet.",
+    "restoration": {
+      "c25_mux": 3,
+      "gpio_c_direction": "0x02040000",
+      "dac": "off"
+    },
+    "end_uptime_s": 2688.18,
+    "exit_code": 1,
+    "stop_reason": "Operator sent SIGTERM after user completed subjective listening; pcm_write was interrupted, not a spontaneous playback error."
+  },
+  "amp_gain_followup": {
+    "start_uptime_s": 2727.78,
+    "duration_s": 600,
+    "guard_s": 610,
+    "tone_hz": 400,
+    "tone_peak_s16": 4096,
+    "codec_volume": 32,
+    "log": "/tmp/ky50-amp-gain-10min.log",
+    "physical_results": {
+      "c133_lineout_side_to_gnd_ac_mv": 0.2,
+      "j14_pin1_to_pin2_ac_mv": 594,
+      "source": "User reported both during the unchanged 400 Hz test window",
+      "c2_aud_lineout_recheck": {
+        "aud_soc_side_to_gnd_ac_mv": 73,
+        "lineout_side_to_gnd_ac_mv": 0.2,
+        "source": "User repeated measurements in the same test window"
+      },
+      "lineout_0_2mv_mode_status": "AC/DC unconfirmed by user; retain as raw reported value, do not interpret as proven AC attenuation."
+    },
+    "restoration": {
+      "c25_mux": 3,
+      "gpio_c_direction": "0x02040000",
+      "gpio_a15": "high",
+      "dac": "off",
+      "audio_processes_remaining": false
+    },
+    "interpretation": {
+      "nominal_btl_gain": 8.51063829787234,
+      "output_based_on_prior_aud_73mv_v": 0.6212765957446809,
+      "measured_j14_vs_prior_aud_ratio": 8.136986301369863,
+      "nominal_8ohm_resistive_power_w": 0.0441045,
+      "limitations": "User is unsure of AC/DC mode for LINEOUT0.2mV. These values cannot currently establish coupling-capacitor attenuation or actual amplifier gain. A single unchanged V~ AC-voltage mode retest is pending. C25 direction A/B and audible speech evidence remain valid independent of these disputed readings."
+    },
+    "end_uptime_s": 3337.79,
+    "player_exit_code": 0
+  },
+  "lineout_trace": {
+    "width_mil": 4,
+    "length_mil": 2300,
+    "source": "User reported PCB dimensions",
+    "assumed_copper_oz": 1,
+    "sheet_resistance_ohm_per_square_approx": 0.0005,
+    "estimated_resistance_ohm": 0.28750000000000003,
+    "interpretation": "Measured 0.3ohm agrees with the approximately0.29ohm estimate for1oz copper. No open/high-resistance fault between the measured LINEOUT pads. This does not verify C2/C133 capacitance, R110/R111 values, or explain the conflicting AC readings.",
+    "next_check": "Continuity, resistance and fixed AC measurements now coherent; focus moves to physical GPIO mapping and C25/audio coexistence.",
+    "continuity_measurement": {
+      "probe_short_ohm": 0.0,
+      "c2_lineout_to_c133_lineout_ohm": 0.3,
+      "user_confirmed_continuity": true,
+      "power_state": "Requested board power off; user returned the requested resistance readings",
+      "source": "User multimeter report"
+    }
+  },
+  "amplifier_resistor_check": {
+    "source": "User multimeter readings with board requested powered off, no desoldering",
+    "r110_ohm": 4600,
+    "r111_ohm": 20000,
+    "r110_schematic_ohm": 4700,
+    "r111_schematic_ohm": 20000,
+    "component_markings": "not reported",
+    "interpretation": "Both readings are close to schematic values, without obvious mismatch. In-circuit readings are not isolated component measurements. The conflicting AC voltages remain unexplained.",
+    "ideal_gain_using_in_circuit_readings": 8.695652173913043,
+    "input_for_594mv_output_ideal_mv": 68.31,
+    "next_step": "Resistor values and coherent AC gain corroborate normal amplifier operation for the low-level400Hz test.",
+    "meter_mode_clarification": "User is unsure whether the reported LINEOUT0.2mV was measured with AC or DC selected."
+  },
+  "fixed_ac_retest": {
+    "state": "completed, measured, restored",
+    "method": "Use V~ AC volts throughout, confirm AC display, do not use mV or HOLD/REL. Measure C2 AUD to GND, C2 LINEOUT to GND, then differential J14 pins1/2, report volts as displayed.",
+    "duration_s": 600,
+    "lcd_cameras": "remain disconnected",
+    "hardware_changes": "none",
+    "start_uptime_s": 223.23,
+    "log": "/tmp/ky50-fixed-ac-10min.log",
+    "guard_s": 610,
+    "kernel": "5.10.4-tag--g79534ab146b7",
+    "host_key_verified_by_user": "SHA256:mN1WncFAvPLPjk9wbkA3fX4TYf0CGE1y+gF+JdTG3l0",
+    "active_readback": {
+      "aoutl_mux": 0,
+      "aoutr_mux": 0,
+      "gpio_c_direction": "0x00040000",
+      "dac": "on",
+      "left_volume": 32,
+      "right_volume": 32
+    },
+    "physical_results": {
+      "c2_aud_to_gnd_ac_v": 0.072,
+      "c2_lineout_to_gnd_ac_v": 0.072,
+      "j14_pin1_to_pin2_ac_v": 0.594,
+      "method_confirmed": "User followed unchanged V~ AC range; reported all readings in V"
+    },
+    "restoration": {
+      "c25_mux": 3,
+      "gpio_c_direction": "0x02040000",
+      "gpio_a15": "high",
+      "dac": "off",
+      "verified_uptime_s": 923.64
+    },
+    "interpretation": {
+      "measured_gain": 8.25,
+      "c2_magnitude_ratio": 1.0,
+      "conclusion": "Coherent 400Hz measurements support coupling path and amplifier operation. Previous LINEOUT0.2mV readings with unconfirmed AC/DC mode are not evidence of capacitor attenuation."
+    },
+    "end_uptime_s": 833.24,
+    "player_exit_code": 0
+  },
+  "c25_gpio_mapping": {
+    "script": "c25_gpio_mapping_10min.sh",
+    "start_uptime_s": 977.93,
+    "duration_s": 600,
+    "configuration": {
+      "dac": "off",
+      "amplifier": "off",
+      "c25_mux": 3,
+      "gpio_c_data": "0x02000000",
+      "gpio_c_direction": "0x02040000"
+    },
+    "physical_results": {
+      "j10_pin12_rst_lcd_to_gnd_dc_v": 1.8,
+      "c2_aud_soc_to_gnd_dc_v": 0.0,
+      "source": "User measurement with LCD/cameras physically disconnected"
+    },
+    "interpretation": "GPIOC25 high drives J10.12 to1.8V; AUD remains0V with DAC off. Supports schematic mapping; does not by itself establish audio/GPIO coexistence.",
+    "restoration": {
+      "c25_mux": 3,
+      "gpio_c_data": "0x00000000",
+      "gpio_c_direction": "0x02040000",
+      "gpio_unexported": true
+    },
+    "end_uptime_s": 1577.95
+  },
+  "c25_mux_direction_matrix": {
+    "start_uptime_s": 1578.27,
+    "end_uptime_s": 1645.28,
+    "player_exit": 0,
+    "capture_exit": 0,
+    "analysis": "c25-mux-matrix-analysis.json",
+    "restored": true,
+    "result": "Mux0 plus C25 output-high preserves right tone; mux3 plus output-high removes it. Mux0/mux3 input preserve tone. Actual J10.12 under mux0/output-high is0.89V DC plus0.078V AC, so high output latch does not establish a valid LCD reset high."
+  },
+  "c25_mux0_output_high_physical": {
+    "script": "c25_mux0_high_10min.sh",
+    "start_uptime_s": 1777.09,
+    "duration_s": 600,
+    "guard_s": 610,
+    "log": "ky50-c25-mux0-high-10min.log",
+    "active_readback": {
+      "c25_mux": 0,
+      "gpio_c_data": "0x02000000",
+      "gpio_c_direction": "0x02040000",
+      "dac": "on"
+    },
+    "physical_results": {
+      "j10_pin12_to_gnd_dc_v": 0.89,
+      "j10_pin12_to_gnd_ac_v": 0.078,
+      "speaker_audible": true,
+      "source": "User measured during unchanged mux0/output-high 400Hz window"
+    },
+    "restoration": {
+      "c25_mux": 3,
+      "gpio_c_data": "0x00000000",
+      "gpio_c_direction": "0x02040000",
+      "dac": "off",
+      "gpio_a15": "high",
+      "gpio_unexported": true,
+      "audio_processes_remaining": false
+    },
+    "interpretation": "Audio works but J10.12 is an analog level rather than a guaranteed1.8V reset high. This combination is not accepted as a software fix. No claim that all undocumented chip configurations are impossible.",
+    "end_uptime_s": 2387.1,
+    "player_exit_code": 0
+  }
+}

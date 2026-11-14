@@ -1,0 +1,111 @@
+{
+  "samples": 10000,
+  "duration_s": 1.539047049,
+  "note": "Read-only DAC ANA3 DEM status, not analog audio voltage; sine fits to bit population counts with actual monotonic timestamps.",
+  "channels": [
+    {
+      "channel": 0,
+      "mean_popcount": 4.0096,
+      "std_popcount": 0.7917751195888894,
+      "best_near_400hz": {
+        "frequency_hz": 400.00000000000114,
+        "amplitude_popcount": 0.5006967137705436,
+        "explained_variance": 0.19976847254579788
+      },
+      "comparison": [
+        {
+          "frequency_hz": 100.0,
+          "amplitude_popcount": 0.02128592518388906,
+          "explained_variance": 0.00036108530467282574
+        },
+        {
+          "frequency_hz": 200.0,
+          "amplitude_popcount": 0.00902013220206124,
+          "explained_variance": 6.488942114546425e-05
+        },
+        {
+          "frequency_hz": 300.0,
+          "amplitude_popcount": 0.0019284092538309984,
+          "explained_variance": 2.965747316174827e-06
+        },
+        {
+          "frequency_hz": 399.0,
+          "amplitude_popcount": 0.09170723569592007,
+          "explained_variance": 0.0067080490004471915
+        },
+        {
+          "frequency_hz": 400.0,
+          "amplitude_popcount": 0.5006967137705892,
+          "explained_variance": 0.19976847254583485
+        },
+        {
+          "frequency_hz": 401.0,
+          "amplitude_popcount": 0.09428179806876874,
+          "explained_variance": 0.007089067401357396
+        },
+        {
+          "frequency_hz": 500.0,
+          "amplitude_popcount": 0.002017416772028548,
+          "explained_variance": 3.2424823405152736e-06
+        },
+        {
+          "frequency_hz": 800.0,
+          "amplitude_popcount": 0.021387268922781394,
+          "explained_variance": 0.0003643162327261473
+        }
+      ]
+    },
+    {
+      "channel": 1,
+      "mean_popcount": 3.9976,
+      "std_popcount": 0.791703378797893,
+      "best_near_400hz": {
+        "frequency_hz": 400.00000000000114,
+        "amplitude_popcount": 0.48671834268113784,
+        "explained_variance": 0.1888117039704309
+      },
+      "comparison": [
+        {
+          "frequency_hz": 100.0,
+          "amplitude_popcount": 0.012024104878383682,
+          "explained_variance": 0.00011534351631881101
+        },
+        {
+          "frequency_hz": 200.0,
+          "amplitude_popcount": 0.024396664985858116,
+          "explained_variance": 0.0004743993282206871
+        },
+        {
+          "frequency_hz": 300.0,
+          "amplitude_popcount": 0.01207737071832629,
+          "explained_variance": 0.00011639887791248249
+        },
+        {
+          "frequency_hz": 399.0,
+          "amplitude_popcount": 0.09148224052572707,
+          "explained_variance": 0.006676438254192285
+        },
+        {
+          "frequency_hz": 400.0,
+          "amplitude_popcount": 0.48671834268117103,
+          "explained_variance": 0.18881170397045732
+        },
+        {
+          "frequency_hz": 401.0,
+          "amplitude_popcount": 0.09273530215462135,
+          "explained_variance": 0.00685965870758154
+        },
+        {
+          "frequency_hz": 500.0,
+          "amplitude_popcount": 0.02211535086585444,
+          "explained_variance": 0.00038959069788946366
+        },
+        {
+          "frequency_hz": 800.0,
+          "amplitude_popcount": 0.012701065307059353,
+          "explained_variance": 0.00012889782148839402
+        }
+      ]
+    }
+  ]
+}

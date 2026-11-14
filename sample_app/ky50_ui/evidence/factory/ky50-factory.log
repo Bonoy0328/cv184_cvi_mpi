@@ -1,0 +1,133 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 factory RGB/IR/DVP CCW90 480x854, required touch, software alpha compositor
+ETHERNET carrier=1 uptime_ms=823761
+SOURCE switching none -> RGB
+ISP Vipipe(0) Allocate pa(0x8b75b000) va(0x0xb6a4f000) size(226880)
+pipe0=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No error information
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED storage=512x896 stride=512/512 offsets=L0 R26 T32 B0 crop=2,36 480x854
+STATS elapsed=5 capture_fps=27.59 display_fps=29.59 frames=138 page=0 eth=1
+STATS elapsed=10 capture_fps=29.96 display_fps=29.76 frames=288 page=0 eth=1
+STATS elapsed=15 capture_fps=29.99 display_fps=29.59 frames=438 page=0 eth=1
+STATS elapsed=20 capture_fps=30.13 display_fps=29.93 frames=589 page=0 eth=1
+STATS elapsed=25 capture_fps=29.97 display_fps=29.77 frames=739 page=0 eth=1
+STATS elapsed=30 capture_fps=29.99 display_fps=29.59 frames=889 page=0 eth=1
+STATS elapsed=35 capture_fps=29.99 display_fps=29.59 frames=1039 page=0 eth=1
+STATS elapsed=40 capture_fps=29.96 display_fps=29.56 frames=1189 page=0 eth=1
+STATS elapsed=45 capture_fps=30.00 display_fps=29.80 frames=1339 page=0 eth=1
+STATS elapsed=50 capture_fps=30.16 display_fps=29.56 frames=1490 page=0 eth=1
+STATS elapsed=55 capture_fps=29.96 display_fps=29.56 frames=1640 page=0 eth=1
+STATS elapsed=60 capture_fps=29.99 display_fps=29.99 frames=1790 page=0 eth=1
+STATS elapsed=65 capture_fps=29.99 display_fps=29.59 frames=1940 page=0 eth=1
+STATS elapsed=70 capture_fps=29.99 display_fps=29.79 frames=2090 page=0 eth=1
+STATS elapsed=75 capture_fps=29.99 display_fps=29.79 frames=2240 page=0 eth=1
+STATS elapsed=80 capture_fps=30.15 display_fps=29.75 frames=2391 page=0 eth=1
+TOUCH_SUBMIT latency_ms=36 page=0
+UI page=1 feature=0
+TOUCH_SUBMIT latency_ms=87 page=1
+TOUCH_SUBMIT latency_ms=25 page=1
+UI page=5 feature=0
+TOUCH_SUBMIT latency_ms=54 page=5
+STATS elapsed=85 capture_fps=29.95 display_fps=29.35 frames=2541 page=5 eth=1
+TOUCH_SUBMIT latency_ms=28 page=5
+UI page=6 feature=0
+TOUCH_SUBMIT latency_ms=103 page=6
+TOUCH_SUBMIT latency_ms=22 page=6
+UI page=7 solid_color=0
+TOUCH_SUBMIT latency_ms=23 page=7
+TOUCH_SUBMIT latency_ms=39 page=7
+TOUCH_SUBMIT latency_ms=39 page=7
+STATS elapsed=90 capture_fps=29.99 display_fps=28.99 frames=2691 page=7 eth=1
+TOUCH_SUBMIT latency_ms=18 page=7
+TOUCH_SUBMIT latency_ms=18 page=7
+TOUCH_SUBMIT latency_ms=41 page=7
+TOUCH_SUBMIT latency_ms=26 page=7
+TOUCH_SUBMIT latency_ms=28 page=7
+TOUCH_SUBMIT latency_ms=41 page=7
+TOUCH_SUBMIT latency_ms=22 page=7
+TOUCH_SUBMIT latency_ms=32 page=7
+TOUCH_SUBMIT latency_ms=28 page=7
+TOUCH_SUBMIT latency_ms=20 page=7
+UI page=6 feature=0
+TOUCH_SUBMIT latency_ms=101 page=6
+STATS elapsed=95 capture_fps=29.93 display_fps=29.14 frames=2841 page=6 eth=1
+STATS elapsed=100 capture_fps=29.99 display_fps=29.59 frames=2991 page=6 eth=1
+STATS elapsed=105 capture_fps=30.15 display_fps=29.75 frames=3142 page=6 eth=1
+TOUCH_SUBMIT latency_ms=24 page=6
+TOUCH_SUBMIT latency_ms=25 page=6
+STATS elapsed=110 capture_fps=29.99 display_fps=29.79 frames=3292 page=6 eth=1
+STATS elapsed=115 capture_fps=29.99 display_fps=29.99 frames=3442 page=6 eth=1
+STATS elapsed=120 capture_fps=29.98 display_fps=29.78 frames=3592 page=6 eth=1
+TOUCH_SUBMIT latency_ms=29 page=6
+TOUCH_SUBMIT latency_ms=50 page=6
+SPEAKER playback completed rc=0
+STATS elapsed=125 capture_fps=29.99 display_fps=29.59 frames=3742 page=6 eth=1
+STATS elapsed=130 capture_fps=29.97 display_fps=29.77 frames=3892 page=6 eth=1
+STATS elapsed=135 capture_fps=30.16 display_fps=29.76 frames=4043 page=6 eth=1
+STATS elapsed=140 capture_fps=29.99 display_fps=29.79 frames=4193 page=6 eth=1
+STATS elapsed=145 capture_fps=29.99 display_fps=29.99 frames=4343 page=6 eth=1
+STATS elapsed=150 capture_fps=29.98 display_fps=29.98 frames=4493 page=6 eth=1
+TOUCH_SUBMIT latency_ms=20 page=6
+TOUCH_SUBMIT latency_ms=28 page=6
+STATS elapsed=155 capture_fps=29.99 display_fps=29.79 frames=4643 page=6 eth=1
+SPEAKER playback completed rc=0
+STATS elapsed=160 capture_fps=29.95 display_fps=29.75 frames=4793 page=6 eth=1
+STATS elapsed=165 capture_fps=30.15 display_fps=29.95 frames=4944 page=6 eth=1
+STATS elapsed=170 capture_fps=29.99 display_fps=29.79 frames=5094 page=6 eth=1
+STATS elapsed=175 capture_fps=30.00 display_fps=29.80 frames=5244 page=6 eth=1
+STATS elapsed=180 capture_fps=29.94 display_fps=29.94 frames=5394 page=6 eth=1
+STATS elapsed=185 capture_fps=30.00 display_fps=29.80 frames=5544 page=6 eth=1
+STATS elapsed=190 capture_fps=29.99 display_fps=29.79 frames=5694 page=6 eth=1
+STATS elapsed=195 capture_fps=29.99 display_fps=29.99 frames=5844 page=6 eth=1
+STATS elapsed=200 capture_fps=29.99 display_fps=29.99 frames=5994 page=6 eth=1
+STATS elapsed=205 capture_fps=29.98 display_fps=29.38 frames=6144 page=6 eth=1
+STATS elapsed=210 capture_fps=30.17 display_fps=29.97 frames=6295 page=6 eth=1
+STATS elapsed=215 capture_fps=29.92 display_fps=29.92 frames=6445 page=6 eth=1
+STATS elapsed=220 capture_fps=29.99 display_fps=29.79 frames=6595 page=6 eth=1
+STATS elapsed=225 capture_fps=30.15 display_fps=29.75 frames=6746 page=6 eth=1
+STATS elapsed=230 capture_fps=29.98 display_fps=29.98 frames=6896 page=6 eth=1
+STATS elapsed=235 capture_fps=29.99 display_fps=29.99 frames=7046 page=6 eth=1
+STATS elapsed=240 capture_fps=29.94 display_fps=29.74 frames=7196 page=6 eth=1
+STATS elapsed=245 capture_fps=29.97 display_fps=29.97 frames=7346 page=6 eth=1
+STATS elapsed=250 capture_fps=29.99 display_fps=29.79 frames=7496 page=6 eth=1
+STATS elapsed=255 capture_fps=29.99 display_fps=29.79 frames=7646 page=6 eth=1
+STATS elapsed=260 capture_fps=30.00 display_fps=29.80 frames=7796 page=6 eth=1
+STATS elapsed=265 capture_fps=30.15 display_fps=29.75 frames=7947 page=6 eth=1
+STATS elapsed=270 capture_fps=29.93 display_fps=29.73 frames=8097 page=6 eth=1
+gc2083_standby...ISP Vipipe(0) Free pa(0x8b75b000) va(0x0xb6a4f000)
+CVI_ISP_Run(0) returned 0
+KY50_UI stopped rc=0

@@ -1,0 +1,1 @@
+PASS: concurrent latest-frame replacement, immutable in-flight Y, neutral UV, exact paired snapshot, source epoch metadata and clear

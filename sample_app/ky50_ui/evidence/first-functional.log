@@ -1,0 +1,122 @@
+ISP Vipipe(0) Allocate pa(0x8b3c2000) va(0x0xb6cbf000) size(226880)
+pipe0=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB-only CCW90 480x854, required touch, software alpha compositor
+ROTATED storage=512x896 stride=512/512 offsets=L0 R26 T32 B0 crop=2,36 480x854
+STATS capture_fps=30.20 display_fps=29.80 frames=151 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=301 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=451 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=601 page=0 eth=1
+STATS capture_fps=30.20 display_fps=30.00 frames=752 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=902 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=1052 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=1202 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.00 frames=1352 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.80 frames=1503 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=1653 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.00 frames=1803 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=1953 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.20 frames=2103 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.80 frames=2254 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=2404 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.20 frames=2554 page=0 eth=1
+STATS capture_fps=30.20 display_fps=30.20 frames=2705 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=2855 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=3005 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=3155 page=0 eth=1
+STATS capture_fps=30.20 display_fps=30.00 frames=3306 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=3456 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=3606 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=3756 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=3906 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=4056 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=4206 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.80 frames=4357 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=4507 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.20 frames=4657 page=0 eth=1
+UI page=1 feature=0
+STATS capture_fps=30.20 display_fps=25.00 frames=4808 page=1 eth=1
+STATS capture_fps=30.20 display_fps=22.60 frames=4959 page=1 eth=1
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+STATS capture_fps=30.00 display_fps=22.00 frames=5109 page=0 eth=1
+UI page=2 feature=0
+STATS capture_fps=30.20 display_fps=23.60 frames=5260 page=2 eth=1
+STATS capture_fps=30.20 display_fps=22.60 frames=5411 page=2 eth=1
+UI page=0 feature=0
+STATS capture_fps=30.00 display_fps=24.60 frames=5561 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=5711 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=5861 page=0 eth=1
+STATS capture_fps=30.20 display_fps=30.20 frames=6012 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=6162 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=6312 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.80 frames=6463 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=6613 page=0 eth=1
+STATS capture_fps=30.20 display_fps=30.00 frames=6764 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=6914 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=7064 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=7214 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=7364 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=7514 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.80 frames=7665 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=7815 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=7965 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=8115 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.60 frames=8266 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=8416 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=8566 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.40 frames=8717 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=8867 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.40 frames=9017 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=9167 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.40 frames=9318 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=9468 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=9618 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.60 frames=9769 page=0 eth=1
+STATS capture_fps=30.00 display_fps=30.00 frames=9919 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=10069 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=10219 page=0 eth=1
+STATS capture_fps=30.20 display_fps=30.00 frames=10370 page=0 eth=1
+STATS capture_fps=29.80 display_fps=29.80 frames=10519 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.80 frames=10670 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.80 frames=10820 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.60 frames=10971 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=11121 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.40 frames=11272 page=0 eth=1
+STATS capture_fps=29.80 display_fps=29.60 frames=11421 page=0 eth=1
+STATS capture_fps=30.20 display_fps=29.20 frames=11572 page=0 eth=1
+STATS capture_fps=30.00 display_fps=29.60 frames=11722 page=0 eth=1

@@ -1,0 +1,6 @@
+PROBE_STAGE=9
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+FIRST_FRAME 640x480 fmt=19 stride=640 len=307200 pts=7218954198
+DVP_PROBE seconds=1.0 frames=85 misses=0 last_rc=0
+DVP_PROBE seconds=2.0 frames=170 misses=0 last_rc=0
+DVP_PROBE_DONE frames=254 rc=0

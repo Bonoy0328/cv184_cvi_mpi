@@ -1,0 +1,855 @@
+ISP Vipipe(0) Allocate pa(0x8b3c2000) va(0x0xb6d1c000) size(226880)
+pipe0=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB-only CCW90 480x854, required touch, software alpha compositor
+ETHERNET carrier=1 uptime_ms=8020515
+ROTATED storage=512x896 stride=512/512 offsets=L0 R26 T32 B0 crop=2,36 480x854
+STATS elapsed=5 capture_fps=30.33 display_fps=29.73 frames=152 page=0 eth=1
+STATS elapsed=10 capture_fps=29.98 display_fps=29.78 frames=302 page=0 eth=1
+STATS elapsed=15 capture_fps=30.00 display_fps=30.00 frames=452 page=0 eth=1
+STATS elapsed=20 capture_fps=30.19 display_fps=29.59 frames=603 page=0 eth=1
+STATS elapsed=25 capture_fps=29.96 display_fps=29.76 frames=753 page=0 eth=1
+STATS elapsed=30 capture_fps=29.95 display_fps=29.95 frames=903 page=0 eth=1
+STATS elapsed=35 capture_fps=29.99 display_fps=29.79 frames=1053 page=0 eth=1
+STATS elapsed=40 capture_fps=30.15 display_fps=29.95 frames=1204 page=0 eth=1
+STATS elapsed=45 capture_fps=29.99 display_fps=29.59 frames=1354 page=0 eth=1
+STATS elapsed=50 capture_fps=29.96 display_fps=29.76 frames=1504 page=0 eth=1
+STATS elapsed=55 capture_fps=29.93 display_fps=29.73 frames=1654 page=0 eth=1
+STATS elapsed=60 capture_fps=30.07 display_fps=29.28 frames=1805 page=0 eth=1
+STATS elapsed=65 capture_fps=29.93 display_fps=29.53 frames=1955 page=0 eth=1
+STATS elapsed=70 capture_fps=29.98 display_fps=29.78 frames=2105 page=0 eth=1
+STATS elapsed=75 capture_fps=30.20 display_fps=29.80 frames=2256 page=0 eth=1
+STATS elapsed=80 capture_fps=29.78 display_fps=29.58 frames=2405 page=0 eth=1
+STATS elapsed=85 capture_fps=30.17 display_fps=29.57 frames=2556 page=0 eth=1
+UI page=0 feature=0
+PAGE_TEST start cycles=100 synthetic_pointer
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+STATS elapsed=90 capture_fps=29.99 display_fps=22.19 frames=2706 page=1 eth=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+STATS elapsed=95 capture_fps=29.94 display_fps=22.36 frames=2856 page=1 eth=1
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+STATS elapsed=100 capture_fps=30.02 display_fps=22.27 frames=3007 page=0 eth=1
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+STATS elapsed=105 capture_fps=29.96 display_fps=21.97 frames=3157 page=3 eth=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+STATS elapsed=110 capture_fps=30.14 display_fps=22.16 frames=3308 page=0 eth=1
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+STATS elapsed=115 capture_fps=29.99 display_fps=21.79 frames=3458 page=3 eth=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+STATS elapsed=120 capture_fps=29.97 display_fps=22.18 frames=3608 page=0 eth=1
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+STATS elapsed=125 capture_fps=29.99 display_fps=22.20 frames=3758 page=3 eth=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+STATS elapsed=130 capture_fps=29.99 display_fps=22.20 frames=3908 page=0 eth=1
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+STATS elapsed=135 capture_fps=29.97 display_fps=22.38 frames=4058 page=3 eth=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=0 feature=0
+STATS elapsed=140 capture_fps=30.14 display_fps=21.76 frames=4209 page=0 eth=1
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=0 feature=0
+PAGE_TEST PASS cycles=100 transitions=400
+STATS elapsed=145 capture_fps=29.99 display_fps=23.60 frames=4359 page=0 eth=1
+STATS elapsed=150 capture_fps=29.99 display_fps=29.79 frames=4509 page=0 eth=1
+STATS elapsed=155 capture_fps=29.97 display_fps=29.77 frames=4659 page=0 eth=1
+STATS elapsed=160 capture_fps=29.99 display_fps=29.79 frames=4809 page=0 eth=1
+STATS elapsed=165 capture_fps=30.00 display_fps=29.40 frames=4959 page=0 eth=1
+STATS elapsed=170 capture_fps=30.16 display_fps=29.76 frames=5110 page=0 eth=1
+STATS elapsed=175 capture_fps=29.93 display_fps=29.73 frames=5260 page=0 eth=1
+STATS elapsed=180 capture_fps=29.99 display_fps=29.79 frames=5410 page=0 eth=1
+STATS elapsed=185 capture_fps=29.99 display_fps=29.79 frames=5560 page=0 eth=1
+STATS elapsed=190 capture_fps=29.98 display_fps=29.78 frames=5710 page=0 eth=1
+STATS elapsed=195 capture_fps=29.99 display_fps=29.99 frames=5860 page=0 eth=1
+STATS elapsed=200 capture_fps=29.98 display_fps=29.78 frames=6010 page=0 eth=1
+STATS elapsed=205 capture_fps=30.13 display_fps=29.73 frames=6161 page=0 eth=1
+STATS elapsed=210 capture_fps=29.98 display_fps=29.78 frames=6311 page=0 eth=1
+STATS elapsed=215 capture_fps=29.98 display_fps=29.78 frames=6461 page=0 eth=1
+STATS elapsed=220 capture_fps=30.00 display_fps=29.80 frames=6611 page=0 eth=1
+STATS elapsed=225 capture_fps=30.20 display_fps=29.80 frames=6762 page=0 eth=1
+TOUCH_SUBMIT latency_ms=18 page=0
+UI page=1 feature=0
+TOUCH_SUBMIT latency_ms=86 page=1
+TOUCH_SUBMIT latency_ms=39 page=1
+UI page=0 feature=0
+TOUCH_SUBMIT latency_ms=47 page=0
+TOUCH_SUBMIT latency_ms=14 page=0
+UI page=1 feature=0
+TOUCH_SUBMIT latency_ms=87 page=1
+TOUCH_SUBMIT latency_ms=13 page=1
+UI page=0 feature=0
+TOUCH_SUBMIT latency_ms=37 page=0
+TOUCH_SUBMIT latency_ms=19 page=0
+UI page=1 feature=0
+TOUCH_SUBMIT latency_ms=98 page=1
+STATS elapsed=230 capture_fps=29.99 display_fps=27.99 frames=6912 page=1 eth=1
+TOUCH_SUBMIT latency_ms=17 page=1
+UI page=0 feature=0
+TOUCH_SUBMIT latency_ms=36 page=0
+STATS elapsed=235 capture_fps=29.99 display_fps=29.59 frames=7062 page=0 eth=1
+STATS elapsed=240 capture_fps=29.98 display_fps=29.98 frames=7212 page=0 eth=1
+STATS elapsed=245 capture_fps=29.93 display_fps=29.73 frames=7362 page=0 eth=1
+STATS elapsed=250 capture_fps=29.99 display_fps=29.79 frames=7512 page=0 eth=1
+STATS elapsed=255 capture_fps=29.99 display_fps=29.59 frames=7662 page=0 eth=1
+STATS elapsed=260 capture_fps=30.16 display_fps=29.76 frames=7813 page=0 eth=1
+STATS elapsed=265 capture_fps=30.00 display_fps=29.60 frames=7963 page=0 eth=1
+STATS elapsed=270 capture_fps=29.92 display_fps=29.72 frames=8113 page=0 eth=1
+STATS elapsed=275 capture_fps=30.11 display_fps=29.51 frames=8264 page=0 eth=1
+STATS elapsed=280 capture_fps=29.97 display_fps=29.57 frames=8414 page=0 eth=1
+STATS elapsed=285 capture_fps=29.93 display_fps=29.73 frames=8564 page=0 eth=1
+STATS elapsed=290 capture_fps=30.15 display_fps=29.55 frames=8715 page=0 eth=1
+STATS elapsed=295 capture_fps=29.99 display_fps=29.79 frames=8865 page=0 eth=1
+STATS elapsed=300 capture_fps=29.99 display_fps=29.79 frames=9015 page=0 eth=1
+STATS elapsed=305 capture_fps=30.00 display_fps=29.60 frames=9165 page=0 eth=1
+STATS elapsed=310 capture_fps=29.95 display_fps=29.95 frames=9315 page=0 eth=1
+STATS elapsed=315 capture_fps=29.99 display_fps=29.79 frames=9465 page=0 eth=1
+STATS elapsed=320 capture_fps=29.99 display_fps=29.79 frames=9615 page=0 eth=1
+STATS elapsed=325 capture_fps=30.09 display_fps=29.69 frames=9766 page=0 eth=1
+STATS elapsed=330 capture_fps=29.98 display_fps=29.98 frames=9916 page=0 eth=1
+STATS elapsed=335 capture_fps=29.96 display_fps=29.96 frames=10066 page=0 eth=1
+STATS elapsed=340 capture_fps=30.00 display_fps=29.80 frames=10216 page=0 eth=1
+STATS elapsed=345 capture_fps=30.17 display_fps=29.77 frames=10367 page=0 eth=1
+STATS elapsed=350 capture_fps=30.00 display_fps=29.40 frames=10517 page=0 eth=1
+STATS elapsed=355 capture_fps=29.93 display_fps=29.93 frames=10667 page=0 eth=1
+STATS elapsed=360 capture_fps=29.99 display_fps=29.59 frames=10817 page=0 eth=1
+STATS elapsed=365 capture_fps=29.99 display_fps=29.59 frames=10967 page=0 eth=1
+STATS elapsed=370 capture_fps=29.99 display_fps=29.79 frames=11117 page=0 eth=1
+STATS elapsed=375 capture_fps=30.00 display_fps=30.00 frames=11267 page=0 eth=1
+STATS elapsed=380 capture_fps=30.20 display_fps=29.40 frames=11418 page=0 eth=1
+STATS elapsed=385 capture_fps=29.97 display_fps=29.57 frames=11568 page=0 eth=1
+STATS elapsed=390 capture_fps=30.00 display_fps=29.80 frames=11718 page=0 eth=1
+STATS elapsed=395 capture_fps=29.95 display_fps=29.95 frames=11868 page=0 eth=1
+STATS elapsed=400 capture_fps=29.97 display_fps=29.97 frames=12018 page=0 eth=1
+STATS elapsed=405 capture_fps=29.98 display_fps=29.78 frames=12168 page=0 eth=1
+STATS elapsed=410 capture_fps=30.00 display_fps=29.80 frames=12318 page=0 eth=1
+STATS elapsed=415 capture_fps=29.98 display_fps=29.78 frames=12468 page=0 eth=1
+STATS elapsed=420 capture_fps=30.00 display_fps=29.60 frames=12618 page=0 eth=1
+STATS elapsed=425 capture_fps=30.00 display_fps=30.00 frames=12768 page=0 eth=1
+STATS elapsed=430 capture_fps=30.20 display_fps=29.60 frames=12919 page=0 eth=1
+STATS elapsed=435 capture_fps=29.99 display_fps=29.79 frames=13069 page=0 eth=1
+STATS elapsed=440 capture_fps=29.99 display_fps=29.99 frames=13219 page=0 eth=1
+STATS elapsed=445 capture_fps=29.99 display_fps=29.39 frames=13369 page=0 eth=1
+STATS elapsed=450 capture_fps=29.98 display_fps=29.58 frames=13519 page=0 eth=1
+STATS elapsed=455 capture_fps=29.99 display_fps=29.79 frames=13669 page=0 eth=1
+STATS elapsed=460 capture_fps=30.00 display_fps=29.80 frames=13819 page=0 eth=1
+STATS elapsed=465 capture_fps=29.98 display_fps=29.78 frames=13969 page=0 eth=1
+STATS elapsed=470 capture_fps=30.00 display_fps=29.60 frames=14119 page=0 eth=1
+STATS elapsed=475 capture_fps=29.99 display_fps=29.59 frames=14269 page=0 eth=1
+STATS elapsed=480 capture_fps=30.19 display_fps=29.59 frames=14420 page=0 eth=1
+STATS elapsed=485 capture_fps=30.00 display_fps=29.80 frames=14570 page=0 eth=1
+STATS elapsed=490 capture_fps=29.93 display_fps=29.93 frames=14720 page=0 eth=1
+STATS elapsed=495 capture_fps=30.00 display_fps=29.60 frames=14870 page=0 eth=1
+STATS elapsed=500 capture_fps=29.99 display_fps=29.79 frames=15020 page=0 eth=1
+STATS elapsed=505 capture_fps=29.99 display_fps=29.39 frames=15170 page=0 eth=1
+STATS elapsed=510 capture_fps=29.97 display_fps=29.77 frames=15320 page=0 eth=1
+STATS elapsed=515 capture_fps=30.00 display_fps=30.00 frames=15470 page=0 eth=1
+STATS elapsed=520 capture_fps=30.20 display_fps=29.60 frames=15621 page=0 eth=1
+STATS elapsed=525 capture_fps=29.95 display_fps=29.95 frames=15771 page=0 eth=1
+STATS elapsed=530 capture_fps=29.95 display_fps=29.75 frames=15921 page=0 eth=1
+STATS elapsed=535 capture_fps=29.99 display_fps=29.79 frames=16071 page=0 eth=1
+STATS elapsed=540 capture_fps=30.15 display_fps=29.95 frames=16222 page=0 eth=1
+STATS elapsed=545 capture_fps=29.99 display_fps=29.59 frames=16372 page=0 eth=1
+STATS elapsed=550 capture_fps=29.97 display_fps=29.97 frames=16522 page=0 eth=1
+STATS elapsed=555 capture_fps=29.99 display_fps=29.79 frames=16672 page=0 eth=1
+STATS elapsed=560 capture_fps=29.99 display_fps=29.79 frames=16822 page=0 eth=1
+STATS elapsed=565 capture_fps=29.99 display_fps=29.59 frames=16972 page=0 eth=1
+STATS elapsed=570 capture_fps=30.00 display_fps=29.60 frames=17122 page=0 eth=1
+STATS elapsed=575 capture_fps=29.97 display_fps=29.77 frames=17272 page=0 eth=1
+STATS elapsed=580 capture_fps=30.18 display_fps=29.78 frames=17423 page=0 eth=1
+STATS elapsed=585 capture_fps=29.80 display_fps=29.80 frames=17572 page=0 eth=1
+STATS elapsed=590 capture_fps=30.20 display_fps=29.60 frames=17723 page=0 eth=1
+STATS elapsed=595 capture_fps=29.99 display_fps=29.99 frames=17873 page=0 eth=1
+STATS elapsed=600 capture_fps=30.00 display_fps=29.80 frames=18023 page=0 eth=1
+STATS elapsed=605 capture_fps=29.98 display_fps=29.98 frames=18173 page=0 eth=1
+STATS elapsed=610 capture_fps=29.99 display_fps=29.59 frames=18323 page=0 eth=1
+STATS elapsed=615 capture_fps=29.99 display_fps=29.59 frames=18473 page=0 eth=1
+STATS elapsed=620 capture_fps=29.99 display_fps=29.79 frames=18623 page=0 eth=1
+STATS elapsed=625 capture_fps=30.15 display_fps=29.75 frames=18774 page=0 eth=1
+STATS elapsed=630 capture_fps=29.99 display_fps=29.79 frames=18924 page=0 eth=1
+STATS elapsed=635 capture_fps=30.00 display_fps=29.60 frames=19074 page=0 eth=1
+STATS elapsed=640 capture_fps=29.95 display_fps=29.75 frames=19224 page=0 eth=1
+STATS elapsed=645 capture_fps=29.99 display_fps=29.79 frames=19374 page=0 eth=1
+STATS elapsed=650 capture_fps=30.00 display_fps=29.60 frames=19524 page=0 eth=1
+STATS elapsed=655 capture_fps=29.99 display_fps=29.99 frames=19674 page=0 eth=1
+STATS elapsed=660 capture_fps=30.09 display_fps=29.69 frames=19825 page=0 eth=1
+STATS elapsed=665 capture_fps=29.93 display_fps=29.73 frames=19975 page=0 eth=1
+STATS elapsed=670 capture_fps=30.00 display_fps=29.60 frames=20125 page=0 eth=1
+STATS elapsed=675 capture_fps=30.16 display_fps=29.96 frames=20276 page=0 eth=1
+STATS elapsed=680 capture_fps=29.99 display_fps=29.59 frames=20426 page=0 eth=1
+STATS elapsed=685 capture_fps=29.99 display_fps=29.79 frames=20576 page=0 eth=1
+STATS elapsed=690 capture_fps=29.95 display_fps=29.75 frames=20726 page=0 eth=1
+STATS elapsed=695 capture_fps=30.00 display_fps=29.60 frames=20876 page=0 eth=1
+STATS elapsed=700 capture_fps=29.99 display_fps=29.59 frames=21026 page=0 eth=1
+STATS elapsed=705 capture_fps=29.99 display_fps=29.39 frames=21176 page=0 eth=1
+STATS elapsed=710 capture_fps=30.15 display_fps=29.75 frames=21327 page=0 eth=1
+STATS elapsed=715 capture_fps=29.95 display_fps=29.95 frames=21477 page=0 eth=1
+STATS elapsed=720 capture_fps=29.95 display_fps=29.75 frames=21627 page=0 eth=1
+STATS elapsed=725 capture_fps=29.99 display_fps=29.79 frames=21777 page=0 eth=1
+STATS elapsed=730 capture_fps=29.96 display_fps=29.76 frames=21927 page=0 eth=1
+STATS elapsed=735 capture_fps=30.19 display_fps=29.79 frames=22078 page=0 eth=1
+STATS elapsed=740 capture_fps=29.96 display_fps=29.76 frames=22228 page=0 eth=1
+STATS elapsed=745 capture_fps=29.99 display_fps=29.59 frames=22378 page=0 eth=1
+STATS elapsed=750 capture_fps=29.99 display_fps=29.79 frames=22528 page=0 eth=1
+STATS elapsed=755 capture_fps=30.10 display_fps=29.70 frames=22679 page=0 eth=1
+STATS elapsed=760 capture_fps=29.91 display_fps=29.91 frames=22829 page=0 eth=1
+STATS elapsed=765 capture_fps=29.95 display_fps=29.95 frames=22979 page=0 eth=1
+STATS elapsed=770 capture_fps=30.18 display_fps=29.78 frames=23130 page=0 eth=1
+STATS elapsed=775 capture_fps=29.99 display_fps=29.79 frames=23280 page=0 eth=1
+STATS elapsed=780 capture_fps=29.96 display_fps=29.96 frames=23430 page=0 eth=1
+STATS elapsed=785 capture_fps=29.95 display_fps=29.75 frames=23580 page=0 eth=1
+STATS elapsed=790 capture_fps=30.00 display_fps=29.60 frames=23730 page=0 eth=1
+STATS elapsed=795 capture_fps=30.15 display_fps=29.55 frames=23881 page=0 eth=1
+STATS elapsed=800 capture_fps=29.99 display_fps=29.59 frames=24031 page=0 eth=1
+STATS elapsed=805 capture_fps=29.96 display_fps=29.96 frames=24181 page=0 eth=1
+STATS elapsed=810 capture_fps=29.95 display_fps=29.95 frames=24331 page=0 eth=1
+STATS elapsed=815 capture_fps=29.99 display_fps=29.79 frames=24481 page=0 eth=1
+STATS elapsed=820 capture_fps=30.15 display_fps=29.75 frames=24632 page=0 eth=1
+STATS elapsed=825 capture_fps=29.95 display_fps=29.95 frames=24782 page=0 eth=1
+STATS elapsed=830 capture_fps=29.99 display_fps=29.79 frames=24932 page=0 eth=1
+STATS elapsed=835 capture_fps=29.98 display_fps=29.98 frames=25082 page=0 eth=1
+STATS elapsed=840 capture_fps=30.00 display_fps=29.60 frames=25232 page=0 eth=1
+STATS elapsed=845 capture_fps=29.99 display_fps=29.79 frames=25382 page=0 eth=1
+STATS elapsed=850 capture_fps=30.00 display_fps=29.80 frames=25532 page=0 eth=1
+STATS elapsed=855 capture_fps=30.17 display_fps=29.97 frames=25683 page=0 eth=1
+STATS elapsed=860 capture_fps=29.99 display_fps=29.79 frames=25833 page=0 eth=1
+STATS elapsed=865 capture_fps=29.99 display_fps=29.59 frames=25983 page=0 eth=1
+STATS elapsed=870 capture_fps=29.98 display_fps=29.58 frames=26133 page=0 eth=1
+STATS elapsed=875 capture_fps=29.98 display_fps=29.58 frames=26283 page=0 eth=1
+STATS elapsed=880 capture_fps=29.98 display_fps=29.58 frames=26433 page=0 eth=1
+STATS elapsed=885 capture_fps=29.99 display_fps=29.39 frames=26583 page=0 eth=1
+STATS elapsed=890 capture_fps=30.00 display_fps=29.80 frames=26733 page=0 eth=1
+STATS elapsed=895 capture_fps=30.17 display_fps=29.97 frames=26884 page=0 eth=1
+STATS elapsed=900 capture_fps=29.98 display_fps=29.58 frames=27034 page=0 eth=1
+STATS elapsed=905 capture_fps=29.99 display_fps=29.79 frames=27184 page=0 eth=1
+STATS elapsed=910 capture_fps=29.94 display_fps=29.94 frames=27334 page=0 eth=1
+STATS elapsed=915 capture_fps=29.99 display_fps=29.79 frames=27484 page=0 eth=1
+STATS elapsed=920 capture_fps=29.99 display_fps=29.79 frames=27634 page=0 eth=1
+STATS elapsed=925 capture_fps=29.98 display_fps=29.98 frames=27784 page=0 eth=1
+STATS elapsed=930 capture_fps=30.19 display_fps=29.79 frames=27935 page=0 eth=1
+STATS elapsed=935 capture_fps=30.00 display_fps=29.80 frames=28085 page=0 eth=1
+STATS elapsed=940 capture_fps=30.00 display_fps=30.00 frames=28235 page=0 eth=1
+STATS elapsed=945 capture_fps=29.95 display_fps=29.75 frames=28385 page=0 eth=1
+STATS elapsed=950 capture_fps=29.98 display_fps=29.78 frames=28535 page=0 eth=1
+STATS elapsed=955 capture_fps=30.10 display_fps=29.70 frames=28686 page=0 eth=1
+STATS elapsed=960 capture_fps=29.96 display_fps=29.56 frames=28836 page=0 eth=1
+STATS elapsed=965 capture_fps=29.99 display_fps=29.59 frames=28986 page=0 eth=1
+STATS elapsed=970 capture_fps=29.95 display_fps=29.75 frames=29136 page=0 eth=1
+STATS elapsed=975 capture_fps=30.16 display_fps=29.96 frames=29287 page=0 eth=1
+STATS elapsed=980 capture_fps=29.99 display_fps=29.79 frames=29437 page=0 eth=1
+STATS elapsed=985 capture_fps=29.96 display_fps=29.56 frames=29587 page=0 eth=1
+STATS elapsed=990 capture_fps=29.95 display_fps=29.95 frames=29737 page=0 eth=1
+STATS elapsed=995 capture_fps=30.00 display_fps=29.60 frames=29887 page=0 eth=1
+STATS elapsed=1000 capture_fps=30.00 display_fps=29.80 frames=30037 page=0 eth=1
+STATS elapsed=1005 capture_fps=30.16 display_fps=29.76 frames=30188 page=0 eth=1
+STATS elapsed=1010 capture_fps=29.78 display_fps=29.78 frames=30337 page=0 eth=1
+STATS elapsed=1015 capture_fps=30.15 display_fps=29.95 frames=30488 page=0 eth=1
+STATS elapsed=1020 capture_fps=29.97 display_fps=29.77 frames=30638 page=0 eth=1
+STATS elapsed=1025 capture_fps=29.99 display_fps=29.79 frames=30788 page=0 eth=1
+STATS elapsed=1030 capture_fps=29.97 display_fps=29.97 frames=30938 page=0 eth=1
+STATS elapsed=1035 capture_fps=30.16 display_fps=29.76 frames=31089 page=0 eth=1
+STATS elapsed=1040 capture_fps=29.94 display_fps=29.74 frames=31239 page=0 eth=1
+STATS elapsed=1045 capture_fps=30.00 display_fps=29.80 frames=31389 page=0 eth=1
+STATS elapsed=1050 capture_fps=29.98 display_fps=29.78 frames=31539 page=0 eth=1
+STATS elapsed=1055 capture_fps=29.98 display_fps=29.78 frames=31689 page=0 eth=1
+STATS elapsed=1060 capture_fps=29.99 display_fps=29.39 frames=31839 page=0 eth=1
+STATS elapsed=1065 capture_fps=30.18 display_fps=29.98 frames=31990 page=0 eth=1
+STATS elapsed=1070 capture_fps=29.99 display_fps=29.99 frames=32140 page=0 eth=1
+STATS elapsed=1075 capture_fps=29.99 display_fps=29.39 frames=32290 page=0 eth=1
+STATS elapsed=1080 capture_fps=29.99 display_fps=29.59 frames=32440 page=0 eth=1
+STATS elapsed=1085 capture_fps=29.99 display_fps=29.79 frames=32590 page=0 eth=1
+STATS elapsed=1090 capture_fps=29.99 display_fps=29.59 frames=32740 page=0 eth=1
+STATS elapsed=1095 capture_fps=29.98 display_fps=29.98 frames=32890 page=0 eth=1
+STATS elapsed=1100 capture_fps=29.99 display_fps=29.99 frames=33040 page=0 eth=1
+STATS elapsed=1105 capture_fps=30.00 display_fps=30.00 frames=33190 page=0 eth=1
+SNAPSHOT /tmp/ky50-ui/screen.ppm OK
+STATS elapsed=1110 capture_fps=30.20 display_fps=29.80 frames=33341 page=0 eth=1
+STATS elapsed=1115 capture_fps=30.00 display_fps=29.80 frames=33491 page=0 eth=1
+STATS elapsed=1120 capture_fps=30.00 display_fps=30.00 frames=33641 page=0 eth=1
+STATS elapsed=1125 capture_fps=30.00 display_fps=29.80 frames=33791 page=0 eth=1
+STATS elapsed=1130 capture_fps=29.96 display_fps=29.76 frames=33941 page=0 eth=1
+STATS elapsed=1135 capture_fps=30.00 display_fps=30.00 frames=34091 page=0 eth=1
+STATS elapsed=1140 capture_fps=29.94 display_fps=29.54 frames=34241 page=0 eth=1
+STATS elapsed=1145 capture_fps=30.12 display_fps=29.92 frames=34392 page=0 eth=1
+STATS elapsed=1150 capture_fps=29.99 display_fps=29.59 frames=34542 page=0 eth=1
+STATS elapsed=1155 capture_fps=29.93 display_fps=29.73 frames=34692 page=0 eth=1
+STATS elapsed=1160 capture_fps=29.98 display_fps=29.78 frames=34842 page=0 eth=1
+STATS elapsed=1165 capture_fps=29.99 display_fps=29.59 frames=34992 page=0 eth=1
+STATS elapsed=1170 capture_fps=30.13 display_fps=29.73 frames=35143 page=0 eth=1
+STATS elapsed=1175 capture_fps=29.99 display_fps=29.39 frames=35293 page=0 eth=1
+STATS elapsed=1180 capture_fps=29.99 display_fps=29.79 frames=35443 page=0 eth=1
+STATS elapsed=1185 capture_fps=29.95 display_fps=29.95 frames=35593 page=0 eth=1
+STATS elapsed=1190 capture_fps=30.00 display_fps=30.00 frames=35743 page=0 eth=1
+STATS elapsed=1195 capture_fps=30.00 display_fps=29.80 frames=35893 page=0 eth=1
+STATS elapsed=1200 capture_fps=30.19 display_fps=29.79 frames=36044 page=0 eth=1
+STATS elapsed=1205 capture_fps=29.80 display_fps=29.60 frames=36193 page=0 eth=1
+STATS elapsed=1210 capture_fps=30.15 display_fps=29.75 frames=36344 page=0 eth=1
+STATS elapsed=1215 capture_fps=29.99 display_fps=29.99 frames=36494 page=0 eth=1
+STATS elapsed=1221 capture_fps=29.98 display_fps=29.58 frames=36644 page=0 eth=1
+STATS elapsed=1226 capture_fps=29.95 display_fps=29.95 frames=36794 page=0 eth=1
+STATS elapsed=1231 capture_fps=30.18 display_fps=29.58 frames=36945 page=0 eth=1
+STATS elapsed=1236 capture_fps=29.97 display_fps=29.97 frames=37095 page=0 eth=1
+STATS elapsed=1241 capture_fps=29.98 display_fps=29.98 frames=37245 page=0 eth=1
+STATS elapsed=1246 capture_fps=29.99 display_fps=29.59 frames=37395 page=0 eth=1
+STATS elapsed=1251 capture_fps=30.00 display_fps=29.80 frames=37545 page=0 eth=1
+STATS elapsed=1256 capture_fps=29.93 display_fps=29.73 frames=37695 page=0 eth=1
+STATS elapsed=1261 capture_fps=30.19 display_fps=29.79 frames=37846 page=0 eth=1
+STATS elapsed=1266 capture_fps=29.98 display_fps=29.58 frames=37996 page=0 eth=1
+STATS elapsed=1271 capture_fps=29.96 display_fps=29.56 frames=38146 page=0 eth=1
+STATS elapsed=1276 capture_fps=29.99 display_fps=29.99 frames=38296 page=0 eth=1
+STATS elapsed=1281 capture_fps=29.99 display_fps=29.79 frames=38446 page=0 eth=1
+STATS elapsed=1286 capture_fps=29.99 display_fps=29.79 frames=38596 page=0 eth=1
+STATS elapsed=1291 capture_fps=29.99 display_fps=29.79 frames=38746 page=0 eth=1
+STATS elapsed=1296 capture_fps=29.98 display_fps=29.78 frames=38896 page=0 eth=1
+STATS elapsed=1301 capture_fps=30.19 display_fps=29.79 frames=39047 page=0 eth=1
+STATS elapsed=1306 capture_fps=29.98 display_fps=29.78 frames=39197 page=0 eth=1
+STATS elapsed=1311 capture_fps=29.99 display_fps=29.99 frames=39347 page=0 eth=1
+STATS elapsed=1316 capture_fps=29.97 display_fps=29.97 frames=39497 page=0 eth=1
+STATS elapsed=1321 capture_fps=29.95 display_fps=29.55 frames=39647 page=0 eth=1
+STATS elapsed=1326 capture_fps=29.98 display_fps=29.78 frames=39797 page=0 eth=1
+STATS elapsed=1331 capture_fps=30.15 display_fps=29.55 frames=39948 page=0 eth=1
+STATS elapsed=1336 capture_fps=29.99 display_fps=29.79 frames=40098 page=0 eth=1
+STATS elapsed=1341 capture_fps=29.94 display_fps=29.94 frames=40248 page=0 eth=1
+STATS elapsed=1346 capture_fps=29.96 display_fps=29.96 frames=40398 page=0 eth=1
+STATS elapsed=1351 capture_fps=30.17 display_fps=29.37 frames=40549 page=0 eth=1
+STATS elapsed=1356 capture_fps=29.99 display_fps=29.79 frames=40699 page=0 eth=1
+STATS elapsed=1361 capture_fps=29.99 display_fps=29.79 frames=40849 page=0 eth=1
+STATS elapsed=1366 capture_fps=29.99 display_fps=29.79 frames=40999 page=0 eth=1
+STATS elapsed=1371 capture_fps=29.99 display_fps=29.79 frames=41149 page=0 eth=1
+STATS elapsed=1376 capture_fps=29.99 display_fps=29.79 frames=41299 page=0 eth=1
+STATS elapsed=1381 capture_fps=29.98 display_fps=29.98 frames=41449 page=0 eth=1
+STATS elapsed=1386 capture_fps=30.00 display_fps=29.40 frames=41599 page=0 eth=1
+STATS elapsed=1391 capture_fps=29.96 display_fps=29.76 frames=41749 page=0 eth=1
+STATS elapsed=1396 capture_fps=30.19 display_fps=29.99 frames=41900 page=0 eth=1
+STATS elapsed=1401 capture_fps=29.92 display_fps=29.72 frames=42050 page=0 eth=1
+STATS elapsed=1406 capture_fps=29.99 display_fps=29.79 frames=42200 page=0 eth=1
+STATS elapsed=1411 capture_fps=29.99 display_fps=29.79 frames=42350 page=0 eth=1
+STATS elapsed=1416 capture_fps=30.15 display_fps=29.75 frames=42501 page=0 eth=1
+STATS elapsed=1421 capture_fps=30.00 display_fps=29.80 frames=42651 page=0 eth=1
+STATS elapsed=1426 capture_fps=30.00 display_fps=29.80 frames=42801 page=0 eth=1
+STATS elapsed=1431 capture_fps=29.98 display_fps=29.78 frames=42951 page=0 eth=1
+STATS elapsed=1436 capture_fps=29.95 display_fps=29.95 frames=43101 page=0 eth=1
+STATS elapsed=1441 capture_fps=30.00 display_fps=29.60 frames=43251 page=0 eth=1
+STATS elapsed=1446 capture_fps=30.00 display_fps=29.80 frames=43401 page=0 eth=1
+STATS elapsed=1451 capture_fps=30.00 display_fps=29.60 frames=43551 page=0 eth=1
+STATS elapsed=1456 capture_fps=30.15 display_fps=29.75 frames=43702 page=0 eth=1
+STATS elapsed=1461 capture_fps=29.99 display_fps=29.59 frames=43852 page=0 eth=1
+STATS elapsed=1466 capture_fps=30.00 display_fps=29.60 frames=44002 page=0 eth=1
+STATS elapsed=1471 capture_fps=29.93 display_fps=29.73 frames=44152 page=0 eth=1
+STATS elapsed=1476 capture_fps=29.99 display_fps=29.39 frames=44302 page=0 eth=1
+STATS elapsed=1481 capture_fps=29.99 display_fps=29.59 frames=44452 page=0 eth=1
+STATS elapsed=1486 capture_fps=30.16 display_fps=29.76 frames=44603 page=0 eth=1
+STATS elapsed=1491 capture_fps=29.93 display_fps=29.93 frames=44753 page=0 eth=1
+STATS elapsed=1496 capture_fps=29.95 display_fps=29.95 frames=44903 page=0 eth=1
+STATS elapsed=1501 capture_fps=29.99 display_fps=29.99 frames=45053 page=0 eth=1
+STATS elapsed=1506 capture_fps=30.17 display_fps=29.57 frames=45204 page=0 eth=1
+STATS elapsed=1511 capture_fps=29.95 display_fps=29.95 frames=45354 page=0 eth=1
+STATS elapsed=1516 capture_fps=29.99 display_fps=29.99 frames=45504 page=0 eth=1
+STATS elapsed=1521 capture_fps=29.99 display_fps=29.79 frames=45654 page=0 eth=1
+STATS elapsed=1526 capture_fps=29.99 display_fps=29.79 frames=45804 page=0 eth=1
+STATS elapsed=1531 capture_fps=29.99 display_fps=29.59 frames=45954 page=0 eth=1
+STATS elapsed=1536 capture_fps=30.15 display_fps=29.95 frames=46105 page=0 eth=1
+STATS elapsed=1541 capture_fps=29.99 display_fps=29.79 frames=46255 page=0 eth=1
+STATS elapsed=1546 capture_fps=29.93 display_fps=29.93 frames=46405 page=0 eth=1
+STATS elapsed=1551 capture_fps=29.99 display_fps=29.59 frames=46555 page=0 eth=1
+STATS elapsed=1556 capture_fps=29.99 display_fps=29.79 frames=46705 page=0 eth=1
+STATS elapsed=1561 capture_fps=29.97 display_fps=29.77 frames=46855 page=0 eth=1
+STATS elapsed=1566 capture_fps=30.19 display_fps=29.59 frames=47006 page=0 eth=1
+STATS elapsed=1571 capture_fps=30.00 display_fps=29.80 frames=47156 page=0 eth=1
+STATS elapsed=1576 capture_fps=30.00 display_fps=29.80 frames=47306 page=0 eth=1
+STATS elapsed=1581 capture_fps=30.00 display_fps=29.80 frames=47456 page=0 eth=1
+STATS elapsed=1586 capture_fps=29.92 display_fps=29.92 frames=47606 page=0 eth=1
+STATS elapsed=1591 capture_fps=29.99 display_fps=29.79 frames=47756 page=0 eth=1
+STATS elapsed=1596 capture_fps=30.15 display_fps=29.75 frames=47907 page=0 eth=1
+STATS elapsed=1601 capture_fps=29.97 display_fps=29.97 frames=48057 page=0 eth=1
+STATS elapsed=1606 capture_fps=29.98 display_fps=29.98 frames=48207 page=0 eth=1
+STATS elapsed=1611 capture_fps=29.93 display_fps=29.93 frames=48357 page=0 eth=1
+STATS elapsed=1616 capture_fps=30.00 display_fps=29.60 frames=48507 page=0 eth=1
+STATS elapsed=1621 capture_fps=30.10 display_fps=29.50 frames=48658 page=0 eth=1
+STATS elapsed=1626 capture_fps=29.99 display_fps=29.59 frames=48808 page=0 eth=1
+STATS elapsed=1631 capture_fps=29.95 display_fps=29.55 frames=48958 page=0 eth=1
+STATS elapsed=1636 capture_fps=29.99 display_fps=29.79 frames=49108 page=0 eth=1
+STATS elapsed=1641 capture_fps=30.16 display_fps=29.76 frames=49259 page=0 eth=1
+STATS elapsed=1646 capture_fps=29.79 display_fps=29.59 frames=49408 page=0 eth=1
+STATS elapsed=1651 capture_fps=30.00 display_fps=29.80 frames=49558 page=0 eth=1
+STATS elapsed=1656 capture_fps=30.16 display_fps=29.36 frames=49709 page=0 eth=1
+STATS elapsed=1661 capture_fps=29.93 display_fps=29.73 frames=49859 page=0 eth=1
+STATS elapsed=1666 capture_fps=29.98 display_fps=29.78 frames=50009 page=0 eth=1
+STATS elapsed=1671 capture_fps=30.17 display_fps=29.77 frames=50160 page=0 eth=1
+STATS elapsed=1676 capture_fps=29.98 display_fps=29.58 frames=50310 page=0 eth=1
+STATS elapsed=1681 capture_fps=29.99 display_fps=29.79 frames=50460 page=0 eth=1
+STATS elapsed=1686 capture_fps=29.98 display_fps=29.78 frames=50610 page=0 eth=1
+STATS elapsed=1691 capture_fps=30.00 display_fps=29.80 frames=50760 page=0 eth=1
+STATS elapsed=1696 capture_fps=29.99 display_fps=29.99 frames=50910 page=0 eth=1
+STATS elapsed=1701 capture_fps=29.99 display_fps=29.99 frames=51060 page=0 eth=1
+STATS elapsed=1706 capture_fps=29.97 display_fps=29.77 frames=51210 page=0 eth=1
+STATS elapsed=1711 capture_fps=30.20 display_fps=29.80 frames=51361 page=0 eth=1
+STATS elapsed=1716 capture_fps=30.00 display_fps=29.60 frames=51511 page=0 eth=1
+STATS elapsed=1721 capture_fps=29.95 display_fps=29.95 frames=51661 page=0 eth=1
+STATS elapsed=1726 capture_fps=29.95 display_fps=29.75 frames=51811 page=0 eth=1
+STATS elapsed=1731 capture_fps=29.98 display_fps=29.78 frames=51961 page=0 eth=1
+STATS elapsed=1736 capture_fps=30.17 display_fps=29.37 frames=52112 page=0 eth=1
+STATS elapsed=1741 capture_fps=29.99 display_fps=29.99 frames=52262 page=0 eth=1
+STATS elapsed=1746 capture_fps=30.00 display_fps=29.80 frames=52412 page=0 eth=1
+STATS elapsed=1751 capture_fps=29.98 display_fps=29.58 frames=52562 page=0 eth=1
+STATS elapsed=1756 capture_fps=29.99 display_fps=29.79 frames=52712 page=0 eth=1
+STATS elapsed=1761 capture_fps=29.93 display_fps=29.73 frames=52862 page=0 eth=1
+STATS elapsed=1766 capture_fps=30.18 display_fps=29.78 frames=53013 page=0 eth=1
+STATS elapsed=1771 capture_fps=29.99 display_fps=29.59 frames=53163 page=0 eth=1
+STATS elapsed=1776 capture_fps=29.99 display_fps=29.59 frames=53313 page=0 eth=1
+STATS elapsed=1781 capture_fps=29.98 display_fps=29.78 frames=53463 page=0 eth=1
+STATS elapsed=1786 capture_fps=29.99 display_fps=29.79 frames=53613 page=0 eth=1
+STATS elapsed=1791 capture_fps=29.99 display_fps=29.99 frames=53763 page=0 eth=1
+STATS elapsed=1796 capture_fps=29.99 display_fps=29.79 frames=53913 page=0 eth=1
+STATS elapsed=1801 capture_fps=29.99 display_fps=29.79 frames=54063 page=0 eth=1
+STATS elapsed=1806 capture_fps=30.16 display_fps=29.96 frames=54214 page=0 eth=1
+STATS elapsed=1811 capture_fps=29.99 display_fps=29.59 frames=54364 page=0 eth=1
+STATS elapsed=1816 capture_fps=29.96 display_fps=29.96 frames=54514 page=0 eth=1
+STATS elapsed=1821 capture_fps=29.99 display_fps=29.79 frames=54664 page=0 eth=1
+STATS elapsed=1826 capture_fps=29.95 display_fps=29.55 frames=54814 page=0 eth=1
+STATS elapsed=1831 capture_fps=29.98 display_fps=29.78 frames=54964 page=0 eth=1
+STATS elapsed=1836 capture_fps=29.99 display_fps=29.39 frames=55114 page=0 eth=1
+STATS elapsed=1841 capture_fps=30.19 display_fps=29.39 frames=55265 page=0 eth=1
+STATS elapsed=1846 capture_fps=29.99 display_fps=29.99 frames=55415 page=0 eth=1
+STATS elapsed=1851 capture_fps=30.00 display_fps=29.80 frames=55565 page=0 eth=1
+STATS elapsed=1856 capture_fps=29.98 display_fps=29.78 frames=55715 page=0 eth=1
+STATS elapsed=1861 capture_fps=29.99 display_fps=29.79 frames=55865 page=0 eth=1
+STATS elapsed=1866 capture_fps=29.93 display_fps=29.73 frames=56015 page=0 eth=1
+STATS elapsed=1871 capture_fps=30.18 display_fps=29.78 frames=56166 page=0 eth=1
+STATS elapsed=1876 capture_fps=29.97 display_fps=29.97 frames=56316 page=0 eth=1
+STATS elapsed=1881 capture_fps=29.97 display_fps=29.97 frames=56466 page=0 eth=1
+STATS elapsed=1886 capture_fps=29.99 display_fps=29.79 frames=56616 page=0 eth=1
+STATS elapsed=1891 capture_fps=29.95 display_fps=29.75 frames=56766 page=0 eth=1
+STATS elapsed=1896 capture_fps=30.19 display_fps=29.79 frames=56917 page=0 eth=1
+STATS elapsed=1901 capture_fps=29.79 display_fps=29.79 frames=57066 page=0 eth=1
+STATS elapsed=1906 capture_fps=30.15 display_fps=29.95 frames=57217 page=0 eth=1
+STATS elapsed=1911 capture_fps=29.99 display_fps=29.59 frames=57367 page=0 eth=1
+STATS elapsed=1916 capture_fps=29.98 display_fps=29.58 frames=57517 page=0 eth=1
+STATS elapsed=1921 capture_fps=29.99 display_fps=29.79 frames=57667 page=0 eth=1
+STATS elapsed=1926 capture_fps=29.99 display_fps=29.99 frames=57817 page=0 eth=1
+STATS elapsed=1931 capture_fps=30.13 display_fps=29.73 frames=57968 page=0 eth=1
+STATS elapsed=1936 capture_fps=29.99 display_fps=29.59 frames=58118 page=0 eth=1
+STATS elapsed=1941 capture_fps=29.93 display_fps=29.93 frames=58268 page=0 eth=1
+STATS elapsed=1946 capture_fps=29.99 display_fps=29.79 frames=58418 page=0 eth=1
+STATS elapsed=1951 capture_fps=30.15 display_fps=29.75 frames=58569 page=0 eth=1
+STATS elapsed=1956 capture_fps=29.99 display_fps=29.79 frames=58719 page=0 eth=1
+STATS elapsed=1961 capture_fps=29.99 display_fps=29.79 frames=58869 page=0 eth=1
+STATS elapsed=1966 capture_fps=29.99 display_fps=29.79 frames=59019 page=0 eth=1
+STATS elapsed=1971 capture_fps=29.99 display_fps=29.99 frames=59169 page=0 eth=1

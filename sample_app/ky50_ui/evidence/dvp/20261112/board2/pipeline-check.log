@@ -1,0 +1,4 @@
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped
+CVI_VPSS_SendFrame(s->group,input,100): 0xc0068003
+PIPELINE_DONE rc=1

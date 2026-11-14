@@ -1,0 +1,13 @@
+samples=2748000 duration_ns=1000174200
+GPIOB11 high_pct=47.999 sampled_edges=1834531
+GPIOB12 high_pct=40.231 sampled_edges=645477
+GPIOB13 high_pct=43.890 sampled_edges=654138
+GPIOB14 high_pct=23.393 sampled_edges=611630
+GPIOB15 high_pct=75.777 sampled_edges=40
+GPIOB16 high_pct=0.000 sampled_edges=0
+GPIOB17 high_pct=67.259 sampled_edges=752897
+GPIOB18 high_pct=41.618 sampled_edges=677696
+GPIOB19 high_pct=11.148 sampled_edges=471812
+GPIOB20 high_pct=14.520 sampled_edges=549338
+GPIOB21 high_pct=6.237 sampled_edges=285340
+GPIOB22 high_pct=40.860 sampled_edges=1834652

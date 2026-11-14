@@ -1,0 +1,13 @@
+build/
+ky50_ui
+ui_preview
+pixel_check
+tools/touch_read
+kernel/*.o
+kernel/*.ko
+kernel/*.mod
+kernel/*.mod.c
+kernel/.*.cmd
+kernel/Module.symvers
+kernel/modules.order
+kernel/.tmp_versions/

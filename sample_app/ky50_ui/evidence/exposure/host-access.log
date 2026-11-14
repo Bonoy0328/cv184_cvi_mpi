@@ -1,0 +1,33 @@
+make TARGET=host build/host/vendor/sqlite/sqlite3.o
+make[1]: Entering directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+gcc -I. -Ivendor/lvgl -Ivendor/lvgl/include -DLV_CONF_INCLUDE_SIMPLE -Ivendor/sqlite -Ipva/include -DSQLITE_THREADSAFE=1 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_DQS=0 -DSQLITE_DEFAULT_MEMSTATUS=0 -std=gnu11 -O2 -g -ffunction-sections -fdata-sections -Wall -Wextra  -MMD -MP -c vendor/sqlite/sqlite3.c -o build/host/vendor/sqlite/sqlite3.o
+make[1]: Leaving directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+mkdir -p build/tests
+gcc -I. -Ivendor/sqlite -Ipva/include -std=gnu11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/access_test.c access.c access_store.c ir_exposure.c ime.c build/host/vendor/sqlite/sqlite3.o -lm -lpthread -o build/tests/access_test
+./build/tests/access_test
+USER_DB test settings write failure
+USER_DB attempt to write a readonly database
+USER_DB attendance backlog full or unavailable
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS parameters saved hand=80 auth=60 dynamic=4
+ACCESS parameters loaded source=database hand=80 auth=60 dynamic=4
+ACCESS parameters saved hand=0 auth=100 dynamic=0
+ACCESS parameters saved hand=100 auth=0 dynamic=4
+PASS parameters: defaults, all three setters, persistent restart, boundaries, invalid input, storage/apply failure rollback
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS enrolled uuid=0 progress=3/3
+IR_AE saved_target=-1; apply only after hand detection
+ACCESS match uuid=0 score=0.9100
+IR_AE recognition_success target=56 luma=0 time_us=0 gain=0/0/0
+IR_AE persisted_success target=56
+IR_AE found=1 resume_success target=56 unchanged
+ACCESS match uuid=0 score=0.9100
+IR_AE recognition_success target=56 luma=0 time_us=0 gain=0/0/0
+ACCESS recovered uuid=0 operation=delete
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS recovered uuid=0 operation=enroll
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS recovered uuid=0 operation=enroll
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+PASS post-feature structure status gates all registration/recognition, invalid mid-progress holds count, status refreshes while throttled/latched/inactive, no detection skips features; UTF8, IDs, recovery, capacity, attendance and pinyin

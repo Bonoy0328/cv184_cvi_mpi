@@ -1,0 +1,7 @@
+PROBE_STAGE=2
+FIRST_FRAME 640x480 fmt=19 stride=640 len=307200 pts=6808501620
+DVP_PROBE seconds=1.0 frames=43 misses=0 last_rc=0
+DVP_PROBE seconds=2.0 frames=86 misses=0 last_rc=0
+DVP_PROBE seconds=3.1 frames=129 misses=0 last_rc=0
+DVP_PROBE seconds=4.1 frames=172 misses=0 last_rc=0
+DVP_PROBE_DONE frames=212 rc=0

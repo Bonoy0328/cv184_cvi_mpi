@@ -1,0 +1,224 @@
+{
+  "speech": {
+    "sha256": "af1d156d08b0b7a9fd75c3b341fadda5d688b302711288de43817ad81e962604",
+    "bytes": 90572,
+    "rate": 16000,
+    "channels": 1,
+    "seconds": 2.830375,
+    "peak": 20883.0,
+    "rms": 2346.5087185173247
+  },
+  "loopback16k-stereo.raw": {
+    "capture_rate": 16000,
+    "seconds": 13.0,
+    "right_channel_per_second": [
+      {
+        "second": 0,
+        "right_ac_rms": 30.625,
+        "right_1khz_peak_amplitude": 0.068
+      },
+      {
+        "second": 1,
+        "right_ac_rms": 175.464,
+        "right_1khz_peak_amplitude": 0.057
+      },
+      {
+        "second": 2,
+        "right_ac_rms": 1.595,
+        "right_1khz_peak_amplitude": 0.018
+      },
+      {
+        "second": 3,
+        "right_ac_rms": 1.539,
+        "right_1khz_peak_amplitude": 0.01
+      },
+      {
+        "second": 4,
+        "right_ac_rms": 1.502,
+        "right_1khz_peak_amplitude": 0.036
+      },
+      {
+        "second": 5,
+        "right_ac_rms": 1.487,
+        "right_1khz_peak_amplitude": 0.045
+      },
+      {
+        "second": 6,
+        "right_ac_rms": 1.495,
+        "right_1khz_peak_amplitude": 0.013
+      },
+      {
+        "second": 7,
+        "right_ac_rms": 1.489,
+        "right_1khz_peak_amplitude": 0.031
+      },
+      {
+        "second": 8,
+        "right_ac_rms": 171.71,
+        "right_1khz_peak_amplitude": 0.548
+      },
+      {
+        "second": 9,
+        "right_ac_rms": 52.198,
+        "right_1khz_peak_amplitude": 0.113
+      },
+      {
+        "second": 10,
+        "right_ac_rms": 1.464,
+        "right_1khz_peak_amplitude": 0.014
+      },
+      {
+        "second": 11,
+        "right_ac_rms": 1.259,
+        "right_1khz_peak_amplitude": 0.011
+      },
+      {
+        "second": 12,
+        "right_ac_rms": 1.415,
+        "right_1khz_peak_amplitude": 0.017
+      }
+    ]
+  },
+  "loopback-chsync.raw": {
+    "capture_rate": 16000,
+    "seconds": 13.02,
+    "right_channel_per_second": [
+      {
+        "second": 0,
+        "right_ac_rms": 29.463,
+        "right_1khz_peak_amplitude": 0.074
+      },
+      {
+        "second": 1,
+        "right_ac_rms": 175.538,
+        "right_1khz_peak_amplitude": 0.047
+      },
+      {
+        "second": 2,
+        "right_ac_rms": 1.537,
+        "right_1khz_peak_amplitude": 0.029
+      },
+      {
+        "second": 3,
+        "right_ac_rms": 1.409,
+        "right_1khz_peak_amplitude": 0.002
+      },
+      {
+        "second": 4,
+        "right_ac_rms": 1.438,
+        "right_1khz_peak_amplitude": 0.038
+      },
+      {
+        "second": 5,
+        "right_ac_rms": 1.336,
+        "right_1khz_peak_amplitude": 0.025
+      },
+      {
+        "second": 6,
+        "right_ac_rms": 1.234,
+        "right_1khz_peak_amplitude": 0.011
+      },
+      {
+        "second": 7,
+        "right_ac_rms": 1.236,
+        "right_1khz_peak_amplitude": 0.028
+      },
+      {
+        "second": 8,
+        "right_ac_rms": 171.256,
+        "right_1khz_peak_amplitude": 0.611
+      },
+      {
+        "second": 9,
+        "right_ac_rms": 53.289,
+        "right_1khz_peak_amplitude": 0.123
+      },
+      {
+        "second": 10,
+        "right_ac_rms": 1.347,
+        "right_1khz_peak_amplitude": 0.006
+      },
+      {
+        "second": 11,
+        "right_ac_rms": 1.263,
+        "right_1khz_peak_amplitude": 0.02
+      },
+      {
+        "second": 12,
+        "right_ac_rms": 1.19,
+        "right_1khz_peak_amplitude": 0.01
+      }
+    ]
+  },
+  "loopback-48k.raw": {
+    "capture_rate": 16000,
+    "seconds": 13.02,
+    "right_channel_per_second": [
+      {
+        "second": 0,
+        "right_ac_rms": 27.668,
+        "right_1khz_peak_amplitude": 0.087
+      },
+      {
+        "second": 1,
+        "right_ac_rms": 175.127,
+        "right_1khz_peak_amplitude": 0.026
+      },
+      {
+        "second": 2,
+        "right_ac_rms": 1.444,
+        "right_1khz_peak_amplitude": 0.021
+      },
+      {
+        "second": 3,
+        "right_ac_rms": 1.404,
+        "right_1khz_peak_amplitude": 0.007
+      },
+      {
+        "second": 4,
+        "right_ac_rms": 1.352,
+        "right_1khz_peak_amplitude": 0.013
+      },
+      {
+        "second": 5,
+        "right_ac_rms": 1.369,
+        "right_1khz_peak_amplitude": 0.023
+      },
+      {
+        "second": 6,
+        "right_ac_rms": 1.368,
+        "right_1khz_peak_amplitude": 0.002
+      },
+      {
+        "second": 7,
+        "right_ac_rms": 1.329,
+        "right_1khz_peak_amplitude": 0.029
+      },
+      {
+        "second": 8,
+        "right_ac_rms": 172.35,
+        "right_1khz_peak_amplitude": 0.649
+      },
+      {
+        "second": 9,
+        "right_ac_rms": 48.05,
+        "right_1khz_peak_amplitude": 0.102
+      },
+      {
+        "second": 10,
+        "right_ac_rms": 1.223,
+        "right_1khz_peak_amplitude": 0.005
+      },
+      {
+        "second": 11,
+        "right_ac_rms": 1.243,
+        "right_1khz_peak_amplitude": 0.015
+      },
+      {
+        "second": 12,
+        "right_ac_rms": 1.374,
+        "right_1khz_peak_amplitude": 0.002
+      }
+    ]
+  }
+}

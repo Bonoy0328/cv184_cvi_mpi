@@ -1,0 +1,3397 @@
+{
+  "source": "build/live-options/camera-bilinear.log",
+  "groups": {
+    "rgb0_ir1": {
+      "job_ms": {
+        "n": 8,
+        "median": 385.447,
+        "min": 326.826,
+        "max": 466.037
+      },
+      "handoff_ms": {
+        "n": 8,
+        "median": 17.0,
+        "min": 3,
+        "max": 87
+      },
+      "attendance_ms": {
+        "n": 8,
+        "median": 78.234,
+        "min": 71.78,
+        "max": 162.736
+      },
+      "job_to_display_ms": {
+        "n": 8,
+        "median": 512.315,
+        "min": 472.319,
+        "max": 692.037
+      },
+      "first_attempt_to_display_ms": {
+        "n": 8,
+        "median": 1129.478,
+        "min": 896.314,
+        "max": 1453.37
+      },
+      "attempts": {
+        "n": 8,
+        "median": 3.0,
+        "min": 3,
+        "max": 3
+      },
+      "results": {
+        "25": 9,
+        "26": 7,
+        "0": 8
+      },
+      "rgb_candidate_ms": {
+        "n": 8,
+        "median": 209.698,
+        "min": 191.836,
+        "max": 231.999
+      },
+      "ir_call_ms": {
+        "n": 8,
+        "median": 170.392,
+        "min": 129.288,
+        "max": 251.685
+      },
+      "stages_ms": {
+        "align": {
+          "wall": {
+            "n": 8,
+            "median": 22.141,
+            "min": 10.383,
+            "max": 29.915
+          },
+          "cpu": {
+            "n": 8,
+            "median": 5.604,
+            "min": 5.053,
+            "max": 7.121
+          }
+        },
+        "align_expanded": {
+          "wall": {
+            "n": 8,
+            "median": 25.707,
+            "min": 5.176,
+            "max": 29.673
+          },
+          "cpu": {
+            "n": 8,
+            "median": 6.184,
+            "min": 5.134,
+            "max": 6.961
+          }
+        },
+        "embedding_pair": {
+          "wall": {
+            "n": 8,
+            "median": 31.848,
+            "min": 22.939,
+            "max": 47.62
+          },
+          "cpu": {
+            "n": 8,
+            "median": 2.337,
+            "min": 2.201,
+            "max": 2.733
+          }
+        },
+        "ir_detect": {
+          "wall": {
+            "n": 8,
+            "median": 109.092,
+            "min": 74.213,
+            "max": 146.969
+          },
+          "cpu": {
+            "n": 8,
+            "median": 21.353,
+            "min": 19.307,
+            "max": 24.426
+          }
+        },
+        "ir_detect_y_prepare": {
+          "wall": {
+            "n": 8,
+            "median": 41.524,
+            "min": 22.367,
+            "max": 58.656
+          },
+          "cpu": {
+            "n": 8,
+            "median": 9.439,
+            "min": 8.701,
+            "max": 11.38
+          }
+        },
+        "ir_feature_wait": {
+          "wall": {
+            "n": 8,
+            "median": 0.007,
+            "min": 0.006,
+            "max": 0.009
+          },
+          "cpu": {
+            "n": 8,
+            "median": 0.004,
+            "min": 0.003,
+            "max": 0.005
+          }
+        },
+        "ir_y_crop": {
+          "wall": {
+            "n": 8,
+            "median": 17.881,
+            "min": 8.715,
+            "max": 34.384
+          },
+          "cpu": {
+            "n": 8,
+            "median": 4.707,
+            "min": 4.213,
+            "max": 6.578
+          }
+        },
+        "ir_y_resize_pack_image": {
+          "wall": {
+            "n": 8,
+            "median": 30.48,
+            "min": 12.115,
+            "max": 52.387
+          },
+          "cpu": {
+            "n": 8,
+            "median": 6.323,
+            "min": 5.595,
+            "max": 6.582
+          }
+        },
+        "live_model": {
+          "wall": {
+            "n": 8,
+            "median": 10.918,
+            "min": 3.564,
+            "max": 38.596
+          },
+          "cpu": {
+            "n": 8,
+            "median": 1.41,
+            "min": 1.077,
+            "max": 2.09
+          }
+        },
+        "liveness_ir": {
+          "wall": {
+            "n": 8,
+            "median": 67.737,
+            "min": 43.135,
+            "max": 104.589
+          },
+          "cpu": {
+            "n": 8,
+            "median": 13.232,
+            "min": 11.218,
+            "max": 15.032
+          }
+        },
+        "nv12": {
+          "wall": {
+            "n": 8,
+            "median": 96.489,
+            "min": 85.936,
+            "max": 119.581
+          },
+          "cpu": {
+            "n": 8,
+            "median": 24.934,
+            "min": 22.709,
+            "max": 28.592
+          }
+        },
+        "quality": {
+          "wall": {
+            "n": 8,
+            "median": 22.497,
+            "min": 9.632,
+            "max": 52.938
+          },
+          "cpu": {
+            "n": 8,
+            "median": 4.164,
+            "min": 3.986,
+            "max": 4.823
+          }
+        }
+      }
+    },
+    "rgb1_ir1": {
+      "job_ms": {
+        "n": 6,
+        "median": 501.24,
+        "min": 411.055,
+        "max": 537.291
+      },
+      "handoff_ms": {
+        "n": 6,
+        "median": 64.5,
+        "min": 27,
+        "max": 84
+      },
+      "attendance_ms": {
+        "n": 6,
+        "median": 85.832,
+        "min": 70.725,
+        "max": 95.849
+      },
+      "job_to_display_ms": {
+        "n": 6,
+        "median": 682.24,
+        "min": 554.055,
+        "max": 720.849
+      },
+      "first_attempt_to_display_ms": {
+        "n": 6,
+        "median": 1410.714,
+        "min": 1097.142,
+        "max": 3450.005
+      },
+      "attempts": {
+        "n": 6,
+        "median": 3.0,
+        "min": 2,
+        "max": 4
+      },
+      "results": {
+        "25": 5,
+        "26": 6,
+        "0": 6
+      },
+      "rgb_candidate_ms": {
+        "n": 6,
+        "median": 325.829,
+        "min": 270.882,
+        "max": 338.374
+      },
+      "ir_call_ms": {
+        "n": 6,
+        "median": 173.929,
+        "min": 140.148,
+        "max": 207.175
+      },
+      "stages_ms": {
+        "align": {
+          "wall": {
+            "n": 6,
+            "median": 25.109,
+            "min": 15.268,
+            "max": 34.637
+          },
+          "cpu": {
+            "n": 6,
+            "median": 5.966,
+            "min": 5.598,
+            "max": 6.96
+          }
+        },
+        "align_expanded": {
+          "wall": {
+            "n": 6,
+            "median": 26.175,
+            "min": 19.17,
+            "max": 36.769
+          },
+          "cpu": {
+            "n": 6,
+            "median": 6.325,
+            "min": 5.897,
+            "max": 6.671
+          }
+        },
+        "embedding_pair": {
+          "wall": {
+            "n": 6,
+            "median": 18.813,
+            "min": 13.273,
+            "max": 31.095
+          },
+          "cpu": {
+            "n": 6,
+            "median": 2.332,
+            "min": 2.111,
+            "max": 3.112
+          }
+        },
+        "ir_detect": {
+          "wall": {
+            "n": 6,
+            "median": 114.889,
+            "min": 90.37,
+            "max": 165.639
+          },
+          "cpu": {
+            "n": 6,
+            "median": 22.176,
+            "min": 19.327,
+            "max": 25.403
+          }
+        },
+        "ir_detect_y_prepare": {
+          "wall": {
+            "n": 6,
+            "median": 35.83,
+            "min": 26.042,
+            "max": 44.455
+          },
+          "cpu": {
+            "n": 6,
+            "median": 9.629,
+            "min": 8.808,
+            "max": 9.94
+          }
+        },
+        "ir_feature_wait": {
+          "wall": {
+            "n": 6,
+            "median": 0.005,
+            "min": 0.005,
+            "max": 0.008
+          },
+          "cpu": {
+            "n": 6,
+            "median": 0.004,
+            "min": 0.003,
+            "max": 0.004
+          }
+        },
+        "ir_y_crop": {
+          "wall": {
+            "n": 6,
+            "median": 19.276,
+            "min": 6.509,
+            "max": 29.993
+          },
+          "cpu": {
+            "n": 6,
+            "median": 4.909,
+            "min": 4.162,
+            "max": 5.318
+          }
+        },
+        "ir_y_resize_pack_image": {
+          "wall": {
+            "n": 6,
+            "median": 22.803,
+            "min": 10.768,
+            "max": 36.107
+          },
+          "cpu": {
+            "n": 6,
+            "median": 6.723,
+            "min": 5.528,
+            "max": 7.543
+          }
+        },
+        "live_model": {
+          "wall": {
+            "n": 12,
+            "median": 8.687,
+            "min": 2.987,
+            "max": 18.582
+          },
+          "cpu": {
+            "n": 12,
+            "median": 1.159,
+            "min": 0.955,
+            "max": 1.867
+          }
+        },
+        "live_resize_pack_image": {
+          "wall": {
+            "n": 6,
+            "median": 33.047,
+            "min": 29.667,
+            "max": 33.419
+          },
+          "cpu": {
+            "n": 6,
+            "median": 7.45,
+            "min": 6.947,
+            "max": 8.629
+          }
+        },
+        "liveness": {
+          "wall": {
+            "n": 6,
+            "median": 96.24,
+            "min": 82.885,
+            "max": 116.237
+          },
+          "cpu": {
+            "n": 6,
+            "median": 22.806,
+            "min": 22.06,
+            "max": 26.478
+          }
+        },
+        "liveness_ir": {
+          "wall": {
+            "n": 6,
+            "median": 53.276,
+            "min": 40.68,
+            "max": 65.322
+          },
+          "cpu": {
+            "n": 6,
+            "median": 13.192,
+            "min": 12.116,
+            "max": 13.787
+          }
+        },
+        "nv12": {
+          "wall": {
+            "n": 6,
+            "median": 98.324,
+            "min": 88.079,
+            "max": 124.373
+          },
+          "cpu": {
+            "n": 6,
+            "median": 24.401,
+            "min": 23.844,
+            "max": 26.737
+          }
+        },
+        "quality": {
+          "wall": {
+            "n": 6,
+            "median": 35.468,
+            "min": 16.512,
+            "max": 46.844
+          },
+          "cpu": {
+            "n": 6,
+            "median": 4.159,
+            "min": 3.949,
+            "max": 4.918
+          }
+        }
+      }
+    }
+  },
+  "jobs": [
+    {
+      "line": 1005,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 193.005,
+      "end_ms": 30251803,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            103.803,
+            24.405
+          ]
+        ],
+        "align": [
+          [
+            19.069,
+            5.463
+          ]
+        ],
+        "quality": [
+          [
+            69.394,
+            4.932
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30251609.995
+    },
+    {
+      "line": 1067,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 166.733,
+      "end_ms": 30253683,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            108.365,
+            25.578
+          ]
+        ],
+        "align": [
+          [
+            30.343,
+            5.684
+          ]
+        ],
+        "quality": [
+          [
+            21.502,
+            4.113
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30253516.267
+    },
+    {
+      "line": 1104,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 447.293,
+      "end_ms": 30254212,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            90.46,
+            25.747
+          ]
+        ],
+        "align": [
+          [
+            12.544,
+            5.572
+          ]
+        ],
+        "quality": [
+          [
+            33.852,
+            4.555
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            27.814,
+            7.413
+          ]
+        ],
+        "live_model": [
+          [
+            5.658,
+            1.202
+          ]
+        ],
+        "liveness": [
+          [
+            90.263,
+            20.913
+          ]
+        ],
+        "align_expanded": [
+          [
+            30.387,
+            7.501
+          ]
+        ],
+        "embedding_pair": [
+          [
+            24.306,
+            3.201
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            39.065,
+            9.082
+          ]
+        ],
+        "ir_detect": [
+          [
+            149.856,
+            21.143
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 297270,
+        "elapsed_us": 149982,
+        "pass": 0,
+        "sample_sequence": 688,
+        "uptime_ms": 30254212
+      },
+      "begin_ms": 30253764.707
+    },
+    {
+      "line": 1145,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 537.291,
+      "end_ms": 30254881,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            88.99,
+            23.998
+          ]
+        ],
+        "align": [
+          [
+            34.637,
+            6.96
+          ]
+        ],
+        "quality": [
+          [
+            38.041,
+            3.949
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            32.818,
+            7.734
+          ]
+        ],
+        "live_model": [
+          [
+            16.361,
+            1.244
+          ],
+          [
+            4.387,
+            0.955
+          ]
+        ],
+        "liveness": [
+          [
+            116.237,
+            24.039
+          ]
+        ],
+        "align_expanded": [
+          [
+            27.176,
+            6.422
+          ]
+        ],
+        "embedding_pair": [
+          [
+            20.686,
+            2.747
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.006,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            26.042,
+            9.54
+          ]
+        ],
+        "ir_detect": [
+          [
+            133.46,
+            23.259
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            18.829,
+            5.135
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            28.137,
+            7.303
+          ]
+        ],
+        "liveness_ir": [
+          [
+            65.322,
+            13.787
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 338374,
+        "elapsed_us": 198894,
+        "pass": 1,
+        "sample_sequence": 705,
+        "uptime_ms": 30254881
+      },
+      "begin_ms": 30254343.709,
+      "confirm_ms": 30254937,
+      "handoff_ms": 56,
+      "attendance_ms": 87.923,
+      "display_ms": 30255060,
+      "job_to_display_ms": 716.2910000011325,
+      "first_attempt_to_display_ms": 3450.004999998957,
+      "attempts": 4
+    },
+    {
+      "line": 1245,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 138.47,
+      "end_ms": 30256811,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            104.017,
+            22.725
+          ]
+        ],
+        "align": [
+          [
+            14.363,
+            5.06
+          ]
+        ],
+        "quality": [
+          [
+            14.083,
+            4.003
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30256672.53
+    },
+    {
+      "line": 1276,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 437.597,
+      "end_ms": 30257344,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            71.69,
+            22.583
+          ]
+        ],
+        "align": [
+          [
+            30.05,
+            6.558
+          ]
+        ],
+        "quality": [
+          [
+            58.887,
+            4.199
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            34.509,
+            8.354
+          ]
+        ],
+        "live_model": [
+          [
+            3.186,
+            1.128
+          ]
+        ],
+        "liveness": [
+          [
+            105.456,
+            24.292
+          ]
+        ],
+        "align_expanded": [
+          [
+            15.111,
+            6.367
+          ]
+        ],
+        "embedding_pair": [
+          [
+            21.402,
+            2.791
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            57.335,
+            10.116
+          ]
+        ],
+        "ir_detect": [
+          [
+            123.371,
+            21.576
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 312935,
+        "elapsed_us": 124640,
+        "pass": 0,
+        "sample_sequence": 764,
+        "uptime_ms": 30257344
+      },
+      "begin_ms": 30256906.403
+    },
+    {
+      "line": 1313,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 533.849,
+      "end_ms": 30258005,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            116.558,
+            26.737
+          ]
+        ],
+        "align": [
+          [
+            24.45,
+            5.922
+          ]
+        ],
+        "quality": [
+          [
+            32.896,
+            4.167
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            33.404,
+            7.275
+          ]
+        ],
+        "live_model": [
+          [
+            2.987,
+            0.969
+          ],
+          [
+            4.048,
+            1.046
+          ]
+        ],
+        "liveness": [
+          [
+            101.515,
+            22.844
+          ]
+        ],
+        "align_expanded": [
+          [
+            19.17,
+            5.897
+          ]
+        ],
+        "embedding_pair": [
+          [
+            16.94,
+            2.339
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.007,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            42.382,
+            9.94
+          ]
+        ],
+        "ir_detect": [
+          [
+            165.639,
+            25.403
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            14.919,
+            4.895
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            22.025,
+            7.114
+          ]
+        ],
+        "liveness_ir": [
+          [
+            41.38,
+            13.436
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 326652,
+        "elapsed_us": 207175,
+        "pass": 1,
+        "sample_sequence": 779,
+        "uptime_ms": 30258005
+      },
+      "begin_ms": 30257471.151,
+      "confirm_ms": 30258069,
+      "handoff_ms": 64,
+      "attendance_ms": 95.849,
+      "display_ms": 30258192,
+      "job_to_display_ms": 720.8489999994636,
+      "first_attempt_to_display_ms": 1519.469999998808,
+      "attempts": 3
+    },
+    {
+      "line": 1462,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 125.357,
+      "end_ms": 30260565,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            95.421,
+            23.433
+          ]
+        ],
+        "align": [
+          [
+            17.205,
+            4.899
+          ]
+        ],
+        "quality": [
+          [
+            11.829,
+            4.175
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30260439.643
+    },
+    {
+      "line": 1493,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 398.952,
+      "end_ms": 30261039,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            101.944,
+            24.829
+          ]
+        ],
+        "align": [
+          [
+            32.119,
+            6.057
+          ]
+        ],
+        "quality": [
+          [
+            22.001,
+            4.175
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            36.76,
+            7.283
+          ]
+        ],
+        "live_model": [
+          [
+            12.348,
+            2.065
+          ]
+        ],
+        "liveness": [
+          [
+            95.814,
+            23.701
+          ]
+        ],
+        "align_expanded": [
+          [
+            20.451,
+            6.561
+          ]
+        ],
+        "embedding_pair": [
+          [
+            31.628,
+            2.204
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.006,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            44.214,
+            11.232
+          ]
+        ],
+        "ir_detect": [
+          [
+            84.542,
+            21.679
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 314292,
+        "elapsed_us": 84637,
+        "pass": 0,
+        "sample_sequence": 857,
+        "uptime_ms": 30261039
+      },
+      "begin_ms": 30260640.048
+    },
+    {
+      "line": 1530,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 502.039,
+      "end_ms": 30261671,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            100.702,
+            24.175
+          ]
+        ],
+        "align": [
+          [
+            31.684,
+            6.574
+          ]
+        ],
+        "quality": [
+          [
+            29.54,
+            4.082
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            29.95,
+            6.947
+          ]
+        ],
+        "live_model": [
+          [
+            18.582,
+            1.071
+          ],
+          [
+            8.455,
+            1.308
+          ]
+        ],
+        "liveness": [
+          [
+            99.119,
+            22.621
+          ]
+        ],
+        "align_expanded": [
+          [
+            36.769,
+            6.211
+          ]
+        ],
+        "embedding_pair": [
+          [
+            13.273,
+            2.111
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            36.667,
+            9.718
+          ]
+        ],
+        "ir_detect": [
+          [
+            104.425,
+            20.229
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            29.993,
+            5.318
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            23.581,
+            6.119
+          ]
+        ],
+        "liveness_ir": [
+          [
+            62.415,
+            13.126
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 335073,
+        "elapsed_us": 166944,
+        "pass": 1,
+        "sample_sequence": 870,
+        "uptime_ms": 30261671
+      },
+      "begin_ms": 30261168.961,
+      "confirm_ms": 30261744,
+      "handoff_ms": 73,
+      "attendance_ms": 84.192,
+      "display_ms": 30261858,
+      "job_to_display_ms": 689.0390000008047,
+      "first_attempt_to_display_ms": 1418.3570000007749,
+      "attempts": 3
+    },
+    {
+      "line": 1665,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 360.768,
+      "end_ms": 30264100,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            89.72,
+            24.718
+          ]
+        ],
+        "align": [
+          [
+            13.999,
+            5.656
+          ]
+        ],
+        "quality": [
+          [
+            20.57,
+            4.348
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            36.542,
+            7.098
+          ]
+        ],
+        "live_model": [
+          [
+            9.855,
+            1.034
+          ]
+        ],
+        "liveness": [
+          [
+            80.221,
+            20.696
+          ]
+        ],
+        "align_expanded": [
+          [
+            29.81,
+            7.098
+          ]
+        ],
+        "embedding_pair": [
+          [
+            18.268,
+            2.525
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            32.317,
+            9.552
+          ]
+        ],
+        "ir_detect": [
+          [
+            90.668,
+            21.082
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 269969,
+        "elapsed_us": 90776,
+        "pass": 0,
+        "sample_sequence": 934,
+        "uptime_ms": 30264100
+      },
+      "begin_ms": 30263739.232
+    },
+    {
+      "line": 1701,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 500.441,
+      "end_ms": 30264669,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            95.946,
+            25.004
+          ]
+        ],
+        "align": [
+          [
+            23.85,
+            6.011
+          ]
+        ],
+        "quality": [
+          [
+            40.272,
+            4.918
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            29.667,
+            7.625
+          ]
+        ],
+        "live_model": [
+          [
+            13.697,
+            1.235
+          ],
+          [
+            13.872,
+            1.519
+          ]
+        ],
+        "liveness": [
+          [
+            89.72,
+            22.769
+          ]
+        ],
+        "align_expanded": [
+          [
+            19.54,
+            6.671
+          ]
+        ],
+        "embedding_pair": [
+          [
+            31.095,
+            2.324
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.008,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            44.455,
+            9.798
+          ]
+        ],
+        "ir_detect": [
+          [
+            123.85,
+            21.76
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            6.509,
+            4.72
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            36.107,
+            6.333
+          ]
+        ],
+        "liveness_ir": [
+          [
+            56.892,
+            12.97
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 319506,
+        "elapsed_us": 180914,
+        "pass": 1,
+        "sample_sequence": 941,
+        "uptime_ms": 30264669
+      },
+      "begin_ms": 30264168.559,
+      "confirm_ms": 30264734,
+      "handoff_ms": 65,
+      "attendance_ms": 75.698,
+      "display_ms": 30264844,
+      "job_to_display_ms": 675.4409999996424,
+      "first_attempt_to_display_ms": 1104.7679999992251,
+      "attempts": 2
+    },
+    {
+      "line": 1827,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 436.142,
+      "end_ms": 30266898,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            100.742,
+            24.715
+          ]
+        ],
+        "align": [
+          [
+            35.838,
+            6.929
+          ]
+        ],
+        "quality": [
+          [
+            41.332,
+            3.995
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            29.618,
+            7.305
+          ]
+        ],
+        "live_model": [
+          [
+            3.075,
+            1.046
+          ]
+        ],
+        "liveness": [
+          [
+            71.655,
+            21.813
+          ]
+        ],
+        "align_expanded": [
+          [
+            28.383,
+            7.217
+          ]
+        ],
+        "embedding_pair": [
+          [
+            18.916,
+            2.295
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            34.737,
+            9.472
+          ]
+        ],
+        "ir_detect": [
+          [
+            124.933,
+            20.33
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 311090,
+        "elapsed_us": 125027,
+        "pass": 0,
+        "sample_sequence": 998,
+        "uptime_ms": 30266898
+      },
+      "begin_ms": 30266461.858
+    },
+    {
+      "line": 1860,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 411.055,
+      "end_ms": 30267416,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            88.079,
+            23.844
+          ]
+        ],
+        "align": [
+          [
+            25.769,
+            5.598
+          ]
+        ],
+        "quality": [
+          [
+            16.512,
+            4.164
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            33.277,
+            8.629
+          ]
+        ],
+        "live_model": [
+          [
+            8.919,
+            1.867
+          ],
+          [
+            12.433,
+            1.124
+          ]
+        ],
+        "liveness": [
+          [
+            93.361,
+            26.478
+          ]
+        ],
+        "align_expanded": [
+          [
+            30.261,
+            6.227
+          ]
+        ],
+        "embedding_pair": [
+          [
+            15.597,
+            2.236
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            34.993,
+            9.44
+          ]
+        ],
+        "ir_detect": [
+          [
+            90.37,
+            22.592
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            19.723,
+            4.162
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            17.068,
+            7.543
+          ]
+        ],
+        "liveness_ir": [
+          [
+            49.661,
+            13.259
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 270882,
+        "elapsed_us": 140148,
+        "pass": 1,
+        "sample_sequence": 1010,
+        "uptime_ms": 30267416
+      },
+      "begin_ms": 30267004.945,
+      "confirm_ms": 30267443,
+      "handoff_ms": 27,
+      "attendance_ms": 87.473,
+      "display_ms": 30267559,
+      "job_to_display_ms": 554.054999999702,
+      "first_attempt_to_display_ms": 1097.1420000009239,
+      "attempts": 2
+    },
+    {
+      "line": 1955,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 157.071,
+      "end_ms": 30269395,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            82.612,
+            24.63
+          ]
+        ],
+        "align": [
+          [
+            32.655,
+            6.356
+          ]
+        ],
+        "quality": [
+          [
+            40.982,
+            4.975
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30269237.929
+    },
+    {
+      "line": 1990,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 442.828,
+      "end_ms": 30269888,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            90.452,
+            26.268
+          ]
+        ],
+        "align": [
+          [
+            30.887,
+            6.294
+          ]
+        ],
+        "quality": [
+          [
+            45.599,
+            5.563
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            28.567,
+            7.152
+          ]
+        ],
+        "live_model": [
+          [
+            8.526,
+            1.484
+          ]
+        ],
+        "liveness": [
+          [
+            91.109,
+            22.322
+          ]
+        ],
+        "align_expanded": [
+          [
+            22.103,
+            6.516
+          ]
+        ],
+        "embedding_pair": [
+          [
+            28.056,
+            2.559
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            37.404,
+            9.6
+          ]
+        ],
+        "ir_detect": [
+          [
+            117.592,
+            21.983
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 324127,
+        "elapsed_us": 118678,
+        "pass": 0,
+        "sample_sequence": 1068,
+        "uptime_ms": 30269888
+      },
+      "begin_ms": 30269445.172
+    },
+    {
+      "line": 2034,
+      "rgb": 1,
+      "ir_enabled": 1,
+      "job_ms": 475.905,
+      "end_ms": 30270455,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            124.373,
+            24.626
+          ]
+        ],
+        "align": [
+          [
+            15.268,
+            5.851
+          ]
+        ],
+        "quality": [
+          [
+            46.844,
+            4.155
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            33.419,
+            7.253
+          ]
+        ],
+        "live_model": [
+          [
+            5.32,
+            1.139
+          ],
+          [
+            6.735,
+            1.18
+          ]
+        ],
+        "liveness": [
+          [
+            82.885,
+            22.06
+          ]
+        ],
+        "align_expanded": [
+          [
+            25.174,
+            6.576
+          ]
+        ],
+        "embedding_pair": [
+          [
+            24.263,
+            3.112
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            29.668,
+            8.808
+          ]
+        ],
+        "ir_detect": [
+          [
+            105.928,
+            19.327
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            22.686,
+            4.922
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            10.768,
+            5.528
+          ]
+        ],
+        "liveness_ir": [
+          [
+            40.68,
+            12.116
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 325006,
+        "elapsed_us": 146759,
+        "pass": 1,
+        "sample_sequence": 1082,
+        "uptime_ms": 30270450
+      },
+      "begin_ms": 30269979.095,
+      "confirm_ms": 30270539,
+      "handoff_ms": 84,
+      "attendance_ms": 70.725,
+      "display_ms": 30270641,
+      "job_to_display_ms": 661.9050000011921,
+      "first_attempt_to_display_ms": 1403.0709999985993,
+      "attempts": 3
+    },
+    {
+      "line": 3311,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 162.597,
+      "end_ms": 30304563,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            98.668,
+            24.548
+          ]
+        ],
+        "align": [
+          [
+            29.894,
+            5.629
+          ]
+        ],
+        "quality": [
+          [
+            33.317,
+            4.717
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30304400.403
+    },
+    {
+      "line": 3339,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 372.321,
+      "end_ms": 30304989,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            95.928,
+            24.018
+          ]
+        ],
+        "align": [
+          [
+            5.126,
+            5.131
+          ]
+        ],
+        "quality": [
+          [
+            30.928,
+            4.482
+          ]
+        ],
+        "align_expanded": [
+          [
+            37.242,
+            6.078
+          ]
+        ],
+        "embedding_pair": [
+          [
+            14.238,
+            2.107
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.011,
+            0.006
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            35.52,
+            9.434
+          ]
+        ],
+        "ir_detect": [
+          [
+            112.184,
+            20.47
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            15.516,
+            3.767
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            27.529,
+            6.659
+          ]
+        ],
+        "live_model": [
+          [
+            15.274,
+            1.287
+          ]
+        ],
+        "liveness_ir": [
+          [
+            58.699,
+            12.08
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 201230,
+        "elapsed_us": 171068,
+        "pass": 0,
+        "sample_sequence": 1912,
+        "uptime_ms": 30304989
+      },
+      "begin_ms": 30304616.679
+    },
+    {
+      "line": 3369,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 326.826,
+      "end_ms": 30305358,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            85.936,
+            25.191
+          ]
+        ],
+        "align": [
+          [
+            29.915,
+            5.724
+          ]
+        ],
+        "quality": [
+          [
+            46.044,
+            3.996
+          ]
+        ],
+        "align_expanded": [
+          [
+            5.176,
+            5.134
+          ]
+        ],
+        "embedding_pair": [
+          [
+            29.109,
+            2.246
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.006,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            28.162,
+            9.276
+          ]
+        ],
+        "ir_detect": [
+          [
+            86.052,
+            19.95
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            8.715,
+            4.213
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            30.243,
+            5.595
+          ]
+        ],
+        "live_model": [
+          [
+            3.841,
+            1.077
+          ]
+        ],
+        "liveness_ir": [
+          [
+            43.135,
+            11.218
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 197516,
+        "elapsed_us": 129288,
+        "pass": 1,
+        "sample_sequence": 1922,
+        "uptime_ms": 30305358
+      },
+      "begin_ms": 30305031.174,
+      "confirm_ms": 30305437,
+      "handoff_ms": 79,
+      "attendance_ms": 83.154,
+      "display_ms": 30305551,
+      "job_to_display_ms": 519.8260000012815,
+      "first_attempt_to_display_ms": 1150.5969999991357,
+      "attempts": 3
+    },
+    {
+      "line": 3484,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 147.37,
+      "end_ms": 30307685,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            89.135,
+            24.227
+          ]
+        ],
+        "align": [
+          [
+            21.023,
+            6.209
+          ]
+        ],
+        "quality": [
+          [
+            36.476,
+            4.345
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30307537.63
+    },
+    {
+      "line": 3518,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 427.063,
+      "end_ms": 30308159,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            99.653,
+            24.498
+          ]
+        ],
+        "align": [
+          [
+            23.001,
+            6.353
+          ]
+        ],
+        "quality": [
+          [
+            11.204,
+            3.912
+          ]
+        ],
+        "align_expanded": [
+          [
+            46.34,
+            7.396
+          ]
+        ],
+        "embedding_pair": [
+          [
+            37.22,
+            3.419
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            56.75,
+            12.131
+          ]
+        ],
+        "ir_detect": [
+          [
+            124.594,
+            23.839
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            8.4,
+            3.803
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            48.051,
+            7.814
+          ]
+        ],
+        "live_model": [
+          [
+            12.335,
+            1.164
+          ]
+        ],
+        "liveness_ir": [
+          [
+            69.135,
+            13.125
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 233189,
+        "elapsed_us": 193852,
+        "pass": 0,
+        "sample_sequence": 1988,
+        "uptime_ms": 30308159
+      },
+      "begin_ms": 30307731.937
+    },
+    {
+      "line": 3548,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 466.037,
+      "end_ms": 30308765,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            119.581,
+            28.592
+          ]
+        ],
+        "align": [
+          [
+            28.255,
+            7.121
+          ]
+        ],
+        "quality": [
+          [
+            15.232,
+            4.25
+          ]
+        ],
+        "align_expanded": [
+          [
+            11.02,
+            5.673
+          ]
+        ],
+        "embedding_pair": [
+          [
+            35.018,
+            2.201
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.007,
+            0.005
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            58.656,
+            9.448
+          ]
+        ],
+        "ir_detect": [
+          [
+            146.969,
+            23.113
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            34.384,
+            4.829
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            52.387,
+            6.564
+          ]
+        ],
+        "live_model": [
+          [
+            17.13,
+            1.47
+          ]
+        ],
+        "liveness_ir": [
+          [
+            104.589,
+            13.317
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 214313,
+        "elapsed_us": 251685,
+        "pass": 1,
+        "sample_sequence": 2002,
+        "uptime_ms": 30308765
+      },
+      "begin_ms": 30308298.963,
+      "confirm_ms": 30308852,
+      "handoff_ms": 87,
+      "attendance_ms": 76.674,
+      "display_ms": 30308991,
+      "job_to_display_ms": 692.0370000004768,
+      "first_attempt_to_display_ms": 1453.370000001043,
+      "attempts": 3
+    },
+    {
+      "line": 3663,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 160.824,
+      "end_ms": 30311046,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            95.552,
+            23.279
+          ]
+        ],
+        "align": [
+          [
+            22.041,
+            5.486
+          ]
+        ],
+        "quality": [
+          [
+            42.389,
+            4.225
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30310885.176
+    },
+    {
+      "line": 3691,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 392.091,
+      "end_ms": 30311489,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            116.529,
+            24.118
+          ]
+        ],
+        "align": [
+          [
+            15.001,
+            6.011
+          ]
+        ],
+        "quality": [
+          [
+            25.103,
+            3.989
+          ]
+        ],
+        "align_expanded": [
+          [
+            5.432,
+            5.435
+          ]
+        ],
+        "embedding_pair": [
+          [
+            47.986,
+            2.38
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.006,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            30.594,
+            8.744
+          ]
+        ],
+        "ir_detect": [
+          [
+            105.11,
+            20.832
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            10.792,
+            3.935
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            34.119,
+            6.841
+          ]
+        ],
+        "live_model": [
+          [
+            15.988,
+            1.295
+          ]
+        ],
+        "liveness_ir": [
+          [
+            61.329,
+            12.492
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 225518,
+        "elapsed_us": 166547,
+        "pass": 0,
+        "sample_sequence": 2067,
+        "uptime_ms": 30311488
+      },
+      "begin_ms": 30311096.909
+    },
+    {
+      "line": 3719,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 405.139,
+      "end_ms": 30311951,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            105.654,
+            25.076
+          ]
+        ],
+        "align": [
+          [
+            20.295,
+            5.497
+          ]
+        ],
+        "quality": [
+          [
+            44.847,
+            4.238
+          ]
+        ],
+        "align_expanded": [
+          [
+            21.334,
+            6.329
+          ]
+        ],
+        "embedding_pair": [
+          [
+            22.939,
+            2.733
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.006,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            27.887,
+            9.242
+          ]
+        ],
+        "ir_detect": [
+          [
+            92.746,
+            20.496
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            16.93,
+            4.326
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            30.716,
+            6.424
+          ]
+        ],
+        "live_model": [
+          [
+            32.252,
+            2.09
+          ]
+        ],
+        "liveness_ir": [
+          [
+            80.253,
+            13.188
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 231999,
+        "elapsed_us": 173118,
+        "pass": 1,
+        "sample_sequence": 2078,
+        "uptime_ms": 30311951
+      },
+      "begin_ms": 30311545.861,
+      "confirm_ms": 30311958,
+      "handoff_ms": 7,
+      "attendance_ms": 162.736,
+      "display_ms": 30312158,
+      "job_to_display_ms": 612.1389999985695,
+      "first_attempt_to_display_ms": 1272.8240000009537,
+      "attempts": 3
+    },
+    {
+      "line": 3818,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 166.012,
+      "end_ms": 30314028,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            108.183,
+            26.495
+          ]
+        ],
+        "align": [
+          [
+            21.251,
+            4.845
+          ]
+        ],
+        "quality": [
+          [
+            35.826,
+            3.931
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30313861.988
+    },
+    {
+      "line": 3843,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 302.588,
+      "end_ms": 30314393,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            71.165,
+            22.522
+          ]
+        ],
+        "align": [
+          [
+            22.336,
+            7.238
+          ]
+        ],
+        "quality": [
+          [
+            52.804,
+            4.96
+          ]
+        ],
+        "align_expanded": [
+          [
+            26.729,
+            6.74
+          ]
+        ],
+        "embedding_pair": [
+          [
+            26.044,
+            3.229
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            26.81,
+            10.057
+          ]
+        ],
+        "ir_detect": [
+          [
+            84.815,
+            23.277
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 217616,
+        "elapsed_us": 84949,
+        "pass": 0,
+        "sample_sequence": 2140,
+        "uptime_ms": 30314393
+      },
+      "begin_ms": 30314090.412
+    },
+    {
+      "line": 3871,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 399.168,
+      "end_ms": 30314883,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            96.39,
+            24.784
+          ]
+        ],
+        "align": [
+          [
+            10.383,
+            5.597
+          ]
+        ],
+        "quality": [
+          [
+            52.938,
+            4.823
+          ]
+        ],
+        "align_expanded": [
+          [
+            25.26,
+            6.537
+          ]
+        ],
+        "embedding_pair": [
+          [
+            26.893,
+            2.327
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.009,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            39.829,
+            10.162
+          ]
+        ],
+        "ir_detect": [
+          [
+            118.945,
+            23.146
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            16.362,
+            6.578
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            31.2,
+            6.582
+          ]
+        ],
+        "live_model": [
+          [
+            4.038,
+            1.351
+          ]
+        ],
+        "liveness_ir": [
+          [
+            53.16,
+            15.032
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 226870,
+        "elapsed_us": 172276,
+        "pass": 1,
+        "sample_sequence": 2150,
+        "uptime_ms": 30314883
+      },
+      "begin_ms": 30314483.832,
+      "confirm_ms": 30314888,
+      "handoff_ms": 5,
+      "attendance_ms": 77.292,
+      "display_ms": 30314997,
+      "job_to_display_ms": 513.1680000014603,
+      "first_attempt_to_display_ms": 1135.0119999982417,
+      "attempts": 3
+    },
+    {
+      "line": 3980,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 145.097,
+      "end_ms": 30316970,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            91.811,
+            23.991
+          ]
+        ],
+        "align": [
+          [
+            19.671,
+            5.08
+          ]
+        ],
+        "quality": [
+          [
+            32.843,
+            4.887
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30316824.903
+    },
+    {
+      "line": 4002,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 316.621,
+      "end_ms": 30317343,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            102.656,
+            24.141
+          ]
+        ],
+        "align": [
+          [
+            30.489,
+            6.121
+          ]
+        ],
+        "quality": [
+          [
+            22.258,
+            4.166
+          ]
+        ],
+        "align_expanded": [
+          [
+            13.071,
+            6.729
+          ]
+        ],
+        "embedding_pair": [
+          [
+            29.674,
+            2.159
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            39.915,
+            9.995
+          ]
+        ],
+        "ir_detect": [
+          [
+            113.184,
+            21.815
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 203358,
+        "elapsed_us": 113239,
+        "pass": 0,
+        "sample_sequence": 2214,
+        "uptime_ms": 30317343
+      },
+      "begin_ms": 30317026.379
+    },
+    {
+      "line": 4032,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 346.319,
+      "end_ms": 30317769,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            96.588,
+            24.831
+          ]
+        ],
+        "align": [
+          [
+            10.767,
+            5.053
+          ]
+        ],
+        "quality": [
+          [
+            29.477,
+            4.74
+          ]
+        ],
+        "align_expanded": [
+          [
+            26.154,
+            5.828
+          ]
+        ],
+        "embedding_pair": [
+          [
+            24.261,
+            2.271
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.006,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            22.367,
+            8.701
+          ]
+        ],
+        "ir_detect": [
+          [
+            74.213,
+            19.307
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            29.034,
+            5.338
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            12.115,
+            5.639
+          ]
+        ],
+        "live_model": [
+          [
+            38.596,
+            1.891
+          ]
+        ],
+        "liveness_ir": [
+          [
+            80.149,
+            13.263
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 191836,
+        "elapsed_us": 154460,
+        "pass": 1,
+        "sample_sequence": 2224,
+        "uptime_ms": 30317769
+      },
+      "begin_ms": 30317422.681,
+      "confirm_ms": 30317788,
+      "handoff_ms": 19,
+      "attendance_ms": 79.177,
+      "display_ms": 30317895,
+      "job_to_display_ms": 472.31899999827147,
+      "first_attempt_to_display_ms": 1070.0969999991357,
+      "attempts": 3
+    },
+    {
+      "line": 4136,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 126.314,
+      "end_ms": 30319815,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            86.518,
+            25.064
+          ]
+        ],
+        "align": [
+          [
+            19.278,
+            4.689
+          ]
+        ],
+        "quality": [
+          [
+            19.783,
+            4.805
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30319688.686
+    },
+    {
+      "line": 4146,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 129.995,
+      "end_ms": 30320019,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            86.24,
+            24.333
+          ]
+        ],
+        "align": [
+          [
+            26.363,
+            6.823
+          ]
+        ],
+        "quality": [
+          [
+            16.523,
+            4.782
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30319889.005
+    },
+    {
+      "line": 4180,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 393.432,
+      "end_ms": 30320483,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            92.95,
+            22.709
+          ]
+        ],
+        "align": [
+          [
+            29.094,
+            5.612
+          ]
+        ],
+        "quality": [
+          [
+            15.517,
+            3.986
+          ]
+        ],
+        "align_expanded": [
+          [
+            28.125,
+            6.388
+          ]
+        ],
+        "embedding_pair": [
+          [
+            34.587,
+            2.493
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.007,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            51.029,
+            11.38
+          ]
+        ],
+        "ir_detect": [
+          [
+            105.131,
+            22.21
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            27.82,
+            5.79
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            48.729,
+            6.159
+          ]
+        ],
+        "live_model": [
+          [
+            3.564,
+            1.253
+          ]
+        ],
+        "liveness_ir": [
+          [
+            82.483,
+            13.685
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 205559,
+        "elapsed_us": 187850,
+        "pass": 1,
+        "sample_sequence": 2288,
+        "uptime_ms": 30320483
+      },
+      "begin_ms": 30320089.568,
+      "confirm_ms": 30320486,
+      "handoff_ms": 3,
+      "attendance_ms": 71.78,
+      "display_ms": 30320585,
+      "job_to_display_ms": 495.4320000000298,
+      "first_attempt_to_display_ms": 896.3139999993145,
+      "attempts": 3
+    },
+    {
+      "line": 4284,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 160.944,
+      "end_ms": 30322536,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            100.755,
+            26.571
+          ]
+        ],
+        "align": [
+          [
+            13.766,
+            5.762
+          ]
+        ],
+        "quality": [
+          [
+            45.641,
+            4.18
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30322375.056
+    },
+    {
+      "line": 4306,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 326.909,
+      "end_ms": 30322918,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            122.773,
+            23.725
+          ]
+        ],
+        "align": [
+          [
+            13.847,
+            6.054
+          ]
+        ],
+        "quality": [
+          [
+            21.063,
+            4.754
+          ]
+        ],
+        "align_expanded": [
+          [
+            11.976,
+            6.835
+          ]
+        ],
+        "embedding_pair": [
+          [
+            44.227,
+            2.994
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.005,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            35.534,
+            8.76
+          ]
+        ],
+        "ir_detect": [
+          [
+            103.991,
+            20.657
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 222777,
+        "elapsed_us": 104107,
+        "pass": 0,
+        "sample_sequence": 2347,
+        "uptime_ms": 30322918
+      },
+      "begin_ms": 30322591.091
+    },
+    {
+      "line": 4336,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 377.461,
+      "end_ms": 30323365,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            104.715,
+            23.33
+          ]
+        ],
+        "align": [
+          [
+            23.986,
+            6.47
+          ]
+        ],
+        "quality": [
+          [
+            9.632,
+            4.028
+          ]
+        ],
+        "align_expanded": [
+          [
+            29.673,
+            6.04
+          ]
+        ],
+        "embedding_pair": [
+          [
+            44.641,
+            2.348
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.008,
+            0.004
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            43.219,
+            10.312
+          ]
+        ],
+        "ir_detect": [
+          [
+            119.034,
+            24.426
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            13.647,
+            4.341
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            16.63,
+            6.344
+          ]
+        ],
+        "live_model": [
+          [
+            13.579,
+            1.983
+          ]
+        ],
+        "liveness_ir": [
+          [
+            44.399,
+            13.202
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 213837,
+        "elapsed_us": 163594,
+        "pass": 1,
+        "sample_sequence": 2358,
+        "uptime_ms": 30323365
+      },
+      "begin_ms": 30322987.539,
+      "confirm_ms": 30323380,
+      "handoff_ms": 15,
+      "attendance_ms": 94.264,
+      "display_ms": 30323499,
+      "job_to_display_ms": 511.46099999919534,
+      "first_attempt_to_display_ms": 1123.9439999982715,
+      "attempts": 3
+    },
+    {
+      "line": 4442,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 163.482,
+      "end_ms": 30325481,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            74.872,
+            23.707
+          ]
+        ],
+        "align": [
+          [
+            34.474,
+            5.652
+          ]
+        ],
+        "quality": [
+          [
+            52.26,
+            4.138
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 30325317.518
+    },
+    {
+      "line": 4473,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 309.15,
+      "end_ms": 30325842,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            84.487,
+            25.046
+          ]
+        ],
+        "align": [
+          [
+            30.968,
+            6.464
+          ]
+        ],
+        "quality": [
+          [
+            34.038,
+            3.945
+          ]
+        ],
+        "align_expanded": [
+          [
+            30.307,
+            6.982
+          ]
+        ],
+        "embedding_pair": [
+          [
+            17.763,
+            2.3
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.01,
+            0.005
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            47.717,
+            10.629
+          ]
+        ],
+        "ir_detect": [
+          [
+            108.425,
+            22.232
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 200534,
+        "elapsed_us": 108594,
+        "pass": 0,
+        "sample_sequence": 2419,
+        "uptime_ms": 30325842
+      },
+      "begin_ms": 30325532.85
+    },
+    {
+      "line": 4501,
+      "rgb": 0,
+      "ir_enabled": 1,
+      "job_ms": 368.134,
+      "end_ms": 30326293,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            92.041,
+            25.038
+          ]
+        ],
+        "align": [
+          [
+            18.086,
+            5.513
+          ]
+        ],
+        "quality": [
+          [
+            13.601,
+            4.09
+          ]
+        ],
+        "align_expanded": [
+          [
+            27.077,
+            6.961
+          ]
+        ],
+        "embedding_pair": [
+          [
+            47.62,
+            2.481
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.007,
+            0.005
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            54.145,
+            9.429
+          ]
+        ],
+        "ir_detect": [
+          [
+            113.053,
+            20.366
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            18.833,
+            4.585
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            27.27,
+            6.302
+          ]
+        ],
+        "live_model": [
+          [
+            8.257,
+            1.11
+          ]
+        ],
+        "liveness_ir": [
+          [
+            55.325,
+            12.399
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 199602,
+        "elapsed_us": 168509,
+        "pass": 1,
+        "sample_sequence": 2429,
+        "uptime_ms": 30326292
+      },
+      "begin_ms": 30325924.866,
+      "confirm_ms": 30326315,
+      "handoff_ms": 22,
+      "attendance_ms": 76.219,
+      "display_ms": 30326418,
+      "job_to_display_ms": 493.13399999961257,
+      "first_attempt_to_display_ms": 1100.4820000007749,
+      "attempts": 3
+    }
+  ]
+}

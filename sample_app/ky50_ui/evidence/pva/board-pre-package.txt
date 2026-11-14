@@ -1,0 +1,287 @@
+Wed Nov 11 10:57:29 UTC 2026
+545.41 155.82
+Name:	ky50_ui
+Umask:	0077
+State:	S (sleeping)
+Tgid:	635
+Ngid:	0
+Pid:	635
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	256
+Groups:	0 10 
+VmPeak:	   25656 kB
+VmSize:	   24284 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   13740 kB
+VmRSS:	   13008 kB
+RssAnon:	    7760 kB
+RssFile:	    2280 kB
+RssShmem:	    2968 kB
+VmData:	   10236 kB
+VmStk:	     132 kB
+VmExe:	    2252 kB
+VmLib:	    4176 kB
+VmPTE:	      68 kB
+VmSwap:	       0 kB
+CoreDumping:	0
+THP_enabled:	0
+Threads:	5
+SigQ:	1/1128
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000004
+SigCgt:	0000000000004a03
+CapInh:	0000000000000000
+CapPrm:	000001ffffffffff
+CapEff:	000001ffffffffff
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	unknown
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+voluntary_ctxt_switches:	27007
+nonvoluntary_ctxt_switches:	19613
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+	  1	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		1920	1080	MIPI	1MUX	  I
+	  1	  Y	   Y		1920	1080	MIPI	1MUX	  I
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	N/A	 RGB		None
+	  1	0	0	0	0	N/A	 RGB		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  1	  0	  1		  0 
+	  0	  1	  1		  1 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		 1920		 1080
+	  1	    N		   0		 1920		 1080
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+	  1	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+	  1	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+	  1	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+	  1	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+	  1	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+	  1	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   31		 5570	 5570	    0		    0	1920	1080
+	  1	  0	  Y	   31		 5566	 5566	    0		    0	1920	1080
+
+Module: [VPSS], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+
+-------------------------------MODULE PARAM-------------------------------
+           vpss_vb_source
+                 CommonVB
+
+-------------------------------VPSS MODE----------------------------------
+                vpss_mode           dev0           dev1
+                   single              N      input_mem
+
+-------------------------------VPSS GRP ATTR------------------------------
+     GrpID      MaxW      MaxH             pix_fmt  SrcFRate  DstFRate  dev
+       # 0      1920      1080                NV21        -1        -1    1
+       # 1      1920      1080                NV21        -1        -1    1
+
+-------------------------------VPSS GRP AMP CTRL------------------------------
+     GrpID     Brightness     Contrast     Saturation     Hue
+       # 0             50           50             50      50
+       # 1             50           50             50      50
+
+-------------------------------VPSS CHN ATTR------------------------------
+     GrpID  PhyChnID    Enable  MirrorEn    FlipEn  SrcFRate  DstFRate
+     Depth    Aspect    videoX    videoY    videoW    videoH   BgColor
+       # 0       # 0         y         N         N        -1        -1
+         2      NONE         0         0         0         0       0x0
+       # 1       # 0         y         N         N        -1        -1
+         2      NONE         0         0         0         0       0x0
+
+-------------------------------VPSS GRP CROP INFO-------------------------
+     GrpID    CropEn  CoorType     CoorX     CoorY     Width    Height
+       # 0         N       RAT         0         0         0         0
+       # 1         N       RAT         0         0         0         0
+
+-------------------------------VPSS CHN CROP INFO-------------------------
+     GrpID     ChnID    CropEn  CoorType     CoorX     CoorY     Width    Height
+       # 0       # 0         N       RAT         0         0         0         0
+       # 1       # 0         N       RAT         0         0         0         0
+
+-------------------------------VPSS GRP WORK STATUS-----------------------
+     GrpID   RecvCnt   LostCnt        StartFailCnt    bStart        CostTime(us)     MaxCostTime(us)      HwCostTime(us)   HwMaxCostTime(us)
+       # 0      3138         0                   0         y                7044               11358                6934                7006
+       # 1      3137         0                   0         y                7077               10996                6945                6980
+
+-------------------------------VPSS CHN OUTPUT RESOLUTION-----------------
+     GrpID     ChnID    Enable     Width    Height              Pixfmt  Videofmt    VbPool    SendOK FrameRate
+       # 0       # 0         y       864       486                NV21    LINEAR        17      3137        17
+       # 1       # 0         y       960       540                NV21    LINEAR        18      3137        17
+
+-------------------------------VPSS CHN ROTATE INFO-----------------------
+     GrpID     ChnID    Rotate
+       # 0       # 0         0
+       # 1       # 0         0
+
+-------------------------------VPSS CHN LDC INFO-----------------------
+     GrpID     ChnID    Enable    Aspect    XRatio    YRatio
+   XYRatio   XOffset   YOffset     DistortionRatio
+       # 0       # 0         N         N         0         0
+         0         0         0                   0
+       # 1       # 0         N         N         0         0
+         0         0         0                   0
+
+-------------------------------VPSS HW STATUS-----------------------
+        ID    Online    Status  StartCnt    IntCnt DutyRatio
+       # 0         N      Idle         0         0         0
+       # 1         N   Running     14415     14414        24
+
+-------------------------------VPSS CHN BUF WRAP ATTR---------------------
+     GrpID     ChnID    Enable   BufLineWrapBufSize
+
+Module: [VB], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+-----VB PUB CONFIG-----------------------------------------------------------------------------------------------------------------
+MaxPoolCnt(512),  MaxBlkCnt(128)
+
+-----COMMON POOL CONFIG------------------------------------------------------------------------------------------------------------
+    PoolId(  0)	      Size(     3110400)	     Count( 10)
+    PoolId( 16)	      Size(     1257088)	     Count(  3)
+    PoolId( 17)	      Size(      653184)	     Count(  4)
+    PoolId( 18)	      Size(      777600)	     Count(  4)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+PoolName  : vbpool
+PoolId    : 0
+PhysAddr  : 0x8a1f5000
+VirtAddr  : 0xd1931000
+IsComm    : 1
+Owner     : -1
+BlkSz     : 3110400
+BlkCnt    : 10
+Free      : 1
+MinFree   : 1
+
+BLK	VI	VPSS	VO	RGN	GDC	VENC	VDEC	USER
+#0	0	0	0	0	0	0	0	1
+#1	1	0	0	0	0	0	0	0
+#2	1	0	0	0	0	0	0	0
+#3	1	0	0	0	0	0	0	0
+#4	1	0	0	0	0	0	0	0
+#5	1	0	0	0	0	0	0	0
+#6	0	0	0	0	0	0	0	0
+#7	1	0	0	0	0	0	0	0
+#8	1	0	0	0	0	0	0	0
+#9	0	0	0	0	0	0	0	0
+Sum	7	0	0	0	0	0	0	1
+-----------------------------------------------------------------------------------------------------------------------------------
+PoolName  : ky50-camera-display
+PoolId    : 16
+PhysAddr  : 0x8bf9f000
+VirtAddr  : 0xd36dc000
+IsComm    : 0
+Owner     : -2
+BlkSz     : 1257088
+BlkCnt    : 3
+Free      : 1
+MinFree   : 0
+
+BLK	VI	VPSS	VO	RGN	GDC	VENC	VDEC	USER
+#0	0	0	1	0	0	0	0	1
+#1	0	0	0	0	0	0	0	1
+#2	0	0	0	0	0	0	0	0
+Sum	0	0	1	0	0	0	0	2
+-----------------------------------------------------------------------------------------------------------------------------------
+PoolName  : vbpool
+PoolId    : 17
+PhysAddr  : 0x8dc5c000
+VirtAddr  : 0xd4f30000
+IsComm    : 0
+Owner     : -2
+BlkSz     : 653184
+BlkCnt    : 4
+Free      : 3
+MinFree   : 3
+
+BLK	VI	VPSS	VO	RGN	GDC	VENC	VDEC	USER
+#0	0	0	0	0	0	0	0	0
+#1	0	0	0	0	0	0	0	1
+#2	0	0	0	0	0	0	0	0
+#3	0	0	0	0	0	0	0	0
+Sum	0	0	0	0	0	0	0	1
+-----------------------------------------------------------------------------------------------------------------------------------
+PoolName  : vbpool
+PoolId    : 18
+PhysAddr  : 0x8deda000
+VirtAddr  : 0xd51cb000
+IsComm    : 0
+Owner     : -2
+BlkSz     : 777600
+BlkCnt    : 4
+Free      : 4
+MinFree   : 3
+
+BLK	VI	VPSS	VO	RGN	GDC	VENC	VDEC	USER
+#0	0	0	0	0	0	0	0	0
+#1	0	0	0	0	0	0	0	0
+#2	0	0	0	0	0	0	0	0
+#3	0	0	0	0	0	0	0	0
+Sum	0	0	0	0	0	0	0	0
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------DISP(0)-------------------------
+disp_from_sc(0)		sync_ext(0)		tgen_en(1)		fmt(BGR888_PACKED)
+in_csc(        Disable)	out_csc(        Disable)	burst(15)	y_thresh(120)	c_thresh(0)
+start_x(  0)		start_y(  0)		width( 480)		height( 854)
+pitch_y(1472)		pitch_c(  0)
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+--------------DISP-TIMING(0))------------------
+total( 575 * 1057)	hsync_pol(   0)	vsync_pol(   0)
+hsync_start( 575)	hsync_end(1057)	vsync_start(   0)	vsync_end(   1)
+hde-start(  42)		hde-end( 521)	vde-start(  11)		vde-end( 864)	
+a8a1544d39a6f0cdf42cb2f0e9f20078c5a7abf7a4304b19091701b2b3ade660  /tmp/ky50-ui/ky50_ui
+403074544458ef1b4984891c64d67802ef5847433c1de3881a3852e5871de91e  /tmp/ky50-ui/pva/pva.model
+RGB

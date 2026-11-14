@@ -1,0 +1,61 @@
+gpiochip4: GPIOs 352-383, parent: platform/5021000.gpio, 5021000.gpio:
+
+gpiochip3: GPIOs 384-415, parent: platform/3023000.gpio, 3023000.gpio:
+
+gpiochip2: GPIOs 416-447, parent: platform/3022000.gpio, 3022000.gpio:
+ gpio-434 (                    |ky50-lcd            ) out hi 
+ gpio-440 (                    |ky50-lineout        ) in  lo 
+ gpio-441 (                    |ky50-lcd            ) out lo 
+
+gpiochip1: GPIOs 448-479, parent: platform/3021000.gpio, 3021000.gpio:
+ gpio-453 (                    |ky50-sensor         ) out lo 
+ gpio-454 (                    |cviusb-otg          ) in  lo IRQ 
+ gpio-471 (                    |ky50-sensor         ) out lo 
+
+gpiochip0: GPIOs 480-511, parent: platform/3020000.gpio, 3020000.gpio:
+ gpio-482 (                    |ky50-sensor         ) out hi 
+ gpio-484 (                    |ky50-sensor         ) out hi 
+ gpio-487 (                    |ky50-lcd            ) out hi 
+ gpio-488 (                    |ky50-ir-light       ) out hi 
+ gpio-495 (                    |mute_pin_l          ) out hi 
+ gpio-499 (                    |ky50-white-light    ) out hi 
+ gpio-501 (                    |ky50-relay          ) out lo 
+ gpio-510 (                    |mute_pin_r          ) out lo 
+0x00000003
+0x00088194
+0x40288194
+0x3D9FFDF4
+STATS elapsed=205 capture_fps=15.99 display_fps=15.99 frames=3214 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=3.79 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2055 hits=51 errors=0
+STATS elapsed=210 capture_fps=15.79 display_fps=15.79 frames=3293 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=4.91 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2106 hits=51 errors=0
+STATS elapsed=215 capture_fps=15.80 display_fps=15.80 frames=3372 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=4.87 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2157 hits=51 errors=0
+STATS elapsed=220 capture_fps=15.98 display_fps=15.98 frames=3452 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=4.74 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2208 hits=51 errors=0
+STATS elapsed=225 capture_fps=15.99 display_fps=15.99 frames=3532 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=50 hits=0 infer_ms=3.10 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2258 hits=51 errors=0
+STATS elapsed=230 capture_fps=15.99 display_fps=15.79 frames=3612 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=50 hits=0 infer_ms=5.30 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2308 hits=51 errors=0
+STATS elapsed=235 capture_fps=16.20 display_fps=16.20 frames=3693 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=5.97 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2359 hits=51 errors=0
+STATS elapsed=240 capture_fps=16.00 display_fps=16.20 frames=3773 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=3.37 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2410 hits=51 errors=0
+STATS elapsed=245 capture_fps=15.60 display_fps=15.60 frames=3851 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=52 hits=0 infer_ms=4.68 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2462 hits=51 errors=0
+STATS elapsed=250 capture_fps=15.99 display_fps=15.79 frames=3931 page=6 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=5.67 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=2513 hits=51 errors=0
+RGB
+version=1
+palm_leave_frames=3
+face_leave_frames=3

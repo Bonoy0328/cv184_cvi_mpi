@@ -1,0 +1,189 @@
+KY50 LCD is not running
+KY50 supplier initialization test: 480x854, RGB888, 2 lanes, pixel clock 35675 kHz
+Timing 2,40,40,2,9,193,60; LCD reset C25, touch reset C18.
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+reset DCS read da: 80
+reset DCS read db: a0
+reset DCS read dc: fb
+reset DCS read 0a: 08
+reset DCS read 0c: 00
+reset DCS read 05: 00
+reset DCS read 0f: 00
+reset DCS read b0: 00
+reset DCS read b7: 00
+reset DCS read bf: 00
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+awake DCS read da: 80
+awake DCS read db: a0
+awake DCS read dc: fb
+awake DCS read 0a: 9c
+awake DCS read 0c: 77
+awake DCS read 05: 14
+awake DCS read 0f: 80
+awake DCS read b0: 22
+awake DCS read b7: 7d
+awake DCS read bf: a0
+Framebuffer submitted: A at (200,371), 80x112, stride=1920.
+Test active; check the physical screen for a centered white A on black.
+SIGUSR1 cycles: A -> hardware colorbar -> red -> green -> blue -> black -> A.
+after-video DCS read da: 80
+after-video DCS read db: a0
+after-video DCS read dc: fb
+after-video DCS read 0a: 9c
+after-video DCS read 0c: 77
+after-video DCS read 05: ff
+after-video DCS read 0f: 80
+after-video DCS read b0: 22
+after-video DCS read b7: 7d
+after-video DCS read bf: a0
+MIPI_TX_DISABLE: Invalid argument
+bmtpu 32768 0 - Live 0xbf94b000 (FO)
+cv184x_tde 24576 0 - Live 0xbf90a000 (FO)
+cv184x_vo 65536 -1 - Unloading 0xbf923000 (FO-)
+cv184x_ldc 45056 0 - Live 0xbf8fe000 (FO)
+cv184x_rgn 69632 0 - Live 0xbf911000 (FO)
+cv184x_vc_drv 434176 0 - Live 0xbf893000 (FO)
+cv184x_vpss 126976 0 - Live 0xbf873000 (FO)
+cv184x_vi 184320 0 - Live 0xbf845000 (FO)
+cv184x_snsr_i2c 16384 0 - Live 0xbf834000 (FO)
+cv184x_mipi_rx 40960 0 - Live 0xbf83a000 (FO)
+cv184x_sys 16384 6 cv184x_vo,cv184x_ldc,cv184x_vpss,cv184x_vi,cv184x_snsr_i2c,cv184x_mipi_rx, Live 0xbf80e000 (FO)
+cv184x_base 98304 9 cv184x_tde,cv184x_vo,cv184x_ldc,cv184x_rgn,cv184x_vc_drv,cv184x_vpss,cv184x_vi,cv184x_mipi_rx,cv184x_sys, Live 0xbf816000 (FO)
+cv184x_osal 53248 11 cv184x_tde,cv184x_vo,cv184x_ldc,cv184x_rgn,cv184x_vc_drv,cv184x_vpss,cv184x_vi,cv184x_snsr_i2c,cv184x_mipi_rx,cv184x_sys,cv184x_base, Live 0xbf800000 (FO)
+[    4.269804] cif a0a0000.cif: cam2 sw reset installed
+[    4.298029] snsr_i2c snsr_i2c: i2c:-------hook 0
+[    4.306143] snsr_i2c snsr_i2c: i2c:-------hook 2
+[    4.311423] snsr_i2c snsr_i2c: i2c:-------hook 3
+[    4.316616] snsr_i2c snsr_i2c: i2c:-------hook 4
+[    4.414293] vpss_probe:213(): vpss probe done
+[    4.524826] vepu b020000.codec_vepu: probing start
+[    4.530255] vepu b020000.codec_vepu: res-reg: start: 0xb020000, end: 0xb02ffff, virt-addr(50ad60f4).
+[    4.540480] vepu b020000.codec_vepu: res-reg: start: 0xb030000, end: 0xb0300ff, top virt-addr(49f8deb3).
+[    4.551090] vepu b020000.codec_vepu: res-reg: start: 0xb058000, end: 0xb0580ff, sbm virt-addr(42f06f29).
+[    4.561700] vepu b020000.codec_vepu: res-reg: start: 0xb050000, end: 0xb0503ff, mmu virt-addr(42f06f29).
+[    4.572465] vc_drv vc_drv: register jpeg driver
+[    4.577675] jpu b000000.codec_jpu: probing start
+[    4.582893] jpu b000000.codec_jpu: res-reg: start: 0xb000000, end: 0xb00ffff, virt-addr(300ad802).
+[    4.593323] venc_probe:1222: venc_probe:1222: venc version check val 1b
+[    4.600740] jpu_probe:897: jpu_probe:897: jpu probing start
+[    4.607109] jpu_probe:926: jpu_probe:926: probing finish
+[    4.617152] rgn_probe:(225): rgn probe done
+[    4.649464] ldc_proc_init done
+[    4.684157] soph-vo a094000.vo: irq(55) for disp get from platform driver.
+[    4.717995] soph-mipi-tx mipi_tx: mipi_tx: misc_register name:soph-mipi-tx.
+[    4.785904] tde_probe:269(): tde probe done
+[    4.816381] bm-tpu c000000.bmtpu: Card 0(type:MARS3) probe done
+[    4.832191] sh (162): drop_caches: 3
+[    5.110708] bm-dwmac 4070000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[  761.133769] cvi_rtc 5026000.rtc: time set to 1794293365. 11/10/2026 6:49:25
+[  761.133794] cvi_rtc 5026000.rtc: time read as 1767226359. 1/1/2026 0:12:39
+[ 1188.321679] 8<--- cut here ---
+[ 1188.325101] Unhandled fault: synchronous external abort (0x1210) at 0xb6f96028
+[ 1188.333174] pgd = a232e082
+[ 1188.336193] [b6f96028] *pgd=81860003, *pmd=8211c003, *pte=56000000a0c2cc3
+[ 1447.195181] cvi_rtc 5026000.rtc: time set to 1794294051. 11/10/2026 7:00:51
+[ 1447.195207] cvi_rtc 5026000.rtc: time read as 1794294049. 11/10/2026 7:00:49
+[ 1857.942942] 502:mipi_tx_ioctl(): mipi_tx doesn't support mulyi-process!
+[ 1858.984377] soph-mipi-tx mipi_tx: mipi_tx: misc_deregister name:soph-mipi-tx.
+[ 1859.012174] 8<--- cut here ---
+[ 1859.015595] Unable to handle kernel NULL pointer dereference at virtual address 00000004
+[ 1859.024691] pgd = 10460ceb
+[ 1859.027745] [00000004] *pgd=80e4c003, *pmd=8211c003, *pte=00000000
+[ 1859.034663] Internal error: Oops: 207 [#1] PREEMPT THUMB2
+[ 1859.040692] Modules linked in: bmtpu(FO) cv184x_tde(FO) cv184x_vo(FO-) cv184x_ldc(FO) cv184x_rgn(FO) cv184x_vc_drv(FO) cv184x_vpss(FO) cv184x_vi(FO) cv184x_snsr_i2c(FO) cv184x_mipi_rx(FO) cv184x_sys(FO) cv184x_base(FO) cv184x_osal(FO) [last unloaded: cv184x_mipi_tx]
+[ 1859.067075] CPU: 0 PID: 426 Comm: busybox Tainted: GF          O      5.10.4-tag--g79534ab146b7 #1
+[ 1859.077086] Hardware name: Generic DT based system
+[ 1859.082474] PC is at vo_core_remove+0x62/0xd4 [cv184x_vo]
+[ 1859.088536] LR is at vo_core_remove+0x3b/0xd4 [cv184x_vo]
+[ 1859.094566] pc : [<bf926af6>]    lr : [<bf926acf>]    psr: 40000033
+[ 1859.101567] sp : c211bef8  ip : c211bf5c  fp : 00000000
+[ 1859.107402] r10: c0ed5210  r9 : 00000000  r8 : bf92f884
+[ 1859.113237] r7 : c1c8c700  r6 : 00000000  r5 : c0ed5200  r4 : 00000000
+[ 1859.120529] r3 : 00000000  r2 : 0000000c  r1 : c1c4f800  r0 : 00000000
+[ 1859.127824] Flags: nZcv  IRQs on  FIQs on  Mode SVC_32  ISA Thumb  Segment none
+[ 1859.135991] Control: 70d0383d  Table: 82094940  DAC: 00000000
+[ 1859.142409] Process busybox (pid: 426, stack limit = 0x98b8ddd7)
+[ 1859.149120] Stack: (0xc211bef8 to 0xc211c000)
+[ 1859.153986] bee0:                                                       bf926a95 c0ed5210
+[ 1859.163130] bf00: c0c35ff0 bf92f558 bf92f558 c0400244 c211a000 00000081 00000000 c05a282d
+[ 1859.172273] bf20: 00000000 c211a000 c0ed5210 ffffe000 bf92f558 c05a28ff c2131b00 bf92f558
+[ 1859.181407] bf40: 00000000 00000081 00000081 c05a1db3 bf92f6c0 c04457cb c04078d1 38317663
+[ 1859.190550] bf60: 765f7834 0000006f 00000207 0008d976 c211bfb0 00000020 00000000 c0407b35
+[ 1859.199693] bf80: 00000000 c0407baf 0006a040 00000207 c211bfb0 00efedb0 a0000030 00000880
+[ 1859.208836] bfa0: 00000002 c0400061 00000880 00000002 beeeecd4 00000880 00000000 beeeee4c
+[ 1859.217978] bfc0: 00000880 00000002 00000081 00000081 000ad9f0 00000000 00000020 00000000
+[ 1859.227121] bfe0: 000ad5a0 beeeec98 000720cb b6edd766 20000030 beeeecd4 00000000 00000000
+[ 1859.236311] [<bf926af6>] (vo_core_remove [cv184x_vo]) from [<c05a282d>] (device_release_driver_internal+0x7d/0xd4)
+[ 1859.247887] [<c05a282d>] (device_release_driver_internal) from [<c05a28ff>] (driver_detach+0x6b/0x78)
+[ 1859.258198] [<c05a28ff>] (driver_detach) from [<c05a1db3>] (bus_remove_driver+0x3b/0x60)
+[ 1859.267250] [<c05a1db3>] (bus_remove_driver) from [<c04457cb>] (sys_delete_module+0xdf/0x114)
+[ 1859.276785] [<c04457cb>] (sys_delete_module) from [<c0400061>] (ret_fast_syscall+0x1/0x5a)
+[ 1859.286020] Exception stack(0xc211bfa8 to 0xc211bff0)
+[ 1859.291665] bfa0:                   00000880 00000002 beeeecd4 00000880 00000000 beeeee4c
+[ 1859.300808] bfc0: 00000880 00000002 00000081 00000081 000ad9f0 00000000 00000020 00000000
+[ 1859.309947] bfe0: 000ad5a0 beeeec98 000720cb b6edd766
+[ 1859.315593] Code: ea4f 0986 eb03 0386 (6858) b1a0 
+[ 1859.321001] ---[ end trace e4b90ce1f3c19607 ]---
+[ 1859.348926] cv184x_mipi_tx: Unknown symbol dsi_chk_mode_done (err -2)
+[ 1859.356173] cv184x_mipi_tx: Unknown symbol dsi_set_mode (err -2)
+[ 1859.362937] cv184x_mipi_tx: Unknown symbol dphy_dsi_set_lane (err -2)
+[ 1859.370175] cv184x_mipi_tx: Unknown symbol disp_get_hw_timing (err -2)
+[ 1859.377507] cv184x_mipi_tx: Unknown symbol dphy_get_hs_settle (err -2)
+[ 1859.384804] cv184x_mipi_tx: Unknown symbol disp_tgen_enable (err -2)
+[ 1859.391916] cv184x_mipi_tx: Unknown symbol dphy_set_hs_settle (err -2)
+[ 1859.399220] cv184x_mipi_tx: Unknown symbol dphy_dsi_get_pixclk (err -2)
+[ 1859.406629] cv184x_mipi_tx: Unknown symbol dphy_dsi_set_pll (err -2)
+[ 1859.413740] cv184x_mipi_tx: Unknown symbol dphy_dsi_disable_lanes (err -2)
+[ 1859.421430] cv184x_mipi_tx: Unknown symbol dphy_dsi_lane_en (err -2)
+[ 1859.428537] cv184x_mipi_tx: Unknown symbol dphy_dsi_get_lane (err -2)
+[ 1859.435752] cv184x_mipi_tx: Unknown symbol dsi_config (err -2)
+[ 1859.442277] cv184x_mipi_tx: Unknown symbol dsi_dcs_write_buffer (err -2)
+[ 1859.449786] cv184x_mipi_tx: Unknown symbol disp_set_intf (err -2)
+[ 1859.456610] cv184x_mipi_tx: Unknown symbol dsi_dcs_read_buffer (err -2)
+[ 1859.464009] cv184x_mipi_tx: Unknown symbol disp_set_timing (err -2)
+[ 1859.497760] cv184x_mipi_tx: Unknown symbol dsi_chk_mode_done (err -2)
+[ 1859.504999] cv184x_mipi_tx: Unknown symbol dsi_set_mode (err -2)
+[ 1859.511779] cv184x_mipi_tx: Unknown symbol dphy_dsi_set_lane (err -2)
+[ 1859.519021] cv184x_mipi_tx: Unknown symbol disp_get_hw_timing (err -2)
+[ 1859.526352] cv184x_mipi_tx: Unknown symbol dphy_get_hs_settle (err -2)
+[ 1859.533660] cv184x_mipi_tx: Unknown symbol disp_tgen_enable (err -2)
+[ 1859.540772] cv184x_mipi_tx: Unknown symbol dphy_set_hs_settle (err -2)
+[ 1859.548080] cv184x_mipi_tx: Unknown symbol dphy_dsi_get_pixclk (err -2)
+[ 1859.555490] cv184x_mipi_tx: Unknown symbol dphy_dsi_set_pll (err -2)
+[ 1859.562598] cv184x_mipi_tx: Unknown symbol dphy_dsi_disable_lanes (err -2)
+[ 1859.570288] cv184x_mipi_tx: Unknown symbol dphy_dsi_lane_en (err -2)
+[ 1859.577396] cv184x_mipi_tx: Unknown symbol dphy_dsi_get_lane (err -2)
+[ 1859.584610] cv184x_mipi_tx: Unknown symbol dsi_config (err -2)
+[ 1859.591135] cv184x_mipi_tx: Unknown symbol dsi_dcs_write_buffer (err -2)
+[ 1859.598644] cv184x_mipi_tx: Unknown symbol disp_set_intf (err -2)
+[ 1859.605463] cv184x_mipi_tx: Unknown symbol dsi_dcs_read_buffer (err -2)
+[ 1859.612862] cv184x_mipi_tx: Unknown symbol disp_set_timing (err -2)
+[ 1859.670801] cv184x_gfbg: Unknown symbol vo_gfbg_set_layer_enable (err -2)
+[ 1859.708667] cv184x_gfbg: Unknown symbol vo_gfbg_set_layer_enable (err -2)

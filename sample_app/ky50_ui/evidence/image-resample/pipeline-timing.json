@@ -1,0 +1,6111 @@
+{
+  "source": "build/all-bilinear/camera-neon.log",
+  "groups": {
+    "face_rgb0_ir1": {
+      "job_ms": {
+        "n": 7,
+        "median": 333.712,
+        "min": 302.096,
+        "max": 369.616
+      },
+      "handoff_ms": {
+        "n": 7,
+        "median": 44,
+        "min": 15,
+        "max": 74
+      },
+      "attendance_ms": {
+        "n": 7,
+        "median": 89.83,
+        "min": 74.074,
+        "max": 94.15
+      },
+      "job_to_display_ms": {
+        "n": 7,
+        "median": 515.616,
+        "min": 469.096,
+        "max": 535.995
+      },
+      "first_attempt_to_display_ms": {
+        "n": 7,
+        "median": 1179.029,
+        "min": 721.326,
+        "max": 3042.048
+      },
+      "attempts": {
+        "n": 7,
+        "median": 3,
+        "min": 2,
+        "max": 8
+      },
+      "results": {
+        "25": 10,
+        "0": 7,
+        "26": 9
+      },
+      "ir_call_ms": {
+        "n": 7,
+        "median": 145.291,
+        "min": 131.981,
+        "max": 166.861
+      },
+      "rgb_candidate_ms": {
+        "n": 7,
+        "median": 189.143,
+        "min": 164.217,
+        "max": 217.021
+      },
+      "stages_ms": {
+        "align": {
+          "wall": {
+            "n": 7,
+            "median": 11.242,
+            "min": 6.292,
+            "max": 23.308
+          },
+          "cpu": {
+            "n": 7,
+            "median": 4.331,
+            "min": 4.034,
+            "max": 4.908
+          }
+        },
+        "align_expanded": {
+          "wall": {
+            "n": 7,
+            "median": 15.019,
+            "min": 4.337,
+            "max": 30.748
+          },
+          "cpu": {
+            "n": 7,
+            "median": 4.658,
+            "min": 3.988,
+            "max": 5.31
+          }
+        },
+        "database_match": {
+          "wall": {
+            "n": 7,
+            "median": 6.739,
+            "min": 0.254,
+            "max": 12.293
+          },
+          "cpu": {
+            "n": 7,
+            "median": 1.302,
+            "min": 0.255,
+            "max": 1.702
+          }
+        },
+        "embedding_pair": {
+          "wall": {
+            "n": 7,
+            "median": 43.777,
+            "min": 25.028,
+            "max": 50.166
+          },
+          "cpu": {
+            "n": 7,
+            "median": 2.358,
+            "min": 2.137,
+            "max": 3.015
+          }
+        },
+        "ir_detect": {
+          "wall": {
+            "n": 7,
+            "median": 89.402,
+            "min": 74.679,
+            "max": 121.505
+          },
+          "cpu": {
+            "n": 7,
+            "median": 18.364,
+            "min": 17.524,
+            "max": 22.917
+          }
+        },
+        "ir_detect_model_decode": {
+          "wall": {
+            "n": 7,
+            "median": 51.369,
+            "min": 40.189,
+            "max": 75.839
+          },
+          "cpu": {
+            "n": 7,
+            "median": 11.207,
+            "min": 10.15,
+            "max": 13.906
+          }
+        },
+        "ir_detect_model_wait": {
+          "wall": {
+            "n": 7,
+            "median": 0.006,
+            "min": 0.004,
+            "max": 23.689
+          },
+          "cpu": {
+            "n": 7,
+            "median": 0.006,
+            "min": 0.003,
+            "max": 0.036
+          }
+        },
+        "ir_detect_y_prepare": {
+          "wall": {
+            "n": 7,
+            "median": 28.131,
+            "min": 5.853,
+            "max": 35.434
+          },
+          "cpu": {
+            "n": 7,
+            "median": 6.658,
+            "min": 5.856,
+            "max": 8.461
+          }
+        },
+        "ir_feature_wait": {
+          "wall": {
+            "n": 7,
+            "median": 0.003,
+            "min": 0.002,
+            "max": 0.003
+          },
+          "cpu": {
+            "n": 7,
+            "median": 0.003,
+            "min": 0.002,
+            "max": 0.003
+          }
+        },
+        "ir_y_crop": {
+          "wall": {
+            "n": 7,
+            "median": 17.821,
+            "min": 9.657,
+            "max": 28.341
+          },
+          "cpu": {
+            "n": 7,
+            "median": 3.851,
+            "min": 3.708,
+            "max": 4.842
+          }
+        },
+        "ir_y_resize_pack_image": {
+          "wall": {
+            "n": 7,
+            "median": 15.836,
+            "min": 13.288,
+            "max": 29.162
+          },
+          "cpu": {
+            "n": 7,
+            "median": 5.617,
+            "min": 5.378,
+            "max": 6.423
+          }
+        },
+        "live_model": {
+          "wall": {
+            "n": 7,
+            "median": 11.59,
+            "min": 3.0,
+            "max": 23.074
+          },
+          "cpu": {
+            "n": 7,
+            "median": 1.124,
+            "min": 0.974,
+            "max": 1.421
+          }
+        },
+        "liveness_ir": {
+          "wall": {
+            "n": 7,
+            "median": 48.335,
+            "min": 44.012,
+            "max": 62.532
+          },
+          "cpu": {
+            "n": 7,
+            "median": 10.932,
+            "min": 10.7,
+            "max": 12.975
+          }
+        },
+        "nv12": {
+          "wall": {
+            "n": 7,
+            "median": 84.893,
+            "min": 76.062,
+            "max": 108.347
+          },
+          "cpu": {
+            "n": 7,
+            "median": 23.845,
+            "min": 22.96,
+            "max": 25.502
+          }
+        },
+        "quality": {
+          "wall": {
+            "n": 7,
+            "median": 17.908,
+            "min": 4.05,
+            "max": 52.124
+          },
+          "cpu": {
+            "n": 7,
+            "median": 3.587,
+            "min": 3.27,
+            "max": 3.717
+          }
+        },
+        "quality_model": {
+          "wall": {
+            "n": 7,
+            "median": 3.828,
+            "min": 1.267,
+            "max": 35.403
+          },
+          "cpu": {
+            "n": 7,
+            "median": 0.803,
+            "min": 0.588,
+            "max": 0.931
+          }
+        },
+        "quality_warp": {
+          "wall": {
+            "n": 7,
+            "median": 13.883,
+            "min": 2.673,
+            "max": 19.344
+          },
+          "cpu": {
+            "n": 7,
+            "median": 2.593,
+            "min": 2.569,
+            "max": 2.698
+          }
+        }
+      }
+    },
+    "face_rgb1_ir1": {
+      "job_ms": {
+        "n": 6,
+        "median": 423.857,
+        "min": 406.759,
+        "max": 467.737
+      },
+      "handoff_ms": {
+        "n": 6,
+        "median": 14.5,
+        "min": 4,
+        "max": 121
+      },
+      "attendance_ms": {
+        "n": 6,
+        "median": 76.016,
+        "min": 73.735,
+        "max": 95.884
+      },
+      "job_to_display_ms": {
+        "n": 6,
+        "median": 555.891,
+        "min": 518.759,
+        "max": 666.665
+      },
+      "first_attempt_to_display_ms": {
+        "n": 6,
+        "median": 1333.284,
+        "min": 1015.77,
+        "max": 1594.935
+      },
+      "attempts": {
+        "n": 6,
+        "median": 3.0,
+        "min": 2,
+        "max": 4
+      },
+      "results": {
+        "26": 5,
+        "0": 6,
+        "25": 7
+      },
+      "ir_call_ms": {
+        "n": 6,
+        "median": 144.914,
+        "min": 129.584,
+        "max": 189.394
+      },
+      "rgb_candidate_ms": {
+        "n": 6,
+        "median": 277.738,
+        "min": 261.375,
+        "max": 303.717
+      },
+      "stages_ms": {
+        "align": {
+          "wall": {
+            "n": 6,
+            "median": 30.697,
+            "min": 8.962,
+            "max": 57.706
+          },
+          "cpu": {
+            "n": 6,
+            "median": 5.282,
+            "min": 3.99,
+            "max": 6.454
+          }
+        },
+        "align_expanded": {
+          "wall": {
+            "n": 6,
+            "median": 21.966,
+            "min": 13.614,
+            "max": 31.381
+          },
+          "cpu": {
+            "n": 6,
+            "median": 5.079,
+            "min": 4.346,
+            "max": 7.111
+          }
+        },
+        "database_match": {
+          "wall": {
+            "n": 6,
+            "median": 5.517,
+            "min": 0.25,
+            "max": 12.737
+          },
+          "cpu": {
+            "n": 6,
+            "median": 0.885,
+            "min": 0.25,
+            "max": 1.661
+          }
+        },
+        "embedding_pair": {
+          "wall": {
+            "n": 6,
+            "median": 17.324,
+            "min": 13.849,
+            "max": 35.387
+          },
+          "cpu": {
+            "n": 6,
+            "median": 2.423,
+            "min": 2.106,
+            "max": 2.567
+          }
+        },
+        "ir_detect": {
+          "wall": {
+            "n": 6,
+            "median": 82.429,
+            "min": 76.248,
+            "max": 139.544
+          },
+          "cpu": {
+            "n": 6,
+            "median": 18.389,
+            "min": 16.756,
+            "max": 20.125
+          }
+        },
+        "ir_detect_model_decode": {
+          "wall": {
+            "n": 6,
+            "median": 60.096,
+            "min": 40.435,
+            "max": 71.765
+          },
+          "cpu": {
+            "n": 6,
+            "median": 10.993,
+            "min": 10.468,
+            "max": 12.59
+          }
+        },
+        "ir_detect_model_wait": {
+          "wall": {
+            "n": 6,
+            "median": 0.005,
+            "min": 0.004,
+            "max": 32.173
+          },
+          "cpu": {
+            "n": 6,
+            "median": 0.004,
+            "min": 0.003,
+            "max": 0.029
+          }
+        },
+        "ir_detect_y_prepare": {
+          "wall": {
+            "n": 6,
+            "median": 17.099,
+            "min": 5.796,
+            "max": 42.935
+          },
+          "cpu": {
+            "n": 6,
+            "median": 6.591,
+            "min": 5.799,
+            "max": 7.681
+          }
+        },
+        "ir_feature_wait": {
+          "wall": {
+            "n": 6,
+            "median": 0.003,
+            "min": 0.002,
+            "max": 0.003
+          },
+          "cpu": {
+            "n": 6,
+            "median": 0.002,
+            "min": 0.002,
+            "max": 0.003
+          }
+        },
+        "ir_y_crop": {
+          "wall": {
+            "n": 6,
+            "median": 19.748,
+            "min": 11.559,
+            "max": 26.872
+          },
+          "cpu": {
+            "n": 6,
+            "median": 4.781,
+            "min": 3.785,
+            "max": 5.153
+          }
+        },
+        "ir_y_resize_pack_image": {
+          "wall": {
+            "n": 6,
+            "median": 25.152,
+            "min": 8.898,
+            "max": 35.062
+          },
+          "cpu": {
+            "n": 6,
+            "median": 6.015,
+            "min": 5.403,
+            "max": 6.787
+          }
+        },
+        "live_model": {
+          "wall": {
+            "n": 12,
+            "median": 9.589,
+            "min": 2.897,
+            "max": 25.746
+          },
+          "cpu": {
+            "n": 12,
+            "median": 1.195,
+            "min": 0.959,
+            "max": 1.799
+          }
+        },
+        "live_resize_pack_image": {
+          "wall": {
+            "n": 6,
+            "median": 29.221,
+            "min": 25.017,
+            "max": 36.795
+          },
+          "cpu": {
+            "n": 6,
+            "median": 6.97,
+            "min": 6.695,
+            "max": 7.722
+          }
+        },
+        "liveness": {
+          "wall": {
+            "n": 6,
+            "median": 89.043,
+            "min": 73.483,
+            "max": 95.086
+          },
+          "cpu": {
+            "n": 6,
+            "median": 22.039,
+            "min": 19.691,
+            "max": 26.179
+          }
+        },
+        "liveness_ir": {
+          "wall": {
+            "n": 6,
+            "median": 60.102,
+            "min": 49.778,
+            "max": 62.48
+          },
+          "cpu": {
+            "n": 6,
+            "median": 12.672,
+            "min": 11.072,
+            "max": 13.674
+          }
+        },
+        "nv12": {
+          "wall": {
+            "n": 6,
+            "median": 92.041,
+            "min": 75.546,
+            "max": 108.365
+          },
+          "cpu": {
+            "n": 6,
+            "median": 23.888,
+            "min": 22.649,
+            "max": 26.426
+          }
+        },
+        "quality": {
+          "wall": {
+            "n": 6,
+            "median": 18.487,
+            "min": 6.694,
+            "max": 36.799
+          },
+          "cpu": {
+            "n": 6,
+            "median": 3.556,
+            "min": 3.163,
+            "max": 3.834
+          }
+        },
+        "quality_model": {
+          "wall": {
+            "n": 6,
+            "median": 4.864,
+            "min": 2.779,
+            "max": 30.478
+          },
+          "cpu": {
+            "n": 6,
+            "median": 0.738,
+            "min": 0.582,
+            "max": 0.919
+          }
+        },
+        "quality_warp": {
+          "wall": {
+            "n": 6,
+            "median": 3.333,
+            "min": 2.487,
+            "max": 33.847
+          },
+          "cpu": {
+            "n": 6,
+            "median": 2.617,
+            "min": 2.488,
+            "max": 2.877
+          }
+        }
+      }
+    },
+    "palm_rgb0_ir1": {
+      "job_ms": {
+        "n": 5,
+        "median": 67.052,
+        "min": 62.33,
+        "max": 623.082
+      },
+      "handoff_ms": {
+        "n": 5,
+        "median": 65,
+        "min": 53,
+        "max": 112
+      },
+      "attendance_ms": {
+        "n": 5,
+        "median": 80.309,
+        "min": 76.989,
+        "max": 92.28
+      },
+      "job_to_display_ms": {
+        "n": 5,
+        "median": 270.093,
+        "min": 237.052,
+        "max": 848.082
+      },
+      "first_attempt_to_display_ms": {
+        "n": 5,
+        "median": 270.093,
+        "min": 237.052,
+        "max": 1489.057
+      },
+      "attempts": {
+        "n": 5,
+        "median": 1,
+        "min": 1,
+        "max": 4
+      },
+      "results": {
+        "7": 3,
+        "0": 5
+      },
+      "ir_call_ms": null,
+      "rgb_candidate_ms": null,
+      "stages_ms": {
+        "center_resize": {
+          "wall": {
+            "n": 10,
+            "median": 0.736,
+            "min": 0.627,
+            "max": 10.749
+          },
+          "cpu": {
+            "n": 10,
+            "median": 0.657,
+            "min": 0.626,
+            "max": 0.872
+          }
+        },
+        "crop_resize": {
+          "wall": {
+            "n": 5,
+            "median": 8.657,
+            "min": 1.364,
+            "max": 13.458
+          },
+          "cpu": {
+            "n": 5,
+            "median": 1.63,
+            "min": 1.364,
+            "max": 2.455
+          }
+        },
+        "database_match": {
+          "wall": {
+            "n": 5,
+            "median": 10.988,
+            "min": 9.133,
+            "max": 16.918
+          },
+          "cpu": {
+            "n": 5,
+            "median": 1.804,
+            "min": 1.497,
+            "max": 2.612
+          }
+        },
+        "embedding_mid": {
+          "wall": {
+            "n": 5,
+            "median": 6.964,
+            "min": 4.257,
+            "max": 15.49
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.759,
+            "min": 0.697,
+            "max": 1.594
+          }
+        },
+        "embedding_model": {
+          "wall": {
+            "n": 10,
+            "median": 6.46,
+            "min": 4.151,
+            "max": 15.374
+          },
+          "cpu": {
+            "n": 10,
+            "median": 0.703,
+            "min": 0.603,
+            "max": 1.49
+          }
+        },
+        "embedding_pack": {
+          "wall": {
+            "n": 10,
+            "median": 0.034,
+            "min": 0.027,
+            "max": 0.044
+          },
+          "cpu": {
+            "n": 10,
+            "median": 0.034,
+            "min": 0.027,
+            "max": 0.044
+          }
+        },
+        "embedding_small": {
+          "wall": {
+            "n": 5,
+            "median": 6.179,
+            "min": 4.243,
+            "max": 8.953
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.867,
+            "min": 0.697,
+            "max": 0.883
+          }
+        },
+        "feature_total": {
+          "wall": {
+            "n": 5,
+            "median": 55.974,
+            "min": 47.083,
+            "max": 613.045
+          },
+          "cpu": {
+            "n": 5,
+            "median": 11.727,
+            "min": 10.024,
+            "max": 130.629
+          }
+        },
+        "resize_large": {
+          "wall": {
+            "n": 5,
+            "median": 0.731,
+            "min": 0.621,
+            "max": 10.922
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.709,
+            "min": 0.62,
+            "max": 0.863
+          }
+        },
+        "roi_prepare_quality": {
+          "wall": {
+            "n": 5,
+            "median": 15.249,
+            "min": 4.141,
+            "max": 20.832
+          },
+          "cpu": {
+            "n": 5,
+            "median": 3.525,
+            "min": 3.112,
+            "max": 3.857
+          }
+        },
+        "rotate": {
+          "wall": {
+            "n": 3,
+            "median": 428.393,
+            "min": 48.089,
+            "max": 514.382
+          },
+          "cpu": {
+            "n": 3,
+            "median": 110.446,
+            "min": 9.97,
+            "max": 116.885
+          }
+        },
+        "second_detect_model": {
+          "wall": {
+            "n": 5,
+            "median": 2.478,
+            "min": 1.618,
+            "max": 5.505
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.679,
+            "min": 0.633,
+            "max": 1.431
+          }
+        },
+        "second_detect_pack": {
+          "wall": {
+            "n": 5,
+            "median": 0.032,
+            "min": 0.032,
+            "max": 0.037
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.031,
+            "min": 0.031,
+            "max": 0.037
+          }
+        },
+        "second_detect_resize": {
+          "wall": {
+            "n": 5,
+            "median": 0.901,
+            "min": 0.693,
+            "max": 13.599
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.763,
+            "min": 0.693,
+            "max": 0.805
+          }
+        },
+        "second_detect_wait": {
+          "wall": {
+            "n": 5,
+            "median": 0.003,
+            "min": 0.003,
+            "max": 0.004
+          },
+          "cpu": {
+            "n": 5,
+            "median": 0.003,
+            "min": 0.003,
+            "max": 0.004
+          }
+        }
+      }
+    }
+  },
+  "jobs": [
+    {
+      "line": 10020,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 152.247,
+      "end_ms": 32042336,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            95.051,
+            24.972
+          ]
+        ],
+        "align": [
+          [
+            16.364,
+            4.626
+          ]
+        ],
+        "quality_warp": [
+          [
+            24.783,
+            2.675
+          ]
+        ],
+        "quality_model": [
+          [
+            14.814,
+            0.827
+          ]
+        ],
+        "quality": [
+          [
+            40.09,
+            3.71
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32042183.753
+    },
+    {
+      "line": 10037,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 125.118,
+      "end_ms": 32042518,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            76.819,
+            24.024
+          ]
+        ],
+        "align": [
+          [
+            13.745,
+            3.925
+          ]
+        ],
+        "quality_warp": [
+          [
+            21.271,
+            2.841
+          ]
+        ],
+        "quality_model": [
+          [
+            1.975,
+            0.625
+          ]
+        ],
+        "quality": [
+          [
+            23.379,
+            3.594
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32042392.882
+    },
+    {
+      "line": 10253,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 145.697,
+      "end_ms": 32044582,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            105.392,
+            23.377
+          ]
+        ],
+        "align": [
+          [
+            29.516,
+            5.204
+          ]
+        ],
+        "quality_warp": [
+          [
+            8.209,
+            2.574
+          ]
+        ],
+        "quality_model": [
+          [
+            1.353,
+            0.656
+          ]
+        ],
+        "quality": [
+          [
+            9.888,
+            3.39
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32044436.303
+    },
+    {
+      "line": 10300,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 369.616,
+      "end_ms": 32045030,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            106.501,
+            24.368
+          ]
+        ],
+        "align": [
+          [
+            9.361,
+            4.908
+          ]
+        ],
+        "quality_warp": [
+          [
+            13.883,
+            2.593
+          ]
+        ],
+        "quality_model": [
+          [
+            3.828,
+            0.931
+          ]
+        ],
+        "quality": [
+          [
+            17.908,
+            3.717
+          ]
+        ],
+        "align_expanded": [
+          [
+            30.748,
+            5.221
+          ]
+        ],
+        "embedding_pair": [
+          [
+            25.028,
+            2.306
+          ]
+        ],
+        "database_match": [
+          [
+            12.293,
+            1.702
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            35.434,
+            8.461
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            75.839,
+            13.906
+          ]
+        ],
+        "ir_detect": [
+          [
+            121.505,
+            22.917
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            17.339,
+            4.842
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            15.741,
+            6.205
+          ]
+        ],
+        "live_model": [
+          [
+            11.59,
+            1.421
+          ]
+        ],
+        "liveness_ir": [
+          [
+            45.223,
+            12.975
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 202732,
+        "elapsed_us": 166861,
+        "pass": 1,
+        "sample_sequence": 2293,
+        "uptime_ms": 32045030
+      },
+      "begin_ms": 32044660.384,
+      "confirm_ms": 32045045,
+      "handoff_ms": 15,
+      "attendance_ms": 91.098,
+      "display_ms": 32045176,
+      "job_to_display_ms": 515.6160000003874,
+      "first_attempt_to_display_ms": 2992.247000001371,
+      "attempts": 4
+    },
+    {
+      "line": 10570,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 131.029,
+      "end_ms": 32047244,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            96.352,
+            23.219
+          ]
+        ],
+        "align": [
+          [
+            12.559,
+            4.076
+          ]
+        ],
+        "quality_warp": [
+          [
+            17.096,
+            2.587
+          ]
+        ],
+        "quality_model": [
+          [
+            4.203,
+            0.762
+          ]
+        ],
+        "quality": [
+          [
+            21.436,
+            3.479
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32047112.971
+    },
+    {
+      "line": 10611,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 321.089,
+      "end_ms": 32047673,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            106.811,
+            26.586
+          ]
+        ],
+        "align": [
+          [
+            22.55,
+            5.128
+          ]
+        ],
+        "quality_warp": [
+          [
+            10.291,
+            2.543
+          ]
+        ],
+        "quality_model": [
+          [
+            34.714,
+            0.718
+          ]
+        ],
+        "quality": [
+          [
+            45.165,
+            3.416
+          ]
+        ],
+        "align_expanded": [
+          [
+            13.63,
+            5.208
+          ]
+        ],
+        "embedding_pair": [
+          [
+            16.759,
+            2.238
+          ]
+        ],
+        "database_match": [
+          [
+            14.761,
+            1.905
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.004,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            24.308,
+            6.733
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            69.951,
+            13.115
+          ]
+        ],
+        "ir_detect": [
+          [
+            98.476,
+            20.456
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 222518,
+        "elapsed_us": 98548,
+        "pass": 0,
+        "sample_sequence": 2358,
+        "uptime_ms": 32047673
+      },
+      "begin_ms": 32047351.911
+    },
+    {
+      "line": 10656,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 325.995,
+      "end_ms": 32048082,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            81.607,
+            23.845
+          ]
+        ],
+        "align": [
+          [
+            6.292,
+            4.331
+          ]
+        ],
+        "quality_warp": [
+          [
+            19.344,
+            2.698
+          ]
+        ],
+        "quality_model": [
+          [
+            7.456,
+            0.803
+          ]
+        ],
+        "quality": [
+          [
+            26.949,
+            3.645
+          ]
+        ],
+        "align_expanded": [
+          [
+            4.337,
+            4.34
+          ]
+        ],
+        "embedding_pair": [
+          [
+            43.777,
+            3.015
+          ]
+        ],
+        "database_match": [
+          [
+            7.965,
+            1.302
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            28.131,
+            6.879
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            40.189,
+            10.15
+          ]
+        ],
+        "ir_detect": [
+          [
+            92.723,
+            17.524
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            16.218,
+            3.851
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            13.288,
+            5.73
+          ]
+        ],
+        "live_model": [
+          [
+            14.066,
+            1.296
+          ]
+        ],
+        "liveness_ir": [
+          [
+            44.012,
+            11.268
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 189143,
+        "elapsed_us": 136830,
+        "pass": 1,
+        "sample_sequence": 2370,
+        "uptime_ms": 32048082
+      },
+      "begin_ms": 32047756.005,
+      "confirm_ms": 32048151,
+      "handoff_ms": 69,
+      "attendance_ms": 91.031,
+      "display_ms": 32048292,
+      "job_to_display_ms": 535.9950000010431,
+      "first_attempt_to_display_ms": 1179.0289999991655,
+      "attempts": 3
+    },
+    {
+      "line": 10902,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 319.165,
+      "end_ms": 32050336,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            97.525,
+            23.327
+          ]
+        ],
+        "align": [
+          [
+            24.558,
+            4.686
+          ]
+        ],
+        "quality_warp": [
+          [
+            10.505,
+            2.617
+          ]
+        ],
+        "quality_model": [
+          [
+            4.915,
+            0.678
+          ]
+        ],
+        "quality": [
+          [
+            15.569,
+            3.439
+          ]
+        ],
+        "align_expanded": [
+          [
+            24.987,
+            5.466
+          ]
+        ],
+        "embedding_pair": [
+          [
+            36.967,
+            2.05
+          ]
+        ],
+        "database_match": [
+          [
+            15.926,
+            1.709
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            36.753,
+            7.289
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.003,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            65.421,
+            10.884
+          ]
+        ],
+        "ir_detect": [
+          [
+            102.668,
+            18.661
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 216424,
+        "elapsed_us": 102718,
+        "pass": 0,
+        "sample_sequence": 2428,
+        "uptime_ms": 32050336
+      },
+      "begin_ms": 32050016.835
+    },
+    {
+      "line": 10951,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 349.023,
+      "end_ms": 32050804,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            108.347,
+            25.502
+          ]
+        ],
+        "align": [
+          [
+            9.482,
+            4.339
+          ]
+        ],
+        "quality_warp": [
+          [
+            16.565,
+            2.611
+          ]
+        ],
+        "quality_model": [
+          [
+            35.403,
+            0.91
+          ]
+        ],
+        "quality": [
+          [
+            52.124,
+            3.669
+          ]
+        ],
+        "align_expanded": [
+          [
+            13.652,
+            4.592
+          ]
+        ],
+        "embedding_pair": [
+          [
+            25.77,
+            2.303
+          ]
+        ],
+        "database_match": [
+          [
+            6.739,
+            1.609
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            26.809,
+            6.658
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.006,
+            0.006
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            47.343,
+            10.385
+          ]
+        ],
+        "ir_detect": [
+          [
+            74.679,
+            17.564
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            28.341,
+            3.708
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            20.103,
+            5.378
+          ]
+        ],
+        "live_model": [
+          [
+            8.428,
+            1.266
+          ]
+        ],
+        "liveness_ir": [
+          [
+            57.23,
+            10.703
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 217021,
+        "elapsed_us": 131981,
+        "pass": 1,
+        "sample_sequence": 2436,
+        "uptime_ms": 32050804
+      },
+      "begin_ms": 32050454.977,
+      "confirm_ms": 32050848,
+      "handoff_ms": 44,
+      "attendance_ms": 75.858,
+      "display_ms": 32050973,
+      "job_to_display_ms": 518.0229999981821,
+      "first_attempt_to_display_ms": 956.1649999991059,
+      "attempts": 2
+    },
+    {
+      "line": 11179,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 125.326,
+      "end_ms": 32052841,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            95.051,
+            23.647
+          ]
+        ],
+        "align": [
+          [
+            18.59,
+            4.931
+          ]
+        ],
+        "quality_warp": [
+          [
+            7.368,
+            2.63
+          ]
+        ],
+        "quality_model": [
+          [
+            3.443,
+            0.688
+          ]
+        ],
+        "quality": [
+          [
+            10.942,
+            3.444
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32052715.674
+    },
+    {
+      "line": 11224,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 339.366,
+      "end_ms": 32053270,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            89.493,
+            24.151
+          ]
+        ],
+        "align": [
+          [
+            11.242,
+            4.49
+          ]
+        ],
+        "quality_warp": [
+          [
+            14.977,
+            2.62
+          ]
+        ],
+        "quality_model": [
+          [
+            5.918,
+            0.684
+          ]
+        ],
+        "quality": [
+          [
+            21.055,
+            3.456
+          ]
+        ],
+        "align_expanded": [
+          [
+            15.628,
+            4.658
+          ]
+        ],
+        "embedding_pair": [
+          [
+            41.467,
+            2.137
+          ]
+        ],
+        "database_match": [
+          [
+            9.39,
+            1.661
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            28.143,
+            7.336
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            58.908,
+            11.207
+          ]
+        ],
+        "ir_detect": [
+          [
+            87.517,
+            19.002
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            22.138,
+            3.964
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            27.742,
+            5.6
+          ]
+        ],
+        "live_model": [
+          [
+            3.0,
+            0.974
+          ]
+        ],
+        "liveness_ir": [
+          [
+            62.532,
+            10.932
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 189217,
+        "elapsed_us": 150126,
+        "pass": 1,
+        "sample_sequence": 2496,
+        "uptime_ms": 32053270
+      },
+      "begin_ms": 32052930.634,
+      "confirm_ms": 32053314,
+      "handoff_ms": 44,
+      "attendance_ms": 94.15,
+      "display_ms": 32053437,
+      "job_to_display_ms": 506.36600000038743,
+      "first_attempt_to_display_ms": 721.3260000012815,
+      "attempts": 2
+    },
+    {
+      "line": 11531,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 32.057,
+      "end_ms": 32055738,
+      "result": 7,
+      "stages": {
+        "second_detect_resize": [
+          [
+            3.94,
+            0.77
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.031,
+            0.03
+          ]
+        ],
+        "second_detect_model": [
+          [
+            8.652,
+            0.676
+          ]
+        ],
+        "crop_resize": [
+          [
+            1.418,
+            1.416
+          ]
+        ],
+        "resize_large": [
+          [
+            0.674,
+            0.676
+          ]
+        ],
+        "center_resize": [
+          [
+            0.679,
+            0.679
+          ],
+          [
+            3.169,
+            0.7
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            15.372,
+            2.578
+          ]
+        ],
+        "feature_total": [
+          [
+            32.022,
+            7.143
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32055705.943
+    },
+    {
+      "line": 11562,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 34.322,
+      "end_ms": 32055842,
+      "result": 7,
+      "stages": {
+        "second_detect_resize": [
+          [
+            1.069,
+            0.851
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.035,
+            0.036
+          ]
+        ],
+        "second_detect_model": [
+          [
+            9.893,
+            0.845
+          ]
+        ],
+        "crop_resize": [
+          [
+            8.427,
+            1.519
+          ]
+        ],
+        "resize_large": [
+          [
+            0.672,
+            0.672
+          ]
+        ],
+        "center_resize": [
+          [
+            11.353,
+            0.74
+          ],
+          [
+            0.616,
+            0.615
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            13.111,
+            2.495
+          ]
+        ],
+        "feature_total": [
+          [
+            34.293,
+            7.497
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32055807.678
+    },
+    {
+      "line": 11626,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 565.285,
+      "end_ms": 32056505,
+      "result": 7,
+      "stages": {
+        "rotate": [
+          [
+            501.892,
+            123.787
+          ],
+          [
+            35.62,
+            10.424
+          ]
+        ],
+        "second_detect_resize": [
+          [
+            2.419,
+            0.73
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.031,
+            0.032
+          ]
+        ],
+        "second_detect_model": [
+          [
+            1.551,
+            0.645
+          ]
+        ],
+        "crop_resize": [
+          [
+            4.795,
+            1.509
+          ]
+        ],
+        "resize_large": [
+          [
+            10.219,
+            0.757
+          ]
+        ],
+        "center_resize": [
+          [
+            2.282,
+            0.755
+          ],
+          [
+            2.885,
+            0.73
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            16.308,
+            2.84
+          ]
+        ],
+        "feature_total": [
+          [
+            565.227,
+            142.033
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32055939.715
+    },
+    {
+      "line": 11687,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 479.057,
+      "end_ms": 32057022,
+      "result": 0,
+      "stages": {
+        "rotate": [
+          [
+            428.393,
+            116.885
+          ]
+        ],
+        "second_detect_resize": [
+          [
+            0.693,
+            0.693
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.032,
+            0.031
+          ]
+        ],
+        "second_detect_model": [
+          [
+            2.478,
+            0.64
+          ]
+        ],
+        "crop_resize": [
+          [
+            8.657,
+            1.63
+          ]
+        ],
+        "resize_large": [
+          [
+            0.621,
+            0.62
+          ]
+        ],
+        "center_resize": [
+          [
+            0.863,
+            0.659
+          ],
+          [
+            1.188,
+            0.656
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            4.141,
+            3.403
+          ]
+        ],
+        "embedding_pack": [
+          [
+            0.042,
+            0.042
+          ],
+          [
+            0.031,
+            0.032
+          ]
+        ],
+        "embedding_model": [
+          [
+            4.246,
+            0.619
+          ],
+          [
+            4.151,
+            0.606
+          ]
+        ],
+        "embedding_mid": [
+          [
+            4.391,
+            0.759
+          ]
+        ],
+        "embedding_small": [
+          [
+            4.243,
+            0.697
+          ]
+        ],
+        "feature_total": [
+          [
+            469.815,
+            126.771
+          ]
+        ],
+        "database_match": [
+          [
+            9.133,
+            1.765
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32056542.943,
+      "confirm_ms": 32057075,
+      "handoff_ms": 53,
+      "attendance_ms": 80.309,
+      "display_ms": 32057195,
+      "job_to_display_ms": 652.0570000000298,
+      "first_attempt_to_display_ms": 1489.0570000000298,
+      "attempts": 4
+    },
+    {
+      "line": 11949,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 64.093,
+      "end_ms": 32059007,
+      "result": 0,
+      "stages": {
+        "second_detect_resize": [
+          [
+            0.739,
+            0.739
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.032,
+            0.031
+          ]
+        ],
+        "second_detect_model": [
+          [
+            5.505,
+            1.431
+          ]
+        ],
+        "crop_resize": [
+          [
+            13.458,
+            1.526
+          ]
+        ],
+        "resize_large": [
+          [
+            0.65,
+            0.65
+          ]
+        ],
+        "center_resize": [
+          [
+            0.629,
+            0.629
+          ],
+          [
+            0.627,
+            0.626
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            9.488,
+            3.112
+          ]
+        ],
+        "embedding_pack": [
+          [
+            0.028,
+            0.029
+          ],
+          [
+            0.033,
+            0.034
+          ]
+        ],
+        "embedding_model": [
+          [
+            4.161,
+            0.603
+          ],
+          [
+            8.853,
+            0.658
+          ]
+        ],
+        "embedding_mid": [
+          [
+            4.257,
+            0.697
+          ]
+        ],
+        "embedding_small": [
+          [
+            8.953,
+            0.758
+          ]
+        ],
+        "feature_total": [
+          [
+            47.083,
+            10.024
+          ]
+        ],
+        "database_match": [
+          [
+            16.918,
+            2.612
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32058942.907,
+      "confirm_ms": 32059087,
+      "handoff_ms": 80,
+      "attendance_ms": 83.696,
+      "display_ms": 32059213,
+      "job_to_display_ms": 270.0929999984801,
+      "first_attempt_to_display_ms": 270.0929999984801,
+      "attempts": 1
+    },
+    {
+      "line": 12279,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 62.33,
+      "end_ms": 32060970,
+      "result": 0,
+      "stages": {
+        "second_detect_resize": [
+          [
+            1.043,
+            0.805
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.037,
+            0.037
+          ]
+        ],
+        "second_detect_model": [
+          [
+            4.22,
+            0.707
+          ]
+        ],
+        "crop_resize": [
+          [
+            6.066,
+            2.398
+          ]
+        ],
+        "resize_large": [
+          [
+            8.057,
+            0.863
+          ]
+        ],
+        "center_resize": [
+          [
+            0.653,
+            0.652
+          ],
+          [
+            10.749,
+            0.745
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            20.832,
+            3.616
+          ]
+        ],
+        "embedding_pack": [
+          [
+            0.027,
+            0.027
+          ],
+          [
+            0.044,
+            0.044
+          ]
+        ],
+        "embedding_model": [
+          [
+            9.191,
+            1.49
+          ],
+          [
+            4.959,
+            0.748
+          ]
+        ],
+        "embedding_mid": [
+          [
+            9.298,
+            1.594
+          ]
+        ],
+        "embedding_small": [
+          [
+            5.08,
+            0.867
+          ]
+        ],
+        "feature_total": [
+          [
+            49.796,
+            11.727
+          ]
+        ],
+        "database_match": [
+          [
+            12.414,
+            1.804
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32060907.67,
+      "confirm_ms": 32061034,
+      "handoff_ms": 64,
+      "attendance_ms": 92.28,
+      "display_ms": 32061163,
+      "job_to_display_ms": 255.32999999821186,
+      "first_attempt_to_display_ms": 255.32999999821186,
+      "attempts": 1
+    },
+    {
+      "line": 12618,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 623.082,
+      "end_ms": 32063460,
+      "result": 0,
+      "stages": {
+        "rotate": [
+          [
+            514.382,
+            110.446
+          ],
+          [
+            48.089,
+            9.97
+          ]
+        ],
+        "second_detect_resize": [
+          [
+            13.599,
+            0.763
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.033,
+            0.033
+          ]
+        ],
+        "second_detect_model": [
+          [
+            1.633,
+            0.633
+          ]
+        ],
+        "crop_resize": [
+          [
+            1.364,
+            1.364
+          ]
+        ],
+        "resize_large": [
+          [
+            0.731,
+            0.709
+          ]
+        ],
+        "center_resize": [
+          [
+            0.717,
+            0.702
+          ],
+          [
+            1.205,
+            0.872
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            18.812,
+            3.857
+          ]
+        ],
+        "embedding_pack": [
+          [
+            0.03,
+            0.03
+          ],
+          [
+            0.039,
+            0.036
+          ]
+        ],
+        "embedding_model": [
+          [
+            6.86,
+            0.608
+          ],
+          [
+            6.059,
+            0.755
+          ]
+        ],
+        "embedding_mid": [
+          [
+            6.964,
+            0.709
+          ]
+        ],
+        "embedding_small": [
+          [
+            6.179,
+            0.873
+          ]
+        ],
+        "feature_total": [
+          [
+            613.045,
+            130.629
+          ]
+        ],
+        "database_match": [
+          [
+            9.923,
+            2.229
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32062836.918,
+      "confirm_ms": 32063572,
+      "handoff_ms": 112,
+      "attendance_ms": 77.886,
+      "display_ms": 32063685,
+      "job_to_display_ms": 848.0819999985397,
+      "first_attempt_to_display_ms": 848.0819999985397,
+      "attempts": 1
+    },
+    {
+      "line": 12873,
+      "kind": "palm",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 67.052,
+      "end_ms": 32065276,
+      "result": 0,
+      "stages": {
+        "second_detect_resize": [
+          [
+            0.901,
+            0.776
+          ]
+        ],
+        "second_detect_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "second_detect_pack": [
+          [
+            0.032,
+            0.031
+          ]
+        ],
+        "second_detect_model": [
+          [
+            1.618,
+            0.679
+          ]
+        ],
+        "crop_resize": [
+          [
+            12.61,
+            2.455
+          ]
+        ],
+        "resize_large": [
+          [
+            10.922,
+            0.808
+          ]
+        ],
+        "center_resize": [
+          [
+            0.755,
+            0.662
+          ],
+          [
+            0.638,
+            0.639
+          ]
+        ],
+        "roi_prepare_quality": [
+          [
+            15.249,
+            3.525
+          ]
+        ],
+        "embedding_pack": [
+          [
+            0.035,
+            0.034
+          ],
+          [
+            0.042,
+            0.042
+          ]
+        ],
+        "embedding_model": [
+          [
+            15.374,
+            1.0
+          ],
+          [
+            8.247,
+            0.775
+          ]
+        ],
+        "embedding_mid": [
+          [
+            15.49,
+            1.11
+          ]
+        ],
+        "embedding_small": [
+          [
+            8.356,
+            0.883
+          ]
+        ],
+        "feature_total": [
+          [
+            55.974,
+            11.15
+          ]
+        ],
+        "database_match": [
+          [
+            10.988,
+            1.497
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32065208.948,
+      "confirm_ms": 32065341,
+      "handoff_ms": 65,
+      "attendance_ms": 76.989,
+      "display_ms": 32065446,
+      "job_to_display_ms": 237.05200000107288,
+      "first_attempt_to_display_ms": 237.05200000107288,
+      "attempts": 1
+    },
+    {
+      "line": 14772,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 437.77,
+      "end_ms": 32082311,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            101.149,
+            24.803
+          ]
+        ],
+        "align": [
+          [
+            7.225,
+            4.733
+          ]
+        ],
+        "quality_warp": [
+          [
+            15.523,
+            2.694
+          ]
+        ],
+        "quality_model": [
+          [
+            19.879,
+            0.702
+          ]
+        ],
+        "quality": [
+          [
+            35.567,
+            3.551
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            30.972,
+            6.942
+          ]
+        ],
+        "live_model": [
+          [
+            2.999,
+            0.975
+          ],
+          [
+            8.623,
+            1.156
+          ]
+        ],
+        "liveness": [
+          [
+            69.708,
+            19.45
+          ]
+        ],
+        "align_expanded": [
+          [
+            28.502,
+            5.184
+          ]
+        ],
+        "embedding_pair": [
+          [
+            17.617,
+            2.285
+          ]
+        ],
+        "database_match": [
+          [
+            15.579,
+            1.662
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            27.823,
+            6.273
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            40.09,
+            10.235
+          ]
+        ],
+        "ir_detect": [
+          [
+            76.184,
+            17.028
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            29.681,
+            4.498
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            31.574,
+            6.233
+          ]
+        ],
+        "liveness_ir": [
+          [
+            70.44,
+            12.31
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 290999,
+        "elapsed_us": 146747,
+        "pass": 0,
+        "sample_sequence": 3212,
+        "uptime_ms": 32082311
+      },
+      "begin_ms": 32081873.23
+    },
+    {
+      "line": 14819,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 418.744,
+      "end_ms": 32082765,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            108.365,
+            26.426
+          ]
+        ],
+        "align": [
+          [
+            13.141,
+            3.99
+          ]
+        ],
+        "quality_warp": [
+          [
+            17.418,
+            2.742
+          ]
+        ],
+        "quality_model": [
+          [
+            11.139,
+            0.919
+          ]
+        ],
+        "quality": [
+          [
+            28.737,
+            3.834
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            27.419,
+            6.762
+          ]
+        ],
+        "live_model": [
+          [
+            5.132,
+            0.986
+          ],
+          [
+            4.322,
+            1.045
+          ]
+        ],
+        "liveness": [
+          [
+            73.483,
+            20.185
+          ]
+        ],
+        "align_expanded": [
+          [
+            21.816,
+            4.346
+          ]
+        ],
+        "embedding_pair": [
+          [
+            18.063,
+            2.249
+          ]
+        ],
+        "database_match": [
+          [
+            10.569,
+            1.661
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            16.135,
+            6.672
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            56.333,
+            11.43
+          ]
+        ],
+        "ir_detect": [
+          [
+            80.814,
+            18.658
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            22.522,
+            3.926
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            35.062,
+            6.037
+          ]
+        ],
+        "liveness_ir": [
+          [
+            62.48,
+            11.409
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 275308,
+        "elapsed_us": 143413,
+        "pass": 1,
+        "sample_sequence": 3220,
+        "uptime_ms": 32082765
+      },
+      "begin_ms": 32082346.256,
+      "confirm_ms": 32082772,
+      "handoff_ms": 7,
+      "attendance_ms": 85.469,
+      "display_ms": 32082889,
+      "job_to_display_ms": 542.7439999990165,
+      "first_attempt_to_display_ms": 1015.769999999553,
+      "attempts": 2
+    },
+    {
+      "line": 15043,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 132.821,
+      "end_ms": 32084732,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            84.15,
+            23.845
+          ]
+        ],
+        "align": [
+          [
+            20.798,
+            4.564
+          ]
+        ],
+        "quality_warp": [
+          [
+            19.973,
+            2.694
+          ]
+        ],
+        "quality_model": [
+          [
+            6.925,
+            0.611
+          ]
+        ],
+        "quality": [
+          [
+            27.034,
+            3.436
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32084599.179
+    },
+    {
+      "line": 15104,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 501.283,
+      "end_ms": 32085300,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            98.448,
+            23.746
+          ]
+        ],
+        "align": [
+          [
+            34.931,
+            4.969
+          ]
+        ],
+        "quality_warp": [
+          [
+            3.724,
+            2.523
+          ]
+        ],
+        "quality_model": [
+          [
+            24.747,
+            0.57
+          ]
+        ],
+        "quality": [
+          [
+            28.59,
+            3.207
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            31.355,
+            7.085
+          ]
+        ],
+        "live_model": [
+          [
+            5.067,
+            0.968
+          ],
+          [
+            12.049,
+            1.289
+          ]
+        ],
+        "liveness": [
+          [
+            77.125,
+            20.72
+          ]
+        ],
+        "align_expanded": [
+          [
+            31.131,
+            5.335
+          ]
+        ],
+        "embedding_pair": [
+          [
+            16.64,
+            2.31
+          ]
+        ],
+        "database_match": [
+          [
+            17.836,
+            1.609
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            33.173,
+            7.114
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            42.879,
+            0.024
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            57.236,
+            11.928
+          ]
+        ],
+        "ir_detect": [
+          [
+            133.758,
+            19.529
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            27.419,
+            3.573
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            21.924,
+            6.164
+          ]
+        ],
+        "liveness_ir": [
+          [
+            61.767,
+            11.396
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 305666,
+        "elapsed_us": 195594,
+        "pass": 0,
+        "sample_sequence": 3282,
+        "uptime_ms": 32085300
+      },
+      "begin_ms": 32084798.717
+    },
+    {
+      "line": 15161,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 406.759,
+      "end_ms": 32085793,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            91.371,
+            24.028
+          ]
+        ],
+        "align": [
+          [
+            8.962,
+            4.823
+          ]
+        ],
+        "quality_warp": [
+          [
+            33.847,
+            2.877
+          ]
+        ],
+        "quality_model": [
+          [
+            2.779,
+            0.757
+          ]
+        ],
+        "quality": [
+          [
+            36.799,
+            3.801
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            36.795,
+            6.695
+          ]
+        ],
+        "live_model": [
+          [
+            2.897,
+            1.058
+          ],
+          [
+            5.656,
+            1.356
+          ]
+        ],
+        "liveness": [
+          [
+            81.318,
+            19.691
+          ]
+        ],
+        "align_expanded": [
+          [
+            22.116,
+            4.594
+          ]
+        ],
+        "embedding_pair": [
+          [
+            35.387,
+            2.567
+          ]
+        ],
+        "database_match": [
+          [
+            0.25,
+            0.25
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.002,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            5.796,
+            5.799
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            65.898,
+            10.468
+          ]
+        ],
+        "ir_detect": [
+          [
+            76.248,
+            16.756
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            19.081,
+            5.153
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            26.991,
+            6.787
+          ]
+        ],
+        "liveness_ir": [
+          [
+            53.237,
+            13.674
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 277154,
+        "elapsed_us": 129584,
+        "pass": 1,
+        "sample_sequence": 3296,
+        "uptime_ms": 32085793
+      },
+      "begin_ms": 32085386.241,
+      "confirm_ms": 32085797,
+      "handoff_ms": 4,
+      "attendance_ms": 73.735,
+      "display_ms": 32085905,
+      "job_to_display_ms": 518.7589999996126,
+      "first_attempt_to_display_ms": 1305.8209999985993,
+      "attempts": 3
+    },
+    {
+      "line": 15382,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 108.436,
+      "end_ms": 32087635,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            94.609,
+            23.35
+          ]
+        ],
+        "align": [
+          [
+            4.137,
+            3.094
+          ]
+        ],
+        "quality_warp": [
+          [
+            6.542,
+            2.568
+          ]
+        ],
+        "quality_model": [
+          [
+            1.227,
+            0.592
+          ]
+        ],
+        "quality": [
+          [
+            8.912,
+            3.306
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32087526.564
+    },
+    {
+      "line": 15401,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 158.158,
+      "end_ms": 32087892,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            104.225,
+            23.302
+          ]
+        ],
+        "align": [
+          [
+            29.676,
+            5.017
+          ]
+        ],
+        "quality_warp": [
+          [
+            9.545,
+            3.318
+          ]
+        ],
+        "quality_model": [
+          [
+            13.858,
+            0.774
+          ]
+        ],
+        "quality": [
+          [
+            23.566,
+            4.25
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32087733.842
+    },
+    {
+      "line": 15460,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 467.737,
+      "end_ms": 32088459,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            76.446,
+            22.649
+          ]
+        ],
+        "align": [
+          [
+            33.352,
+            4.709
+          ]
+        ],
+        "quality_warp": [
+          [
+            2.487,
+            2.488
+          ]
+        ],
+        "quality_model": [
+          [
+            30.478,
+            0.582
+          ]
+        ],
+        "quality": [
+          [
+            33.061,
+            3.163
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            32.046,
+            6.909
+          ]
+        ],
+        "live_model": [
+          [
+            9.496,
+            1.197
+          ],
+          [
+            13.276,
+            1.491
+          ]
+        ],
+        "liveness": [
+          [
+            87.642,
+            21.892
+          ]
+        ],
+        "align_expanded": [
+          [
+            13.614,
+            5.011
+          ]
+        ],
+        "embedding_pair": [
+          [
+            21.412,
+            2.392
+          ]
+        ],
+        "database_match": [
+          [
+            11.91,
+            1.305
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            28.438,
+            6.948
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            32.173,
+            0.029
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            71.765,
+            12.59
+          ]
+        ],
+        "ir_detect": [
+          [
+            139.544,
+            20.125
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            11.559,
+            3.785
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            24.538,
+            5.403
+          ]
+        ],
+        "liveness_ir": [
+          [
+            49.778,
+            11.072
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 278321,
+        "elapsed_us": 189394,
+        "pass": 1,
+        "sample_sequence": 3359,
+        "uptime_ms": 32088459
+      },
+      "begin_ms": 32087991.263,
+      "confirm_ms": 32088512,
+      "handoff_ms": 53,
+      "attendance_ms": 76.871,
+      "display_ms": 32088619,
+      "job_to_display_ms": 627.7369999997318,
+      "first_attempt_to_display_ms": 1092.4360000006855,
+      "attempts": 3
+    },
+    {
+      "line": 16027,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 160.652,
+      "end_ms": 32093151,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            109.727,
+            23.377
+          ]
+        ],
+        "align": [
+          [
+            27.403,
+            4.124
+          ]
+        ],
+        "quality_warp": [
+          [
+            13.761,
+            2.937
+          ]
+        ],
+        "quality_model": [
+          [
+            2.555,
+            0.745
+          ]
+        ],
+        "quality": [
+          [
+            16.51,
+            3.87
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32092990.348
+    },
+    {
+      "line": 16088,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 501.774,
+      "end_ms": 32093701,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            99.753,
+            22.872
+          ]
+        ],
+        "align": [
+          [
+            28.567,
+            5.25
+          ]
+        ],
+        "quality_warp": [
+          [
+            14.602,
+            2.667
+          ]
+        ],
+        "quality_model": [
+          [
+            32.421,
+            0.766
+          ]
+        ],
+        "quality": [
+          [
+            47.169,
+            3.574
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            31.004,
+            7.309
+          ]
+        ],
+        "live_model": [
+          [
+            3.354,
+            0.982
+          ],
+          [
+            11.794,
+            1.087
+          ]
+        ],
+        "liveness": [
+          [
+            84.283,
+            21.822
+          ]
+        ],
+        "align_expanded": [
+          [
+            32.091,
+            5.875
+          ]
+        ],
+        "embedding_pair": [
+          [
+            25.48,
+            2.403
+          ]
+        ],
+        "database_match": [
+          [
+            5.693,
+            1.439
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            24.824,
+            7.646
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            44.099,
+            0.025
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            49.901,
+            10.855
+          ]
+        ],
+        "ir_detect": [
+          [
+            129.561,
+            19.192
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            10.09,
+            4.134
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            25.856,
+            5.792
+          ]
+        ],
+        "liveness_ir": [
+          [
+            48.105,
+            11.372
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 323975,
+        "elapsed_us": 177776,
+        "pass": 0,
+        "sample_sequence": 3488,
+        "uptime_ms": 32093701
+      },
+      "begin_ms": 32093199.226
+    },
+    {
+      "line": 16146,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 440.665,
+      "end_ms": 32094235,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            106.51,
+            24.535
+          ]
+        ],
+        "align": [
+          [
+            28.042,
+            5.741
+          ]
+        ],
+        "quality_warp": [
+          [
+            2.496,
+            2.497
+          ]
+        ],
+        "quality_model": [
+          [
+            5.543,
+            0.896
+          ]
+        ],
+        "quality": [
+          [
+            8.228,
+            3.576
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            31.022,
+            7.488
+          ]
+        ],
+        "live_model": [
+          [
+            2.974,
+            0.959
+          ],
+          [
+            11.259,
+            1.192
+          ]
+        ],
+        "liveness": [
+          [
+            95.086,
+            23.638
+          ]
+        ],
+        "align_expanded": [
+          [
+            31.381,
+            7.111
+          ]
+        ],
+        "embedding_pair": [
+          [
+            16.426,
+            2.47
+          ]
+        ],
+        "database_match": [
+          [
+            12.737,
+            1.455
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.002,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            10.752,
+            6.509
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.006,
+            0.006
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            56.851,
+            10.935
+          ]
+        ],
+        "ir_detect": [
+          [
+            78.411,
+            18.119
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            15.957,
+            5.033
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            25.766,
+            5.909
+          ]
+        ],
+        "liveness_ir": [
+          [
+            58.308,
+            12.591
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 303717,
+        "elapsed_us": 136924,
+        "pass": 1,
+        "sample_sequence": 3503,
+        "uptime_ms": 32094235
+      },
+      "begin_ms": 32093794.335,
+      "confirm_ms": 32094356,
+      "handoff_ms": 121,
+      "attendance_ms": 75.16,
+      "display_ms": 32094461,
+      "job_to_display_ms": 666.6649999991059,
+      "first_attempt_to_display_ms": 1470.6519999988377,
+      "attempts": 3
+    },
+    {
+      "line": 16384,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 124.935,
+      "end_ms": 32096290,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            90.575,
+            24.047
+          ]
+        ],
+        "align": [
+          [
+            10.97,
+            3.947
+          ]
+        ],
+        "quality_warp": [
+          [
+            20.754,
+            2.647
+          ]
+        ],
+        "quality_model": [
+          [
+            1.773,
+            0.642
+          ]
+        ],
+        "quality": [
+          [
+            22.639,
+            3.398
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32096165.065
+    },
+    {
+      "line": 16403,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 152.071,
+      "end_ms": 32096525,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            83.198,
+            24.204
+          ]
+        ],
+        "align": [
+          [
+            20.274,
+            5.562
+          ]
+        ],
+        "quality_warp": [
+          [
+            12.519,
+            2.78
+          ]
+        ],
+        "quality_model": [
+          [
+            35.247,
+            0.605
+          ]
+        ],
+        "quality": [
+          [
+            47.895,
+            3.51
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32096372.929
+    },
+    {
+      "line": 16471,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 516.413,
+      "end_ms": 32097101,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            99.33,
+            24.407
+          ]
+        ],
+        "align": [
+          [
+            28.285,
+            5.045
+          ]
+        ],
+        "quality_warp": [
+          [
+            9.816,
+            2.609
+          ]
+        ],
+        "quality_model": [
+          [
+            26.514,
+            0.8
+          ]
+        ],
+        "quality": [
+          [
+            36.464,
+            3.537
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            33.335,
+            6.979
+          ]
+        ],
+        "live_model": [
+          [
+            2.978,
+            1.021
+          ],
+          [
+            3.104,
+            0.989
+          ]
+        ],
+        "liveness": [
+          [
+            78.387,
+            22.875
+          ]
+        ],
+        "align_expanded": [
+          [
+            21.406,
+            5.671
+          ]
+        ],
+        "embedding_pair": [
+          [
+            29.268,
+            2.24
+          ]
+        ],
+        "database_match": [
+          [
+            17.367,
+            1.829
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            31.325,
+            6.505
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            36.058,
+            0.031
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            67.322,
+            11.983
+          ]
+        ],
+        "ir_detect": [
+          [
+            135.218,
+            19.025
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            31.68,
+            4.576
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            33.379,
+            6.402
+          ]
+        ],
+        "liveness_ir": [
+          [
+            68.564,
+            12.364
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 312530,
+        "elapsed_us": 203857,
+        "pass": 0,
+        "sample_sequence": 3572,
+        "uptime_ms": 32097101
+      },
+      "begin_ms": 32096584.587
+    },
+    {
+      "line": 16521,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 428.97,
+      "end_ms": 32097622,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            75.546,
+            22.861
+          ]
+        ],
+        "align": [
+          [
+            57.706,
+            6.454
+          ]
+        ],
+        "quality_warp": [
+          [
+            2.743,
+            2.542
+          ]
+        ],
+        "quality_model": [
+          [
+            3.826,
+            0.64
+          ]
+        ],
+        "quality": [
+          [
+            6.694,
+            3.302
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            26.046,
+            7.722
+          ]
+        ],
+        "live_model": [
+          [
+            9.682,
+            1.799
+          ],
+          [
+            25.746,
+            1.353
+          ]
+        ],
+        "liveness": [
+          [
+            95.068,
+            26.179
+          ]
+        ],
+        "align_expanded": [
+          [
+            26.36,
+            5.748
+          ]
+        ],
+        "embedding_pair": [
+          [
+            13.849,
+            2.106
+          ]
+        ],
+        "database_match": [
+          [
+            0.464,
+            0.466
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            42.935,
+            7.681
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            40.435,
+            10.819
+          ]
+        ],
+        "ir_detect": [
+          [
+            85.872,
+            19.038
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            26.872,
+            5.033
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            8.898,
+            5.994
+          ]
+        ],
+        "liveness_ir": [
+          [
+            61.895,
+            12.753
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 281068,
+        "elapsed_us": 147879,
+        "pass": 1,
+        "sample_sequence": 3587,
+        "uptime_ms": 32097622
+      },
+      "begin_ms": 32097193.03,
+      "confirm_ms": 32097629,
+      "handoff_ms": 7,
+      "attendance_ms": 95.884,
+      "display_ms": 32097760,
+      "job_to_display_ms": 566.9699999988079,
+      "first_attempt_to_display_ms": 1594.934999998659,
+      "attempts": 4
+    },
+    {
+      "line": 16691,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 171.747,
+      "end_ms": 32099743,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            103.878,
+            24.632
+          ]
+        ],
+        "align": [
+          [
+            17.086,
+            4.767
+          ]
+        ],
+        "quality_warp": [
+          [
+            24.239,
+            2.717
+          ]
+        ],
+        "quality_model": [
+          [
+            25.527,
+            0.766
+          ]
+        ],
+        "quality": [
+          [
+            49.916,
+            3.629
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32099571.253
+    },
+    {
+      "line": 16750,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 491.358,
+      "end_ms": 32100279,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            97.98,
+            23.28
+          ]
+        ],
+        "align": [
+          [
+            30.863,
+            4.928
+          ]
+        ],
+        "quality_warp": [
+          [
+            9.093,
+            2.76
+          ]
+        ],
+        "quality_model": [
+          [
+            23.048,
+            0.921
+          ]
+        ],
+        "quality": [
+          [
+            32.276,
+            3.811
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            29.196,
+            6.783
+          ]
+        ],
+        "live_model": [
+          [
+            5.871,
+            1.018
+          ],
+          [
+            12.714,
+            1.065
+          ]
+        ],
+        "liveness": [
+          [
+            81.515,
+            22.107
+          ]
+        ],
+        "align_expanded": [
+          [
+            29.68,
+            5.707
+          ]
+        ],
+        "embedding_pair": [
+          [
+            17.257,
+            3.024
+          ]
+        ],
+        "database_match": [
+          [
+            15.458,
+            1.549
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            29.855,
+            7.125
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            31.514,
+            0.031
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            61.244,
+            10.665
+          ]
+        ],
+        "ir_detect": [
+          [
+            123.156,
+            18.357
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            10.37,
+            3.773
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            34.858,
+            6.376
+          ]
+        ],
+        "liveness_ir": [
+          [
+            59.145,
+            11.652
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 308922,
+        "elapsed_us": 182411,
+        "pass": 0,
+        "sample_sequence": 3650,
+        "uptime_ms": 32100279
+      },
+      "begin_ms": 32099787.642
+    },
+    {
+      "line": 16800,
+      "kind": "face",
+      "rgb": 1,
+      "strong": 1,
+      "job_ms": 407.812,
+      "end_ms": 32100795,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            92.712,
+            23.748
+          ]
+        ],
+        "align": [
+          [
+            35.204,
+            6.126
+          ]
+        ],
+        "quality_warp": [
+          [
+            3.923,
+            2.692
+          ]
+        ],
+        "quality_model": [
+          [
+            4.185,
+            0.719
+          ]
+        ],
+        "quality": [
+          [
+            8.237,
+            3.535
+          ]
+        ],
+        "live_resize_pack_image": [
+          [
+            25.017,
+            7.031
+          ]
+        ],
+        "live_model": [
+          [
+            13.085,
+            1.151
+          ],
+          [
+            22.277,
+            1.426
+          ]
+        ],
+        "liveness": [
+          [
+            90.444,
+            22.186
+          ]
+        ],
+        "align_expanded": [
+          [
+            16.765,
+            5.148
+          ]
+        ],
+        "embedding_pair": [
+          [
+            16.585,
+            2.454
+          ]
+        ],
+        "database_match": [
+          [
+            0.311,
+            0.31
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            18.064,
+            6.122
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            63.342,
+            11.051
+          ]
+        ],
+        "ir_detect": [
+          [
+            84.044,
+            17.697
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            20.416,
+            4.529
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            19.164,
+            6.727
+          ]
+        ],
+        "liveness_ir": [
+          [
+            62.276,
+            13.091
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 261375,
+        "elapsed_us": 146415,
+        "pass": 1,
+        "sample_sequence": 3665,
+        "uptime_ms": 32100795
+      },
+      "begin_ms": 32100387.188,
+      "confirm_ms": 32100817,
+      "handoff_ms": 22,
+      "attendance_ms": 73.926,
+      "display_ms": 32100932,
+      "job_to_display_ms": 544.8119999989867,
+      "first_attempt_to_display_ms": 1360.747000001371,
+      "attempts": 3
+    },
+    {
+      "line": 18346,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 133.048,
+      "end_ms": 32115115,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            96.152,
+            22.682
+          ]
+        ],
+        "align": [
+          [
+            14.02,
+            4.462
+          ]
+        ],
+        "quality_warp": [
+          [
+            10.293,
+            2.603
+          ]
+        ],
+        "quality_model": [
+          [
+            10.642,
+            0.998
+          ]
+        ],
+        "quality": [
+          [
+            22.157,
+            3.835
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32114981.952
+    },
+    {
+      "line": 18365,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 155.171,
+      "end_ms": 32115347,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            101.854,
+            24.374
+          ]
+        ],
+        "align": [
+          [
+            20.154,
+            5.527
+          ]
+        ],
+        "quality_warp": [
+          [
+            7.313,
+            2.551
+          ]
+        ],
+        "quality_model": [
+          [
+            25.049,
+            0.725
+          ]
+        ],
+        "quality": [
+          [
+            32.486,
+            3.396
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32115191.829
+    },
+    {
+      "line": 18411,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 389.133,
+      "end_ms": 32115793,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            96.693,
+            24.69
+          ]
+        ],
+        "align": [
+          [
+            23.362,
+            5.227
+          ]
+        ],
+        "quality_warp": [
+          [
+            9.156,
+            2.574
+          ]
+        ],
+        "quality_model": [
+          [
+            1.722,
+            0.791
+          ]
+        ],
+        "quality": [
+          [
+            11.03,
+            3.512
+          ]
+        ],
+        "align_expanded": [
+          [
+            21.404,
+            5.33
+          ]
+        ],
+        "embedding_pair": [
+          [
+            54.105,
+            2.598
+          ]
+        ],
+        "database_match": [
+          [
+            14.102,
+            1.616
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            21.22,
+            6.273
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            55.372,
+            12.234
+          ]
+        ],
+        "ir_detect": [
+          [
+            87.42,
+            19.107
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            4.543,
+            4.546
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            34.281,
+            5.951
+          ]
+        ],
+        "live_model": [
+          [
+            32.633,
+            0.945
+          ]
+        ],
+        "liveness_ir": [
+          [
+            71.825,
+            11.803
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 229763,
+        "elapsed_us": 159347,
+        "pass": 0,
+        "sample_sequence": 4039,
+        "uptime_ms": 32115793
+      },
+      "begin_ms": 32115403.867
+    },
+    {
+      "line": 18460,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 352.552,
+      "end_ms": 32116196,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            99.24,
+            24.661
+          ]
+        ],
+        "align": [
+          [
+            15.027,
+            4.35
+          ]
+        ],
+        "quality_warp": [
+          [
+            2.781,
+            2.551
+          ]
+        ],
+        "quality_model": [
+          [
+            1.662,
+            0.682
+          ]
+        ],
+        "quality": [
+          [
+            4.564,
+            3.352
+          ]
+        ],
+        "align_expanded": [
+          [
+            20.058,
+            4.933
+          ]
+        ],
+        "embedding_pair": [
+          [
+            38.543,
+            2.709
+          ]
+        ],
+        "database_match": [
+          [
+            10.485,
+            2.21
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            28.625,
+            7.524
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            66.289,
+            12.23
+          ]
+        ],
+        "ir_detect": [
+          [
+            95.383,
+            20.219
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            25.509,
+            4.34
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            28.897,
+            6.409
+          ]
+        ],
+        "live_model": [
+          [
+            13.287,
+            1.096
+          ]
+        ],
+        "liveness_ir": [
+          [
+            68.062,
+            12.21
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 189011,
+        "elapsed_us": 163518,
+        "pass": 0,
+        "sample_sequence": 4049,
+        "uptime_ms": 32116196
+      },
+      "begin_ms": 32115843.448
+    },
+    {
+      "line": 18505,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 343.074,
+      "end_ms": 32116628,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            97.712,
+            23.549
+          ]
+        ],
+        "align": [
+          [
+            22.858,
+            4.048
+          ]
+        ],
+        "quality_warp": [
+          [
+            9.242,
+            2.811
+          ]
+        ],
+        "quality_model": [
+          [
+            1.459,
+            0.652
+          ]
+        ],
+        "quality": [
+          [
+            10.84,
+            3.599
+          ]
+        ],
+        "align_expanded": [
+          [
+            9.153,
+            4.044
+          ]
+        ],
+        "embedding_pair": [
+          [
+            49.279,
+            2.411
+          ]
+        ],
+        "database_match": [
+          [
+            12.503,
+            1.586
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            23.269,
+            6.554
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.005,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            44.302,
+            10.554
+          ]
+        ],
+        "ir_detect": [
+          [
+            87.391,
+            17.664
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            22.911,
+            4.683
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            15.384,
+            5.993
+          ]
+        ],
+        "live_model": [
+          [
+            13.359,
+            1.008
+          ]
+        ],
+        "liveness_ir": [
+          [
+            52.277,
+            12.114
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 203266,
+        "elapsed_us": 139784,
+        "pass": 0,
+        "sample_sequence": 4060,
+        "uptime_ms": 32116628
+      },
+      "begin_ms": 32116284.926
+    },
+    {
+      "line": 18550,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 357.654,
+      "end_ms": 32117072,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            73.94,
+            22.747
+          ]
+        ],
+        "align": [
+          [
+            20.336,
+            4.22
+          ]
+        ],
+        "quality_warp": [
+          [
+            17.421,
+            2.635
+          ]
+        ],
+        "quality_model": [
+          [
+            40.129,
+            0.637
+          ]
+        ],
+        "quality": [
+          [
+            57.684,
+            3.401
+          ]
+        ],
+        "align_expanded": [
+          [
+            15.119,
+            4.2
+          ]
+        ],
+        "embedding_pair": [
+          [
+            15.908,
+            2.455
+          ]
+        ],
+        "database_match": [
+          [
+            11.237,
+            1.445
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            14.253,
+            6.109
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            62.803,
+            11.474
+          ]
+        ],
+        "ir_detect": [
+          [
+            81.026,
+            18.149
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            25.542,
+            4.265
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            11.614,
+            6.167
+          ]
+        ],
+        "live_model": [
+          [
+            36.035,
+            2.759
+          ]
+        ],
+        "liveness_ir": [
+          [
+            73.583,
+            13.574
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 202942,
+        "elapsed_us": 154688,
+        "pass": 0,
+        "sample_sequence": 4072,
+        "uptime_ms": 32117072
+      },
+      "begin_ms": 32116714.346
+    },
+    {
+      "line": 18600,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 331.806,
+      "end_ms": 32117453,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            79.564,
+            24.312
+          ]
+        ],
+        "align": [
+          [
+            22.601,
+            4.184
+          ]
+        ],
+        "quality_warp": [
+          [
+            16.607,
+            2.566
+          ]
+        ],
+        "quality_model": [
+          [
+            2.229,
+            1.0
+          ]
+        ],
+        "quality": [
+          [
+            18.996,
+            3.719
+          ]
+        ],
+        "align_expanded": [
+          [
+            13.483,
+            4.175
+          ]
+        ],
+        "embedding_pair": [
+          [
+            47.398,
+            2.221
+          ]
+        ],
+        "database_match": [
+          [
+            3.281,
+            0.395
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            38.061,
+            7.071
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            41.196,
+            10.892
+          ]
+        ],
+        "ir_detect": [
+          [
+            88.609,
+            18.492
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            17.236,
+            4.22
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            19.899,
+            5.699
+          ]
+        ],
+        "live_model": [
+          [
+            17.967,
+            1.319
+          ]
+        ],
+        "liveness_ir": [
+          [
+            55.479,
+            11.607
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 187571,
+        "elapsed_us": 144212,
+        "pass": 0,
+        "sample_sequence": 4082,
+        "uptime_ms": 32117453
+      },
+      "begin_ms": 32117121.194
+    },
+    {
+      "line": 18647,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 311.004,
+      "end_ms": 32117860,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            77.606,
+            22.96
+          ]
+        ],
+        "align": [
+          [
+            23.308,
+            4.034
+          ]
+        ],
+        "quality_warp": [
+          [
+            2.673,
+            2.576
+          ]
+        ],
+        "quality_model": [
+          [
+            1.267,
+            0.588
+          ]
+        ],
+        "quality": [
+          [
+            4.05,
+            3.27
+          ]
+        ],
+        "align_expanded": [
+          [
+            15.019,
+            3.988
+          ]
+        ],
+        "embedding_pair": [
+          [
+            44.029,
+            2.555
+          ]
+        ],
+        "database_match": [
+          [
+            0.254,
+            0.255
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.002,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            24.969,
+            6.266
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            4.113,
+            0.036
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            54.504,
+            11.475
+          ]
+        ],
+        "ir_detect": [
+          [
+            84.254,
+            18.364
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            20.503,
+            4.25
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            29.162,
+            6.423
+          ]
+        ],
+        "live_model": [
+          [
+            11.436,
+            1.032
+          ]
+        ],
+        "liveness_ir": [
+          [
+            61.483,
+            12.08
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 165162,
+        "elapsed_us": 145819,
+        "pass": 1,
+        "sample_sequence": 4092,
+        "uptime_ms": 32117860
+      },
+      "begin_ms": 32117548.996,
+      "confirm_ms": 32117926,
+      "handoff_ms": 66,
+      "attendance_ms": 74.074,
+      "display_ms": 32118024,
+      "job_to_display_ms": 475.00400000065565,
+      "first_attempt_to_display_ms": 3042.0480000004172,
+      "attempts": 8
+    },
+    {
+      "line": 18877,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 114.227,
+      "end_ms": 32119805,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            91.211,
+            22.798
+          ]
+        ],
+        "align": [
+          [
+            5.956,
+            2.861
+          ]
+        ],
+        "quality_warp": [
+          [
+            3.786,
+            2.56
+          ]
+        ],
+        "quality_model": [
+          [
+            2.054,
+            0.612
+          ]
+        ],
+        "quality": [
+          [
+            5.956,
+            3.285
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32119690.773
+    },
+    {
+      "line": 18894,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 118.993,
+      "end_ms": 32120010,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            84.367,
+            23.216
+          ]
+        ],
+        "align": [
+          [
+            16.207,
+            4.514
+          ]
+        ],
+        "quality_warp": [
+          [
+            10.946,
+            2.582
+          ]
+        ],
+        "quality_model": [
+          [
+            1.714,
+            0.771
+          ]
+        ],
+        "quality": [
+          [
+            16.55,
+            3.545
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32119891.007
+    },
+    {
+      "line": 18941,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 362.178,
+      "end_ms": 32120471,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            83.21,
+            23.825
+          ]
+        ],
+        "align": [
+          [
+            15.947,
+            4.91
+          ]
+        ],
+        "quality_warp": [
+          [
+            7.958,
+            2.656
+          ]
+        ],
+        "quality_model": [
+          [
+            6.859,
+            0.649
+          ]
+        ],
+        "quality": [
+          [
+            14.951,
+            3.433
+          ]
+        ],
+        "align_expanded": [
+          [
+            23.799,
+            5.295
+          ]
+        ],
+        "embedding_pair": [
+          [
+            43.68,
+            2.35
+          ]
+        ],
+        "database_match": [
+          [
+            0.258,
+            0.258
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.002,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            22.704,
+            6.798
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            77.575,
+            12.059
+          ]
+        ],
+        "ir_detect": [
+          [
+            100.747,
+            19.318
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            23.158,
+            3.392
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            30.716,
+            5.958
+          ]
+        ],
+        "live_model": [
+          [
+            24.28,
+            1.133
+          ]
+        ],
+        "liveness_ir": [
+          [
+            78.607,
+            10.892
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 182714,
+        "elapsed_us": 179436,
+        "pass": 0,
+        "sample_sequence": 4155,
+        "uptime_ms": 32120471
+      },
+      "begin_ms": 32120108.822
+    },
+    {
+      "line": 18986,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 302.096,
+      "end_ms": 32120824,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            76.062,
+            23.249
+          ]
+        ],
+        "align": [
+          [
+            15.534,
+            4.051
+          ]
+        ],
+        "quality_warp": [
+          [
+            7.202,
+            2.569
+          ]
+        ],
+        "quality_model": [
+          [
+            3.026,
+            0.624
+          ]
+        ],
+        "quality": [
+          [
+            10.352,
+            3.314
+          ]
+        ],
+        "align_expanded": [
+          [
+            10.966,
+            4.764
+          ]
+        ],
+        "embedding_pair": [
+          [
+            50.166,
+            2.358
+          ]
+        ],
+        "database_match": [
+          [
+            0.262,
+            0.263
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            29.309,
+            6.149
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            3.731,
+            0.021
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            47.758,
+            11.018
+          ]
+        ],
+        "ir_detect": [
+          [
+            89.402,
+            17.945
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            17.821,
+            3.851
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            15.836,
+            5.617
+          ]
+        ],
+        "live_model": [
+          [
+            14.285,
+            1.071
+          ]
+        ],
+        "liveness_ir": [
+          [
+            48.335,
+            10.922
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 164217,
+        "elapsed_us": 137856,
+        "pass": 1,
+        "sample_sequence": 4166,
+        "uptime_ms": 32120824
+      },
+      "begin_ms": 32120521.904,
+      "confirm_ms": 32120868,
+      "handoff_ms": 44,
+      "attendance_ms": 88.482,
+      "display_ms": 32120991,
+      "job_to_display_ms": 469.09600000083447,
+      "first_attempt_to_display_ms": 1300.227000001818,
+      "attempts": 4
+    },
+    {
+      "line": 19220,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 134.887,
+      "end_ms": 32122819,
+      "result": 25,
+      "stages": {
+        "nv12": [
+          [
+            100.747,
+            22.482
+          ]
+        ],
+        "align": [
+          [
+            7.03,
+            3.517
+          ]
+        ],
+        "quality_warp": [
+          [
+            24.162,
+            2.563
+          ]
+        ],
+        "quality_model": [
+          [
+            2.122,
+            0.613
+          ]
+        ],
+        "quality": [
+          [
+            26.418,
+            3.308
+          ]
+        ]
+      },
+      "ir": null,
+      "begin_ms": 32122684.113
+    },
+    {
+      "line": 19265,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 340.885,
+      "end_ms": 32123233,
+      "result": 26,
+      "stages": {
+        "nv12": [
+          [
+            105.933,
+            24.476
+          ]
+        ],
+        "align": [
+          [
+            19.7,
+            4.762
+          ]
+        ],
+        "quality_warp": [
+          [
+            2.589,
+            2.526
+          ]
+        ],
+        "quality_model": [
+          [
+            1.307,
+            0.592
+          ]
+        ],
+        "quality": [
+          [
+            4.002,
+            3.222
+          ]
+        ],
+        "align_expanded": [
+          [
+            28.173,
+            6.855
+          ]
+        ],
+        "embedding_pair": [
+          [
+            21.047,
+            2.478
+          ]
+        ],
+        "database_match": [
+          [
+            15.517,
+            1.87
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.004,
+            0.003
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            25.389,
+            7.14
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            0.004,
+            0.004
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            65.644,
+            11.679
+          ]
+        ],
+        "ir_detect": [
+          [
+            91.735,
+            19.317
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            10.849,
+            3.469
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            23.531,
+            6.438
+          ]
+        ],
+        "live_model": [
+          [
+            16.166,
+            1.122
+          ]
+        ],
+        "liveness_ir": [
+          [
+            53.378,
+            11.456
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 195645,
+        "elapsed_us": 145214,
+        "pass": 0,
+        "sample_sequence": 4224,
+        "uptime_ms": 32123233
+      },
+      "begin_ms": 32122892.115
+    },
+    {
+      "line": 19308,
+      "kind": "face",
+      "rgb": 0,
+      "strong": 1,
+      "job_ms": 333.712,
+      "end_ms": 32123658,
+      "result": 0,
+      "stages": {
+        "nv12": [
+          [
+            84.893,
+            23.489
+          ]
+        ],
+        "align": [
+          [
+            22.394,
+            4.188
+          ]
+        ],
+        "quality_warp": [
+          [
+            9.943,
+            2.586
+          ]
+        ],
+        "quality_model": [
+          [
+            3.194,
+            0.847
+          ]
+        ],
+        "quality": [
+          [
+            13.295,
+            3.587
+          ]
+        ],
+        "align_expanded": [
+          [
+            19.062,
+            5.31
+          ]
+        ],
+        "embedding_pair": [
+          [
+            46.027,
+            2.796
+          ]
+        ],
+        "database_match": [
+          [
+            0.574,
+            0.304
+          ]
+        ],
+        "ir_feature_wait": [
+          [
+            0.003,
+            0.002
+          ]
+        ],
+        "ir_detect_y_prepare": [
+          [
+            5.853,
+            5.856
+          ]
+        ],
+        "ir_detect_model_wait": [
+          [
+            23.689,
+            0.03
+          ]
+        ],
+        "ir_detect_model_decode": [
+          [
+            51.369,
+            11.859
+          ]
+        ],
+        "ir_detect": [
+          [
+            98.413,
+            19.131
+          ]
+        ],
+        "ir_y_crop": [
+          [
+            9.657,
+            3.731
+          ]
+        ],
+        "ir_y_resize_pack_image": [
+          [
+            13.663,
+            5.484
+          ]
+        ],
+        "live_model": [
+          [
+            23.074,
+            1.124
+          ]
+        ],
+        "liveness_ir": [
+          [
+            46.764,
+            10.7
+          ]
+        ]
+      },
+      "ir": {
+        "rgb_us": 188399,
+        "elapsed_us": 145291,
+        "pass": 1,
+        "sample_sequence": 4234,
+        "uptime_ms": 32123658
+      },
+      "begin_ms": 32123324.288,
+      "confirm_ms": 32123732,
+      "handoff_ms": 74,
+      "attendance_ms": 89.83,
+      "display_ms": 32123854,
+      "job_to_display_ms": 529.7120000012219,
+      "first_attempt_to_display_ms": 1169.8869999982417,
+      "attempts": 3
+    }
+  ],
+  "detection_ms": {
+    "palm.detect_resize": {
+      "wall": {
+        "n": 2427,
+        "median": 0.803,
+        "min": 0.723,
+        "max": 33.564
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 0.77,
+        "min": 0.725,
+        "max": 1.839
+      }
+    },
+    "palm.detect_wait": {
+      "wall": {
+        "n": 2427,
+        "median": 0.004,
+        "min": 0.003,
+        "max": 18.377
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 0.004,
+        "min": 0.002,
+        "max": 0.074
+      }
+    },
+    "palm.detect_pack": {
+      "wall": {
+        "n": 2427,
+        "median": 0.033,
+        "min": 0.029,
+        "max": 10.832
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 0.033,
+        "min": 0.029,
+        "max": 0.805
+      }
+    },
+    "palm.detect_model": {
+      "wall": {
+        "n": 2427,
+        "median": 2.145,
+        "min": 1.312,
+        "max": 40.418
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 0.705,
+        "min": 0.585,
+        "max": 5.327
+      }
+    },
+    "palm.detect_decode": {
+      "wall": {
+        "n": 2427,
+        "median": 0.013,
+        "min": 0.011,
+        "max": 7.411
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 0.013,
+        "min": 0.01,
+        "max": 0.76
+      }
+    },
+    "palm.detect_total": {
+      "wall": {
+        "n": 2427,
+        "median": 4.757,
+        "min": 2.293,
+        "max": 41.617
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 1.778,
+        "min": 1.589,
+        "max": 6.474
+      }
+    },
+    "face.detect_nv12_prepare": {
+      "wall": {
+        "n": 2427,
+        "median": 39.326,
+        "min": 18.967,
+        "max": 152.222
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 15.81,
+        "min": 14.554,
+        "max": 18.461
+      }
+    },
+    "face.detect_model_wait": {
+      "wall": {
+        "n": 2427,
+        "median": 0.004,
+        "min": 0.002,
+        "max": 46.134
+      },
+      "cpu": {
+        "n": 2427,
+        "median": 0.004,
+        "min": 0.002,
+        "max": 0.753
+      }
+    },
+    "face.detect_model_decode": {
+      "wall": {
+        "n": 2426,
+        "median": 46.108,
+        "min": 30.218,
+        "max": 117.677
+      },
+      "cpu": {
+        "n": 2426,
+        "median": 10.974,
+        "min": 9.547,
+        "max": 15.722
+      }
+    },
+    "face.pose_total": {
+      "wall": {
+        "n": 2426,
+        "median": 91.275,
+        "min": 60.955,
+        "max": 254.87
+      },
+      "cpu": {
+        "n": 2426,
+        "median": 27.574,
+        "min": 24.667,
+        "max": 32.933
+      }
+    }
+  },
+  "perf": {
+    "ui.render": {
+      "n": 7073,
+      "weighted_mean": 0.032,
+      "max": 11.74
+    },
+    "ui.present": {
+      "n": 6029,
+      "weighted_mean": 12.814,
+      "max": 46.39
+    },
+    "ui.process": {
+      "n": 39643,
+      "weighted_mean": 0.081,
+      "max": 98.53
+    },
+    "capture.vi": {
+      "n": 6022,
+      "weighted_mean": 0.079,
+      "max": 16.78
+    },
+    "capture.preview": {
+      "n": 6022,
+      "weighted_mean": 14.115,
+      "max": 39.68
+    },
+    "capture.ir": {
+      "n": 6022,
+      "weighted_mean": 21.408,
+      "max": 53.13
+    },
+    "capture.interval": {
+      "n": 6021,
+      "weighted_mean": 40.776,
+      "max": 81.0
+    },
+    "biometric.detect": {
+      "n": 2421,
+      "weighted_mean": 100.329,
+      "max": 252.87
+    },
+    "palm.access": {
+      "n": 2421,
+      "weighted_mean": 1.489,
+      "max": 104.23
+    },
+    "palm.age": {
+      "n": 2421,
+      "weighted_mean": 160.562,
+      "max": 394.0
+    }
+  }
+}

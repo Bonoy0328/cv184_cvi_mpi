@@ -1,0 +1,158 @@
+ISP Vipipe(0) Allocate pa(0x8a6dd000) va(0x0xb6ee3000) size(226880)
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+1112 09:21:17.760 3062 E isp isp_3aLib_init:241 type 0 activeIdx is not used
+1112 09:21:17.761 3062 E isp isp_3aLib_init:241 type 1 activeIdx is not used
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=1.1 frames=0 misses=10 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=2.2 frames=0 misses=20 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=3.3 frames=0 misses=30 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=4.4 frames=0 misses=40 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=5.5 frames=0 misses=50 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=6.6 frames=0 misses=60 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=7.7 frames=0 misses=70 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=8.8 frames=0 misses=80 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=9.9 frames=0 misses=90 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=11.0 frames=0 misses=100 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=12.1 frames=0 misses=110 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=13.2 frames=0 misses=120 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+DVP_PROBE seconds=14.3 frames=0 misses=130 last_rc=0xc00e800e
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+1112 09:21:33.081 3062 E isp isp_3aLib_exit:753 type 0 registered ae lib can't exit
+1112 09:21:33.081 3062 E isp isp_3aLib_exit:760 type 1 registered awb lib can't exit
+ISP Vipipe(0) Free pa(0x8a6dd000) va(0x0xb6ee3000)
+DVP_PROBE_DONE frames=0 rc=1

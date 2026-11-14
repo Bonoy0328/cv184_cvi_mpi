@@ -1,0 +1,9 @@
+ISP Vipipe(0) Allocate pa(0x8b3c2000) va(0x0xb6f71000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No error information
+GetChnFrame pipe0 #1 failed 0xc00e800e
+Capture finished count=1 rc=0xc00e800e
+gc2083_standby...ISP Vipipe(0) Free pa(0x8b3c2000) va(0x0xb6f71000)
+CVI_ISP_Run returned 0

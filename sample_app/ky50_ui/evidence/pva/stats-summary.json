@@ -1,0 +1,44 @@
+{
+  "software-scalar.log": {
+    "last_elapsed_seconds": 155,
+    "capture_fps_range": [
+      14.15,
+      15.0
+    ],
+    "display_fps_range": [
+      28.99,
+      29.92
+    ],
+    "reported_detections": 2220,
+    "reported_hits": 134,
+    "ir_errors": 0
+  },
+  "software-neon-ir.log": {
+    "last_elapsed_seconds": 105,
+    "capture_fps_range": [
+      16.17,
+      17.2
+    ],
+    "display_fps_range": [
+      29.29,
+      29.79
+    ],
+    "reported_detections": 1765,
+    "reported_hits": 0,
+    "ir_errors": 0
+  },
+  "software-neon-rgb.log": {
+    "last_elapsed_seconds": 185,
+    "capture_fps_range": [
+      15.19,
+      17.6
+    ],
+    "display_fps_range": [
+      29.19,
+      29.8
+    ],
+    "reported_detections": 3056,
+    "reported_hits": 0,
+    "ir_errors": 0
+  }
+}

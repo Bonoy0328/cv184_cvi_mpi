@@ -1,0 +1,120 @@
+PID=311
+/tmp/ky50-ui/ky50_ui
+a53ef116522a61f81c16caaef40319f9399501c8f44453795423c45cee507f88  /proc/311/exe
+b4a22e5b866861f94d067ea0d7d7a8835de7c0d9f6676780a455a52c4417f806  /tmp/ky50-ui/ky50_lights.ko
+version=1
+palm_leave_frames=3
+face_leave_frames=3
+gpiochip4: GPIOs 352-383, parent: platform/5021000.gpio, 5021000.gpio:
+
+gpiochip3: GPIOs 384-415, parent: platform/3023000.gpio, 3023000.gpio:
+
+gpiochip2: GPIOs 416-447, parent: platform/3022000.gpio, 3022000.gpio:
+ gpio-434 (                    |ky50-lcd            ) out hi 
+ gpio-440 (                    |ky50-lineout        ) in  lo 
+ gpio-441 (                    |ky50-lcd            ) out lo 
+
+gpiochip1: GPIOs 448-479, parent: platform/3021000.gpio, 3021000.gpio:
+ gpio-453 (                    |ky50-sensor         ) out lo 
+ gpio-454 (                    |cviusb-otg          ) in  lo IRQ 
+ gpio-471 (                    |ky50-sensor         ) out lo 
+
+gpiochip0: GPIOs 480-511, parent: platform/3020000.gpio, 3020000.gpio:
+ gpio-482 (                    |ky50-sensor         ) out hi 
+ gpio-484 (                    |ky50-sensor         ) out hi 
+ gpio-487 (                    |ky50-lcd            ) out hi 
+ gpio-488 (                    |ky50-ir-light       ) out lo 
+ gpio-495 (                    |mute_pin_l          ) out hi 
+ gpio-499 (                    |ky50-white-light    ) out lo 
+ gpio-501 (                    |ky50-relay          ) out lo 
+ gpio-510 (                    |mute_pin_r          ) out lo 
+[CV184X] loaded w600k_mbf input=input.1_raw [1,3,112,112] bytes=37632 outputs=1
+[CV184X] output=516_BatchNormalization dtype=INT8 bytes=512 scale=0.0384951942 zp=0
+[facerec] face_1000_20261112 pack=/tmp/ky50-ui/pva/pva_face.model index=2 sha256=34d6fdeb1f9a3c3cbc147a018c42f481b55b2e08363f728e46a938572acd6419
+[CV184X] loaded lightqnet_dm100 input=input:0_raw [1,3,96,96] bytes=27648 outputs=1
+[CV184X] output=confidence_st:0_Sigmoid dtype=UINT8 bytes=1 scale=0.00392156886 zp=0
+[facerec] face_1000_20261112 pack=/tmp/ky50-ui/pva/pva_face.model index=3 sha256=2ccf8e248a900763b51332bb93b3acd06c0c0fb761aab1674536744f1c1f6fbd
+[CV184X] loaded best_224 input=input_raw [1,3,224,224] bytes=150528 outputs=1
+[CV184X] output=output_Gemm dtype=INT8 bytes=3 scale=0.238919243 zp=0
+init pva cost 795 ms
+PVA ready: palm=IR Y, face=RGB camera NV12; unified init and serial worker
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=3 consecutive misses config=/mnt/system/ky50-data/app.conf ready=1
+IR_AE saved_target=40; apply only after hand detection
+SOURCE switching none -> RGB
+ISP Vipipe(0) Allocate pa(0x8d0b8000) va(0x0xb4b9a000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8d0f0000) va(0x0xb48b9000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+ROTATED group=1 software=CCW90 source=960x540 stride=960/960 offsets=L0 R0 T0 B0 rotated=540x960 copy=0,0 540x960 full RGB NV12 half-size
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=145
+SCALE_PERF group=1 vpss=7.56 map=0.21 rotate=5.64 convert=0.00 release=0.27 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=60 avg_ms=11.64 max_ms=20.70
+PERF ui.process n=1136 avg_ms=0.08 max_ms=29.76
+STATS elapsed=5 capture_fps=10.98 display_fps=11.98 frames=55 page=0 eth=1
+PERF capture.vi n=69 avg_ms=0.28 max_ms=15.06
+PERF capture.preview n=69 avg_ms=31.30 max_ms=41.88
+PERF capture.ir n=69 avg_ms=27.63 max_ms=38.41
+PERF capture.interval n=68 avg_ms=65.32 max_ms=78.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=45 hits=0 infer_ms=4.27 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=45 hits=0 errors=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=45 avg_ms=98.77 max_ms=123.80
+PERF palm.access n=45 avg_ms=0.01 max_ms=0.01
+PERF palm.age n=45 avg_ms=191.42 max_ms=241.00
+PALM_QUEUE posted=69 taken=45 replaced=23 depth=1
+SCALE_PERF group=0 vpss=7.43 map=0.25 rotate=2.65 convert=20.43 release=0.63 ms
+SCALE_PERF group=1 vpss=7.58 map=0.33 rotate=5.40 convert=0.00 release=0.17 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=81 avg_ms=12.46 max_ms=26.66
+PERF ui.process n=979 avg_ms=0.07 max_ms=5.77
+STATS elapsed=10 capture_fps=15.75 display_fps=16.15 frames=134 page=0 eth=1
+PERF capture.vi n=79 avg_ms=0.02 max_ms=0.06
+PERF capture.preview n=79 avg_ms=31.03 max_ms=44.28
+PERF capture.ir n=79 avg_ms=26.50 max_ms=37.60
+PERF capture.interval n=79 avg_ms=63.76 max_ms=83.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=5.04 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=96 hits=0 errors=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=51 avg_ms=99.31 max_ms=134.14
+PERF palm.access n=51 avg_ms=0.01 max_ms=0.01
+PERF palm.age n=51 avg_ms=191.53 max_ms=239.00
+PALM_QUEUE posted=148 taken=96 replaced=51 depth=1
+SCALE_PERF group=1 vpss=7.41 map=0.26 rotate=5.36 convert=0.00 release=0.19 ms
+[ 2077.451477] isp_err_chk:3212(): WDMA buffer full
+[ 2077.451486] isp_err_chk:3215(): Err status wdma[1(0x3000000) 2(0x3000000) 3(0x3000040)]
+[ 2077.451493] isp_err_chk:3217(): Err status rdma[1(0x3000000) 2(0x3000000) 3(0x3000000)]
+[ 2077.451501] isp_err_chk:3219(): Idle status wdma[1(0xffffebee) 2(0xfffffff8) 3(0xfffff004)]
+[ 2077.451510] isp_err_chk:3221(): Idle status rdma[1(0xfffffffe) 2(0xfffffffe) 3(0xfffffc18) ]
+[ 2077.452544] isp_err_chk:3212(): WDMA buffer full
+[ 2077.452567] isp_err_chk:3215(): Err status wdma[1(0x3000000) 2(0x3000000) 3(0x3000040)]
+[ 2077.452576] isp_err_chk:3217(): Err status rdma[1(0x3000000) 2(0x3000000) 3(0x3000000)]
+[ 2077.452583] isp_err_chk:3219(): Idle status wdma[1(0xffffebee) 2(0xfffffff8) 3(0xfffff004)]
+[ 2077.452591] isp_err_chk:3221(): Idle status rdma[1(0xfffffffe) 2(0xffffffff) 3(0xfffffc18) ]
+[ 2077.452597] isp_err_chk:3212(): WDMA buffer full
+[ 2077.452605] isp_err_chk:3215(): Err status wdma[1(0x3000000) 2(0x3000000) 3(0x3000040)]
+[ 2077.452612] isp_err_chk:3217(): Err status rdma[1(0x3000000) 2(0x3000000) 3(0x3000000)]
+[ 2077.452618] isp_err_chk:3219(): Idle status wdma[1(0xffffebee) 2(0xfffffff8) 3(0xfffff004)]
+[ 2077.452626] isp_err_chk:3221(): Idle status rdma[1(0xfffffffe) 2(0xffffffff) 3(0xfffffc18) ]
+[ 2077.548947] isp_err_chk:3212(): WDMA buffer full
+[ 2077.548962] isp_err_chk:3215(): Err status wdma[1(0x3000000) 2(0x3000000) 3(0x3000040)]
+[ 2077.548970] isp_err_chk:3217(): Err status rdma[1(0x3000000) 2(0x3000000) 3(0x3000000)]
+[ 2077.548976] isp_err_chk:3219(): Idle status wdma[1(0xffffebee) 2(0xfffffff8) 3(0xfffff004)]
+[ 2077.548984] isp_err_chk:3221(): Idle status rdma[1(0xfffffffe) 2(0xfffffffe) 3(0xfffffc18) ]
+[ 2077.548992] isp_err_chk:3212(): WDMA buffer full
+[ 2077.548999] isp_err_chk:3215(): Err status wdma[1(0x3000000) 2(0x3000000) 3(0x3000040)]
+[ 2077.549006] isp_err_chk:3217(): Err status rdma[1(0x3000000) 2(0x3000000) 3(0x3000000)]
+[ 2077.549013] isp_err_chk:3219(): Idle status wdma[1(0xffffebee) 2(0xfffffff8) 3(0xfffff004)]
+[ 2077.549021] isp_err_chk:3221(): Idle status rdma[1(0xfffffffe) 2(0xfffffffe) 3(0xfffffc18) ]

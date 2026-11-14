@@ -1,0 +1,11 @@
+--------------DISP(0)-------------------------
+disp_from_sc(0)		sync_ext(0)		tgen_en(1)		fmt(BGR888_PACKED)
+in_csc(        Disable)	out_csc(        Disable)	burst(15)	y_thresh(120)	c_thresh(0)
+start_x(  0)		start_y(  0)		width( 480)		height( 854)
+pitch_y(1472)		pitch_c(  0)
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+--------------DISP-TIMING(0))------------------
+total( 575 * 1057)	hsync_pol(   0)	vsync_pol(   0)
+hsync_start( 575)	hsync_end(1057)	vsync_start(   0)	vsync_end(   1)
+hde-start(  42)		hde-end( 521)	vde-start(  11)		vde-end( 864)	

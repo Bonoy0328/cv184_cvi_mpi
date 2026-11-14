@@ -1,0 +1,10 @@
+PASS 168 exact NV12 ROI cases: gray/color, odd origin, borders, outside, live resize
+BENCH IR ROI side=128 full_cpu_ms=29.972 roi_cpu_ms=20.822
+BENCH IR ROI side=270 full_cpu_ms=31.291 roi_cpu_ms=22.526
+BENCH IR ROI side=480 full_cpu_ms=48.995 roi_cpu_ms=41.856
+BENCH IR ROI side=720 full_cpu_ms=82.155 roi_cpu_ms=77.290
+PASS all 16777216 Y/U/V triples: byte-exact legacy NV12 conversion
+PASS 28 letterbox/planar cases and NV12 vector tails: byte-exact padding, bilinear sampling and channel order
+PASS 64 fused NV12 canvas cases: original RGB samples, fractional fallback and zero edges
+BENCH reference average_ms=188.663 checksum=788
+BENCH optimized average_ms=15.344 checksum=788

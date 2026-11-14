@@ -1,0 +1,74 @@
+--- a/sound/soc/cvitek/codec_common.h
++++ b/sound/soc/cvitek/codec_common.h
+@@ -665,6 +665,8 @@
+ };
+ 
+ struct dac_obj {
++	bool amp_active_low_l;
++	bool amp_active_low_r;
+ 	void __iomem *base_addr;
+ 	struct clk *clk;
+ 	struct device *dev;
+--- a/sound/soc/cvitek/codec_dac.c
++++ b/sound/soc/cvitek/codec_dac.c
+@@ -20,24 +20,14 @@
+ #include <linux/proc_fs.h>
+ #include <linux/clk.h>
+ 
++/* Respect the existing DT mute-gpio-l/r flags. LM4871 on KY50 has
++ * active-low amplifier enable: high shuts down, low plays. */
+ static void mute_amp(struct dac_obj *dac, bool enable)
+ {
+-	if (enable) {
+-		if (dac->amp_gpio_l != -EINVAL) {//SPK_EN XGPIOA15 495
+-			gpio_set_value(dac->amp_gpio_l, 0);
+-		}
+-		if (dac->amp_gpio_r != -EINVAL) {//AUX0 XGPIOA30 510
+-			gpio_set_value(dac->amp_gpio_r, 0);
+-		}
+-
+-	} else {
+-		if (dac->amp_gpio_l != -EINVAL) {
+-			gpio_set_value(dac->amp_gpio_l, 1);
+-		}
+-		if (dac->amp_gpio_r != -EINVAL) {
+-			gpio_set_value(dac->amp_gpio_r, 1);
+-		}
+-	}
++    if (gpio_is_valid(dac->amp_gpio_l))
++        gpio_set_value(dac->amp_gpio_l, enable == dac->amp_active_low_l);
++    if (gpio_is_valid(dac->amp_gpio_r))
++        gpio_set_value(dac->amp_gpio_r, enable == dac->amp_active_low_r);
+ }
+ 
+ static inline void dac_write_reg(void __iomem *io_base, int reg, u32 val)
+@@ -710,7 +700,9 @@
+ 	dev_info(&pdev->dev, "reset_control,addr:%x,offset:%d\n", dac->reset_info[0], dac->reset_info[1]);
+ 
+ 	dac->amp_gpio_l = of_get_named_gpio_flags(pdev->dev.of_node, "mute-gpio-l", 0, &flags);
++	dac->amp_active_low_l = flags & OF_GPIO_ACTIVE_LOW;
+ 	dac->amp_gpio_r = of_get_named_gpio_flags(pdev->dev.of_node, "mute-gpio-r", 0, &flags);
++	dac->amp_active_low_r = flags & OF_GPIO_ACTIVE_LOW;
+ 	dac->clk = of_clk_get(pdev->dev.of_node, 0);
+ 
+ 	dac->dev = &pdev->dev;
+@@ -726,8 +718,7 @@
+ 		dac->amp_gpio_l =  -EINVAL;
+ 	} else {
+ 		gpio_request(dac->amp_gpio_l, "mute_pin_l");
+-		gpio_direction_output(dac->amp_gpio_l, 1);
+-		gpio_set_value(dac->amp_gpio_l, 0);
++		gpio_direction_output(dac->amp_gpio_l, dac->amp_active_low_l);
+ 	}
+ 
+ 	if (!gpio_is_valid(dac->amp_gpio_r)) {
+@@ -735,8 +726,7 @@
+ 		dac->amp_gpio_r =  -EINVAL;
+ 	} else {
+ 		gpio_request(dac->amp_gpio_r, "mute_pin_r");
+-		gpio_direction_output(dac->amp_gpio_r, 1);
+-		gpio_set_value(dac->amp_gpio_r, 0);
++		gpio_direction_output(dac->amp_gpio_r, dac->amp_active_low_r);
+ 	}
+ 
+ 	sprintf(proc_name, "audio_debug/dac%d_info", dac->id);

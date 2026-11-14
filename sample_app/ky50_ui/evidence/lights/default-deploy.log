@@ -1,0 +1,4 @@
+AFTER_NORMAL_STOP
+ gpio-488 (                    |ky50-ir-light       ) out lo 
+ gpio-499 (                    |ky50-white-light    ) out lo 
+Launch PID=577

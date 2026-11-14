@@ -1,0 +1,209 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 -> pvaGetHandPose -> selected preview overlay
+ETHERNET carrier=1 uptime_ms=4515842
+PALM_DRAW visible=0 misses=0 result_age_ms=4515842
+SOURCE switching none -> RGB
+ISP Vipipe(0) Allocate pa(0x8a6dd000) va(0x0xb6301000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8a715000) va(0x0xb639c000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+SCALE_PERF group=0 vpss=7.16 map=0.22 rotate=1.80 convert=12.21 release=0.16 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=148 avg_ms=7.21 max_ms=25.23
+PERF ui.process n=992 avg_ms=0.06 max_ms=21.46
+STATS elapsed=5 capture_fps=26.59 display_fps=29.59 frames=133 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=135 avg_ms=9.61 max_ms=15.69
+PERF capture.preview n=135 avg_ms=21.80 max_ms=30.56
+PERF capture.ir n=135 avg_ms=0.02 max_ms=0.10
+PERF capture.interval n=134 avg_ms=33.37 max_ms=43.00
+SCALE_PERF group=0 vpss=7.31 map=0.29 rotate=2.00 convert=14.26 release=0.12 ms
+PERF ui.render n=149 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=149 avg_ms=9.14 max_ms=15.84
+PERF ui.process n=943 avg_ms=0.04 max_ms=2.37
+STATS elapsed=10 capture_fps=30.00 display_fps=29.80 frames=283 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=6.77 max_ms=16.09
+PERF capture.preview n=151 avg_ms=24.60 max_ms=30.59
+PERF capture.ir n=151 avg_ms=0.05 max_ms=4.38
+PERF capture.interval n=151 avg_ms=33.33 max_ms=41.00
+SCALE_PERF group=0 vpss=7.44 map=0.20 rotate=1.73 convert=15.51 release=0.10 ms
+SCALE_PERF group=0 vpss=7.47 map=0.25 rotate=1.54 convert=15.05 release=0.16 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=148 avg_ms=9.43 max_ms=16.25
+PERF ui.process n=927 avg_ms=0.05 max_ms=2.54
+STATS elapsed=15 capture_fps=29.96 display_fps=29.56 frames=433 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=6.40 max_ms=18.90
+PERF capture.preview n=151 avg_ms=25.08 max_ms=30.25
+PERF capture.ir n=151 avg_ms=0.02 max_ms=0.05
+PERF capture.interval n=151 avg_ms=33.28 max_ms=43.00
+SCALE_PERF group=0 vpss=7.64 map=0.26 rotate=1.86 convert=14.86 release=0.18 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=148 avg_ms=9.14 max_ms=19.36
+PERF ui.process n=936 avg_ms=0.06 max_ms=4.29
+STATS elapsed=20 capture_fps=29.99 display_fps=29.59 frames=583 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=6.17 max_ms=14.52
+PERF capture.preview n=150 avg_ms=24.96 max_ms=49.20
+PERF capture.ir n=150 avg_ms=0.02 max_ms=0.04
+PERF capture.interval n=150 avg_ms=33.35 max_ms=55.00
+SCALE_PERF group=0 vpss=7.26 map=0.25 rotate=1.92 convert=15.87 release=0.22 ms
+SCALE_PERF group=0 vpss=7.33 map=0.28 rotate=1.84 convert=12.55 release=0.10 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=148 avg_ms=8.79 max_ms=19.06
+PERF ui.process n=933 avg_ms=0.06 max_ms=5.58
+STATS elapsed=25 capture_fps=30.18 display_fps=29.58 frames=734 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=7.42 max_ms=14.70
+PERF capture.preview n=151 avg_ms=23.55 max_ms=30.71
+PERF capture.ir n=151 avg_ms=0.02 max_ms=0.05
+PERF capture.interval n=151 avg_ms=33.26 max_ms=42.00
+SCALE_PERF group=0 vpss=7.29 map=0.22 rotate=2.05 convert=15.13 release=0.22 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=8.74 max_ms=18.52
+PERF ui.process n=937 avg_ms=0.07 max_ms=10.37
+STATS elapsed=30 capture_fps=29.99 display_fps=29.19 frames=884 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=7.58 max_ms=17.54
+PERF capture.preview n=150 avg_ms=23.74 max_ms=30.88
+PERF capture.ir n=150 avg_ms=0.02 max_ms=0.04
+PERF capture.interval n=150 avg_ms=33.35 max_ms=43.00
+SCALE_PERF group=0 vpss=7.22 map=0.24 rotate=1.84 convert=14.70 release=0.15 ms
+SCALE_PERF group=0 vpss=7.25 map=0.25 rotate=1.65 convert=13.45 release=0.49 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=148 avg_ms=8.43 max_ms=17.02
+PERF ui.process n=945 avg_ms=0.07 max_ms=11.11
+STATS elapsed=35 capture_fps=29.94 display_fps=29.54 frames=1034 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=7.29 max_ms=15.21
+PERF capture.preview n=151 avg_ms=23.98 max_ms=31.13
+PERF capture.ir n=151 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=151 avg_ms=33.29 max_ms=40.00
+SCALE_PERF group=0 vpss=7.30 map=0.21 rotate=1.73 convert=14.41 release=0.09 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=147 avg_ms=7.67 max_ms=18.14
+PERF ui.process n=954 avg_ms=0.07 max_ms=10.58
+STATS elapsed=40 capture_fps=30.00 display_fps=29.40 frames=1184 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=9.15 max_ms=15.40
+PERF capture.preview n=150 avg_ms=22.29 max_ms=36.40
+PERF capture.ir n=150 avg_ms=0.02 max_ms=0.09
+PERF capture.interval n=150 avg_ms=33.40 max_ms=42.00
+SCALE_PERF group=0 vpss=7.20 map=0.33 rotate=1.78 convert=13.12 release=0.09 ms
+SCALE_PERF group=0 vpss=7.13 map=0.23 rotate=1.62 convert=13.17 release=0.17 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.11
+PERF ui.present n=148 avg_ms=8.54 max_ms=15.59
+PERF ui.process n=937 avg_ms=0.07 max_ms=9.12
+STATS elapsed=45 capture_fps=29.98 display_fps=29.58 frames=1334 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=7.74 max_ms=15.85
+PERF capture.preview n=151 avg_ms=23.20 max_ms=31.82
+PERF capture.ir n=151 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=151 avg_ms=33.24 max_ms=42.00
+SCALE_PERF group=0 vpss=7.39 map=0.21 rotate=1.78 convert=15.04 release=0.16 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=148 avg_ms=8.32 max_ms=16.43
+PERF ui.process n=964 avg_ms=0.06 max_ms=5.72
+STATS elapsed=50 capture_fps=29.97 display_fps=29.57 frames=1484 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=7.78 max_ms=14.92
+PERF capture.preview n=150 avg_ms=23.49 max_ms=31.14
+PERF capture.ir n=150 avg_ms=0.05 max_ms=4.45
+PERF capture.interval n=150 avg_ms=33.39 max_ms=43.00
+SCALE_PERF group=0 vpss=7.25 map=0.26 rotate=2.20 convert=12.72 release=0.09 ms
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8a6dd000) va(0x0xb6301000)
+ISP Vipipe(1) Free pa(0x8a715000) va(0x0xb639c000)
+CVI_ISP_Run(1) returned 0
+KY50_UI stopped rc=0

@@ -1,0 +1,16 @@
+ISP Vipipe(0) Allocate pa(0x8b3c2000) va(0x0xb6fb8000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ir-001-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=0.00
+ir-001-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=128.01
+FRAME IR count=1 pts=11162523910 fps=0.00 format=19 compressed=0
+FRAME IR count=30 pts=11163723530 fps=24.17 format=19 compressed=0
+FRAME IR count=60 pts=11164723204 fps=26.83 format=19 compressed=0
+ir-090-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=175.75
+ir-090-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=127.25
+FRAME IR count=90 pts=11165722880 fps=27.82 format=19 compressed=0
+FRAME IR count=120 pts=11166955811 fps=26.85 format=19 compressed=0
+Capture finished count=120 rc=0
+gc2083_standby...CVI_ISP_Run returned 0
+ISP Vipipe(0) Free pa(0x8b3c2000) va(0x0xb6fb8000)

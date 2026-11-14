@@ -1,0 +1,25 @@
+PASS actual landmark alignment both ROIs, invalid input and singular matrix
+PASS direct NV12 affine cases=288 max_pixel_error=0 method=0
+NV12_BENCH full_conversion wall_ms=19.822 cpu_ms=19.819 checksum=0
+NV12_BENCH full_then_two_align wall_ms=29.198 cpu_ms=29.191 checksum=8822
+NV12_BENCH direct_two_align wall_ms=19.130 cpu_ms=19.124 checksum=8822
+PASS actual landmark alignment both ROIs, invalid input and singular matrix
+PASS direct NV12 affine cases=288 max_pixel_error=0 method=1
+NV12_BENCH full_conversion wall_ms=19.864 cpu_ms=19.857 checksum=0
+NV12_BENCH full_then_two_align wall_ms=26.947 cpu_ms=26.941 checksum=8822
+NV12_BENCH direct_two_align wall_ms=15.251 cpu_ms=15.244 checksum=8822
+PASS actual landmark alignment both ROIs, invalid input and singular matrix
+PASS direct NV12 affine cases=288 max_pixel_error=0 method=2
+NV12_BENCH full_conversion wall_ms=19.854 cpu_ms=19.847 checksum=0
+NV12_BENCH full_then_two_align wall_ms=26.235 cpu_ms=26.232 checksum=9966
+NV12_BENCH direct_two_align wall_ms=11.204 cpu_ms=11.199 checksum=9966
+PASS all 16777216 Y/U/V triples: byte-exact legacy NV12 conversion
+PASS 28 letterbox/planar cases and NV12 vector tails: padding, selected sampling and channel order (bilinear tolerance <=1)
+PASS 64 fused NV12 canvas cases: original RGB samples, fractional fallback and zero edges
+BENCH reference average_ms=188.282 checksum=788
+BENCH optimized average_ms=13.446 checksum=788
+INPUT_COLOR pixels=1555200 mae=0.042699 max=1 above2=0
+INPUT_BENCH reference_full_plus_align wall_ms=26.917 cpu_ms=26.912 checksum=15616
+INPUT_BENCH direct_two_align wall_ms=15.210 cpu_ms=15.205 checksum=15616
+INPUT_BENCH vpss_copy_csc_align wall_ms=14.018 cpu_ms=12.126 checksum=15616
+PASS NV12 hardware BGR channels, strides and bounded color difference

@@ -1,0 +1,22 @@
+make -C /home/bonoy/CV184X_WS/SDK/linux_5.10 O=/home/bonoy/CV184X_WS/SDK/linux_5.10/build/cv1842hp_wevb_0014a_spinand ARCH=arm CROSS_COMPILE=/home/bonoy/CV184X_WS/SDK/host-tools/gcc/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-musleabihf/bin/arm-none-linux-musleabihf- M=/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui/kernel modules
+make[1]: Entering directory '/home/bonoy/CV184X_WS/SDK/linux_5.10'
+make[2]: Entering directory '/home/bonoy/CV184X_WS/SDK/linux_5.10/build/cv1842hp_wevb_0014a_spinand'
+make[2]: Leaving directory '/home/bonoy/CV184X_WS/SDK/linux_5.10/build/cv1842hp_wevb_0014a_spinand'
+make[1]: Leaving directory '/home/bonoy/CV184X_WS/SDK/linux_5.10'
+mkdir -p build/deploy/licenses build/deploy/pva build/deploy/evidence/pva build/deploy/evidence/access build/deploy/evidence/performance build/deploy/tools
+/home/bonoy/CV184X_WS/SDK/host-tools/gcc/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-musleabihf/bin/arm-none-linux-musleabihf-strip -o build/deploy/ky50_ui ky50_ui
+cp kernel/ky50_i2c1.ko kernel/ky50_touch.ko kernel/ky50_relay.ko kernel/ky50_amp.ko run.sh stop.sh boot.sh install-local.sh pixel_check tools/soak.sh build/deploy/
+cp README.md THIRD_PARTY.md USER_DATABASE.md access_inspect build/deploy/
+cp tools/make_pinyin.py tools/access_inspect.c build/deploy/tools/
+cp evidence/pva/VALIDATION.md build/deploy/evidence/pva/
+cp evidence/access/VALIDATION.md build/deploy/evidence/access/
+cp evidence/performance/VALIDATION.md evidence/performance/summary.json build/deploy/evidence/performance/
+cp -r assets build/deploy/
+cp pva/models/pva.model pva/models/manifest.json pva/pvaConf.json build/deploy/pva/
+cp pva/licenses/* build/deploy/licenses/
+cp /home/bonoy/CV184X_WS/SDK/libpva_face/build/cv184x-delivery/bin/device_authorize build/deploy/
+cp vendor/lvgl/LICENCE.txt build/deploy/licenses/LVGL-MIT.txt
+cp FONT-LICENSE.txt build/deploy/licenses/
+cp licenses/*.txt build/deploy/licenses/
+chmod +x build/deploy/ky50_ui build/deploy/*.sh build/deploy/pixel_check
+cd build/deploy && sha256sum ky50_ui device_authorize access_inspect pixel_check *.ko *.sh assets/*.s16le assets/ime/* pva/* tools/* > SHA256SUMS

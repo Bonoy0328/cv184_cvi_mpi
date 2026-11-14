@@ -1,0 +1,11 @@
+open-off DR=0x00000080 DDR=0x40088180 EXT=0x3db77ce0
+sh: white-on DR=0x00080080 DDR=0x40088180 EXT=0x3dbf7ce0
+both-on DR=0x00080180 DDR=0x40088180 EXT=0x3dbf7de0
+can't create /dev/ky50-lights: Resource busy
+ir-only DR=0x00000180 DDR=0x40088180 EXT=0x3db77de1
+both-off DR=0x00000080 DDR=0x40088180 EXT=0x3db77ce1
+ir-on DR=0x00000180 DDR=0x40088180 EXT=0x3db77de0
+both-on-reversed DR=0x00080180 DDR=0x40088180 EXT=0x3dbf7de1
+invalid-command-preserved DR=0x00080180 DDR=0x40088180 EXT=0x3dbf7de0
+close-off DR=0x00000080 DDR=0x40088180 EXT=0x3db77ce1
+PASS GPIO mux/direction/output/input, independent switching, exclusive owner, invalid command, close-off, unrelated pins unchanged

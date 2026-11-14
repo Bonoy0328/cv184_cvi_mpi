@@ -67,7 +67,7 @@ static void _cal_htt_extra(struct combo_dev_cfg_s *dev_cfg)
 	line_time_us = 1000 / line_rate_KHz;
 	over_head = (3 * 50 * 2 * 3) + clk_hs_ns * 360;
 	t_period_max = line_time_us * 1000 - over_head;
-	t_period_real = clk_hs_ns * sync_info->vid_hline_pixels * bits / 4 / 2;
+	t_period_real = clk_hs_ns * sync_info->vid_hline_pixels * bits / lane_num / 2;
 	htt_new = (unsigned short)(htt_old * t_period_real / t_period_max);
 	if (htt_new > htt_old) {
 		if (htt_new & 0x0003)

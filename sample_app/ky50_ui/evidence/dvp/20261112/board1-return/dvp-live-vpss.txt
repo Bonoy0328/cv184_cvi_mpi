@@ -1,0 +1,58 @@
+
+Module: [VPSS], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+
+-------------------------------MODULE PARAM-------------------------------
+           vpss_vb_source
+                 CommonVB
+
+-------------------------------VPSS MODE----------------------------------
+                vpss_mode           dev0           dev1
+                   single              N      input_mem
+
+-------------------------------VPSS GRP ATTR------------------------------
+     GrpID      MaxW      MaxH             pix_fmt  SrcFRate  DstFRate  dev
+       # 0       640       480                YUYV        -1        -1    1
+
+-------------------------------VPSS GRP AMP CTRL------------------------------
+     GrpID     Brightness     Contrast     Saturation     Hue
+       # 0             50           50             50      50
+
+-------------------------------VPSS CHN ATTR------------------------------
+     GrpID  PhyChnID    Enable  MirrorEn    FlipEn  SrcFRate  DstFRate
+     Depth    Aspect    videoX    videoY    videoW    videoH   BgColor
+       # 0       # 0         y         N         N        -1        -1
+         2      NONE         0         0         0         0       0x0
+
+-------------------------------VPSS GRP CROP INFO-------------------------
+     GrpID    CropEn  CoorType     CoorX     CoorY     Width    Height
+       # 0         N       RAT         0         0         0         0
+
+-------------------------------VPSS CHN CROP INFO-------------------------
+     GrpID     ChnID    CropEn  CoorType     CoorX     CoorY     Width    Height
+       # 0       # 0         N       RAT         0         0         0         0
+
+-------------------------------VPSS GRP WORK STATUS-----------------------
+     GrpID   RecvCnt   LostCnt        StartFailCnt    bStart        CostTime(us)     MaxCostTime(us)      HwCostTime(us)   HwMaxCostTime(us)
+       # 0       106         0                   0         y                1997                2008                1890                1895
+
+-------------------------------VPSS CHN OUTPUT RESOLUTION-----------------
+     GrpID     ChnID    Enable     Width    Height              Pixfmt  Videofmt    VbPool    SendOK FrameRate
+       # 0       # 0         y       864       648                NV21    LINEAR        17       106        20
+
+-------------------------------VPSS CHN ROTATE INFO-----------------------
+     GrpID     ChnID    Rotate
+       # 0       # 0         0
+
+-------------------------------VPSS CHN LDC INFO-----------------------
+     GrpID     ChnID    Enable    Aspect    XRatio    YRatio
+   XYRatio   XOffset   YOffset     DistortionRatio
+       # 0       # 0         N         N         0         0
+         0         0         0                   0
+
+-------------------------------VPSS HW STATUS-----------------------
+        ID    Online    Status  StartCnt    IntCnt DutyRatio
+       # 0         N      Idle         0         0         0
+       # 1         N      Idle      2717      2717         3
+
+-------------------------------VPSS CHN BUF WRAP ATTR---------------------
+     GrpID     ChnID    Enable   BufLineWrapBufSize

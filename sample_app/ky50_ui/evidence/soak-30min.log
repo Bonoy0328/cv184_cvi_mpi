@@ -1,0 +1,489 @@
+SAMPLE elapsed=0 pid=2452 utc=2026-11-10T13:56:00Z
+VmSize:	    9204 kB
+VmHWM:	    6960 kB
+VmRSS:	    6956 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+PAGE_TEST start cycles=100 synthetic_pointer
+SAMPLE elapsed=30 pid=2452 utc=2026-11-10T13:56:30Z
+VmSize:	    7988 kB
+VmHWM:	    6976 kB
+VmRSS:	    6964 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+UI page=0 feature=0
+SAMPLE elapsed=60 pid=2452 utc=2026-11-10T13:57:00Z
+VmSize:	    7988 kB
+VmHWM:	    6976 kB
+VmRSS:	    6964 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=145 capture_fps=29.99 display_fps=23.60 frames=4359 page=0 eth=1
+SAMPLE elapsed=91 pid=2452 utc=2026-11-10T13:57:30Z
+VmSize:	    7988 kB
+VmHWM:	    6976 kB
+VmRSS:	    6964 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=175 capture_fps=29.93 display_fps=29.73 frames=5260 page=0 eth=1
+SAMPLE elapsed=121 pid=2452 utc=2026-11-10T13:58:00Z
+VmSize:	    8660 kB
+VmHWM:	    6976 kB
+VmRSS:	    6964 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=205 capture_fps=30.13 display_fps=29.73 frames=6161 page=0 eth=1
+SAMPLE elapsed=151 pid=2452 utc=2026-11-10T13:58:30Z
+VmSize:	    9220 kB
+VmHWM:	    6976 kB
+VmRSS:	    6964 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=235 capture_fps=29.99 display_fps=29.59 frames=7062 page=0 eth=1
+SAMPLE elapsed=181 pid=2452 utc=2026-11-10T13:59:00Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=265 capture_fps=30.00 display_fps=29.60 frames=7963 page=0 eth=1
+SAMPLE elapsed=211 pid=2452 utc=2026-11-10T13:59:30Z
+VmSize:	    8656 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=295 capture_fps=29.99 display_fps=29.79 frames=8865 page=0 eth=1
+SAMPLE elapsed=241 pid=2452 utc=2026-11-10T14:00:00Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=325 capture_fps=30.09 display_fps=29.69 frames=9766 page=0 eth=1
+SAMPLE elapsed=271 pid=2452 utc=2026-11-10T14:00:30Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=355 capture_fps=29.93 display_fps=29.93 frames=10667 page=0 eth=1
+SAMPLE elapsed=301 pid=2452 utc=2026-11-10T14:01:00Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=385 capture_fps=29.97 display_fps=29.57 frames=11568 page=0 eth=1
+SAMPLE elapsed=331 pid=2452 utc=2026-11-10T14:01:30Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=415 capture_fps=29.98 display_fps=29.78 frames=12468 page=0 eth=1
+SAMPLE elapsed=361 pid=2452 utc=2026-11-10T14:02:00Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=445 capture_fps=29.99 display_fps=29.39 frames=13369 page=0 eth=1
+SAMPLE elapsed=391 pid=2452 utc=2026-11-10T14:02:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=475 capture_fps=29.99 display_fps=29.59 frames=14269 page=0 eth=1
+SAMPLE elapsed=421 pid=2452 utc=2026-11-10T14:03:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=505 capture_fps=29.99 display_fps=29.39 frames=15170 page=0 eth=1
+SAMPLE elapsed=451 pid=2452 utc=2026-11-10T14:03:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=535 capture_fps=29.99 display_fps=29.79 frames=16071 page=0 eth=1
+SAMPLE elapsed=481 pid=2452 utc=2026-11-10T14:04:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=565 capture_fps=29.99 display_fps=29.59 frames=16972 page=0 eth=1
+SAMPLE elapsed=511 pid=2452 utc=2026-11-10T14:04:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=595 capture_fps=29.99 display_fps=29.99 frames=17873 page=0 eth=1
+SAMPLE elapsed=541 pid=2452 utc=2026-11-10T14:05:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=625 capture_fps=30.15 display_fps=29.75 frames=18774 page=0 eth=1
+SAMPLE elapsed=571 pid=2452 utc=2026-11-10T14:05:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=655 capture_fps=29.99 display_fps=29.99 frames=19674 page=0 eth=1
+SAMPLE elapsed=601 pid=2452 utc=2026-11-10T14:06:01Z
+VmSize:	    9216 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=685 capture_fps=29.99 display_fps=29.79 frames=20576 page=0 eth=1
+SAMPLE elapsed=631 pid=2452 utc=2026-11-10T14:06:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=715 capture_fps=29.95 display_fps=29.95 frames=21477 page=0 eth=1
+SAMPLE elapsed=662 pid=2452 utc=2026-11-10T14:07:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=745 capture_fps=29.99 display_fps=29.59 frames=22378 page=0 eth=1
+SAMPLE elapsed=692 pid=2452 utc=2026-11-10T14:07:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=775 capture_fps=29.99 display_fps=29.79 frames=23280 page=0 eth=1
+SAMPLE elapsed=722 pid=2452 utc=2026-11-10T14:08:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=805 capture_fps=29.96 display_fps=29.96 frames=24181 page=0 eth=1
+SAMPLE elapsed=752 pid=2452 utc=2026-11-10T14:08:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=835 capture_fps=29.98 display_fps=29.98 frames=25082 page=0 eth=1
+SAMPLE elapsed=782 pid=2452 utc=2026-11-10T14:09:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=865 capture_fps=29.99 display_fps=29.59 frames=25983 page=0 eth=1
+SAMPLE elapsed=812 pid=2452 utc=2026-11-10T14:09:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=895 capture_fps=30.17 display_fps=29.97 frames=26884 page=0 eth=1
+SAMPLE elapsed=842 pid=2452 utc=2026-11-10T14:10:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=925 capture_fps=29.98 display_fps=29.98 frames=27784 page=0 eth=1
+SAMPLE elapsed=872 pid=2452 utc=2026-11-10T14:10:31Z
+VmSize:	    9884 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=955 capture_fps=30.10 display_fps=29.70 frames=28686 page=0 eth=1
+SAMPLE elapsed=902 pid=2452 utc=2026-11-10T14:11:01Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=985 capture_fps=29.96 display_fps=29.56 frames=29587 page=0 eth=1
+SAMPLE elapsed=932 pid=2452 utc=2026-11-10T14:11:31Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1015 capture_fps=30.15 display_fps=29.95 frames=30488 page=0 eth=1
+SAMPLE elapsed=962 pid=2452 utc=2026-11-10T14:12:02Z
+VmSize:	    9888 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1045 capture_fps=30.00 display_fps=29.80 frames=31389 page=0 eth=1
+SAMPLE elapsed=992 pid=2452 utc=2026-11-10T14:12:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=1075 capture_fps=29.99 display_fps=29.39 frames=32290 page=0 eth=1
+SAMPLE elapsed=1022 pid=2452 utc=2026-11-10T14:13:02Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+SNAPSHOT /tmp/ky50-ui/screen.ppm OK
+SAMPLE elapsed=1052 pid=2452 utc=2026-11-10T14:13:32Z
+VmSize:	    7980 kB
+VmHWM:	    6976 kB
+VmRSS:	    6956 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1135 capture_fps=30.00 display_fps=30.00 frames=34091 page=0 eth=1
+SAMPLE elapsed=1082 pid=2452 utc=2026-11-10T14:14:02Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=1165 capture_fps=29.99 display_fps=29.59 frames=34992 page=0 eth=1
+SAMPLE elapsed=1112 pid=2452 utc=2026-11-10T14:14:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1195 capture_fps=30.00 display_fps=29.80 frames=35893 page=0 eth=1
+SAMPLE elapsed=1142 pid=2452 utc=2026-11-10T14:15:02Z
+VmSize:	    9216 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1226 capture_fps=29.95 display_fps=29.95 frames=36794 page=0 eth=1
+SAMPLE elapsed=1172 pid=2452 utc=2026-11-10T14:15:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1256 capture_fps=29.93 display_fps=29.73 frames=37695 page=0 eth=1
+SAMPLE elapsed=1202 pid=2452 utc=2026-11-10T14:16:02Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1286 capture_fps=29.99 display_fps=29.79 frames=38596 page=0 eth=1
+SAMPLE elapsed=1233 pid=2452 utc=2026-11-10T14:16:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1316 capture_fps=29.97 display_fps=29.97 frames=39497 page=0 eth=1
+SAMPLE elapsed=1263 pid=2452 utc=2026-11-10T14:17:02Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=1346 capture_fps=29.96 display_fps=29.96 frames=40398 page=0 eth=1
+SAMPLE elapsed=1293 pid=2452 utc=2026-11-10T14:17:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1376 capture_fps=29.99 display_fps=29.79 frames=41299 page=0 eth=1
+SAMPLE elapsed=1323 pid=2452 utc=2026-11-10T14:18:02Z
+VmSize:	    9216 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1406 capture_fps=29.99 display_fps=29.79 frames=42200 page=0 eth=1
+SAMPLE elapsed=1353 pid=2452 utc=2026-11-10T14:18:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=1436 capture_fps=29.95 display_fps=29.95 frames=43101 page=0 eth=1
+SAMPLE elapsed=1383 pid=2452 utc=2026-11-10T14:19:02Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(0)
+STATS elapsed=1466 capture_fps=30.00 display_fps=29.60 frames=44002 page=0 eth=1
+SAMPLE elapsed=1413 pid=2452 utc=2026-11-10T14:19:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1496 capture_fps=29.95 display_fps=29.95 frames=44903 page=0 eth=1
+SAMPLE elapsed=1443 pid=2452 utc=2026-11-10T14:20:02Z
+VmSize:	    8656 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1526 capture_fps=29.99 display_fps=29.79 frames=45804 page=0 eth=1
+SAMPLE elapsed=1473 pid=2452 utc=2026-11-10T14:20:32Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1556 capture_fps=29.99 display_fps=29.79 frames=46705 page=0 eth=1
+SAMPLE elapsed=1503 pid=2452 utc=2026-11-10T14:21:03Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1586 capture_fps=29.92 display_fps=29.92 frames=47606 page=0 eth=1
+SAMPLE elapsed=1533 pid=2452 utc=2026-11-10T14:21:33Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1616 capture_fps=30.00 display_fps=29.60 frames=48507 page=0 eth=1
+SAMPLE elapsed=1563 pid=2452 utc=2026-11-10T14:22:03Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1646 capture_fps=29.79 display_fps=29.59 frames=49408 page=0 eth=1
+SAMPLE elapsed=1593 pid=2452 utc=2026-11-10T14:22:33Z
+VmSize:	    9888 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1676 capture_fps=29.98 display_fps=29.58 frames=50310 page=0 eth=1
+SAMPLE elapsed=1623 pid=2452 utc=2026-11-10T14:23:03Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1706 capture_fps=29.97 display_fps=29.77 frames=51210 page=0 eth=1
+SAMPLE elapsed=1653 pid=2452 utc=2026-11-10T14:23:33Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1736 capture_fps=30.17 display_fps=29.37 frames=52112 page=0 eth=1
+SAMPLE elapsed=1683 pid=2452 utc=2026-11-10T14:24:03Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1766 capture_fps=30.18 display_fps=29.78 frames=53013 page=0 eth=1
+SAMPLE elapsed=1713 pid=2452 utc=2026-11-10T14:24:33Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1796 capture_fps=29.99 display_fps=29.79 frames=53913 page=0 eth=1
+SAMPLE elapsed=1743 pid=2452 utc=2026-11-10T14:25:03Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1826 capture_fps=29.95 display_fps=29.55 frames=54814 page=0 eth=1
+SAMPLE elapsed=1773 pid=2452 utc=2026-11-10T14:25:33Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1856 capture_fps=29.98 display_fps=29.78 frames=55715 page=0 eth=1
+SAMPLE elapsed=1804 pid=2452 utc=2026-11-10T14:26:03Z
+VmSize:	    7984 kB
+VmHWM:	    6976 kB
+VmRSS:	    6960 kB
+Threads:	4
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+STATS elapsed=1886 capture_fps=29.99 display_fps=29.79 frames=56616 page=0 eth=1
+PASS process alive for 1804s

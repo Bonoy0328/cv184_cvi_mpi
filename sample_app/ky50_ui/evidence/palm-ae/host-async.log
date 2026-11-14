@@ -1,0 +1,35 @@
+make: 'build/host/vendor/sqlite/sqlite3.o' is up to date.
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 config=/tmp/ky50-async-test-INMTf6/app.conf ready=1
+ACCESS enroll begin local_id=0 modality=face template_uuid=0
+ACCESS face enrolled local_id=0 face_uuid=0
+ACCESS enroll begin local_id=0 modality=palm template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS enrolled local_id=0 palm_uuid=0 progress=3/3
+IR_AE saved_target=-1; apply only after hand detection
+ACCESS application saved palm=5 face=5 relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 config=/tmp/ky50-async-test-INMTf6/app.conf
+PALM_SESSION left false_frames=5 success_hold=0 features=3 auth=0 held=0
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+ACCESS application saved palm=3 face=7 relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 config=/tmp/ky50-async-test-INMTf6/app.conf
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=56 unchanged
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=5 auth=2
+IR_AE recognition_success target=56 sample_sequence=83 generation=2 luma=0 time_us=0 gain=0/0/0
+IR_AE persisted_success target=56
+PALM_SESSION left false_frames=3 success_hold=1 features=31 auth=2 held=25
+PALM_SESSION entered true_frames=2
+PALM_SESSION left false_frames=3 success_hold=0 features=32 auth=2 held=25
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=56 unchanged
+IR_AE measured target=56 luma=0 time_us=0 gain=0/0/0 stable=1
+IR_AE found=1 status=7 reason=too_bright target=56->52 auth_wait=0 base_sequence=121 uptime_ms=17900
+IR_AE observed frames=1 capture_age_ms=50 feedback_age_ms=100 stable=0 target=52 auth_wait=0
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=37 auth=4
+IR_AE recognition_success target=52 sample_sequence=123 generation=5 luma=0 time_us=0 gain=0/0/0
+IR_AE persisted_success target=52
+PALM_SESSION left false_frames=3 success_hold=1 features=38 auth=4 held=25
+PALM_SESSION entered true_frames=2
+IR_AE found=1 status=7 reason=restore_success target=70->52 auth_wait=0 base_sequence=130 uptime_ms=18350
+PASS async: owned input, blocked feature/auth, raw palm priority, departure cancellation, success hold, live config, async AE persistence and recall, clean shutdown

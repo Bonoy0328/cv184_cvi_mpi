@@ -1,0 +1,21 @@
+Fri Nov 13 09:33:18 UTC 2026
+PID=311
+/tmp/ky50-ui/ky50_ui
+FACTORY_LIGHT WHITE=ON
+FACTORY_LIGHT WHITE=OFF
+FACTORY_LIGHT WHITE=ON
+FACTORY_LIGHT IR=ON
+FACTORY_LIGHT WHITE=OFF
+FACTORY_LIGHT IR=OFF
+FACTORY_LIGHT IR=ON
+FACTORY_LIGHT IR=OFF
+ gpio-488 (                    |ky50-ir-light       ) out lo 
+ gpio-499 (                    |ky50-white-light    ) out lo 
+sample=0 mux_white=0x00000003 mux_ir=0x00000003 DR=0x00008094 DDR=0x40288194 EXT=0x3D97FCFD
+WHITE output=0 input=0 direction=1; IR output=0 input=0 direction=1
+sample=1 mux_white=0x00000003 mux_ir=0x00000003 DR=0x00008094 DDR=0x40288194 EXT=0x3D97FCF5
+WHITE output=0 input=0 direction=1; IR output=0 input=0 direction=1
+sample=2 mux_white=0x00000003 mux_ir=0x00000003 DR=0x00008094 DDR=0x40288194 EXT=0x3D97FCFD
+WHITE output=0 input=0 direction=1; IR output=0 input=0 direction=1
+STATS elapsed=675 capture_fps=15.58 display_fps=15.78 frames=10665 page=6 eth=1
+STATS elapsed=680 capture_fps=16.00 display_fps=16.00 frames=10745 page=6 eth=1

@@ -1,0 +1,20 @@
+VOICE_TEST_START
+2522.30 2501.09
+C25 input, analog mux: 0x00000000
+VOICE_HOLD_START volume=32; initial silence=10s; total<=600s
+VOICE round=1 frame=160000
+VOICE round=2 frame=397760
+VOICE round=3 frame=635520
+VOICE round=4 frame=873280
+VOICE round=5 frame=1111040
+VOICE round=6 frame=1348800
+VOICE round=7 frame=1586560
+VOICE round=8 frame=1824320
+VOICE round=9 frame=2062080
+VOICE round=10 frame=2299840
+VOICE round=11 frame=2537600
+PCM write: cannot write stream data: Interrupted system call
+VOICE_HOLD_END rc=1
+VOICE_TEST_RESTORED
+2688.18 2666.77
+0x02040000

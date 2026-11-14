@@ -1,0 +1,132 @@
+[  260.460087] ky50_i2c1: registered existing I2C1 with TP C20/C21 mux=6
+[  261.158177] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[  261.166254] irq_handler:568(): dev(0) disp bw failed at frame#1
+[  261.169888] input: KY50 ST7102 Touchscreen as /devices/platform/i2c_designware.1/i2c-1/1-0055/input/input1
+[  261.170006] ky50_tddi 1-0055: verified 480x854 contacts=5 fw=01 rev=01.42.01.03
+[  261.261579] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[  261.261591] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[  261.261602] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  261.261610] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  261.261618] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[  261.261625] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[  261.261633] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[  261.261640] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  261.261648] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  261.261656] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  261.261662] misc cv184x-mipi-rx: wdr_mode = NONE
+[  261.261669] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  261.261676] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  261.261689] cif a0a0000.cif: ratio 18, set rate 534M
+[  261.261747] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  261.269337] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  261.283532] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[  261.283546] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  261.283558] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  261.283565] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  261.283579] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[  261.283586] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[  261.283597] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[  261.283604] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  261.283612] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  261.283622] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  261.283629] misc cv184x-mipi-rx: wdr_mode = NONE
+[  261.283636] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  261.283643] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  261.283658] cif a0a0000.cif: ratio 10, set rate 309M
+[  261.283717] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  261.291664] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  261.667056] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  261.777030] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  332.113590] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[  345.008233] ky50_tddi 1-0055: DOWN x=326 y=799 contacts=1
+[  345.088227] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  346.908275] ky50_tddi 1-0055: DOWN x=345 y=705 contacts=1
+[  346.988222] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  347.808241] ky50_tddi 1-0055: DOWN x=136 y=226 contacts=1
+[  347.890388] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  348.808271] ky50_tddi 1-0055: DOWN x=315 y=376 contacts=1
+[  348.888529] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  349.807309] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[  350.167479] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[  350.170067] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  350.170079] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  350.170090] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  350.170103] cif a0a0000.cif: ratio 21, set rate 618M
+[  350.170208] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  350.181222] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  350.191741] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  350.197678] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  509.857835] ky50_tddi 1-0055: DOWN x=62 y=0 contacts=1
+[  509.939803] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  510.197796] ky50_tddi 1-0055: DOWN x=33 y=57 contacts=1
+[  510.277761] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  514.297927] ky50_tddi 1-0055: DOWN x=321 y=267 contacts=1
+[  514.358013] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  514.438079] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[  514.438091] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[  514.438103] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  514.438111] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  514.438118] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[  514.438126] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[  514.438134] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[  514.438141] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  514.438149] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  514.438156] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  514.438163] misc cv184x-mipi-rx: wdr_mode = NONE
+[  514.438170] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  514.438177] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  514.438189] cif a0a0000.cif: ratio 18, set rate 534M
+[  514.438245] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  514.446289] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  514.456840] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  514.462750] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  514.477995] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[  514.478006] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  514.478017] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  514.478025] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  514.478033] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[  514.478040] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[  514.478048] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[  514.478056] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  514.478063] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  514.478071] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  514.478077] misc cv184x-mipi-rx: wdr_mode = NONE
+[  514.478085] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  514.478092] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  514.478104] cif a0a0000.cif: ratio 10, set rate 309M
+[  514.846762] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  514.956795] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  516.898053] ky50_tddi 1-0055: DOWN x=0 y=53 contacts=1
+[  516.978018] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  517.398077] ky50_tddi 1-0055: DOWN x=40 y=27 contacts=1
+[  517.478042] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  518.738099] ky50_tddi 1-0055: DOWN x=98 y=360 contacts=1
+[  518.838096] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  520.258989] ky50_tddi 1-0055: DOWN x=28 y=28 contacts=1
+[  520.358267] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  521.382584] ky50_tddi 1-0055: DOWN x=299 y=352 contacts=1
+[  521.458301] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  522.357124] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[  522.717087] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[  522.717751] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  522.717765] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  522.717779] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  522.717792] cif a0a0000.cif: ratio 21, set rate 618M
+[  522.717905] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  522.728973] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  522.739482] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  522.745396] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  578.233362] ky50_tddi 1-0055: touch read errors: -121
+[  579.260723] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[  579.347008] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  579.347020] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  579.347031] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  579.347045] cif a0a0000.cif: ratio 21, set rate 618M
+[  579.347145] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  579.356699] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  579.370710] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  579.379803] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  841.629845] ky50_tddi 1-0055: DOWN x=366 y=806 contacts=1
+[  841.709870] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  842.869998] ky50_tddi 1-0055: DOWN x=48 y=100 contacts=1
+[  843.009951] ky50_tddi 1-0055: UP x=0 y=0 contacts=0

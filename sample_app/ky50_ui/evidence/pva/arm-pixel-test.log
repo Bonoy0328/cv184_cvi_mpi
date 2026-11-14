@@ -1,0 +1,2 @@
+PASS full half-size Y, CCW90 Y/VU, padded stride, viewport transform, clipped drawing, immutable algorithm result
+PASS: NEON NV21 BT.601 and straight alpha match scalar, 122880 pixels, all 256 alpha values

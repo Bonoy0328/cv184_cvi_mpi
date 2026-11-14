@@ -1,0 +1,52 @@
+ISP Vipipe(0) Allocate pa(0x8b3c2000) va(0x0xb6f71000) size(226880)
+pipe0=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+rgb-001-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=8.09
+rgb-001-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=129.48
+FRAME RGB count=1 pts=368024544 fps=0.00 format=19 compressed=0
+FRAME RGB count=30 pts=369290798 fps=22.90 format=19 compressed=0
+FRAME RGB count=60 pts=370290472 fps=26.04 format=19 compressed=0
+rgb-090-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=148.71
+rgb-090-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=134.66
+FRAME RGB count=90 pts=371290150 fps=27.25 format=19 compressed=0
+FRAME RGB count=120 pts=372556403 fps=26.26 format=19 compressed=0
+FRAME RGB count=150 pts=373556078 fps=26.94 format=19 compressed=0
+FRAME RGB count=180 pts=374555753 fps=27.41 format=19 compressed=0
+FRAME RGB count=210 pts=375555427 fps=27.75 format=19 compressed=0
+FRAME RGB count=240 pts=376555103 fps=28.02 format=19 compressed=0
+FRAME RGB count=270 pts=377554777 fps=28.23 format=19 compressed=0
+FRAME RGB count=300 pts=378554452 fps=28.40 format=19 compressed=0
+Capture finished count=300 rc=0
+gc2083_standby...ISP Vipipe(0) Free pa(0x8b3c2000) va(0x0xb6f71000)
+CVI_ISP_Run returned 0

@@ -1,0 +1,18 @@
+1868
+d06fb1001aa15dc04c9b7d724c206d6269dd40ea4b10a4be86900d3c476971ab  /tmp/ky50-ui/ky50_ui
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+PALM defaults brightness=60..160 offset=0.01/0.01
+PALM ready: encrypted pva.model, input=IR Y only, RGB planar conversion inside libpva
+PALM_PARAMETERS hand=0.70 auth=0.50 dynamic=1 applied
+ACCESS parameters loaded source=database hand=70 auth=50 dynamic=1
+        "model_probability_threshold": 0.7,
+        "brightness_threshold_min": 60,
+        "brightness_threshold_max": 160,
+        "horizontal_offset_tolerance": 0.01,
+        "vertical_offset_tolerance": 0.01,
+        "dynamic_detection_level": 1,
+        "auth_threshold": 0.5,
+STATS elapsed=25 capture_fps=16.95 display_fps=29.32 frames=417 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=3.72 ir_errors=0 state=1
+STATS elapsed=30 capture_fps=16.71 display_fps=29.04 frames=501 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=81 hits=0 infer_ms=4.39 ir_errors=0 state=1

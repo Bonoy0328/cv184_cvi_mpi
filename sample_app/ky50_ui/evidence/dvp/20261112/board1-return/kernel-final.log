@@ -1,0 +1,463 @@
+[    0.051369] Setting up static identity map for 0x80400000 - 0x80400054
+[    0.058151] rcu: Hierarchical SRCU implementation.
+[    0.063459] devtmpfs: initialized
+[    0.070581] early_time_log: do_initcalls: 3632135us
+[    0.075844] random: get_random_u32 called from bucket_table_alloc+0x8d/0xa4 with crng_init=0
+[    0.076020] VFP support v0.3: implementor 41 architecture 3 part 40 variant 3 rev 4
+[    0.092783] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.102945] futex hash table entries: 16 (order: -5, 192 bytes, linear)
+[    0.109830] pinctrl core: initialized pinctrl subsystem
+[    0.115460] NET: Registered protocol family 16
+[    0.120759] DMA: preallocated 1024 KiB pool for atomic coherent allocations
+[    0.128588] thermal_sys: Registered thermal governor 'step_wise'
+[    0.137353] OF: /gpio@03020000/gpio-controller@0: could not find phandle
+[    0.150544] OF: /gpio@03021000/gpio-controller@1: could not find phandle
+[    0.157509] OF: /gpio@03022000/gpio-controller@2: could not find phandle
+[    0.164465] OF: /gpio@03023000/gpio-controller@3: could not find phandle
+[    0.171428] OF: /gpio@05021000/gpio-controller@4: could not find phandle
+[    0.179674] clk reset: nr_reset=256 resource_size=32
+[    0.185179] i2s-subsys 4108000.i2s_subsys: I2S get i2s_subsys_base=0x(ptrval)
+[    0.192546] get audio clk=24576000
+[    0.196168] i2s-subsys 4108000.i2s_subsys: Set clk_aud0~3 to 24576000
+[    0.209488] dw_dmac 4330000.dma: CVITEK DMA Controller, 8 channels, probe done!
+[    0.217580] SCSI subsystem initialized
+[    0.221612] usbcore: registered new interface driver usbfs
+[    0.227513] usbcore: registered new interface driver hub
+[    0.233040] usbcore: registered new device driver usb
+[    0.239884] Ion: ion_parse_dt_heap_common: id 0 type 2 name carveout align 1000
+[    0.247649] Ion: rmem_ion_device_init: heap carveout base 0x0000000089a00000 size 0x0000000006600000 dev (ptrval)
+[    0.258307] ion_carveout_heap_create, size=0x6600000
+[    0.263620] platform carveout: [ion] add heap id 0, type 2, base 0x89a00000, size 0x6600000
+[    0.272518] Advanced Linux Sound Architecture Driver Initialized.
+[    0.279556] clocksource: Switched to clocksource arch_sys_counter
+[    0.286589] NET: Registered protocol family 2
+[    0.291640] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.300323] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.308246] TCP bind hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.315546] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.322187] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.328938] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.336255] NET: Registered protocol family 1
+[    0.341026] RPC: Registered named UNIX socket transport module.
+[    0.347137] RPC: Registered udp transport module.
+[    0.352033] RPC: Registered tcp transport module.
+[    0.356888] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.364162] Initialise system trusted keyrings
+[    0.368865] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    0.378444] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.384985] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.391735] Key type asymmetric registered
+[    0.395968] Asymmetric key parser 'x509' registered
+[    0.401290] cvitek,pinctrl-cv184x 3001000.pinctrl: cvi_pinctrl_probe(): reg=(ptrval),4096 CVITEK_PINMUX_REG_LAST=0xc90
+[    0.415344] cv184x-cooling cv184x_cooling: elems of dev-freqs=6
+[    0.421501] cv184x-cooling cv184x_cooling: dev_freqs[0].cpu_freq=1100000000 exceeds max_freq=800000000
+[    0.431117] cv184x-cooling cv184x_cooling: dev_freqs[0].tpu_freq=750000000 exceeds max_freq=500000000
+[    0.440641] cv184x-cooling cv184x_cooling: dev_freqs[0]: 800000000 500000000
+[    0.447918] cv184x-cooling cv184x_cooling: dev_freqs[1]: 500000000 375000000
+[    0.455200] cv184x-cooling cv184x_cooling: dev_freqs[2]: 500000000 300000000
+[    0.462558] cv184x-cooling cv184x_cooling: Cooling device registered: cv184x_cooling
+[    0.471297] cvi_rtos_cmdqu_probe start ---
+[    0.475531] name=1900000.rtos_cmdqu
+[    0.479223] res-reg: start: 0x1900000, end: 0x1900fff, virt-addr(d0991000).
+[    0.486486] cvi_rtos_cmdqu_probe DONE
+[    0.490353] [cvi_spinlock_init] success
+[    0.494348] ##### SYS_CMD_INFO_LINUX_INIT_DONE success #####
+[    0.500675] input: 3040000.keyscan as /devices/platform/3040000.keyscan/input/input0
+[    0.509981] cvi_rtc 5026000.rtc: time read as 0. 1/1/1970 0:00:00
+[    0.516281] cvi_rtc 5026000.rtc: CVITEK current time 0
+[    0.521605] cvi_rtc 5026000.rtc: CVITEK current alarm -1
+[    0.527094] cvi_rtc 5026000.rtc: time read as 0. 1/1/1970 0:00:00
+[    0.533585] cvi_rtc 5026000.rtc: registered as rtc0
+[    0.538628] cvi_rtc 5026000.rtc: time read as 0. 1/1/1970 0:00:00
+[    0.544940] cvi_rtc 5026000.rtc: setting system clock to 1970-01-01T00:00:00 UTC (0)
+[    0.563065] cvi_rtc 5026000.rtc: rtc 32k calibration has been completed
+[    0.569902] cvi_rtc 5026000.rtc: CVITEK real time clock
+[    0.575559] Serial: 8250/16550 driver, 5 ports, IRQ sharing disabled
+[    0.583028] printk: console [ttyS0] disabled
+[    0.587503] 4140000.serial: ttyS0 at MMIO 0x4140000 (irq = 40, base_baud = 1562500) is a 16550A
+[    0.596628] printk: console [ttyS0] enabled
+[    0.605983] printk: bootconsole [uart0] disabled
+[    0.620658] loop: module loaded
+[    0.624650] cvsnfc 4060000.cv-spinf: IRQ: nr 35
+[    0.630364] SPI Nand ID Table Version 1.4
+[    0.634857] nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[    0.641970] nand: Winbond W25N02KV
+[    0.645770] nand: 256 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    0.654234] mtd->bitflip_threshold 6
+[    0.658425] Bad block table found at page 131008, version 0x01
+[    0.665083] Bad block table found at page 130944, version 0x01
+[    0.671800] spi_nand_tsb_set_ecc_detect_bits set detect bits 0x8
+[    0.678513] orginal BFD 64
+[    0.681544] new BFD 128
+[    0.684273] Skipping QE enable: driver=(ptrval), qe_enable=00000000
+[    0.691300] 9 cmdlinepart partitions found on MTD device cvsnfc
+[    0.697912] Creating 9 MTD partitions on "cvsnfc":
+[    0.703272] 0x000000000000-0x000000280000 : "fip"
+[    0.709484] 0x000000280000-0x000000a80000 : "BOOT"
+[    0.715816] 0x000000a80000-0x000000ae0000 : "MISC"
+[    0.722141] 0x000000ae0000-0x000000b00000 : "ENV"
+[    0.728308] 0x000000b00000-0x000000b20000 : "ENV_BAK"
+[    0.734934] 0x000000b20000-0x000005120000 : "ROOTFS"
+[    0.741767] 0x000005120000-0x000006520000 : "SYSTEM"
+[    0.748288] 0x000006520000-0x000006920000 : "CFG"
+[    0.754546] 0x000006920000-0x000006d20000 : "DATA"
+[    0.761639] dw_spi_mmio 4180000.spi0: DMA init failed:-19
+[    0.768236] dw_spi_mmio 4190000.spi1: DMA init failed:-19
+[    0.774768] dw_spi_mmio 41a0000.spi2: DMA init failed:-19
+[    0.781286] dw_spi_mmio 41b0000.spi3: DMA init failed:-19
+[    0.788307] libphy: Fixed MDIO Bus: probed
+[    0.793267] bm_eth_reset_phy: 20260416 ephy reset
+[    0.909587] bm-dwmac 4070000.ethernet: IRQ eth_wake_irq not found
+[    0.916399] bm-dwmac 4070000.ethernet: IRQ eth_lpi not found
+[    0.922788] bm-dwmac 4070000.ethernet: Hash table entries set to unexpected value 0
+[    0.931419] bm-dwmac 4070000.ethernet: no reset control found
+[    0.937955] bm-dwmac 4070000.ethernet: User ID: 0x10, Synopsys ID: 0x37
+[    0.945369] bm-dwmac 4070000.ethernet: 	DWMAC1000
+[    0.950630] bm-dwmac 4070000.ethernet: DMA HW capability register supported
+[    0.958410] bm-dwmac 4070000.ethernet: RX Checksum Offload Engine supported
+[    0.966195] bm-dwmac 4070000.ethernet: COE Type 2
+[    0.971453] bm-dwmac 4070000.ethernet: TX Checksum insertion supported
+[    0.978747] bm-dwmac 4070000.ethernet: Normal descriptors
+[    0.984785] bm-dwmac 4070000.ethernet: Ring mode enabled
+[    0.990724] bm-dwmac 4070000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    0.999079] bm-dwmac 4070000.ethernet: device MAC address 56:3b:0a:a2:99:83
+[    1.021460] libphy: stmmac: probed
+[    1.025274] CVITEK CV182XA stmmac-0:00: attached PHY driver [CVITEK CV182XA] (mii_bus:phy_addr=stmmac-0:00, irq=POLL)
+[    1.037415] CVITEK CV182XA stmmac-0:01: attached PHY driver [CVITEK CV182XA] (mii_bus:phy_addr=stmmac-0:01, irq=POLL)
+[    1.050887] dwc2 4340000.usb: Clock axi not found
+[    1.056168] dwc2 4340000.usb: Clock apb not found
+[    1.061489] dwc2 4340000.usb: Clock 125m not found
+[    1.066857] dwc2 4340000.usb: Clock 33k not found
+[    1.072143] dwc2 4340000.usb: Clock 12m not found
+[    1.077445] dwc2 4340000.usb: axi clk_bus_early installed
+[    1.083497] dwc2 4340000.usb: axi clk_suspend installed
+[    1.089335] dwc2 4340000.usb: axi clk_ref installed
+[    1.094791] dwc2 4340000.usb: axi clk_coreclkin installed
+[    1.100880] dwc2 4340000.usb: EPs: 8, dedicated fifos, 3072 entries in SPRAM
+[    1.108964] dwc2 4340000.usb: DWC OTG Controller
+[    1.114151] dwc2 4340000.usb: new USB bus registered, assigned bus number 1
+[    1.121955] dwc2 4340000.usb: irq 68, io mem 0x04340000
+[    1.128258] hub 1-0:1.0: USB hub found
+[    1.132495] hub 1-0:1.0: 1 port detected
+[    1.137717] usbcore: registered new interface driver uas
+[    1.143761] usbcore: registered new interface driver usb-storage
+[    1.150782] i2c /dev entries driver
+[    1.155868] sdhci: Secure Digital Host Controller Interface driver
+[    1.162820] sdhci: Copyright(c) Pierre Ossman
+[    1.167686] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.174186] cvi:sdhci_cvi_probe
+[    1.210725] mmc0: SDHCI controller on 4310000.cv-sd [4310000.cv-sd] using ADMA 64-bit
+[    1.219485] cvi_proc_init cvi_host 0x(ptrval)
+[    1.240048] cvitek_spacc 2060000.cvi_spacc: cvitek_spacc_drv_probe success
+[    1.248024] usbcore: registered new interface driver usbhid
+[    1.269555] usbhid: USB HID core driver
+[    1.274647] i2s_driver 4100000.i2s: i2s_probe 4
+[    1.279843] i2s_driver 4100000.i2s: dev_id=0x0
+[    1.285009] i2s_driver 4110000.i2s: i2s_probe 4
+[    1.290157] i2s_driver 4110000.i2s: dev_id=0x1
+[    1.295293] i2s_driver 4120000.i2s: i2s_probe 4
+[    1.300454] i2s_driver 4120000.i2s: dev_id=0x2
+[    1.305587] i2s_driver 4130000.i2s: i2s_probe 4
+[    1.310712] i2s_driver 4130000.i2s: dev_id=0x3
+[    1.316045] codec_adc 300a100.adc: adc_probe
+[    1.320907] codec_adc 300a100.adc: probe get adc_base=0x(ptrval)
+[    1.327621] codec_adc 300a100.adc: dac_addr=0x300a000
+[    1.333276] codec_adc 300a100.adc: dev_id=0x0
+[    1.338142] codec_adc 300a100.adc: bind_i2s=0x0
+[    1.343220] codec_adc 300a100.adc: sdma_clk_en=0x3002004
+[    1.349155] codec_adc 300a100.adc: reset_control,addr:3003000,offset:12
+[    1.356949] adc_card_driver sound_adc: adc_card_probe dev name=sound_adc
+[    1.364456] adc_card_driver sound_adc: adc_card_probe card_name=adc_card
+[    1.371973] adc_card_driver sound_adc: adc_card_probe, set DAI fmt to 0x00001301
+[    1.381163] codec_dac 300a000.dac: dac_probe
+[    1.385960] codec_dac 300a000.dac: dac_probe get dac_base=0x(ptrval)
+[    1.393087] codec_dac 300a000.dac: dev_id=0x0
+[    1.397953] codec_dac 300a000.dac: bind_i2s=0x3
+[    1.403020] codec_dac 300a000.dac: sdma_clk_en=0x3002004
+[    1.408956] codec_dac 300a000.dac: reset_control,addr:3003000,offset:11
+[    1.416759] dac_card_driver sound_dac: dac_card_probe dev name=sound_dac
+[    1.424279] dac_card_driver sound_dac: dac_card_probe, set DAI fmt to 0x00004301
+[    1.433577] NET: Registered protocol family 17
+[    1.438735] Registering SWP/SWPB emulation handler
+[    1.444152] Loading compiled-in X.509 certificates
+[    1.460929] cvi-saradc 30f0000.saradc: failed to	retrieve clk_rtc_sys_saradc1
+[    1.469598] ubi0: attaching mtd5
+[    1.478237] random: fast init done
+[    1.622617] ubi0: scanning is finished
+[    1.631266] ubi0: attached mtd5 (name "ROOTFS", size 70 MiB)
+[    1.637589] ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    1.645297] ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    1.652888] ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    1.660673] ubi0: good PEBs: 560, bad PEBs: 0, corrupted PEBs: 0
+[    1.667384] ubi0: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    1.675462] ubi0: max/mean erase counter: 1/0, WL threshold: 4096, image sequence number: 185809003
+[    1.685577] ubi0: available PEBs: 0, total reserved PEBs: 560, PEBs reserved for bad PEB handling: 40
+[    1.695892] ubi0: background thread "ubi_bgt0d" started, PID 95
+[    1.703143] block ubiblock0_0: created from ubi0:0(ROOTFS)
+[    1.709648] ALSA device list:
+[    1.713079] ttyS0, get NULL dma-names
+[    1.717168] ttyS0, get NULL dma-names
+[    1.721267] ttyS0, get NULL dma-names
+[    1.726817] VFS: Mounted root (squashfs filesystem) readonly on device 254:0.
+[    1.736151] devtmpfs: mounted
+[    1.743328] Freeing unused kernel memory: 2048K
+[    1.749735] Run /sbin/init as init process
+[    1.754309]   with arguments:
+[    1.757619]     /sbin/init
+[    1.760658]   with environment:
+[    1.764162]     HOME=/
+[    1.766782]     TERM=linux
+[    1.769800] early_time_log: run_init_process: 5331359us
+[    2.240339] ubi1: attaching mtd6
+[    2.285079] ubi1: scanning is finished
+[    2.292921] ubi1 warning: ubi_eba_init: cannot reserve enough PEBs for bad PEB handling, reserved 6, need 40
+[    2.304303] ubi1: attached mtd6 (name "SYSTEM", size 20 MiB)
+[    2.310649] ubi1: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    2.318331] ubi1: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    2.325923] ubi1: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    2.333706] ubi1: good PEBs: 160, bad PEBs: 0, corrupted PEBs: 0
+[    2.340423] ubi1: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    2.348495] ubi1: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 1004651556
+[    2.358707] ubi1: available PEBs: 0, total reserved PEBs: 160, PEBs reserved for bad PEB handling: 6
+[    2.368924] ubi1: background thread "ubi_bgt1d" started, PID 117
+[    2.379188] UBIFS (ubi1:0): Mounting in unauthenticated mode
+[    2.385967] UBIFS (ubi1:0): background thread "ubifs_bgt1_0" started, PID 119
+[    2.412961] UBIFS (ubi1:0): recovery needed
+[    2.460141] random: crng init done
+[    2.503243] UBIFS (ubi1:0): recovery completed
+[    2.508285] UBIFS (ubi1:0): UBIFS: mounted UBI device 1, volume 0, name "SYSTEM"
+[    2.518926] UBIFS (ubi1:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    2.530042] UBIFS (ubi1:0): FS size: 17776640 bytes (16 MiB, 140 LEBs), journal size 2666496 bytes (2 MiB, 21 LEBs)
+[    2.541731] UBIFS (ubi1:0): reserved for root: 0 bytes (0 KiB)
+[    2.548252] UBIFS (ubi1:0): media format: w4/r0 (latest is w5/r0), UUID 809AE927-9C40-4F53-853D-7B6BBC733459, small LPT model
+[    2.563213] ubi2: attaching mtd7
+[    2.576602] ubi2: scanning is finished
+[    2.584273] ubi2 warning: ubi_eba_init: cannot reserve enough PEBs for bad PEB handling, reserved 2, need 40
+[    2.595641] ubi2: attached mtd7 (name "CFG", size 4 MiB)
+[    2.601607] ubi2: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    2.609291] ubi2: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    2.616894] ubi2: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    2.624689] ubi2: good PEBs: 32, bad PEBs: 0, corrupted PEBs: 0
+[    2.631309] ubi2: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    2.639382] ubi2: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 522010522
+[    2.649498] ubi2: available PEBs: 0, total reserved PEBs: 32, PEBs reserved for bad PEB handling: 2
+[    2.659619] ubi2: background thread "ubi_bgt2d" started, PID 121
+[    2.669798] UBIFS (ubi2:0): Mounting in unauthenticated mode
+[    2.676617] UBIFS (ubi2:0): background thread "ubifs_bgt2_0" started, PID 123
+[    2.703722] UBIFS (ubi2:0): recovery needed
+[    2.760443] UBIFS (ubi2:0): recovery completed
+[    2.765502] UBIFS (ubi2:0): UBIFS: mounted UBI device 2, volume 0, name "CFG"
+[    2.773510] UBIFS (ubi2:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    2.784617] UBIFS (ubi2:0): FS size: 2031616 bytes (1 MiB, 16 LEBs), journal size 1142785 bytes (1 MiB, 8 LEBs)
+[    2.795900] UBIFS (ubi2:0): reserved for root: 0 bytes (0 KiB)
+[    2.802425] UBIFS (ubi2:0): media format: w4/r0 (latest is w5/r0), UUID 7065DEDE-FE72-4F1E-A8CA-6C32AD43505D, small LPT model
+[    2.817354] ubi3: attaching mtd8
+[    2.830805] ubi3: scanning is finished
+[    2.838447] ubi3 warning: ubi_eba_init: cannot reserve enough PEBs for bad PEB handling, reserved 2, need 40
+[    2.849838] ubi3: attached mtd8 (name "DATA", size 4 MiB)
+[    2.855875] ubi3: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    2.863584] ubi3: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    2.871187] ubi3: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    2.878966] ubi3: good PEBs: 32, bad PEBs: 0, corrupted PEBs: 0
+[    2.885586] ubi3: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    2.893663] ubi3: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 657448081
+[    2.903780] ubi3: available PEBs: 0, total reserved PEBs: 32, PEBs reserved for bad PEB handling: 2
+[    2.913899] ubi3: background thread "ubi_bgt3d" started, PID 125
+[    2.924033] UBIFS (ubi3:0): Mounting in unauthenticated mode
+[    2.930937] UBIFS (ubi3:0): background thread "ubifs_bgt3_0" started, PID 127
+[    2.957977] UBIFS (ubi3:0): recovery needed
+[    2.990592] UBIFS (ubi3:0): recovery completed
+[    2.995658] UBIFS (ubi3:0): UBIFS: mounted UBI device 3, volume 0, name "DATA"
+[    3.003763] UBIFS (ubi3:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    3.014855] UBIFS (ubi3:0): FS size: 2031616 bytes (1 MiB, 16 LEBs), journal size 1142785 bytes (1 MiB, 8 LEBs)
+[    3.026136] UBIFS (ubi3:0): reserved for root: 0 bytes (0 KiB)
+[    3.032660] UBIFS (ubi3:0): media format: w4/r0 (latest is w5/r0), UUID AC901FAF-BA07-4FF1-BF89-E259D76CA9B9, small LPT model
+[    3.080200] 20260616 phy_config_init
+[    3.080968] bm-dwmac 4070000.ethernet eth0: PHY [stmmac-0:00] driver [CVITEK CV182XA] (irq=POLL)
+[    3.099636] dwmac1000: Master AXI performs any burst length
+[    3.105873] bm-dwmac 4070000.ethernet eth0: No Safety Features support found
+[    3.113776] bm-dwmac 4070000.ethernet eth0: IEEE 1588-2002 Timestamp supported
+[    3.122133] bm-dwmac 4070000.ethernet eth0: configuring for phy/rmii link mode
+[    4.150929] cv184x_osal: bad vermagic: kernel tainted.
+[    4.156678] Disabling lock debugging due to kernel taint
+[    4.162645] cv184x_osal: loading out-of-tree module taints kernel.
+[    4.196434] base_probe:533(): base probe done
+[    4.232503] sys_comm_set_base_addr:80(): CVITEK CHIP ID = 28
+[    4.238927] sys_probe:280(): sys probe done
+[    4.267941] cif a0a0000.cif: cam0 clk installed
+[    4.275901] cif a0a0000.cif: cam1 clk installed
+[    4.280991] cif a0a0000.cif: cam2 clk installed
+[    4.286094] cif a0a0000.cif: clk_mipimpll clk installed 43776705
+[    4.292842] cif a0a0000.cif: clk_disppll clk installed 8ebb2048
+[    4.299475] cif a0a0000.cif: clk_fpll clk installed 56372d4b
+[    4.305822] cif a0a0000.cif: (0) res-reg: start: 0xa0a0000, end: 0xa0a1fff.
+[    4.313662] cif a0a0000.cif:  virt-addr(6f4d53e5)
+[    4.318926] cif a0a0000.cif: (1) res-reg: start: 0xa0a6000, end: 0xa0a6fff.
+[    4.326714] cif a0a0000.cif:  virt-addr(ec203734)
+[    4.331980] cif a0a0000.cif: (2) res-reg: start: 0xa0a2000, end: 0xa0a3fff.
+[    4.339766] cif a0a0000.cif:  virt-addr(a0fb5f7c)
+[    4.345026] cif a0a0000.cif: (3) res-reg: start: 0xa0a4000, end: 0xa0a5fff.
+[    4.352812] cif a0a0000.cif:  virt-addr(58f48c88)
+[    4.358067] cif a0a0000.cif: no pad_ctrl for cif
+[    4.363270] cif a0a0000.cif: request irq-52 as cif-irq0
+[    4.369128] cif a0a0000.cif: request irq-53 as cif-irq1
+[    4.374995] cif a0a0000.cif: request irq-54 as cif-irq2
+[    4.380841] cif a0a0000.cif: cam0 sw reset installed
+[    4.386388] cif a0a0000.cif: cam1 sw reset installed
+[    4.391940] cif a0a0000.cif: cam2 sw reset installed
+[    4.420577] snsr_i2c snsr_i2c: i2c:-------hook 0
+[    4.425796] snsr_i2c snsr_i2c: i2c:-------hook 2
+[    4.431043] snsr_i2c snsr_i2c: i2c:-------hook 3
+[    4.436234] snsr_i2c snsr_i2c: i2c:-------hook 4
+[    4.536173] vpss_probe:213(): vpss probe done
+[    4.646628] vepu b020000.codec_vepu: probing start
+[    4.652056] vepu b020000.codec_vepu: res-reg: start: 0xb020000, end: 0xb02ffff, virt-addr(a3537c46).
+[    4.662282] vepu b020000.codec_vepu: res-reg: start: 0xb030000, end: 0xb0300ff, top virt-addr(85e21845).
+[    4.672892] vepu b020000.codec_vepu: res-reg: start: 0xb058000, end: 0xb0580ff, sbm virt-addr(de570d66).
+[    4.683501] vepu b020000.codec_vepu: res-reg: start: 0xb050000, end: 0xb0503ff, mmu virt-addr(de570d66).
+[    4.694255] vc_drv vc_drv: register jpeg driver
+[    4.699474] jpu b000000.codec_jpu: probing start
+[    4.704691] jpu b000000.codec_jpu: res-reg: start: 0xb000000, end: 0xb00ffff, virt-addr(fcced7b5).
+[    4.715115] venc_probe:1222: venc_probe:1222: venc version check val 1b
+[    4.722532] jpu_probe:897: jpu_probe:897: jpu probing start
+[    4.728903] jpu_probe:926: jpu_probe:926: probing finish
+[    4.738891] rgn_probe:(225): rgn probe done
+[    4.771282] ldc_proc_init done
+[    4.805840] soph-vo a094000.vo: irq(55) for disp get from platform driver.
+[    4.839714] soph-mipi-tx mipi_tx: mipi_tx: misc_register name:soph-mipi-tx.
+[    4.907671] tde_probe:269(): tde probe done
+[    4.938142] bm-tpu c000000.bmtpu: Card 0(type:MARS3) probe done
+[    4.953937] sh (162): drop_caches: 3
+[    5.190692] bm-dwmac 4070000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[  260.460087] ky50_i2c1: registered existing I2C1 with TP C20/C21 mux=6
+[  261.158177] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[  261.166254] irq_handler:568(): dev(0) disp bw failed at frame#1
+[  261.169888] input: KY50 ST7102 Touchscreen as /devices/platform/i2c_designware.1/i2c-1/1-0055/input/input1
+[  261.170006] ky50_tddi 1-0055: verified 480x854 contacts=5 fw=01 rev=01.42.01.03
+[  261.261579] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[  261.261591] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[  261.261602] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  261.261610] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  261.261618] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[  261.261625] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[  261.261633] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[  261.261640] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  261.261648] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  261.261656] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  261.261662] misc cv184x-mipi-rx: wdr_mode = NONE
+[  261.261669] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  261.261676] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  261.261689] cif a0a0000.cif: ratio 18, set rate 534M
+[  261.261747] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  261.269337] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  261.283532] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[  261.283546] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  261.283558] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  261.283565] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  261.283579] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[  261.283586] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[  261.283597] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[  261.283604] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  261.283612] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  261.283622] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  261.283629] misc cv184x-mipi-rx: wdr_mode = NONE
+[  261.283636] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  261.283643] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  261.283658] cif a0a0000.cif: ratio 10, set rate 309M
+[  261.283717] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  261.291664] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  261.667056] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  261.777030] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  332.113590] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[  345.008233] ky50_tddi 1-0055: DOWN x=326 y=799 contacts=1
+[  345.088227] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  346.908275] ky50_tddi 1-0055: DOWN x=345 y=705 contacts=1
+[  346.988222] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  347.808241] ky50_tddi 1-0055: DOWN x=136 y=226 contacts=1
+[  347.890388] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  348.808271] ky50_tddi 1-0055: DOWN x=315 y=376 contacts=1
+[  348.888529] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  349.807309] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[  350.167479] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[  350.170067] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  350.170079] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  350.170090] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  350.170103] cif a0a0000.cif: ratio 21, set rate 618M
+[  350.170208] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  350.181222] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  350.191741] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  350.197678] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  509.857835] ky50_tddi 1-0055: DOWN x=62 y=0 contacts=1
+[  509.939803] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  510.197796] ky50_tddi 1-0055: DOWN x=33 y=57 contacts=1
+[  510.277761] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  514.297927] ky50_tddi 1-0055: DOWN x=321 y=267 contacts=1
+[  514.358013] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  514.438079] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[  514.438091] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[  514.438103] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  514.438111] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  514.438118] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[  514.438126] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[  514.438134] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[  514.438141] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  514.438149] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  514.438156] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  514.438163] misc cv184x-mipi-rx: wdr_mode = NONE
+[  514.438170] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  514.438177] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  514.438189] cif a0a0000.cif: ratio 18, set rate 534M
+[  514.438245] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  514.446289] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  514.456840] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  514.462750] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  514.477995] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[  514.478006] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  514.478017] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  514.478025] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  514.478033] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[  514.478040] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[  514.478048] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[  514.478056] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  514.478063] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  514.478071] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  514.478077] misc cv184x-mipi-rx: wdr_mode = NONE
+[  514.478085] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  514.478092] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  514.478104] cif a0a0000.cif: ratio 10, set rate 309M
+[  514.846762] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  514.956795] base_get_chn_buffer:193(): Mod(VI) Grp(1) Chn(0), jobs wait(0) work(2) done(0)
+[  516.898053] ky50_tddi 1-0055: DOWN x=0 y=53 contacts=1
+[  516.978018] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  517.398077] ky50_tddi 1-0055: DOWN x=40 y=27 contacts=1
+[  517.478042] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  518.738099] ky50_tddi 1-0055: DOWN x=98 y=360 contacts=1
+[  518.838096] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  520.258989] ky50_tddi 1-0055: DOWN x=28 y=28 contacts=1
+[  520.358267] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  521.382584] ky50_tddi 1-0055: DOWN x=299 y=352 contacts=1
+[  521.458301] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  522.357124] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[  522.717087] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[  522.717751] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  522.717765] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  522.717779] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  522.717792] cif a0a0000.cif: ratio 21, set rate 618M
+[  522.717905] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  522.728973] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  522.739482] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  522.745396] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  578.233362] ky50_tddi 1-0055: touch read errors: -121
+[  579.260723] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[  579.347008] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[  579.347020] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  579.347031] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[  579.347045] cif a0a0000.cif: ratio 21, set rate 618M
+[  579.347145] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  579.356699] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  579.370710] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[  579.379803] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  841.629845] ky50_tddi 1-0055: DOWN x=366 y=806 contacts=1
+[  841.709870] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  842.869998] ky50_tddi 1-0055: DOWN x=48 y=100 contacts=1
+[  843.009951] ky50_tddi 1-0055: UP x=0 y=0 contacts=0

@@ -1,0 +1,113 @@
+KY50 LCD is not running
+KY50 supplier initialization test: 480x854, RGB888, 2 lanes, pixel clock 35675 kHz
+Timing 2,40,40,2,9,193,60; LCD reset C25, touch reset C18.
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+Actual MIPI timing 2,40,54,2,9,193; pixel clock 36563 kHz
+reset DCS read da: 80
+reset DCS read db: a0
+reset DCS read dc: fb
+reset DCS read 0a: 08
+reset DCS read 0c: 00
+reset DCS read 05: 00
+reset DCS read 0f: 00
+reset DCS read b0: 00
+reset DCS read b7: 00
+reset DCS read bf: 00
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+RGB video A submitted: 480x854 stride=1472, private pool=16.
+Test active; check the physical screen for a centered white A on black.
+SIGUSR1 cycles: A -> hardware colorbar -> red -> green -> blue -> black -> A.
+after-video DCS read da: 80
+after-video DCS read db: a0
+after-video DCS read dc: fb
+after-video DCS read 0a: dc
+after-video DCS read 0c: 77
+after-video DCS read 05: ff
+after-video DCS read 0f: 80
+after-video DCS read b0: 22
+after-video DCS read b7: 7d
+after-video DCS read bf: a0
+
+-------------------------------DEVICE CONFIG------------------------------
+     DevID     DevEn           intf_type            IntfSync     BkClr    DevFrt
+       # 0         Y                MIPI         User timing         0        60
+
+-------------------------------VIDEO LAYER STATUS 1-----------------------
+   LayerId   VideoEn              pixfmt      ImgW      ImgH     DispX     DispY     DispW     DispH
+       # 0         Y             RGB_888       480       854         0         0       480       854
+
+-------------------------------VIDEO LAYER STATUS 2 (continue)------------
+   LayerId BindDevId   EnChNum      Luma      Cont       Hue      Satu          DispalyPts          PreDonePts
+       # 0         0         1         0         0         0         0                   0                   0
+
+-------------------------------VIDEO LAYER STATUS 3 (continue)------------
+   LayerId    BufLen    SrcFrt   RealFrt    BwFail OsdBwFail
+       # 0         2         0         0         1         0
+
+-------------------------------GRAPHIC LAYER STATUS 1-----------------------
+   LayerId GraphicEn BindDevId      Prio
+       # 1         0         0         0
+
+-------------------------------CHN BASIC INFO 1---------------------------
+   LayerId     ChnId     ChnEn      Prio      SrcW      SrcH      ChnX      ChnY      ChnW      ChnH  RotAngle    Thrshd
+       # 0       # 0         Y         0       480       854         0         0       480       854         0         2
+
+-------------------------------CHN PLAY INFO------------------------------
+   LayerId     ChnId      Show     Pause ChnSrcFrt    ChnFrt          ChnGap(us)          DispalyPts          PreDonePts
+       # 0       # 0         Y         N         0         0                   0                   0                   0
+--------------DISP(0)-------------------------
+disp_from_sc(0)		sync_ext(0)		tgen_en(1)		fmt(BGR888_PACKED)
+in_csc(        Disable)	out_csc(        Disable)	burst(15)	y_thresh(120)	c_thresh(0)
+start_x(  0)		start_y(  0)		width( 480)		height( 854)
+pitch_y(1472)		pitch_c(  0)
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+--------------DISP-TIMING(0))------------------
+total( 575 * 1057)	hsync_pol(   0)	vsync_pol(   0)
+hsync_start( 575)	hsync_end(1057)	vsync_start(   0)	vsync_end(   1)
+hde-start(  42)		hde-end( 521)	vde-start(  11)		vde-end( 864)	
+[    4.570874] vepu b020000.codec_vepu: res-reg: start: 0xb058000, end: 0xb0580ff, sbm virt-addr(e6785eb0).
+[    4.581474] vepu b020000.codec_vepu: res-reg: start: 0xb050000, end: 0xb0503ff, mmu virt-addr(e6785eb0).
+[    4.592231] vc_drv vc_drv: register jpeg driver
+[    4.597451] jpu b000000.codec_jpu: probing start
+[    4.602668] jpu b000000.codec_jpu: res-reg: start: 0xb000000, end: 0xb00ffff, virt-addr(8f8934c3).
+[    4.613099] venc_probe:1222: venc_probe:1222: venc version check val 1b
+[    4.620525] jpu_probe:897: jpu_probe:897: jpu probing start
+[    4.626897] jpu_probe:926: jpu_probe:926: probing finish
+[    4.636928] rgn_probe:(225): rgn probe done
+[    4.669301] ldc_proc_init done
+[    4.704024] soph-vo a094000.vo: irq(55) for disp get from platform driver.
+[    4.737836] soph-mipi-tx mipi_tx: mipi_tx: misc_register name:soph-mipi-tx.
+[    4.805826] tde_probe:269(): tde probe done
+[    4.836404] bm-tpu c000000.bmtpu: Card 0(type:MARS3) probe done
+[    4.852224] sh (162): drop_caches: 3
+[    5.110683] bm-dwmac 4070000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[  169.974022] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[  169.982054] irq_handler:568(): dev(0) disp bw failed at frame#1

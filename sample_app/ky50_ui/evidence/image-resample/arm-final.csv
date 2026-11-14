@@ -1,0 +1,16 @@
+method,stage,cpu_ms,wall_ms,checksum
+0,rgb_detection_540x960,15.177,15.217,1288
+0,ir_detection_540x960,8.706,8.740,1016
+0,face_affine_112,5.420,5.432,1136
+0,quality_affine_96,3.194,3.198,832
+0,rgb_resize_224,12.040,12.083,776
+1,rgb_detection_540x960,14.782,14.819,1288
+1,ir_detection_540x960,6.138,6.158,1016
+1,face_affine_112,4.233,4.257,1136
+1,quality_affine_96,2.364,2.369,832
+1,rgb_resize_224,4.342,4.354,776
+2,rgb_detection_540x960,7.693,7.711,608
+2,ir_detection_540x960,4.163,4.177,528
+2,face_affine_112,4.069,4.075,1352
+2,quality_affine_96,2.216,2.222,440
+2,rgb_resize_224,1.291,1.291,400

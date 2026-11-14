@@ -1,0 +1,458 @@
+[    0.516267] cvi_rtc 5026000.rtc: CVITEK current time 0
+[    0.521592] cvi_rtc 5026000.rtc: CVITEK current alarm -1
+[    0.527081] cvi_rtc 5026000.rtc: time read as 0. 1/1/1970 0:00:00
+[    0.533572] cvi_rtc 5026000.rtc: registered as rtc0
+[    0.538616] cvi_rtc 5026000.rtc: time read as 0. 1/1/1970 0:00:00
+[    0.544928] cvi_rtc 5026000.rtc: setting system clock to 1970-01-01T00:00:00 UTC (0)
+[    0.563094] cvi_rtc 5026000.rtc: rtc 32k calibration has been completed
+[    0.569931] cvi_rtc 5026000.rtc: CVITEK real time clock
+[    0.575589] Serial: 8250/16550 driver, 5 ports, IRQ sharing disabled
+[    0.583063] printk: console [ttyS0] disabled
+[    0.587537] 4140000.serial: ttyS0 at MMIO 0x4140000 (irq = 40, base_baud = 1562500) is a 16550A
+[    0.596661] printk: console [ttyS0] enabled
+[    0.606016] printk: bootconsole [uart0] disabled
+[    0.620686] loop: module loaded
+[    0.624680] cvsnfc 4060000.cv-spinf: IRQ: nr 35
+[    0.630394] SPI Nand ID Table Version 1.4
+[    0.634888] nand: device found, Manufacturer ID: 0xef, Chip ID: 0xaa
+[    0.642001] nand: Winbond W25N02KV
+[    0.645800] nand: 256 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    0.654264] mtd->bitflip_threshold 6
+[    0.658463] Bad block table found at page 131008, version 0x01
+[    0.665123] Bad block table found at page 130944, version 0x01
+[    0.671840] spi_nand_tsb_set_ecc_detect_bits set detect bits 0x8
+[    0.678553] orginal BFD 64
+[    0.681584] new BFD 128
+[    0.684313] Skipping QE enable: driver=(ptrval), qe_enable=00000000
+[    0.691340] 9 cmdlinepart partitions found on MTD device cvsnfc
+[    0.697952] Creating 9 MTD partitions on "cvsnfc":
+[    0.703311] 0x000000000000-0x000000280000 : "fip"
+[    0.709525] 0x000000280000-0x000000a80000 : "BOOT"
+[    0.715854] 0x000000a80000-0x000000ae0000 : "MISC"
+[    0.722168] 0x000000ae0000-0x000000b00000 : "ENV"
+[    0.728337] 0x000000b00000-0x000000b20000 : "ENV_BAK"
+[    0.734960] 0x000000b20000-0x000005120000 : "ROOTFS"
+[    0.741797] 0x000005120000-0x000006520000 : "SYSTEM"
+[    0.748329] 0x000006520000-0x000006920000 : "CFG"
+[    0.754585] 0x000006920000-0x000006d20000 : "DATA"
+[    0.761677] dw_spi_mmio 4180000.spi0: DMA init failed:-19
+[    0.768271] dw_spi_mmio 4190000.spi1: DMA init failed:-19
+[    0.774793] dw_spi_mmio 41a0000.spi2: DMA init failed:-19
+[    0.781298] dw_spi_mmio 41b0000.spi3: DMA init failed:-19
+[    0.788321] libphy: Fixed MDIO Bus: probed
+[    0.793279] bm_eth_reset_phy: 20260416 ephy reset
+[    0.909589] bm-dwmac 4070000.ethernet: IRQ eth_wake_irq not found
+[    0.916401] bm-dwmac 4070000.ethernet: IRQ eth_lpi not found
+[    0.922792] bm-dwmac 4070000.ethernet: Hash table entries set to unexpected value 0
+[    0.931424] bm-dwmac 4070000.ethernet: no reset control found
+[    0.937962] bm-dwmac 4070000.ethernet: User ID: 0x10, Synopsys ID: 0x37
+[    0.945377] bm-dwmac 4070000.ethernet: 	DWMAC1000
+[    0.950638] bm-dwmac 4070000.ethernet: DMA HW capability register supported
+[    0.958417] bm-dwmac 4070000.ethernet: RX Checksum Offload Engine supported
+[    0.966203] bm-dwmac 4070000.ethernet: COE Type 2
+[    0.971461] bm-dwmac 4070000.ethernet: TX Checksum insertion supported
+[    0.978755] bm-dwmac 4070000.ethernet: Normal descriptors
+[    0.984791] bm-dwmac 4070000.ethernet: Ring mode enabled
+[    0.990731] bm-dwmac 4070000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    0.999086] bm-dwmac 4070000.ethernet: device MAC address 6e:2e:d7:fa:2b:ab
+[    1.021475] libphy: stmmac: probed
+[    1.025290] CVITEK CV182XA stmmac-0:00: attached PHY driver [CVITEK CV182XA] (mii_bus:phy_addr=stmmac-0:00, irq=POLL)
+[    1.037431] CVITEK CV182XA stmmac-0:01: attached PHY driver [CVITEK CV182XA] (mii_bus:phy_addr=stmmac-0:01, irq=POLL)
+[    1.050903] dwc2 4340000.usb: Clock axi not found
+[    1.056185] dwc2 4340000.usb: Clock apb not found
+[    1.061505] dwc2 4340000.usb: Clock 125m not found
+[    1.066864] dwc2 4340000.usb: Clock 33k not found
+[    1.072151] dwc2 4340000.usb: Clock 12m not found
+[    1.077454] dwc2 4340000.usb: axi clk_bus_early installed
+[    1.083497] dwc2 4340000.usb: axi clk_suspend installed
+[    1.089335] dwc2 4340000.usb: axi clk_ref installed
+[    1.094791] dwc2 4340000.usb: axi clk_coreclkin installed
+[    1.100879] dwc2 4340000.usb: EPs: 8, dedicated fifos, 3072 entries in SPRAM
+[    1.108961] dwc2 4340000.usb: DWC OTG Controller
+[    1.114147] dwc2 4340000.usb: new USB bus registered, assigned bus number 1
+[    1.121952] dwc2 4340000.usb: irq 68, io mem 0x04340000
+[    1.128261] hub 1-0:1.0: USB hub found
+[    1.132489] hub 1-0:1.0: 1 port detected
+[    1.137705] usbcore: registered new interface driver uas
+[    1.143746] usbcore: registered new interface driver usb-storage
+[    1.150766] i2c /dev entries driver
+[    1.155862] sdhci: Secure Digital Host Controller Interface driver
+[    1.162823] sdhci: Copyright(c) Pierre Ossman
+[    1.167688] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.174192] cvi:sdhci_cvi_probe
+[    1.210740] mmc0: SDHCI controller on 4310000.cv-sd [4310000.cv-sd] using ADMA 64-bit
+[    1.219499] cvi_proc_init cvi_host 0x(ptrval)
+[    1.240049] cvitek_spacc 2060000.cvi_spacc: cvitek_spacc_drv_probe success
+[    1.248031] usbcore: registered new interface driver usbhid
+[    1.269558] usbhid: USB HID core driver
+[    1.274652] i2s_driver 4100000.i2s: i2s_probe 4
+[    1.279850] i2s_driver 4100000.i2s: dev_id=0x0
+[    1.285015] i2s_driver 4110000.i2s: i2s_probe 4
+[    1.290162] i2s_driver 4110000.i2s: dev_id=0x1
+[    1.295297] i2s_driver 4120000.i2s: i2s_probe 4
+[    1.300458] i2s_driver 4120000.i2s: dev_id=0x2
+[    1.305586] i2s_driver 4130000.i2s: i2s_probe 4
+[    1.310721] i2s_driver 4130000.i2s: dev_id=0x3
+[    1.316056] codec_adc 300a100.adc: adc_probe
+[    1.320921] codec_adc 300a100.adc: probe get adc_base=0x(ptrval)
+[    1.327635] codec_adc 300a100.adc: dac_addr=0x300a000
+[    1.333288] codec_adc 300a100.adc: dev_id=0x0
+[    1.338154] codec_adc 300a100.adc: bind_i2s=0x0
+[    1.343232] codec_adc 300a100.adc: sdma_clk_en=0x3002004
+[    1.349168] codec_adc 300a100.adc: reset_control,addr:3003000,offset:12
+[    1.356964] adc_card_driver sound_adc: adc_card_probe dev name=sound_adc
+[    1.364472] adc_card_driver sound_adc: adc_card_probe card_name=adc_card
+[    1.371987] adc_card_driver sound_adc: adc_card_probe, set DAI fmt to 0x00001301
+[    1.381177] codec_dac 300a000.dac: dac_probe
+[    1.385974] codec_dac 300a000.dac: dac_probe get dac_base=0x(ptrval)
+[    1.393090] codec_dac 300a000.dac: dev_id=0x0
+[    1.397957] codec_dac 300a000.dac: bind_i2s=0x3
+[    1.403024] codec_dac 300a000.dac: sdma_clk_en=0x3002004
+[    1.408960] codec_dac 300a000.dac: reset_control,addr:3003000,offset:11
+[    1.416763] dac_card_driver sound_dac: dac_card_probe dev name=sound_dac
+[    1.424283] dac_card_driver sound_dac: dac_card_probe, set DAI fmt to 0x00004301
+[    1.433585] NET: Registered protocol family 17
+[    1.438744] Registering SWP/SWPB emulation handler
+[    1.444161] Loading compiled-in X.509 certificates
+[    1.460905] cvi-saradc 30f0000.saradc: failed to	retrieve clk_rtc_sys_saradc1
+[    1.469529] ubi0: attaching mtd5
+[    1.478198] random: fast init done
+[    1.622651] ubi0: scanning is finished
+[    1.631292] ubi0: attached mtd5 (name "ROOTFS", size 70 MiB)
+[    1.637624] ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    1.645332] ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    1.652924] ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    1.660710] ubi0: good PEBs: 560, bad PEBs: 0, corrupted PEBs: 0
+[    1.667421] ubi0: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    1.675498] ubi0: max/mean erase counter: 1/0, WL threshold: 4096, image sequence number: 185809003
+[    1.685614] ubi0: available PEBs: 0, total reserved PEBs: 560, PEBs reserved for bad PEB handling: 40
+[    1.695929] ubi0: background thread "ubi_bgt0d" started, PID 95
+[    1.703179] block ubiblock0_0: created from ubi0:0(ROOTFS)
+[    1.709679] ALSA device list:
+[    1.713110] ttyS0, get NULL dma-names
+[    1.717198] ttyS0, get NULL dma-names
+[    1.721299] ttyS0, get NULL dma-names
+[    1.726858] VFS: Mounted root (squashfs filesystem) readonly on device 254:0.
+[    1.736186] devtmpfs: mounted
+[    1.743366] Freeing unused kernel memory: 2048K
+[    1.749737] Run /sbin/init as init process
+[    1.754310]   with arguments:
+[    1.757620]     /sbin/init
+[    1.760650]   with environment:
+[    1.764155]     HOME=/
+[    1.766783]     TERM=linux
+[    1.769810] early_time_log: run_init_process: 5339907us
+[    2.240359] ubi1: attaching mtd6
+[    2.285080] ubi1: scanning is finished
+[    2.292926] ubi1 warning: ubi_eba_init: cannot reserve enough PEBs for bad PEB handling, reserved 6, need 40
+[    2.304300] ubi1: attached mtd6 (name "SYSTEM", size 20 MiB)
+[    2.310644] ubi1: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    2.318326] ubi1: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    2.325918] ubi1: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    2.333702] ubi1: good PEBs: 160, bad PEBs: 0, corrupted PEBs: 0
+[    2.340410] ubi1: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    2.348472] ubi1: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 1004651556
+[    2.358685] ubi1: available PEBs: 0, total reserved PEBs: 160, PEBs reserved for bad PEB handling: 6
+[    2.368902] ubi1: background thread "ubi_bgt1d" started, PID 117
+[    2.379109] UBIFS (ubi1:0): Mounting in unauthenticated mode
+[    2.385948] UBIFS (ubi1:0): background thread "ubifs_bgt1_0" started, PID 119
+[    2.413005] UBIFS (ubi1:0): recovery needed
+[    2.432619] UBIFS (ubi1:0): recovery completed
+[    2.437686] UBIFS (ubi1:0): UBIFS: mounted UBI device 1, volume 0, name "SYSTEM"
+[    2.445987] UBIFS (ubi1:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    2.457079] UBIFS (ubi1:0): FS size: 17776640 bytes (16 MiB, 140 LEBs), journal size 2666496 bytes (2 MiB, 21 LEBs)
+[    2.468750] UBIFS (ubi1:0): reserved for root: 0 bytes (0 KiB)
+[    2.475276] UBIFS (ubi1:0): media format: w4/r0 (latest is w5/r0), UUID 809AE927-9C40-4F53-853D-7B6BBC733459, small LPT model
+[    2.490213] ubi2: attaching mtd7
+[    2.499840] random: crng init done
+[    2.507417] ubi2: scanning is finished
+[    2.515098] ubi2 warning: ubi_eba_init: cannot reserve enough PEBs for bad PEB handling, reserved 2, need 40
+[    2.526465] ubi2: attached mtd7 (name "CFG", size 4 MiB)
+[    2.532425] ubi2: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    2.540116] ubi2: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    2.547702] ubi2: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    2.555487] ubi2: good PEBs: 32, bad PEBs: 0, corrupted PEBs: 0
+[    2.562105] ubi2: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    2.570183] ubi2: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 522010522
+[    2.580298] ubi2: available PEBs: 0, total reserved PEBs: 32, PEBs reserved for bad PEB handling: 2
+[    2.590419] ubi2: background thread "ubi_bgt2d" started, PID 121
+[    2.600578] UBIFS (ubi2:0): Mounting in unauthenticated mode
+[    2.607407] UBIFS (ubi2:0): background thread "ubifs_bgt2_0" started, PID 123
+[    2.634544] UBIFS (ubi2:0): recovery needed
+[    2.654256] UBIFS (ubi2:0): recovery completed
+[    2.659325] UBIFS (ubi2:0): UBIFS: mounted UBI device 2, volume 0, name "CFG"
+[    2.667336] UBIFS (ubi2:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    2.678429] UBIFS (ubi2:0): FS size: 2031616 bytes (1 MiB, 16 LEBs), journal size 1142785 bytes (1 MiB, 8 LEBs)
+[    2.689711] UBIFS (ubi2:0): reserved for root: 0 bytes (0 KiB)
+[    2.696231] UBIFS (ubi2:0): media format: w4/r0 (latest is w5/r0), UUID 7065DEDE-FE72-4F1E-A8CA-6C32AD43505D, small LPT model
+[    2.711154] ubi3: attaching mtd8
+[    2.724565] ubi3: scanning is finished
+[    2.732220] ubi3 warning: ubi_eba_init: cannot reserve enough PEBs for bad PEB handling, reserved 2, need 40
+[    2.743595] ubi3: attached mtd8 (name "DATA", size 4 MiB)
+[    2.749664] ubi3: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    2.757347] ubi3: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    2.764942] ubi3: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    2.772726] ubi3: good PEBs: 32, bad PEBs: 0, corrupted PEBs: 0
+[    2.779332] ubi3: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    2.787425] ubi3: max/mean erase counter: 2/1, WL threshold: 4096, image sequence number: 657448081
+[    2.797542] ubi3: available PEBs: 0, total reserved PEBs: 32, PEBs reserved for bad PEB handling: 2
+[    2.807662] ubi3: background thread "ubi_bgt3d" started, PID 125
+[    2.817749] UBIFS (ubi3:0): Mounting in unauthenticated mode
+[    2.824710] UBIFS (ubi3:0): background thread "ubifs_bgt3_0" started, PID 127
+[    2.851722] UBIFS (ubi3:0): recovery needed
+[    2.882243] UBIFS (ubi3:0): recovery completed
+[    2.887285] UBIFS (ubi3:0): UBIFS: mounted UBI device 3, volume 0, name "DATA"
+[    2.897863] UBIFS (ubi3:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    2.908979] UBIFS (ubi3:0): FS size: 2031616 bytes (1 MiB, 16 LEBs), journal size 1142785 bytes (1 MiB, 8 LEBs)
+[    2.920279] UBIFS (ubi3:0): reserved for root: 0 bytes (0 KiB)
+[    2.926799] UBIFS (ubi3:0): media format: w4/r0 (latest is w5/r0), UUID AC901FAF-BA07-4FF1-BF89-E259D76CA9B9, small LPT model
+[    2.974367] 20260616 phy_config_init
+[    2.975139] bm-dwmac 4070000.ethernet eth0: PHY [stmmac-0:00] driver [CVITEK CV182XA] (irq=POLL)
+[    2.999575] dwmac1000: Master AXI performs any burst length
+[    3.005813] bm-dwmac 4070000.ethernet eth0: No Safety Features support found
+[    3.013712] bm-dwmac 4070000.ethernet eth0: IEEE 1588-2002 Timestamp supported
+[    3.022054] bm-dwmac 4070000.ethernet eth0: configuring for phy/rmii link mode
+[    4.050739] cv184x_osal: bad vermagic: kernel tainted.
+[    4.056489] Disabling lock debugging due to kernel taint
+[    4.062490] cv184x_osal: loading out-of-tree module taints kernel.
+[    4.113413] base_probe:533(): base probe done
+[    4.170970] sys_comm_set_base_addr:80(): CVITEK CHIP ID = 28
+[    4.189581] sys_probe:280(): sys probe done
+[    4.227928] cif a0a0000.cif: cam0 clk installed
+[    4.233048] cif a0a0000.cif: cam1 clk installed
+[    4.238115] cif a0a0000.cif: cam2 clk installed
+[    4.249614] cif a0a0000.cif: clk_mipimpll clk installed eaaf204c
+[    4.256345] cif a0a0000.cif: clk_disppll clk installed ad820560
+[    4.263012] cif a0a0000.cif: clk_fpll clk installed 75fd9850
+[    4.269365] cif a0a0000.cif: (0) res-reg: start: 0xa0a0000, end: 0xa0a1fff.
+[    4.277170] cif a0a0000.cif:  virt-addr(15d21ec2)
+[    4.289463] cif a0a0000.cif: (1) res-reg: start: 0xa0a6000, end: 0xa0a6fff.
+[    4.297258] cif a0a0000.cif:  virt-addr(e0ae5380)
+[    4.302592] cif a0a0000.cif: (2) res-reg: start: 0xa0a2000, end: 0xa0a3fff.
+[    4.310481] cif a0a0000.cif:  virt-addr(f2e51752)
+[    4.315794] cif a0a0000.cif: (3) res-reg: start: 0xa0a4000, end: 0xa0a5fff.
+[    4.323630] cif a0a0000.cif:  virt-addr(1ebf818c)
+[    4.339563] cif a0a0000.cif: no pad_ctrl for cif
+[    4.344761] cif a0a0000.cif: request irq-52 as cif-irq0
+[    4.359582] cif a0a0000.cif: request irq-53 as cif-irq1
+[    4.365439] cif a0a0000.cif: request irq-54 as cif-irq2
+[    4.379564] cif a0a0000.cif: cam0 sw reset installed
+[    4.385111] cif a0a0000.cif: cam1 sw reset installed
+[    4.393671] cif a0a0000.cif: cam2 sw reset installed
+[    4.431228] snsr_i2c snsr_i2c: i2c:-------hook 0
+[    4.436447] snsr_i2c snsr_i2c: i2c:-------hook 2
+[    4.448744] snsr_i2c snsr_i2c: i2c:-------hook 3
+[    4.453967] snsr_i2c snsr_i2c: i2c:-------hook 4
+[    4.623636] vpss_probe:213(): vpss probe done
+[    4.754444] vepu b020000.codec_vepu: probing start
+[    4.759872] vepu b020000.codec_vepu: res-reg: start: 0xb020000, end: 0xb02ffff, virt-addr(eb46fd1e).
+[    4.770097] vepu b020000.codec_vepu: res-reg: start: 0xb030000, end: 0xb0300ff, top virt-addr(661a5e12).
+[    4.780708] vepu b020000.codec_vepu: res-reg: start: 0xb058000, end: 0xb0580ff, sbm virt-addr(0b31a5f5).
+[    4.791317] vepu b020000.codec_vepu: res-reg: start: 0xb050000, end: 0xb0503ff, mmu virt-addr(0b31a5f5).
+[    4.802081] vc_drv vc_drv: register jpeg driver
+[    4.807370] jpu b000000.codec_jpu: probing start
+[    4.812592] jpu b000000.codec_jpu: res-reg: start: 0xb000000, end: 0xb00ffff, virt-addr(d05fdb5a).
+[    4.823049] venc_probe:1222: venc_probe:1222: venc version check val 1b
+[    4.830466] jpu_probe:897: jpu_probe:897: jpu probing start
+[    4.836832] jpu_probe:926: jpu_probe:926: probing finish
+[    4.846832] rgn_probe:(225): rgn probe done
+[    4.879161] ldc_proc_init done
+[    4.913859] soph-vo a094000.vo: irq(55) for disp get from platform driver.
+[    4.947678] soph-mipi-tx mipi_tx: mipi_tx: misc_register name:soph-mipi-tx.
+[    5.015529] tde_probe:269(): tde probe done
+[    5.046033] bm-tpu c000000.bmtpu: Card 0(type:MARS3) probe done
+[    5.061861] sh (162): drop_caches: 3
+[    5.110696] bm-dwmac 4070000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[  823.326970] ky50_i2c1: registered existing I2C1 with TP C20/C21 mux=6
+[  823.660975] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[  823.669009] irq_handler:568(): dev(0) disp bw failed at frame#1
+[  823.672296] input: KY50 ST7102 Touchscreen as /devices/platform/i2c_designware.1/i2c-1/1-0055/input/input1
+[  823.672415] ky50_tddi 1-0055: verified 480x854 contacts=5 fw=01 rev=01.42.01.03
+[  823.732450] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[  823.732465] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[  823.732476] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[  823.732484] misc cv184x-mipi-rx: raw_data_type = RAW10
+[  823.732494] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[  823.732502] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[  823.732510] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[  823.732520] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[  823.732528] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[  823.736270] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[  823.736285] misc cv184x-mipi-rx: wdr_mode = NONE
+[  823.736293] misc cv184x-mipi-rx: data_type[0] = 0x0
+[  823.736300] misc cv184x-mipi-rx: data_type[1] = 0x0
+[  823.736314] cif a0a0000.cif: ratio 10, set rate 309M
+[  823.736381] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[  823.742300] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[  824.026391] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  824.136383] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[  907.031152] ky50_tddi 1-0055: DOWN x=357 y=784 contacts=1
+[  907.111123] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  908.251080] ky50_tddi 1-0055: DOWN x=312 y=722 contacts=1
+[  908.312244] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  909.251077] ky50_tddi 1-0055: DOWN x=124 y=247 contacts=1
+[  909.311809] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  911.191009] ky50_tddi 1-0055: DOWN x=86 y=276 contacts=1
+[  911.291018] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  912.771924] ky50_tddi 1-0055: DOWN x=124 y=359 contacts=1
+[  912.871860] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  914.010935] ky50_tddi 1-0055: DOWN x=103 y=372 contacts=1
+[  914.150938] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  915.050887] ky50_tddi 1-0055: DOWN x=105 y=371 contacts=1
+[  915.150881] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  915.950898] ky50_tddi 1-0055: DOWN x=90 y=392 contacts=1
+[  916.071018] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  917.250851] ky50_tddi 1-0055: DOWN x=90 y=392 contacts=1
+[  917.330870] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  918.190811] ky50_tddi 1-0055: DOWN x=90 y=392 contacts=1
+[  918.310823] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  929.470493] ky50_tddi 1-0055: DOWN x=92 y=455 contacts=1
+[  929.570498] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  929.575447] ky50_relay: ON for 5 seconds
+[  934.609146] ky50_relay: OFF (five second timer)
+[  945.020052] ky50_tddi 1-0055: DOWN x=309 y=618 contacts=1
+[  945.140049] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  945.163209] i2s-subsys 4108000.i2s_subsys: subsys_set_mclk,85:set clk_name:clk_aud3, clk:16384000
+[  945.163220] i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 16384000
+[  948.048535] i2s_shutdown
+[  978.605521] ky50_tddi 1-0055: DOWN x=310 y=618 contacts=1
+[  978.701786] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[  978.709454] i2s-subsys 4108000.i2s_subsys: subsys_set_mclk,85:set clk_name:clk_aud3, clk:16384000
+[  978.709466] i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 16384000
+[  981.588044] i2s_shutdown
+[ 1092.114734] cvi_rtc 5026000.rtc: time set to 1794325496. 11/10/2026 15:44:56
+[ 1092.114763] cvi_rtc 5026000.rtc: time read as 1767226689. 1/1/2026 0:18:09
+[ 1097.474785] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1097.734828] ky50_tddi 1-0055: touch read errors: -121
+[ 1098.949987] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[ 1099.020692] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1099.020704] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1099.020715] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 0, max_height = 0
+[ 1099.020725] misc cv184x-mipi-rx: invalid image size 640x480, max_size 0x0
+[ 1099.036036] misc cv184x-mipi-rx: check attr fail -22
+[ 1099.053392] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 1099.053403] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1099.053414] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1099.053422] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1099.053430] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 1099.053438] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 1099.053445] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 1099.053453] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1099.053460] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1099.053468] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1099.053475] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1099.053482] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1099.053489] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1099.053502] cif a0a0000.cif: ratio 10, set rate 309M
+[ 1099.053560] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1099.059606] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1099.324905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1099.434830] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1111.865174] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1112.105218] ky50_tddi 1-0055: touch read errors: -121
+[ 1430.445032] ky50_amp: codec GPIOA15 handed off; LM4871 low=play high=shutdown
+[ 1430.763500] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[ 1430.834208] misc cv184x-mipi-rx: devno = 0, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 1430.834220] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1430.834231] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 1430.834244] cif a0a0000.cif: ratio 21, set rate 618M
+[ 1430.834323] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1430.848626] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1431.038545] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.148500] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.258536] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.368499] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.478534] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.588529] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.698551] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.808505] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1431.918535] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.028495] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.138515] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.248527] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.358563] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.468503] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.578532] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.688497] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.798512] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1432.908526] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.018540] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.128502] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.238525] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.348502] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.458510] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.568487] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.678561] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.788498] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1433.898529] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1434.008487] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1434.010240] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 1434.010251] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 1434.010263] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1434.010271] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1434.010278] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 1434.010286] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 1434.010293] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 1434.010301] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1434.010309] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1434.010316] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1434.010323] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1434.010330] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1434.010337] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1434.010349] cif a0a0000.cif: ratio 10, set rate 309M
+[ 1434.010405] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1434.016332] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1434.288532] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1434.400732] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1473.216208] ky50_tddi 1-0055: DOWN x=358 y=776 contacts=1
+[ 1473.316186] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1474.489463] ky50_tddi 1-0055: DOWN x=265 y=704 contacts=1
+[ 1474.609474] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1475.249431] ky50_tddi 1-0055: DOWN x=206 y=240 contacts=1
+[ 1475.309458] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1476.670256] ky50_tddi 1-0055: DOWN x=307 y=615 contacts=1
+[ 1476.770251] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1476.787232] i2s-subsys 4108000.i2s_subsys: subsys_set_mclk,85:set clk_name:clk_aud3, clk:16384000
+[ 1476.787243] i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 16384000
+[ 1479.665664] i2s_shutdown
+[ 1494.081299] ky50_tddi 1-0055: DOWN x=307 y=615 contacts=1
+[ 1494.181271] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1494.185456] i2s-subsys 4108000.i2s_subsys: subsys_set_mclk,85:set clk_name:clk_aud3, clk:16384000
+[ 1494.185468] i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 16384000
+[ 1496.080725] ky50_tddi 1-0055: DOWN x=83 y=456 contacts=1
+[ 1496.180698] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1496.189176] ky50_relay: ON for 5 seconds
+[ 1497.063898] i2s_shutdown
+[ 1501.248063] ky50_relay: OFF (five second timer)
+[ 1502.279859] ky50_tddi 1-0055: DOWN x=323 y=615 contacts=1
+[ 1502.339363] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1502.353678] i2s-subsys 4108000.i2s_subsys: subsys_set_mclk,85:set clk_name:clk_aud3, clk:16384000
+[ 1502.353688] i2s-subsys 4108000.i2s_subsys: Set clk_sdma_aud0~5 to 16384000
+[ 1505.232093] i2s_shutdown
+[ 1525.698999] ky50_tddi 1-0055: DOWN x=91 y=366 contacts=1
+[ 1525.798999] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1526.667792] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 1526.668795] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[ 1526.668807] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[ 1526.668818] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 1526.668826] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 1526.668834] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[ 1526.668842] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[ 1526.668849] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[ 1526.668857] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 1526.668865] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 1526.668873] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 1526.668880] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 1526.668887] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 1526.668894] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 1526.668906] cif a0a0000.cif: ratio 18, set rate 534M
+[ 1526.668962] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 1526.674924] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1526.689127] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 1526.695052] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 1526.967874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1527.077793] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 1532.948951] ky50_tddi 1-0055: DOWN x=31 y=33 contacts=1
+[ 1533.068973] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 1775.128340] cvi_rtc 5026000.rtc: time set to 1794326179. 11/10/2026 15:56:19
+[ 1775.128368] cvi_rtc 5026000.rtc: time read as 1794326177. 11/10/2026 15:56:17

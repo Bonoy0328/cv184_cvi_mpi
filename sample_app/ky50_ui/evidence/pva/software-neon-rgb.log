@@ -1,0 +1,131 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 -> pvaGetHandPose -> selected preview overlay
+ETHERNET carrier=1 uptime_ms=359221
+[I][deviceAuth] ##########欢迎使用CyanovaAI(青悟科技)掌静脉SDK!#########
+
+### npu: CV184X BMRuntime (RGB planar uint8 / int8 output)
+[I][pva] handpose vertifiction success!
+
+[CV184X] loaded handpose_tiny_20250430_concat input=49152 output=5040 scale=0.991966069 zp=0
+[CV184X] loaded pva_mnf_20251019_l input=49152 output=512 scale=0.00448031723 zp=0
+[CV184X] loaded pva_mnf_20260323_s input=49152 output=512 scale=0.00548861874 zp=0
+init pva cost 308 ms
+PALM ready: encrypted pva.model, input=IR Y only, RGB planar conversion inside libpva
+SOURCE switching none -> RGB
+ISP Vipipe(0) Allocate pa(0x8c856000) va(0x0xb5baa000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8c88e000) va(0x0xb5b72000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+pipe1 sensor ID=2083
+CVI_ISP_Run(1) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, File exists
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+ROTATED group=1 software=CCW90 source=960x540 stride=960/960 offsets=L0 R0 T0 B0 rotated=540x960 copy=0,0 540x960 full IR half-size
+STATS elapsed=5 capture_fps=13.40 display_fps=29.59 frames=67 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=73 hits=0 infer_ms=3.88 ir_errors=0 state=1
+STATS elapsed=10 capture_fps=16.98 display_fps=29.37 frames=152 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=3.78 ir_errors=0 state=1
+STATS elapsed=15 capture_fps=17.59 display_fps=29.58 frames=240 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=88 hits=0 infer_ms=4.09 ir_errors=0 state=1
+STATS elapsed=20 capture_fps=16.56 display_fps=29.53 frames=323 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=82 hits=0 infer_ms=4.65 ir_errors=0 state=1
+STATS elapsed=25 capture_fps=16.80 display_fps=29.60 frames=407 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=4.19 ir_errors=0 state=1
+STATS elapsed=30 capture_fps=16.99 display_fps=29.39 frames=492 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=4.33 ir_errors=0 state=1
+STATS elapsed=35 capture_fps=16.79 display_fps=29.59 frames=576 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=85 hits=0 infer_ms=3.71 ir_errors=0 state=1
+STATS elapsed=40 capture_fps=17.20 display_fps=29.59 frames=662 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=88 hits=0 infer_ms=4.07 ir_errors=0 state=1
+STATS elapsed=45 capture_fps=16.98 display_fps=29.56 frames=747 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=3.81 ir_errors=0 state=1
+STATS elapsed=50 capture_fps=17.00 display_fps=29.60 frames=832 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=85 hits=0 infer_ms=3.92 ir_errors=0 state=1
+STATS elapsed=55 capture_fps=15.19 display_fps=29.19 frames=908 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=76 hits=0 infer_ms=5.30 ir_errors=0 state=1
+STATS elapsed=60 capture_fps=16.79 display_fps=29.58 frames=992 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=3.89 ir_errors=0 state=1
+STATS elapsed=65 capture_fps=16.60 display_fps=29.59 frames=1075 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=83 hits=0 infer_ms=3.86 ir_errors=0 state=1
+STATS elapsed=70 capture_fps=17.16 display_fps=29.52 frames=1161 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=4.14 ir_errors=0 state=1
+STATS elapsed=75 capture_fps=17.00 display_fps=29.59 frames=1246 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=85 hits=0 infer_ms=4.29 ir_errors=0 state=1
+STATS elapsed=80 capture_fps=17.13 display_fps=29.49 frames=1332 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=3.34 ir_errors=0 state=1
+STATS elapsed=85 capture_fps=17.14 display_fps=29.50 frames=1418 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=3.58 ir_errors=0 state=1
+STATS elapsed=90 capture_fps=17.00 display_fps=29.40 frames=1503 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=3.74 ir_errors=0 state=1
+STATS elapsed=95 capture_fps=16.00 display_fps=29.80 frames=1583 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=80 hits=0 infer_ms=4.33 ir_errors=0 state=1
+STATS elapsed=100 capture_fps=16.79 display_fps=29.59 frames=1667 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=83 hits=0 infer_ms=4.49 ir_errors=0 state=1
+STATS elapsed=105 capture_fps=16.75 display_fps=29.71 frames=1751 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=4.20 ir_errors=0 state=1
+STATS elapsed=110 capture_fps=16.60 display_fps=29.39 frames=1834 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=3.81 ir_errors=0 state=1
+STATS elapsed=115 capture_fps=16.60 display_fps=29.59 frames=1917 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=4.22 ir_errors=0 state=1
+STATS elapsed=120 capture_fps=16.54 display_fps=29.49 frames=2000 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=3.60 ir_errors=0 state=1
+STATS elapsed=125 capture_fps=16.58 display_fps=29.56 frames=2083 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=4.44 ir_errors=0 state=1
+STATS elapsed=130 capture_fps=17.58 display_fps=29.56 frames=2171 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=3.54 ir_errors=0 state=1
+STATS elapsed=135 capture_fps=17.20 display_fps=29.39 frames=2257 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=3.90 ir_errors=0 state=1
+STATS elapsed=140 capture_fps=17.59 display_fps=29.58 frames=2345 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=4.37 ir_errors=0 state=1
+STATS elapsed=145 capture_fps=17.19 display_fps=29.59 frames=2431 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=3.85 ir_errors=0 state=1
+STATS elapsed=150 capture_fps=17.19 display_fps=29.38 frames=2517 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=3.83 ir_errors=0 state=1
+STATS elapsed=155 capture_fps=16.99 display_fps=29.58 frames=2602 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=4.32 ir_errors=0 state=1
+STATS elapsed=160 capture_fps=17.17 display_fps=29.55 frames=2688 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=4.26 ir_errors=0 state=1
+STATS elapsed=165 capture_fps=17.34 display_fps=29.50 frames=2775 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=84 hits=0 infer_ms=4.45 ir_errors=0 state=1
+STATS elapsed=170 capture_fps=16.80 display_fps=29.60 frames=2859 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=4.09 ir_errors=0 state=1
+STATS elapsed=175 capture_fps=17.60 display_fps=29.59 frames=2947 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=88 hits=0 infer_ms=4.20 ir_errors=0 state=1
+STATS elapsed=180 capture_fps=16.98 display_fps=29.57 frames=3032 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=RGB input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=4.21 ir_errors=0 state=1
+STATS elapsed=185 capture_fps=17.17 display_fps=29.35 frames=3118 page=0 eth=1

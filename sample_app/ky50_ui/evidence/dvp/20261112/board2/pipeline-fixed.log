@@ -1,0 +1,93 @@
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped
+ROTATED group=0 software=CCW90 source=864x648 stride=896/896 offsets=L0 R0 T0 B0 rotated=648x864 copy=84,4 480x854 display crop
+PIPELINE cycle=0 phase=0 source=2 frames=60 misses=0 elapsed_ms=3025
+ISP Vipipe(0) Allocate pa(0x8bf9f000) va(0x0xb6da7000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8bfd7000) va(0x0xb6d6f000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No error information
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+SCALE_PERF group=0 vpss=4.08 map=0.22 rotate=1.68 convert=7.62 release=0.11 ms
+PIPELINE cycle=0 phase=1 source=0 frames=60 misses=2 elapsed_ms=2212
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8bf9f000) va(0x0xb6da7000)
+CVI_ISP_Run(1) returned 0
+ISP Vipipe(1) Free pa(0x8bfd7000) va(0x0xb6d6f000)
+ISP Vipipe(0) Allocate pa(0x8bf9f000) va(0x0xb6da7000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8bfd7000) va(0x0xb6d6f000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+IR_MONO ISP output chroma_min=128 chroma_max=128 neutral=128; preview=Y-only grayscale
+PIPELINE cycle=0 phase=2 source=1 frames=60 misses=1 elapsed_ms=2095
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8bf9f000) va(0x0xb6da7000)
+ISP Vipipe(1) Free pa(0x8bfd7000) va(0x0xb6d6f000)
+CVI_ISP_Run(1) returned 0
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped
+ROTATED group=0 software=CCW90 source=864x648 stride=896/896 offsets=L0 R0 T0 B0 rotated=648x864 copy=84,4 480x854 display crop
+SCALE_PERF group=0 vpss=6.12 map=0.19 rotate=1.73 convert=4.28 release=0.07 ms
+PIPELINE cycle=0 phase=3 source=2 frames=60 misses=0 elapsed_ms=3026
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped
+ROTATED group=0 software=CCW90 source=864x648 stride=896/896 offsets=L0 R0 T0 B0 rotated=648x864 copy=84,4 480x854 display crop
+SCALE_PERF group=0 vpss=2.04 map=0.23 rotate=1.81 convert=7.51 release=0.09 ms
+PIPELINE cycle=1 phase=0 source=2 frames=60 misses=0 elapsed_ms=3026
+ISP Vipipe(0) Allocate pa(0x8bf9f000) va(0x0xb6da7000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8bfd7000) va(0x0xb6d6f000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+PIPELINE cycle=1 phase=1 source=0 frames=60 misses=2 elapsed_ms=2211
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8bf9f000) va(0x0xb6da7000)
+ISP Vipipe(1) Free pa(0x8bfd7000) va(0x0xb6d6f000)
+CVI_ISP_Run(1) returned 0
+ISP Vipipe(0) Allocate pa(0x8bf9f000) va(0x0xb6da7000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8bfd7000) va(0x0xb6d6f000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+IR_MONO ISP output chroma_min=128 chroma_max=128 neutral=128; preview=Y-only grayscale
+SCALE_PERF group=0 vpss=7.13 map=0.20 rotate=1.60 convert=5.48 release=0.10 ms
+PIPELINE cycle=1 phase=2 source=1 frames=60 misses=1 elapsed_ms=2095
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8bf9f000) va(0x0xb6da7000)
+ISP Vipipe(1) Free pa(0x8bfd7000) va(0x0xb6d6f000)
+CVI_ISP_Run(1) returned 0
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped
+ROTATED group=0 software=CCW90 source=864x648 stride=896/896 offsets=L0 R0 T0 B0 rotated=648x864 copy=84,4 480x854 display crop
+PIPELINE cycle=1 phase=3 source=2 frames=60 misses=0 elapsed_ms=3026
+PIPELINE_DONE rc=0

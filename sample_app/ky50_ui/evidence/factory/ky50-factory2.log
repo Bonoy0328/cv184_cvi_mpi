@@ -1,0 +1,177 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 factory RGB/IR/DVP CCW90 480x854, required touch, software alpha compositor
+ETHERNET carrier=1 uptime_ms=1430861
+SOURCE switching none -> DVP
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No error information
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+SOURCE DVP first-frame timeout
+ISP Vipipe(0) Allocate pa(0x8b75b000) va(0x0xb69c9000) size(226880)
+pipe0=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED storage=512x896 stride=512/512 offsets=L0 R26 T32 B0 crop=2,36 480x854
+STATS elapsed=5 capture_fps=8.60 display_fps=28.79 frames=43 page=0 eth=1
+STATS elapsed=10 capture_fps=29.98 display_fps=29.58 frames=193 page=0 eth=1
+STATS elapsed=15 capture_fps=29.91 display_fps=29.71 frames=343 page=0 eth=1
+STATS elapsed=20 capture_fps=30.18 display_fps=29.78 frames=494 page=0 eth=1
+STATS elapsed=25 capture_fps=29.95 display_fps=29.55 frames=644 page=0 eth=1
+STATS elapsed=30 capture_fps=29.99 display_fps=29.59 frames=794 page=0 eth=1
+STATS elapsed=35 capture_fps=29.99 display_fps=29.59 frames=944 page=0 eth=1
+STATS elapsed=40 capture_fps=29.95 display_fps=29.95 frames=1094 page=0 eth=1
+TOUCH_SUBMIT latency_ms=20 page=0
+UI page=1 feature=0
+TOUCH_SUBMIT latency_ms=87 page=1
+TOUCH_SUBMIT latency_ms=23 page=1
+UI page=5 feature=0
+TOUCH_SUBMIT latency_ms=55 page=5
+TOUCH_SUBMIT latency_ms=28 page=5
+UI page=6 feature=0
+TOUCH_SUBMIT latency_ms=99 page=6
+STATS elapsed=45 capture_fps=30.18 display_fps=28.78 frames=1245 page=6 eth=1
+TOUCH_SUBMIT latency_ms=17 page=6
+TOUCH_SUBMIT latency_ms=20 page=6
+SPEAKER playback completed rc=0
+STATS elapsed=50 capture_fps=29.97 display_fps=29.57 frames=1395 page=6 eth=1
+STATS elapsed=55 capture_fps=29.98 display_fps=29.78 frames=1545 page=6 eth=1
+STATS elapsed=60 capture_fps=29.99 display_fps=29.59 frames=1695 page=6 eth=1
+TOUCH_SUBMIT latency_ms=14 page=6
+TOUCH_SUBMIT latency_ms=23 page=6
+STATS elapsed=65 capture_fps=29.99 display_fps=29.59 frames=1845 page=6 eth=1
+TOUCH_SUBMIT latency_ms=34 page=6
+TOUCH_SUBMIT latency_ms=37 page=6
+SPEAKER playback completed rc=0
+STATS elapsed=70 capture_fps=29.99 display_fps=29.79 frames=1995 page=6 eth=1
+TOUCH_SUBMIT latency_ms=40 page=6
+TOUCH_SUBMIT latency_ms=18 page=6
+SPEAKER playback completed rc=0
+STATS elapsed=75 capture_fps=29.99 display_fps=29.79 frames=2145 page=6 eth=1
+STATS elapsed=80 capture_fps=30.16 display_fps=30.16 frames=2296 page=6 eth=1
+STATS elapsed=85 capture_fps=29.96 display_fps=29.76 frames=2446 page=6 eth=1
+STATS elapsed=90 capture_fps=29.98 display_fps=29.58 frames=2596 page=6 eth=1
+TOUCH_SUBMIT latency_ms=18 page=6
+TOUCH_SUBMIT latency_ms=32 page=6
+gc2083_standby...ISP Vipipe(0) Free pa(0x8b75b000) va(0x0xb69c9000)
+STATS elapsed=95 capture_fps=29.59 display_fps=29.79 frames=2744 page=6 eth=1
+CVI_ISP_Run(0) returned 0
+SOURCE switching RGB -> IR
+ISP Vipipe(0) Allocate pa(0x8b75b000) va(0x0xb69c9000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+STATS elapsed=100 capture_fps=22.97 display_fps=29.36 frames=2859 page=8 eth=1
+TOUCH_SUBMIT latency_ms=28 page=8
+UI page=6 feature=0
+TOUCH_SUBMIT latency_ms=107 page=6
+STATS elapsed=105 capture_fps=29.95 display_fps=29.35 frames=3009 page=6 eth=1
+STATS elapsed=110 capture_fps=29.97 display_fps=29.77 frames=3159 page=6 eth=1
+STATS elapsed=115 capture_fps=30.00 display_fps=30.00 frames=3309 page=6 eth=1
+STATS elapsed=120 capture_fps=30.00 display_fps=29.80 frames=3459 page=6 eth=1
+STATS elapsed=125 capture_fps=30.13 display_fps=29.73 frames=3610 page=6 eth=1
+STATS elapsed=130 capture_fps=29.99 display_fps=29.99 frames=3760 page=6 eth=1
+STATS elapsed=135 capture_fps=29.99 display_fps=29.59 frames=3910 page=6 eth=1
+STATS elapsed=140 capture_fps=29.97 display_fps=29.57 frames=4060 page=6 eth=1
+STATS elapsed=145 capture_fps=30.12 display_fps=29.72 frames=4211 page=6 eth=1
+STATS elapsed=150 capture_fps=30.00 display_fps=30.00 frames=4361 page=6 eth=1
+STATS elapsed=155 capture_fps=29.98 display_fps=29.78 frames=4511 page=6 eth=1
+STATS elapsed=160 capture_fps=29.95 display_fps=29.55 frames=4661 page=6 eth=1
+STATS elapsed=165 capture_fps=29.99 display_fps=29.79 frames=4811 page=6 eth=1
+STATS elapsed=170 capture_fps=29.98 display_fps=29.78 frames=4961 page=6 eth=1
+STATS elapsed=175 capture_fps=30.00 display_fps=29.80 frames=5111 page=6 eth=1
+STATS elapsed=180 capture_fps=30.00 display_fps=30.00 frames=5261 page=6 eth=1
+STATS elapsed=185 capture_fps=30.15 display_fps=29.95 frames=5412 page=6 eth=1
+STATS elapsed=190 capture_fps=29.93 display_fps=29.73 frames=5562 page=6 eth=1
+STATS elapsed=195 capture_fps=29.96 display_fps=29.76 frames=5712 page=6 eth=1
+STATS elapsed=200 capture_fps=30.18 display_fps=29.58 frames=5863 page=6 eth=1
+STATS elapsed=205 capture_fps=29.98 display_fps=29.58 frames=6013 page=6 eth=1
+STATS elapsed=210 capture_fps=29.98 display_fps=29.78 frames=6163 page=6 eth=1
+STATS elapsed=215 capture_fps=29.99 display_fps=29.99 frames=6313 page=6 eth=1
+STATS elapsed=220 capture_fps=29.99 display_fps=29.59 frames=6463 page=6 eth=1
+STATS elapsed=225 capture_fps=29.99 display_fps=29.79 frames=6613 page=6 eth=1
+STATS elapsed=230 capture_fps=29.99 display_fps=29.99 frames=6763 page=6 eth=1
+STATS elapsed=235 capture_fps=30.15 display_fps=29.75 frames=6914 page=6 eth=1
+STATS elapsed=240 capture_fps=29.95 display_fps=29.95 frames=7064 page=6 eth=1
+STATS elapsed=245 capture_fps=29.98 display_fps=29.78 frames=7214 page=6 eth=1
+STATS elapsed=250 capture_fps=29.98 display_fps=29.78 frames=7364 page=6 eth=1
+STATS elapsed=255 capture_fps=29.99 display_fps=29.59 frames=7514 page=6 eth=1
+STATS elapsed=260 capture_fps=29.98 display_fps=29.98 frames=7664 page=6 eth=1
+STATS elapsed=265 capture_fps=29.99 display_fps=29.79 frames=7814 page=6 eth=1
+STATS elapsed=270 capture_fps=30.19 display_fps=29.79 frames=7965 page=6 eth=1
+STATS elapsed=275 capture_fps=29.98 display_fps=29.98 frames=8115 page=6 eth=1
+STATS elapsed=280 capture_fps=29.97 display_fps=29.77 frames=8265 page=6 eth=1
+STATS elapsed=285 capture_fps=29.99 display_fps=29.59 frames=8415 page=6 eth=1
+STATS elapsed=290 capture_fps=29.99 display_fps=29.39 frames=8565 page=6 eth=1
+STATS elapsed=295 capture_fps=29.99 display_fps=29.79 frames=8715 page=6 eth=1
+STATS elapsed=300 capture_fps=29.98 display_fps=29.78 frames=8865 page=6 eth=1
+STATS elapsed=305 capture_fps=29.99 display_fps=29.79 frames=9015 page=6 eth=1
+STATS elapsed=310 capture_fps=30.20 display_fps=29.60 frames=9166 page=6 eth=1
+STATS elapsed=315 capture_fps=30.00 display_fps=29.80 frames=9316 page=6 eth=1
+STATS elapsed=320 capture_fps=29.99 display_fps=29.79 frames=9466 page=6 eth=1
+STATS elapsed=325 capture_fps=29.99 display_fps=29.59 frames=9616 page=6 eth=1
+STATS elapsed=330 capture_fps=29.96 display_fps=29.96 frames=9766 page=6 eth=1
+STATS elapsed=335 capture_fps=30.00 display_fps=29.80 frames=9916 page=6 eth=1
+STATS elapsed=340 capture_fps=29.99 display_fps=29.59 frames=10066 page=6 eth=1
+STATS elapsed=345 capture_fps=29.98 display_fps=29.78 frames=10216 page=6 eth=1
+STATS elapsed=350 capture_fps=30.17 display_fps=29.57 frames=10367 page=6 eth=1
+STATS elapsed=355 capture_fps=30.00 display_fps=30.00 frames=10517 page=6 eth=1

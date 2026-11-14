@@ -1,0 +1,1 @@
+./ky50_ui --no-handpose --data-dir /tmp/ky50-ui/dvp-test-data 

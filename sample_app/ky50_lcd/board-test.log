@@ -1,0 +1,68 @@
+KY50 experimental OTP display test: 480x854, RGB888, 2 lanes, pixel clock 29943 kHz
+Timing 2,40,40,2,16,16,60; module-specific timing/init unverified.
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+reset DCS read da: 80
+reset DCS read db: a0
+reset DCS read dc: fb
+reset DCS read 0a: 08
+reset DCS read 0c: 00
+DCS write 11: rc=0
+DCS write 3a 77: rc=0
+DCS write 29: rc=0
+awake DCS read da: 80
+awake DCS read db: a0
+awake DCS read dc: fb
+awake DCS read 0a: 9c
+awake DCS read 0c: 77
+Framebuffer submitted: A at (200,371), 80x112, stride=1920.
+Test active; check the physical screen for a centered white A on black.
+
+Module: [MIPI_TX], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+
+------MIPI_Tx0 DEV CONFIG----------------------------------------
+     devno     lane0     lane1     lane2     lane3    output_mode  phy_data_rate pixel_clk(KHz)     video_mode     output_fmt
+         0         1         2        -1        -1              1             45          29943              0              2
+
+------MIPI_Tx SYNC CONFIG---------------------------------------------
+       pkt_size     hsa_pixels     hbp_pixels   hline_pixels      vsa_lines      vbp_lines      vfp_lines   active_lines  edpi_cmd_size
+            480              2             40            562              2             16             16            854          43089
+
+------MIPI_Tx DEV STATUS----------------------------------------------
+          width         height        HoriAll        VertAll       hbp       hsa       vsa
+            480            854            562            888        40         2         2
+--------------DISP(0)-------------------------
+disp_from_sc(0)		sync_ext(0)		tgen_en(1)		fmt(RGB888_PLANAR)
+in_csc(        Disable)	out_csc(        Disable)	burst(7)	y_thresh(144)	c_thresh(144)
+start_x(  0)		start_y(  0)		width(  80)		height(  80)
+pitch_y(  0)		pitch_c(  0)
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(111)
+bw fail(1)
+--------------DISP-TIMING(0))------------------
+total( 561 *  887)	hsync_pol(   0)	vsync_pol(   0)
+hsync_start( 561)	hsync_end( 887)	vsync_start(   0)	vsync_end(   1)
+hde-start(  42)		hde-end( 521)	vde-start(  18)		vde-end( 871)	
+gpiochip4: GPIOs 352-383, parent: platform/5021000.gpio, 5021000.gpio:
+
+gpiochip3: GPIOs 384-415, parent: platform/3023000.gpio, 3023000.gpio:
+
+gpiochip2: GPIOs 416-447, parent: platform/3022000.gpio, 3022000.gpio:
+ gpio-434 (                    |ky50-lcd            ) out hi 
+ gpio-441 (                    |ky50-lcd            ) out lo 
+
+gpiochip1: GPIOs 448-479, parent: platform/3021000.gpio, 3021000.gpio:
+ gpio-454 (                    |cviusb-otg          ) in  hi IRQ 
+
+gpiochip0: GPIOs 480-511, parent: platform/3020000.gpio, 3020000.gpio:
+ gpio-487 (                    |ky50-lcd            ) out hi 
+ gpio-495 (                    |mute_pin_l          ) out lo 
+ gpio-510 (                    |mute_pin_r          ) out lo 
+174194706155c0726b474c88332c18d01b425ea6f5504d8e845c1b99e04a2c62  -
+[    4.838514] bm-tpu c000000.bmtpu: Card 0(type:MARS3) probe done
+[    4.854284] sh (162): drop_caches: 3
+[    5.110708] bm-dwmac 4070000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[  549.517964] cvi_rtc 5026000.rtc: time set to 1794151439. 11/8/2026 15:23:59
+[  549.517989] cvi_rtc 5026000.rtc: time read as 1767226148. 1/1/2026 0:09:08

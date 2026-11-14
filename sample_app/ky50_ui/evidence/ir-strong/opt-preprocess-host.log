@@ -1,0 +1,5 @@
+PASS all 16777216 Y/U/V triples: byte-exact legacy NV12 conversion
+PASS 28 letterbox/planar cases and NV12 vector tails: byte-exact padding, bilinear sampling and channel order
+PASS 64 fused NV12 canvas cases: original RGB samples, fractional fallback and zero edges
+BENCH reference average_ms=110.538 checksum=788
+BENCH optimized average_ms=13.930 checksum=788

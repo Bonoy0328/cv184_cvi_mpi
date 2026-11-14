@@ -1,0 +1,9 @@
+VOICE_TEST_START
+2081.04 2060.76
+C25 direction released; mux unchanged: 0x00000003
+VOICE_FIRST_VOLUME_16
+SPEAKER playback completed rc=0
+音频播放完成
+VOICE_TEST_RESTORED
+2206.22 2185.85
+0x02040000

@@ -1,0 +1,48 @@
+{
+  "face/feature_auth/status25": {
+    "n": 7,
+    "median_ms": 156.11,
+    "max_ms": 160.066
+  },
+  "face/feature_auth/status26": {
+    "n": 2,
+    "median_ms": 360.26099999999997,
+    "max_ms": 373.659
+  },
+  "face/feature_auth/status0": {
+    "n": 31,
+    "median_ms": 426.922,
+    "max_ms": 474.504
+  },
+  "palm/feature/status7": {
+    "n": 4,
+    "median_ms": 212.07999999999998,
+    "max_ms": 269.569
+  },
+  "palm/feature/status0": {
+    "n": 9,
+    "median_ms": 48.267,
+    "max_ms": 281.065
+  },
+  "palm/sdk_auth/status0": {
+    "n": 7,
+    "median_ms": 0.185,
+    "max_ms": 1.972
+  },
+  "face_confirmation_ms": [
+    596,
+    570,
+    556,
+    532,
+    538,
+    588,
+    537,
+    557,
+    541,
+    534,
+    2117,
+    531,
+    570,
+    554
+  ]
+}

@@ -1,0 +1,65 @@
+2253
+46c868498eac775568ca54f4d058a729a4406f9a3841c90acac03f48baac7502  /tmp/ky50-ui/ky50_ui
+PALM defaults brightness=60..160 offset=0.01/0.01
+PALM ready: encrypted pva.model, input=IR Y only, RGB planar conversion inside libpva
+ACCESS parameters loaded source=database hand=70 auth=50 dynamic=1
+IR_AE saved_target=32; apply only after hand detection
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=5 capture_fps=14.19 display_fps=29.17 frames=71 page=0 eth=1
+STATS elapsed=10 capture_fps=17.40 display_fps=29.59 frames=158 page=0 eth=1
+STATS elapsed=15 capture_fps=17.14 display_fps=29.29 frames=244 page=0 eth=1
+STATS elapsed=20 capture_fps=17.18 display_fps=29.17 frames=330 page=0 eth=1
+STATS elapsed=25 capture_fps=17.39 display_fps=29.39 frames=417 page=0 eth=1
+STATS elapsed=30 capture_fps=17.59 display_fps=29.38 frames=505 page=0 eth=1
+STATS elapsed=35 capture_fps=17.16 display_fps=29.54 frames=591 page=0 eth=1
+STATS elapsed=40 capture_fps=17.19 display_fps=29.39 frames=677 page=0 eth=1
+STATS elapsed=45 capture_fps=17.39 display_fps=29.38 frames=764 page=0 eth=1
+STATS elapsed=50 capture_fps=17.59 display_fps=29.38 frames=852 page=0 eth=1
+IR_AE found=1 status=7 reason=restore_success target=56->32 settle_ms=500
+PALM_QUALITY found=1 status=7 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.7434
+IR_AE recognition_success target=32 luma=37 time_us=4355 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=3 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=55 capture_fps=14.35 display_fps=29.30 frames=924 page=0 eth=1
+ACCESS match uuid=0 score=0.7360
+IR_AE recognition_success target=32 luma=34 time_us=4000 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.8616
+IR_AE recognition_success target=32 luma=33 time_us=4385 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=60 capture_fps=12.75 display_fps=29.10 frames=988 page=0 eth=1
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.8671
+IR_AE recognition_success target=32 luma=37 time_us=4503 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=65 capture_fps=13.39 display_fps=29.19 frames=1055 page=0 eth=1
+STATS elapsed=70 capture_fps=17.20 display_fps=29.39 frames=1141 page=0 eth=1
+STATS elapsed=75 capture_fps=17.94 display_fps=29.49 frames=1231 page=0 eth=1
+STATS elapsed=80 capture_fps=17.58 display_fps=29.36 frames=1319 page=0 eth=1
+STATS elapsed=85 capture_fps=16.56 display_fps=29.13 frames=1402 page=0 eth=1
+        "brightness_threshold_min": 60,
+        "brightness_threshold_max": 160,
+        "horizontal_offset_tolerance": 0.01,
+        "vertical_offset_tolerance": 0.01,

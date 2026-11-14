@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "windows": 30,
+    "capture_fps_median": 17.79,
+    "success_events": 2,
+    "confirmed_departures": 2,
+    "auth_changed_while_success_held_lines": []
+  },
+  "async-first": {
+    "windows": 166,
+    "capture_fps_median": 29.99,
+    "success_events": 22,
+    "confirmed_departures": 34,
+    "auth_changed_while_success_held_lines": []
+  },
+  "stable": {
+    "binary_sha256": "1163dfaf316a4de987d17fffd4fece3a87dba0424556377403ea3aaa9e14c23d",
+    "windows": 60,
+    "capture_fps_median": 29.99,
+    "capture_fps_min_after_startup": 29.78,
+    "success_events": 8,
+    "confirmed_departures": 9,
+    "auth_changed_while_success_held_lines": [],
+    "physical_confirmation": "User: 这版可以正常运行"
+  }
+}

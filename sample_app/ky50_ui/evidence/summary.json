@@ -1,0 +1,47 @@
+{
+  "soak_pass": [
+    "1804"
+  ],
+  "rss_kib": [
+    6956,
+    6964
+  ],
+  "samples": 61,
+  "last_stats": [
+    1971,
+    29.99,
+    29.99,
+    59169,
+    0
+  ],
+  "stable_capture_fps": {
+    "mean": 30.009402985074626,
+    "min": 29.78,
+    "max": 30.2
+  },
+  "stable_submit_fps": {
+    "mean": 29.76223880597015,
+    "min": 29.36,
+    "max": 30.0
+  },
+  "touch_ms": [
+    18,
+    86,
+    39,
+    47,
+    14,
+    87,
+    13,
+    37,
+    19,
+    98,
+    17,
+    36
+  ],
+  "page_test": [
+    "PAGE_TEST PASS cycles=100 transitions=400"
+  ],
+  "camera_errors": 0,
+  "new_kernel_drop_messages": 1,
+  "new_kernel_bw_failure_messages": 0
+}

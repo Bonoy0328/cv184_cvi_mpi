@@ -1,0 +1,361 @@
+[ 6029.192944] vpss_get_chn_frame:1482(): Grp(0) Chn(0) get chn frame null, milli_sec=100, ret=-1
+[ 6029.193094] vb_release_block:843(): Fatal error, vb->phy_addr(0x8a1f5000) release.
+[ 6029.227938] mesh_gdc_do_rot:196(): get vb fail
+[ 6029.232953] vb_release_block:843(): Fatal error, vb->phy_addr(0x8a1f5000) release.
+[ 6029.241459] _vpss_check_gdc_job:1252(): gdc rotation failed.
+[ 6029.247834] vb_release_block:843(): Fatal error, vb->phy_addr(0x8a1f5000) release.
+[ 6029.256392] vpss_get_chn_frame:1489(): buf already released
+[ 6029.269628] vb_release_block:843(): Fatal error, vb->phy_addr(0x8aadb200) release.
+[ 6029.293188] vpss_send_frame:851(): Grp(0) Size(0 * 0) mismatch.
+[ 6029.412906] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6029.532909] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6029.652933] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6029.772902] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6029.892930] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.012899] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.132912] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.252932] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.372900] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.492930] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.612900] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.732910] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.852911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6030.972900] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.092930] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.212899] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.332924] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.452903] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.572903] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.692929] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.812898] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6031.932921] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.052897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.172908] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.292929] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.412902] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.532919] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.652896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.772908] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6032.892929] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.012897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.132925] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.252896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.372907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.492927] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.612898] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.732926] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.852895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6033.972907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.092928] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.212897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.332920] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.452895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.572906] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.692926] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.812896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6034.932917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.052893] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.172905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.292926] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.412904] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.532917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.652893] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.772905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6035.892926] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.012895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.132917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.252893] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.372903] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.492924] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.612895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.732914] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.852891] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6036.972903] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.092926] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.212894] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.332919] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.452891] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.572901] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.692928] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.812894] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6037.932928] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.053030] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.172903] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.292923] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.412901] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.532915] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.652894] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.772901] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6038.892923] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.012892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.132916] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.252896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.372899] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.492922] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.612892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.732912] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.852895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6039.972897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.092921] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.212890] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.332915] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.452897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.572896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.692921] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.812890] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6040.932920] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.052897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.172895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.292920] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.412889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.532911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.652892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.772897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6041.892920] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.012888] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.132911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.252896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.372890] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.492920] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.612889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.732910] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.852895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6042.972891] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.092918] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.212887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.332901] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.452905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.572887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.692918] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.812887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6043.932898] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.052902] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.172887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.292917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.412885] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.532897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.652892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.772889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6044.892917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.012886] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.132897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.252909] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.372885] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.492916] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.612886] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.732895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.852905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6045.972901] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.092917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.212884] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.332910] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.452896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.572892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.692915] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.812884] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6046.932907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.052887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.172892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.292915] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.412884] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.532905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.652890] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.772890] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6047.892914] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.012883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.132895] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.252911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.372884] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.492911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.612883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.732894] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.852912] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6048.972886] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.092909] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.212881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.332896] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.452921] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.572881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.692908] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.812881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6049.932892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.052914] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.172881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.292907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.412881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.532892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.652909] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.772883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6050.892907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.012879] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.132891] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.252912] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.372880] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.492913] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.612881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.732890] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.852912] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6051.972888] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.092904] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.212879] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.332892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.452912] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.572878] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.692906] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.812878] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6052.932889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.052911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.172878] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.292904] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.412877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.532889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.652911] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.772880] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6053.892903] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.012877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.132887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.252910] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.372877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.492902] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.612879] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.732886] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.852910] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6054.972883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.092897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.212874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.332888] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.452910] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.572875] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.692901] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.812875] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6055.932885] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.052909] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.172876] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.292893] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.412874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.532884] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.652907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.772877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6056.892892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.012874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.132883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.252907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.372874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.492897] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.612874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.732883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.852907] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6057.972881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.092888] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.212874] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.332883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.452906] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.572872] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.692889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.812963] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6058.932879] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.052905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.172871] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.292886] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.412906] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.532878] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.652906] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.772873] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6059.892887] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.012878] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.132877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.252905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.372870] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.492889] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.612878] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.732877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.852905] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6060.972880] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.092886] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.212883] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.332873] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.452902] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.572868] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.692879] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6061.812884] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(0) done(0)
+[ 6062.062913] ky50_tddi 1-0055: touch read errors: -121
+[ 6199.112714] cvi_rtc 5026000.rtc: time set to 1794317054. 11/10/2026 13:24:14
+[ 6199.112739] cvi_rtc 5026000.rtc: time read as 1794317053. 11/10/2026 13:24:13
+[ 6355.350539] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 6355.350550] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 6355.350562] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 6355.350570] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 6355.350578] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 6355.350586] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 6355.350593] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 6355.350601] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 6355.350609] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 6355.350617] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 6355.350624] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 6355.350631] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 6355.350638] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 6355.350651] cif a0a0000.cif: ratio 10, set rate 309M
+[ 6355.350707] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 6355.356760] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 6355.367246] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 6355.373109] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 6355.844581] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[ 6512.923405] ky50_tddi 1-0055: DOWN x=383 y=783 contacts=1
+[ 6513.004250] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6522.594924] ky50_tddi 1-0055: DOWN x=84 y=266 contacts=1
+[ 6522.694677] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6523.953390] ky50_tddi 1-0055: DOWN x=162 y=520 contacts=1
+[ 6524.073410] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6525.653388] ky50_tddi 1-0055: DOWN x=43 y=91 contacts=1
+[ 6525.773376] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6526.853388] ky50_tddi 1-0055: DOWN x=61 y=785 contacts=1
+[ 6526.973358] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6528.133857] ky50_tddi 1-0055: DOWN x=98 y=378 contacts=1
+[ 6528.233856] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6528.613375] ky50_tddi 1-0055: DOWN x=223 y=379 contacts=1
+[ 6528.713380] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6529.213375] ky50_tddi 1-0055: DOWN x=375 y=384 contacts=1
+[ 6529.273393] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6535.763624] ky50_tddi 1-0055: DOWN x=372 y=720 contacts=1
+[ 6535.823398] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6537.883353] ky50_tddi 1-0055: DOWN x=101 y=737 contacts=1
+[ 6537.963982] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6539.283355] ky50_tddi 1-0055: DOWN x=44 y=99 contacts=1
+[ 6539.363556] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6748.631735] ky50_tddi 1-0055: touch read errors: -121
+[ 6749.421678] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[ 6750.731084] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[ 6750.731096] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 6750.731108] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[ 6750.731115] misc cv184x-mipi-rx: raw_data_type = RAW10
+[ 6750.731123] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[ 6750.731131] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[ 6750.731139] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[ 6750.731146] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[ 6750.731155] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[ 6750.731162] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[ 6750.731169] misc cv184x-mipi-rx: wdr_mode = NONE
+[ 6750.731176] misc cv184x-mipi-rx: data_type[0] = 0x0
+[ 6750.731183] misc cv184x-mipi-rx: data_type[1] = 0x0
+[ 6750.731195] cif a0a0000.cif: ratio 10, set rate 309M
+[ 6750.731252] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 6750.737245] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 6750.747709] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 6750.753624] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 6751.225017] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[ 6795.061111] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6808.512348] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6814.213950] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6820.680490] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6834.814986] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6839.948681] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6840.248652] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6841.114559] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 6895.091405] cvi_rtc 5026000.rtc: time set to 1794317750. 11/10/2026 13:35:50
+[ 6895.091432] cvi_rtc 5026000.rtc: time read as 1794317749. 11/10/2026 13:35:49
+[ 6938.791493] bm-dwmac 4070000.ethernet eth0: Link is Down
+[ 6943.552431] ky50_tddi 1-0055: DOWN x=365 y=791 contacts=1
+[ 6943.634645] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 6957.518291] bm-dwmac 4070000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[ 6959.072370] ky50_tddi 1-0055: DOWN x=44 y=85 contacts=1
+[ 6959.132433] ky50_tddi 1-0055: UP x=0 y=0 contacts=0

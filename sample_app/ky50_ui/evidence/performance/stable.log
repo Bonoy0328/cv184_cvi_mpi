@@ -1,0 +1,3220 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 -> pvaGetHandPose -> selected preview overlay
+ETHERNET carrier=1 uptime_ms=14191072
+PALM_DRAW visible=0 misses=0 result_age_ms=14191072
+PALM defaults brightness=60..160 offset=0.01/0.01
+[I][deviceAuth] ##########欢迎使用CyanovaAI(青悟科技)掌静脉SDK!#########
+
+### npu: CV184X BMRuntime (RGB planar uint8 / int8 output)
+[I][pva] handpose vertifiction success!
+
+[CV184X] loaded handpose_tiny_20250430_concat input=49152 output=5040 scale=0.991966069 zp=0
+[CV184X] loaded pva_mnf_20251019_l input=49152 output=512 scale=0.00448031723 zp=0
+[CV184X] loaded pva_mnf_20260323_s input=49152 output=512 scale=0.00548861874 zp=0
+init pva cost 283 ms
+PALM ready: encrypted pva.model, input=IR Y only, RGB planar conversion inside libpva
+PALM_PARAMETERS hand=0.70 auth=0.52 dynamic=1 applied
+ACCESS parameters loaded source=database hand=70 auth=52 dynamic=1
+IR_AE saved_target=28; apply only after hand detection
+SOURCE switching none -> IR
+ISP Vipipe(0) Allocate pa(0x8c856000) va(0x0xb5adb000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8c88e000) va(0x0xb58b8000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+ROTATED group=1 software=CCW90 source=960x540 stride=960/960 offsets=L0 R0 T0 B0 rotated=540x960 copy=0,0 540x960 full IR half-size
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=35
+IR_MONO ISP output chroma_min=128 chroma_max=128 neutral=128; preview=Y-only grayscale
+SCALE_PERF group=0 vpss=8.55 map=0.17 rotate=2.31 convert=3.16 release=0.10 ms
+SCALE_PERF group=1 vpss=8.17 map=0.34 rotate=3.40 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=147 avg_ms=8.56 max_ms=14.07
+PERF ui.process n=949 avg_ms=0.07 max_ms=23.91
+STATS elapsed=5 capture_fps=25.39 display_fps=29.39 frames=127 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=137 hits=0 infer_ms=2.87 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=137 avg_ms=2.87 max_ms=10.04
+PERF palm.access n=137 avg_ms=0.00 max_ms=0.02
+PERF palm.age n=137 avg_ms=31.26 max_ms=39.00
+PALM_QUEUE posted=137 taken=137 replaced=0 depth=0
+PERF capture.vi n=138 avg_ms=2.10 max_ms=13.65
+PERF capture.preview n=138 avg_ms=14.52 max_ms=21.88
+PERF capture.ir n=138 avg_ms=11.90 max_ms=19.78
+PERF capture.interval n=137 avg_ms=33.28 max_ms=43.00
+SCALE_PERF group=0 vpss=8.48 map=0.15 rotate=2.04 convert=3.42 release=0.09 ms
+SCALE_PERF group=1 vpss=8.30 map=0.37 rotate=4.25 convert=0.00 release=0.08 ms
+PERF ui.render n=149 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=149 avg_ms=9.37 max_ms=14.29
+PERF ui.process n=924 avg_ms=0.05 max_ms=7.78
+STATS elapsed=10 capture_fps=29.99 display_fps=29.79 frames=277 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=151 hits=0 infer_ms=2.46 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=151 avg_ms=2.46 max_ms=4.86
+PERF palm.access n=151 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=151 avg_ms=31.55 max_ms=39.00
+PALM_QUEUE posted=288 taken=288 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=0.49 max_ms=9.13
+PERF capture.preview n=151 avg_ms=14.04 max_ms=21.69
+PERF capture.ir n=151 avg_ms=13.13 max_ms=19.64
+PERF capture.interval n=151 avg_ms=33.28 max_ms=43.00
+SCALE_PERF group=0 vpss=8.21 map=0.15 rotate=2.45 convert=3.35 release=0.10 ms
+SCALE_PERF group=1 vpss=8.21 map=0.37 rotate=3.53 convert=0.00 release=0.26 ms
+SCALE_PERF group=0 vpss=8.19 map=0.15 rotate=2.13 convert=3.51 release=0.09 ms
+SCALE_PERF group=1 vpss=7.90 map=0.37 rotate=4.15 convert=0.03 release=0.09 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.58 max_ms=14.42
+PERF ui.process n=897 avg_ms=0.07 max_ms=9.46
+STATS elapsed=15 capture_fps=29.98 display_fps=29.18 frames=427 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.86 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.86 max_ms=9.30
+PERF palm.access n=150 avg_ms=0.03 max_ms=4.02
+PERF palm.age n=150 avg_ms=31.25 max_ms=37.00
+PALM_QUEUE posted=438 taken=438 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.91 max_ms=12.59
+PERF capture.preview n=150 avg_ms=14.39 max_ms=21.94
+PERF capture.ir n=150 avg_ms=12.27 max_ms=18.60
+PERF capture.interval n=150 avg_ms=33.41 max_ms=45.00
+SCALE_PERF group=0 vpss=9.07 map=0.16 rotate=2.43 convert=3.38 release=0.08 ms
+SCALE_PERF group=1 vpss=7.96 map=0.47 rotate=3.92 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.11
+PERF ui.present n=147 avg_ms=9.91 max_ms=14.33
+PERF ui.process n=906 avg_ms=0.05 max_ms=3.81
+STATS elapsed=20 capture_fps=29.98 display_fps=29.38 frames=577 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.63 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.63 max_ms=9.30
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.56 max_ms=37.00
+PALM_QUEUE posted=588 taken=588 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.27 max_ms=10.22
+PERF capture.preview n=151 avg_ms=14.29 max_ms=21.58
+PERF capture.ir n=151 avg_ms=12.73 max_ms=20.52
+PERF capture.interval n=151 avg_ms=33.28 max_ms=43.00
+SCALE_PERF group=0 vpss=8.48 map=0.15 rotate=2.04 convert=3.28 release=0.13 ms
+SCALE_PERF group=1 vpss=7.98 map=0.30 rotate=4.02 convert=0.00 release=0.09 ms
+SCALE_PERF group=0 vpss=8.65 map=0.15 rotate=2.32 convert=3.13 release=0.08 ms
+SCALE_PERF group=1 vpss=8.08 map=0.31 rotate=3.89 convert=0.00 release=0.08 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.13 max_ms=14.77
+PERF ui.process n=906 avg_ms=0.07 max_ms=5.28
+STATS elapsed=25 capture_fps=30.00 display_fps=29.20 frames=727 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.79 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.79 max_ms=10.88
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.62 max_ms=39.00
+PALM_QUEUE posted=738 taken=738 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.58 max_ms=12.04
+PERF capture.preview n=150 avg_ms=14.64 max_ms=21.31
+PERF capture.ir n=150 avg_ms=12.27 max_ms=19.65
+PERF capture.interval n=150 avg_ms=33.32 max_ms=42.00
+SCALE_PERF group=0 vpss=8.48 map=0.16 rotate=2.63 convert=3.11 release=0.07 ms
+SCALE_PERF group=1 vpss=8.30 map=0.28 rotate=4.11 convert=0.00 release=0.08 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=148 avg_ms=9.89 max_ms=14.83
+PERF ui.process n=892 avg_ms=0.06 max_ms=5.08
+STATS elapsed=30 capture_fps=30.00 display_fps=29.60 frames=877 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.55 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.55 max_ms=10.38
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.62 max_ms=38.00
+PALM_QUEUE posted=888 taken=888 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=0.78 max_ms=12.82
+PERF capture.preview n=151 avg_ms=14.55 max_ms=21.29
+PERF capture.ir n=151 avg_ms=12.85 max_ms=20.40
+PERF capture.interval n=151 avg_ms=33.32 max_ms=44.00
+SCALE_PERF group=0 vpss=8.70 map=0.15 rotate=2.47 convert=3.54 release=0.12 ms
+SCALE_PERF group=1 vpss=8.27 map=0.40 rotate=3.75 convert=0.00 release=0.09 ms
+SCALE_PERF group=0 vpss=8.87 map=0.18 rotate=2.19 convert=3.11 release=0.10 ms
+SCALE_PERF group=1 vpss=7.85 map=0.35 rotate=4.19 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=9.73 max_ms=14.93
+PERF ui.process n=914 avg_ms=0.06 max_ms=6.74
+STATS elapsed=35 capture_fps=29.98 display_fps=29.38 frames=1027 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.90 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.90 max_ms=12.81
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.98
+PERF palm.age n=150 avg_ms=32.01 max_ms=41.00
+PALM_QUEUE posted=1038 taken=1038 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.60 max_ms=12.08
+PERF capture.preview n=151 avg_ms=15.17 max_ms=21.75
+PERF capture.ir n=151 avg_ms=12.05 max_ms=20.36
+PERF capture.interval n=151 avg_ms=33.33 max_ms=45.00
+SCALE_PERF group=0 vpss=9.20 map=0.16 rotate=2.68 convert=4.01 release=0.08 ms
+SCALE_PERF group=1 vpss=7.70 map=0.34 rotate=3.15 convert=0.00 release=0.18 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=148 avg_ms=9.74 max_ms=14.84
+PERF ui.process n=901 avg_ms=0.05 max_ms=4.66
+STATS elapsed=40 capture_fps=29.98 display_fps=29.58 frames=1177 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.77 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.77 max_ms=8.17
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.89 max_ms=39.00
+PALM_QUEUE posted=1188 taken=1188 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.23 max_ms=10.16
+PERF capture.preview n=150 avg_ms=15.61 max_ms=21.58
+PERF capture.ir n=150 avg_ms=12.01 max_ms=20.78
+PERF capture.interval n=150 avg_ms=33.33 max_ms=44.00
+SCALE_PERF group=0 vpss=8.94 map=0.15 rotate=2.62 convert=3.46 release=0.12 ms
+SCALE_PERF group=1 vpss=8.16 map=0.27 rotate=3.97 convert=0.00 release=0.10 ms
+SCALE_PERF group=0 vpss=8.52 map=0.18 rotate=2.21 convert=3.40 release=0.09 ms
+SCALE_PERF group=1 vpss=8.07 map=0.28 rotate=3.54 convert=0.00 release=0.15 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.26
+PERF ui.present n=146 avg_ms=9.49 max_ms=14.99
+PERF ui.process n=932 avg_ms=0.05 max_ms=2.56
+STATS elapsed=45 capture_fps=30.14 display_fps=29.14 frames=1328 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.68 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.68 max_ms=9.50
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.47 max_ms=38.00
+PALM_QUEUE posted=1338 taken=1338 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.74 max_ms=10.34
+PERF capture.preview n=151 avg_ms=14.11 max_ms=21.63
+PERF capture.ir n=151 avg_ms=12.71 max_ms=19.57
+PERF capture.interval n=151 avg_ms=33.31 max_ms=44.00
+SCALE_PERF group=0 vpss=8.44 map=0.15 rotate=2.10 convert=3.06 release=0.13 ms
+SCALE_PERF group=1 vpss=8.49 map=0.33 rotate=3.93 convert=0.00 release=0.21 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=147 avg_ms=10.15 max_ms=14.87
+PERF ui.process n=895 avg_ms=0.05 max_ms=2.44
+STATS elapsed=50 capture_fps=29.99 display_fps=29.39 frames=1478 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.58 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.58 max_ms=8.85
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.47 max_ms=38.00
+PALM_QUEUE posted=1488 taken=1488 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.41 max_ms=13.43
+PERF capture.preview n=151 avg_ms=14.37 max_ms=21.50
+PERF capture.ir n=151 avg_ms=12.77 max_ms=20.30
+PERF capture.interval n=151 avg_ms=33.35 max_ms=43.00
+SCALE_PERF group=0 vpss=8.76 map=0.15 rotate=2.32 convert=3.07 release=0.07 ms
+SCALE_PERF group=1 vpss=8.10 map=0.45 rotate=4.15 convert=0.00 release=0.16 ms
+SCALE_PERF group=0 vpss=8.86 map=0.16 rotate=2.36 convert=3.33 release=0.12 ms
+SCALE_PERF group=1 vpss=8.37 map=0.28 rotate=3.34 convert=0.00 release=0.12 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.42
+PERF ui.present n=147 avg_ms=9.93 max_ms=15.25
+PERF ui.process n=888 avg_ms=0.06 max_ms=10.07
+STATS elapsed=55 capture_fps=29.99 display_fps=29.39 frames=1628 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.84 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.84 max_ms=12.46
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.07
+PERF palm.age n=150 avg_ms=31.61 max_ms=40.00
+PALM_QUEUE posted=1638 taken=1638 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.82 max_ms=13.51
+PERF capture.preview n=151 avg_ms=14.93 max_ms=21.41
+PERF capture.ir n=151 avg_ms=11.73 max_ms=20.68
+PERF capture.interval n=151 avg_ms=33.25 max_ms=44.00
+SCALE_PERF group=0 vpss=8.92 map=0.15 rotate=2.24 convert=3.34 release=0.10 ms
+SCALE_PERF group=1 vpss=7.75 map=0.29 rotate=3.30 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.07
+PERF ui.present n=147 avg_ms=9.39 max_ms=14.93
+PERF ui.process n=907 avg_ms=0.05 max_ms=8.46
+STATS elapsed=60 capture_fps=29.99 display_fps=29.39 frames=1778 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.74 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.74 max_ms=11.02
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=30.96 max_ms=37.00
+PALM_QUEUE posted=1788 taken=1788 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=2.09 max_ms=13.27
+PERF capture.preview n=150 avg_ms=14.54 max_ms=21.40
+PERF capture.ir n=150 avg_ms=12.31 max_ms=20.10
+PERF capture.interval n=150 avg_ms=33.40 max_ms=44.00
+SCALE_PERF group=0 vpss=8.92 map=0.15 rotate=2.21 convert=3.26 release=0.11 ms
+SCALE_PERF group=1 vpss=8.11 map=0.31 rotate=4.01 convert=0.00 release=0.18 ms
+SCALE_PERF group=0 vpss=8.72 map=0.17 rotate=2.26 convert=3.32 release=0.16 ms
+SCALE_PERF group=1 vpss=8.04 map=0.19 rotate=3.47 convert=0.00 release=0.18 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.64 max_ms=15.01
+PERF ui.process n=903 avg_ms=0.06 max_ms=4.79
+STATS elapsed=65 capture_fps=29.99 display_fps=29.19 frames=1928 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=151 hits=0 infer_ms=2.86 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=151 avg_ms=2.86 max_ms=9.37
+PERF palm.access n=151 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=151 avg_ms=31.22 max_ms=37.00
+PALM_QUEUE posted=1939 taken=1939 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.97 max_ms=11.75
+PERF capture.preview n=150 avg_ms=14.59 max_ms=22.07
+PERF capture.ir n=150 avg_ms=11.89 max_ms=20.26
+PERF capture.interval n=150 avg_ms=33.34 max_ms=44.00
+SCALE_PERF group=0 vpss=8.60 map=0.16 rotate=2.18 convert=4.05 release=0.18 ms
+SCALE_PERF group=1 vpss=8.02 map=0.28 rotate=3.27 convert=0.00 release=0.11 ms
+PERF ui.render n=148 avg_ms=0.03 max_ms=2.61
+PERF ui.present n=148 avg_ms=8.72 max_ms=14.88
+PERF ui.process n=897 avg_ms=0.07 max_ms=6.98
+STATS elapsed=70 capture_fps=30.15 display_fps=29.55 frames=2079 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.68 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.68 max_ms=9.83
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.94
+PERF palm.age n=150 avg_ms=31.59 max_ms=40.00
+PALM_QUEUE posted=2089 taken=2089 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.41 max_ms=13.31
+PERF capture.preview n=151 avg_ms=15.09 max_ms=21.77
+PERF capture.ir n=151 avg_ms=12.01 max_ms=19.76
+PERF capture.interval n=151 avg_ms=33.26 max_ms=42.00
+SCALE_PERF group=0 vpss=8.28 map=0.29 rotate=2.80 convert=3.42 release=0.07 ms
+SCALE_PERF group=1 vpss=8.18 map=0.28 rotate=3.51 convert=0.00 release=0.08 ms
+SCALE_PERF group=0 vpss=9.11 map=0.16 rotate=2.66 convert=3.49 release=0.08 ms
+SCALE_PERF group=1 vpss=8.23 map=0.29 rotate=3.39 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=147 avg_ms=10.17 max_ms=15.02
+PERF ui.process n=872 avg_ms=0.07 max_ms=8.93
+STATS elapsed=75 capture_fps=30.00 display_fps=29.40 frames=2229 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.82 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.82 max_ms=11.44
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.52 max_ms=37.00
+PALM_QUEUE posted=2239 taken=2239 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.43 max_ms=12.83
+PERF capture.preview n=150 avg_ms=15.23 max_ms=21.56
+PERF capture.ir n=150 avg_ms=11.90 max_ms=18.98
+PERF capture.interval n=150 avg_ms=33.33 max_ms=43.00
+SCALE_PERF group=0 vpss=8.73 map=0.16 rotate=2.34 convert=3.26 release=0.13 ms
+SCALE_PERF group=1 vpss=8.07 map=0.32 rotate=3.61 convert=0.00 release=0.12 ms
+PERF ui.render n=147 avg_ms=0.03 max_ms=2.43
+PERF ui.present n=147 avg_ms=10.06 max_ms=14.80
+PERF ui.process n=894 avg_ms=0.06 max_ms=3.91
+STATS elapsed=80 capture_fps=29.99 display_fps=29.39 frames=2379 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.86 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.86 max_ms=10.96
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.63 max_ms=36.00
+PALM_QUEUE posted=2389 taken=2389 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.78 max_ms=13.10
+PERF capture.preview n=150 avg_ms=14.79 max_ms=21.69
+PERF capture.ir n=150 avg_ms=12.10 max_ms=18.64
+PERF capture.interval n=150 avg_ms=33.35 max_ms=45.00
+SCALE_PERF group=0 vpss=8.57 map=0.21 rotate=2.55 convert=3.12 release=0.21 ms
+SCALE_PERF group=1 vpss=8.04 map=0.34 rotate=3.42 convert=0.00 release=0.14 ms
+SCALE_PERF group=0 vpss=8.35 map=0.17 rotate=2.50 convert=3.41 release=0.08 ms
+SCALE_PERF group=1 vpss=8.26 map=0.32 rotate=3.62 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.14
+PERF ui.present n=147 avg_ms=8.94 max_ms=15.69
+PERF ui.process n=928 avg_ms=0.07 max_ms=7.36
+STATS elapsed=85 capture_fps=29.99 display_fps=29.39 frames=2529 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.83 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.83 max_ms=9.30
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.73 max_ms=39.00
+PALM_QUEUE posted=2539 taken=2539 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.25 max_ms=10.00
+PERF capture.preview n=151 avg_ms=14.47 max_ms=21.41
+PERF capture.ir n=151 avg_ms=12.35 max_ms=20.63
+PERF capture.interval n=151 avg_ms=33.24 max_ms=45.00
+SCALE_PERF group=0 vpss=8.36 map=0.15 rotate=2.39 convert=3.24 release=0.08 ms
+SCALE_PERF group=1 vpss=8.40 map=0.46 rotate=3.89 convert=0.02 release=0.11 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.12
+PERF ui.present n=147 avg_ms=10.18 max_ms=15.29
+PERF ui.process n=913 avg_ms=0.05 max_ms=4.70
+STATS elapsed=90 capture_fps=29.98 display_fps=29.38 frames=2679 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.43 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.43 max_ms=6.27
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.79 max_ms=39.00
+PALM_QUEUE posted=2689 taken=2689 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=0.55 max_ms=9.94
+PERF capture.preview n=150 avg_ms=14.04 max_ms=21.66
+PERF capture.ir n=150 avg_ms=13.34 max_ms=20.66
+PERF capture.interval n=150 avg_ms=33.37 max_ms=45.00
+SCALE_PERF group=0 vpss=8.30 map=0.15 rotate=2.39 convert=3.26 release=0.12 ms
+SCALE_PERF group=1 vpss=8.92 map=0.37 rotate=3.64 convert=0.03 release=0.12 ms
+SCALE_PERF group=0 vpss=8.38 map=0.16 rotate=2.19 convert=2.90 release=0.12 ms
+SCALE_PERF group=1 vpss=8.00 map=0.26 rotate=4.68 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=10.02 max_ms=15.37
+PERF ui.process n=886 avg_ms=0.06 max_ms=6.09
+STATS elapsed=95 capture_fps=30.00 display_fps=29.40 frames=2829 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.53 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.53 max_ms=7.53
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.97
+PERF palm.age n=150 avg_ms=31.37 max_ms=37.00
+PALM_QUEUE posted=2839 taken=2839 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=1.43 max_ms=12.30
+PERF capture.preview n=150 avg_ms=14.61 max_ms=21.54
+PERF capture.ir n=150 avg_ms=12.56 max_ms=20.46
+PERF capture.interval n=150 avg_ms=33.36 max_ms=44.00
+SCALE_PERF group=0 vpss=10.10 map=0.15 rotate=2.30 convert=3.04 release=0.10 ms
+SCALE_PERF group=1 vpss=7.97 map=0.26 rotate=3.12 convert=0.00 release=0.08 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=148 avg_ms=9.81 max_ms=14.76
+PERF ui.process n=905 avg_ms=0.06 max_ms=6.72
+STATS elapsed=100 capture_fps=29.98 display_fps=29.58 frames=2979 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.85 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.85 max_ms=10.86
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.59 max_ms=37.00
+PALM_QUEUE posted=2989 taken=2989 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.20 max_ms=13.92
+PERF capture.preview n=151 avg_ms=14.62 max_ms=21.45
+PERF capture.ir n=151 avg_ms=12.32 max_ms=20.35
+PERF capture.interval n=151 avg_ms=33.29 max_ms=45.00
+SCALE_PERF group=0 vpss=8.07 map=0.15 rotate=2.26 convert=3.82 release=0.09 ms
+SCALE_PERF group=1 vpss=7.97 map=0.37 rotate=4.37 convert=0.00 release=0.09 ms
+SCALE_PERF group=0 vpss=8.92 map=0.15 rotate=2.34 convert=3.42 release=0.12 ms
+SCALE_PERF group=1 vpss=7.79 map=0.31 rotate=3.02 convert=0.00 release=0.13 ms
+PERF ui.render n=147 avg_ms=0.03 max_ms=2.53
+PERF ui.present n=147 avg_ms=8.67 max_ms=14.89
+PERF ui.process n=910 avg_ms=0.06 max_ms=9.50
+STATS elapsed=105 capture_fps=29.99 display_fps=29.39 frames=3129 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.86 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.86 max_ms=9.38
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=30.91 max_ms=37.00
+PALM_QUEUE posted=3139 taken=3139 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=2.99 max_ms=14.59
+PERF capture.preview n=151 avg_ms=14.58 max_ms=21.49
+PERF capture.ir n=151 avg_ms=11.41 max_ms=19.30
+PERF capture.interval n=151 avg_ms=33.32 max_ms=43.00
+SCALE_PERF group=0 vpss=8.35 map=0.15 rotate=2.02 convert=3.76 release=0.12 ms
+SCALE_PERF group=1 vpss=8.07 map=0.35 rotate=3.55 convert=0.00 release=0.15 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.08
+PERF ui.present n=147 avg_ms=10.51 max_ms=14.52
+PERF ui.process n=865 avg_ms=0.05 max_ms=4.68
+STATS elapsed=110 capture_fps=29.99 display_fps=29.39 frames=3279 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=151 hits=0 infer_ms=2.57 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=151 avg_ms=2.57 max_ms=8.02
+PERF palm.access n=151 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=151 avg_ms=31.84 max_ms=39.00
+PALM_QUEUE posted=3290 taken=3290 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=0.84 max_ms=10.26
+PERF capture.preview n=150 avg_ms=15.20 max_ms=21.48
+PERF capture.ir n=150 avg_ms=12.64 max_ms=20.21
+PERF capture.interval n=150 avg_ms=33.33 max_ms=42.00
+SCALE_PERF group=0 vpss=8.71 map=0.16 rotate=2.46 convert=3.71 release=0.12 ms
+SCALE_PERF group=1 vpss=8.15 map=0.51 rotate=3.86 convert=0.07 release=0.11 ms
+SCALE_PERF group=0 vpss=8.63 map=0.17 rotate=2.46 convert=3.31 release=0.16 ms
+SCALE_PERF group=1 vpss=8.35 map=0.59 rotate=3.70 convert=0.03 release=0.15 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=9.12 max_ms=15.73
+PERF ui.process n=906 avg_ms=0.04 max_ms=2.40
+STATS elapsed=115 capture_fps=30.00 display_fps=29.40 frames=3429 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.91 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.91 max_ms=12.80
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.33 max_ms=39.00
+PALM_QUEUE posted=3440 taken=3440 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.67 max_ms=13.36
+PERF capture.preview n=151 avg_ms=13.87 max_ms=21.21
+PERF capture.ir n=151 avg_ms=12.60 max_ms=20.27
+PERF capture.interval n=151 avg_ms=33.26 max_ms=47.00
+SCALE_PERF group=0 vpss=8.06 map=0.15 rotate=2.14 convert=3.26 release=0.09 ms
+SCALE_PERF group=1 vpss=7.74 map=0.31 rotate=4.11 convert=0.00 release=0.08 ms
+PERF ui.render n=149 avg_ms=0.01 max_ms=0.10
+PERF ui.present n=149 avg_ms=9.21 max_ms=14.73
+PERF ui.process n=905 avg_ms=0.05 max_ms=2.02
+STATS elapsed=120 capture_fps=30.19 display_fps=29.79 frames=3580 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.69 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.69 max_ms=10.73
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.60 max_ms=39.00
+PALM_QUEUE posted=3590 taken=3590 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.86 map=0.15 rotate=2.57 convert=3.03 release=0.09 ms
+SCALE_PERF group=1 vpss=7.83 map=0.44 rotate=3.77 convert=0.00 release=0.12 ms
+PERF capture.vi n=150 avg_ms=1.66 max_ms=14.76
+PERF capture.preview n=150 avg_ms=14.88 max_ms=21.37
+PERF capture.ir n=150 avg_ms=12.29 max_ms=18.59
+PERF capture.interval n=150 avg_ms=33.36 max_ms=48.00
+SCALE_PERF group=0 vpss=8.76 map=0.16 rotate=2.25 convert=3.03 release=0.10 ms
+SCALE_PERF group=1 vpss=8.24 map=0.37 rotate=4.01 convert=0.00 release=0.08 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.02 max_ms=14.42
+PERF ui.process n=932 avg_ms=0.06 max_ms=4.91
+STATS elapsed=125 capture_fps=29.78 display_fps=29.18 frames=3729 page=0 eth=1
+[I][pva] right hand
+
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.65 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.65 max_ms=8.00
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.77 max_ms=37.00
+PALM_QUEUE posted=3740 taken=3740 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.51 max_ms=10.21
+PERF capture.preview n=151 avg_ms=14.17 max_ms=21.60
+PERF capture.ir n=151 avg_ms=12.78 max_ms=20.27
+PERF capture.interval n=151 avg_ms=33.36 max_ms=42.00
+SCALE_PERF group=0 vpss=8.01 map=0.16 rotate=2.41 convert=3.17 release=0.13 ms
+SCALE_PERF group=1 vpss=7.96 map=0.51 rotate=4.34 convert=0.00 release=0.10 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=148 avg_ms=8.83 max_ms=13.91
+PERF ui.process n=907 avg_ms=0.06 max_ms=5.94
+STATS elapsed=130 capture_fps=30.19 display_fps=29.59 frames=3880 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.57 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.57 max_ms=7.41
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.93 max_ms=39.00
+PALM_QUEUE posted=3890 taken=3890 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.52 map=0.17 rotate=2.64 convert=3.95 release=0.13 ms
+SCALE_PERF group=1 vpss=8.11 map=0.25 rotate=3.54 convert=0.00 release=0.09 ms
+PERF capture.vi n=151 avg_ms=1.05 max_ms=13.21
+PERF capture.preview n=151 avg_ms=14.94 max_ms=21.73
+PERF capture.ir n=151 avg_ms=12.36 max_ms=20.50
+PERF capture.interval n=151 avg_ms=33.29 max_ms=45.00
+SCALE_PERF group=0 vpss=7.90 map=0.22 rotate=2.57 convert=4.86 release=0.34 ms
+SCALE_PERF group=1 vpss=7.76 map=0.26 rotate=3.26 convert=0.00 release=0.11 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=147 avg_ms=10.16 max_ms=27.34
+PERF ui.process n=856 avg_ms=0.07 max_ms=5.22
+STATS elapsed=135 capture_fps=29.95 display_fps=29.35 frames=4030 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.71 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.71 max_ms=10.39
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.84
+PERF palm.age n=150 avg_ms=32.07 max_ms=42.00
+PALM_QUEUE posted=4040 taken=4040 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=0.43 max_ms=10.15
+PERF capture.preview n=150 avg_ms=16.08 max_ms=25.33
+PERF capture.ir n=150 avg_ms=11.48 max_ms=20.50
+PERF capture.interval n=150 avg_ms=33.35 max_ms=44.00
+SCALE_PERF group=0 vpss=8.46 map=0.15 rotate=2.85 convert=3.37 release=0.13 ms
+SCALE_PERF group=1 vpss=7.82 map=0.26 rotate=3.92 convert=0.00 release=0.13 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.12
+PERF ui.present n=146 avg_ms=8.72 max_ms=14.65
+PERF ui.process n=926 avg_ms=0.05 max_ms=5.31
+STATS elapsed=140 capture_fps=29.99 display_fps=29.19 frames=4180 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.70 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.70 max_ms=9.69
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.94
+PERF palm.age n=150 avg_ms=30.94 max_ms=38.00
+PALM_QUEUE posted=4190 taken=4190 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.16 map=0.15 rotate=2.40 convert=3.00 release=0.13 ms
+SCALE_PERF group=1 vpss=8.28 map=0.37 rotate=4.16 convert=0.00 release=0.11 ms
+PERF capture.vi n=150 avg_ms=1.41 max_ms=13.51
+PERF capture.preview n=150 avg_ms=13.69 max_ms=21.31
+PERF capture.ir n=150 avg_ms=12.91 max_ms=19.37
+PERF capture.interval n=150 avg_ms=33.29 max_ms=42.00
+SCALE_PERF group=0 vpss=9.24 map=0.16 rotate=2.52 convert=3.67 release=0.08 ms
+SCALE_PERF group=1 vpss=7.92 map=0.23 rotate=3.35 convert=0.00 release=0.09 ms
+PERF ui.render n=148 avg_ms=0.03 max_ms=2.36
+PERF ui.present n=148 avg_ms=9.60 max_ms=14.38
+PERF ui.process n=890 avg_ms=0.05 max_ms=5.80
+STATS elapsed=145 capture_fps=29.99 display_fps=29.59 frames=4330 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=151 hits=0 infer_ms=2.91 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=151 avg_ms=2.91 max_ms=9.89
+PERF palm.access n=151 avg_ms=0.01 max_ms=0.94
+PERF palm.age n=151 avg_ms=31.67 max_ms=40.00
+PALM_QUEUE posted=4341 taken=4341 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.53 max_ms=10.61
+PERF capture.preview n=151 avg_ms=14.94 max_ms=21.34
+PERF capture.ir n=151 avg_ms=12.02 max_ms=19.21
+PERF capture.interval n=151 avg_ms=33.34 max_ms=43.00
+SCALE_PERF group=0 vpss=8.26 map=0.15 rotate=2.14 convert=3.00 release=0.11 ms
+SCALE_PERF group=1 vpss=8.11 map=0.29 rotate=4.67 convert=0.00 release=0.19 ms
+PERF ui.render n=147 avg_ms=0.03 max_ms=2.48
+PERF ui.present n=147 avg_ms=9.78 max_ms=14.16
+PERF ui.process n=910 avg_ms=0.05 max_ms=5.30
+STATS elapsed=150 capture_fps=30.00 display_fps=29.40 frames=4480 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.55 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.55 max_ms=9.32
+PERF palm.access n=150 avg_ms=0.02 max_ms=2.37
+PERF palm.age n=150 avg_ms=31.38 max_ms=39.00
+PALM_QUEUE posted=4491 taken=4491 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.71 map=0.15 rotate=2.32 convert=3.60 release=0.11 ms
+SCALE_PERF group=1 vpss=8.03 map=0.23 rotate=3.70 convert=0.00 release=0.08 ms
+PERF capture.vi n=151 avg_ms=1.48 max_ms=13.01
+PERF capture.preview n=151 avg_ms=14.61 max_ms=22.04
+PERF capture.ir n=151 avg_ms=12.57 max_ms=20.52
+PERF capture.interval n=151 avg_ms=33.25 max_ms=45.00
+SCALE_PERF group=0 vpss=8.32 map=0.15 rotate=2.16 convert=3.14 release=0.15 ms
+SCALE_PERF group=1 vpss=7.79 map=0.25 rotate=4.26 convert=0.00 release=0.20 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=9.52 max_ms=14.21
+PERF ui.process n=913 avg_ms=0.07 max_ms=8.68
+STATS elapsed=155 capture_fps=29.99 display_fps=29.39 frames=4630 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.80 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.80 max_ms=10.82
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.07
+PERF palm.age n=150 avg_ms=31.44 max_ms=37.00
+PALM_QUEUE posted=4641 taken=4641 replaced=0 depth=0
+PERF capture.vi n=150 avg_ms=2.25 max_ms=13.31
+PERF capture.preview n=150 avg_ms=13.97 max_ms=21.96
+PERF capture.ir n=150 avg_ms=12.54 max_ms=20.35
+PERF capture.interval n=150 avg_ms=33.36 max_ms=45.00
+SCALE_PERF group=0 vpss=8.66 map=0.15 rotate=2.03 convert=3.33 release=0.09 ms
+SCALE_PERF group=1 vpss=7.75 map=0.42 rotate=4.38 convert=0.08 release=0.09 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=148 avg_ms=9.37 max_ms=19.54
+PERF ui.process n=918 avg_ms=0.06 max_ms=9.03
+STATS elapsed=160 capture_fps=29.99 display_fps=29.59 frames=4780 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.58 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.58 max_ms=6.87
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.97
+PERF palm.age n=150 avg_ms=31.74 max_ms=39.00
+PALM_QUEUE posted=4791 taken=4791 replaced=0 depth=0
+SCALE_PERF group=0 vpss=9.28 map=0.15 rotate=2.62 convert=3.02 release=0.08 ms
+SCALE_PERF group=1 vpss=7.78 map=0.32 rotate=3.51 convert=0.00 release=0.18 ms
+PERF capture.vi n=150 avg_ms=1.15 max_ms=9.88
+PERF capture.preview n=150 avg_ms=14.98 max_ms=21.80
+PERF capture.ir n=150 avg_ms=12.24 max_ms=20.35
+PERF capture.interval n=150 avg_ms=33.33 max_ms=44.00
+SCALE_PERF group=0 vpss=8.50 map=0.15 rotate=2.22 convert=3.22 release=0.10 ms
+SCALE_PERF group=1 vpss=8.40 map=0.17 rotate=3.61 convert=0.00 release=0.10 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=146 avg_ms=10.04 max_ms=16.58
+PERF ui.process n=888 avg_ms=0.06 max_ms=5.58
+STATS elapsed=165 capture_fps=30.15 display_fps=29.15 frames=4931 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.81 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.81 max_ms=10.57
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.11 max_ms=38.00
+PALM_QUEUE posted=4941 taken=4941 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.82 max_ms=14.13
+PERF capture.preview n=151 avg_ms=14.14 max_ms=21.60
+PERF capture.ir n=151 avg_ms=12.27 max_ms=19.27
+PERF capture.interval n=151 avg_ms=33.34 max_ms=43.00
+SCALE_PERF group=0 vpss=8.23 map=0.15 rotate=1.92 convert=3.17 release=0.09 ms
+SCALE_PERF group=1 vpss=8.31 map=0.43 rotate=4.33 convert=0.00 release=0.09 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=9.70 max_ms=14.22
+PERF ui.process n=921 avg_ms=0.05 max_ms=4.15
+STATS elapsed=170 capture_fps=29.98 display_fps=29.38 frames=5081 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.77 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.77 max_ms=9.82
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.32 max_ms=38.00
+PALM_QUEUE posted=5091 taken=5091 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.69 map=0.16 rotate=2.30 convert=3.35 release=0.17 ms
+SCALE_PERF group=1 vpss=7.84 map=0.39 rotate=3.37 convert=0.00 release=0.14 ms
+PERF capture.vi n=150 avg_ms=1.99 max_ms=11.30
+PERF capture.preview n=150 avg_ms=13.99 max_ms=21.48
+PERF capture.ir n=150 avg_ms=12.82 max_ms=23.67
+PERF capture.interval n=150 avg_ms=33.34 max_ms=43.00
+SCALE_PERF group=0 vpss=8.17 map=0.15 rotate=2.65 convert=3.16 release=0.20 ms
+SCALE_PERF group=1 vpss=8.50 map=0.52 rotate=3.92 convert=0.00 release=0.08 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.10
+PERF ui.present n=148 avg_ms=10.13 max_ms=14.88
+PERF ui.process n=896 avg_ms=0.05 max_ms=4.06
+STATS elapsed=175 capture_fps=29.99 display_fps=29.59 frames=5231 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.62 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.62 max_ms=9.83
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.89 max_ms=40.00
+PALM_QUEUE posted=5241 taken=5241 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.22 max_ms=12.98
+PERF capture.preview n=151 avg_ms=14.54 max_ms=21.32
+PERF capture.ir n=151 avg_ms=12.84 max_ms=20.15
+PERF capture.interval n=151 avg_ms=33.25 max_ms=43.00
+SCALE_PERF group=0 vpss=8.36 map=0.16 rotate=2.40 convert=3.45 release=0.07 ms
+SCALE_PERF group=1 vpss=8.14 map=0.40 rotate=3.75 convert=0.00 release=0.10 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=147 avg_ms=8.99 max_ms=15.48
+PERF ui.process n=924 avg_ms=0.06 max_ms=6.14
+STATS elapsed=180 capture_fps=29.99 display_fps=29.39 frames=5381 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.66 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.66 max_ms=8.38
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.94
+PERF palm.age n=150 avg_ms=31.65 max_ms=39.00
+PALM_QUEUE posted=5391 taken=5391 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.54 map=0.15 rotate=2.24 convert=3.54 release=0.09 ms
+SCALE_PERF group=1 vpss=8.04 map=0.30 rotate=3.92 convert=0.00 release=0.23 ms
+PERF capture.vi n=150 avg_ms=1.47 max_ms=12.88
+PERF capture.preview n=150 avg_ms=14.58 max_ms=21.28
+PERF capture.ir n=150 avg_ms=12.26 max_ms=20.24
+PERF capture.interval n=150 avg_ms=33.37 max_ms=44.00
+SCALE_PERF group=0 vpss=9.26 map=0.16 rotate=2.31 convert=3.30 release=0.10 ms
+SCALE_PERF group=1 vpss=8.19 map=0.26 rotate=3.19 convert=0.00 release=0.17 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=147 avg_ms=9.35 max_ms=14.82
+PERF ui.process n=909 avg_ms=0.05 max_ms=3.96
+STATS elapsed=185 capture_fps=29.98 display_fps=29.38 frames=5531 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.83 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.83 max_ms=9.36
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.24 max_ms=38.00
+PALM_QUEUE posted=5541 taken=5541 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.96 max_ms=13.80
+PERF capture.preview n=151 avg_ms=14.76 max_ms=21.76
+PERF capture.ir n=151 avg_ms=11.93 max_ms=20.39
+PERF capture.interval n=151 avg_ms=33.32 max_ms=42.00
+SCALE_PERF group=0 vpss=8.39 map=0.16 rotate=2.00 convert=3.40 release=0.08 ms
+SCALE_PERF group=1 vpss=8.24 map=0.27 rotate=3.99 convert=0.00 release=0.10 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.10
+PERF ui.present n=148 avg_ms=10.41 max_ms=14.55
+PERF ui.process n=894 avg_ms=0.05 max_ms=3.10
+STATS elapsed=190 capture_fps=30.13 display_fps=29.54 frames=5682 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.39 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.39 max_ms=4.64
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.69 max_ms=37.00
+PALM_QUEUE posted=5691 taken=5691 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.06 map=0.18 rotate=2.10 convert=3.03 release=0.15 ms
+SCALE_PERF group=1 vpss=8.22 map=0.28 rotate=4.99 convert=0.09 release=0.12 ms
+PERF capture.vi n=151 avg_ms=1.49 max_ms=13.53
+PERF capture.preview n=151 avg_ms=13.72 max_ms=20.98
+PERF capture.ir n=151 avg_ms=13.47 max_ms=18.65
+PERF capture.interval n=151 avg_ms=33.28 max_ms=43.00
+SCALE_PERF group=0 vpss=8.08 map=0.15 rotate=2.06 convert=2.99 release=0.12 ms
+SCALE_PERF group=1 vpss=8.57 map=0.26 rotate=4.31 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=10.15 max_ms=15.10
+PERF ui.process n=897 avg_ms=0.05 max_ms=3.98
+STATS elapsed=195 capture_fps=30.00 display_fps=29.40 frames=5832 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.71 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.71 max_ms=6.84
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.06
+PERF palm.age n=150 avg_ms=31.38 max_ms=39.00
+PALM_QUEUE posted=5841 taken=5841 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=2.05 max_ms=13.79
+PERF capture.preview n=151 avg_ms=13.69 max_ms=21.64
+PERF capture.ir n=151 avg_ms=12.85 max_ms=20.30
+PERF capture.interval n=151 avg_ms=33.32 max_ms=46.00
+SCALE_PERF group=0 vpss=9.01 map=0.16 rotate=2.23 convert=3.58 release=0.11 ms
+SCALE_PERF group=1 vpss=7.64 map=0.23 rotate=3.30 convert=0.00 release=0.08 ms
+PERF ui.render n=148 avg_ms=0.03 max_ms=2.44
+PERF ui.present n=148 avg_ms=9.15 max_ms=14.71
+PERF ui.process n=886 avg_ms=0.06 max_ms=3.95
+STATS elapsed=200 capture_fps=29.96 display_fps=29.56 frames=5982 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=151 hits=0 infer_ms=3.07 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=151 avg_ms=3.07 max_ms=11.82
+PERF palm.access n=151 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=151 avg_ms=31.09 max_ms=38.00
+PALM_QUEUE posted=5992 taken=5992 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.36 map=0.17 rotate=2.08 convert=3.63 release=0.17 ms
+SCALE_PERF group=1 vpss=7.66 map=0.23 rotate=4.15 convert=0.00 release=0.14 ms
+PERF capture.vi n=150 avg_ms=2.14 max_ms=12.98
+PERF capture.preview n=150 avg_ms=14.86 max_ms=22.03
+PERF capture.ir n=150 avg_ms=11.66 max_ms=18.60
+PERF capture.interval n=150 avg_ms=33.33 max_ms=45.00
+SCALE_PERF group=0 vpss=8.35 map=0.18 rotate=2.23 convert=3.47 release=0.13 ms
+SCALE_PERF group=1 vpss=8.04 map=0.34 rotate=3.74 convert=0.00 release=0.18 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=147 avg_ms=9.46 max_ms=14.52
+PERF ui.process n=894 avg_ms=0.05 max_ms=6.68
+STATS elapsed=205 capture_fps=29.99 display_fps=29.39 frames=6132 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.68 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.68 max_ms=10.17
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.63 max_ms=40.00
+PALM_QUEUE posted=6142 taken=6142 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.33 max_ms=10.78
+PERF capture.preview n=151 avg_ms=14.21 max_ms=21.36
+PERF capture.ir n=151 avg_ms=12.86 max_ms=20.43
+PERF capture.interval n=151 avg_ms=33.36 max_ms=42.00
+SCALE_PERF group=0 vpss=8.57 map=0.15 rotate=2.16 convert=3.36 release=0.15 ms
+SCALE_PERF group=1 vpss=8.44 map=0.36 rotate=3.77 convert=0.00 release=0.09 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=147 avg_ms=9.61 max_ms=14.85
+PERF ui.process n=903 avg_ms=0.06 max_ms=9.09
+STATS elapsed=210 capture_fps=29.99 display_fps=29.39 frames=6282 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.80 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.80 max_ms=11.37
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.04
+PERF palm.age n=150 avg_ms=31.05 max_ms=37.00
+PALM_QUEUE posted=6292 taken=6292 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.77 map=0.15 rotate=2.44 convert=3.31 release=0.12 ms
+SCALE_PERF group=1 vpss=7.96 map=0.19 rotate=3.44 convert=0.00 release=0.11 ms
+PERF capture.vi n=151 avg_ms=2.10 max_ms=13.11
+PERF capture.preview n=151 avg_ms=14.81 max_ms=21.40
+PERF capture.ir n=151 avg_ms=11.56 max_ms=20.42
+PERF capture.interval n=151 avg_ms=33.34 max_ms=44.00
+[I][pva] right hand
+
+SCALE_PERF group=0 vpss=8.63 map=0.21 rotate=3.02 convert=3.22 release=0.10 ms
+SCALE_PERF group=1 vpss=8.26 map=0.17 rotate=3.97 convert=0.00 release=0.14 ms
+PERF ui.render n=147 avg_ms=0.02 max_ms=0.81
+PERF ui.present n=147 avg_ms=9.52 max_ms=22.01
+PERF ui.process n=912 avg_ms=0.06 max_ms=5.02
+STATS elapsed=215 capture_fps=29.98 display_fps=29.38 frames=6432 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.48 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.48 max_ms=8.39
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=32.26 max_ms=43.00
+PALM_QUEUE posted=6442 taken=6442 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.00 max_ms=11.09
+PERF capture.preview n=151 avg_ms=14.49 max_ms=22.25
+PERF capture.ir n=151 avg_ms=13.17 max_ms=21.06
+PERF capture.interval n=151 avg_ms=33.34 max_ms=46.00
+SCALE_PERF group=0 vpss=8.32 map=0.15 rotate=2.41 convert=3.03 release=0.09 ms
+SCALE_PERF group=1 vpss=7.78 map=0.44 rotate=4.11 convert=0.00 release=0.13 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.06
+PERF ui.present n=148 avg_ms=9.50 max_ms=14.72
+PERF ui.process n=903 avg_ms=0.05 max_ms=2.51
+STATS elapsed=220 capture_fps=30.16 display_fps=29.56 frames=6583 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.91 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.91 max_ms=9.41
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.84
+PERF palm.age n=150 avg_ms=31.51 max_ms=39.00
+PALM_QUEUE posted=6592 taken=6592 replaced=0 depth=0
+SCALE_PERF group=0 vpss=8.31 map=0.27 rotate=2.15 convert=3.76 release=0.08 ms
+SCALE_PERF group=1 vpss=7.69 map=0.49 rotate=4.41 convert=0.00 release=0.09 ms
+PERF capture.vi n=151 avg_ms=1.84 max_ms=13.56
+PERF capture.preview n=151 avg_ms=14.70 max_ms=21.43
+PERF capture.ir n=151 avg_ms=12.21 max_ms=20.40
+PERF capture.interval n=151 avg_ms=33.30 max_ms=45.00
+SCALE_PERF group=0 vpss=8.58 map=0.15 rotate=2.45 convert=3.57 release=0.10 ms
+SCALE_PERF group=1 vpss=7.96 map=0.27 rotate=3.53 convert=0.00 release=0.08 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=9.41 max_ms=14.61
+PERF ui.process n=921 avg_ms=0.05 max_ms=3.76
+STATS elapsed=225 capture_fps=29.98 display_fps=29.38 frames=6733 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.79 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.79 max_ms=9.70
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.59 max_ms=37.00
+PALM_QUEUE posted=6742 taken=6742 replaced=0 depth=0
+PERF capture.vi n=151 avg_ms=1.55 max_ms=11.75
+PERF capture.preview n=151 avg_ms=15.24 max_ms=21.65
+PERF capture.ir n=151 avg_ms=11.79 max_ms=19.23
+PERF capture.interval n=151 avg_ms=33.27 max_ms=45.00
+SCALE_PERF group=0 vpss=8.80 map=0.16 rotate=2.29 convert=3.66 release=0.12 ms
+SCALE_PERF group=1 vpss=7.94 map=0.37 rotate=3.89 convert=0.00 release=0.12 ms
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -17.158373
+
+[I][pva] second stage handpose ok, cropRot=465x834, rect=(135,426,274,538)
+
+IR_AE found=1 status=1 reason=restore_success target=56->28 settle_ms=500
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=37
+PALM_DRAW visible=1 misses=0 result_age_ms=20
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=33
+PALM_DRAW visible=0 misses=3 result_age_ms=121
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.028263
+
+[I][pva] second stage handpose ok, cropRot=496x786, rect=(221,380,316,481)
+
+[I][pva] angle is -1.753405 
+
+PALM_QUALITY found=1 status=7 sample=red raw_found=1 age_ms=48
+PALM_DRAW visible=1 misses=0 result_age_ms=11
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=513x769, rect=(248,372,313,555)
+
+[I][pva] angle is -23.056593 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 3.865461
+
+[I][pva] second stage handpose ok, cropRot=501x658, rect=(256,293,322,477)
+
+[I][pva] angle is -25.129967 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=186
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.954248
+
+[I][pva] second stage handpose ok, cropRot=500x816, rect=(246,306,295,536)
+
+[I][pva] angle is -3.756453 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.017093
+
+[I][pva] second stage handpose ok, cropRot=480x850, rect=(244,309,273,567)
+
+[I][pva] angle is -17.250944 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.140901
+
+[I][pva] second stage handpose ok, cropRot=499x723, rect=(241,291,282,482)
+
+[I][pva] angle is -6.659208 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.184916
+
+[I][pva] second stage handpose ok, cropRot=469x816, rect=(236,310,261,564)
+
+[I][pva] angle is -9.972057 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.028263
+
+[I][pva] second stage handpose ok, cropRot=496x834, rect=(244,300,292,510)
+
+[I][pva] angle is -5.826342 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.101655
+
+[I][pva] second stage handpose ok, cropRot=507x834, rect=(243,300,282,510)
+
+[I][pva] angle is -12.867104 
+
+ACCESS match uuid=0 score=0.6263
+PALM_SESSION success_hold features=10 auth=2
+IR_AE recognition_success target=28 luma=35 time_us=5125 gain=1024/1024/1024
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.140901
+
+[I][pva] second stage handpose ok, cropRot=507x787, rect=(230,326,321,606)
+
+[I][pva] angle is -26.104853 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.022687
+
+[I][pva] second stage handpose ok, cropRot=487x897, rect=(239,319,277,558)
+
+[I][pva] angle is -10.278719 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.980599
+
+[I][pva] second stage handpose ok, cropRot=480x915, rect=(242,323,278,580)
+
+[I][pva] angle is -12.464932 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+[I][pva] second stage handpose ok, cropRot=505x850, rect=(246,316,291,549)
+
+[I][pva] angle is -5.453919 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.936167
+
+[I][pva] second stage handpose ok, cropRot=528x868, rect=(266,316,331,522)
+
+[I][pva] angle is -5.364158 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=525x882, rect=(236,318,338,540)
+
+[I][pva] angle is -26.231937 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.162989
+
+[I][pva] second stage handpose ok, cropRot=513x915, rect=(260,333,313,550)
+
+[I][pva] angle is -8.130102 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.039254
+
+[I][pva] second stage handpose ok, cropRot=496x834, rect=(257,336,296,520)
+
+[I][pva] angle is -3.794672 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.954248
+
+[I][pva] second stage handpose ok, cropRot=487x820, rect=(241,330,282,566)
+
+[I][pva] angle is -3.557852 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.839141
+
+[I][pva] second stage handpose ok, cropRot=514x816, rect=(255,338,297,536)
+
+[I][pva] angle is 3.873490 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.936167
+
+[I][pva] second stage handpose ok, cropRot=507x820, rect=(238,375,309,420)
+
+[I][pva] angle is 3.700543 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.009501
+
+[I][pva] second stage handpose ok, cropRot=514x834, rect=(250,378,332,418)
+
+[I][pva] angle is 7.159080 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=505x804, rect=(242,374,303,537)
+
+[I][pva] angle is -20.684080 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 5.659481
+
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.03
+PERF ui.present n=146 avg_ms=10.64 max_ms=25.56
+PERF ui.process n=862 avg_ms=0.08 max_ms=7.55
+STATS elapsed=230 capture_fps=29.97 display_fps=29.17 frames=6883 page=0 eth=1
+[I][pva] second stage handpose ok, cropRot=539x739, rect=(273,372,327,477)
+
+[I][pva] angle is -21.412970 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=51
+PALM_DRAW visible=0 misses=3 result_age_ms=86
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=114 hits=24 infer_ms=3.49 state=1
+PALM_PIPELINE features=24 auth=2 held=14 present=1 entry=0 missing=5 success_hold=1
+PERF palm.detect n=114 avg_ms=3.49 max_ms=16.21
+PERF palm.access n=114 avg_ms=15.73 max_ms=215.89
+PERF palm.age n=114 avg_ms=51.04 max_ms=271.00
+PALM_QUEUE posted=6892 taken=6856 replaced=36 depth=0
+SCALE_PERF group=0 vpss=8.08 map=0.20 rotate=2.60 convert=3.41 release=0.12 ms
+SCALE_PERF group=1 vpss=7.75 map=0.17 rotate=3.25 convert=0.00 release=0.16 ms
+PALM_SESSION left false_frames=20 success_hold=1 features=24 auth=2 held=14
+[I][pva] left hand
+
+PERF capture.vi n=150 avg_ms=2.73 max_ms=14.84
+PERF capture.preview n=150 avg_ms=14.27 max_ms=22.52
+PERF capture.ir n=150 avg_ms=11.97 max_ms=20.69
+PERF capture.interval n=150 avg_ms=33.35 max_ms=45.00
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is 2.140901
+
+[I][pva] second stage handpose ok, cropRot=535x630, rect=(269,320,296,427)
+
+[I][pva] angle is -17.904448 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=193
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=31
+PALM_DRAW visible=1 misses=1 result_age_ms=4
+PALM_DRAW visible=0 misses=3 result_age_ms=71
+[I][pva] left hand
+
+[I][pva] second stage angle is 1.873493
+
+[I][pva] second stage handpose ok, cropRot=496x690, rect=(236,356,303,376)
+
+[I][pva] angle is -15.708637 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=184
+PALM_DRAW visible=1 misses=0 result_age_ms=1
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=514x769, rect=(258,408,296,506)
+
+[I][pva] angle is -18.262888 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 3.691386
+
+[I][pva] second stage handpose ok, cropRot=509x741, rect=(252,381,318,486)
+
+[I][pva] angle is -22.350872 
+
+ACCESS match uuid=0 score=0.7932
+PALM_SESSION success_hold features=28 auth=5
+IR_AE recognition_success target=28 luma=33 time_us=4948 gain=1024/1024/1024
+[I][pva] left hand
+
+[I][pva] second stage angle is 4.184916
+
+[I][pva] second stage handpose ok, cropRot=496x756, rect=(247,381,313,506)
+
+[I][pva] angle is -27.390240 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.954248
+
+[I][pva] second stage handpose ok, cropRot=496x820, rect=(250,356,331,475)
+
+[I][pva] angle is 3.718994 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.814192
+
+[I][pva] second stage handpose ok, cropRot=505x786, rect=(250,368,325,428)
+
+[I][pva] angle is 5.042451 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.865461
+
+[I][pva] second stage handpose ok, cropRot=488x769, rect=(231,366,304,435)
+
+[I][pva] angle is 3.485791 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=501x739, rect=(247,389,283,411)
+
+[I][pva] angle is -11.698937 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.936167
+
+[I][pva] second stage handpose ok, cropRot=507x816, rect=(253,373,321,418)
+
+[I][pva] angle is 3.646271 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 8.488944
+
+[I][pva] second stage handpose ok, cropRot=499x852, rect=(240,376,345,493)
+
+[I][pva] angle is -31.657166 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=68
+[I][pva] left hand
+
+[I][pva] second stage angle is 3.954248
+
+[I][pva] second stage handpose ok, cropRot=540x786, rect=(243,368,336,481)
+
+[I][pva] angle is -22.131504 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=239
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.835373
+
+[I][pva] second stage handpose ok, cropRot=433x787, rect=(112,384,254,579)
+
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=65
+[I][pva] isInvalid5 is false
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=33
+PALM_DRAW visible=0 misses=3 result_age_ms=87
+SCALE_PERF group=0 vpss=8.06 map=0.18 rotate=2.21 convert=3.48 release=0.13 ms
+SCALE_PERF group=1 vpss=7.70 map=0.19 rotate=3.49 convert=0.00 release=0.10 ms
+PALM_SESSION left false_frames=20 success_hold=1 features=37 auth=5 held=23
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+PERF ui.render n=146 avg_ms=0.02 max_ms=1.72
+PERF ui.present n=146 avg_ms=10.36 max_ms=25.41
+PERF ui.process n=843 avg_ms=0.06 max_ms=5.01
+STATS elapsed=235 capture_fps=30.00 display_fps=29.20 frames=7033 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is 2.073150
+
+[I][pva] second stage handpose ok, cropRot=513x723, rect=(234,353,332,434)
+
+[I][pva] angle is -21.018597 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=201
+[I][pva] left hand
+
+[I][pva] second stage angle is 7.696051
+
+PALM_DRAW visible=1 misses=0 result_age_ms=19
+[I][pva] second stage handpose ok, cropRot=540x739, rect=(234,375,349,468)
+
+[I][pva] angle is -23.758682 
+
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=103 hits=15 infer_ms=2.99 state=2
+PALM_PIPELINE features=39 auth=6 held=23 present=1 entry=0 missing=0 success_hold=0
+PERF palm.detect n=103 avg_ms=2.99 max_ms=16.52
+PERF palm.access n=103 avg_ms=21.04 max_ms=388.87
+PERF palm.age n=103 avg_ms=54.40 max_ms=430.00
+PALM_QUEUE posted=7047 taken=6959 replaced=87 depth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.101655
+
+[I][pva] second stage handpose ok, cropRot=499x756, rect=(230,372,316,480)
+
+[I][pva] angle is -21.095957 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.762633
+
+[I][pva] second stage handpose ok, cropRot=507x756, rect=(218,369,297,470)
+
+[I][pva] angle is -11.363935 
+
+ACCESS match uuid=0 score=0.7511
+PALM_SESSION success_hold features=41 auth=8
+IR_AE recognition_success target=28 luma=29 time_us=4355 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=57
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.022687
+
+[I][pva] second stage handpose ok, cropRot=505x751, rect=(215,367,313,468)
+
+[I][pva] angle is -3.086489 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=57
+[I][pva] left hand
+
+[I][pva] second stage angle is 1.839141
+
+[I][pva] second stage handpose ok, cropRot=514x721, rect=(225,366,325,475)
+
+[I][pva] angle is -21.018597 
+
+PERF capture.vi n=151 avg_ms=3.09 max_ms=11.89
+PERF capture.preview n=151 avg_ms=14.33 max_ms=23.84
+PERF capture.ir n=151 avg_ms=11.41 max_ms=21.19
+PERF capture.interval n=151 avg_ms=33.32 max_ms=46.00
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=36
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.101655
+
+[I][pva] second stage handpose ok, cropRot=514x705, rect=(221,352,325,464)
+
+[I][pva] angle is -21.995794 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=222
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.839141
+
+[I][pva] second stage handpose ok, cropRot=507x751, rect=(222,367,321,451)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=514x756, rect=(225,387,313,489)
+
+[I][pva] angle is -20.902332 
+
+[I][pva] isInvalid5 is false
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=46
+[I][pva] isInvalid5 is false
+
+PALM_DRAW visible=0 misses=3 result_age_ms=82
+PALM_SESSION left false_frames=20 success_hold=1 features=46 auth=8 held=28
+SCALE_PERF group=0 vpss=7.95 map=0.24 rotate=2.54 convert=3.62 release=0.18 ms
+SCALE_PERF group=1 vpss=7.72 map=0.24 rotate=3.12 convert=0.00 release=0.13 ms
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is 5.789008
+
+[I][pva] second stage handpose ok, cropRot=540x705, rect=(261,363,332,384)
+
+[I][pva] angle is -20.961065 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=233
+[I][pva] left hand
+
+[I][pva] second stage angle is 5.896963
+
+PALM_DRAW visible=1 misses=0 result_age_ms=28
+[I][pva] second stage handpose ok, cropRot=540x723, rect=(263,353,349,434)
+
+[I][pva] angle is -24.863695 
+
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=10.59 max_ms=22.56
+PERF ui.process n=858 avg_ms=0.05 max_ms=2.65
+STATS elapsed=240 capture_fps=29.92 display_fps=29.32 frames=7183 page=0 eth=1
+ACCESS match uuid=0 score=0.6375
+PALM_SESSION success_hold features=48 auth=10
+IR_AE recognition_success target=28 luma=28 time_us=4414 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=52
+PALM_DRAW visible=0 misses=3 result_age_ms=80
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.077175
+
+[I][pva] second stage handpose ok, cropRot=540x960, rect=(213,513,289,769)
+
+[I][pva] angle is -24.020248 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=268
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=112 hits=10 infer_ms=3.18 state=2
+PALM_PIPELINE features=49 auth=10 held=29 present=1 entry=0 missing=0 success_hold=1
+PERF palm.detect n=112 avg_ms=3.18 max_ms=14.45
+PERF palm.access n=112 avg_ms=14.57 max_ms=258.88
+PERF palm.age n=112 avg_ms=47.52 max_ms=321.00
+PALM_QUEUE posted=7199 taken=7071 replaced=127 depth=1
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=40
+SCALE_PERF group=0 vpss=8.46 map=0.16 rotate=2.44 convert=3.54 release=0.17 ms
+PALM_DRAW visible=1 misses=1 result_age_ms=22
+SCALE_PERF group=1 vpss=8.09 map=0.24 rotate=3.78 convert=0.02 release=0.18 ms
+PALM_DRAW visible=0 misses=0 result_age_ms=14431823
+PERF capture.vi n=151 avg_ms=2.46 max_ms=12.77
+PERF capture.preview n=151 avg_ms=14.67 max_ms=28.20
+PERF capture.ir n=151 avg_ms=11.80 max_ms=19.15
+PERF capture.interval n=151 avg_ms=33.32 max_ms=43.00
+PALM_SESSION left false_frames=20 success_hold=1 features=49 auth=10 held=29
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -26.024540
+
+[I][pva] second stage handpose ok, cropRot=496x960, rect=(221,323,360,567)
+
+[I][pva] angle is 31.068308 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=238
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.965712
+
+PALM_DRAW visible=1 misses=0 result_age_ms=24
+[I][pva] second stage handpose ok, cropRot=480x900, rect=(264,286,297,600)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+PALM_QUALITY found=1 status=3 sample=red raw_found=1 age_ms=217
+[I][pva] left hand
+
+[I][pva] second stage angle is -21.422287
+
+[I][pva] second stage handpose ok, cropRot=468x960, rect=(283,267,302,555)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.662106
+
+[I][pva] second stage handpose ok, cropRot=462x915, rect=(229,283,266,630)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.719346
+
+[I][pva] second stage handpose ok, cropRot=460x900, rect=(228,293,276,640)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.158373
+
+[I][pva] second stage handpose ok, cropRot=468x868, rect=(230,282,276,579)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.875163
+
+[I][pva] second stage handpose ok, cropRot=462x769, rect=(223,301,282,592)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.725195
+
+[I][pva] second stage handpose ok, cropRot=478x834, rect=(242,326,282,454)
+
+[I][pva] angle is -18.707352 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=66
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.475759
+
+[I][pva] second stage handpose ok, cropRot=468x867, rect=(236,305,280,529)
+
+[I][pva] angle is -20.590727 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.158373
+
+[I][pva] second stage handpose ok, cropRot=468x897, rect=(235,323,270,590)
+
+[I][pva] angle is -19.093491 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.384508
+
+[I][pva] second stage handpose ok, cropRot=462x897, rect=(227,327,273,420)
+
+[I][pva] angle is -18.716269 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.830084
+
+[I][pva] second stage handpose ok, cropRot=468x850, rect=(233,306,265,538)
+
+[I][pva] angle is -16.236025 
+
+ACCESS match uuid=0 score=0.5694
+PALM_SESSION success_hold features=61 auth=13
+IR_AE recognition_success target=28 luma=28 time_us=4355 gain=1024/1024/1024
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.965712
+
+[I][pva] second stage handpose ok, cropRot=462x946, rect=(268,301,327,568)
+
+[I][pva] angle is 15.653922 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=462x850, rect=(225,319,267,426)
+
+[I][pva] angle is -16.493462 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=460x882, rect=(230,304,261,561)
+
+[I][pva] angle is -20.487015 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.143866
+
+[I][pva] second stage handpose ok, cropRot=469x832, rect=(236,303,280,554)
+
+[I][pva] angle is -21.037510 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.384508
+
+[I][pva] second stage handpose ok, cropRot=469x933, rect=(234,318,265,561)
+
+[I][pva] angle is -21.533924 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.700583
+
+[I][pva] second stage handpose ok, cropRot=480x900, rect=(253,300,331,540)
+
+[I][pva] angle is 13.276396 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.462321
+
+[I][pva] second stage handpose ok, cropRot=525x960, rect=(181,293,367,703)
+
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=54
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.676270
+
+[I][pva] second stage handpose ok, cropRot=532x960, rect=(148,312,356,663)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -24.421925
+
+SCALE_PERF group=0 vpss=7.91 map=0.20 rotate=2.12 convert=3.77 release=0.13 ms
+SCALE_PERF group=1 vpss=7.46 map=0.19 rotate=2.98 convert=0.00 release=0.15 ms
+[I][pva] second stage handpose ok, cropRot=441x820, rect=(183,260,319,476)
+
+[I][pva] angle is 18.693035 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=181
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=53
+PALM_DRAW visible=0 misses=3 result_age_ms=53
+PALM_SESSION left false_frames=20 success_hold=1 features=70 auth=13 held=38
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -35.356609
+
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.89 max_ms=20.45
+PERF ui.process n=877 avg_ms=0.08 max_ms=6.71
+STATS elapsed=245 capture_fps=30.12 display_fps=29.12 frames=7334 page=0 eth=1
+[I][pva] second stage handpose ok, cropRot=468x960, rect=(286,178,363,382)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=3 sample=red raw_found=1 age_ms=185
+PALM_DRAW visible=1 misses=0 result_age_ms=4
+[I][pva] left hand
+
+[I][pva] second stage angle is -26.024540
+
+[I][pva] second stage handpose ok, cropRot=487x895, rect=(300,215,384,496)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.075096
+
+[I][pva] second stage handpose ok, cropRot=462x867, rect=(227,234,262,562)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.075096
+
+[I][pva] second stage handpose ok, cropRot=480x834, rect=(226,236,289,549)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=469x690, rect=(228,230,270,523)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=469x690, rect=(228,230,270,523)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -22.526058
+
+[I][pva] second stage handpose ok, cropRot=468x706, rect=(256,227,307,511)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=107 hits=28 infer_ms=3.47 state=2
+PALM_PIPELINE features=77 auth=13 held=38 present=1 entry=0 missing=0 success_hold=0
+PERF palm.detect n=107 avg_ms=3.47 max_ms=14.36
+PERF palm.access n=107 avg_ms=19.31 max_ms=204.56
+PERF palm.age n=107 avg_ms=52.99 max_ms=244.00
+PALM_QUEUE posted=7349 taken=7178 replaced=170 depth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=469x706, rect=(230,235,277,550)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.965712
+
+[I][pva] second stage handpose ok, cropRot=469x879, rect=(272,227,303,546)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.662106
+
+[I][pva] second stage handpose ok, cropRot=462x834, rect=(227,284,262,500)
+
+[I][pva] angle is -19.276098 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=76
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x642, rect=(197,264,265,528)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+PALM_QUALITY found=1 status=3 sample=red raw_found=1 age_ms=76
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.929321
+
+[I][pva] second stage handpose ok, cropRot=460x816, rect=(230,275,261,536)
+
+[I][pva] TATUS_TOO_TOP , top_ratio is 0, ratio_treshold_w is 1
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.764194
+
+[I][pva] second stage handpose ok, cropRot=450x756, rect=(225,298,254,522)
+
+[I][pva] angle is -16.284924 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=65
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.929321
+
+[I][pva] second stage handpose ok, cropRot=469x769, rect=(241,310,265,513)
+
+[I][pva] angle is -16.272097 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.971722
+
+[I][pva] second stage handpose ok, cropRot=450x804, rect=(230,327,249,510)
+
+[I][pva] angle is -19.903749 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.105268
+
+[I][pva] second stage handpose ok, cropRot=417x804, rect=(212,333,254,456)
+
+[I][pva] angle is 4.159642 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.774509
+
+[I][pva] second stage handpose ok, cropRot=468x769, rect=(241,369,288,442)
+
+[I][pva] angle is -3.632951 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.789008
+
+[I][pva] second stage handpose ok, cropRot=487x658, rect=(226,331,282,454)
+
+[I][pva] angle is -5.916269 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.762633
+
+[I][pva] second stage handpose ok, cropRot=525x690, rect=(242,353,309,432)
+
+[I][pva] angle is -5.765134 
+
+PERF capture.vi n=151 avg_ms=3.94 max_ms=13.11
+PERF capture.preview n=151 avg_ms=13.75 max_ms=21.49
+PERF capture.ir n=151 avg_ms=11.38 max_ms=20.25
+PERF capture.interval n=151 avg_ms=33.33 max_ms=48.00
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=66
+[I][pva] left hand
+
+[I][pva] second stage angle is 1.873493
+
+[I][pva] second stage handpose ok, cropRot=525x705, rect=(254,363,296,433)
+
+[I][pva] angle is -20.790724 
+
+ACCESS match uuid=0 score=0.6554
+PALM_SESSION success_hold features=90 auth=16
+IR_AE recognition_success target=28 luma=30 time_us=4918 gain=1024/1024/1024
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=320
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.250340
+
+[I][pva] second stage handpose ok, cropRot=507x690, rect=(228,355,304,438)
+
+[I][pva] angle is -5.994092 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.009501
+
+[I][pva] second stage handpose ok, cropRot=532x640, rect=(228,325,325,434)
+
+[I][pva] angle is -6.663229 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.134410
+
+[I][pva] second stage handpose ok, cropRot=507x675, rect=(222,335,309,391)
+
+[I][pva] angle is -2.752486 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.134410
+
+[I][pva] second stage handpose ok, cropRot=505x640, rect=(221,317,309,369)
+
+[I][pva] angle is -2.862405 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.354221
+
+[I][pva] second stage handpose ok, cropRot=468x690, rect=(236,345,280,391)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.462179
+
+[I][pva] second stage handpose ok, cropRot=487x723, rect=(234,378,292,441)
+
+[I][pva] angle is -6.404353 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=36
+PALM_DRAW visible=0 misses=3 result_age_ms=87
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.413580
+
+[I][pva] second stage handpose ok, cropRot=496x723, rect=(223,372,297,457)
+
+[I][pva] angle is -3.212210 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=51
+PALM_DRAW visible=1 misses=0 result_age_ms=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.413580
+
+[I][pva] second stage handpose ok, cropRot=469x741, rect=(216,385,277,463)
+
+[I][pva] angle is -7.049178 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=496x723, rect=(232,361,291,409)
+
+[I][pva] angle is -3.212210 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.009501
+
+[I][pva] second stage handpose ok, cropRot=525x706, rect=(228,350,304,408)
+
+[I][pva] angle is -7.258030 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.980114
+
+[I][pva] second stage handpose ok, cropRot=507x690, rect=(236,363,304,462)
+
+[I][pva] angle is -4.551261 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.854454
+
+[I][pva] second stage handpose ok, cropRot=505x723, rect=(227,361,316,409)
+
+[I][pva] angle is -1.404027 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.210424
+
+[I][pva] second stage handpose ok, cropRot=478x705, rect=(242,352,282,399)
+
+[I][pva] angle is -3.330917 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.662106
+
+[I][pva] second stage handpose ok, cropRot=480x741, rect=(213,382,282,470)
+
+[I][pva] angle is -7.049178 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.618525
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(215,347,266,462)
+
+[I][pva] angle is -11.430302 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=480x690, rect=(236,353,282,432)
+
+[I][pva] angle is -4.813551 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.719346
+
+[I][pva] second stage handpose ok, cropRot=468x690, rect=(239,361,270,468)
+
+[I][pva] angle is -9.813519 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=468x739, rect=(237,357,265,452)
+
+[I][pva] angle is -10.713123 
+
+SCALE_PERF group=0 vpss=7.72 map=0.20 rotate=2.17 convert=3.42 release=0.24 ms
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.430220
+
+[I][pva] second stage handpose ok, cropRot=444x675, rect=(201,335,250,391)
+
+[I][pva] angle is -6.960962 
+
+SCALE_PERF group=1 vpss=7.61 map=0.17 rotate=3.91 convert=0.00 release=0.19 ms
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=53
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.854454
+
+[I][pva] second stage handpose ok, cropRot=480x705, rect=(234,347,277,448)
+
+[I][pva] angle is -13.017112 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=66
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.475759
+
+[I][pva] second stage handpose ok, cropRot=468x675, rect=(233,348,265,441)
+
+[I][pva] angle is -7.999984 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.671577
+
+[I][pva] second stage handpose ok, cropRot=460x690, rect=(237,342,261,462)
+
+[I][pva] angle is -14.774549 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -21.801409
+
+[I][pva] second stage handpose ok, cropRot=460x690, rect=(231,339,318,406)
+
+[I][pva] angle is 6.340192 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -21.748842
+
+[I][pva] second stage handpose ok, cropRot=442x739, rect=(229,360,274,442)
+
+[I][pva] angle is -3.617333 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -24.756313
+
+[I][pva] second stage handpose ok, cropRot=442x751, rect=(235,352,309,441)
+
+[I][pva] angle is 8.908998 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.313894
+
+[I][pva] second stage handpose ok, cropRot=462x786, rect=(240,365,266,438)
+
+[I][pva] angle is -7.471558 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.084257
+
+[I][pva] second stage handpose ok, cropRot=540x804, rect=(224,367,340,428)
+
+[I][pva] angle is -3.351331 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=32
+PALM_DRAW visible=0 misses=3 result_age_ms=94
+[I][pva] isInvalid1 is false
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -36.441120
+
+[I][pva] second stage handpose ok, cropRot=540x834, rect=(293,336,408,464)
+
+[I][pva] angle is 56.074471 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=217
+[I][pva] left hand
+
+[I][pva] second stage angle is 27.582027
+
+PALM_DRAW visible=1 misses=0 result_age_ms=3
+[I][pva] second stage handpose ok, cropRot=540x868, rect=(197,396,336,598)
+
+[I][pva] angle is -33.690063 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=44
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.369801
+
+[I][pva] second stage handpose ok, cropRot=540x690, rect=(253,304,463,507)
+
+[I][pva] angle is 19.899799 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=78
+[I][pva] left hand
+
+[I][pva] second stage angle is 8.488944
+
+[I][pva] second stage handpose ok, cropRot=540x751, rect=(234,358,310,477)
+
+[I][pva] angle is -5.117315 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 28.649611
+
+[I][pva] second stage handpose ok, cropRot=540x882, rect=(182,389,367,570)
+
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=222
+[I][pva] isInvalid5 is false
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=63
+[I][pva] isInvalid5 is false
+
+PALM_DRAW visible=0 misses=3 result_age_ms=75
+[I][pva] left hand
+
+[I][pva] second stage angle is 20.095230
+
+[I][pva] second stage handpose ok, cropRot=540x804, rect=(222,367,324,555)
+
+[I][pva] angle is -29.964764 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=235
+[I][pva] left hand
+
+[I][pva] second stage angle is 34.359379
+
+PALM_DRAW visible=1 misses=0 result_age_ms=29
+[I][pva] second stage handpose ok, cropRot=540x900, rect=(178,359,379,612)
+
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=222
+[I][pva] left hand
+
+[I][pva] second stage angle is -34.193199
+
+[I][pva] second stage handpose ok, cropRot=540x787, rect=(280,335,384,471)
+
+[I][pva] angle is 49.859612 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=227
+[I][pva] left hand
+
+[I][pva] second stage angle is 34.709682
+
+[I][pva] second stage handpose ok, cropRot=540x915, rect=(180,372,374,600)
+
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=196
+[I][pva] left hand
+
+[I][pva] second stage angle is 32.808662
+
+[I][pva] second stage handpose ok, cropRot=540x787, rect=(221,360,349,525)
+
+[I][pva] angle is -36.027367 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=218
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.33
+PERF ui.present n=147 avg_ms=11.70 max_ms=24.84
+PERF ui.process n=780 avg_ms=0.05 max_ms=2.32
+STATS elapsed=250 capture_fps=29.98 display_fps=29.38 frames=7484 page=0 eth=1
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=61
+PALM_DRAW visible=0 misses=3 result_age_ms=62
+[I][pva] left hand
+
+[I][pva] second stage angle is -30.225451
+
+SCALE_PERF group=0 vpss=7.59 map=0.19 rotate=2.18 convert=3.31 release=0.20 ms
+[I][pva] second stage handpose ok, cropRot=540x690, rect=(243,374,396,428)
+
+[I][pva] angle is 32.493252 
+
+SCALE_PERF group=1 vpss=7.82 map=0.24 rotate=3.02 convert=0.00 release=0.10 ms
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=215
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=79 hits=51 infer_ms=4.57 state=2
+PALM_PIPELINE features=128 auth=16 held=76 present=1 entry=0 missing=0 success_hold=1
+PERF palm.detect n=79 avg_ms=4.57 max_ms=16.01
+PERF palm.access n=79 avg_ms=48.96 max_ms=286.54
+PERF palm.age n=79 avg_ms=89.47 max_ms=320.00
+PALM_QUEUE posted=7500 taken=7257 replaced=242 depth=1
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=51
+PALM_DRAW visible=1 misses=2 result_age_ms=12
+[I][pva] left hand
+
+[I][pva] second stage angle is 13.971722
+
+[I][pva] second stage handpose ok, cropRot=540x675, rect=(265,397,282,435)
+
+[I][pva] angle is -22.527340 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=203
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=45
+[I][pva] left hand
+
+[I][pva] second stage angle is 17.774509
+
+[I][pva] second stage handpose ok, cropRot=540x723, rect=(259,401,298,441)
+
+[I][pva] angle is -28.635080 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=206
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=45
+[I][pva] isInvalid5 is false
+
+[I][pva] isInvalid5 is false
+
+PALM_DRAW visible=0 misses=0 result_age_ms=14442290
+PERF capture.vi n=150 avg_ms=3.76 max_ms=15.48
+PERF capture.preview n=150 avg_ms=13.57 max_ms=23.07
+PERF capture.ir n=150 avg_ms=11.39 max_ms=19.90
+PERF capture.interval n=150 avg_ms=33.33 max_ms=50.00
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.942383
+
+[I][pva] second stage handpose ok, cropRot=540x739, rect=(293,309,396,592)
+
+[I][pva] angle is -14.155483 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=51
+[I][pva] left hand
+
+[I][pva] second stage angle is -31.115330
+
+PALM_DRAW visible=1 misses=0 result_age_ms=18
+[I][pva] second stage handpose ok, cropRot=540x739, rect=(259,375,397,436)
+
+[I][pva] angle is 35.038887 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=41
+PALM_DRAW visible=0 misses=3 result_age_ms=77
+[I][pva] isInvalid5 is false
+
+[I][pva] isInvalid5 is false
+
+[I][pva] isInvalid1 is false
+
+[I][pva] isInvalid5 is false
+
+[I][pva] isInvalid5 is false
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -38.840832
+
+[I][pva] second stage handpose ok, cropRot=540x804, rect=(259,370,337,421)
+
+[I][pva] angle is 47.886417 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=221
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=57
+PALM_DRAW visible=1 misses=1 result_age_ms=7
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.865461
+
+PALM_QUALITY found=1 status=11 sample=red raw_found=1 age_ms=41
+[I][pva] left hand
+
+[I][pva] second stage angle is 10.430220
+
+[I][pva] second stage handpose ok, cropRot=540x705, rect=(253,380,282,417)
+
+[I][pva] angle is -20.556047 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=219
+[I][pva] left hand
+
+[I][pva] second stage angle is 19.144457
+
+[I][pva] second stage handpose ok, cropRot=540x642, rect=(266,346,319,436)
+
+[I][pva] angle is -26.430870 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=53
+[I][pva] left hand
+
+[I][pva] second stage angle is 14.233361
+
+[I][pva] second stage handpose ok, cropRot=540x787, rect=(249,396,280,385)
+
+[I][pva] angle is -19.217093 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=210
+[I][pva] left hand
+
+[I][pva] second stage angle is 13.182964
+
+[I][pva] second stage handpose ok, cropRot=540x915, rect=(213,379,289,498)
+
+[I][pva] angle is -33.303986 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.008106
+
+[I][pva] second stage handpose ok, cropRot=397x739, rect=(191,358,247,436)
+
+[I][pva] angle is 6.423470 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -25.761354
+
+[I][pva] second stage handpose ok, cropRot=442x786, rect=(241,338,349,463)
+
+[I][pva] angle is 19.908470 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -21.908707
+
+[I][pva] second stage handpose ok, cropRot=397x769, rect=(209,355,274,420)
+
+[I][pva] angle is 16.370150 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.780751
+
+[I][pva] second stage handpose ok, cropRot=397x690, rect=(189,355,224,483)
+
+[I][pva] angle is -20.962679 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.615202
+
+[I][pva] second stage handpose ok, cropRot=405x690, rect=(199,345,230,468)
+
+[I][pva] angle is -20.275581 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.461217
+
+[I][pva] second stage handpose ok, cropRot=405x658, rect=(204,341,235,469)
+
+[I][pva] angle is -16.039944 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.134000
+
+[I][pva] second stage handpose ok, cropRot=405x640, rect=(200,337,224,469)
+
+[I][pva] angle is -15.993583 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.615669
+
+[I][pva] second stage handpose ok, cropRot=388x640, rect=(185,335,220,477)
+
+[I][pva] angle is -7.544929 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.342225
+
+[I][pva] second stage handpose ok, cropRot=388x690, rect=(188,369,220,506)
+
+[I][pva] angle is -17.634460 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.736268
+
+[I][pva] second stage handpose ok, cropRot=397x658, rect=(194,344,220,477)
+
+[I][pva] angle is -13.157541 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.615202
+
+[I][pva] second stage handpose ok, cropRot=405x690, rect=(204,358,223,492)
+
+[I][pva] angle is -20.716873 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.637214
+
+[I][pva] second stage handpose ok, cropRot=435x675, rect=(209,353,240,457)
+
+[I][pva] angle is -15.629596 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.138558
+
+[I][pva] second stage handpose ok, cropRot=424x690, rect=(208,374,238,446)
+
+[I][pva] angle is -8.849257 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=36
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.852490
+
+[I][pva] second stage handpose ok, cropRot=417x690, rect=(190,355,231,452)
+
+[I][pva] angle is -14.953563 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=53
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.590383
+
+[I][pva] second stage handpose ok, cropRot=435x690, rect=(209,339,240,406)
+
+[I][pva] angle is -7.460566 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.590383
+
+[I][pva] second stage handpose ok, cropRot=435x676, rect=(222,353,250,457)
+
+[I][pva] angle is -6.960962 
+
+SCALE_PERF group=0 vpss=7.64 map=0.24 rotate=2.00 convert=3.71 release=0.15 ms
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=54
+SCALE_PERF group=1 vpss=7.54 map=0.30 rotate=2.81 convert=0.00 release=0.09 ms
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.852490
+
+[I][pva] second stage handpose ok, cropRot=417x690, rect=(200,355,231,452)
+
+[I][pva] angle is -13.280184 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=67
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=34
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.113842
+
+[I][pva] second stage handpose ok, cropRot=450x741, rect=(226,373,260,478)
+
+[I][pva] angle is -9.253406 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=67
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.039254
+
+[I][pva] second stage handpose ok, cropRot=460x723, rect=(233,361,260,409)
+
+[I][pva] angle is -5.365630 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x690, rect=(222,363,250,476)
+
+[I][pva] angle is -14.356775 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.150909
+
+[I][pva] second stage handpose ok, cropRot=460x675, rect=(219,353,270,457)
+
+[I][pva] angle is -8.130103 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=450x705, rect=(225,360,254,454)
+
+[I][pva] angle is -10.503003 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=32
+PALM_DRAW visible=0 misses=3 result_age_ms=89
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.883216
+
+[I][pva] second stage handpose ok, cropRot=496x820, rect=(167,394,303,511)
+
+[I][pva] angle is -17.484426 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=60
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.060472
+
+[I][pva] second stage handpose ok, cropRot=397x787, rect=(144,363,255,499)
+
+[I][pva] angle is -2.147585 
+
+PALM_DRAW visible=1 misses=0 result_age_ms=28
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.342225
+
+[I][pva] second stage handpose ok, cropRot=397x786, rect=(103,374,244,464)
+
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=47
+[I][pva] isInvalid5 is false
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=35
+PALM_DRAW visible=0 misses=3 result_age_ms=103
+PALM_SESSION left false_frames=20 success_hold=1 features=163 auth=16 held=111
+PERF ui.render n=145 avg_ms=0.03 max_ms=2.38
+PERF ui.present n=145 avg_ms=10.93 max_ms=23.43
+PERF ui.process n=791 avg_ms=0.07 max_ms=4.78
+STATS elapsed=255 capture_fps=29.94 display_fps=28.94 frames=7634 page=0 eth=1
+[I][pva] isInvalid5 is false
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=460x820, rect=(135,321,265,576)
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=1 sample=red raw_found=1 age_ms=35
+PALM_DRAW visible=1 misses=0 result_age_ms=7
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.304474
+
+[I][pva] second stage handpose ok, cropRot=450x787, rect=(200,305,306,492)
+
+[I][pva] angle is 9.566687 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=203
+[I][pva] left hand
+
+[I][pva] second stage angle is -21.801409
+
+[I][pva] second stage handpose ok, cropRot=442x868, rect=(267,299,352,471)
+
+PALM_QUALITY found=1 status=2 sample=red raw_found=1 age_ms=197
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=97 hits=38 infer_ms=3.69 state=2
+PALM_PIPELINE features=166 auth=17 held=111 present=1 entry=0 missing=0 success_hold=0
+PERF palm.detect n=97 avg_ms=3.69 max_ms=15.86
+PERF palm.access n=97 avg_ms=30.70 max_ms=231.79
+PERF palm.age n=97 avg_ms=66.64 max_ms=268.00
+PALM_QUEUE posted=7655 taken=7354 replaced=300 depth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.269468
+
+[I][pva] second stage handpose ok, cropRot=417x820, rect=(204,314,240,522)
+
+[I][pva] angle is -19.165455 
+
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=83
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.998365
+
+[I][pva] second stage handpose ok, cropRot=417x804, rect=(208,317,236,519)
+
+[I][pva] angle is -20.594090 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.448614
+
+[I][pva] second stage handpose ok, cropRot=405x769, rect=(191,322,241,480)
+
+[I][pva] angle is -24.333876 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.778563
+
+[I][pva] second stage handpose ok, cropRot=397x786, rect=(192,328,224,490)
+
+[I][pva] angle is -19.323185 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.190609
+
+[I][pva] second stage handpose ok, cropRot=415x756, rect=(201,325,235,446)
+
+[I][pva] angle is -8.325649 
+
+ACCESS match uuid=0 score=0.6482
+PALM_SESSION success_hold features=171 auth=19
+IR_AE recognition_success target=28 luma=30 time_us=4948 gain=1024/1024/1024
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=417x804, rect=(207,330,240,482)
+
+[I][pva] angle is -17.252651 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.700426
+
+[I][pva] second stage handpose ok, cropRot=405x804, rect=(194,342,234,483)
+
+[I][pva] angle is -17.665186 
+
+PERF capture.vi n=150 avg_ms=3.49 max_ms=15.59
+PERF capture.preview n=150 avg_ms=14.34 max_ms=24.36
+PERF capture.ir n=150 avg_ms=10.83 max_ms=19.31
+PERF capture.interval n=150 avg_ms=33.31 max_ms=48.00
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.383296
+
+[I][pva] second stage handpose ok, cropRot=417x804, rect=(208,333,236,493)
+
+[I][pva] angle is -16.858400 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.079133
+
+[I][pva] second stage handpose ok, cropRot=435x820, rect=(214,340,247,504)
+
+[I][pva] angle is -16.515701 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.771619
+
+[I][pva] second stage handpose ok, cropRot=435x769, rect=(219,360,240,505)
+
+[I][pva] angle is -13.714812 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=462x786, rect=(214,362,277,428)
+
+[I][pva] angle is -3.772284 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.210424
+
+[I][pva] second stage handpose ok, cropRot=468x816, rect=(187,376,276,446)
+
+[I][pva] angle is -11.368220 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.009501
+
+[I][pva] second stage handpose ok, cropRot=487x739, rect=(164,378,288,494)
+
+[I][pva] angle is -3.212210 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=57
+PALM_DRAW visible=0 misses=3 result_age_ms=54
+PALM_SESSION left false_frames=20 success_hold=1 features=179 auth=19 held=119
+SCALE_PERF group=0 vpss=8.57 map=0.17 rotate=2.55 convert=3.83 release=0.11 ms
+SCALE_PERF group=1 vpss=7.60 map=0.17 rotate=2.69 convert=0.00 release=0.15 ms
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -20.008106
+
+[I][pva] second stage handpose ok, cropRot=423x739, rect=(229,275,291,427)
+
+[I][pva] angle is 3.617333 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=196
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.113842
+
+PALM_DRAW visible=1 misses=0 result_age_ms=11
+[I][pva] second stage handpose ok, cropRot=442x756, rect=(238,328,249,352)
+
+[I][pva] angle is -17.220381 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.209119
+
+[I][pva] second stage handpose ok, cropRot=370x723, rect=(182,328,208,441)
+
+[I][pva] angle is -17.130302 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.950627
+
+[I][pva] second stage handpose ok, cropRot=378x658, rect=(183,339,216,463)
+
+[I][pva] angle is -18.778034 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.950627
+
+[I][pva] second stage handpose ok, cropRot=370x687, rect=(183,357,212,427)
+
+[I][pva] angle is -8.569142 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=399x690, rect=(209,369,252,460)
+
+[I][pva] angle is -30.796062 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.856352
+
+[I][pva] second stage handpose ok, cropRot=342x675, rect=(167,361,196,436)
+
+[I][pva] angle is -10.901268 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.420428
+
+[I][pva] second stage handpose ok, cropRot=372x658, rect=(179,339,206,433)
+
+[I][pva] angle is -14.036243 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.686722
+
+[I][pva] second stage handpose ok, cropRot=372x642, rect=(183,331,210,422)
+
+[I][pva] angle is -11.534620 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.336555
+
+[I][pva] second stage handpose ok, cropRot=372x658, rect=(183,323,210,433)
+
+[I][pva] angle is -13.392497 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.078345
+
+[I][pva] second stage handpose ok, cropRot=354x640, rect=(171,325,198,434)
+
+[I][pva] angle is -19.784279 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.585794
+
+[I][pva] second stage handpose ok, cropRot=379x625, rect=(188,324,218,433)
+
+[I][pva] angle is -9.150257 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.520828
+
+[I][pva] second stage handpose ok, cropRot=379x640, rect=(185,330,208,420)
+
+[I][pva] angle is -11.611486 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.640407
+
+[I][pva] second stage handpose ok, cropRot=361x658, rect=(177,344,205,418)
+
+[I][pva] angle is -15.998299 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.288952
+
+[I][pva] second stage handpose ok, cropRot=388x642, rect=(189,331,217,451)
+
+[I][pva] angle is -14.836909 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.230974
+
+[I][pva] second stage handpose ok, cropRot=370x658, rect=(196,351,210,380)
+
+[I][pva] angle is -7.747772 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=450x594, rect=(225,313,264,410)
+
+[I][pva] angle is -16.336042 
+
+ACCESS match uuid=0 score=0.7923
+PALM_SESSION success_hold features=196 auth=24
+IR_AE recognition_success target=28 luma=30 time_us=5066 gain=1024/1024/1024
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.789072
+
+[I][pva] second stage handpose ok, cropRot=352x658, rect=(176,339,201,463)
+
+[I][pva] angle is -20.418423 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.871391
+
+[I][pva] second stage handpose ok, cropRot=417x625, rect=(205,327,246,326)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.504733
+
+[I][pva] second stage handpose ok, cropRot=379x625, rect=(192,324,222,404)
+
+[I][pva] angle is -5.710593 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.277609
+
+[I][pva] second stage handpose ok, cropRot=406x594, rect=(199,310,238,363)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.736268
+
+[I][pva] second stage handpose ok, cropRot=424x640, rect=(218,312,238,397)
+
+[I][pva] angle is -8.667387 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.589126
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(224,324,260,334)
+
+[I][pva] angle is -3.270488 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.968256
+
+[I][pva] second stage handpose ok, cropRot=424x609, rect=(209,309,249,398)
+
+[I][pva] angle is -6.115503 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=379x577, rect=(195,302,238,405)
+
+[I][pva] angle is -26.250240 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=460x561, rect=(224,269,265,349)
+
+[I][pva] angle is -17.592426 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=64
+PALM_DRAW visible=0 misses=3 result_age_ms=67
+PERF ui.render n=147 avg_ms=0.05 max_ms=4.36
+PERF ui.present n=147 avg_ms=10.04 max_ms=22.88
+PERF ui.process n=818 avg_ms=0.12 max_ms=10.47
+STATS elapsed=260 capture_fps=30.12 display_fps=29.32 frames=7785 page=0 eth=1
+PALM_SESSION left false_frames=20 success_hold=1 features=205 auth=24 held=128
+SCALE_PERF group=0 vpss=7.39 map=0.25 rotate=2.55 convert=3.01 release=0.13 ms
+SCALE_PERF group=1 vpss=7.92 map=0.29 rotate=3.37 convert=0.00 release=0.10 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=122 hits=39 infer_ms=3.92 state=1
+PALM_PIPELINE features=205 auth=24 held=128 present=0 entry=0 missing=20 success_hold=0
+PERF palm.detect n=122 avg_ms=3.92 max_ms=14.47
+PERF palm.access n=122 avg_ms=16.93 max_ms=206.69
+PERF palm.age n=122 avg_ms=52.34 max_ms=248.00
+PALM_QUEUE posted=7805 taken=7476 replaced=329 depth=0
+[I][pva] left hand
+
+[I][pva] right hand
+
+[I][pva] right hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is 16.056076
+
+[I][pva] second stage handpose ok, cropRot=389x820, rect=(244,403,224,500)
+
+[I][pva] angle is 16.245632 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 sample=green raw_found=1 age_ms=59
+[I][pva] right hand
+
+[I][pva] second stage angle is 9.992414
+
+[I][pva] second stage handpose ok, cropRot=414x820, rect=(231,397,237,504)
+
+[I][pva] angle is 11.520320 
+
+PALM_DRAW visible=1 misses=0 result_age_ms=21
+[I][pva] right hand
+
+[I][pva] second stage angle is 16.017786
+
+[I][pva] second stage handpose ok, cropRot=444x832, rect=(241,400,247,576)
+
+[I][pva] angle is 20.409882 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 23.883095
+
+PERF capture.vi n=151 avg_ms=3.05 max_ms=12.31
+PERF capture.preview n=151 avg_ms=14.35 max_ms=22.73
+PERF capture.ir n=151 avg_ms=11.27 max_ms=19.55
+PERF capture.interval n=151 avg_ms=33.33 max_ms=43.00
+[I][pva] second stage handpose ok, cropRot=448x769, rect=(225,390,289,486)
+
+[I][pva] angle is -1.974934 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 23.198591
+
+[I][pva] second stage handpose ok, cropRot=462x816, rect=(207,344,308,519)
+
+[I][pva] angle is -3.751729 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 18.098907
+
+[I][pva] second stage handpose ok, cropRot=487x756, rect=(226,369,270,506)
+
+[I][pva] angle is 15.664731 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 26.214979
+
+[I][pva] second stage handpose ok, cropRot=487x804, rect=(226,361,325,483)
+
+[I][pva] angle is -9.125009 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 24.553425
+
+[I][pva] second stage handpose ok, cropRot=483x769, rect=(239,366,322,486)
+
+[I][pva] angle is -8.815221 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 19.519281
+
+[I][pva] second stage handpose ok, cropRot=453x756, rect=(240,363,255,470)
+
+[I][pva] angle is 20.409882 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 18.783245
+
+[I][pva] second stage handpose ok, cropRot=480x741, rect=(251,367,261,495)
+
+[I][pva] angle is 15.945395 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 18.434946
+
+[I][pva] second stage handpose ok, cropRot=469x820, rect=(238,371,266,428)
+
+[I][pva] angle is 15.987900 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 16.998365
+
+[I][pva] second stage handpose ok, cropRot=453x769, rect=(223,369,247,478)
+
+[I][pva] angle is 17.126133 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 13.190609
+
+[I][pva] second stage handpose ok, cropRot=424x769, rect=(208,360,238,505)
+
+[I][pva] angle is 19.786503 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 14.786502
+
+[I][pva] second stage handpose ok, cropRot=442x756, rect=(221,369,240,489)
+
+[I][pva] angle is 19.046627 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 12.380756
+
+[I][pva] second stage handpose ok, cropRot=442x723, rect=(215,372,246,507)
+
+[I][pva] angle is 14.676392 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 16.056076
+
+[I][pva] second stage handpose ok, cropRot=450x816, rect=(228,357,246,464)
+
+[I][pva] angle is 4.347456 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 16.056076
+
+[I][pva] second stage handpose ok, cropRot=468x741, rect=(228,367,260,478)
+
+[I][pva] angle is 19.776075 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 12.113842
+
+[I][pva] second stage handpose ok, cropRot=442x769, rect=(212,360,246,505)
+
+[I][pva] angle is 9.625247 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 12.380756
+
+[I][pva] second stage handpose ok, cropRot=442x769, rect=(216,363,254,442)
+
+[I][pva] angle is 6.009007 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 6.401536
+
+[I][pva] second stage handpose ok, cropRot=442x723, rect=(227,359,250,482)
+
+[I][pva] angle is 11.441044 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 8.325649
+
+[I][pva] second stage handpose ok, cropRot=442x658, rect=(215,339,265,477)
+
+[I][pva] angle is 6.632514 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 6.692874
+
+[I][pva] second stage handpose ok, cropRot=423x739, rect=(216,357,262,452)
+
+[I][pva] angle is 5.812482 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=442x756, rect=(236,354,254,512)
+
+[I][pva] angle is 26.565050 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is -6.162989
+
+[I][pva] second stage handpose ok, cropRot=523x739, rect=(263,352,337,468)
+
+[I][pva] angle is 26.447399 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 6.009007
+
+[I][pva] second stage handpose ok, cropRot=469x675, rect=(236,335,303,465)
+
+[I][pva] angle is -1.573664 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 2.234799
+
+[I][pva] second stage handpose ok, cropRot=468x739, rect=(239,344,310,477)
+
+[I][pva] angle is -3.477787 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is -3.954248
+
+[I][pva] second stage handpose ok, cropRot=540x804, rect=(291,342,340,483)
+
+[I][pva] angle is 22.600397 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=540x816, rect=(290,370,294,427)
+
+[I][pva] angle is 18.526327 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 35.813869
+
+[I][pva] second stage handpose ok, cropRot=480x834, rect=(201,355,340,483)
+
+[I][pva] angle is -11.424067 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 36.665634
+
+[I][pva] second stage handpose ok, cropRot=535x804, rect=(232,352,368,456)
+
+[I][pva] angle is -9.946004 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 38.072781
+
+SCALE_PERF group=0 vpss=7.68 map=0.22 rotate=2.52 convert=4.82 release=0.33 ms
+SCALE_PERF group=1 vpss=7.68 map=0.22 rotate=2.87 convert=0.00 release=0.11 ms
+[I][pva] second stage handpose ok, cropRot=540x834, rect=(226,368,384,447)
+
+[I][pva] angle is -13.971722 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 30.784145
+
+[I][pva] second stage handpose ok, cropRot=540x723, rect=(263,361,337,476)
+
+[I][pva] angle is -1.363927 
+
+[I][pva] right hand
+
+[I][pva] second stage angle is 24.312340
+
+[I][pva] second stage handpose ok, cropRot=540x741, rect=(249,367,340,478)
+
+[I][pva] angle is -3.286102 
+
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=37
+[I][pva] right hand
+
+[I][pva] second stage angle is -1.955681
+
+PALM_QUALITY found=1 status=11 sample=red raw_found=1 age_ms=231
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=43
+PALM_DRAW visible=0 misses=3 result_age_ms=67
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=147 avg_ms=10.25 max_ms=24.63
+PERF ui.process n=821 avg_ms=0.10 max_ms=8.40
+STATS elapsed=265 capture_fps=29.92 display_fps=29.32 frames=7935 page=0 eth=1
+PALM_SESSION left false_frames=20 success_hold=0 features=239 auth=34 held=128
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=77 hits=34 infer_ms=3.28 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=20 success_hold=0
+PERF palm.detect n=77 avg_ms=3.28 max_ms=10.82
+PERF palm.access n=77 avg_ms=44.60 max_ms=249.20
+PERF palm.age n=77 avg_ms=82.38 max_ms=301.00
+PALM_QUEUE posted=7955 taken=7553 replaced=402 depth=0
+PERF capture.vi n=151 avg_ms=2.92 max_ms=13.27
+PERF capture.preview n=151 avg_ms=15.37 max_ms=27.96
+PERF capture.ir n=151 avg_ms=10.85 max_ms=19.89
+PERF capture.interval n=151 avg_ms=33.32 max_ms=47.00
+SCALE_PERF group=0 vpss=8.51 map=0.18 rotate=2.63 convert=3.64 release=0.07 ms
+SCALE_PERF group=1 vpss=8.04 map=0.23 rotate=2.82 convert=0.00 release=0.08 ms
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.31 max_ms=15.86
+PERF ui.process n=930 avg_ms=0.05 max_ms=3.09
+STATS elapsed=270 capture_fps=30.00 display_fps=29.20 frames=8085 page=0 eth=1
+SCALE_PERF group=0 vpss=8.51 map=0.15 rotate=2.40 convert=3.38 release=0.09 ms
+SCALE_PERF group=1 vpss=8.08 map=0.21 rotate=3.85 convert=0.00 release=0.10 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.84 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=20 success_hold=0
+PERF palm.detect n=150 avg_ms=2.84 max_ms=9.85
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.37 max_ms=39.00
+PALM_QUEUE posted=8105 taken=7703 replaced=402 depth=0
+PERF capture.vi n=151 avg_ms=1.95 max_ms=13.01
+PERF capture.preview n=151 avg_ms=14.52 max_ms=21.63
+PERF capture.ir n=151 avg_ms=12.05 max_ms=20.51
+PERF capture.interval n=151 avg_ms=33.31 max_ms=45.00
+SCALE_PERF group=0 vpss=8.15 map=0.17 rotate=2.33 convert=3.49 release=0.10 ms
+SCALE_PERF group=1 vpss=8.79 map=0.36 rotate=3.62 convert=0.00 release=0.09 ms
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.07
+PERF ui.present n=148 avg_ms=9.73 max_ms=14.55
+PERF ui.process n=900 avg_ms=0.07 max_ms=8.27
+STATS elapsed=275 capture_fps=30.13 display_fps=29.54 frames=8236 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.61 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=20 success_hold=0
+PERF palm.detect n=150 avg_ms=2.61 max_ms=7.61
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.47 max_ms=38.00
+PALM_QUEUE posted=8255 taken=7853 replaced=402 depth=0
+PERF capture.vi n=151 avg_ms=0.81 max_ms=14.18
+PERF capture.preview n=151 avg_ms=14.12 max_ms=21.59
+PERF capture.ir n=151 avg_ms=13.12 max_ms=20.41
+PERF capture.interval n=151 avg_ms=33.33 max_ms=44.00
+SCALE_PERF group=0 vpss=8.44 map=0.18 rotate=2.53 convert=4.00 release=0.14 ms
+SCALE_PERF group=1 vpss=8.11 map=0.43 rotate=3.36 convert=0.00 release=0.09 ms
+[I][pva] right hand
+
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.08
+PERF ui.present n=148 avg_ms=8.99 max_ms=14.67
+PERF ui.process n=929 avg_ms=0.05 max_ms=9.40
+STATS elapsed=280 capture_fps=29.95 display_fps=29.55 frames=8386 page=0 eth=1
+SCALE_PERF group=0 vpss=8.44 map=0.15 rotate=2.26 convert=3.15 release=0.07 ms
+SCALE_PERF group=1 vpss=7.67 map=0.32 rotate=3.84 convert=0.00 release=0.10 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.78 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.78 max_ms=8.69
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.17 max_ms=39.00
+PALM_QUEUE posted=8405 taken=8003 replaced=402 depth=0
+PERF capture.vi n=150 avg_ms=2.61 max_ms=13.71
+PERF capture.preview n=150 avg_ms=14.71 max_ms=21.64
+PERF capture.ir n=150 avg_ms=11.64 max_ms=18.18
+PERF capture.interval n=150 avg_ms=33.32 max_ms=43.00
+SCALE_PERF group=0 vpss=8.38 map=0.16 rotate=2.29 convert=3.18 release=0.08 ms
+SCALE_PERF group=1 vpss=7.91 map=0.24 rotate=3.46 convert=0.00 release=0.12 ms
+PERF ui.render n=147 avg_ms=0.03 max_ms=2.38
+PERF ui.present n=147 avg_ms=9.70 max_ms=16.97
+PERF ui.process n=903 avg_ms=0.06 max_ms=8.20
+STATS elapsed=285 capture_fps=29.92 display_fps=29.32 frames=8536 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.90 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.90 max_ms=9.94
+PERF palm.access n=150 avg_ms=0.02 max_ms=2.38
+PERF palm.age n=150 avg_ms=31.00 max_ms=36.00
+PALM_QUEUE posted=8555 taken=8153 replaced=402 depth=0
+PERF capture.vi n=151 avg_ms=2.12 max_ms=11.81
+PERF capture.preview n=151 avg_ms=14.05 max_ms=21.67
+PERF capture.ir n=151 avg_ms=12.12 max_ms=19.00
+PERF capture.interval n=151 avg_ms=33.32 max_ms=47.00
+SCALE_PERF group=0 vpss=8.41 map=0.15 rotate=2.16 convert=3.61 release=0.09 ms
+SCALE_PERF group=1 vpss=8.29 map=0.21 rotate=3.64 convert=0.00 release=0.17 ms
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.15
+PERF ui.present n=147 avg_ms=9.36 max_ms=14.73
+PERF ui.process n=902 avg_ms=0.05 max_ms=3.64
+STATS elapsed=290 capture_fps=30.19 display_fps=29.39 frames=8687 page=0 eth=1
+SCALE_PERF group=0 vpss=8.80 map=0.16 rotate=2.50 convert=3.28 release=0.09 ms
+SCALE_PERF group=1 vpss=7.98 map=0.17 rotate=3.40 convert=0.00 release=0.13 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.77 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.77 max_ms=8.52
+PERF palm.access n=150 avg_ms=0.02 max_ms=2.35
+PERF palm.age n=150 avg_ms=31.25 max_ms=36.00
+PALM_QUEUE posted=8705 taken=8303 replaced=402 depth=0
+PERF capture.vi n=150 avg_ms=1.65 max_ms=13.36
+PERF capture.preview n=150 avg_ms=14.75 max_ms=21.59
+PERF capture.ir n=150 avg_ms=12.32 max_ms=18.95
+PERF capture.interval n=150 avg_ms=33.32 max_ms=45.00
+SCALE_PERF group=0 vpss=8.52 map=0.17 rotate=2.08 convert=3.32 release=0.09 ms
+SCALE_PERF group=1 vpss=7.91 map=0.45 rotate=4.16 convert=0.00 release=0.17 ms
+[I][pva] right hand
+
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.11
+PERF ui.present n=148 avg_ms=9.17 max_ms=14.35
+PERF ui.process n=915 avg_ms=0.05 max_ms=2.55
+STATS elapsed=295 capture_fps=30.00 display_fps=29.60 frames=8837 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.89 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.89 max_ms=11.37
+PERF palm.access n=150 avg_ms=0.01 max_ms=0.94
+PERF palm.age n=150 avg_ms=31.29 max_ms=39.00
+PALM_QUEUE posted=8855 taken=8453 replaced=402 depth=0
+PERF capture.vi n=151 avg_ms=1.76 max_ms=14.73
+PERF capture.preview n=151 avg_ms=14.10 max_ms=21.44
+PERF capture.ir n=151 avg_ms=12.42 max_ms=20.28
+PERF capture.interval n=151 avg_ms=33.34 max_ms=42.00
+SCALE_PERF group=0 vpss=8.78 map=0.15 rotate=2.34 convert=3.41 release=0.08 ms
+SCALE_PERF group=1 vpss=8.27 map=0.16 rotate=3.76 convert=0.00 release=0.13 ms
+[I][pva] right hand
+
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=9.03 max_ms=13.79
+PERF ui.process n=917 avg_ms=0.06 max_ms=4.15
+STATS elapsed=300 capture_fps=29.99 display_fps=29.19 frames=8987 page=0 eth=1
+SCALE_PERF group=0 vpss=8.37 map=0.15 rotate=2.22 convert=3.18 release=0.08 ms
+SCALE_PERF group=1 vpss=8.49 map=0.28 rotate=3.99 convert=0.00 release=0.10 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=150 hits=0 infer_ms=2.65 state=1
+PALM_PIPELINE features=239 auth=34 held=128 present=0 entry=0 missing=0 success_hold=0
+PERF palm.detect n=150 avg_ms=2.65 max_ms=10.76
+PERF palm.access n=150 avg_ms=0.00 max_ms=0.01
+PERF palm.age n=150 avg_ms=31.92 max_ms=39.00
+PALM_QUEUE posted=9005 taken=8603 replaced=402 depth=0
+PERF capture.vi n=151 avg_ms=1.11 max_ms=10.55
+PERF capture.preview n=151 avg_ms=15.10 max_ms=21.37
+PERF capture.ir n=151 avg_ms=12.28 max_ms=20.43
+PERF capture.interval n=151 avg_ms=33.31 max_ms=44.00
+SCALE_PERF group=0 vpss=8.70 map=0.16 rotate=2.27 convert=3.03 release=0.15 ms
+SCALE_PERF group=1 vpss=8.05 map=0.24 rotate=3.92 convert=0.00 release=0.08 ms

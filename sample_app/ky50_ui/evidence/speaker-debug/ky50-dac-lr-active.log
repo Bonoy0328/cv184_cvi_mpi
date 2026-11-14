@@ -1,0 +1,41 @@
+315.86 302.71
+
+----------------- DAC[0] INFO ----------------
+
+------------- CVI AO ATTRIBUTE -------------
+AoDev    Workmode    SampleRate    BitWidth
+  0       slave         16000        16
+
+-------------  CVI AO STATUS   -------------
+dac connet i2s is I2S3
+
+SDMA clk is off,freq = 16383680
+DAC is on (3)
+L-Mute   R-Mute
+  no       no
+
+L-Vol           R-Vol
+  32             32
+
+
+i2s3 is enabled
+
+===== Dump I2S3 register status =====
+
+blk_mode=0xff000087,          clk_ctrl=0x00000180,          int_en=0x00000166
+
+frame_setting=0x000f201f,     slot_setting=0x000f0f01,      data_format=0x00000002
+
+i2s_int=0x00001000,           rx_status=0x00000000,         tx_status=0x61041013
+
+dma_req=0x00034991,           dma_ack=0x00034991
+
+clk_ctrl0=0x00000180,         clk_ctrl1=0x00200001
+ gpio-440 (                    |ky50-lineout        ) in  lo 
+ gpio-441 (                    |sysfs               ) in  lo 
+ gpio-495 (                    |mute_pin_l          ) out lo 
+ gpio-510 (                    |mute_pin_r          ) out hi 
+0x00000000
+0x00000000
+0x00000000
+0x00040000

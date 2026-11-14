@@ -1,0 +1,31 @@
+SOURCE switching none -> IR
+ISP pipe0=IR mono=1
+ISP pipe1=RGB mono=0
+IR_MONO ISP output chroma_min=128 chroma_max=128 neutral=128; preview=Y-only grayscale
+SOURCE switching IR -> RGB
+ACCESS enrolled uuid=0 progress=10/10
+SOURCE switching RGB -> IR
+ACCESS match uuid=0 score=0.7733
+SOURCE switching none -> IR
+ISP pipe0=IR mono=1
+ISP pipe1=RGB mono=0
+IR_MONO ISP output chroma_min=128 chroma_max=128 neutral=128; preview=Y-only grayscale
+ACCESS match uuid=0 score=0.8221
+ACCESS deleted uuid=0
+integrity=ok
+users=0
+registered_palms=0
+pending_operations=0
+uuid_mismatches=0
+matched_events=2
+unmatched_events=2
+retained_deleted_user_events=2
+pending_deletions=0
+schema=1
+   1   1   1   1   1
+IR
+4bd14d6705322cd85af2d273404b1ca10318d2e4f6fb829cc3dea42c9af5a5da  /tmp/ky50-ui/ky50_ui
+STATS elapsed=340 capture_fps=17.20 display_fps=29.79 frames=5761 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=86 hits=0 infer_ms=3.05 ir_errors=0 state=1
+STATS elapsed=345 capture_fps=17.20 display_fps=29.39 frames=5847 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=80 hits=0 infer_ms=4.42 ir_errors=0 state=1

@@ -1,0 +1,3958 @@
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+UI page=0 feature=0
+KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 -> pvaGetHandPose -> selected preview overlay
+ETHERNET carrier=1 uptime_ms=12487362
+PALM defaults brightness=60..160 offset=0.01/0.01
+[I][deviceAuth] ##########欢迎使用CyanovaAI(青悟科技)掌静脉SDK!#########
+
+### npu: CV184X BMRuntime (RGB planar uint8 / int8 output)
+[I][pva] handpose vertifiction success!
+
+[CV184X] loaded handpose_tiny_20250430_concat input=49152 output=5040 scale=0.991966069 zp=0
+[CV184X] loaded pva_mnf_20251019_l input=49152 output=512 scale=0.00448031723 zp=0
+[CV184X] loaded pva_mnf_20260323_s input=49152 output=512 scale=0.00548861874 zp=0
+init pva cost 306 ms
+PALM ready: encrypted pva.model, input=IR Y only, RGB planar conversion inside libpva
+PALM_PARAMETERS hand=0.70 auth=0.50 dynamic=1 applied
+ACCESS parameters loaded source=database hand=70 auth=50 dynamic=1
+IR_AE saved_target=28; apply only after hand detection
+SOURCE switching none -> IR
+ISP Vipipe(0) Allocate pa(0x8c856000) va(0x0xb5d1d000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8c88e000) va(0x0xb5ce5000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+ISP pipe0=IR mono=1
+pipe1 sensor ID=2083
+ISP pipe1=RGB mono=0
+CVI_ISP_Run(0) returned 0
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 software=CCW90 source=864x486 stride=896/896 offsets=L0 R0 T0 B0 rotated=486x864 copy=2,4 480x854 display crop
+ROTATED group=1 software=CCW90 source=960x540 stride=960/960 offsets=L0 R0 T0 B0 rotated=540x960 copy=0,0 540x960 full IR half-size
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_MONO ISP output chroma_min=128 chroma_max=128 neutral=128; preview=Y-only grayscale
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=12.93 max_ms=25.42
+STATS elapsed=5 capture_fps=14.60 display_fps=29.39 frames=73 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=80 hits=0 infer_ms=3.84 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=80 avg_ms=0.30 max_ms=16.18
+PERF capture.preview n=80 avg_ms=29.39 max_ms=35.50
+PERF capture.ir n=80 avg_ms=22.04 max_ms=30.83
+PERF capture.detect n=80 avg_ms=3.85 max_ms=14.68
+PERF capture.access n=80 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=13.59 max_ms=24.68
+STATS elapsed=10 capture_fps=18.20 display_fps=29.19 frames=164 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.35 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=91 avg_ms=0.03 max_ms=0.12
+PERF capture.preview n=91 avg_ms=29.15 max_ms=35.51
+PERF capture.ir n=91 avg_ms=20.68 max_ms=30.30
+PERF capture.detect n=91 avg_ms=3.35 max_ms=12.47
+PERF capture.access n=91 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=147 avg_ms=13.35 max_ms=24.43
+STATS elapsed=15 capture_fps=18.18 display_fps=29.36 frames=255 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=92 hits=0 infer_ms=3.04 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=92 avg_ms=0.02 max_ms=0.03
+PERF capture.preview n=92 avg_ms=29.31 max_ms=35.92
+PERF capture.ir n=92 avg_ms=20.87 max_ms=31.48
+PERF capture.detect n=92 avg_ms=3.05 max_ms=10.30
+PERF capture.access n=92 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=13.27 max_ms=21.91
+STATS elapsed=20 capture_fps=17.97 display_fps=29.35 frames=345 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.39 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=91 avg_ms=0.06 max_ms=2.95
+PERF capture.preview n=91 avg_ms=29.03 max_ms=39.03
+PERF capture.ir n=91 avg_ms=20.93 max_ms=31.94
+PERF capture.detect n=91 avg_ms=3.39 max_ms=13.18
+PERF capture.access n=91 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.14
+PERF ui.present n=147 avg_ms=13.22 max_ms=22.55
+STATS elapsed=25 capture_fps=18.36 display_fps=29.33 frames=437 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.83 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=91 avg_ms=0.02 max_ms=0.04
+PERF capture.preview n=91 avg_ms=29.09 max_ms=35.15
+PERF capture.ir n=91 avg_ms=20.22 max_ms=30.72
+PERF capture.detect n=91 avg_ms=3.83 max_ms=12.12
+PERF capture.access n=91 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=147 avg_ms=14.34 max_ms=26.21
+STATS elapsed=30 capture_fps=17.97 display_fps=29.36 frames=527 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.15 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=91 avg_ms=0.02 max_ms=0.10
+PERF capture.preview n=91 avg_ms=29.49 max_ms=41.47
+PERF capture.ir n=91 avg_ms=20.49 max_ms=31.10
+PERF capture.detect n=91 avg_ms=3.16 max_ms=14.11
+PERF capture.access n=91 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=146 avg_ms=0.04 max_ms=2.37
+PERF ui.present n=146 avg_ms=14.49 max_ms=22.51
+STATS elapsed=35 capture_fps=18.00 display_fps=29.20 frames=617 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=89 hits=0 infer_ms=3.47 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=89 avg_ms=0.08 max_ms=4.51
+PERF capture.preview n=89 avg_ms=29.63 max_ms=35.90
+PERF capture.ir n=89 avg_ms=21.61 max_ms=31.04
+PERF capture.detect n=89 avg_ms=3.47 max_ms=10.90
+PERF capture.access n=89 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=147 avg_ms=13.76 max_ms=25.31
+STATS elapsed=40 capture_fps=17.80 display_fps=29.40 frames=706 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.58 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=91 avg_ms=0.02 max_ms=0.04
+PERF capture.preview n=91 avg_ms=28.94 max_ms=37.13
+PERF capture.ir n=91 avg_ms=20.79 max_ms=30.80
+PERF capture.detect n=91 avg_ms=3.59 max_ms=12.23
+PERF capture.access n=91 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.10
+PERF ui.present n=147 avg_ms=13.96 max_ms=24.02
+STATS elapsed=45 capture_fps=17.79 display_fps=29.38 frames=795 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=89 hits=0 infer_ms=3.22 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=89 avg_ms=0.05 max_ms=2.36
+PERF capture.preview n=89 avg_ms=29.83 max_ms=36.73
+PERF capture.ir n=89 avg_ms=21.63 max_ms=31.93
+PERF capture.detect n=89 avg_ms=3.22 max_ms=14.69
+PERF capture.access n=89 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=147 avg_ms=14.28 max_ms=23.09
+STATS elapsed=50 capture_fps=18.17 display_fps=29.35 frames=886 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=90 hits=0 infer_ms=3.85 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=90 avg_ms=0.03 max_ms=0.10
+PERF capture.preview n=90 avg_ms=28.86 max_ms=35.48
+PERF capture.ir n=90 avg_ms=20.76 max_ms=30.80
+PERF capture.detect n=90 avg_ms=3.85 max_ms=12.75
+PERF capture.access n=90 avg_ms=0.09 max_ms=7.60
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=146 avg_ms=14.05 max_ms=27.62
+STATS elapsed=55 capture_fps=17.79 display_fps=29.19 frames=975 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=90 hits=0 infer_ms=4.08 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=90 avg_ms=0.06 max_ms=1.10
+PERF capture.preview n=90 avg_ms=29.46 max_ms=36.99
+PERF capture.ir n=90 avg_ms=20.74 max_ms=31.29
+PERF capture.detect n=90 avg_ms=4.08 max_ms=17.48
+PERF capture.access n=90 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=13.86 max_ms=22.69
+STATS elapsed=60 capture_fps=17.79 display_fps=29.39 frames=1064 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=90 hits=0 infer_ms=3.52 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=90 avg_ms=0.02 max_ms=0.07
+PERF capture.preview n=90 avg_ms=29.57 max_ms=37.38
+PERF capture.ir n=90 avg_ms=20.96 max_ms=31.03
+PERF capture.detect n=90 avg_ms=3.52 max_ms=12.97
+PERF capture.access n=90 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=148 avg_ms=13.75 max_ms=22.91
+STATS elapsed=65 capture_fps=18.20 display_fps=29.59 frames=1155 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=92 hits=0 infer_ms=3.19 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=92 avg_ms=0.11 max_ms=8.06
+PERF capture.preview n=92 avg_ms=29.03 max_ms=35.66
+PERF capture.ir n=92 avg_ms=20.78 max_ms=35.74
+PERF capture.detect n=92 avg_ms=3.19 max_ms=15.07
+PERF capture.access n=92 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.12
+PERF ui.present n=148 avg_ms=14.54 max_ms=25.73
+STATS elapsed=70 capture_fps=17.40 display_fps=29.60 frames=1242 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=3.21 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=87 avg_ms=0.02 max_ms=0.03
+PERF capture.preview n=87 avg_ms=30.52 max_ms=36.96
+PERF capture.ir n=87 avg_ms=22.53 max_ms=31.19
+PERF capture.detect n=87 avg_ms=3.21 max_ms=14.52
+PERF capture.access n=87 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=147 avg_ms=14.81 max_ms=24.53
+STATS elapsed=75 capture_fps=17.39 display_fps=29.38 frames=1329 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=88 hits=0 infer_ms=2.88 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=88 avg_ms=0.02 max_ms=0.03
+PERF capture.preview n=88 avg_ms=30.00 max_ms=35.58
+PERF capture.ir n=88 avg_ms=22.64 max_ms=31.24
+PERF capture.detect n=88 avg_ms=2.88 max_ms=11.27
+PERF capture.access n=88 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=146 avg_ms=13.70 max_ms=23.19
+STATS elapsed=80 capture_fps=17.99 display_fps=29.19 frames=1419 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.36 ir_errors=0 state=1
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF capture.vi n=91 avg_ms=0.11 max_ms=7.66
+PERF capture.preview n=91 avg_ms=29.09 max_ms=35.59
+PERF capture.ir n=91 avg_ms=20.48 max_ms=30.63
+PERF capture.detect n=91 avg_ms=3.36 max_ms=11.18
+PERF capture.access n=91 avg_ms=0.09 max_ms=7.78
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -12.380756
+
+[I][pva] second stage handpose ok, cropRot=460x642, rect=(187,326,261,422)
+
+[I][pva] angle is -13.888000 
+
+IR_AE found=1 status=0 reason=restore_success target=56->28 settle_ms=500
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.383296
+
+[I][pva] second stage handpose ok, cropRot=406x675, rect=(189,348,235,352)
+
+[I][pva] angle is -18.325397 
+
+PALM_QUALITY found=1 status=7 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.867104
+
+[I][pva] second stage handpose ok, cropRot=424x658, rect=(172,336,250,337)
+
+[I][pva] angle is -11.768291 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.519281
+
+[I][pva] second stage handpose ok, cropRot=424x690, rect=(164,345,264,391)
+
+[I][pva] angle is -19.675819 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.008106
+
+[I][pva] second stage handpose ok, cropRot=423x721, rect=(197,357,302,418)
+
+[I][pva] angle is 9.141639 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.113417
+
+[I][pva] second stage handpose ok, cropRot=388x658, rect=(188,347,230,453)
+
+[I][pva] angle is -20.347847 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.574216
+
+[I][pva] second stage handpose ok, cropRot=432x658, rect=(195,347,246,453)
+
+[I][pva] angle is -13.483059 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=424x658, rect=(189,347,249,453)
+
+[I][pva] angle is -18.132864 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.615202
+
+[I][pva] second stage handpose ok, cropRot=405x675, rect=(180,353,238,475)
+
+[I][pva] angle is -18.004160 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.872313
+
+[I][pva] second stage handpose ok, cropRot=423x723, rect=(156,378,249,492)
+
+[I][pva] angle is -15.080791 
+
+ACCESS match uuid=0 score=0.7277
+PALM_SESSION success_hold features=10 auth=2
+IR_AE recognition_success target=28 luma=35 time_us=4681 gain=1024/1024/1024
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.998365
+
+[I][pva] second stage handpose ok, cropRot=417x723, rect=(116,370,240,513)
+
+PALM_QUALITY found=1 status=1 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=417x804, rect=(124,367,236,519)
+
+[I][pva] angle is -24.155510 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.098907
+
+[I][pva] second stage handpose ok, cropRot=441x706, rect=(114,375,267,480)
+
+PALM_QUALITY found=1 status=1 overlay=red
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=147 avg_ms=13.78 max_ms=23.20
+STATS elapsed=85 capture_fps=17.15 display_fps=29.31 frames=1505 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.977804
+
+[I][pva] second stage handpose ok, cropRot=417x756, rect=(156,342,274,394)
+
+[I][pva] angle is 8.275893 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=435x739, rect=(155,372,261,494)
+
+[I][pva] angle is -18.334955 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.497374
+
+[I][pva] second stage handpose ok, cropRot=450x676, rect=(153,356,270,466)
+
+[I][pva] angle is -17.756348 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.977804
+
+[I][pva] second stage handpose ok, cropRot=417x769, rect=(202,358,302,427)
+
+[I][pva] angle is 13.799484 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.095230
+
+[I][pva] second stage handpose ok, cropRot=442x751, rect=(212,331,276,435)
+
+[I][pva] angle is 7.983315 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.612577
+
+[I][pva] second stage handpose ok, cropRot=417x787, rect=(212,335,254,471)
+
+[I][pva] angle is -22.100134 
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=78 hits=19 infer_ms=3.12 ir_errors=0 state=2
+PALM_PIPELINE features=19 auth=2 held=9 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=78 avg_ms=0.02 max_ms=0.03
+PERF capture.preview n=78 avg_ms=28.90 max_ms=35.75
+PERF capture.ir n=78 avg_ms=21.18 max_ms=31.00
+PERF capture.detect n=78 avg_ms=3.14 max_ms=16.11
+PERF capture.access n=78 avg_ms=9.09 max_ms=106.31
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.008106
+
+[I][pva] second stage handpose ok, cropRot=406x769, rect=(217,328,290,463)
+
+[I][pva] angle is 13.559450 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.842363
+
+[I][pva] second stage handpose ok, cropRot=424x804, rect=(228,330,296,465)
+
+[I][pva] angle is 14.191096 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -23.454210
+
+[I][pva] second stage handpose ok, cropRot=406x787, rect=(223,326,289,464)
+
+[I][pva] angle is 14.439161 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.590383
+
+[I][pva] second stage handpose ok, cropRot=424x756, rect=(215,328,249,506)
+
+[I][pva] angle is -23.114206 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.347588
+
+[I][pva] second stage handpose ok, cropRot=435x741, rect=(222,344,250,428)
+
+[I][pva] angle is -18.741341 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.899692
+
+[I][pva] second stage handpose ok, cropRot=450x723, rect=(214,330,253,498)
+
+[I][pva] angle is -25.651527 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.236858
+
+[I][pva] second stage handpose ok, cropRot=415x751, rect=(204,343,235,483)
+
+[I][pva] angle is -17.592426 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.124636
+
+[I][pva] second stage handpose ok, cropRot=417x751, rect=(200,375,240,510)
+
+[I][pva] angle is -21.200214 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.336761
+
+[I][pva] second stage handpose ok, cropRot=406x723, rect=(200,378,230,492)
+
+[I][pva] angle is -11.653841 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=424x705, rect=(207,382,235,500)
+
+[I][pva] angle is -16.955315 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.168479
+
+[I][pva] second stage handpose ok, cropRot=478x640, rect=(238,327,270,426)
+
+[I][pva] angle is -6.040565 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.347588
+
+[I][pva] second stage handpose ok, cropRot=435x658, rect=(215,334,250,432)
+
+[I][pva] angle is -10.216880 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.867104
+
+[I][pva] second stage handpose ok, cropRot=424x705, rect=(210,382,246,454)
+
+[I][pva] angle is -8.972626 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.347588
+
+[I][pva] second stage handpose ok, cropRot=435x658, rect=(217,341,247,469)
+
+[I][pva] angle is -14.972875 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.723380
+
+[I][pva] second stage handpose ok, cropRot=417x658, rect=(210,344,240,462)
+
+[I][pva] angle is -17.474775 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.852490
+
+[I][pva] second stage handpose ok, cropRot=417x640, rect=(211,320,236,434)
+
+[I][pva] angle is -11.976132 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.831006
+
+[I][pva] second stage handpose ok, cropRot=415x642, rect=(214,328,244,457)
+
+[I][pva] angle is -17.354025 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.260221
+
+[I][pva] second stage handpose ok, cropRot=397x625, rect=(197,317,230,423)
+
+[I][pva] angle is -17.000093 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.134000
+
+[I][pva] second stage handpose ok, cropRot=405x625, rect=(202,315,230,432)
+
+[I][pva] angle is -17.333244 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.448614
+
+[I][pva] second stage handpose ok, cropRot=417x640, rect=(210,325,232,420)
+
+[I][pva] angle is -13.869686 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.383296
+
+[I][pva] second stage handpose ok, cropRot=424x609, rect=(215,316,240,434)
+
+[I][pva] angle is -12.745288 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.154068
+
+[I][pva] second stage handpose ok, cropRot=415x658, rect=(205,326,238,424)
+
+[I][pva] angle is -14.036243 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.481218
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(227,322,250,438)
+
+[I][pva] angle is -10.994777 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.347588
+
+[I][pva] second stage handpose ok, cropRot=450x609, rect=(227,318,268,454)
+
+[I][pva] angle is -8.746162 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -114.594109
+
+PALM_QUALITY found=1 status=11 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=450x625, rect=(235,310,254,417)
+
+[I][pva] angle is -13.884668 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=424x625, rect=(222,320,249,446)
+
+[I][pva] angle is -8.130103 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.488944
+
+[I][pva] second stage handpose ok, cropRot=435x625, rect=(222,312,250,409)
+
+[I][pva] angle is -4.653352 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=442x640, rect=(229,317,255,411)
+
+[I][pva] angle is -9.514220 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.618525
+
+[I][pva] second stage handpose ok, cropRot=462x640, rect=(229,327,266,411)
+
+[I][pva] angle is -3.144958 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.702224
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(214,315,247,434)
+
+[I][pva] angle is -9.570326 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.637214
+
+[I][pva] second stage handpose ok, cropRot=442x642, rect=(217,313,250,385)
+
+[I][pva] angle is -6.519802 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.461147
+
+[I][pva] second stage handpose ok, cropRot=405x625, rect=(197,324,224,457)
+
+[I][pva] angle is -13.950342 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.835373
+
+[I][pva] second stage handpose ok, cropRot=417x625, rect=(192,331,236,354)
+
+[I][pva] angle is -11.924522 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.460014
+
+[I][pva] second stage handpose ok, cropRot=405x676, rect=(190,345,230,481)
+
+[I][pva] angle is -14.976835 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.384508
+
+[I][pva] second stage handpose ok, cropRot=480x690, rect=(177,350,273,468)
+
+[I][pva] angle is -14.178063 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=460x642, rect=(183,331,260,451)
+
+[I][pva] angle is -12.461756 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.154068
+
+[I][pva] second stage handpose ok, cropRot=423x658, rect=(204,351,238,380)
+
+[I][pva] angle is -10.184032 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.347588
+
+[I][pva] second stage handpose ok, cropRot=435x612, rect=(212,313,241,436)
+
+[I][pva] angle is -12.672317 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.637214
+
+[I][pva] second stage handpose ok, cropRot=442x723, rect=(227,387,250,482)
+
+[I][pva] angle is -14.420773 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.260221
+
+[I][pva] second stage handpose ok, cropRot=397x658, rect=(192,334,224,448)
+
+[I][pva] angle is -14.635728 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.354221
+
+[I][pva] second stage handpose ok, cropRot=442x594, rect=(209,315,247,337)
+
+[I][pva] angle is -6.303627 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.372111
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(207,334,247,349)
+
+[I][pva] angle is -9.893920 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.907661
+
+[I][pva] second stage handpose ok, cropRot=423x658, rect=(208,341,238,469)
+
+[I][pva] angle is -10.516046 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.652556
+
+[I][pva] second stage handpose ok, cropRot=423x675, rect=(201,345,238,451)
+
+[I][pva] angle is -12.492476 
+
+TOUCH_SUBMIT latency_ms=47 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.880658
+
+[I][pva] second stage handpose ok, cropRot=415x675, rect=(199,350,231,481)
+
+[I][pva] angle is -12.942625 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.852490
+
+[I][pva] second stage handpose ok, cropRot=424x675, rect=(194,348,235,475)
+
+UI page=1 feature=0
+[I][pva] angle is -11.040940 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.430220
+
+[I][pva] second stage handpose ok, cropRot=435x630, rect=(177,322,247,463)
+
+[I][pva] angle is -15.592812 
+
+TOUCH_SUBMIT latency_ms=152 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.971722
+
+[I][pva] second stage handpose ok, cropRot=450x630, rect=(176,332,254,350)
+
+[I][pva] angle is -10.813878 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.702224
+
+[I][pva] second stage handpose ok, cropRot=435x721, rect=(188,366,250,475)
+
+[I][pva] angle is -10.922806 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.971722
+
+[I][pva] second stage handpose ok, cropRot=450x612, rect=(191,308,260,464)
+
+[I][pva] angle is -10.638766 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.809301
+
+[I][pva] second stage handpose ok, cropRot=496x642, rect=(255,323,291,442)
+
+[I][pva] angle is -8.702224 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.671577
+
+[I][pva] second stage handpose ok, cropRot=468x642, rect=(243,323,280,442)
+
+[I][pva] angle is -10.713123 
+
+PERF ui.render n=145 avg_ms=0.01 max_ms=0.17
+PERF ui.present n=145 avg_ms=13.96 max_ms=24.75
+STATS elapsed=90 capture_fps=12.17 display_fps=28.94 frames=1566 page=1 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.115359
+
+[I][pva] second stage handpose ok, cropRot=468x690, rect=(239,353,280,432)
+
+[I][pva] angle is -8.303463 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.869600
+
+[I][pva] second stage handpose ok, cropRot=462x706, rect=(236,388,277,440)
+
+[I][pva] angle is -4.996760 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.719346
+
+[I][pva] second stage handpose ok, cropRot=496x690, rect=(217,345,292,468)
+
+[I][pva] angle is -10.757967 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.700583
+
+[I][pva] second stage handpose ok, cropRot=468x739, rect=(210,361,322,410)
+
+[I][pva] angle is 12.200468 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.672560
+
+[I][pva] second stage handpose ok, cropRot=424x739, rect=(136,386,238,519)
+
+[I][pva] angle is -17.295401 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.423412
+
+[I][pva] second stage handpose ok, cropRot=405x769, rect=(130,390,248,522)
+
+[I][pva] angle is -22.416145 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.998365
+
+[I][pva] second stage handpose ok, cropRot=417x769, rect=(126,387,249,512)
+
+PALM_QUALITY found=1 status=1 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=417x756, rect=(120,392,240,522)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.998365
+
+[I][pva] second stage handpose ok, cropRot=417x771, rect=(127,391,246,524)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=469x723, rect=(138,381,270,499)
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=65 hits=63 infer_ms=3.23 ir_errors=0 state=2
+PALM_PIPELINE features=82 auth=2 held=72 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=65 avg_ms=0.03 max_ms=0.03
+PERF capture.preview n=65 avg_ms=25.82 max_ms=34.16
+PERF capture.ir n=65 avg_ms=19.59 max_ms=28.92
+PERF capture.detect n=65 avg_ms=3.23 max_ms=10.11
+PERF capture.access n=65 avg_ms=26.35 max_ms=107.95
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.939083
+
+[I][pva] second stage handpose ok, cropRot=424x741, rect=(159,373,260,495)
+
+[I][pva] angle is -18.735973 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -22.208076
+
+[I][pva] second stage handpose ok, cropRot=469x771, rect=(189,364,312,411)
+
+[I][pva] angle is 13.799484 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=442x690, rect=(217,355,250,483)
+
+[I][pva] angle is -13.495733 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.929321
+
+[I][pva] second stage handpose ok, cropRot=480x690, rect=(240,363,283,462)
+
+[I][pva] angle is -6.307092 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.039254
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(229,342,266,398)
+
+[I][pva] angle is -1.847610 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.658721
+
+[I][pva] second stage handpose ok, cropRot=442x675, rect=(231,356,250,465)
+
+[I][pva] angle is -10.362458 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.945395
+
+[I][pva] second stage handpose ok, cropRot=453x769, rect=(210,381,262,361)
+
+[I][pva] angle is -9.309939 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.719346
+
+[I][pva] second stage handpose ok, cropRot=468x751, rect=(233,370,265,460)
+
+[I][pva] angle is -10.713123 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=442x705, rect=(212,371,246,392)
+
+[I][pva] angle is -12.847705 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.079133
+
+[I][pva] second stage handpose ok, cropRot=417x723, rect=(202,370,235,482)
+
+[I][pva] angle is -15.018362 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.998365
+
+[I][pva] second stage handpose ok, cropRot=417x739, rect=(208,361,236,477)
+
+[I][pva] angle is -17.175903 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -21.801409
+
+[I][pva] second stage handpose ok, cropRot=399x739, rect=(187,352,261,452)
+
+[I][pva] angle is 10.929487 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=417x690, rect=(195,358,236,492)
+
+[I][pva] angle is -12.639061 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.158138
+
+[I][pva] second stage handpose ok, cropRot=460x741, rect=(230,367,261,495)
+
+[I][pva] angle is -17.676107 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=417x690, rect=(211,363,236,476)
+
+[I][pva] angle is -10.975655 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.347588
+
+[I][pva] second stage handpose ok, cropRot=442x675, rect=(219,353,246,489)
+
+[I][pva] angle is -13.799484 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.663294
+
+[I][pva] second stage handpose ok, cropRot=487x690, rect=(247,353,288,460)
+
+[I][pva] angle is -6.404353 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.143866
+
+[I][pva] second stage handpose ok, cropRot=469x705, rect=(230,368,265,478)
+
+[I][pva] angle is -10.113952 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.098907
+
+[I][pva] second stage handpose ok, cropRot=442x723, rect=(224,372,250,507)
+
+[I][pva] angle is -14.113255 
+
+TOUCH_SUBMIT latency_ms=23 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.144457
+
+[I][pva] second stage handpose ok, cropRot=424x769, rect=(212,375,240,495)
+
+[I][pva] angle is -16.313852 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.056763
+
+UI page=0 feature=0
+[I][pva] second stage handpose ok, cropRot=462x706, rect=(233,366,266,486)
+
+[I][pva] angle is -6.855120 
+
+TOUCH_SUBMIT latency_ms=56 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.016737
+
+[I][pva] second stage handpose ok, cropRot=444x723, rect=(215,372,252,507)
+
+[I][pva] angle is -14.036243 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x690, rect=(215,355,241,498)
+
+[I][pva] angle is -15.855801 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.095230
+
+[I][pva] second stage handpose ok, cropRot=442x705, rect=(227,344,320,423)
+
+[I][pva] angle is 8.484322 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.431725
+
+[I][pva] second stage handpose ok, cropRot=415x756, rect=(188,366,253,529)
+
+[I][pva] angle is -24.863695 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(215,327,241,469)
+
+[I][pva] angle is -14.593267 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.434946
+
+[I][pva] second stage handpose ok, cropRot=442x786, rect=(217,365,260,438)
+
+[I][pva] angle is -7.853313 
+
+TOUCH_SUBMIT latency_ms=46 page=0
+TOUCH_SUBMIT latency_ms=41 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.430220
+
+[I][pva] second stage handpose ok, cropRot=453x658, rect=(221,339,261,477)
+
+[I][pva] angle is -15.903110 
+
+TOUCH_SUBMIT latency_ms=32 page=0
+TOUCH_SUBMIT latency_ms=51 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.699245
+
+[I][pva] second stage handpose ok, cropRot=432x769, rect=(212,354,246,505)
+
+[I][pva] angle is -15.368464 
+
+TOUCH_SUBMIT latency_ms=41 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(217,330,255,463)
+
+[I][pva] angle is -9.673355 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.017786
+
+[I][pva] second stage handpose ok, cropRot=450x640, rect=(212,339,260,363)
+
+[I][pva] angle is -1.618095 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.313852
+
+[I][pva] second stage handpose ok, cropRot=442x676, rect=(219,348,246,490)
+
+[I][pva] angle is -13.799484 
+
+TOUCH_SUBMIT latency_ms=35 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=480x769, rect=(204,343,277,470)
+
+[I][pva] angle is -15.355550 
+
+UI page=1 feature=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.774509
+
+[I][pva] second stage handpose ok, cropRot=450x769, rect=(212,366,260,452)
+
+[I][pva] angle is -13.348727 
+
+TOUCH_SUBMIT latency_ms=130 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=480x769, rect=(208,351,277,529)
+
+[I][pva] angle is -18.978880 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.774509
+
+[I][pva] second stage handpose ok, cropRot=450x690, rect=(216,361,249,376)
+
+[I][pva] angle is -10.420712 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=424x640, rect=(208,312,238,512)
+
+[I][pva] angle is -22.818033 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.620756
+
+[I][pva] second stage handpose ok, cropRot=435x642, rect=(214,321,247,494)
+
+[I][pva] angle is -13.316083 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=424x642, rect=(207,321,235,494)
+
+[I][pva] angle is -10.366323 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.313852
+
+[I][pva] second stage handpose ok, cropRot=442x769, rect=(217,328,250,463)
+
+[I][pva] angle is -13.185760 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.017786
+
+[I][pva] second stage handpose ok, cropRot=450x751, rect=(213,355,249,451)
+
+[I][pva] angle is -15.115713 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.397812
+
+[I][pva] second stage handpose ok, cropRot=460x756, rect=(215,328,270,436)
+
+[I][pva] angle is -1.888188 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.017786
+
+[I][pva] second stage handpose ok, cropRot=450x769, rect=(207,328,253,463)
+
+[I][pva] angle is -15.115713 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.699245
+
+[I][pva] second stage handpose ok, cropRot=432x787, rect=(207,347,238,385)
+
+[I][pva] angle is -16.035982 
+
+TOUCH_SUBMIT latency_ms=42 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.313852
+
+[I][pva] second stage handpose ok, cropRot=442x804, rect=(209,339,254,493)
+
+[I][pva] angle is -19.929281 
+
+UI page=0 feature=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.075096
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(200,337,277,492)
+
+[I][pva] angle is -9.761775 
+
+TOUCH_SUBMIT latency_ms=71 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.475759
+
+[I][pva] second stage handpose ok, cropRot=468x769, rect=(207,345,280,512)
+
+[I][pva] angle is -5.250273 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.662106
+
+[I][pva] second stage handpose ok, cropRot=462x756, rect=(207,351,255,505)
+
+[I][pva] angle is -12.901073 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.774509
+
+[I][pva] second stage handpose ok, cropRot=450x769, rect=(211,366,254,452)
+
+[I][pva] angle is -13.276396 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(209,320,240,492)
+
+[I][pva] angle is -13.069317 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.113842
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(209,334,247,362)
+
+[I][pva] angle is -6.303627 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(209,339,240,363)
+
+[I][pva] angle is -10.124671 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.620756
+
+[I][pva] second stage handpose ok, cropRot=435x769, rect=(207,361,247,436)
+
+[I][pva] angle is -15.283302 
+
+PERF ui.render n=143 avg_ms=0.01 max_ms=0.14
+PERF ui.present n=143 avg_ms=14.64 max_ms=26.60
+STATS elapsed=95 capture_fps=12.59 display_fps=28.58 frames=1629 page=0 eth=1
+TOUCH_SUBMIT latency_ms=28 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.774509
+
+[I][pva] second stage handpose ok, cropRot=450x804, rect=(207,342,253,483)
+
+[I][pva] angle is -15.774236 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.719346
+
+[I][pva] second stage handpose ok, cropRot=468x769, rect=(215,336,265,522)
+
+[I][pva] angle is -12.790877 
+
+UI page=1 feature=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.929321
+
+[I][pva] second stage handpose ok, cropRot=468x751, rect=(203,340,280,510)
+
+[I][pva] angle is -5.139757 
+
+TOUCH_SUBMIT latency_ms=126 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.313852
+
+[I][pva] second stage handpose ok, cropRot=442x756, rect=(203,342,250,512)
+
+[I][pva] angle is -11.309932 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.098907
+
+[I][pva] second stage handpose ok, cropRot=442x804, rect=(210,327,250,510)
+
+[I][pva] angle is -19.798876 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.039254
+
+[I][pva] second stage handpose ok, cropRot=462x739, rect=(240,352,266,436)
+
+[I][pva] angle is -10.525107 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=442x786, rect=(207,335,250,470)
+
+[I][pva] angle is -9.727578 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.325649
+
+[I][pva] second stage handpose ok, cropRot=442x739, rect=(207,352,250,436)
+
+[I][pva] angle is -14.727447 
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=65 hits=61 infer_ms=3.50 ir_errors=0 state=2
+PALM_PIPELINE features=143 auth=2 held=133 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=65 avg_ms=0.07 max_ms=2.87
+PERF capture.preview n=65 avg_ms=26.77 max_ms=41.79
+PERF capture.ir n=65 avg_ms=20.77 max_ms=35.04
+PERF capture.detect n=65 avg_ms=3.50 max_ms=9.47
+PERF capture.access n=65 avg_ms=24.41 max_ms=112.78
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.076550
+
+[I][pva] second stage handpose ok, cropRot=406x739, rect=(195,352,235,468)
+
+[I][pva] angle is -10.210867 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.427102
+
+[I][pva] second stage handpose ok, cropRot=415x690, rect=(202,358,231,492)
+
+[I][pva] angle is -12.942625 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.899692
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(227,366,273,468)
+
+[I][pva] angle is -6.581944 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.503056
+
+[I][pva] second stage handpose ok, cropRot=453x594, rect=(224,287,250,469)
+
+[I][pva] angle is -17.447187 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.632717
+
+[I][pva] second stage handpose ok, cropRot=469x690, rect=(225,366,270,468)
+
+[I][pva] angle is -4.916566 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.560196
+
+[I][pva] second stage handpose ok, cropRot=460x642, rect=(224,326,277,436)
+
+[I][pva] angle is -1.573664 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=469x594, rect=(216,306,296,428)
+
+[I][pva] angle is -23.313105 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.384508
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(197,358,266,492)
+
+[I][pva] angle is -12.724356 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.783245
+
+[I][pva] second stage handpose ok, cropRot=442x769, rect=(193,361,250,436)
+
+[I][pva] angle is -15.033258 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.233361
+
+[I][pva] second stage handpose ok, cropRot=442x751, rect=(214,369,249,476)
+
+[I][pva] angle is -13.258871 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.774509
+
+[I][pva] second stage handpose ok, cropRot=450x706, rect=(216,366,249,486)
+
+[I][pva] angle is -10.738896 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+[I][pva] second stage handpose ok, cropRot=424x756, rect=(208,372,238,480)
+
+[I][pva] angle is -12.165031 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.056076
+
+[I][pva] second stage handpose ok, cropRot=442x723, rect=(209,370,254,482)
+
+[I][pva] angle is -10.922806 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.269468
+
+[I][pva] second stage handpose ok, cropRot=417x769, rect=(205,369,236,462)
+
+[I][pva] angle is -14.281096 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=450x741, rect=(209,370,249,453)
+
+[I][pva] angle is -11.373240 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.134000
+
+[I][pva] second stage handpose ok, cropRot=424x706, rect=(207,369,235,495)
+
+[I][pva] angle is -16.635120 
+
+TOUCH_SUBMIT latency_ms=45 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.652556
+
+[I][pva] second stage handpose ok, cropRot=442x723, rect=(214,375,249,466)
+
+[I][pva] angle is -11.056413 
+
+UI page=0 feature=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.461217
+
+[I][pva] second stage handpose ok, cropRot=405x739, rect=(194,363,224,435)
+
+[I][pva] angle is -12.219313 
+
+TOUCH_SUBMIT latency_ms=131 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.369801
+
+[I][pva] second stage handpose ok, cropRot=423x723, rect=(203,381,235,499)
+
+[I][pva] angle is -13.376753 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.858613
+
+[I][pva] second stage handpose ok, cropRot=435x723, rect=(214,358,247,418)
+
+[I][pva] angle is -1.665106 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -20.008106
+
+[I][pva] second stage handpose ok, cropRot=397x756, rect=(211,366,278,463)
+
+[I][pva] angle is 14.118919 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.783245
+
+[I][pva] second stage handpose ok, cropRot=424x739, rect=(212,369,240,484)
+
+[I][pva] angle is -17.274418 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.233361
+
+[I][pva] second stage handpose ok, cropRot=442x804, rect=(214,342,249,483)
+
+[I][pva] angle is -20.256460 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.374259
+
+[I][pva] second stage handpose ok, cropRot=424x739, rect=(213,320,253,510)
+
+[I][pva] angle is -22.520565 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=496x642, rect=(246,318,309,428)
+
+[I][pva] angle is -20.323137 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.354221
+
+[I][pva] second stage handpose ok, cropRot=442x690, rect=(209,347,247,462)
+
+[I][pva] angle is -12.140248 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.401536
+
+[I][pva] second stage handpose ok, cropRot=487x630, rect=(241,339,282,412)
+
+[I][pva] angle is -4.236395 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.094756
+
+[I][pva] second stage handpose ok, cropRot=496x690, rect=(250,369,288,446)
+
+[I][pva] angle is -6.536633 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.955681
+
+[I][pva] second stage handpose ok, cropRot=514x675, rect=(243,340,288,436)
+
+[I][pva] angle is -9.462321 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=505x612, rect=(240,287,296,403)
+
+[I][pva] angle is -21.100082 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.818214
+
+[I][pva] second stage handpose ok, cropRot=424x612, rect=(213,318,253,436)
+
+[I][pva] angle is -5.013113 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.781703
+
+[I][pva] second stage handpose ok, cropRot=417x625, rect=(207,312,240,409)
+
+[I][pva] angle is -4.849844 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.763642
+
+[I][pva] second stage handpose ok, cropRot=405x612, rect=(202,313,238,408)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.373596
+
+[I][pva] second stage handpose ok, cropRot=460x609, rect=(231,314,277,427)
+
+[I][pva] angle is -7.086895 
+
+PERF ui.render n=139 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=139 avg_ms=18.62 max_ms=46.04
+STATS elapsed=100 capture_fps=9.18 display_fps=27.75 frames=1675 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.085616
+
+[I][pva] second stage handpose ok, cropRot=496x609, rect=(232,314,291,398)
+
+[I][pva] angle is -2.629082 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=478x595, rect=(224,288,280,417)
+
+[I][pva] angle is -17.969137 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.503056
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(226,307,254,409)
+
+[I][pva] angle is -9.409222 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.639471
+
+[I][pva] second stage handpose ok, cropRot=435x625, rect=(224,308,247,396)
+
+[I][pva] angle is -9.570326 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=450x612, rect=(221,313,284,326)
+
+[I][pva] angle is -19.929281 
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=39 hits=39 infer_ms=9.05 ir_errors=0 state=2
+PALM_PIPELINE features=182 auth=2 held=172 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=39 avg_ms=0.03 max_ms=0.03
+PERF capture.preview n=39 avg_ms=39.08 max_ms=56.88
+PERF capture.ir n=39 avg_ms=25.58 max_ms=53.06
+PERF capture.detect n=39 avg_ms=9.06 max_ms=20.04
+PERF capture.access n=39 avg_ms=52.10 max_ms=188.25
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.727578
+
+[I][pva] second stage handpose ok, cropRot=397x642, rect=(200,326,220,422)
+
+[I][pva] angle is -14.560276 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.423771
+
+[I][pva] second stage handpose ok, cropRot=450x594, rect=(237,299,261,396)
+
+[I][pva] angle is -6.092772 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.635463
+
+[I][pva] second stage handpose ok, cropRot=435x594, rect=(222,304,250,396)
+
+[I][pva] angle is -6.115503 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.267894
+
+[I][pva] second stage handpose ok, cropRot=468x594, rect=(235,297,270,403)
+
+[I][pva] angle is -8.303463 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.818214
+
+[I][pva] second stage handpose ok, cropRot=424x609, rect=(216,306,246,406)
+
+[I][pva] angle is -9.299241 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.372111
+
+[I][pva] second stage handpose ok, cropRot=460x625, rect=(235,317,265,410)
+
+[I][pva] angle is -5.959839 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.489552
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(233,307,247,409)
+
+[I][pva] angle is -11.181753 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.871391
+
+[I][pva] second stage handpose ok, cropRot=406x609, rect=(206,306,230,421)
+
+[I][pva] angle is -9.926247 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.871391
+
+[I][pva] second stage handpose ok, cropRot=406x640, rect=(209,335,230,434)
+
+[I][pva] angle is -7.125016 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.086895
+
+[I][pva] second stage handpose ok, cropRot=435x625, rect=(229,317,250,423)
+
+[I][pva] angle is -9.570326 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.309934
+
+[I][pva] second stage handpose ok, cropRot=399x625, rect=(199,327,224,439)
+
+[I][pva] angle is -12.219313 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.488944
+
+[I][pva] second stage handpose ok, cropRot=435x642, rect=(222,323,250,414)
+
+[I][pva] angle is -6.632514 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.279226
+
+[I][pva] second stage handpose ok, cropRot=469x576, rect=(245,292,288,392)
+
+[I][pva] angle is -5.139757 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.267894
+
+[I][pva] second stage handpose ok, cropRot=462x609, rect=(236,304,289,399)
+
+[I][pva] angle is -2.755425 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.354221
+
+[I][pva] second stage handpose ok, cropRot=450x625, rect=(230,312,268,396)
+
+[I][pva] angle is -2.894513 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.325649
+
+[I][pva] second stage handpose ok, cropRot=460x625, rect=(237,319,261,404)
+
+[I][pva] angle is -7.512143 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.246315
+
+[I][pva] second stage handpose ok, cropRot=435x625, rect=(229,319,261,404)
+
+[I][pva] angle is -4.984115 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.527841
+
+[I][pva] second stage handpose ok, cropRot=462x625, rect=(232,315,277,417)
+
+[I][pva] angle is -8.861865 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.690239
+
+[I][pva] second stage handpose ok, cropRot=435x625, rect=(226,308,252,396)
+
+[I][pva] angle is -7.765166 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.880658
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(219,327,254,439)
+
+[I][pva] angle is -12.319445 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.374259
+
+[I][pva] second stage handpose ok, cropRot=435x612, rect=(204,320,254,428)
+
+[I][pva] angle is -4.653352 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.051828
+
+[I][pva] second stage handpose ok, cropRot=442x595, rect=(192,308,254,423)
+
+[I][pva] angle is -5.774325 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.134000
+
+[I][pva] second stage handpose ok, cropRot=424x612, rect=(197,310,246,414)
+
+[I][pva] angle is -4.763642 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.637214
+
+[I][pva] second stage handpose ok, cropRot=435x642, rect=(204,323,247,428)
+
+[I][pva] angle is -8.269961 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.209901
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(202,315,254,417)
+
+[I][pva] angle is -7.808991 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.351078
+
+[I][pva] second stage handpose ok, cropRot=397x612, rect=(197,318,230,436)
+
+[I][pva] angle is -8.334365 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.956635
+
+[I][pva] second stage handpose ok, cropRot=397x642, rect=(201,321,224,436)
+
+[I][pva] angle is -12.567442 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.430220
+
+[I][pva] second stage handpose ok, cropRot=435x625, rect=(215,317,250,423)
+
+[I][pva] angle is -3.066485 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.380756
+
+[I][pva] second stage handpose ok, cropRot=468x690, rect=(241,363,276,462)
+
+[I][pva] angle is -8.303463 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.672560
+
+[I][pva] second stage handpose ok, cropRot=435x690, rect=(228,358,247,476)
+
+[I][pva] angle is -14.036243 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.786502
+
+PALM_QUALITY found=1 status=11 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.154068
+
+[I][pva] second stage handpose ok, cropRot=423x705, rect=(209,363,253,447)
+
+[I][pva] angle is -3.768530 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.172552
+
+[I][pva] second stage handpose ok, cropRot=415x640, rect=(205,325,238,420)
+
+[I][pva] angle is -5.225927 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.369801
+
+[I][pva] second stage handpose ok, cropRot=406x609, rect=(203,311,237,406)
+
+[I][pva] angle is -6.418787 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.165309
+
+[I][pva] second stage handpose ok, cropRot=397x594, rect=(207,297,234,391)
+
+[I][pva] angle is -5.095700 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.660546
+
+[I][pva] second stage handpose ok, cropRot=435x576, rect=(219,292,252,392)
+
+[I][pva] angle is -5.644622 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.444106
+
+[I][pva] second stage handpose ok, cropRot=450x577, rect=(235,302,265,405)
+
+[I][pva] angle is -7.362592 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.488944
+
+[I][pva] second stage handpose ok, cropRot=435x640, rect=(226,325,252,405)
+
+[I][pva] angle is -6.632514 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.561808
+
+[I][pva] second stage handpose ok, cropRot=424x576, rect=(209,290,249,384)
+
+[I][pva] angle is -1.388716 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.462321
+
+[I][pva] second stage handpose ok, cropRot=405x640, rect=(206,320,230,420)
+
+[I][pva] angle is -10.619656 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.066503
+
+[I][pva] second stage handpose ok, cropRot=424x625, rect=(222,312,240,423)
+
+[I][pva] angle is -9.968356 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=450x625, rect=(232,312,254,409)
+
+[I][pva] angle is -9.253406 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+PERF ui.render n=144 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=144 avg_ms=17.04 max_ms=37.42
+STATS elapsed=105 capture_fps=11.77 display_fps=28.72 frames=1734 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.354221
+
+[I][pva] second stage handpose ok, cropRot=462x625, rect=(241,317,282,410)
+
+[I][pva] angle is -4.398705 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.907661
+
+[I][pva] second stage handpose ok, cropRot=415x642, rect=(205,331,231,465)
+
+[I][pva] angle is -15.615842 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.536633
+
+[I][pva] second stage handpose ok, cropRot=415x625, rect=(207,315,235,475)
+
+[I][pva] angle is -10.027909 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.444106
+
+[I][pva] second stage handpose ok, cropRot=424x658, rect=(205,339,238,477)
+
+[I][pva] angle is -13.793808 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.125372
+
+[I][pva] second stage handpose ok, cropRot=450x625, rect=(225,320,254,446)
+
+[I][pva] angle is -10.813878 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.899692
+
+[I][pva] second stage handpose ok, cropRot=469x612, rect=(241,308,265,464)
+
+[I][pva] angle is -10.413825 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=469x625, rect=(245,310,265,417)
+
+[I][pva] angle is -8.908998 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.250340
+
+[I][pva] second stage handpose ok, cropRot=469x642, rect=(230,331,265,451)
+
+[I][pva] angle is -7.696051 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.039254
+
+[I][pva] second stage handpose ok, cropRot=460x612, rect=(230,304,261,477)
+
+[I][pva] angle is -11.793430 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.835526
+
+[I][pva] second stage handpose ok, cropRot=487x642, rect=(245,321,270,436)
+
+[I][pva] angle is -13.392497 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.611937
+
+[I][pva] second stage handpose ok, cropRot=523x612, rect=(263,292,291,441)
+
+[I][pva] angle is -14.367813 
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=65 hits=53 infer_ms=3.94 ir_errors=0 state=2
+PALM_PIPELINE features=235 auth=2 held=225 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=65 avg_ms=0.04 max_ms=1.02
+PERF capture.preview n=65 avg_ms=30.06 max_ms=59.20
+PERF capture.ir n=65 avg_ms=22.88 max_ms=47.44
+PERF capture.detect n=65 avg_ms=3.94 max_ms=20.39
+PERF capture.access n=65 avg_ms=18.48 max_ms=37.62
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=525x690, rect=(250,361,309,436)
+
+[I][pva] angle is -21.336857 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.854454
+
+[I][pva] second stage handpose ok, cropRot=460x706, rect=(214,358,254,464)
+
+[I][pva] angle is -17.170561 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.325649
+
+[I][pva] second stage handpose ok, cropRot=453x706, rect=(200,361,261,470)
+
+[I][pva] angle is -10.678947 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.154068
+
+[I][pva] second stage handpose ok, cropRot=415x706, rect=(196,350,231,408)
+
+[I][pva] angle is -9.865806 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.504774
+
+[I][pva] second stage handpose ok, cropRot=435x723, rect=(192,370,250,482)
+
+[I][pva] angle is -10.994777 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.663294
+
+[I][pva] second stage handpose ok, cropRot=469x705, rect=(203,352,282,447)
+
+[I][pva] angle is -6.639471 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.835526
+
+[I][pva] second stage handpose ok, cropRot=480x625, rect=(208,315,277,432)
+
+[I][pva] angle is -9.991043 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.209901
+
+[I][pva] second stage handpose ok, cropRot=453x594, rect=(233,294,255,450)
+
+[I][pva] angle is -13.495733 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.094756
+
+[I][pva] second stage handpose ok, cropRot=462x687, rect=(234,354,262,482)
+
+[I][pva] angle is -11.430302 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.481218
+
+[I][pva] second stage handpose ok, cropRot=442x675, rect=(219,332,254,427)
+
+[I][pva] angle is -8.310276 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -14.858613
+
+[I][pva] second stage handpose ok, cropRot=442x630, rect=(203,329,250,342)
+
+[I][pva] angle is -6.519802 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.992414
+
+[I][pva] second stage handpose ok, cropRot=469x658, rect=(236,326,261,439)
+
+[I][pva] angle is -10.885526 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.162989
+
+[I][pva] second stage handpose ok, cropRot=496x625, rect=(244,324,280,334)
+
+[I][pva] angle is -5.536881 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.280007
+
+[I][pva] second stage handpose ok, cropRot=478x625, rect=(250,312,280,423)
+
+[I][pva] angle is -8.723380 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.875163
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(236,342,266,428)
+
+[I][pva] angle is -9.972057 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.835373
+
+[I][pva] second stage handpose ok, cropRot=417x640, rect=(211,320,236,420)
+
+[I][pva] angle is -8.615649 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.488944
+
+[I][pva] second stage handpose ok, cropRot=444x658, rect=(232,328,250,433)
+
+[I][pva] angle is -13.407508 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.869600
+
+[I][pva] second stage handpose ok, cropRot=496x609, rect=(265,302,288,408)
+
+[I][pva] angle is -8.471145 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.909152
+
+[I][pva] second stage handpose ok, cropRot=487x625, rect=(253,305,280,390)
+
+[I][pva] angle is -7.236922 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.069062
+
+[I][pva] second stage handpose ok, cropRot=496x625, rect=(261,305,296,390)
+
+[I][pva] angle is -4.085616 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.246315
+
+[I][pva] second stage handpose ok, cropRot=444x625, rect=(237,322,255,410)
+
+[I][pva] angle is -9.356709 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.835373
+
+[I][pva] second stage handpose ok, cropRot=424x640, rect=(222,322,240,426)
+
+[I][pva] angle is -10.124671 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.134410
+
+[I][pva] second stage handpose ok, cropRot=507x612, rect=(255,308,294,394)
+
+[I][pva] angle is -6.795944 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.869600
+
+[I][pva] second stage handpose ok, cropRot=507x640, rect=(263,317,304,397)
+
+[I][pva] angle is -5.710592 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.954248
+
+[I][pva] second stage handpose ok, cropRot=540x594, rect=(269,297,294,391)
+
+[I][pva] angle is -5.426812 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+TOUCH_SUBMIT latency_ms=43 page=0
+UI page=1 feature=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.028263
+
+[I][pva] second stage handpose ok, cropRot=496x609, rect=(250,304,297,412)
+
+[I][pva] angle is -7.088475 
+
+PALM_QUALITY found=1 status=0 overlay=green
+TOUCH_SUBMIT latency_ms=160 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.717370
+
+[I][pva] second stage handpose ok, cropRot=469x676, rect=(241,353,296,368)
+
+[I][pva] angle is 0.000000 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=499x609, rect=(237,290,294,385)
+
+[I][pva] angle is -16.699245 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.854454
+
+[I][pva] second stage handpose ok, cropRot=468x675, rect=(232,348,268,441)
+
+[I][pva] angle is -8.303463 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.246315
+
+[I][pva] second stage handpose ok, cropRot=460x640, rect=(228,322,276,426)
+
+[I][pva] angle is -4.737443 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.372111
+
+[I][pva] second stage handpose ok, cropRot=450x642, rect=(225,303,276,457)
+
+[I][pva] angle is -6.271078 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.258846
+
+[I][pva] second stage handpose ok, cropRot=442x642, rect=(221,318,280,414)
+
+[I][pva] angle is -1.636577 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.918280
+
+[I][pva] second stage handpose ok, cropRot=496x625, rect=(255,327,291,424)
+
+[I][pva] angle is -6.876831 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+[I][pva] second stage handpose ok, cropRot=496x594, rect=(265,297,320,391)
+
+[I][pva] angle is 1.123303 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.691386
+
+[I][pva] second stage handpose ok, cropRot=505x658, rect=(254,329,291,417)
+
+[I][pva] angle is -7.160449 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.882282
+
+[I][pva] second stage handpose ok, cropRot=496x625, rect=(261,317,308,423)
+
+[I][pva] angle is -4.004173 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+[I][pva] second stage handpose ok, cropRot=487x625, rect=(243,315,296,417)
+
+[I][pva] angle is -4.085616 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.372111
+
+[I][pva] second stage handpose ok, cropRot=442x642, rect=(217,316,260,436)
+
+[I][pva] angle is -6.556946 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.832270
+
+[I][pva] second stage handpose ok, cropRot=487x640, rect=(258,320,296,420)
+
+[I][pva] angle is -4.467159 
+
+TOUCH_SUBMIT latency_ms=30 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.980599
+
+[I][pva] second stage handpose ok, cropRot=480x612, rect=(255,310,292,414)
+
+[I][pva] angle is -4.148903 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.246315
+
+UI page=0 feature=0
+[I][pva] second stage handpose ok, cropRot=435x612, rect=(222,318,250,436)
+
+[I][pva] angle is -9.246114 
+
+TOUCH_SUBMIT latency_ms=58 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.536633
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(226,314,276,404)
+
+[I][pva] angle is -1.609009 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.488944
+
+[I][pva] second stage handpose ok, cropRot=453x690, rect=(239,337,273,432)
+
+[I][pva] angle is -5.079607 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=469x612, rect=(232,296,282,428)
+
+[I][pva] angle is -18.811888 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+PERF ui.render n=143 avg_ms=0.05 max_ms=3.18
+PERF ui.present n=143 avg_ms=14.24 max_ms=25.96
+STATS elapsed=110 capture_fps=13.59 display_fps=28.58 frames=1802 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.980114
+
+[I][pva] second stage handpose ok, cropRot=514x625, rect=(253,310,304,403)
+
+[I][pva] angle is -5.321021 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.652556
+
+[I][pva] second stage handpose ok, cropRot=435x751, rect=(215,378,250,468)
+
+[I][pva] angle is -8.130103 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.795944
+
+[I][pva] second stage handpose ok, cropRot=442x676, rect=(212,348,254,475)
+
+[I][pva] angle is -13.799484 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.835373
+
+[I][pva] second stage handpose ok, cropRot=435x675, rect=(205,345,241,451)
+
+[I][pva] angle is -12.349196 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.130103
+
+[I][pva] second stage handpose ok, cropRot=462x690, rect=(229,345,266,436)
+
+[I][pva] angle is -8.259439 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.125372
+
+[I][pva] second stage handpose ok, cropRot=469x675, rect=(230,348,277,441)
+
+[I][pva] angle is -1.548158 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.658721
+
+[I][pva] second stage handpose ok, cropRot=450x675, rect=(225,324,254,465)
+
+[I][pva] angle is -9.879391 
+
+TOUCH_SUBMIT latency_ms=28 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.980114
+
+UI page=1 feature=0
+[I][pva] second stage handpose ok, cropRot=487x640, rect=(232,332,288,340)
+
+[I][pva] angle is -1.491740 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+TOUCH_SUBMIT latency_ms=138 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.618525
+
+[I][pva] second stage handpose ok, cropRot=462x706, rect=(232,363,277,464)
+
+[I][pva] angle is -3.384518 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=70 hits=53 infer_ms=3.56 ir_errors=0 state=1
+PALM_PIPELINE features=288 auth=2 held=278 present=1 entry=0 missing=1 success_hold=1
+PERF capture.vi n=70 avg_ms=0.03 max_ms=0.04
+PERF capture.preview n=70 avg_ms=25.61 max_ms=34.95
+PERF capture.ir n=70 avg_ms=20.99 max_ms=29.60
+PERF capture.detect n=70 avg_ms=3.57 max_ms=12.20
+PERF capture.access n=70 avg_ms=19.04 max_ms=118.03
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.835526
+
+[I][pva] second stage handpose ok, cropRot=496x625, rect=(256,310,280,403)
+
+[I][pva] angle is -8.416374 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=469x739, rect=(232,392,270,452)
+
+[I][pva] angle is -1.857590 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.231043
+
+[I][pva] second stage handpose ok, cropRot=450x723, rect=(219,372,260,457)
+
+[I][pva] angle is -3.556181 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+TOUCH_SUBMIT latency_ms=35 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.671577
+
+[I][pva] second stage handpose ok, cropRot=469x804, rect=(214,405,270,393)
+
+[I][pva] angle is -7.696051 
+
+TOUCH_SUBMIT latency_ms=7 page=1
+PALM_QUALITY found=1 status=0 overlay=green
+TOUCH_SUBMIT latency_ms=30 page=1
+TOUCH_SUBMIT latency_ms=34 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.833644
+
+[I][pva] second stage handpose ok, cropRot=453x741, rect=(212,379,277,463)
+
+[I][pva] angle is -1.600025 
+
+TOUCH_SUBMIT latency_ms=16 page=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.325649
+
+[I][pva] second stage handpose ok, cropRot=460x675, rect=(224,334,277,435)
+
+[I][pva] angle is -1.930587 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.809301
+
+[I][pva] second stage handpose ok, cropRot=499x723, rect=(259,367,289,460)
+
+[I][pva] angle is -9.462321 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.209901
+
+[I][pva] second stage handpose ok, cropRot=450x705, rect=(218,358,254,448)
+
+[I][pva] angle is -10.503003 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.852490
+
+[I][pva] second stage handpose ok, cropRot=424x705, rect=(208,366,238,484)
+
+[I][pva] angle is -12.819093 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.124636
+
+[I][pva] second stage handpose ok, cropRot=424x705, rect=(215,366,240,484)
+
+[I][pva] angle is -14.356775 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.035034
+
+[I][pva] second stage handpose ok, cropRot=442x675, rect=(219,363,254,442)
+
+[I][pva] angle is -1.645977 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.148903
+
+[I][pva] second stage handpose ok, cropRot=442x690, rect=(224,353,260,460)
+
+[I][pva] angle is -6.842773 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.372111
+
+[I][pva] second stage handpose ok, cropRot=424x675, rect=(212,358,240,489)
+
+[I][pva] angle is -14.036243 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.168479
+
+[I][pva] second stage handpose ok, cropRot=460x675, rect=(226,361,280,451)
+
+[I][pva] angle is -1.898613 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.832270
+
+[I][pva] second stage handpose ok, cropRot=468x690, rect=(232,350,280,438)
+
+[I][pva] angle is -3.402770 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=450x658, rect=(223,341,279,469)
+
+[I][pva] angle is -22.197718 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.234799
+
+[I][pva] second stage handpose ok, cropRot=478x658, rect=(242,347,282,453)
+
+[I][pva] angle is -4.838899 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.717370
+
+[I][pva] second stage handpose ok, cropRot=469x658, rect=(223,342,265,453)
+
+[I][pva] angle is -11.011831 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.051828
+
+[I][pva] second stage handpose ok, cropRot=469x675, rect=(193,343,280,427)
+
+[I][pva] angle is -4.537773 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.113842
+
+[I][pva] second stage handpose ok, cropRot=450x675, rect=(186,342,265,442)
+
+[I][pva] angle is -4.737443 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=468x739, rect=(190,381,277,468)
+
+[I][pva] angle is -7.086895 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.692832
+
+[I][pva] second stage handpose ok, cropRot=469x690, rect=(189,364,270,492)
+
+[I][pva] angle is -11.368220 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.871181
+
+[I][pva] second stage handpose ok, cropRot=496x690, rect=(196,355,288,483)
+
+[I][pva] angle is -9.272601 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.762633
+
+[I][pva] second stage handpose ok, cropRot=499x690, rect=(205,353,297,446)
+
+[I][pva] angle is -5.964487 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.140901
+
+[I][pva] second stage handpose ok, cropRot=487x625, rect=(225,327,288,439)
+
+[I][pva] angle is -5.622401 
+
+TOUCH_SUBMIT latency_ms=28 page=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+UI page=0 feature=0
+[I][pva] isInvalid5 is false
+
+TOUCH_SUBMIT latency_ms=70 page=0
+[I][pva] left hand
+
+[I][pva] second stage angle is -3.882899
+
+[I][pva] second stage handpose ok, cropRot=498x690, rect=(276,358,304,476)
+
+[I][pva] angle is -9.226344 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.105098
+
+[I][pva] second stage handpose ok, cropRot=470x675, rect=(253,348,308,441)
+
+[I][pva] angle is -6.307092 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.401536
+
+[I][pva] second stage handpose ok, cropRot=496x739, rect=(249,357,308,452)
+
+[I][pva] angle is -1.753405 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is 4.105098
+
+[I][pva] second stage handpose ok, cropRot=505x640, rect=(252,337,320,440)
+
+[I][pva] angle is -22.619864 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.401536
+
+[I][pva] second stage handpose ok, cropRot=478x690, rect=(231,361,303,362)
+
+[I][pva] angle is 2.966041 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.659208
+
+[I][pva] second stage handpose ok, cropRot=442x741, rect=(224,362,270,446)
+
+[I][pva] angle is -1.963658 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.150943
+
+[I][pva] second stage handpose ok, cropRot=496x690, rect=(253,350,296,452)
+
+[I][pva] angle is -6.115503 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=514x625, rect=(258,322,308,438)
+
+[I][pva] angle is -17.484426 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.150943
+
+[I][pva] second stage handpose ok, cropRot=496x609, rect=(246,302,309,393)
+
+[I][pva] angle is -4.004173 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.111331
+
+[I][pva] second stage handpose ok, cropRot=513x609, rect=(252,295,303,374)
+
+[I][pva] angle is -18.066492 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.234799
+
+[I][pva] second stage handpose ok, cropRot=499x676, rect=(245,325,306,391)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 6.536633
+
+PERF ui.render n=144 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=144 avg_ms=14.17 max_ms=24.40
+STATS elapsed=115 capture_fps=13.74 display_fps=28.68 frames=1871 page=0 eth=1
+[I][pva] second stage handpose ok, cropRot=478x594, rect=(237,311,308,350)
+
+[I][pva] angle is -22.760008 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.290610
+
+[I][pva] second stage handpose ok, cropRot=513x546, rect=(256,264,313,334)
+
+[I][pva] angle is -16.389540 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is 6.009007
+
+[I][pva] second stage handpose ok, cropRot=525x564, rect=(258,268,296,356)
+
+[I][pva] angle is -19.554594 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is 4.184916
+
+[I][pva] second stage handpose ok, cropRot=525x577, rect=(266,288,296,352)
+
+[I][pva] angle is -20.801195 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.035034
+
+[I][pva] second stage handpose ok, cropRot=507x612, rect=(220,306,304,348)
+
+[I][pva] angle is 1.193489 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=66 hits=41 infer_ms=2.90 ir_errors=0 state=2
+PALM_PIPELINE features=329 auth=2 held=319 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=66 avg_ms=0.02 max_ms=0.04
+PERF capture.preview n=66 avg_ms=26.89 max_ms=35.91
+PERF capture.ir n=66 avg_ms=21.47 max_ms=31.47
+PERF capture.detect n=66 avg_ms=2.90 max_ms=10.23
+PERF capture.access n=66 avg_ms=22.44 max_ms=109.89
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.105098
+
+[I][pva] second stage handpose ok, cropRot=487x642, rect=(142,313,288,385)
+
+PALM_QUALITY found=1 status=1 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.658721
+
+[I][pva] second stage handpose ok, cropRot=462x658, rect=(136,324,266,388)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.835373
+
+[I][pva] second stage handpose ok, cropRot=453x690, rect=(126,337,262,412)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.899692
+
+[I][pva] second stage handpose ok, cropRot=478x676, rect=(139,332,280,397)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.753161
+
+[I][pva] second stage handpose ok, cropRot=505x658, rect=(150,324,284,388)
+
+[I][pva] angle is -4.490451 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.101655
+
+[I][pva] second stage handpose ok, cropRot=540x642, rect=(224,331,340,408)
+
+[I][pva] angle is -3.954248 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_SESSION left false_frames=20 success_hold=1 features=335 auth=2 held=325
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+[I][pva] left hand
+
+PALM_SESSION entered true_frames=2
+[I][pva] second stage angle is -3.760510
+
+[I][pva] second stage handpose ok, cropRot=540x675, rect=(245,329,331,421)
+
+[I][pva] angle is -5.604538 
+
+IR_AE found=1 resume_success target=28 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.871181
+
+[I][pva] second stage handpose ok, cropRot=468x690, rect=(246,342,270,428)
+
+[I][pva] angle is -9.813519 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.134000
+
+[I][pva] second stage handpose ok, cropRot=415x658, rect=(211,328,235,447)
+
+[I][pva] angle is -14.036243 
+
+ACCESS match uuid=0 score=0.6936
+PALM_SESSION success_hold features=338 auth=4
+IR_AE recognition_success target=28 luma=28 time_us=3822 gain=1024/1024/1024
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.974929
+
+[I][pva] second stage handpose ok, cropRot=415x625, rect=(215,317,238,396)
+
+[I][pva] angle is -8.325649 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.537773
+
+[I][pva] second stage handpose ok, cropRot=444x594, rect=(224,304,266,396)
+
+[I][pva] angle is -4.472129 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.795944
+
+[I][pva] second stage handpose ok, cropRot=442x625, rect=(227,315,250,417)
+
+[I][pva] angle is -12.563469 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.503056
+
+[I][pva] second stage handpose ok, cropRot=444x609, rect=(237,311,255,392)
+
+[I][pva] angle is -9.039484 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.444106
+
+[I][pva] second stage handpose ok, cropRot=424x612, rect=(213,315,246,428)
+
+[I][pva] angle is -7.795601 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=462x577, rect=(230,275,282,364)
+
+[I][pva] angle is -21.282648 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.125372
+
+[I][pva] second stage handpose ok, cropRot=480x576, rect=(255,299,316,307)
+
+[I][pva] angle is -1.446555 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.401536
+
+[I][pva] second stage handpose ok, cropRot=469x594, rect=(254,299,303,396)
+
+[I][pva] angle is -6.795944 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.589126
+
+[I][pva] second stage handpose ok, cropRot=415x625, rect=(218,319,231,418)
+
+[I][pva] angle is -10.210867 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -10.430220
+
+[I][pva] second stage handpose ok, cropRot=450x630, rect=(230,320,268,412)
+
+[I][pva] angle is -6.305446 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.06
+PERF ui.present n=147 avg_ms=13.47 max_ms=25.32
+STATS elapsed=120 capture_fps=15.19 display_fps=29.39 frames=1947 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.162989
+
+[I][pva] second stage handpose ok, cropRot=496x687, rect=(250,349,331,405)
+
+[I][pva] angle is 0.000000 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.009007
+
+[I][pva] second stage handpose ok, cropRot=487x658, rect=(245,336,336,409)
+
+[I][pva] angle is 1.461310 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.184916
+
+[I][pva] second stage handpose ok, cropRot=505x625, rect=(258,310,291,403)
+
+[I][pva] angle is -4.170436 
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=81 hits=22 infer_ms=3.78 ir_errors=0 state=2
+PALM_PIPELINE features=351 auth=4 held=338 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=81 avg_ms=0.02 max_ms=0.11
+PERF capture.preview n=81 avg_ms=28.99 max_ms=35.35
+PERF capture.ir n=81 avg_ms=20.51 max_ms=30.26
+PERF capture.detect n=81 avg_ms=3.78 max_ms=13.41
+PERF capture.access n=81 avg_ms=6.90 max_ms=83.13
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.184916
+
+[I][pva] second stage handpose ok, cropRot=496x625, rect=(271,307,316,409)
+
+[I][pva] angle is -2.576572 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.181641
+
+[I][pva] second stage handpose ok, cropRot=514x609, rect=(276,323,325,412)
+
+[I][pva] angle is -1.383687 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=513x612, rect=(256,292,279,388)
+
+[I][pva] angle is -17.663332 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.234799
+
+[I][pva] second stage handpose ok, cropRot=532x531, rect=(276,263,295,403)
+
+[I][pva] angle is -14.175141 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.178680
+
+[I][pva] second stage handpose ok, cropRot=480x564, rect=(251,277,336,356)
+
+[I][pva] angle is -3.934782 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 2.178680
+
+[I][pva] second stage handpose ok, cropRot=480x577, rect=(243,277,294,360)
+
+[I][pva] angle is -17.585484 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+[I][pva] second stage handpose ok, cropRot=513x595, rect=(262,311,320,378)
+
+[I][pva] angle is 1.439290 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.035034
+
+[I][pva] second stage handpose ok, cropRot=469x625, rect=(240,310,292,403)
+
+[I][pva] angle is -1.212428 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.869600
+
+[I][pva] second stage handpose ok, cropRot=499x658, rect=(264,344,294,447)
+
+[I][pva] angle is -7.518426 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.577427
+
+[I][pva] second stage handpose ok, cropRot=496x676, rect=(257,332,296,428)
+
+[I][pva] angle is -1.461310 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.854454
+
+[I][pva] second stage handpose ok, cropRot=487x676, rect=(245,337,280,442)
+
+[I][pva] angle is -9.462321 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+[I][pva] second stage handpose ok, cropRot=487x658, rect=(247,336,276,483)
+
+[I][pva] angle is -13.473158 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.028263
+
+[I][pva] second stage handpose ok, cropRot=505x706, rect=(254,355,279,454)
+
+[I][pva] angle is -9.605204 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.162989
+
+[I][pva] second stage handpose ok, cropRot=487x751, rect=(251,367,288,468)
+
+[I][pva] angle is -8.589126 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.875163
+
+[I][pva] second stage handpose ok, cropRot=462x804, rect=(238,401,273,510)
+
+[I][pva] angle is -9.614569 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+[I][pva] second stage handpose ok, cropRot=487x676, rect=(247,338,288,460)
+
+[I][pva] angle is -9.462321 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.854454
+
+[I][pva] second stage handpose ok, cropRot=478x804, rect=(235,392,270,519)
+
+[I][pva] angle is -12.817369 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.719346
+
+[I][pva] second stage handpose ok, cropRot=468x816, rect=(214,392,261,492)
+
+[I][pva] angle is -13.888000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.809301
+
+[I][pva] second stage handpose ok, cropRot=480x885, rect=(225,384,273,412)
+
+[I][pva] angle is -18.072321 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.972932
+
+[I][pva] second stage handpose ok, cropRot=468x882, rect=(228,355,260,550)
+
+[I][pva] angle is -14.852577 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.162989
+
+[I][pva] second stage handpose ok, cropRot=468x786, rect=(221,368,260,447)
+
+[I][pva] angle is -13.363963 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.809301
+
+[I][pva] second stage handpose ok, cropRot=487x834, rect=(243,342,277,538)
+
+[I][pva] angle is -16.726477 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.929321
+
+[I][pva] second stage handpose ok, cropRot=480x850, rect=(234,339,277,482)
+
+[I][pva] angle is -6.009006 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.971722
+
+[I][pva] second stage handpose ok, cropRot=460x850, rect=(224,332,255,596)
+
+[I][pva] angle is -21.911697 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -12.150909
+
+[I][pva] second stage handpose ok, cropRot=460x816, rect=(226,313,270,571)
+
+[I][pva] angle is -5.959839 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.717370
+
+[I][pva] second stage handpose ok, cropRot=480x804, rect=(236,318,273,554)
+
+[I][pva] angle is -16.422186 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.717370
+
+[I][pva] second stage handpose ok, cropRot=469x786, rect=(223,356,265,410)
+
+[I][pva] angle is -13.085060 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.717370
+
+[I][pva] second stage handpose ok, cropRot=469x816, rect=(225,313,261,571)
+
+[I][pva] angle is -11.793430 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.482483
+
+[I][pva] second stage handpose ok, cropRot=460x850, rect=(224,299,265,538)
+
+[I][pva] angle is -17.961439 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.482483
+
+[I][pva] second stage handpose ok, cropRot=460x850, rect=(230,299,261,538)
+
+[I][pva] angle is -15.945395 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.482483
+
+[I][pva] second stage handpose ok, cropRot=460x850, rect=(224,309,265,567)
+
+[I][pva] angle is -22.643106 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.715559
+
+[I][pva] second stage handpose ok, cropRot=480x786, rect=(227,301,278,567)
+
+[I][pva] angle is -11.019682 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=460x933, rect=(248,311,261,520)
+
+[I][pva] angle is -15.361616 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.657642
+
+[I][pva] second stage handpose ok, cropRot=462x882, rect=(249,304,261,520)
+
+[I][pva] angle is -16.525795 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.910179
+
+[I][pva] second stage handpose ok, cropRot=462x834, rect=(234,294,262,549)
+
+[I][pva] angle is -19.674097 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.413580
+
+[I][pva] second stage handpose ok, cropRot=462x900, rect=(231,310,261,591)
+
+[I][pva] angle is -24.876549 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -8.017093
+
+[I][pva] second stage handpose ok, cropRot=468x832, rect=(230,306,265,583)
+
+[I][pva] angle is -22.597870 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.397812
+
+[I][pva] second stage handpose ok, cropRot=438x834, rect=(227,320,241,604)
+
+[I][pva] angle is -24.495020 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.462179
+
+[I][pva] second stage handpose ok, cropRot=408x690, rect=(235,315,260,538)
+
+[I][pva] angle is -25.253160 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.182964
+
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.105098
+
+[I][pva] second stage handpose ok, cropRot=372x882, rect=(229,321,210,609)
+
+[I][pva] angle is -31.192476 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -6.536633
+
+[I][pva] second stage handpose ok, cropRot=379x852, rect=(248,333,216,558)
+
+[I][pva] angle is -23.749493 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=147 avg_ms=14.66 max_ms=24.30
+STATS elapsed=125 capture_fps=13.80 display_fps=29.40 frames=2016 page=0 eth=1
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.896963
+
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.611937
+
+[I][pva] second stage handpose ok, cropRot=403x834, rect=(253,313,232,606)
+
+[I][pva] angle is -24.062714 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.696051
+
+[I][pva] second stage handpose ok, cropRot=462x658, rect=(231,319,312,520)
+
+[I][pva] angle is -21.311249 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.929321
+
+PALM_QUALITY found=1 status=11 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.143866
+
+[I][pva] second stage handpose ok, cropRot=480x900, rect=(257,317,340,591)
+
+[I][pva] angle is -79.892570 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -1.839141
+
+[I][pva] second stage handpose ok, cropRot=532x868, rect=(230,343,332,580)
+
+[I][pva] angle is -7.060312 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.210424
+
+[I][pva] second stage handpose ok, cropRot=468x868, rect=(203,336,268,598)
+
+[I][pva] angle is -17.976591 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.182964
+
+[I][pva] second stage handpose ok, cropRot=487x900, rect=(189,335,292,600)
+
+[I][pva] angle is -12.277098 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.871181
+
+[I][pva] second stage handpose ok, cropRot=513x690, rect=(171,336,307,553)
+
+[I][pva] angle is -4.441241 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=469x885, rect=(159,326,270,523)
+
+[I][pva] angle is -12.239599 
+
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=68 hits=52 infer_ms=3.31 ir_errors=0 state=2
+PALM_PIPELINE features=403 auth=4 held=390 present=1 entry=0 missing=0 success_hold=1
+PERF capture.vi n=68 avg_ms=0.02 max_ms=0.03
+PERF capture.preview n=68 avg_ms=26.47 max_ms=35.69
+PERF capture.ir n=68 avg_ms=21.34 max_ms=31.20
+PERF capture.detect n=68 avg_ms=3.31 max_ms=10.43
+PERF capture.access n=68 avg_ms=20.45 max_ms=100.60
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.475759
+
+[I][pva] second stage handpose ok, cropRot=468x868, rect=(145,343,268,619)
+
+[I][pva] angle is -19.615202 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=469x868, rect=(145,340,270,590)
+
+[I][pva] angle is -17.887554 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.388467
+
+[I][pva] second stage handpose ok, cropRot=468x852, rect=(132,343,265,608)
+
+PALM_QUALITY found=1 status=1 overlay=red
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.313894
+
+[I][pva] second stage handpose ok, cropRot=462x885, rect=(127,346,261,601)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.384508
+
+[I][pva] second stage handpose ok, cropRot=462x885, rect=(122,349,266,610)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.732005
+
+[I][pva] second stage handpose ok, cropRot=459x868, rect=(128,336,265,598)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.084257
+
+[I][pva] second stage handpose ok, cropRot=468x885, rect=(128,336,265,592)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.461174
+
+[I][pva] second stage handpose ok, cropRot=459x885, rect=(124,346,265,601)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.455998
+
+[I][pva] second stage handpose ok, cropRot=465x885, rect=(117,353,274,600)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -17.084257
+
+[I][pva] second stage handpose ok, cropRot=468x885, rect=(123,349,270,610)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -19.397812
+
+[I][pva] second stage handpose ok, cropRot=459x885, rect=(135,343,265,592)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -16.313852
+
+[I][pva] second stage handpose ok, cropRot=442x868, rect=(121,343,250,619)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -15.413580
+
+[I][pva] second stage handpose ok, cropRot=462x885, rect=(132,343,267,592)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -18.985096
+
+[I][pva] second stage handpose ok, cropRot=468x885, rect=(130,349,270,630)
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -11.671577
+
+[I][pva] second stage handpose ok, cropRot=460x852, rect=(142,347,265,597)
+
+[I][pva] angle is -21.855665 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.762633
+
+[I][pva] second stage handpose ok, cropRot=480x850, rect=(177,339,273,558)
+
+[I][pva] angle is -17.525566 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -13.182964
+
+[I][pva] second stage handpose ok, cropRot=540x885, rect=(215,346,332,541)
+
+[I][pva] angle is -10.651389 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.611937
+
+[I][pva] second stage handpose ok, cropRot=496x816, rect=(234,367,308,398)
+
+[I][pva] angle is 0.000000 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -7.871181
+
+[I][pva] second stage handpose ok, cropRot=487x625, rect=(215,343,280,404)
+
+[I][pva] angle is -9.841131 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=505x756, rect=(238,339,303,538)
+
+[I][pva] angle is -25.621996 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.869600
+
+[I][pva] second stage handpose ok, cropRot=496x804, rect=(250,317,276,572)
+
+[I][pva] angle is -12.623563 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.809301
+
+[I][pva] second stage handpose ok, cropRot=469x850, rect=(236,306,261,558)
+
+[I][pva] angle is -16.236025 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -5.941519
+
+[I][pva] second stage handpose ok, cropRot=489x787, rect=(235,338,292,464)
+
+[I][pva] angle is 2.035034 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 6.250340
+
+[I][pva] second stage handpose ok, cropRot=487x771, rect=(255,397,331,541)
+
+[I][pva] angle is -28.870205 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is -2.101655
+
+[I][pva] second stage handpose ok, cropRot=496x769, rect=(238,378,296,486)
+
+[I][pva] angle is 1.718358 
+
+[I][pva] left hand
+
+[I][pva] second stage angle is 1.806025
+
+[I][pva] second stage handpose ok, cropRot=540x723, rect=(234,347,337,466)
+
+[I][pva] angle is -19.008709 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is 5.762633
+
+[I][pva] second stage handpose ok, cropRot=540x690, rect=(232,353,342,432)
+
+[I][pva] angle is -20.945602 
+
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is 5.914947
+
+[I][pva] second stage handpose ok, cropRot=540x676, rect=(228,353,340,457)
+
+[I][pva] angle is -21.895878 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is 0.000000
+
+[I][pva] second stage handpose ok, cropRot=525x721, rect=(236,368,316,450)
+
+[I][pva] angle is -16.344790 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+[I][pva] left hand
+
+[I][pva] second stage angle is -9.632717
+
+[I][pva] second stage handpose ok, cropRot=487x769, rect=(236,381,288,462)
+
+[I][pva] angle is -3.557852 
+
+PALM_QUALITY found=1 status=0 overlay=green
+[I][pva] left hand
+
+[I][pva] second stage angle is -4.009501
+
+[I][pva] second stage handpose ok, cropRot=507x706, rect=(242,366,297,361)
+
+[I][pva] angle is 3.132465 
+
+PALM_QUALITY found=0 status=11 overlay=hidden
+PERF ui.render n=148 avg_ms=0.04 max_ms=3.98
+PERF ui.present n=148 avg_ms=13.99 max_ms=25.24
+STATS elapsed=130 capture_fps=13.79 display_fps=29.57 frames=2085 page=0 eth=1
+PALM_SESSION left false_frames=20 success_hold=1 features=434 auth=4 held=421
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=73 hits=31 infer_ms=3.70 ir_errors=0 state=1
+PALM_PIPELINE features=434 auth=4 held=421 present=0 entry=0 missing=20 success_hold=0
+PERF capture.vi n=73 avg_ms=0.03 max_ms=0.12
+PERF capture.preview n=73 avg_ms=28.80 max_ms=36.12
+PERF capture.ir n=73 avg_ms=20.97 max_ms=30.95
+PERF capture.detect n=73 avg_ms=3.78 max_ms=14.03
+PERF capture.access n=73 avg_ms=14.05 max_ms=126.08
+PERF ui.render n=148 avg_ms=0.01 max_ms=0.11
+PERF ui.present n=148 avg_ms=13.28 max_ms=26.06
+STATS elapsed=135 capture_fps=18.17 display_fps=29.56 frames=2176 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=91 hits=0 infer_ms=3.73 ir_errors=0 state=1
+PALM_PIPELINE features=434 auth=4 held=421 present=0 entry=0 missing=20 success_hold=0
+PERF capture.vi n=91 avg_ms=0.08 max_ms=3.92
+PERF capture.preview n=91 avg_ms=29.15 max_ms=35.78
+PERF capture.ir n=91 avg_ms=20.94 max_ms=30.59
+PERF capture.detect n=91 avg_ms=3.73 max_ms=11.91
+PERF capture.access n=91 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=147 avg_ms=14.07 max_ms=22.86
+STATS elapsed=140 capture_fps=17.58 display_fps=29.36 frames=2264 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=89 hits=0 infer_ms=3.33 ir_errors=0 state=1
+PALM_PIPELINE features=434 auth=4 held=421 present=0 entry=0 missing=20 success_hold=0
+PERF capture.vi n=89 avg_ms=0.02 max_ms=0.07
+PERF capture.preview n=89 avg_ms=29.35 max_ms=36.06
+PERF capture.ir n=89 avg_ms=21.39 max_ms=30.98
+PERF capture.detect n=89 avg_ms=3.33 max_ms=17.43
+PERF capture.access n=89 avg_ms=0.00 max_ms=0.01
+PERF ui.render n=147 avg_ms=0.03 max_ms=2.36
+PERF ui.present n=147 avg_ms=12.94 max_ms=25.29
+STATS elapsed=145 capture_fps=18.20 display_fps=29.39 frames=2355 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=92 hits=0 infer_ms=3.03 ir_errors=0 state=1
+PALM_PIPELINE features=434 auth=4 held=421 present=0 entry=0 missing=20 success_hold=0
+PERF capture.vi n=92 avg_ms=0.03 max_ms=0.11
+PERF capture.preview n=92 avg_ms=29.09 max_ms=35.90
+PERF capture.ir n=92 avg_ms=20.47 max_ms=30.47
+PERF capture.detect n=92 avg_ms=3.06 max_ms=10.33
+PERF capture.access n=92 avg_ms=0.01 max_ms=0.07
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=146 avg_ms=14.23 max_ms=25.53
+STATS elapsed=150 capture_fps=18.00 display_fps=29.20 frames=2445 page=0 eth=1
+PALM_STATS source=IR pipe=0 preview=IR input=540x960 Y-only uncropped frames=87 hits=0 infer_ms=4.43 ir_errors=0 state=1
+PALM_PIPELINE features=434 auth=4 held=421 present=0 entry=0 missing=20 success_hold=0
+PERF capture.vi n=87 avg_ms=0.07 max_ms=4.46
+PERF capture.preview n=87 avg_ms=29.90 max_ms=36.16
+PERF capture.ir n=87 avg_ms=21.25 max_ms=31.01
+PERF capture.detect n=87 avg_ms=4.43 max_ms=14.94
+PERF capture.access n=87 avg_ms=0.02 max_ms=1.00

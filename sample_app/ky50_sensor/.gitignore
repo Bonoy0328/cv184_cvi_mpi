@@ -1,0 +1,5 @@
+/ky50_sensor_capture
+/ky50_sensor_probe
+/capture.pid
+/evidence/*.nv21
+/evidence/*.png

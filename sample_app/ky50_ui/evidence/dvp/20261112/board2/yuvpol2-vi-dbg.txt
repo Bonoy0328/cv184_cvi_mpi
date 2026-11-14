@@ -1,0 +1,37 @@
+[VI Post_Dbg_Info]
+VIIspTopStatus0		:0x3ff		VIIspTopStatus1		:0x7ff
+[VI DMA_Dbg_Info]
+VIWdma1ErrStatus	:0x3000000	VIWdma1IdleStatus	:0xffffffff
+VIWdma2ErrStatus	:0x3000000	VIWdma2IdleStatus	:0xfffffffe
+VIWdma3ErrStatus	:0x3000000	VIWdma3IdleStatus	:0xffffffff
+VIRdma1ErrStatus	:0x3000000	VIRdma1IdleStatus	:0xffffffff
+VIRdma2ErrStatus	:0x3000000	VIRdma2IdleStatus	:0xffffffff
+VIRdma3ErrStatus	:0x3000000	VIRdma3IdleStatus	:0xffffffff
+[VI ISP_FE_0 FE_Dbg_Info]
+VIPreFERawDbgSts	:0x3fe		VIPreFEDbgInfo		:0x7fffe
+[VI ISP_FE_0]
+VIOutImgWidth		: 640
+VIOutImgHeight		: 480
+VIInImgWidth		: 640
+VIInImgHeight		: 480
+VIDevFPS		:  21
+VIFPS			:  21
+VISofCh0Cnt		:  59
+VIPreFECh0Cnt		:  58
+VIPostPipe0Cnt		:   0
+VIDropCnt		:   0
+VIDumpCnt		:   0
+[VI ISP_FE_0 Csi_Dbg_Info]
+VICsiIntStatus0		:0x6
+VICsiIntStatus1		:0x200000
+VICsiOverFlowCnt	:   0
+VICsiCh0Dbg0		:0x10fe000
+VICsiCh0Dbg1		:0x0
+VICsiCh0Dbg2		:0x3b003b
+VICsiCh0Dbg3		:0x0
+VICsiCh0WidthGTCnt	:   0
+VICsiCh0WidthLSCnt	:   0
+VICsiCh0HeightGTCnt	:   0
+VICsiCh0HeightLSCnt	: 134
+[VI ISP_PIPE_0 Buf_Dbg_Info]
+VIYuvCh0OutBufEmpty	:   0

@@ -1,0 +1,126 @@
+ISP Vipipe(0) Allocate pa(0x8b3c2000) va(0x0xb6f6b000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+pipe0 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No error information
+GetChnFrame pipe0 #1 failed 0xc00e800e stream=0
+
+Module: [MIPI_RX], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+
+------------Combo DEV ATTR--------------
+   Devno  WorkMode  DataType   WDRMode  SyncMode  DataEndian  SyncCodeEndian
+       0      MIPI     RAW10      NONE       N/A         N/A             N/A
+           LinkId                     PN Swap
+  5, 4, 3,-1,-1                 0, 0, 0, 0, 0
+   Devno  WorkMode  DataType   WDRMode  SyncMode  DataEndian  SyncCodeEndian
+       1      MIPI     RAW10      NONE       N/A         N/A             N/A
+           LinkId                     PN Swap
+  2, 1, 0,-1,-1                 0, 0, 0, 0, 0
+
+------------MIPI info-------------------
+ Devno EccErr CrcErr HdrErr WcErr fifofull   decode
+     0      0      0      0     0        0  unknown
+  Physical:       D0       D1       D2       D3       D4       D5
+                   0        0        0        8       87        0
+   Digital:       D0       D1       D2       D3    CK_HS  CK_ULPS  CK_STOP   CK_ERR   Deskew
+             hs_idle  hs_idle  hs_idle  hs_idle        0        0        1        0     idle
+ Devno EccErr CrcErr HdrErr WcErr fifofull   decode
+     1      0      0      0     0        0    raw10
+  Physical:       D0       D1       D2       D3       D4       D5
+                   0        0        0        0        0        0
+   Digital:       D0       D1       D2       D3    CK_HS  CK_ULPS  CK_STOP   CK_ERR   Deskew
+             hs_idle  hs_idle  hs_idle  hs_idle        0        0        0        0     idle
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		1920	1080	MIPI	1MUX	  I
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	N/A	 RGB		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  0	  0	  1		  0 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		 1920		 1080
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	    0		    0	    0	    0		    0	1920	1080
+[VI Post_Dbg_Info]
+VIIspTopStatus0		:0x3ff		VIIspTopStatus1		:0x7ff
+[VI DMA_Dbg_Info]
+VIWdma1ErrStatus	:0x3000000	VIWdma1IdleStatus	:0xffffffff
+VIWdma2ErrStatus	:0x3000000	VIWdma2IdleStatus	:0xffffffff
+VIWdma3ErrStatus	:0x3000000	VIWdma3IdleStatus	:0xffffffff
+VIRdma1ErrStatus	:0x3000000	VIRdma1IdleStatus	:0xffffffff
+VIRdma2ErrStatus	:0x3000000	VIRdma2IdleStatus	:0xffffffff
+VIRdma3ErrStatus	:0x3000000	VIRdma3IdleStatus	:0xffffffff
+[VI ISP_FE_0 FE_Dbg_Info]
+VIPreFERawDbgSts	:0x3ff		VIPreFEDbgInfo		:0x7ffff
+[VI ISP_FE_0]
+VIOutImgWidth		:1920
+VIOutImgHeight		:1080
+VIInImgWidth		:1920
+VIInImgHeight		:1080
+VIDevFPS		:   0
+VIFPS			:   0
+VISofCh0Cnt		:   0
+VIPreFECh0Cnt		:   0
+VIPostPipe0Cnt		:   0
+VIDropCnt		:   0
+VIDumpCnt		:   0
+[VI ISP_FE_0 Csi_Dbg_Info]
+VICsiIntStatus0		:0x0
+VICsiIntStatus1		:0x0
+VICsiOverFlowCnt	:   0
+VICsiCh0Dbg0		:0x0
+VICsiCh0Dbg1		:0x0
+VICsiCh0Dbg2		:0x0
+VICsiCh0Dbg3		:0x7
+VICsiCh0WidthGTCnt	:   0
+VICsiCh0WidthLSCnt	:   0
+VICsiCh0HeightGTCnt	:   0
+VICsiCh0HeightLSCnt	:   0
+[VI ISP_PIPE_0 Buf_Dbg_Info]
+VIPostCh0InBufEmpty	:   1
+VIPreFECh0OutBufEmpty	:   0
+VIPostOutBufEmpty	:   0
+Capture finished count=1 rc=0xc00e800e
+gc2083_standby...ISP Vipipe(0) Free pa(0x8b3c2000) va(0x0xb6f6b000)
+CVI_ISP_Run returned 0

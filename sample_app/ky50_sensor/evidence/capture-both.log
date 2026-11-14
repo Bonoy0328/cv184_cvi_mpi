@@ -1,0 +1,41 @@
+ISP Vipipe(0) Allocate pa(0x8bf9f000) va(0x0xb6f1b000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8bfd7000) va(0x0xb6ee3000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+pipe1 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ir-001-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=0.00
+ir-001-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=128.01
+FRAME IR count=1 pts=11187677406 fps=0.00 format=19 compressed=0
+rgb-001-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=1.32
+rgb-001-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=128.14
+FRAME RGB count=1 pts=11187986201 fps=0.00 format=19 compressed=0
+FRAME IR count=30 pts=11189243561 fps=18.52 format=19 compressed=0
+FRAME RGB count=30 pts=11189252459 fps=22.90 format=19 compressed=0
+FRAME IR count=60 pts=11190243234 fps=22.99 format=19 compressed=0
+FRAME RGB count=60 pts=11190252133 fps=26.04 format=19 compressed=0
+ir-090-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=178.51
+ir-090-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=127.04
+FRAME IR count=90 pts=11191242910 fps=24.96 format=19 compressed=0
+rgb-090-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=82.28
+rgb-090-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=129.22
+FRAME RGB count=90 pts=11191518386 fps=25.20 format=19 compressed=0
+FRAME IR count=120 pts=11192809068 fps=23.19 format=19 compressed=0
+FRAME RGB count=120 pts=11192817968 fps=24.63 format=19 compressed=0
+FRAME IR count=150 pts=11193808747 fps=24.30 format=19 compressed=0
+FRAME RGB count=150 pts=11193817643 fps=25.55 format=19 compressed=0
+FRAME IR count=180 pts=11194808415 fps=25.10 format=19 compressed=0
+FRAME RGB count=180 pts=11194817318 fps=26.20 format=19 compressed=0
+FRAME IR count=210 pts=11195808096 fps=25.71 format=19 compressed=0
+FRAME RGB count=210 pts=11195816993 fps=26.69 format=19 compressed=0
+FRAME IR count=240 pts=11196807765 fps=26.18 format=19 compressed=0
+FRAME RGB count=240 pts=11196816668 fps=27.07 format=19 compressed=0
+FRAME IR count=270 pts=11197807446 fps=26.55 format=19 compressed=0
+FRAME RGB count=270 pts=11197816343 fps=27.36 format=19 compressed=0
+FRAME IR count=300 pts=11198807117 fps=26.87 format=19 compressed=0
+FRAME RGB count=300 pts=11198816017 fps=27.61 format=19 compressed=0
+Capture finished count=300 rc=0
+gc2083_standby...gc2083_standby...ISP Vipipe(0) Free pa(0x8bf9f000) va(0x0xb6f1b000)
+CVI_ISP_Run returned 0

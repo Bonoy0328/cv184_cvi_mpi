@@ -1,0 +1,230 @@
+ 11:40:18 up  3:18,  load average: 6.14, 5.89, 5.05
+FRAME IR count=11520 pts=11872197851 fps=29.92 format=19 compressed=0
+FRAME RGB count=11520 pts=11872206781 fps=29.94 format=19 compressed=0
+FRAME IR count=11550 pts=11873197525 fps=29.92 format=19 compressed=0
+FRAME RGB count=11550 pts=11873206457 fps=29.94 format=19 compressed=0
+FRAME IR count=11580 pts=11874197198 fps=29.92 format=19 compressed=0
+FRAME RGB count=11580 pts=11874206129 fps=29.94 format=19 compressed=0
+FRAME IR count=11610 pts=11875196872 fps=29.92 format=19 compressed=0
+FRAME RGB count=11610 pts=11875205803 fps=29.94 format=19 compressed=0
+FRAME IR count=11640 pts=11876196546 fps=29.92 format=19 compressed=0
+FRAME RGB count=11640 pts=11876205494 fps=29.94 format=19 compressed=0
+FRAME IR count=11670 pts=11877196220 fps=29.92 format=19 compressed=0
+FRAME RGB count=11670 pts=11877205156 fps=29.94 format=19 compressed=0
+FRAME IR count=11700 pts=11878195896 fps=29.92 format=19 compressed=0
+FRAME RGB count=11700 pts=11878204831 fps=29.94 format=19 compressed=0
+FRAME IR count=11730 pts=11879195578 fps=29.92 format=19 compressed=0
+FRAME RGB count=11730 pts=11879204506 fps=29.94 format=19 compressed=0
+FRAME IR count=11760 pts=11880195253 fps=29.92 format=19 compressed=0
+FRAME RGB count=11760 pts=11880204181 fps=29.94 format=19 compressed=0
+FRAME IR count=11790 pts=11881194927 fps=29.92 format=19 compressed=0
+FRAME RGB count=11790 pts=11881203856 fps=29.94 format=19 compressed=0
+FRAME IR count=11820 pts=11882194601 fps=29.92 format=19 compressed=0
+FRAME RGB count=11820 pts=11882203531 fps=29.94 format=19 compressed=0
+FRAME IR count=11850 pts=11883194275 fps=29.92 format=19 compressed=0
+FRAME RGB count=11850 pts=11883203206 fps=29.94 format=19 compressed=0
+FRAME IR count=11880 pts=11884193949 fps=29.92 format=19 compressed=0
+FRAME RGB count=11880 pts=11884202880 fps=29.94 format=19 compressed=0
+FRAME IR count=11910 pts=11885193625 fps=29.92 format=19 compressed=0
+FRAME RGB count=11910 pts=11885202556 fps=29.94 format=19 compressed=0
+FRAME IR count=11940 pts=11886193300 fps=29.92 format=19 compressed=0
+FRAME RGB count=11940 pts=11886202230 fps=29.94 format=19 compressed=0
+FRAME IR count=11970 pts=11887192972 fps=29.92 format=19 compressed=0
+FRAME RGB count=11970 pts=11887201905 fps=29.94 format=19 compressed=0
+FRAME IR count=12000 pts=11888192646 fps=29.92 format=19 compressed=0
+FRAME RGB count=12000 pts=11888201581 fps=29.94 format=19 compressed=0
+FRAME IR count=12030 pts=11889192322 fps=29.92 format=19 compressed=0
+FRAME RGB count=12030 pts=11889201255 fps=29.94 format=19 compressed=0
+FRAME IR count=12060 pts=11890191996 fps=29.92 format=19 compressed=0
+FRAME RGB count=12060 pts=11890200931 fps=29.94 format=19 compressed=0
+FRAME IR count=12090 pts=11891191672 fps=29.92 format=19 compressed=0
+FRAME RGB count=12090 pts=11891200606 fps=29.94 format=19 compressed=0
+
+Module: [MIPI_RX], Build Time[#1 PREEMPT Fri Nov 6 13:51:11 CST 2026]
+
+------------Combo DEV ATTR--------------
+   Devno  WorkMode  DataType   WDRMode  SyncMode  DataEndian  SyncCodeEndian
+       0      MIPI     RAW10      NONE       N/A         N/A             N/A
+           LinkId                     PN Swap
+  2, 1, 0,-1,-1                 0, 0, 0, 0, 0
+   Devno  WorkMode  DataType   WDRMode  SyncMode  DataEndian  SyncCodeEndian
+       1      MIPI     RAW10      NONE       N/A         N/A             N/A
+           LinkId                     PN Swap
+  5, 4, 3,-1,-1                 0, 0, 0, 0, 0
+
+------------MIPI info-------------------
+ Devno EccErr CrcErr HdrErr WcErr fifofull   decode
+     0      0      0      0     0        0    raw10
+  Physical:       D0       D1       D2       D3       D4       D5
+                   0        0        0       9c       47        0
+   Digital:       D0       D1       D2       D3    CK_HS  CK_ULPS  CK_STOP   CK_ERR   Deskew
+             hs_idle  hs_idle  hs_idle  hs_idle        1        0        0        0     idle
+ Devno EccErr CrcErr HdrErr WcErr fifofull   decode
+     1      0      0      0     0        0    raw10
+  Physical:       D0       D1       D2       D3       D4       D5
+                   0        0        0       b3       3c        0
+   Digital:       D0       D1       D2       D3    CK_HS  CK_ULPS  CK_STOP   CK_ERR   Deskew
+             hs_idle  hs_idle   hs_hst   hs_hst        0        1        0        0     idle
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+	  1	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		1920	1080	MIPI	1MUX	  I
+	  1	  Y	   Y		1920	1080	MIPI	1MUX	  I
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	N/A	 RGB		None
+	  1	0	0	0	0	N/A	 RGB		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  1	  0	  1		  0 
+	  0	  1	  1		  1 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		 1920		 1080
+	  1	    N		   0		 1920		 1080
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+	  1	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+	  1	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+	  1	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+	  1	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+	  1	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+	  1	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   31		12159	12159	    0		    0	1920	1080
+	  1	  0	  Y	   31		12155	12155	    0		    0	1920	1080
+
+-------------------------------DEVICE CONFIG------------------------------
+     DevID     DevEn           intf_type            IntfSync     BkClr    DevFrt
+       # 0         Y                MIPI         User timing         0        60
+
+-------------------------------VIDEO LAYER STATUS 1-----------------------
+   LayerId   VideoEn              pixfmt      ImgW      ImgH     DispX     DispY     DispW     DispH
+       # 0         Y             RGB_888       480       854         0         0       480       854
+
+-------------------------------VIDEO LAYER STATUS 2 (continue)------------
+   LayerId BindDevId   EnChNum      Luma      Cont       Hue      Satu          DispalyPts          PreDonePts
+       # 0         0         1         0         0         0         0         11891933700         11891933700
+
+-------------------------------VIDEO LAYER STATUS 3 (continue)------------
+   LayerId    BufLen    SrcFrt   RealFrt    BwFail OsdBwFail
+       # 0         2        31        31         0         0
+
+-------------------------------GRAPHIC LAYER STATUS 1-----------------------
+   LayerId GraphicEn BindDevId      Prio
+       # 1         0         0         0
+
+-------------------------------CHN BASIC INFO 1---------------------------
+   LayerId     ChnId     ChnEn      Prio      SrcW      SrcH      ChnX      ChnY      ChnW      ChnH  RotAngle    Thrshd
+       # 0       # 0         Y         0       480       854         0         0       480       854         0         2
+
+-------------------------------CHN PLAY INFO------------------------------
+   LayerId     ChnId      Show     Pause ChnSrcFrt    ChnFrt          ChnGap(us)          DispalyPts          PreDonePts
+       # 0       # 0         Y         N        31        31               32258         11891967017         11891933700
+--------------DISP(0)-------------------------
+disp_from_sc(0)		sync_ext(0)		tgen_en(1)		fmt(BGR888_PACKED)
+in_csc(        Disable)	out_csc(        Disable)	burst(15)	y_thresh(120)	c_thresh(0)
+start_x(  0)		start_y(  0)		width( 480)		height( 854)
+pitch_y(1472)		pitch_c(  0)
+err_fwr_yuv(000)	err_erd_yuv(000)	lb_full_yuv(000)	lb_empty_yuv(011)
+bw fail(0)
+--------------DISP-TIMING(0))------------------
+total( 575 * 1057)	hsync_pol(   0)	vsync_pol(   0)
+hsync_start( 575)	hsync_end(1057)	vsync_start(   0)	vsync_end(   1)
+hde-start(  42)		hde-end( 521)	vde-start(  11)		vde-end( 864)	
+[11316.575300] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[11316.581145] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[11316.592016] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[11316.592026] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[11316.592038] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[11316.592045] misc cv184x-mipi-rx: raw_data_type = RAW10
+[11316.592053] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[11316.592061] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[11316.592069] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[11316.592077] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[11316.592084] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[11316.592092] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[11316.592099] misc cv184x-mipi-rx: wdr_mode = NONE
+[11316.592106] misc cv184x-mipi-rx: data_type[0] = 0x0
+[11316.592113] misc cv184x-mipi-rx: data_type[1] = 0x0
+[11316.592125] cif a0a0000.cif: ratio 10, set rate 309M
+[11317.184998] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[11317.871198] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[11317.903476] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[11321.453161] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[11485.462820] vi_csi_stop_streaming:5015(): raw_num(0) stop streaming timeout
+[11485.822821] vi_csi_stop_streaming:5015(): raw_num(1) stop streaming timeout
+[11486.657142] misc cv184x-mipi-rx: devno = 1, input_mode = MIPI, mac_clk = 200MHZ
+[11486.657154] misc cv184x-mipi-rx: mclk1 = CAMPLL_FREQ_24M
+[11486.657166] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[11486.657174] misc cv184x-mipi-rx: raw_data_type = RAW10
+[11486.657181] misc cv184x-mipi-rx: lane_id[0] = 5, pn_swap = False
+[11486.657189] misc cv184x-mipi-rx: lane_id[1] = 4, pn_swap = False
+[11486.657197] misc cv184x-mipi-rx: lane_id[2] = 3, pn_swap = False
+[11486.657205] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[11486.657213] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[11486.657221] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[11486.657227] misc cv184x-mipi-rx: wdr_mode = NONE
+[11486.657235] misc cv184x-mipi-rx: data_type[0] = 0x0
+[11486.657242] misc cv184x-mipi-rx: data_type[1] = 0x0
+[11486.657255] cif a0a0000.cif: ratio 18, set rate 534M
+[11486.657310] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[11486.663332] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[11486.673704] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[11486.679550] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[11486.690377] misc cv184x-mipi-rx: devno = 0, input_mode = MIPI, mac_clk = 200MHZ
+[11486.690388] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[11486.690399] misc cv184x-mipi-rx: width = 1920, height = 1080, start_x = 0, start_y = 0, max_width = 1920, max_height = 1080
+[11486.690406] misc cv184x-mipi-rx: raw_data_type = RAW10
+[11486.690414] misc cv184x-mipi-rx: lane_id[0] = 2, pn_swap = False
+[11486.690422] misc cv184x-mipi-rx: lane_id[1] = 1, pn_swap = False
+[11486.690430] misc cv184x-mipi-rx: lane_id[2] = 0, pn_swap = False
+[11486.690438] misc cv184x-mipi-rx: lane_id[3] = -1, pn_swap = False
+[11486.690446] misc cv184x-mipi-rx: lane_id[4] = -1, pn_swap = False
+[11486.690453] misc cv184x-mipi-rx: lane_id[5] = -1, pn_swap = False
+[11486.690460] misc cv184x-mipi-rx: wdr_mode = NONE
+[11486.690467] misc cv184x-mipi-rx: data_type[0] = 0x0
+[11486.690474] misc cv184x-mipi-rx: data_type[1] = 0x0
+[11486.690487] cif a0a0000.cif: ratio 10, set rate 309M
+[11487.266068] vo_set_layer_proc_amp:1301(): layer(0) Only YUV format support.
+[11487.949428] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[11487.981551] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[11491.533806] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[11523.423253] cvi_rtc 5026000.rtc: time set to 1794310450. 11/10/2026 11:34:10
+[11523.423283] cvi_rtc 5026000.rtc: time read as 1794310448. 11/10/2026 11:34:08

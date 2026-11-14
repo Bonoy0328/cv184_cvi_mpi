@@ -1,0 +1,35 @@
+Fri Nov 13 09:26:39 UTC 2026
+ gpio-434 (                    |ky50-lcd            ) out hi 
+ gpio-440 (                    |ky50-lineout        ) in  lo 
+ gpio-441 (                    |ky50-lcd            ) out lo 
+ gpio-453 (                    |ky50-sensor         ) out lo 
+ gpio-471 (                    |ky50-sensor         ) out lo 
+ gpio-482 (                    |ky50-sensor         ) out hi 
+ gpio-484 (                    |ky50-sensor         ) out hi 
+ gpio-487 (                    |ky50-lcd            ) out hi 
+ gpio-488 (                    |ky50-ir-light       ) out hi 
+ gpio-499 (                    |ky50-white-light    ) out hi 
+ gpio-501 (                    |ky50-relay          ) out lo 
+0x00000003
+0x00088194
+0x40288194
+0x3D9FFDFD
+FACTORY_LIGHT WHITE=ON
+FACTORY_LIGHT WHITE=OFF
+FACTORY_LIGHT IR=ON
+FACTORY_LIGHT IR=OFF
+FACTORY_LIGHT IR=ON
+FACTORY_LIGHT IR=OFF
+FACTORY_LIGHT IR=ON
+FACTORY_LIGHT IR=OFF
+FACTORY_LIGHT WHITE=ON
+FACTORY_LIGHT WHITE=OFF
+FACTORY_LIGHT WHITE=ON
+FACTORY_LIGHT IR=ON
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=5 feature=0
+UI page=6 feature=0
+STATS elapsed=270 capture_fps=16.00 display_fps=15.80 frames=4251 page=6 eth=1
+STATS elapsed=275 capture_fps=15.79 display_fps=15.79 frames=4330 page=6 eth=1
+STATS elapsed=280 capture_fps=15.60 display_fps=15.60 frames=4408 page=6 eth=1

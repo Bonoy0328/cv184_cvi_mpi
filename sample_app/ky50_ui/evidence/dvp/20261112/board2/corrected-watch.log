@@ -1,0 +1,793 @@
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1037452728
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1038403384
+DVP_PROBE seconds=1.0 frames=20 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1039403350
+DVP_PROBE seconds=2.0 frames=40 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1040403318
+DVP_PROBE seconds=3.0 frames=60 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1041403284
+DVP_PROBE seconds=4.0 frames=80 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1042403250
+DVP_PROBE seconds=5.0 frames=100 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1043403217
+DVP_PROBE seconds=6.0 frames=120 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1044403184
+DVP_PROBE seconds=7.0 frames=140 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1045403150
+DVP_PROBE seconds=8.0 frames=160 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1046403117
+DVP_PROBE seconds=9.0 frames=180 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1047403083
+DVP_PROBE seconds=10.0 frames=200 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1048403049
+DVP_PROBE seconds=11.0 frames=220 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1049403018
+DVP_PROBE seconds=12.0 frames=240 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1050402983
+DVP_PROBE seconds=13.0 frames=260 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1051402950
+DVP_PROBE seconds=14.0 frames=280 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1052402917
+DVP_PROBE seconds=15.0 frames=300 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1053402884
+DVP_PROBE seconds=16.0 frames=320 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1054402849
+DVP_PROBE seconds=17.0 frames=340 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1055402817
+DVP_PROBE seconds=18.0 frames=360 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1056402783
+DVP_PROBE seconds=19.0 frames=380 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1057402751
+DVP_PROBE seconds=20.0 frames=400 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1058402717
+DVP_PROBE seconds=21.0 frames=420 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1059402684
+DVP_PROBE seconds=22.0 frames=440 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1060402650
+DVP_PROBE seconds=23.0 frames=460 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1061402617
+DVP_PROBE seconds=24.0 frames=480 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1062402582
+DVP_PROBE seconds=25.0 frames=500 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1063402550
+DVP_PROBE seconds=26.0 frames=520 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1064402515
+DVP_PROBE seconds=27.0 frames=540 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1065402484
+DVP_PROBE seconds=28.0 frames=560 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1066402449
+DVP_PROBE seconds=29.0 frames=580 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1067402417
+DVP_PROBE seconds=30.0 frames=600 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1068402383
+DVP_PROBE seconds=31.0 frames=620 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1069402350
+DVP_PROBE seconds=32.0 frames=640 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1070402317
+DVP_PROBE seconds=33.0 frames=660 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1071402284
+DVP_PROBE seconds=34.0 frames=680 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1072402250
+DVP_PROBE seconds=35.0 frames=700 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1073402217
+DVP_PROBE seconds=36.0 frames=720 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1074402183
+DVP_PROBE seconds=37.0 frames=740 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1075402151
+DVP_PROBE seconds=38.0 frames=760 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1076402118
+DVP_PROBE seconds=39.0 frames=780 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1077402084
+DVP_PROBE seconds=40.0 frames=800 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1078402051
+DVP_PROBE seconds=41.0 frames=820 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1079402017
+DVP_PROBE seconds=42.0 frames=840 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1080401984
+DVP_PROBE seconds=43.0 frames=860 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1081401950
+DVP_PROBE seconds=44.0 frames=880 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1082401917
+DVP_PROBE seconds=45.0 frames=900 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1083401884
+DVP_PROBE seconds=46.0 frames=920 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1084401851
+DVP_PROBE seconds=47.0 frames=940 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1085401817
+DVP_PROBE seconds=48.0 frames=960 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1086401784
+DVP_PROBE seconds=49.0 frames=980 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1087401750
+DVP_PROBE seconds=50.0 frames=1000 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1088401717
+DVP_PROBE seconds=51.0 frames=1020 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1089401684
+DVP_PROBE seconds=52.0 frames=1040 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1090401650
+DVP_PROBE seconds=53.0 frames=1060 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1091401617
+DVP_PROBE seconds=54.0 frames=1080 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1092401583
+DVP_PROBE seconds=55.0 frames=1100 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1093401550
+DVP_PROBE seconds=56.0 frames=1120 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1094401517
+DVP_PROBE seconds=57.0 frames=1140 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1095401483
+DVP_PROBE seconds=58.0 frames=1160 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1096401450
+DVP_PROBE seconds=59.0 frames=1180 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1097401417
+DVP_PROBE seconds=60.0 frames=1200 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1098401384
+DVP_PROBE seconds=61.0 frames=1220 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1099401350
+DVP_PROBE seconds=62.0 frames=1240 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1100401317
+DVP_PROBE seconds=63.0 frames=1260 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1101401284
+DVP_PROBE seconds=64.0 frames=1280 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1102401251
+DVP_PROBE seconds=65.0 frames=1300 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1103401217
+DVP_PROBE seconds=66.0 frames=1320 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1104401184
+DVP_PROBE seconds=67.0 frames=1340 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1105401150
+DVP_PROBE seconds=68.0 frames=1360 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1106401117
+DVP_PROBE seconds=69.0 frames=1380 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1107401084
+DVP_PROBE seconds=70.0 frames=1400 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1108401050
+DVP_PROBE seconds=71.0 frames=1420 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1109401017
+DVP_PROBE seconds=72.0 frames=1440 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1110400984
+DVP_PROBE seconds=73.0 frames=1460 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1111400950
+DVP_PROBE seconds=74.0 frames=1480 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1112400917
+DVP_PROBE seconds=75.0 frames=1500 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1113400883
+DVP_PROBE seconds=76.0 frames=1520 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1114400850
+DVP_PROBE seconds=77.0 frames=1540 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1115400817
+DVP_PROBE seconds=78.0 frames=1560 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1116400783
+DVP_PROBE seconds=79.0 frames=1580 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1117400751
+DVP_PROBE seconds=80.0 frames=1600 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1118400717
+DVP_PROBE seconds=81.0 frames=1620 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1119400684
+DVP_PROBE seconds=82.0 frames=1640 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1120400650
+DVP_PROBE seconds=83.0 frames=1660 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1121400617
+DVP_PROBE seconds=84.0 frames=1680 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1122400582
+DVP_PROBE seconds=85.0 frames=1700 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1123400548
+DVP_PROBE seconds=86.0 frames=1720 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1124400515
+DVP_PROBE seconds=87.0 frames=1740 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1125400482
+DVP_PROBE seconds=88.0 frames=1760 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1126400449
+DVP_PROBE seconds=89.0 frames=1780 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1127400415
+DVP_PROBE seconds=90.1 frames=1800 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1128400383
+DVP_PROBE seconds=91.1 frames=1820 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1129400349
+DVP_PROBE seconds=92.1 frames=1840 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1130400315
+DVP_PROBE seconds=93.1 frames=1860 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1131400282
+DVP_PROBE seconds=94.1 frames=1880 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1132400249
+DVP_PROBE seconds=95.1 frames=1900 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1133400215
+DVP_PROBE seconds=96.1 frames=1920 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1134400182
+DVP_PROBE seconds=97.1 frames=1940 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1135400149
+DVP_PROBE seconds=98.1 frames=1960 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1136400115
+DVP_PROBE seconds=99.1 frames=1980 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1137400082
+DVP_PROBE seconds=100.1 frames=2000 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1138400049
+DVP_PROBE seconds=101.1 frames=2020 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1139400015
+DVP_PROBE seconds=102.1 frames=2040 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1140399982
+DVP_PROBE seconds=103.1 frames=2060 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1141399949
+DVP_PROBE seconds=104.1 frames=2080 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1142399915
+DVP_PROBE seconds=105.1 frames=2100 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1143399882
+DVP_PROBE seconds=106.1 frames=2120 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1144399849
+DVP_PROBE seconds=107.1 frames=2140 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1145399815
+DVP_PROBE seconds=108.1 frames=2160 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1146399782
+DVP_PROBE seconds=109.1 frames=2180 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1147399750
+DVP_PROBE seconds=110.1 frames=2200 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1148399716
+DVP_PROBE seconds=111.1 frames=2220 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1149399683
+DVP_PROBE seconds=112.1 frames=2240 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1150399650
+DVP_PROBE seconds=113.1 frames=2260 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1151399615
+DVP_PROBE seconds=114.1 frames=2280 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1152399583
+DVP_PROBE seconds=115.1 frames=2300 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1153399549
+DVP_PROBE seconds=116.1 frames=2320 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1154399517
+DVP_PROBE seconds=117.1 frames=2340 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1155399483
+DVP_PROBE seconds=118.1 frames=2360 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1156399450
+DVP_PROBE seconds=119.1 frames=2380 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1157399417
+DVP_PROBE seconds=120.1 frames=2400 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1158399384
+DVP_PROBE seconds=121.1 frames=2420 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1159399349
+DVP_PROBE seconds=122.1 frames=2440 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1160399316
+DVP_PROBE seconds=123.1 frames=2460 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1161399283
+DVP_PROBE seconds=124.1 frames=2480 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1162399250
+DVP_PROBE seconds=125.1 frames=2500 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1163399216
+DVP_PROBE seconds=126.1 frames=2520 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1164399183
+DVP_PROBE seconds=127.1 frames=2540 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1165399151
+DVP_PROBE seconds=128.1 frames=2560 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1166399117
+DVP_PROBE seconds=129.1 frames=2580 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1167399082
+DVP_PROBE seconds=130.1 frames=2600 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1168399051
+DVP_PROBE seconds=131.1 frames=2620 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1169399016
+DVP_PROBE seconds=132.1 frames=2640 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1170398983
+DVP_PROBE seconds=133.1 frames=2660 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1171398949
+DVP_PROBE seconds=134.1 frames=2680 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1172398916
+DVP_PROBE seconds=135.1 frames=2700 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1173398883
+DVP_PROBE seconds=136.1 frames=2720 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1174398850
+DVP_PROBE seconds=137.1 frames=2740 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1175398816
+DVP_PROBE seconds=138.1 frames=2760 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1176398783
+DVP_PROBE seconds=139.1 frames=2780 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1177398750
+DVP_PROBE seconds=140.1 frames=2800 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1178398716
+DVP_PROBE seconds=141.1 frames=2820 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1179398684
+DVP_PROBE seconds=142.1 frames=2840 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1180398650
+DVP_PROBE seconds=143.1 frames=2860 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1181398618
+DVP_PROBE seconds=144.1 frames=2880 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1182398583
+DVP_PROBE seconds=145.1 frames=2900 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1183398550
+DVP_PROBE seconds=146.1 frames=2920 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1184398516
+DVP_PROBE seconds=147.1 frames=2940 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1185398484
+DVP_PROBE seconds=148.1 frames=2960 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1186398450
+DVP_PROBE seconds=149.1 frames=2980 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1187398417
+DVP_PROBE seconds=150.1 frames=3000 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1188398383
+DVP_PROBE seconds=151.1 frames=3020 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1189398350
+DVP_PROBE seconds=152.1 frames=3040 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1190398317
+DVP_PROBE seconds=153.1 frames=3060 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1191398284
+DVP_PROBE seconds=154.1 frames=3080 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1192398250
+DVP_PROBE seconds=155.1 frames=3100 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1193398217
+DVP_PROBE seconds=156.1 frames=3120 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1194398183
+DVP_PROBE seconds=157.1 frames=3140 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1195398150
+DVP_PROBE seconds=158.1 frames=3160 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1196398117
+DVP_PROBE seconds=159.1 frames=3180 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1197398084
+DVP_PROBE seconds=160.1 frames=3200 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1198398050
+DVP_PROBE seconds=161.1 frames=3220 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1199398017
+DVP_PROBE seconds=162.1 frames=3240 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1200397984
+DVP_PROBE seconds=163.1 frames=3260 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1201397950
+DVP_PROBE seconds=164.1 frames=3280 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1202397917
+DVP_PROBE seconds=165.1 frames=3300 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1203397884
+DVP_PROBE seconds=166.1 frames=3320 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1204397850
+DVP_PROBE seconds=167.1 frames=3340 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1205397817
+DVP_PROBE seconds=168.1 frames=3360 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1206397784
+DVP_PROBE seconds=169.1 frames=3380 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1207397751
+DVP_PROBE seconds=170.1 frames=3400 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1208397717
+DVP_PROBE seconds=171.1 frames=3420 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1209397683
+DVP_PROBE seconds=172.1 frames=3440 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1210397659
+DVP_PROBE seconds=173.1 frames=3460 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1211397617
+DVP_PROBE seconds=174.1 frames=3481 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1212397584
+DVP_PROBE seconds=175.1 frames=3501 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1213397550
+DVP_PROBE seconds=176.1 frames=3521 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1214397526
+DVP_PROBE seconds=177.1 frames=3541 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1215397483
+DVP_PROBE seconds=178.1 frames=3561 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1216397451
+DVP_PROBE seconds=179.1 frames=3581 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1217397417
+DVP_PROBE seconds=180.1 frames=3601 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1218397383
+DVP_PROBE seconds=181.1 frames=3621 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1219397350
+DVP_PROBE seconds=182.1 frames=3641 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1220397316
+DVP_PROBE seconds=183.1 frames=3661 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1221397283
+DVP_PROBE seconds=184.1 frames=3681 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1222397250
+DVP_PROBE seconds=185.1 frames=3701 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1223397217
+DVP_PROBE seconds=186.1 frames=3721 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1224397183
+DVP_PROBE seconds=187.1 frames=3741 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1225397150
+DVP_PROBE seconds=188.1 frames=3761 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1226397117
+DVP_PROBE seconds=189.1 frames=3781 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1227397083
+DVP_PROBE seconds=190.1 frames=3801 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1228397050
+DVP_PROBE seconds=191.1 frames=3821 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1229397017
+DVP_PROBE seconds=192.1 frames=3841 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1230396983
+DVP_PROBE seconds=193.1 frames=3861 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1231396950
+DVP_PROBE seconds=194.1 frames=3881 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1232396917
+DVP_PROBE seconds=195.1 frames=3901 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1233396885
+DVP_PROBE seconds=196.1 frames=3921 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1234396850
+DVP_PROBE seconds=197.1 frames=3941 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1235396817
+DVP_PROBE seconds=198.1 frames=3961 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1236396783
+DVP_PROBE seconds=199.1 frames=3981 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1237396751
+DVP_PROBE seconds=200.1 frames=4001 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1238396717
+DVP_PROBE seconds=201.1 frames=4021 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1239396683
+DVP_PROBE seconds=202.1 frames=4041 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1240396650
+DVP_PROBE seconds=203.1 frames=4061 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1241396617
+DVP_PROBE seconds=204.1 frames=4081 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1242396583
+DVP_PROBE seconds=205.1 frames=4101 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1243396550
+DVP_PROBE seconds=206.1 frames=4121 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1244396517
+DVP_PROBE seconds=207.1 frames=4141 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1245396483
+DVP_PROBE seconds=208.1 frames=4161 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1246396450
+DVP_PROBE seconds=209.1 frames=4181 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1247396417
+DVP_PROBE seconds=210.1 frames=4201 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1248396382
+DVP_PROBE seconds=211.1 frames=4221 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1249396350
+DVP_PROBE seconds=212.1 frames=4241 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1250396315
+DVP_PROBE seconds=213.1 frames=4261 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1251396284
+DVP_PROBE seconds=214.1 frames=4281 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1252396250
+DVP_PROBE seconds=215.1 frames=4301 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1253396217
+DVP_PROBE seconds=216.1 frames=4321 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1254396184
+DVP_PROBE seconds=217.2 frames=4341 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1255396150
+DVP_PROBE seconds=218.2 frames=4361 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1256396116
+DVP_PROBE seconds=219.2 frames=4381 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1257396083
+DVP_PROBE seconds=220.2 frames=4401 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1258396049
+DVP_PROBE seconds=221.2 frames=4421 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1259396018
+DVP_PROBE seconds=222.2 frames=4441 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1260395983
+DVP_PROBE seconds=223.2 frames=4461 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1261395950
+DVP_PROBE seconds=224.2 frames=4481 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1262395917
+DVP_PROBE seconds=225.2 frames=4501 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1263395884
+DVP_PROBE seconds=226.2 frames=4521 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1264395849
+DVP_PROBE seconds=227.2 frames=4541 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1265395817
+DVP_PROBE seconds=228.2 frames=4561 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1266395784
+DVP_PROBE seconds=229.2 frames=4581 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1267395750
+DVP_PROBE seconds=230.2 frames=4601 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1268395717
+DVP_PROBE seconds=231.2 frames=4621 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1269395683
+DVP_PROBE seconds=232.2 frames=4641 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1270395650
+DVP_PROBE seconds=233.2 frames=4661 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1271395617
+DVP_PROBE seconds=234.2 frames=4681 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1272395583
+DVP_PROBE seconds=235.2 frames=4701 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1273395550
+DVP_PROBE seconds=236.2 frames=4721 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1274395516
+DVP_PROBE seconds=237.2 frames=4741 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1275395484
+DVP_PROBE seconds=238.2 frames=4761 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1276395450
+DVP_PROBE seconds=239.2 frames=4781 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1277395417
+DVP_PROBE seconds=240.2 frames=4801 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1278395383
+DVP_PROBE seconds=241.2 frames=4821 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1279395350
+DVP_PROBE seconds=242.2 frames=4841 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1280395317
+DVP_PROBE seconds=243.2 frames=4861 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1281395284
+DVP_PROBE seconds=244.2 frames=4881 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1282395250
+DVP_PROBE seconds=245.2 frames=4901 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1283395217
+DVP_PROBE seconds=246.2 frames=4921 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1284395184
+DVP_PROBE seconds=247.2 frames=4941 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1285395151
+DVP_PROBE seconds=248.2 frames=4961 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1286395118
+DVP_PROBE seconds=249.2 frames=4981 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1287395084
+DVP_PROBE seconds=250.2 frames=5001 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1288395050
+DVP_PROBE seconds=251.2 frames=5021 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1289395017
+DVP_PROBE seconds=252.2 frames=5041 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1290394983
+DVP_PROBE seconds=253.2 frames=5061 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1291394950
+DVP_PROBE seconds=254.2 frames=5081 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1292394917
+DVP_PROBE seconds=255.2 frames=5101 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1293394884
+DVP_PROBE seconds=256.2 frames=5121 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1294394850
+DVP_PROBE seconds=257.2 frames=5141 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1295394816
+DVP_PROBE seconds=258.2 frames=5161 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1296394784
+DVP_PROBE seconds=259.2 frames=5181 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1297394751
+DVP_PROBE seconds=260.2 frames=5201 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1298394717
+DVP_PROBE seconds=261.2 frames=5221 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1299394684
+DVP_PROBE seconds=262.2 frames=5241 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1300394650
+DVP_PROBE seconds=263.2 frames=5261 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1301394617
+DVP_PROBE seconds=264.2 frames=5281 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1302394584
+DVP_PROBE seconds=265.2 frames=5301 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1303394550
+DVP_PROBE seconds=266.2 frames=5321 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1304394517
+DVP_PROBE seconds=267.2 frames=5341 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1305394483
+DVP_PROBE seconds=268.2 frames=5361 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1306394450
+DVP_PROBE seconds=269.2 frames=5381 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1307394417
+DVP_PROBE seconds=270.2 frames=5401 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1308394383
+DVP_PROBE seconds=271.2 frames=5421 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1309394350
+DVP_PROBE seconds=272.2 frames=5441 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1310394317
+DVP_PROBE seconds=273.2 frames=5461 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1311394284
+DVP_PROBE seconds=274.2 frames=5481 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1312394251
+DVP_PROBE seconds=275.2 frames=5501 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1313394217
+DVP_PROBE seconds=276.2 frames=5521 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1314394184
+DVP_PROBE seconds=277.2 frames=5541 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1315394150
+DVP_PROBE seconds=278.2 frames=5561 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1316394117
+DVP_PROBE seconds=279.2 frames=5581 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1317394084
+DVP_PROBE seconds=280.2 frames=5601 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1318394050
+DVP_PROBE seconds=281.2 frames=5621 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1319394017
+DVP_PROBE seconds=282.2 frames=5641 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1320393984
+DVP_PROBE seconds=283.2 frames=5661 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1321393950
+DVP_PROBE seconds=284.2 frames=5681 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1322393917
+DVP_PROBE seconds=285.2 frames=5701 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1323393884
+DVP_PROBE seconds=286.2 frames=5721 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1324393850
+DVP_PROBE seconds=287.2 frames=5741 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1325393817
+DVP_PROBE seconds=288.2 frames=5761 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1326393783
+DVP_PROBE seconds=289.2 frames=5781 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1327393750
+DVP_PROBE seconds=290.2 frames=5801 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1328393717
+DVP_PROBE seconds=291.2 frames=5821 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1329393683
+DVP_PROBE seconds=292.2 frames=5841 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1330393650
+DVP_PROBE seconds=293.2 frames=5861 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1331393617
+DVP_PROBE seconds=294.2 frames=5881 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1332393584
+DVP_PROBE seconds=295.2 frames=5901 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1333393550
+DVP_PROBE seconds=296.2 frames=5921 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1334393517
+DVP_PROBE seconds=297.2 frames=5941 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1335393484
+DVP_PROBE seconds=298.2 frames=5961 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1336393450
+DVP_PROBE seconds=299.2 frames=5981 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1337393417
+DVP_PROBE seconds=300.2 frames=6001 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1338393385
+DVP_PROBE seconds=301.2 frames=6021 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1339393350
+DVP_PROBE seconds=302.2 frames=6041 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1340393317
+DVP_PROBE seconds=303.2 frames=6061 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1341393284
+DVP_PROBE seconds=304.2 frames=6081 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1342393250
+DVP_PROBE seconds=305.2 frames=6101 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1343393217
+DVP_PROBE seconds=306.2 frames=6121 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1344393184
+DVP_PROBE seconds=307.2 frames=6141 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1345393150
+DVP_PROBE seconds=308.2 frames=6161 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1346393117
+DVP_PROBE seconds=309.2 frames=6181 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1347393083
+DVP_PROBE seconds=310.2 frames=6201 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1348393050
+DVP_PROBE seconds=311.2 frames=6221 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1349393017
+DVP_PROBE seconds=312.2 frames=6241 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1350392983
+DVP_PROBE seconds=313.2 frames=6261 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1351392948
+DVP_PROBE seconds=314.2 frames=6281 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1352392916
+DVP_PROBE seconds=315.2 frames=6301 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1353392882
+DVP_PROBE seconds=316.2 frames=6321 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1354392850
+DVP_PROBE seconds=317.2 frames=6341 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1355392815
+DVP_PROBE seconds=318.2 frames=6361 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1356392783
+DVP_PROBE seconds=319.2 frames=6381 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1357392750
+DVP_PROBE seconds=320.2 frames=6401 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1358392717
+DVP_PROBE seconds=321.2 frames=6421 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1359392684
+DVP_PROBE seconds=322.2 frames=6441 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1360392651
+DVP_PROBE seconds=323.2 frames=6461 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1361392615
+DVP_PROBE seconds=324.2 frames=6481 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1362392584
+DVP_PROBE seconds=325.2 frames=6501 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1363392550
+DVP_PROBE seconds=326.2 frames=6521 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1364392518
+DVP_PROBE seconds=327.2 frames=6541 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1365392483
+DVP_PROBE seconds=328.2 frames=6561 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1366392450
+DVP_PROBE seconds=329.2 frames=6581 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1367392417
+DVP_PROBE seconds=330.2 frames=6601 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1368392384
+DVP_PROBE seconds=331.2 frames=6621 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1369392349
+DVP_PROBE seconds=332.2 frames=6641 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1370392317
+DVP_PROBE seconds=333.2 frames=6661 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1371392284
+DVP_PROBE seconds=334.2 frames=6681 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1372392250
+DVP_PROBE seconds=335.2 frames=6701 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1373392217
+DVP_PROBE seconds=336.2 frames=6721 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1374392183
+DVP_PROBE seconds=337.2 frames=6741 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1375392150
+DVP_PROBE seconds=338.2 frames=6761 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1376392117
+DVP_PROBE seconds=339.2 frames=6781 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1377392083
+DVP_PROBE seconds=340.2 frames=6801 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1378392050
+DVP_PROBE seconds=341.2 frames=6821 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1379392016
+DVP_PROBE seconds=342.2 frames=6841 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1380391983
+DVP_PROBE seconds=343.2 frames=6861 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1381391950
+DVP_PROBE seconds=344.2 frames=6881 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1382391917
+DVP_PROBE seconds=345.2 frames=6901 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1383391883
+DVP_PROBE seconds=346.2 frames=6921 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1384391850
+DVP_PROBE seconds=347.2 frames=6941 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1385391817
+DVP_PROBE seconds=348.2 frames=6961 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1386391784
+DVP_PROBE seconds=349.2 frames=6981 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1387391750
+DVP_PROBE seconds=350.2 frames=7001 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1388391717
+DVP_PROBE seconds=351.2 frames=7021 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1389391683
+DVP_PROBE seconds=352.2 frames=7041 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1390391651
+DVP_PROBE seconds=353.2 frames=7061 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1391391618
+DVP_PROBE seconds=354.2 frames=7081 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1392391583
+DVP_PROBE seconds=355.2 frames=7101 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1393391550
+DVP_PROBE seconds=356.2 frames=7121 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1394391517
+DVP_PROBE seconds=357.2 frames=7141 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1395391484
+DVP_PROBE seconds=358.2 frames=7161 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1396391450
+DVP_PROBE seconds=359.2 frames=7181 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1397391417
+DVP_PROBE seconds=360.2 frames=7201 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1398391383
+DVP_PROBE seconds=361.2 frames=7221 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1399391350
+DVP_PROBE seconds=362.2 frames=7241 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1400391317
+DVP_PROBE seconds=363.2 frames=7261 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1401391284
+DVP_PROBE seconds=364.2 frames=7281 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1402391250
+DVP_PROBE seconds=365.2 frames=7301 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1403391217
+DVP_PROBE seconds=366.2 frames=7321 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1404391183
+DVP_PROBE seconds=367.2 frames=7341 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1405391161
+DVP_PROBE seconds=368.2 frames=7361 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1406391117
+DVP_PROBE seconds=369.2 frames=7381 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1407391084
+DVP_PROBE seconds=370.2 frames=7401 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1408391050
+DVP_PROBE seconds=371.2 frames=7421 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1409391017
+DVP_PROBE seconds=372.2 frames=7441 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1410390984
+DVP_PROBE seconds=373.2 frames=7461 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1411390950
+DVP_PROBE seconds=374.2 frames=7481 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1412390917
+DVP_PROBE seconds=375.2 frames=7501 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1413390883
+DVP_PROBE seconds=376.2 frames=7521 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1414390850
+DVP_PROBE seconds=377.2 frames=7541 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1415390817
+DVP_PROBE seconds=378.2 frames=7561 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1416390784
+DVP_PROBE seconds=379.2 frames=7581 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1417390751
+DVP_PROBE seconds=380.2 frames=7601 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1418390717
+DVP_PROBE seconds=381.2 frames=7621 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1419390684
+DVP_PROBE seconds=382.2 frames=7641 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1420390650
+DVP_PROBE seconds=383.2 frames=7661 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1421390617
+DVP_PROBE seconds=384.2 frames=7681 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1422390583
+DVP_PROBE seconds=385.2 frames=7701 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1423390550
+DVP_PROBE seconds=386.2 frames=7721 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1424390517
+DVP_PROBE seconds=387.2 frames=7741 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1425390491
+DVP_PROBE seconds=388.2 frames=7761 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1426390450
+DVP_PROBE seconds=389.2 frames=7781 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1427390417
+DVP_PROBE seconds=390.2 frames=7801 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1428390383
+DVP_PROBE seconds=391.2 frames=7821 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1429390350
+DVP_PROBE seconds=392.2 frames=7841 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1430390317
+DVP_PROBE seconds=393.2 frames=7861 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1431390283
+DVP_PROBE seconds=394.2 frames=7881 misses=0 last_rc=0
+SAMPLE_FRAME 640x480 fmt=22 stride=1280 len=614400 pts=1432390250
+DVP_PROBE seconds=395.2 frames=7901 misses=0 last_rc=0
+DVP_PROBE_DONE frames=7915 rc=0

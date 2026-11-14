@@ -1,0 +1,9 @@
+[VI Post_Dbg_Info]
+VIIspTopStatus0		:0x3fc		VIIspTopStatus1		:0x7ff
+[VI DMA_Dbg_Info]
+VIWdma1ErrStatus	:0x3000000	VIWdma1IdleStatus	:0xffffebee
+VIWdma2ErrStatus	:0x3000000	VIWdma2IdleStatus	:0xfffffffe
+VIWdma3ErrStatus	:0x3000000	VIWdma3IdleStatus	:0xffffffff
+VIRdma1ErrStatus	:0x3000000	VIRdma1IdleStatus	:0xffffffff
+VIRdma2ErrStatus	:0x3000000	VIRdma2IdleStatus	:0xffffffff
+VIRdma3ErrStatus	:0x3000000	VIRdma3IdleStatus	:0xffffffff

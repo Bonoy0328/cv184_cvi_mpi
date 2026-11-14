@@ -1,0 +1,398 @@
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=9 users
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=1 feature=0
+UI page=5 feature=0
+UI page=6 feature=0
+UI page=6 feature=0
+PASS factory light touch: independent actions, result-driven states, page return, unavailable retry
+UI page=7 solid_color=0
+UI page=6 feature=0
+UI page=5 feature=0
+UI page=1 feature=0
+UI page=0 feature=0
+UI page=2 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=4
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=5
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=6
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=7
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=0
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=1
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=2
+UI page=0 feature=0
+UI page=1 feature=0
+UI page=3 feature=3
+UI page=0 feature=0
+UI page=0 feature=0
+UI page=0 feature=0
+PASS removed detection/status overlays: clean home/preview pixels and empty top layer
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-user-ui-zAIzYZ/app.conf ready=1
+ACCESS application saved palm=5 face=5 relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+UI page=5 feature=0
+UI page=15 feature=0
+ACCESS parameters saved hand=77 auth=51 dynamic=3
+UI page=5 feature=0
+UI page=15 feature=0
+UI page=5 feature=0
+UI page=15 feature=0
+ACCESS parameters saved hand=77 auth=51 dynamic=3
+ACCESS parameters saved hand=77 auth=51 dynamic=4
+ACCESS parameters saved hand=77 auth=51 dynamic=0
+ACCESS parameters loaded source=database hand=77 auth=51 dynamic=0
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf ready=1
+UI page=15 feature=0
+PASS parameter touch: advanced route, +/- controls, save/apply, discard, limits, restart restore
+ACCESS face parameters saved detection=51 quality=0/31 liveness=0/51 auth=23 filter=23
+ACCESS application saved palm=4 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=4 face=6 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=4 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=10 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=3 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=2 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS face parameters saved detection=51 quality=0/31 liveness=1/51 auth=23 filter=23
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=2 strong_liveness=1 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=2 strong_liveness=0 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS application saved palm=1 face=6 relay_seconds=6 match_confirmations=1 success_cooldown_seconds=2 strong_liveness=1 config=/tmp/ky50-user-ui-zAIzYZ/app.conf
+ACCESS parameters loaded source=database hand=77 auth=51 dynamic=0
+ACCESS face parameters loaded source=database detection=51 quality=0/31 liveness=1/51 auth=23 filter=23
+ACCESS departure palm=1 face=6 consecutive misses relay_seconds=6 match_confirmations=1 success_cooldown_seconds=2 strong_liveness=1 config=/tmp/ky50-user-ui-zAIzYZ/app.conf ready=1
+PASS face/departure/relay touch: six pages, shared match count, seven SDK fields, immediate save, independent app.conf and restart restore
+UI page=9 users
+UI page=10 users
+UI page=11 users
+UI page=12 users
+UI page=13 users
+ACCESS enroll begin local_id=0 modality=face template_uuid=0
+ACCESS face enrolled local_id=0 face_uuid=0
+UI page=12 users
+UI page=13 users
+ACCESS enroll begin local_id=0 modality=palm template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS enrolled local_id=0 palm_uuid=0 progress=3/3
+UI page=12 users
+UI page=9 users
+UI page=10 users
+UI page=11 users
+UI page=12 users
+UI page=13 users
+ACCESS enroll begin local_id=1 modality=palm template_uuid=1
+UI page=12 users
+UI page=9 users
+UI page=14 users
+ACCESS deleted local_id=0
+ACCESS deleted local_id=1
+UI page=14 users
+UI page=9 users
+UI page=9 users
+UI page=10 users
+UI page=9 users
+PASS real touch flow: numeric ID, pinyin candidate, upper/lower/digit/delete, optional name, registration progress/return/cancel, two checkboxes and delete
+PASS: alpha, UTC+8 midnight, 8 menu routes, real pointer callbacks, digits/delete/clear, 100 page cycles

@@ -1,0 +1,36 @@
+540
+eeb14afa958e79d1719f8920dd948790806c11859361495ca6844e7f2041e4b0  /tmp/ky50-ui/ky50_ui
+version=3
+palm_leave_frames=3
+face_leave_frames=3
+relay_seconds=1
+match_confirmations=1
+success_cooldown_seconds=0
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ROTATION_PIPELINE algorithm_and_preview_rotation=GDC CCW90 preview_csc=VPSS RGB888
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+VI_SDK_IOC_S_CTRL - SDK_CTRL_SET_CFG NG, No such file or directory
+ROTATED group=0 source=512x896 stride=512/512 offsets=L0 R26 T32 B0 rotated=486x864 copy=2,4 480x854 display crop
+PREVIEW_CSC hardware VPSS RGB888 input=512x896 crop=2,4 480x854
+ROTATED group=1 source=576x960 stride=576/576 offsets=L0 R36 T0 B0 rotated=540x960 copy=0,0 540x960 full RGB NV12 half-size
+PREVIEW_GAP uptime_ms=21851737 interval_us=456753 present_us=10566 render_us=14 camera_age_ms=8 page=0
+PALM_QUALITY found=0 status=11 sample=hidden raw_found=0 age_ms=143
+SCALE_PERF group=1 vpss=9.17 map=0.30 rotate=1.02 convert=0.00 release=0.11 ms
+PERF ui.render n=145 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=91 avg_ms=12.66 max_ms=23.01
+PERF ui.process n=999 avg_ms=0.10 max_ms=36.91
+STATS elapsed=5 capture_fps=18.00 display_fps=18.20 frames=90 page=0 eth=1
+SCALE_PERF group=0 vpss=9.21 map=0.00 rotate=0.00 convert=4.70 release=0.06 ms
+SCALE_PERF group=1 vpss=9.34 map=0.30 rotate=0.97 convert=0.00 release=0.17 ms
+PERF capture.vi n=110 avg_ms=0.10 max_ms=5.60
+PERF capture.preview n=110 avg_ms=14.08 max_ms=26.22
+PERF capture.ir n=110 avg_ms=21.51 max_ms=29.31
+PERF capture.interval n=109 avg_ms=40.95 max_ms=56.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=50 hits=0 infer_ms=4.70 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=50 hits=0 errors=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=50 avg_ms=90.39 max_ms=103.89
+PERF palm.access n=50 avg_ms=0.01 max_ms=0.24
+PERF palm.age n=50 avg_ms=147.44 max_ms=174.00
+PALM_QUEUE posted=111 taken=50 replaced=60 depth=1
+SCALE_PERF group=1 vpss=9.20 map=0.33 rotate=0.94 convert=0.00 release=0.14 ms

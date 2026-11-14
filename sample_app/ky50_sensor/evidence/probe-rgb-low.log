@@ -1,0 +1,13 @@
+mux 0x3001000: 0 -> 0
+mux 0x300100c: 0x3 -> 0
+mux 0x3001008: 0x3 -> 3
+mux 0x3001010: 0x3 -> 3
+mux 0x3001014: 0x3 -> 0
+mux 0x3001018: 0x3 -> 0
+mux 0x3001100: 0 -> 3
+mux 0x30011d0: 0x3 -> 3
+MIPI dev0 attr rc=0
+MIPI dev1 attr rc=0
+ID test: rgb RESET=(0,1) PWDN=0 MCLK=(24M,24M)
+I2C3 address=0x37 ID_H=-1 ID_L=-1 ID=0xffff no valid GC2083 ID
+I2C3 address=0x3f ID_H=32 ID_L=131 ID=0x2083 GC2083 confirmed

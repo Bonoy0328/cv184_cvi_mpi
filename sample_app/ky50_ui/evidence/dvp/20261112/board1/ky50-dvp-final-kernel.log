@@ -1,0 +1,358 @@
+[ 8333.533942] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8333.541051] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8333.551068] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8333.561052] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8333.561084] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8333.571060] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8333.581060] _vi_err_retrig_pre_fe:2883(): fe_1 trig retry 29 times
+[ 8333.633920] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8333.633939] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8333.641044] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8333.651061] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8333.661043] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8333.671046] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8333.671068] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8333.681061] _vi_err_retrig_pre_fe:2883(): fe_1 trig retry 30 times
+[ 8333.733916] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8333.733936] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8333.741037] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8333.751037] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8333.761037] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8333.771054] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8333.781065] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8333.891031] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.001041] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.111014] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.221025] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.331005] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.441008] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.550985] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.660992] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.770964] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.880974] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8334.990948] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.100962] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.210933] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.320927] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.430917] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.540914] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.650899] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.760892] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.870881] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8335.980877] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.090865] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.200860] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.310848] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.420844] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.530836] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.640827] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.750815] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.860810] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8336.970799] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.080794] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.190782] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.300778] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.410765] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.520765] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.630749] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.740742] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.850732] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8337.960727] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.070716] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.180710] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.290699] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.400694] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.510688] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.620679] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.730665] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.739184] misc cv184x-mipi-rx: devno = 2, input_mode = INPUT_MODE_BT601, mac_clk = 400MHZ
+[ 8338.739196] misc cv184x-mipi-rx: mclk0 = CAMPLL_FREQ_24M
+[ 8338.739208] misc cv184x-mipi-rx: width = 640, height = 480, start_x = 0, start_y = 0, max_width = 640, max_height = 480
+[ 8338.739284] misc cv184x-mipi-rx: start set snsr_mclk[0]
+[ 8338.745241] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 8338.755607] misc cv184x-mipi-rx: start set snsr_mclk[1]
+[ 8338.761553] misc cv184x-mipi-rx: Requested clock value: 24000000 Hz, actual clock value: 24000000 Hz.
+[ 8338.864859] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8338.864896] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 1 times
+[ 8338.940668] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8338.965540] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8338.965565] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8338.970646] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8338.980643] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8338.990660] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.000641] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.010648] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 2 times
+[ 8339.050640] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.065535] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.065557] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.070638] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.080637] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.090654] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.100634] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.110657] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 3 times
+[ 8339.160650] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.165531] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.165551] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.170632] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.180631] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.190627] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.200626] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.210650] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 4 times
+[ 8339.265525] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.265542] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.270621] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.270634] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.280630] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.290621] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.300620] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.310644] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 5 times
+[ 8339.365522] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.365541] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.375558] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.380612] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.380642] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.390620] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.400614] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.410618] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 6 times
+[ 8339.465522] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.465544] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.475563] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.480605] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.490604] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.490620] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.500616] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.510620] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 7 times
+[ 8339.565517] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.565536] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.575553] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.580596] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.590597] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.600598] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.600629] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.610612] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 8 times
+[ 8339.665513] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.665533] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.675550] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.680588] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.690606] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.700588] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.710593] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 9 times
+[ 8339.710611] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.765510] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.765533] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.775550] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.780581] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.790598] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.800581] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.810603] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 10 times
+[ 8339.820599] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.865509] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.865532] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.875548] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.880573] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.890591] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8339.900573] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8339.910583] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 11 times
+[ 8339.930574] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8339.965506] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8339.965532] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8339.975550] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8339.985563] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8339.995575] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.005588] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.015608] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 12 times
+[ 8340.040588] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.115501] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8340.115524] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.120556] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.130573] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.140555] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.150554] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.150567] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.160570] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 13 times
+[ 8340.215496] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8340.215515] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.220548] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.230565] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.240547] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.250564] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.260554] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 14 times
+[ 8340.260589] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.315493] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8340.315515] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.320541] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.330558] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.340540] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.350556] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.360544] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 15 times
+[ 8340.370541] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.415492] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8340.415515] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.420534] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.430550] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.440532] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.450532] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.460538] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 16 times
+[ 8340.480562] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.515487] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8340.515510] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.525526] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.535543] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.545556] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.555569] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.565591] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 17 times
+[ 8340.590524] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.665482] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8340.665505] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.675522] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.685537] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.695554] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.700532] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.705572] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.715593] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 18 times
+[ 8340.810507] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.815477] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8340.815497] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.825510] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.835524] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.845539] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8340.855555] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8340.865577] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 19 times
+[ 8340.920517] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8340.965472] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8340.965495] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8340.975513] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8340.985528] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8340.995545] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.005558] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.015578] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 20 times
+[ 8341.030494] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.115466] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8341.115486] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.125503] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.135520] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.140499] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.145538] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.155551] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.165572] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 21 times
+[ 8341.250474] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.265462] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8341.265482] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.275495] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.285510] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.295527] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.305541] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.315563] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 22 times
+[ 8341.360484] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.415457] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8341.415479] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.425493] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.430570] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.440457] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.450474] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.460463] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 23 times
+[ 8341.470472] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.515454] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8341.515476] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.525492] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.535509] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.545524] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.555541] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.565563] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 24 times
+[ 8341.580470] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.665447] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8341.665467] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.675481] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.685494] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.690441] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.695511] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.705525] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.715545] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 25 times
+[ 8341.800452] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.815444] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8341.815464] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.825478] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.835491] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.845506] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8341.855523] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8341.865545] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 26 times
+[ 8341.910424] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8341.965437] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8341.965459] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8341.975477] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8341.985490] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8341.995503] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8342.005516] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8342.015535] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 27 times
+[ 8342.020436] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.115434] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8342.115457] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8342.125470] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8342.130408] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.135489] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8342.145503] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8342.155516] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8342.165539] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 28 times
+[ 8342.240419] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.265429] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8342.265449] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8342.275461] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8342.285477] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8342.295493] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8342.305508] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8342.315531] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 29 times
+[ 8342.350391] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.415424] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10003, dbg_3=0x2
+[ 8342.415445] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8342.425460] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8342.435477] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8342.445492] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8342.455508] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8342.460399] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.463028] _vi_err_retrig_pre_fe:2883(): fe_2 trig retry 30 times
+[ 8342.515420] vi_err_wake_up_th:3139(): dbg_0=0x0, dbg_1=0x0, dbg_2=0x10002, dbg_3=0x2
+[ 8342.515439] _vi_err_handler:2982(): wait fe/be/post idle count(9) for be_post_online
+[ 8342.525455] _vi_err_handler:2982(): wait fe/be/post idle count(8) for be_post_online
+[ 8342.535472] _vi_err_handler:2982(): wait fe/be/post idle count(7) for be_post_online
+[ 8342.545486] _vi_err_handler:2982(): wait fe/be/post idle count(6) for be_post_online
+[ 8342.555503] _vi_err_handler:2982(): wait fe/be/post idle count(5) for be_post_online
+[ 8342.570375] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.680388] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.790361] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8342.900354] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.010343] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.120344] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.230327] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.340322] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.450310] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.560310] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.670315] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.780290] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8343.890276] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.000271] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.110262] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.220255] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.330243] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.440238] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.550235] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.660222] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.770210] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.880208] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8344.990194] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.100188] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.210176] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.320170] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.430160] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.540159] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.650145] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.760138] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.870129] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8345.980122] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.090111] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.200105] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.310101] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.420087] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.530080] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.640073] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.750060] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)
+[ 8346.860055] base_get_chn_buffer:193(): Mod(VI) Grp(0) Chn(0), jobs wait(0) work(2) done(0)

@@ -1,0 +1,57 @@
+{
+  "release": "ky50_session20_20261111",
+  "binary_sha256": "012c3612d91702b577e3e7c7d256fdaca0d5527f3e9ca79ce76d361f82f0c74d",
+  "entry_true_frames": 2,
+  "leave_false_frames": 20,
+  "successes": 8,
+  "confirmed_departures": 8,
+  "max_feature_growth_while_auth_held": 131,
+  "auth_count_changes_during_lock": 0,
+  "red_transitions_while_locked": 21,
+  "green_transitions_while_locked": 29,
+  "counter_samples": [
+    {
+      "feature_start": 10,
+      "feature_current": 49,
+      "auth": 2
+    },
+    {
+      "feature_start": 10,
+      "feature_current": 106,
+      "auth": 2
+    },
+    {
+      "feature_start": 10,
+      "feature_current": 141,
+      "auth": 2
+    },
+    {
+      "feature_start": 145,
+      "feature_current": 173,
+      "auth": 4
+    },
+    {
+      "feature_start": 145,
+      "feature_current": 199,
+      "auth": 4
+    },
+    {
+      "feature_start": 222,
+      "feature_current": 225,
+      "auth": 10
+    },
+    {
+      "feature_start": 274,
+      "feature_current": 279,
+      "auth": 24
+    },
+    {
+      "feature_start": 274,
+      "feature_current": 313,
+      "auth": 24
+    }
+  ],
+  "user_confirmation": "这次正常了",
+  "ui_confirmation": "STATUS 状态文字及红外检测等待手掌已消失",
+  "runtime_log": "/tmp/ky50-session20.log"
+}

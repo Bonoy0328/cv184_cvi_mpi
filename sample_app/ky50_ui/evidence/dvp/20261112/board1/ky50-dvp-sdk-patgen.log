@@ -1,0 +1,21 @@
+[platform_sns_parseini]-625: Parse /mnt/data/sensor_cfg.ini
+stty: standard input: Not a tty
+[platform_sns_parseini]-635: /mnt/data/sensor_cfg.ini Not Found
+[platform_sns_parseini]-636: Parse /mnt/system/usr/bin/sensor_cfg.ini
+[platform_sns_parseini]-641: /mnt/system/usr/bin/sensor_cfg.ini not exist, use default cfg
+[sys_vi_init]-379: Not find sensor_cfg.ini in /mnt/data/, use patgen
+[sys_vi_init]-461: select RGB path:
+[sys_vi_init]-462: 0: VI-OFFLINE-VPSS
+[sys_vi_init]-463: 1: VI-ONLINE-VPSS
+[sys_vi_init]-539: [INFO]  createNewPool VBpool [1] 1920:1080, BlkCnt= 3, Size = 3133440
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[0]
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[-1]
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[-1]
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[-1]
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[-1]
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[-1]
+[sys_vi_init]-694: VIPIPE[0]-dev[0]-bind-pipe[-1]
+[sys_vi_init]-773: Current pipe_0 disable ISP init
+[sys_vi_init]-866: Current pipe_0 disable ISP thread
+[main]-1361: ---Basic------------------------------------------------
+[main]-1362

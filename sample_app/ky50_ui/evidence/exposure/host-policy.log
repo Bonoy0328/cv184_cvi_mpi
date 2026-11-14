@@ -1,0 +1,18 @@
+mkdir -p build/tests
+gcc -I. -Ipva/include -std=gnu11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/ir_exposure_test.c ir_exposure.c -o build/tests/ir_exposure_test
+./build/tests/ir_exposure_test
+IR_AE set failed reason=too_bright target=52
+IR_AE measured target=56 luma=80 time_us=1200 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=56->52 settle_ms=500
+IR_AE recognition_success target=52 luma=80 time_us=1200 gain=1024/1024/1024
+IR_AE measured target=52 luma=80 time_us=1200 gain=1024/1024/1024
+IR_AE found=1 status=8 reason=too_dark target=52->54 settle_ms=500
+IR_AE found=1 status=0 reason=restore_success target=54->52 settle_ms=500
+IR_AE recognition_success target=52 luma=80 time_us=1200 gain=1024/1024/1024
+IR_AE found=1 status=0 reason=restore_success target=70->52 settle_ms=500
+IR_AE found=1 status=0 reason=restore_success target=56->52 settle_ms=500
+IR_AE found=1 status=7 limit=1 luma=80 time_us=1200
+IR_AE found=1 status=8 limit=255 luma=80 time_us=1200
+IR_AE measured target=56 luma=80 time_us=1200 gain=1024/1024/1024
+IR_AE found=1 status=0 reason=restore_success target=56->40 settle_ms=500
+PASS IR AE: detection-only writes, post-feature statuses, bright down/dark up, settle/rate limit, reversal damping, other states stop, success recall, restart, bounds and failures

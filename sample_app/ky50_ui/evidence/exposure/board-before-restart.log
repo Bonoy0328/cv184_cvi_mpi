@@ -1,0 +1,89 @@
+TOUCH /dev/input/event1: KY50 ST7102 Touchscreen
+PALM defaults brightness=60..160 offset=0.01/0.01
+ACCESS parameters loaded source=database hand=70 auth=50 dynamic=1
+IR_AE saved_target=-1; apply only after hand detection
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=5 capture_fps=14.35 display_fps=29.10 frames=72 page=0 eth=1
+STATS elapsed=10 capture_fps=15.20 display_fps=28.79 frames=148 page=0 eth=1
+STATS elapsed=15 capture_fps=16.79 display_fps=29.38 frames=232 page=0 eth=1
+STATS elapsed=20 capture_fps=16.99 display_fps=29.19 frames=317 page=0 eth=1
+STATS elapsed=25 capture_fps=16.80 display_fps=29.20 frames=401 page=0 eth=1
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=30 capture_fps=16.80 display_fps=29.39 frames=485 page=0 eth=1
+STATS elapsed=35 capture_fps=16.37 display_fps=29.15 frames=567 page=0 eth=1
+STATS elapsed=40 capture_fps=17.14 display_fps=29.10 frames=653 page=0 eth=1
+STATS elapsed=45 capture_fps=16.59 display_fps=29.18 frames=736 page=0 eth=1
+PALM_QUALITY found=1 status=17 overlay=red
+PALM_QUALITY found=1 status=7 overlay=red
+IR_AE measured target=56 luma=60 time_us=6933 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=56->52 settle_ms=500
+IR_AE measured target=52 luma=57 time_us=6933 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=52->48 settle_ms=500
+IR_AE measured target=48 luma=57 time_us=6844 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=48->44 settle_ms=500
+IR_AE measured target=44 luma=48 time_us=6074 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=44->40 settle_ms=500
+STATS elapsed=50 capture_fps=14.54 display_fps=29.27 frames=809 page=0 eth=1
+IR_AE measured target=40 luma=44 time_us=6074 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=40->36 settle_ms=500
+IR_AE measured target=36 luma=42 time_us=6074 gain=1024/1024/1024
+IR_AE found=1 status=7 reason=too_bright target=36->32 settle_ms=500
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=55 capture_fps=13.20 display_fps=29.20 frames=875 page=0 eth=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=60 capture_fps=11.80 display_fps=29.20 frames=934 page=0 eth=1
+PALM_QUALITY found=1 status=3 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=65 capture_fps=7.57 display_fps=29.28 frames=972 page=0 eth=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=1 status=1 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=70 capture_fps=14.99 display_fps=29.18 frames=1047 page=0 eth=1
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=75 capture_fps=9.79 display_fps=29.16 frames=1096 page=0 eth=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=1 status=11 overlay=red
+PALM_QUALITY found=0 status=11 overlay=hidden
+PALM_QUALITY found=1 status=0 overlay=green
+STATS elapsed=80 capture_fps=13.38 display_fps=29.15 frames=1163 page=0 eth=1
+ACCESS match uuid=0 score=0.6174
+IR_AE recognition_success target=32 luma=35 time_us=4474 gain=1024/1024/1024
+IR_AE persisted_success target=32
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=1 overlay=red
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.6334
+IR_AE recognition_success target=32 luma=34 time_us=4325 gain=1024/1024/1024
+STATS elapsed=85 capture_fps=14.12 display_fps=29.03 frames=1234 page=0 eth=1
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+PALM_QUALITY found=0 status=11 overlay=hidden
+IR_AE found=1 resume_success target=32 unchanged
+PALM_QUALITY found=1 status=0 overlay=green
+ACCESS match uuid=0 score=0.5803
+IR_AE recognition_success target=32 luma=34 time_us=4444 gain=1024/1024/1024
+PALM_QUALITY found=0 status=11 overlay=hidden
+STATS elapsed=90 capture_fps=13.75 display_fps=29.10 frames=1303 page=0 eth=1
+STATS elapsed=95 capture_fps=17.19 display_fps=29.38 frames=1389 page=0 eth=1
+STATS elapsed=100 capture_fps=16.77 display_fps=29.14 frames=1473 page=0 eth=1
+STATS elapsed=105 capture_fps=17.20 display_fps=29.19 frames=1559 page=0 eth=1
+STATS elapsed=110 capture_fps=16.76 display_fps=29.14 frames=1643 page=0 eth=1
+STATS elapsed=115 capture_fps=16.54 display_fps=29.29 frames=1726 page=0 eth=1
+STATS elapsed=120 capture_fps=17.00 display_fps=29.39 frames=1811 page=0 eth=1
+STATS elapsed=125 capture_fps=17.37 display_fps=28.95 frames=1898 page=0 eth=1
+STATS elapsed=130 capture_fps=16.39 display_fps=29.39 frames=1980 page=0 eth=1
+STATS elapsed=135 capture_fps=16.79 display_fps=29.19 frames=2064 page=0 eth=1
+STATS elapsed=140 capture_fps=16.98 display_fps=29.16 frames=2149 page=0 eth=1
+STATS elapsed=145 capture_fps=17.00 display_fps=29.39 frames=2234 page=0 eth=1
+STATS elapsed=150 capture_fps=16.93 display_fps=29.08 frames=2319 page=0 eth=1
+STATS elapsed=155 capture_fps=17.19 display_fps=29.39 frames=2405 page=0 eth=1

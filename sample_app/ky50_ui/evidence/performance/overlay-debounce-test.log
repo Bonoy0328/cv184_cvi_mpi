@@ -1,0 +1,7 @@
+make: Entering directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+mkdir -p build/tests
+gcc -I. -Ipva/include -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/hand_overlay_test.c hand_overlay.c -lm -o build/tests/hand_overlay_test
+./build/tests/hand_overlay_test
+PASS display-only debounce: 2 misses retained, 3 misses/150ms hide, true breaks streak before slow features, 500ms completed-result watchdog, copied quality/geometry, source/error reset
+PASS full half-size Y, CCW90 Y/VU, padded stride, viewport transform, clipped drawing, immutable algorithm result, all STATUS values with uniform red/green box and points
+make: Leaving directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'

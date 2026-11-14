@@ -1,0 +1,28 @@
+{
+  "version": "face_1000_20261112",
+  "format": "ARM encryfile + packModel",
+  "package": "pva_face.model",
+  "sha256": "0618638301e64224095dd6ec4ddd1264e4066f79daf1cff55a18e93bad3a12af",
+  "models": [
+    {
+      "index": 0,
+      "file": "scrfd_2.5g_kps_cv184x_int8_u8in_q8out.bmodel",
+      "sha256": "f43aab3beed5f79fa5fc7fcde41f250a062d889a933a9b9998ac2520b071b31f"
+    },
+    {
+      "index": 1,
+      "file": "w600k_mbf_cv184x_int8_u8in_q8out.bmodel",
+      "sha256": "6d88808c1c2bd39ed58cef2c3a143bf0b5f5a62b12352866500ec34e3a4f289a"
+    },
+    {
+      "index": 2,
+      "file": "lightqnet-dm100_cv184x_int8_u8in_q8out.bmodel",
+      "sha256": "34d6fdeb1f9a3c3cbc147a018c42f481b55b2e08363f728e46a938572acd6419"
+    },
+    {
+      "index": 3,
+      "file": "best_224_cv184x_int8_u8in_q8out.bmodel",
+      "sha256": "2ccf8e248a900763b51332bb93b3acd06c0c0fb761aab1674536744f1c1f6fbd"
+    }
+  ]
+}

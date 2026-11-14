@@ -1,0 +1,323 @@
+KY50 LCD is not running
+ISP Vipipe(0) Allocate pa(0x8bf9f000) va(0x0xb6f1c000) size(226880)
+pipe0=IR I2C3/0x37 MCLK1=24M lanes=5,4,3,-1,-1,-1
+ISP Vipipe(1) Allocate pa(0x8c047000) va(0x0xb6ee4000) size(226880)
+pipe1=RGB I2C3/0x3f MCLK0=24M lanes=2,1,0,-1,-1,-1
+pipe0 sensor ID=2083
+pipe1 sensor ID=2083
+ViPipe:0,===GC2083 1080P 30fps 10bit LINE Init OK!===
+ViPipe:1,===GC2083 1080P 30fps 10bit LINE Init OK!===
+GPIO 3020000.gpio: offset 7
+GPIO 3022000.gpio: offset 25, 18
+pinmux 0x300101c: 0x3 -> GPIO function 3
+pinmux 0x30011c8: 0x3 -> GPIO function 3
+pinmux 0x3001198: 0x3 -> GPIO function 3
+ST7102 [0] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [1] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [2] cmd=99 params=3 type=39 delay=0ms rc=0
+ST7102 [3] cmd=b0 params=7 type=39 delay=0ms rc=0
+ST7102 [4] cmd=b7 params=2 type=39 delay=0ms rc=0
+ST7102 [5] cmd=bf params=2 type=39 delay=0ms rc=0
+ST7102 [6] cmd=ba params=8 type=39 delay=0ms rc=0
+ST7102 [7] cmd=d7 params=6 type=39 delay=0ms rc=0
+ST7102 [8] cmd=a3 params=32 type=39 delay=0ms rc=0
+ST7102 [9] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [10] cmd=a6 params=44 type=39 delay=0ms rc=0
+ST7102 [11] cmd=a7 params=48 type=39 delay=0ms rc=0
+ST7102 [12] cmd=ac params=37 type=39 delay=0ms rc=0
+ST7102 [13] cmd=ad params=7 type=39 delay=0ms rc=0
+ST7102 [14] cmd=e8 params=14 type=39 delay=0ms rc=0
+ST7102 [15] cmd=e9 params=9 type=39 delay=0ms rc=0
+ST7102 [16] cmd=75 params=2 type=39 delay=0ms rc=0
+ST7102 [17] cmd=e7 params=33 type=39 delay=0ms rc=0
+ST7102 [18] cmd=c8 params=37 type=39 delay=0ms rc=0
+ST7102 [19] cmd=c9 params=37 type=39 delay=0ms rc=0
+ST7102 [20] cmd=35 params=0 type=05 delay=0ms rc=0
+DCS write 3a 77: rc=0
+ST7102 [21] cmd=11 params=0 type=05 delay=120ms rc=0
+ST7102 [22] cmd=29 params=0 type=05 delay=20ms rc=0
+DISPLAY 480x854 RGB888 stride=1472 HS=4/16/8 clock=36563; top=IR bottom=RGB
+ir-001-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=1.39
+ir-001-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=129.04
+DIAG IR count=1 Ymean=1.34 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=19893 AE_luma=8 stable=0 max=0
+FRAME IR count=1 pts=536233228 fps=0.00 format=19 compressed=0
+rgb-001-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=1.37
+rgb-001-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=128.12
+DIAG RGB count=1 Ymean=1.36 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1 pts=536575224 fps=0.00 format=19 compressed=0
+FRAME IR count=30 pts=537832716 fps=18.13 format=19 compressed=0
+FRAME RGB count=30 pts=537841480 fps=22.90 format=19 compressed=0
+FRAME IR count=60 pts=538832391 fps=22.70 format=19 compressed=0
+FRAME RGB count=60 pts=538841157 fps=26.04 format=19 compressed=0
+ir-090-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=203.35
+ir-090-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=126.34
+FRAME IR count=90 pts=539832065 fps=24.73 format=19 compressed=0
+rgb-090-1920x1080.nv21 plane0 stride=1920 length=2073600 mean=104.52
+rgb-090-1920x1080.nv21 plane1 stride=1920 length=1036800 mean=129.29
+FRAME RGB count=90 pts=540140732 fps=24.96 format=19 compressed=0
+FRAME IR count=120 pts=541464868 fps=22.75 format=19 compressed=0
+FRAME RGB count=120 pts=541440311 fps=24.46 format=19 compressed=0
+DIAG IR count=150 Ymean=203.72 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=150 pts=542464543 fps=23.91 format=19 compressed=0
+DIAG RGB count=150 Ymean=104.87 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=150 pts=542439993 fps=25.41 format=19 compressed=0
+FRAME IR count=180 pts=543464218 fps=24.75 format=19 compressed=0
+FRAME RGB count=180 pts=543439662 fps=26.08 format=19 compressed=0
+FRAME IR count=210 pts=544463892 fps=25.39 format=19 compressed=0
+FRAME RGB count=210 pts=544439343 fps=26.58 format=19 compressed=0
+FRAME IR count=240 pts=545463568 fps=25.89 format=19 compressed=0
+FRAME RGB count=240 pts=545439010 fps=26.96 format=19 compressed=0
+FRAME IR count=270 pts=546463242 fps=26.30 format=19 compressed=0
+FRAME RGB count=270 pts=546438684 fps=27.27 format=19 compressed=0
+DIAG IR count=300 Ymean=203.79 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=300 pts=547462917 fps=26.63 format=19 compressed=0
+DIAG RGB count=300 Ymean=104.87 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=300 pts=547438361 fps=27.52 format=19 compressed=0
+FRAME IR count=330 pts=548462592 fps=26.90 format=19 compressed=0
+FRAME RGB count=330 pts=548438034 fps=27.73 format=19 compressed=0
+FRAME IR count=360 pts=549462267 fps=27.14 format=19 compressed=0
+FRAME RGB count=360 pts=549437711 fps=27.91 format=19 compressed=0
+FRAME IR count=390 pts=550461942 fps=27.34 format=19 compressed=0
+FRAME RGB count=390 pts=550437385 fps=28.06 format=19 compressed=0
+FRAME IR count=420 pts=551461617 fps=27.51 format=19 compressed=0
+FRAME RGB count=420 pts=551437061 fps=28.19 format=19 compressed=0
+DIAG IR count=450 Ymean=203.93 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=450 pts=552461292 fps=27.67 format=19 compressed=0
+DIAG RGB count=450 Ymean=104.90 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=450 pts=552436736 fps=28.31 format=19 compressed=0
+FRAME IR count=480 pts=553460967 fps=27.80 format=19 compressed=0
+FRAME RGB count=480 pts=553436410 fps=28.41 format=19 compressed=0
+FRAME IR count=510 pts=554460644 fps=27.92 format=19 compressed=0
+FRAME RGB count=510 pts=554436086 fps=28.50 format=19 compressed=0
+FRAME IR count=540 pts=555460319 fps=28.03 format=19 compressed=0
+FRAME RGB count=540 pts=555435762 fps=28.58 format=19 compressed=0
+FRAME IR count=570 pts=556459994 fps=28.13 format=19 compressed=0
+FRAME RGB count=570 pts=556435435 fps=28.65 format=19 compressed=0
+DIAG IR count=600 Ymean=202.85 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=600 pts=557459678 fps=28.22 format=19 compressed=0
+DIAG RGB count=600 Ymean=104.53 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=600 pts=557435111 fps=28.72 format=19 compressed=0
+FRAME IR count=630 pts=558459351 fps=28.30 format=19 compressed=0
+FRAME RGB count=630 pts=558434784 fps=28.77 format=19 compressed=0
+FRAME IR count=660 pts=559459026 fps=28.37 format=19 compressed=0
+FRAME RGB count=660 pts=559434461 fps=28.83 format=19 compressed=0
+FRAME IR count=690 pts=560458701 fps=28.44 format=19 compressed=0
+FRAME RGB count=690 pts=560434135 fps=28.88 format=19 compressed=0
+FRAME IR count=720 pts=561458376 fps=28.50 format=19 compressed=0
+FRAME RGB count=720 pts=561433818 fps=28.92 format=19 compressed=0
+DIAG IR count=750 Ymean=202.93 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=750 pts=562458048 fps=28.56 format=19 compressed=0
+DIAG RGB count=750 Ymean=104.45 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=750 pts=562433485 fps=28.97 format=19 compressed=0
+FRAME IR count=780 pts=563457723 fps=28.61 format=19 compressed=0
+FRAME RGB count=780 pts=563433161 fps=29.00 format=19 compressed=0
+FRAME IR count=810 pts=564457398 fps=28.66 format=19 compressed=0
+FRAME RGB count=810 pts=564432835 fps=29.04 format=19 compressed=0
+FRAME IR count=840 pts=565457073 fps=28.71 format=19 compressed=0
+FRAME RGB count=840 pts=565432510 fps=29.07 format=19 compressed=0
+FRAME IR count=870 pts=566456748 fps=28.75 format=19 compressed=0
+FRAME RGB count=870 pts=566432194 fps=29.11 format=19 compressed=0
+DIAG IR count=900 Ymean=202.77 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=900 pts=567456423 fps=28.79 format=19 compressed=0
+DIAG RGB count=900 Ymean=104.58 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=900 pts=567431861 fps=29.13 format=19 compressed=0
+FRAME IR count=930 pts=568456098 fps=28.83 format=19 compressed=0
+FRAME RGB count=930 pts=568431536 fps=29.16 format=19 compressed=0
+FRAME IR count=960 pts=569455773 fps=28.87 format=19 compressed=0
+FRAME RGB count=960 pts=569431211 fps=29.19 format=19 compressed=0
+FRAME IR count=990 pts=570455448 fps=28.90 format=19 compressed=0
+FRAME RGB count=990 pts=570430893 fps=29.21 format=19 compressed=0
+FRAME IR count=1020 pts=571455123 fps=28.93 format=19 compressed=0
+FRAME RGB count=1020 pts=571430562 fps=29.24 format=19 compressed=0
+DIAG IR count=1050 Ymean=202.56 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1050 pts=572454798 fps=28.96 format=19 compressed=0
+DIAG RGB count=1050 Ymean=104.53 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1050 pts=572430235 fps=29.26 format=19 compressed=0
+FRAME IR count=1080 pts=573454473 fps=28.99 format=19 compressed=0
+FRAME RGB count=1080 pts=573429910 fps=29.28 format=19 compressed=0
+FRAME IR count=1110 pts=574454147 fps=29.02 format=19 compressed=0
+FRAME RGB count=1110 pts=574429585 fps=29.30 format=19 compressed=0
+FRAME IR count=1140 pts=575453821 fps=29.04 format=19 compressed=0
+FRAME RGB count=1140 pts=575429260 fps=29.31 format=19 compressed=0
+FRAME IR count=1170 pts=576453492 fps=29.06 format=19 compressed=0
+FRAME RGB count=1170 pts=576428940 fps=29.33 format=19 compressed=0
+DIAG IR count=1200 Ymean=202.56 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1200 pts=577453170 fps=29.09 format=19 compressed=0
+DIAG RGB count=1200 Ymean=104.43 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1200 pts=577428607 fps=29.35 format=19 compressed=0
+FRAME IR count=1230 pts=578452845 fps=29.11 format=19 compressed=0
+FRAME RGB count=1230 pts=578428286 fps=29.36 format=19 compressed=0
+FRAME IR count=1260 pts=579452519 fps=29.13 format=19 compressed=0
+FRAME RGB count=1260 pts=579427961 fps=29.38 format=19 compressed=0
+FRAME IR count=1290 pts=580452195 fps=29.15 format=19 compressed=0
+FRAME RGB count=1290 pts=580427636 fps=29.39 format=19 compressed=0
+FRAME IR count=1320 pts=581451868 fps=29.17 format=19 compressed=0
+FRAME RGB count=1320 pts=581427309 fps=29.41 format=19 compressed=0
+DIAG IR count=1350 Ymean=202.49 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1350 pts=582451542 fps=29.19 format=19 compressed=0
+DIAG RGB count=1350 Ymean=104.42 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1350 pts=582426984 fps=29.42 format=19 compressed=0
+FRAME IR count=1380 pts=583451218 fps=29.20 format=19 compressed=0
+FRAME RGB count=1380 pts=583426660 fps=29.43 format=19 compressed=0
+FRAME IR count=1410 pts=584450893 fps=29.22 format=19 compressed=0
+FRAME RGB count=1410 pts=584426333 fps=29.45 format=19 compressed=0
+FRAME IR count=1440 pts=585450567 fps=29.24 format=19 compressed=0
+FRAME RGB count=1440 pts=585426010 fps=29.46 format=19 compressed=0
+FRAME IR count=1470 pts=586450242 fps=29.25 format=19 compressed=0
+FRAME RGB count=1470 pts=586425685 fps=29.47 format=19 compressed=0
+DIAG IR count=1500 Ymean=202.34 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1500 pts=587449918 fps=29.27 format=19 compressed=0
+DIAG RGB count=1500 Ymean=104.38 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1500 pts=587425361 fps=29.48 format=19 compressed=0
+FRAME IR count=1530 pts=588449593 fps=29.28 format=19 compressed=0
+FRAME RGB count=1530 pts=588425036 fps=29.49 format=19 compressed=0
+FRAME IR count=1560 pts=589449268 fps=29.30 format=19 compressed=0
+FRAME RGB count=1560 pts=589424711 fps=29.50 format=19 compressed=0
+FRAME IR count=1590 pts=590448942 fps=29.31 format=19 compressed=0
+FRAME RGB count=1590 pts=590424387 fps=29.51 format=19 compressed=0
+FRAME IR count=1620 pts=591448618 fps=29.32 format=19 compressed=0
+FRAME RGB count=1620 pts=591424060 fps=29.52 format=19 compressed=0
+DIAG IR count=1650 Ymean=202.35 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1650 pts=592448292 fps=29.33 format=19 compressed=0
+DIAG RGB count=1650 Ymean=104.38 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1650 pts=592423735 fps=29.53 format=19 compressed=0
+FRAME IR count=1680 pts=593447968 fps=29.35 format=19 compressed=0
+FRAME RGB count=1680 pts=593423418 fps=29.53 format=19 compressed=0
+FRAME IR count=1710 pts=594447642 fps=29.36 format=19 compressed=0
+FRAME RGB count=1710 pts=594423085 fps=29.54 format=19 compressed=0
+FRAME IR count=1740 pts=595447318 fps=29.37 format=19 compressed=0
+FRAME RGB count=1740 pts=595422759 fps=29.55 format=19 compressed=0
+FRAME IR count=1770 pts=596446993 fps=29.38 format=19 compressed=0
+FRAME RGB count=1770 pts=596422436 fps=29.56 format=19 compressed=0
+DIAG IR count=1800 Ymean=202.09 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1800 pts=597446667 fps=29.39 format=19 compressed=0
+DIAG RGB count=1800 Ymean=104.37 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1800 pts=597422111 fps=29.57 format=19 compressed=0
+FRAME IR count=1830 pts=598446342 fps=29.40 format=19 compressed=0
+FRAME RGB count=1830 pts=598421785 fps=29.57 format=19 compressed=0
+FRAME IR count=1860 pts=599446025 fps=29.41 format=19 compressed=0
+FRAME RGB count=1860 pts=599421461 fps=29.58 format=19 compressed=0
+FRAME IR count=1890 pts=600445702 fps=29.42 format=19 compressed=0
+FRAME RGB count=1890 pts=600421135 fps=29.59 format=19 compressed=0
+FRAME IR count=1920 pts=601445369 fps=29.43 format=19 compressed=0
+FRAME RGB count=1920 pts=601420811 fps=29.59 format=19 compressed=0
+DIAG IR count=1950 Ymean=201.95 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=1950 pts=602445050 fps=29.44 format=19 compressed=0
+DIAG RGB count=1950 Ymean=104.36 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=1950 pts=602420485 fps=29.60 format=19 compressed=0
+FRAME IR count=1980 pts=603444722 fps=29.44 format=19 compressed=0
+FRAME RGB count=1980 pts=603420161 fps=29.61 format=19 compressed=0
+FRAME IR count=2010 pts=604444393 fps=29.45 format=19 compressed=0
+FRAME RGB count=2010 pts=604419834 fps=29.61 format=19 compressed=0
+FRAME IR count=2040 pts=605444071 fps=29.46 format=19 compressed=0
+FRAME RGB count=2040 pts=605419510 fps=29.62 format=19 compressed=0
+FRAME IR count=2070 pts=606443743 fps=29.47 format=19 compressed=0
+FRAME RGB count=2070 pts=606419186 fps=29.62 format=19 compressed=0
+DIAG IR count=2100 Ymean=201.89 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=2100 pts=607443417 fps=29.48 format=19 compressed=0
+DIAG RGB count=2100 Ymean=104.32 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=2100 pts=607418859 fps=29.63 format=19 compressed=0
+FRAME IR count=2130 pts=608443093 fps=29.48 format=19 compressed=0
+FRAME RGB count=2130 pts=608418535 fps=29.63 format=19 compressed=0
+FRAME IR count=2160 pts=609442767 fps=29.49 format=19 compressed=0
+FRAME RGB count=2160 pts=609418210 fps=29.64 format=19 compressed=0
+FRAME IR count=2190 pts=610442444 fps=29.50 format=19 compressed=0
+FRAME RGB count=2190 pts=610417884 fps=29.64 format=19 compressed=0
+FRAME IR count=2220 pts=611442119 fps=29.50 format=19 compressed=0
+FRAME RGB count=2220 pts=611417562 fps=29.65 format=19 compressed=0
+DIAG IR count=2250 Ymean=201.81 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=2250 pts=612441794 fps=29.51 format=19 compressed=0
+DIAG RGB count=2250 Ymean=104.33 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=2250 pts=612417235 fps=29.65 format=19 compressed=0
+FRAME IR count=2280 pts=613441469 fps=29.52 format=19 compressed=0
+FRAME RGB count=2280 pts=613416910 fps=29.66 format=19 compressed=0
+FRAME IR count=2310 pts=614441144 fps=29.52 format=19 compressed=0
+FRAME RGB count=2310 pts=614416586 fps=29.66 format=19 compressed=0
+FRAME IR count=2340 pts=615440818 fps=29.53 format=19 compressed=0
+FRAME RGB count=2340 pts=615416260 fps=29.67 format=19 compressed=0
+FRAME IR count=2370 pts=616440494 fps=29.54 format=19 compressed=0
+FRAME RGB count=2370 pts=616415936 fps=29.67 format=19 compressed=0
+DIAG IR count=2400 Ymean=201.76 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=2400 pts=617440169 fps=29.54 format=19 compressed=0
+DIAG RGB count=2400 Ymean=104.31 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=2400 pts=617415610 fps=29.68 format=19 compressed=0
+FRAME IR count=2430 pts=618439844 fps=29.55 format=19 compressed=0
+FRAME RGB count=2430 pts=618415285 fps=29.68 format=19 compressed=0
+FRAME IR count=2460 pts=619439517 fps=29.55 format=19 compressed=0
+FRAME RGB count=2460 pts=619414961 fps=29.68 format=19 compressed=0
+FRAME IR count=2490 pts=620439191 fps=29.56 format=19 compressed=0
+FRAME RGB count=2490 pts=620414635 fps=29.69 format=19 compressed=0
+FRAME IR count=2520 pts=621438867 fps=29.56 format=19 compressed=0
+FRAME RGB count=2520 pts=621414311 fps=29.69 format=19 compressed=0
+DIAG IR count=2550 Ymean=201.36 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=2550 pts=622438542 fps=29.57 format=19 compressed=0
+DIAG RGB count=2550 Ymean=104.30 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=2550 pts=622413984 fps=29.70 format=19 compressed=0
+FRAME IR count=2580 pts=623438217 fps=29.57 format=19 compressed=0
+FRAME RGB count=2580 pts=623413661 fps=29.70 format=19 compressed=0
+FRAME IR count=2610 pts=624437893 fps=29.58 format=19 compressed=0
+FRAME RGB count=2610 pts=624413334 fps=29.70 format=19 compressed=0
+FRAME IR count=2640 pts=625437566 fps=29.58 format=19 compressed=0
+FRAME RGB count=2640 pts=625413010 fps=29.71 format=19 compressed=0
+FRAME IR count=2670 pts=626437242 fps=29.59 format=19 compressed=0
+FRAME RGB count=2670 pts=626412684 fps=29.71 format=19 compressed=0
+DIAG IR count=2700 Ymean=201.70 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=2700 pts=627436921 fps=29.59 format=19 compressed=0
+DIAG RGB count=2700 Ymean=104.32 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=2700 pts=627412360 fps=29.71 format=19 compressed=0
+FRAME IR count=2730 pts=628436592 fps=29.60 format=19 compressed=0
+FRAME RGB count=2730 pts=628412035 fps=29.72 format=19 compressed=0
+FRAME IR count=2760 pts=629436267 fps=29.60 format=19 compressed=0
+FRAME RGB count=2760 pts=629411711 fps=29.72 format=19 compressed=0
+FRAME IR count=2790 pts=630435942 fps=29.61 format=19 compressed=0
+FRAME RGB count=2790 pts=630411386 fps=29.72 format=19 compressed=0
+FRAME IR count=2820 pts=631435617 fps=29.61 format=19 compressed=0
+FRAME RGB count=2820 pts=631411062 fps=29.73 format=19 compressed=0
+DIAG IR count=2850 Ymean=201.48 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=2850 pts=632435293 fps=29.61 format=19 compressed=0
+DIAG RGB count=2850 Ymean=104.29 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=2850 pts=632410737 fps=29.73 format=19 compressed=0
+FRAME IR count=2880 pts=633434967 fps=29.62 format=19 compressed=0
+FRAME RGB count=2880 pts=633410411 fps=29.73 format=19 compressed=0
+FRAME IR count=2910 pts=634434642 fps=29.62 format=19 compressed=0
+FRAME RGB count=2910 pts=634410084 fps=29.73 format=19 compressed=0
+FRAME IR count=2940 pts=635434317 fps=29.63 format=19 compressed=0
+FRAME RGB count=2940 pts=635409757 fps=29.74 format=19 compressed=0
+FRAME IR count=2970 pts=636433992 fps=29.63 format=19 compressed=0
+FRAME RGB count=2970 pts=636409436 fps=29.74 format=19 compressed=0
+DIAG IR count=3000 Ymean=201.51 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=3000 pts=637433668 fps=29.63 format=19 compressed=0
+DIAG RGB count=3000 Ymean=104.29 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=3000 pts=637409110 fps=29.74 format=19 compressed=0
+FRAME IR count=3030 pts=638433342 fps=29.64 format=19 compressed=0
+FRAME RGB count=3030 pts=638408786 fps=29.74 format=19 compressed=0
+FRAME IR count=3060 pts=639433017 fps=29.64 format=19 compressed=0
+FRAME RGB count=3060 pts=639408461 fps=29.75 format=19 compressed=0
+FRAME IR count=3090 pts=640432692 fps=29.65 format=19 compressed=0
+FRAME RGB count=3090 pts=640408136 fps=29.75 format=19 compressed=0
+FRAME IR count=3120 pts=641432367 fps=29.65 format=19 compressed=0
+FRAME RGB count=3120 pts=641407810 fps=29.75 format=19 compressed=0
+DIAG IR count=3150 Ymean=201.45 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=3150 pts=642432042 fps=29.65 format=19 compressed=0
+DIAG RGB count=3150 Ymean=104.30 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=3150 pts=642407484 fps=29.75 format=19 compressed=0
+FRAME IR count=3180 pts=643431717 fps=29.66 format=19 compressed=0
+FRAME RGB count=3180 pts=643407160 fps=29.76 format=19 compressed=0
+FRAME IR count=3210 pts=644431392 fps=29.66 format=19 compressed=0
+FRAME RGB count=3210 pts=644406835 fps=29.76 format=19 compressed=0
+FRAME IR count=3240 pts=645431079 fps=29.66 format=19 compressed=0
+FRAME RGB count=3240 pts=645406511 fps=29.76 format=19 compressed=0
+FRAME IR count=3270 pts=646430754 fps=29.66 format=19 compressed=0
+FRAME RGB count=3270 pts=646406186 fps=29.76 format=19 compressed=0
+DIAG IR count=3300 Ymean=201.42 AE_rc=0 exp_us=33096 again=151584 dgain=10240 isp_gain=32767 AE_luma=9 stable=1 max=1
+FRAME IR count=3300 pts=647430418 fps=29.67 format=19 compressed=0
+DIAG RGB count=3300 Ymean=104.19 AE_rc=0 exp_us=0 again=0 dgain=0 isp_gain=0 AE_luma=0 stable=0 max=0
+FRAME RGB count=3300 pts=647405861 fps=29.77 format=19 compressed=0
+FRAME IR count=3330 pts=648430103 fps=29.67 format=19 compressed=0
+FRAME RGB count=3330 pts=648405536 fps=29.77 format=19 compressed=0
+FRAME IR count=3360 pts=649429767 fps=29.67 format=19 compressed=0
+FRAME RGB count=3360 pts=649405209 fps=29.77 format=19 compressed=0
+FRAME IR count=3390 pts=650429451 fps=29.68 format=19 compressed=0
+FRAME RGB count=3390 pts=650404885 fps=29.77 format=19 compressed=0
+FRAME IR count=3420 pts=651429118 fps=29.68 format=19 compressed=0
+FRAME RGB count=3420 pts=651404561 fps=29.77 format=19 compressed=0

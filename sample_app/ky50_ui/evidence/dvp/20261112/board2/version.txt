@@ -1,0 +1,1 @@
+Linux cvitek 5.10.4-tag--g79534ab146b7 #1 PREEMPT Fri Nov 6 13:51:11 CST 2026 armv7l GNU/Linux

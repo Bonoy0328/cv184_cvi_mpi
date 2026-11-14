@@ -1,0 +1,19 @@
+{
+  "synthetic_input": "540x960 packed NV12, identical deterministic pixels, no camera",
+  "iterations": 30,
+  "warmup": 2,
+  "timings": {
+    "reference_full_plus_align": {
+      "wall_ms": 26.917,
+      "cpu_ms": 26.912
+    },
+    "direct_two_align": {
+      "wall_ms": 15.21,
+      "cpu_ms": 15.205
+    },
+    "vpss_copy_csc_align": {
+      "wall_ms": 14.018,
+      "cpu_ms": 12.126
+    }
+  }
+}

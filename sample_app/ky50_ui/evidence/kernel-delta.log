@@ -1,0 +1,19 @@
+[ 8144.241292] vo_recv_frame:812(): layer(0) chn(0) waitq full, drop frame.
+[ 8246.114686] ky50_tddi 1-0055: DOWN x=381 y=813 contacts=1
+[ 8246.174387] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 8247.654428] ky50_tddi 1-0055: DOWN x=59 y=117 contacts=1
+[ 8247.774409] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 8248.554450] ky50_tddi 1-0055: DOWN x=377 y=826 contacts=1
+[ 8248.634457] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 8249.354431] ky50_tddi 1-0055: DOWN x=42 y=124 contacts=1
+[ 8249.454450] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 8250.154430] ky50_tddi 1-0055: DOWN x=363 y=800 contacts=1
+[ 8250.234452] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 8250.954436] ky50_tddi 1-0055: DOWN x=58 y=113 contacts=1
+[ 8251.054428] ky50_tddi 1-0055: UP x=0 y=0 contacts=0
+[ 8289.140209] cvi_rtc 5026000.rtc: time set to 1794319144. 11/10/2026 13:59:04
+[ 8289.140237] cvi_rtc 5026000.rtc: time read as 1794319143. 11/10/2026 13:59:03
+[ 8984.128542] cvi_rtc 5026000.rtc: time set to 1794319839. 11/10/2026 14:10:39
+[ 8984.128570] cvi_rtc 5026000.rtc: time read as 1794319837. 11/10/2026 14:10:37
+[ 9680.132525] cvi_rtc 5026000.rtc: time set to 1794320535. 11/10/2026 14:22:15
+[ 9680.132555] cvi_rtc 5026000.rtc: time read as 1794320534. 11/10/2026 14:22:14

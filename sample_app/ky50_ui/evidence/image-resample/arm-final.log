@@ -1,0 +1,23 @@
+PASS shared resampling: independent scalar reference, stride guards, thin images, edges, odd tails, affine/rotation
+BENCH method=0 stage=rgb_detection_540x960 cpu_ms=15.177 wall_ms=15.217 checksum=1288
+BENCH method=0 stage=ir_detection_540x960 cpu_ms=8.706 wall_ms=8.740 checksum=1016
+BENCH method=0 stage=face_affine_112 cpu_ms=5.420 wall_ms=5.432 checksum=1136
+BENCH method=0 stage=quality_affine_96 cpu_ms=3.194 wall_ms=3.198 checksum=832
+BENCH method=0 stage=rgb_resize_224 cpu_ms=12.040 wall_ms=12.083 checksum=776
+PASS shared resampling: independent scalar reference, stride guards, thin images, edges, odd tails, affine/rotation
+BENCH method=1 stage=rgb_detection_540x960 cpu_ms=14.782 wall_ms=14.819 checksum=1288
+BENCH method=1 stage=ir_detection_540x960 cpu_ms=6.138 wall_ms=6.158 checksum=1016
+BENCH method=1 stage=face_affine_112 cpu_ms=4.233 wall_ms=4.257 checksum=1136
+BENCH method=1 stage=quality_affine_96 cpu_ms=2.364 wall_ms=2.369 checksum=832
+BENCH method=1 stage=rgb_resize_224 cpu_ms=4.342 wall_ms=4.354 checksum=776
+PASS shared resampling: independent scalar reference, stride guards, thin images, edges, odd tails, affine/rotation
+BENCH method=2 stage=rgb_detection_540x960 cpu_ms=7.693 wall_ms=7.711 checksum=608
+BENCH method=2 stage=ir_detection_540x960 cpu_ms=4.163 wall_ms=4.177 checksum=528
+BENCH method=2 stage=face_affine_112 cpu_ms=4.069 wall_ms=4.075 checksum=1352
+BENCH method=2 stage=quality_affine_96 cpu_ms=2.216 wall_ms=2.222 checksum=440
+BENCH method=2 stage=rgb_resize_224 cpu_ms=1.291 wall_ms=1.291 checksum=400
+PASS all 16777216 Y/U/V triples: byte-exact legacy NV12 conversion
+PASS 28 letterbox/planar cases and NV12 vector tails: padding, selected sampling and channel order (bilinear tolerance <=1)
+PASS 64 fused NV12 canvas cases: original RGB samples, fractional fallback and zero edges
+BENCH reference average_ms=188.605 checksum=788
+BENCH optimized average_ms=14.900 checksum=788

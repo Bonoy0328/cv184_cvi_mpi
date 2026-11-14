@@ -1,0 +1,30 @@
+{
+  "release": "ky50_parameters_20261111",
+  "binary_sha256": "d06fb1001aa15dc04c9b7d724c206d6269dd40ea4b10a4be86900d3c476971ab",
+  "defaults": {
+    "brightness_threshold_min": 60,
+    "brightness_threshold_max": 160,
+    "horizontal_offset_tolerance": 0.01,
+    "vertical_offset_tolerance": 0.01,
+    "model_probability_threshold": 0.76,
+    "auth_threshold": 0.52,
+    "dynamic_detection_level": 2
+  },
+  "user_saved_and_restored": {
+    "model_probability_threshold": 0.7,
+    "auth_threshold": 0.5,
+    "dynamic_detection_level": 1
+  },
+  "physical_confirmation": "全部正常",
+  "restart_source": "database",
+  "validation": [
+    "host real LVGL pointer flow",
+    "ASan/UBSan service regression (detect_leaks=0)",
+    "write/apply failure rollback",
+    "ARM cross compilation",
+    "NFS package SHA256 verification",
+    "physical touch and display confirmation",
+    "board save and restart restore"
+  ],
+  "runtime_log": "/tmp/ky50-parameters.log"
+}

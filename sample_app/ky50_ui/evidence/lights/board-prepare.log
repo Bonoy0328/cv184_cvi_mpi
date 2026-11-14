@@ -1,0 +1,67 @@
+ky50_ui: OK
+device_authorize: OK
+access_inspect: OK
+pixel_check: OK
+ky50_amp.ko: OK
+ky50_i2c1.ko: OK
+ky50_lights.ko: OK
+ky50_relay.ko: OK
+ky50_touch.ko: OK
+boot.sh: OK
+install-local.sh: OK
+run.sh: OK
+soak.sh: OK
+stop.sh: OK
+assets/recognition_success.s16le: OK
+assets/ime/COPYRIGHT: OK
+assets/ime/pinyin.tsv: OK
+assets/ime/pinyin_table.txt.bz2: OK
+pva/face_deployment_manifest.json: OK
+pva/face_pack_manifest.json: OK
+pva/face_source_SHA256SUMS: OK
+pva/manifest.json: OK
+pva/pva.model: OK
+pva/pvaConf.json: OK
+pva/pva_face.model: OK
+tools/access_inspect.c: OK
+tools/make_pinyin.py: OK
+Linux cvitek 5.10.4-tag--g79534ab146b7 #1 PREEMPT Fri Nov 6 13:51:11 CST 2026 armv7l GNU/Linux
+version=1
+palm_leave_frames=3
+face_leave_frames=3
+gpiochip4: GPIOs 352-383, parent: platform/5021000.gpio, 5021000.gpio:
+
+gpiochip3: GPIOs 384-415, parent: platform/3023000.gpio, 3023000.gpio:
+
+gpiochip2: GPIOs 416-447, parent: platform/3022000.gpio, 3022000.gpio:
+ gpio-434 (                    |ky50-lcd            ) out hi 
+ gpio-441 (                    |ky50-lcd            ) out lo 
+
+gpiochip1: GPIOs 448-479, parent: platform/3021000.gpio, 3021000.gpio:
+ gpio-454 (                    |cviusb-otg          ) in  lo IRQ 
+
+gpiochip0: GPIOs 480-511, parent: platform/3020000.gpio, 3020000.gpio:
+ gpio-487 (                    |ky50-lcd            ) out hi 
+ gpio-495 (                    |mute_pin_l          ) out lo 
+ gpio-510 (                    |mute_pin_r          ) out lo 
+0x00000006
+0x00000003
+0x00000080
+0x40008080
+gpiochip4: GPIOs 352-383, parent: platform/5021000.gpio, 5021000.gpio:
+
+gpiochip3: GPIOs 384-415, parent: platform/3023000.gpio, 3023000.gpio:
+
+gpiochip2: GPIOs 416-447, parent: platform/3022000.gpio, 3022000.gpio:
+ gpio-434 (                    |ky50-lcd            ) out hi 
+ gpio-441 (                    |ky50-lcd            ) out lo 
+
+gpiochip1: GPIOs 448-479, parent: platform/3021000.gpio, 3021000.gpio:
+ gpio-454 (                    |cviusb-otg          ) in  lo IRQ 
+
+gpiochip0: GPIOs 480-511, parent: platform/3020000.gpio, 3020000.gpio:
+ gpio-487 (                    |ky50-lcd            ) out hi 
+ gpio-488 (                    |ky50-ir-light       ) out lo 
+ gpio-495 (                    |mute_pin_l          ) out lo 
+ gpio-499 (                    |ky50-white-light    ) out lo 
+ gpio-510 (                    |mute_pin_r          ) out lo 

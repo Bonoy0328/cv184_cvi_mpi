@@ -1,0 +1,192 @@
+make TARGET=host build/host/vendor/sqlite/sqlite3.o
+make[1]: Entering directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+make[1]: 'build/host/vendor/sqlite/sqlite3.o' is up to date.
+make[1]: Leaving directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+mkdir -p build/tests
+gcc -I. -Ivendor/sqlite -Ipva/include -std=gnu11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/access_test.c access.c access_store.c biometric_worker.c ir_exposure.c app_config.c ime.c build/host/vendor/sqlite/sqlite3.o -lm -lpthread -o build/tests/access_test
+./build/tests/access_test
+USER_DB test settings write failure
+USER_DB attempt to write a readonly database
+USER_DB attendance backlog full or unavailable
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-parameters-o0CyXA/app.conf ready=1
+ACCESS parameters saved hand=80 auth=60 dynamic=4
+ACCESS parameters loaded source=database hand=80 auth=60 dynamic=4
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-parameters-o0CyXA/app.conf ready=1
+ACCESS parameters saved hand=0 auth=100 dynamic=0
+ACCESS parameters saved hand=100 auth=0 dynamic=4
+PASS parameters: defaults, all three setters, persistent restart, boundaries, invalid input, storage/apply failure rollback
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-access-test-A5YxID/app.conf ready=1
+ACCESS application saved palm=5 face=5 relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-access-test-A5YxID/app.conf
+ACCESS enroll begin local_id=0 modality=palm template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS enrolled local_id=0 palm_uuid=0 progress=3/3
+IR_AE saved_target=-1; apply only after hand detection
+IR_AE found=1 resume_success target=56 unchanged
+ACCESS match local_id=0 palm_uuid=0 score=0.9100
+PALM_SESSION success_hold features=32 auth=2
+IR_AE recognition_success target=56 sample_sequence=39 generation=1 luma=0 time_us=0 gain=0/0/0
+IR_AE persisted_success target=56
+ACCESS parameters saved hand=76 auth=52 dynamic=2
+PALM_SESSION left false_frames=5 success_hold=1 features=50 auth=2 held=18
+PALM_SESSION entered true_frames=2
+IR_AE found=1 resume_success target=56 unchanged
+ACCESS match local_id=0 palm_uuid=0 score=0.9100
+PALM_SESSION success_hold features=52 auth=4
+IR_AE recognition_success target=56 sample_sequence=79 generation=2 luma=0 time_us=0 gain=0/0/0
+ACCESS recovered local_id=0 modality=2 template_uuid=-1 operation=delete
+ACCESS parameters loaded source=database hand=76 auth=52 dynamic=2
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-access-test-A5YxID/app.conf ready=1
+ACCESS recovered local_id=0 modality=2 template_uuid=0 operation=enroll
+ACCESS parameters loaded source=database hand=76 auth=52 dynamic=2
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-access-test-A5YxID/app.conf ready=1
+ACCESS recovered local_id=0 modality=2 template_uuid=0 operation=enroll
+ACCESS parameters loaded source=database hand=76 auth=52 dynamic=2
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-access-test-A5YxID/app.conf ready=1
+ACCESS parameters loaded source=database hand=76 auth=52 dynamic=2
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-access-test-A5YxID/app.conf ready=1
+PASS 2-true entry, 4 false interruptions keep success lock, 5-false exit and next-round filter; errors break streaks, success stops auth across time/navigation/settings while live features/status continue; quality gates, enrollment, parameters, persistence, recovery, attendance and pinyin
+make TARGET=host build/host/vendor/sqlite/sqlite3.o
+make[1]: Entering directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+make[1]: 'build/host/vendor/sqlite/sqlite3.o' is up to date.
+make[1]: Leaving directory '/home/bonoy/CV184X_WS/SDK/cvi_mpi/sample_app/ky50_ui'
+mkdir -p build/tests
+gcc -I. -Ipva/include -Ivendor/sqlite -std=gnu11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/biometric_test.c access.c access_store.c biometric_worker.c ir_exposure.c app_config.c build/host/vendor/sqlite/sqlite3.o -lm -lpthread -o build/tests/biometric_test
+./build/tests/biometric_test
+USER_DB test failure
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-face-settings-7bIp6J/app.conf ready=1
+ACCESS application saved palm=5 face=5 relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS face parameters saved detection=57 quality=0/41 liveness=0/65 auth=-12 filter=-3
+ACCESS face parameters saved detection=1 quality=1/0 liveness=0/100 auth=-100 filter=100
+ACCESS face parameters saved detection=100 quality=0/100 liveness=1/0 auth=100 filter=-100
+ACCESS application saved palm=3 face=7 relay_seconds=8 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS application saved palm=3 face=7 relay_seconds=8 match_confirmations=2 success_cooldown_seconds=60 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS application saved palm=3 face=7 relay_seconds=8 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS application saved palm=3 face=7 relay_seconds=8 match_confirmations=10 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS application saved palm=3 face=7 relay_seconds=8 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS application saved palm=1 face=100 relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf
+ACCESS face parameters loaded source=database detection=100 quality=0/100 liveness=1/0 auth=100 filter=-100
+ACCESS departure palm=1 face=100 consecutive misses relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-face-settings-7bIp6J/app.conf ready=1
+ACCESS face parameters loaded source=database detection=100 quality=0/100 liveness=1/0 auth=100 filter=-100
+ACCESS departure palm=3 face=3 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-face-settings-7bIp6J/app.conf ready=1
+ACCESS face parameters loaded source=database detection=100 quality=0/100 liveness=1/0 auth=100 filter=-100
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-face-settings-7bIp6J/app.conf ready=0
+PASS face/application settings: immediate update, independent persistence, all bounds, restart, invalid config and apply/storage failure rollback
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-biometric-e9a1NJ/app.conf ready=1
+ACCESS application saved palm=5 face=5 relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf
+ACCESS enroll begin local_id=1 modality=face template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS face enrolled local_id=1 face_uuid=0
+ACCESS enroll begin local_id=0 modality=palm template_uuid=0
+ACCESS enrolled local_id=0 palm_uuid=0 progress=3/3
+ACCESS face match local_id=1 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+PALM_SESSION left false_frames=5 success_hold=0 features=7 auth=1 held=0
+ACCESS face match local_id=1 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+ACCESS application saved palm=3 face=7 relay_seconds=5 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf
+ACCESS face match local_id=1 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+ACCESS application saved palm=3 face=7 relay_seconds=2 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmUSER_DB UNIQUE constraint failed: credentials.kind, credentials.template_uuid
+p/ky50-biometric-e9a1NJ/app.conf
+PALM_SESSION entered true_frames=2
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=9 auth=3
+PALM_SESSION left false_frames=3 success_hold=1 features=10 auth=3 held=1
+PALM_SESSION entered true_frames=2
+PASS live independent departure: default five, four-miss/error retention, face seven and palm three after saving
+ACCESS enroll begin local_id=0 modality=face template_uuid=1
+ACCESS face enrolled local_id=0 face_uuid=1
+ACCESS recovered local_id=0 modality=2 template_uuid=-1 operation=delete
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=7 consecutive misses relay_seconds=2 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf ready=1
+ACCESS enroll begin local_id=0 modality=face template_uuid=1
+ACCESS recovered local_id=0 modality=1 template_uuid=7 operation=enroll
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=7 consecutive misses relay_seconds=2 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf ready=1
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=7 consecutive misses relay_seconds=2 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf ready=1
+ACCESS recovered local_id=0 modality=1 template_uuid=8 operation=enroll
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=7 consecutive misses relay_seconds=2 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf ready=1
+ACCESS enroll begin local_id=0 modality=face template_uuid=1
+ACCESS face enrolled local_id=0 face_uuid=1
+ACCESS enroll begin local_id=2 modality=palm template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS enrolled local_id=2 palm_uuid=0 progress=3/3
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=7 consecutive misses relay_seconds=2 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-biometric-e9a1NJ/app.conf ready=1
+ACCESS enroll begin local_id=2 modality=face template_uuid=0
+ACCESS face enrolled local_id=2 face_uuid=0
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-ids-reset-RbpxaI/app.conf ready=1
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-ids-reset-RbpxaI/app.conf ready=1
+ACCESS old user data and both SDK template databases reset for schema 3
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-ids-reset-RbpxaI/app.conf ready=1
+ACCESS enroll begin local_id=0 modality=face template_uuid=0
+ACCESS face enrolled local_id=0 face_uuid=0
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-ids-reset-RbpxaI/app.conf ready=1
+PASS old-data discard: legacy profiles/events and both SDK databases cleared, partial failure marker survives restart, no reset of new registrations or device parameters
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-reentry-kVnfnI/app.conf ready=1
+ACCESS enroll begin local_id=0 modality=face template_uuid=0
+ACCESS face enrolled local_id=0 face_uuid=0
+ACCESS enroll begin local_id=0 modality=palm template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS enrolled local_id=0 palm_uuid=0 progress=3/3
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+PALM_SESSION left false_frames=3 success_hold=0 features=3 auth=0 held=0
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+PALM_SESSION entered true_frames=2
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=5 auth=2
+PALM_SESSION left false_frames=3 success_hold=1 features=7 auth=2 held=2
+PALM_SESSION entered true_frames=2
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=9 auth=4
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+PALM_SESSION left false_frames=3 success_hold=1 features=10 auth=4 held=3
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=0 samples=1
+PALM_SESSION entered true_frames=2
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=11 auth=5
+PALM_SESSION left false_frames=3 success_hold=1 features=11 auth=5 held=3
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=3 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=2 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=200 samples=2
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=3 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+PALM_SESSION entered true_frames=2
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=13 auth=7
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=3 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+PALM_SESSION left false_frames=3 success_hold=1 features=13 auth=7 held=3
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=2000 samples=11
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-reentry-kVnfnI/app.conf
+PASS rapid reentry: face and palm repeat below 3s after departure, cross-modality has no cooldown, held sessions stay latched, shared confirmation count and cooldown apply live, held sessions never repeat
+ACCESS face parameters loaded source=defaults detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=5 face=5 consecutive misses relay_seconds=5 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-strong-test-jjVCzI/app.conf ready=1
+ACCESS enroll begin local_id=0 modality=face template_uuid=0
+ACCESS face enrolled local_id=0 face_uuid=0
+ACCESS enroll begin local_id=0 modality=palm template_uuid=0
+PALM_SESSION entered true_frames=2
+ACCESS enrolled local_id=0 palm_uuid=0 progress=3/3
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-strong-test-jjVCzI/app.conf
+PALM_SESSION left false_frames=3 success_hold=0 features=3 auth=0 held=0
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=0 config=/tmp/ky50-strong-test-jjVCzI/app.conf
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=0 samples=1
+ACCESS face parameters saved detection=50 quality=1/30 liveness=0/50 auth=24 filter=24
+ACCESS face parameters saved detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS application saved palm=3 face=3 relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-strong-test-jjVCzI/app.conf
+ACCESS face match local_id=0 face_uuid=0 score=0.9000 confirm_ms=0 samples=1
+PALM_SESSION entered true_frames=2
+ACCESS match local_id=0 palm_uuid=0 score=0.9000
+PALM_SESSION success_hold features=4 auth=1
+PALM_SESSION left false_frames=3 success_hold=1 features=4 auth=1 held=0
+ACCESS face parameters loaded source=database detection=50 quality=1/30 liveness=1/50 auth=24 filter=24
+ACCESS departure palm=3 face=3 consecutive misses relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/tmp/ky50-strong-test-jjVCzI/app.conf ready=1
+PASS strong live: default on, full neutral-UV NV12, IR false blocks success, off skips calls, live dependency, palm/enrollment unaffected, held success, v3 upgrade and v4 validation
+PASS independent IDs: SDK allocation once per session, same ID/different users, different IDs/same user, modality-aware auth/events/delete/cancel/recovery, per-modality full/invalid IDs, safe reuse and raw palm priority

@@ -1,0 +1,132 @@
+{
+  "sample_rate_hz": 16000,
+  "samples_per_channel": 800000,
+  "capture_start_uptime_s": 1578.27,
+  "sha256": {
+    "ky50-c25-mux-matrix.raw": "b36505332d89456ffdee47fb27d8e29d42e71a25509bf9cff684e933fcf30645",
+    "ky50-c25-mux-matrix-stages.log": "5ef52aff6d05069d42ff4d198a84a968e2f6b3cf9d04adf3e7d604593be4ed2c"
+  },
+  "stages": [
+    {
+      "stage": "A_MUX0_INPUT",
+      "stage_uptime_s": 1583.27,
+      "capture_window_s": [
+        7,
+        9
+      ],
+      "dc_counts_lr": [
+        -0.34328125,
+        -0.24228125
+      ],
+      "ac_rms_counts_lr": [
+        3.710988983195574,
+        357.6406633494808
+      ],
+      "tone_400hz_peak_counts_lr": [
+        0.05158690951798126,
+        505.77905997687304
+      ]
+    },
+    {
+      "stage": "B_MUX0_OUTPUT_HIGH",
+      "stage_uptime_s": 1588.3,
+      "capture_window_s": [
+        12,
+        14
+      ],
+      "dc_counts_lr": [
+        -0.18325,
+        -0.19684375
+      ],
+      "ac_rms_counts_lr": [
+        3.7436922867004876,
+        357.61734713418156
+      ],
+      "tone_400hz_peak_counts_lr": [
+        0.031762087001872635,
+        505.74606789045254
+      ]
+    },
+    {
+      "stage": "C_MUX3_OUTPUT_HIGH",
+      "stage_uptime_s": 1593.32,
+      "capture_window_s": [
+        17,
+        19
+      ],
+      "dc_counts_lr": [
+        -0.14896875,
+        -0.15375
+      ],
+      "ac_rms_counts_lr": [
+        3.691361816663807,
+        0.6784069114476245
+      ],
+      "tone_400hz_peak_counts_lr": [
+        0.020595793995298654,
+        0.016398446070684233
+      ]
+    },
+    {
+      "stage": "B2_MUX0_OUTPUT_HIGH",
+      "stage_uptime_s": 1598.35,
+      "capture_window_s": [
+        22,
+        24
+      ],
+      "dc_counts_lr": [
+        -0.10628125,
+        -0.4303125
+      ],
+      "ac_rms_counts_lr": [
+        3.6574305250953962,
+        357.61220138740833
+      ],
+      "tone_400hz_peak_counts_lr": [
+        0.018586089259395824,
+        505.7388269336022
+      ]
+    },
+    {
+      "stage": "A2_MUX0_INPUT",
+      "stage_uptime_s": 1603.37,
+      "capture_window_s": [
+        27,
+        29
+      ],
+      "dc_counts_lr": [
+        -0.11021875,
+        -0.1465
+      ],
+      "ac_rms_counts_lr": [
+        3.754498378897915,
+        357.6348906884594
+      ],
+      "tone_400hz_peak_counts_lr": [
+        0.027921464367086014,
+        505.7709171786009
+      ]
+    },
+    {
+      "stage": "D_MUX3_INPUT",
+      "stage_uptime_s": 1608.4,
+      "capture_window_s": [
+        32,
+        34
+      ],
+      "dc_counts_lr": [
+        -0.13325,
+        -0.2861875
+      ],
+      "ac_rms_counts_lr": [
+        3.4163203066313486,
+        357.64788065109116
+      ],
+      "tone_400hz_peak_counts_lr": [
+        0.02300115538112922,
+        505.7890290258919
+      ]
+    }
+  ],
+  "limits": "Uncalibrated analog feedback counts, not volts. LCD disconnected; does not prove reset voltage or display/audio coexistence."
+}
