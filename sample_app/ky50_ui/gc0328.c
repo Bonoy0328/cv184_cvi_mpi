@@ -18,6 +18,7 @@
 #include <string.h>
 #include <stdlib.h>
 static int bus=-1,gpio=-1,clock_up,dev_up,pipe_up,started,channel_up;
+static int capture_dev, shared_clocks;
 static volatile uint32_t *mux;
 static const unsigned offsets[]={0xb8,0xbc,0xf0,0x138,0x13c,0x140,0x144,0x148,
     0x14c,0x150,0x154,0x158,0x15c,0x160,0x164};
@@ -46,7 +47,7 @@ static int receiver_yuyv(void)
      * Use the SDK CIF ioctl to make the actual DMA order match VI/VPSS. */
     int fd=open("/dev/cv184x-mipi-rx",O_RDWR|O_CLOEXEC);
     if(fd<0) return -1;
-    struct bt_fmt_out_s format={.devno=0,.fmt_out=BT_FMT_OUT_YCBYCR};
+    struct bt_fmt_out_s format={.devno=capture_dev,.fmt_out=BT_FMT_OUT_YCBYCR};
     int rc=ioctl(fd,CVI_MIPI_SET_BT_FMT_OUT,&format);
     close(fd);return rc;
 }
@@ -76,20 +77,21 @@ static int board_prepare(void)
     mux[0xf0/4]=(mux[0xf0/4]&~7U)|3;
     return 0;
 }
-int gc0328_start(void)
+static int start(int parallel)
 {
+    capture_dev=parallel?2:0;shared_clocks=parallel;
     const char *wiring=getenv("KY50_DVP_CLOCK_WIRING");
     int swapped=wiring && !strcmp(wiring,"swapped");
     CHECK(board_prepare());
     struct combo_dev_attr_s attr={.input_mode=INPUT_MODE_BT601,.mac_clk=RX_MAC_CLK_400M,
-        .mclk={.cam=0,.freq=CAMPLL_FREQ_24M},.devno=0,
+        .mclk={.cam=0,.freq=CAMPLL_FREQ_24M},.devno=capture_dev,
         /* VI copies active_w/h into its crop, independently of width/height. */
         .img_size={.width=640,.height=480,.max_width=640,.max_height=480,
             .active_w=640,.active_h=480},
         .ttl_attr={.vi=TTL_VI_SRC_VI1,.ttl_fmt=TTL_VSDE_11B,.raw_data_type=RAW_DATA_8BIT,
         .func={6,-1,-1,5,3,8,9,7,1,2,0,4,-1,-1,-1,-1,-1,-1,-1,-1}}};
-    CHECK(CVI_MIPI_SetMipiReset(0,1));
-    CHECK(CVI_MIPI_SetMipiAttr(0,&attr));
+    CHECK(CVI_MIPI_SetMipiReset(capture_dev,1));
+    CHECK(CVI_MIPI_SetMipiAttr(capture_dev,&attr));
     CHECK(receiver_yuyv());
     /* KY50 J7.13 FP-CLK -> module pin 12 IM_MCK; J7.17 FP-PCLK <-
      * module pin 8 IM_PCLK (24-position cable reverses numbering).
@@ -126,33 +128,35 @@ int gc0328_start(void)
         .enScanMode=VI_SCAN_PROGRESSIVE,
         .enInputDataType=VI_DATA_TYPE_YUV,.enDataSeq=VI_DATA_SEQ_YUYV,
         .enWorkMode=VI_WORK_MODE_1Multiplex,.enYuvSceneMode=VI_ISP_YUV_SCENE_BYPASS};
-    VI_DEV_BIND_PIPE_S bind={.u32Num=1,.MipiDev=0};
-    for(int i=0;i<VI_MAX_PIPE_NUM;i++) bind.PipeId[i]=i?-1:0;
-    CHECK(CVI_VI_SetDevAttr(0,&dev));CHECK(CVI_VI_SetDevBindAttr(0,&bind));
-    CHECK(CVI_VI_EnableDev(0));dev_up=1;
+    VI_DEV_BIND_PIPE_S bind={.u32Num=1,.MipiDev=capture_dev};
+    for(int i=0;i<VI_MAX_PIPE_NUM;i++) bind.PipeId[i]=i?-1:capture_dev;
+    CHECK(CVI_VI_SetDevAttr(capture_dev,&dev));CHECK(CVI_VI_SetDevBindAttr(capture_dev,&bind));
+    CHECK(CVI_VI_EnableDev(capture_dev));dev_up=1;
     VI_PIPE_ATTR_S pipe={.u32MaxW=640,.u32MaxH=480,.enPixFmt=PIXEL_FORMAT_RGB_BAYER_12BPP,
         .enBitWidth=DATA_BITWIDTH_12,.stFrameRate={-1,-1},.bNrEn=CVI_TRUE,
         .bYuvBypassPath=CVI_TRUE,.enCompressMode=COMPRESS_MODE_NONE};
-    CHECK(CVI_VI_CreatePipe(0,&pipe));pipe_up=1;
-    CHECK(CVI_VI_StartPipe(0));started=1;
+    CHECK(CVI_VI_CreatePipe(capture_dev,&pipe));pipe_up=1;
+    CHECK(CVI_VI_StartPipe(capture_dev));started=1;
     VI_CHN_ATTR_S channel={.stSize={640,480},.enPixelFormat=PIXEL_FORMAT_YUYV,
         .enDynamicRange=DYNAMIC_RANGE_SDR8,.enVideoFormat=VIDEO_FORMAT_LINEAR,
         .enCompressMode=COMPRESS_MODE_NONE,.u32Depth=2,.u32BindVbPool=(unsigned)-1};
-    CHECK(CVI_VI_SetChnAttr(0,0,&channel));CHECK(CVI_VI_EnableChn(0,0));channel_up=1;
+    CHECK(CVI_VI_SetChnAttr(capture_dev,0,&channel));CHECK(CVI_VI_EnableChn(capture_dev,0));channel_up=1;
     CHECK(reg_write(0xf2,1));CHECK(reg_write(0xf1,7));
     printf("GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped\n");
     return 0;
 }
+int gc0328_start(void) { return start(0); }
+int gc0328_start_parallel(void) { return start(1); }
 void gc0328_stop(void)
 {
-    if(channel_up) CVI_VI_DisableChn(0,0);
+    if(channel_up) CVI_VI_DisableChn(capture_dev,0);
     /* VI needs the final frame boundary to stop; keep PCLK/sync running. */
-    if(started) CVI_VI_StopPipe(0);
-    if(pipe_up) CVI_VI_DestroyPipe(0);
-    if(dev_up) CVI_VI_DisableDev(0);
+    if(started) CVI_VI_StopPipe(capture_dev);
+    if(pipe_up) CVI_VI_DestroyPipe(capture_dev);
+    if(dev_up) CVI_VI_DisableDev(capture_dev);
     if(bus>=0) { reg_write(0xfe,0);reg_write(0xf1,0);reg_write(0xf2,0);close(bus);bus=-1; }
     if(gpio>=0) power_down(1);
-    if(clock_up) CVI_MIPI_SetSensorClock(0,0);
+    if(clock_up&&!shared_clocks) CVI_MIPI_SetSensorClock(0,0);
     if(mux) {
         for(unsigned i=0;i<sizeof(offsets)/sizeof(offsets[0]);i++) mux[offsets[i]/4]=saved[i];
         munmap((void *)mux,4096);mux=NULL;

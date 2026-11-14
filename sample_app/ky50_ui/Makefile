@@ -16,7 +16,7 @@ ARCH_FLAGS := -mcpu=cortex-a53 -mfpu=neon-vfpv4
 BIN := ky50_ui
 SNS := $(SDK)/build/media/SensorSupportList
 SNS_SRC := $(SNS)/gcore_gc2083/gc2083_cmos.c $(SNS)/gcore_gc2083/gc2083_sensor_ctl.c $(SNS)/sensor_i2c/sensor_i2c.c
-APP := ui.c status.c fonts.c input.c main.c palm_queue.c camera_port.c display_port.c scale.c pixels.c settings.c factory.c gc0328.c hand_overlay.c user_ui.c ime.c access.c access_store.c
+APP := ui.c status.c fonts.c input.c main.c palm_queue.c camera_port.c display_port.c scale.c pixels.c settings.c factory.c rtsp_stream.c gc0328.c hand_overlay.c user_ui.c ime.c access.c access_store.c
 CPP_APP := handpose_bridge.cpp
 PVA_SOURCE := $(SDK)/libpva_face
 PVA_LIBS := pva/lib/libpva.a pva/lib/libdeviceCerf.a pva/lib/libsodium.a
@@ -25,9 +25,12 @@ CPPFLAGS += -Ipva/include -I$(PVA_SOURCE)/third_party/nlohmann
 CPPFLAGS += -I$(SDK)/cvi_mpi/include -I$(SDK)/cvi_mpi/include/isp -I$(SNS)/sensor_i2c
 CPPFLAGS += -I$(SDK)/osal/include
 CPPFLAGS += -I$(SDK)/cvi_mpi/self_test/audio_ut/audio_pcm -I$(SDK)/linux_5.10/sound/soc/cvitek
+RTSP_DIR := $(SDK)/ipcamera/components/comps_install/arm-none-linux-musleabihf
+RTSP_LIBS := $(RTSP_DIR)/rtsp/lib/libcomp_rtsp.a $(RTSP_DIR)/ringbuffer/lib/libcomp_ringbuffer.a $(RTSP_DIR)/osal/lib/libcomp_osal.a
+CPPFLAGS += -I$(RTSP_DIR)/rtsp/include
 CPPFLAGS += -DARCH_CV184X
 CPPFLAGS += -I$(SDK)/linux_5.10/build/cv1842hp_wevb_0014a_spinand/arm/usr/include
-LIBS := -static-libstdc++ -static-libgcc -Wl,-Bstatic -L$(SDK)/cvi_mpi/lib -Lpva/lib -Wl,--start-group -lvi -lmipi -lmipi_tx -lsys -lisp -lcvi_bin -lawb -lae -laf -lisp_algo -lvpss -lvo -lgdc -ltinyalsa -lpva -ldeviceCerf -lsodium -Wl,--end-group -Wl,-Bdynamic \
+LIBS := -static-libstdc++ -static-libgcc -Wl,-Bstatic -L$(SDK)/cvi_mpi/lib -Lpva/lib -Wl,--start-group -lvi -lmipi -lmipi_tx -lsys -lisp -lcvi_bin -lawb -lae -laf -lisp_algo -lvpss -lvo -lgdc -ltinyalsa -lpva -ldeviceCerf -lsodium -lvenc $(RTSP_LIBS) -Wl,--end-group -Wl,-Bdynamic \
     -L$(BM_LIB) -lbmrt -lbmlib -lstdc++fs -lpthread -lm -latomic -ldl \
     -Wl,-rpath,/system/lib -Wl,-rpath-link,$(BM_LIB)
 endif
@@ -39,7 +42,7 @@ OBJ := $(addprefix build/$(TARGET)/,$(APP:.c=.o) $(CPP_APP:.cpp=.o) $(LV_SRC:.c=
 SNS_OBJ := $(addprefix build/$(TARGET)/sensor/,$(notdir $(SNS_SRC:.c=.o)))
 .PHONY: all host test kernel clean
 all: $(BIN)
-$(BIN): $(OBJ) $(SNS_OBJ) $(PVA_LIBS)
+$(BIN): $(OBJ) $(SNS_OBJ) $(PVA_LIBS) $(RTSP_LIBS)
 	$(LINK) -Wl,--gc-sections $(OBJ) $(SNS_OBJ) $(LIBS) -o $@
 build/$(TARGET)/%.o: %.c lv_conf.h Makefile
 	@mkdir -p $(@D)
@@ -98,6 +101,9 @@ package: all kernel pixel_check access_inspect
 	cp kernel/ky50_i2c1.ko kernel/ky50_touch.ko kernel/ky50_relay.ko kernel/ky50_lights.ko kernel/ky50_amp.ko run.sh stop.sh boot.sh install-local.sh pixel_check tools/soak.sh build/deploy/
 	cp README.md DEVELOPMENT.md THIRD_PARTY.md USER_DATABASE.md access_inspect build/deploy/
 	cp tools/make_pinyin.py tools/access_inspect.c build/deploy/tools/
+	cp tools/check_rtsp.py tools/rtsp_check.c build/deploy/tools/
+	mkdir -p build/deploy/evidence/rtsp
+	cp evidence/rtsp/* build/deploy/evidence/rtsp/
 	cp evidence/pva/VALIDATION.md build/deploy/evidence/pva/
 	cp evidence/access/VALIDATION.md build/deploy/evidence/access/
 	cp evidence/performance/VALIDATION.md evidence/performance/summary.json build/deploy/evidence/performance/
@@ -157,3 +163,7 @@ calibration-test:
 	mkdir -p build/tests
 	gcc -I. -Ipva/include -Ivendor/sqlite -std=gnu11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer tools/face_ir_calibration_test.c face_ir_calibration.c biometric_worker.c -lm -lpthread -o build/tests/face_ir_calibration_test
 	./build/tests/face_ir_calibration_test
+
+rtsp_check: tools/rtsp_check.c build/board/camera_port.o build/board/gc0328.o build/board/rtsp_stream.o $(SNS_OBJ) $(RTSP_LIBS)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -Werror -c tools/rtsp_check.c -o build/board/rtsp_check.o
+	$(LINK) build/board/rtsp_check.o build/board/camera_port.o build/board/gc0328.o build/board/rtsp_stream.o $(SNS_OBJ) $(LIBS) -o $@

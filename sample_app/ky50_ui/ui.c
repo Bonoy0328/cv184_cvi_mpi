@@ -27,6 +27,8 @@ static lv_obj_t *parameter_cards[3],*parameter_title[3],*parameter_hint[3],*para
 static int parameter_loaded[3],parameter_waiting[3],parameter_dirty[3],parameter_page;
 static unsigned parameter_sequence[3];
 static enum ui_action pending_action;
+static lv_obj_t *rtsp_button,*rtsp_title;
+static int rtsp_state;
 static char factory_text[160]="请选择测试项目",source_name[8]="RGB";
 static unsigned screen_color;
 static const uint32_t test_colors[]={0xff0000,0x00ff00,0x0000ff,0xffffff,0x000000,0x808080};
@@ -277,6 +279,14 @@ void ui_factory_lights(int white,int infrared)
         lv_obj_set_style_border_color(light_buttons[i],lv_color_hex(state>0?ACCENT:0x36506a),0);
     }
 }
+void ui_factory_rtsp(int state)
+{
+    rtsp_state=state;
+    if(!rtsp_button)return;
+    lv_label_set_text(rtsp_title,state==2?"关闭RTSP":state==1?"正在开启":state==3?"正在关闭":"开启RTSP");
+    lv_obj_set_state(rtsp_button,LV_STATE_DISABLED,state==1||state==3);
+    lv_obj_set_style_border_color(rtsp_button,lv_color_hex(state==2?ACCENT:0x36506a),0);
+}
 void ui_set_source(const char *name)
 {
     snprintf(source_name,sizeof(source_name),"%s",name);
@@ -292,8 +302,8 @@ static void factory_action(lv_event_t *e)
     if(id==0) { screen_color=0;ui_show(UI_SCREEN_TEST,0);return; }
     static const enum ui_action actions[]={UI_ACTION_NONE,UI_ACTION_RGB,UI_ACTION_IR,
         UI_ACTION_DVP,UI_ACTION_RELAY,UI_ACTION_NONE,UI_ACTION_NONE,UI_ACTION_WHITE_LIGHT,
-        UI_ACTION_IR_LIGHT,UI_ACTION_SPEAKER,UI_ACTION_NONE,UI_ACTION_NONE,UI_ACTION_NONE,UI_ACTION_FACE_IR_CALIBRATE};
-    if(id<0||id>=14) return;
+        UI_ACTION_IR_LIGHT,UI_ACTION_SPEAKER,UI_ACTION_NONE,UI_ACTION_NONE,UI_ACTION_NONE,UI_ACTION_FACE_IR_CALIBRATE,UI_ACTION_RTSP};
+    if(id<0||id>=15) return;
     if(!actions[id]) { ui_factory_status("此项目暂未实现");return; }
     if(!pending_action) { pending_action=actions[id];ui_factory_status("正在处理，请稍候"); }
 }
@@ -317,6 +327,7 @@ void ui_show(enum ui_page next,int feature)
     user_ui_before_page(next);
     if(toast_timer) { lv_timer_delete(toast_timer);toast_timer=NULL; }
     link_label=clock_label=camera_label=input_label=toast=touch_label=factory_label=source_label=NULL;
+    rtsp_button=rtsp_title=NULL;
     calibration_label=calibration_progress=NULL;calibration_text[0]=0;calibration_count=-1;
     memset(light_buttons,0,sizeof(light_buttons));
     memset(light_titles,0,sizeof(light_titles));
@@ -402,7 +413,10 @@ void ui_show(enum ui_page next,int feature)
         parameters_page();
     } else if(page==UI_FACTORY) {
         heading("工厂测试",UI_ADVANCED);
-        source_label=label(root,"",24,153,432,&ky50_font_20,ACCENT);
+        source_label=label(root,"",24,153,220,&ky50_font_20,ACCENT);
+        rtsp_button=button(root,254,142,202,42,factory_action,14);
+        rtsp_title=label(rtsp_button,"",12,5,178,&ky50_font_20,TEXT);
+        ui_factory_rtsp(rtsp_state);
         lv_label_set_text_fmt(source_label,"当前显示：%s",source_name);
         factory_label=label(root,factory_text,24,187,432,&ky50_font_20,TEXT);
         static const char *titles[]={"屏幕测试模式","RGB显示","IR显示","DVP显示",

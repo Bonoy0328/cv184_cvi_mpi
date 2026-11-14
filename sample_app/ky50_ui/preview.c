@@ -82,6 +82,23 @@ static void lights_check(const char *dir)
     ui_factory_lights(0,0);
     puts("PASS factory light touch: independent actions, result-driven states, page return, unavailable retry");
 }
+static void rtsp_check(const char *dir)
+{
+    ui_show(UI_FACTORY,0);ui_factory_rtsp(0);step();
+    assert(find_label(lv_screen_active(),"开启RTSP"));
+    tap(352,163);assert(ui_take_action()==UI_ACTION_RTSP);
+    assert(find_label(lv_screen_active(),"开启RTSP"));
+    ui_factory_rtsp(1);step();tap(352,163);assert(ui_take_action()==UI_ACTION_NONE);
+    ui_factory_rtsp(2);ui_factory_status("RTSP已开启：8554 /rgb /ir /dvp");step();save(dir,"factory-rtsp-on");
+    assert(find_label(lv_screen_active(),"关闭RTSP"));
+    ui_show(UI_CAMERA_PREVIEW,0);step();tap(45,35);
+    assert(find_label(lv_screen_active(),"关闭RTSP"));
+    tap(352,163);assert(ui_take_action()==UI_ACTION_RTSP);
+    ui_factory_rtsp(3);step();tap(352,163);assert(ui_take_action()==UI_ACTION_NONE);
+    ui_factory_rtsp(-1);step();tap(352,163);assert(ui_take_action()==UI_ACTION_RTSP);
+    ui_factory_rtsp(0);step();save(dir,"factory-rtsp-off");
+    puts("PASS RTSP touch: result-driven state, busy suppression, return, stop and failure retry");
+}
 static void clean_preview_check(const char *dir)
 {
     ui_show(UI_HOME,0);step();ui_render();
@@ -127,7 +144,7 @@ int main(int argc,char **argv)
             snprintf(calibration.message,sizeof(calibration.message),"正在采集，请保持常用距离并缓慢小幅移动");
             ui_face_ir_calibration_status(&calibration);step();save(dir,"face-ir-calibration");
             tap(42,35);assert(ui_current_page()==UI_FACTORY);
-            lights_check(dir);
+            lights_check(dir);rtsp_check(dir);
             tap(120,266);assert(ui_current_page()==UI_SCREEN_TEST);
             const unsigned colors[]={0xffff0000,0xff00ff00,0xff0000ff,0xffffffff,0xff000000,0xff808080};
             for(unsigned c=0;c<6;c++) {

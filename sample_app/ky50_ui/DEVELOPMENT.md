@@ -355,3 +355,17 @@ cat /mnt/system/ky50-data/app.conf
 `SIGUSR1` 会触发实际画面及配对算法输入转储，不是纯文本状态查询；普通参数和性能排查优先用统计日志。需要图像诊断时明确采集范围，避免把现场生物特征输入混入通用交付包。
 
 每次功能交付应留下：具体改动、验证命令与结果、实际运行ELF/库/模型身份、现场确认内容，以及未覆盖的边界。补充到对应 `evidence/`，同步本指南的当前状态和配置说明；历史验收记录保留原日期，不把旧阶段的20帧规则、只支持掌静脉或单模态帧率当成当前结论。
+
+## 12. 三路 RTSP（2026-11-14）
+
+工厂页 `UI_ACTION_RTSP` 只投递请求；采集线程串行处理媒体生命周期、失败恢复与三路健康检查。界面状态由实际结果回传，处理中禁用按钮，离页后保留服务状态。默认关闭，开关不写配置；`--rtsp` 仅用于启动诊断。
+
+`camera_port.c` 的 `media_camera_start_mode(source,1)` 保留 IR pipe0 / RGB pipe1，并通过 `gc0328_start_parallel()` 把 DVP 接到 MAC2/dev2/pipe2。DVP仍使用TTL VI1输入和已经确认的swapped时钟接线。关闭后恢复原双摄/独占DVP路径。SDK关闭SensorClock会影响共享时钟，因此并行DVP退出不单独关闭MCLK，由双摄生命周期最后处理。
+
+`rtsp_stream.c` 使用VPSS group4/5/6，各2个私有块，将RGB/IR NV21和DVP YUYV转换为VENC要求的NV12。屏幕预览始终开启，不提供关闭预览按钮。仅RTSP模式将预览/算法缩放的池缩至2块、深度1，关闭RTSP后恢复原缓冲；这样给约102 MiB的ION池留出编码和识别空间。VENC ch0/1/2分别服务rgb/ir/dvp；RGB/IR为960×540、2 Mbps，DVP为640×480、768 Kbps，H.264 Baseline、15 fps、GOP15。显式设置RC的首帧QP、I/P范围与I帧比例；本板只设置CreateChn码率属性时出现过超大码流。
+
+VI取帧/归还始终由原采集线程执行，流不复用屏幕RGB缓存。编码输出和网络发送位于独立线程，最多2个待取编码帧；停止顺序为网络/编码、RTSP专用VPSS池、预览缩放、相机。不要在无提交帧时轮询本BSP的VENC QueryStatus，否则会阻塞后续提交。网络断开忽略SIGPIPE，由服务自身关闭连接；无客户端时仅准备SDP首帧，避免填满网络环形缓冲。
+
+RTSP依赖SDK `ipcamera/components/comps_install/arm-none-linux-musleabihf/{rtsp,ringbuffer,osal}`静态库及对应头文件，不使用旧 `cvi_rtsp/libcvi_rtsp.a`。依赖路径与哈希记录在验证材料中。流为原方向、无UI/识别框、无音频。RGB/IR算法来源和原有叠框防抖不变；本机DVP预览仍按原规则暂停识别业务。
+
+`make rtsp_check`生成独立三摄诊断工具；运行前必须正常停止主应用并独占媒体锁，不指向人员库。`tools/check_rtsp.py`同时解码三路并检查帧数和解码错误，按README调用。开关、带客户端关闭、再次开启、本机三源切换和正常stop/start都要上板验证；图像方向、现场变化和实际手指操作需要现场确认。不要把NFS运行记录写成固件或开机自启交付。

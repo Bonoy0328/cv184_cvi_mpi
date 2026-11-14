@@ -2,6 +2,7 @@
 #include "ui.h"
 #include "input.h"
 #include "factory.h"
+#include "rtsp_stream.h"
 #include "relay_control.h"
 #include "hand_overlay.h"
 #include "access.h"
@@ -22,6 +23,8 @@ static volatile sig_atomic_t quit;
 static volatile sig_atomic_t snapshot_requested,page_test_requested;
 static atomic_int worker_stop;
 static atomic_int source_request,source_current,source_busy,source_result;
+static atomic_int rtsp_request=-1,rtsp_state;
+static int rtsp_mode; /* capture thread only */
 static const char *settings_dir="/mnt/cfg/ky50-ui";
 static const char *pva_config="pva/pvaConf.json";
 static const char *user_data_dir="/mnt/system/ky50-data";
@@ -275,6 +278,7 @@ static int capture_rgb(enum camera_source source,unsigned char *rgb,unsigned cha
     int rc=media_camera_get(&f);
     if(rc){atomic_store(&detection_gap,1);hide_overlay();return rc;}
     uint64_t captured_ms=ui_monotonic_ms();
+    if(rtsp_mode)rtsp_stream_send(source,&f);
     if(source==CAMERA_IR)pair.ir_pts_us=f.stVFrame.u64PTS;
     else if(source==CAMERA_RGB)pair.rgb_pts_us=f.stVFrame.u64PTS;
     if(source==CAMERA_IR&&atomic_load(&hand_ready))media_ir_sample(&f,&ir_sample);
@@ -287,24 +291,34 @@ static int capture_rgb(enum camera_source source,unsigned char *rgb,unsigned cha
         have_face=media_rgb_half_frame(&f,face_nv12)==0;
     if(media_camera_release(&f))rc=-1;
     if(rc){atomic_store(&detection_gap,1);hide_overlay();return rc;}
-    if(source==CAMERA_RGB&&atomic_load(&hand_ready)) {
+    if(source==CAMERA_RGB&&(atomic_load(&hand_ready)||rtsp_mode)) {
         memset(&f,0,sizeof(f));int ir_rc=media_camera_get_ir(&f);
         if(!ir_rc) {
             pair.ir_pts_us=f.stVFrame.u64PTS;
-            media_ir_sample(&f,&ir_sample);
-            ir_rc=media_ir_half_frame(&f,ir_yuv);
+            if(rtsp_mode)rtsp_stream_send(CAMERA_IR,&f);
+            if(atomic_load(&hand_ready)) {
+                media_ir_sample(&f,&ir_sample);
+                ir_rc=media_ir_half_frame(&f,ir_yuv);
+            }
             if(media_camera_release_ir(&f))ir_rc=-1;
         }
-        have_ir=!ir_rc;
+        have_ir=atomic_load(&hand_ready)&&!ir_rc;
     }
-    if(source==CAMERA_IR&&atomic_load(&hand_ready)&&face_enabled) {
+    if(source==CAMERA_IR&&((atomic_load(&hand_ready)&&face_enabled)||rtsp_mode)) {
         memset(&f,0,sizeof(f));int face_rc=media_camera_get_rgb(&f);
         if(!face_rc) {
             pair.rgb_pts_us=f.stVFrame.u64PTS;
-            face_rc=media_rgb_half_frame(&f,face_nv12);
+            if(rtsp_mode)rtsp_stream_send(CAMERA_RGB,&f);
+            if(atomic_load(&hand_ready)&&face_enabled)face_rc=media_rgb_half_frame(&f,face_nv12);
             if(media_camera_release_rgb(&f))face_rc=-1;
         }
-        have_face=!face_rc;
+        have_face=atomic_load(&hand_ready)&&face_enabled&&!face_rc;
+    }
+    if(rtsp_mode) {
+        if(source==CAMERA_DVP) {
+            if(!media_camera_get_rgb(&f)){rtsp_stream_send(CAMERA_RGB,&f);media_camera_release_rgb(&f);}
+            if(!media_camera_get_ir(&f)){rtsp_stream_send(CAMERA_IR,&f);media_camera_release_ir(&f);}
+        } else if(!media_camera_get_dvp(&f)){rtsp_stream_send(CAMERA_DVP,&f);media_camera_release_dvp(&f);}
     }
     perf_add(&cap_perf[2],monotonic_us()-tick);
     if(atomic_load(&hand_ready)&&source!=CAMERA_DVP&&!have_ir) {
@@ -331,9 +345,10 @@ static void publish_frame(const unsigned char *rgb)
 }
 static int start_source(enum camera_source source,unsigned char *rgb,unsigned char *ir_yuv,unsigned char *face_nv12)
 {
-    int init=media_camera_start(source);
+    int init=media_camera_start_mode(source,rtsp_mode);
     if(init) return init;
-    if(media_scale_start(source)) return -1;
+    if(media_scale_start_mode(source,rtsp_mode)) return -1;
+    if(rtsp_mode&&rtsp_stream_start())return -1;
     uint64_t deadline=ui_monotonic_ms()+3000;
     while(!atomic_load(&worker_stop)&&ui_monotonic_ms()<deadline) {
         if(!capture_rgb(source,rgb,ir_yuv,face_nv12)) return 0;
@@ -350,7 +365,7 @@ static void invalidate_algorithm_input(void)
 static void stop_source(void)
 {
     pthread_mutex_lock(&algorithm_lock);invalidate_algorithm_input();
-    media_scale_stop();media_camera_stop();access_exposure_reset();
+    rtsp_stream_stop();media_scale_stop();media_camera_stop();access_exposure_reset();
     pthread_mutex_unlock(&algorithm_lock);
 }
 static void *capture_worker(void *unused)
@@ -374,18 +389,28 @@ static void *capture_worker(void *unused)
     uint64_t capture_log=ui_monotonic_ms()+5000;
     while(!atomic_load(&worker_stop)) {
         int target=atomic_exchange(&source_request,-1);
+        int stream_change=atomic_exchange(&rtsp_request,-1);
+        if(stream_change>=0) {
+            rtsp_mode=stream_change;
+            if(target<0)target=current<0?CAMERA_RGB:current;
+            target|=0x100;
+        }
         if(target>=0) {
             int transient=target&0x100;target&=0xff;
             int previous=current,boot=!attempted,rc,result;
             atomic_store(&source_busy,1);
-            int select_only=attempted&&current>=0&&current!=CAMERA_DVP&&target!=CAMERA_DVP;
+            int select_only=stream_change<0&&attempted&&current>=0&&(rtsp_mode||(current!=CAMERA_DVP&&target!=CAMERA_DVP));
             if(attempted&&!select_only) stop_source();
             attempted=1;
             printf("SOURCE switching %s -> %s\n",previous<0?"none":camera_source_name(previous),camera_source_name(target));
             pthread_mutex_lock(&video_lock);video_ms=0;pthread_mutex_unlock(&video_lock);
             if(select_only) {
                 pthread_mutex_lock(&algorithm_lock);invalidate_algorithm_input();
-                rc=media_camera_select_preview(target);pthread_mutex_unlock(&algorithm_lock);
+                rc=media_camera_select_preview(target);
+                if(!rc&&((current==CAMERA_DVP)!=(target==CAMERA_DVP))) {
+                    media_scale_stop();rc=media_scale_start_mode(target,rtsp_mode);
+                }
+                pthread_mutex_unlock(&algorithm_lock);
                 if(!rc)rc=capture_rgb(target,rgb,ir_yuv,face_nv12);
             } else rc=start_source(target,rgb,ir_yuv,face_nv12);
             if(!rc) {
@@ -394,10 +419,17 @@ static void *capture_worker(void *unused)
                 result=rc?2:1;
             } else {
                 if(!select_only)stop_source();
+                if(stream_change>=0) {rtsp_mode=0;atomic_store(&rtsp_state,-1);}
                 current=-1;
                 int fallback=previous<0?CAMERA_RGB:previous;
-                if(target!=fallback || previous>=0) {
-                    int restored=select_only?media_camera_select_preview(fallback):start_source(fallback,rgb,ir_yuv,face_nv12);
+                if(target!=fallback || previous>=0 || stream_change>=0) {
+                    int restored;
+                    if(select_only) {
+                        restored=media_camera_select_preview(fallback);
+                        if(!restored&&((target==CAMERA_DVP)!=(fallback==CAMERA_DVP))) {
+                            media_scale_stop();restored=media_scale_start_mode(fallback,rtsp_mode);
+                        }
+                    } else restored=start_source(fallback,rgb,ir_yuv,face_nv12);
                     if(select_only&&!restored)restored=capture_rgb(fallback,rgb,ir_yuv,face_nv12);
                     if(!restored) { current=fallback;publish_frame(rgb); }
                     else stop_source();
@@ -405,8 +437,18 @@ static void *capture_worker(void *unused)
                 result=current<0?4:rc==-2?5:3;
             }
             atomic_store(&source_current,current);atomic_store(&source_busy,0);
-            atomic_store(&source_result,result);
+            if(stream_change<0)atomic_store(&source_result,result);
+            else if(result==1)atomic_store(&rtsp_state,rtsp_mode?1:0);
             failures=0;
+        }
+        if(rtsp_mode&&current>=0) {
+            int health=rtsp_stream_health();
+            if(health<0) {
+                fprintf(stderr,"RTSP one or more streams stalled; stopping and restoring camera mode\n");
+                stop_source();rtsp_mode=0;
+                if(start_source(current,rgb,ir_yuv,face_nv12)){stop_source();current=-1;}
+                atomic_store(&source_current,current);atomic_store(&rtsp_state,-1);
+            } else if(health>0)atomic_store(&rtsp_state,2);
         }
         if(current<0) { usleep(10000);continue; }
         int rc=capture_rgb(current,rgb,ir_yuv,face_nv12);
@@ -434,6 +476,7 @@ int main(int argc,char **argv)
     for(int i=1;i<argc;i++) {
         if(!strcmp(argv[i],"--touch-test")) test=1;
         else if(!strcmp(argv[i],"--no-handpose")) hand_enabled=0;
+        else if(!strcmp(argv[i],"--rtsp")){atomic_store(&rtsp_request,1);atomic_store(&rtsp_state,1);}
         else if(!strcmp(argv[i],"--pva-config")&&i+1<argc) pva_config=argv[++i];
         else if(!strcmp(argv[i],"--data-dir")&&i+1<argc) user_data_dir=argv[++i];
         else if(!strcmp(argv[i],"--event")&&i+1<argc) event=argv[++i];
@@ -444,7 +487,7 @@ int main(int argc,char **argv)
         }
         else if(!strcmp(argv[i],"--config-dir")&&i+1<argc) settings_dir=argv[++i];
         else if(!strcmp(argv[i],"--seconds")&&i+1<argc) duration=strtoul(argv[++i],NULL,10);
-        else { fprintf(stderr,"Usage: %s [--event /dev/input/eventN] [--touch-test] [--seconds N] [--source RGB|IR|DVP] [--config-dir DIR] [--data-dir DIR] [--pva-config FILE] [--no-handpose]\n",argv[0]);return 2; }
+        else { fprintf(stderr,"Usage: %s [--event /dev/input/eventN] [--touch-test] [--seconds N] [--source RGB|IR|DVP] [--config-dir DIR] [--data-dir DIR] [--pva-config FILE] [--no-handpose] [--rtsp]\n",argv[0]);return 2; }
     }
     setvbuf(stdout,NULL,_IOLBF,0);
     trace_stall=getenv("KY50_TRACE_STALL")!=NULL;
@@ -545,6 +588,13 @@ int main(int argc,char **argv)
                     ui_factory_status("正在切换，请稍候");
                 }
             }
+        } else if(action==UI_ACTION_RTSP) {
+            int state=atomic_load(&rtsp_state);
+            if(atomic_load(&source_busy)||state==1||state==3)ui_factory_status("正在处理，请稍候");
+            else {
+                atomic_store(&rtsp_state,state==2?3:1);
+                atomic_store(&rtsp_request,state==2?0:1);
+            }
         } else if(action==UI_ACTION_FACE_IR_CALIBRATE) {
             if(atomic_load(&source_busy)||!atomic_load(&hand_ready)||!face_enabled)
                 ui_factory_status("人脸或摄像头尚未就绪");
@@ -566,6 +616,16 @@ int main(int argc,char **argv)
             if(on<0) ui_factory_status("灯控设备不可用或操作失败");
             else if(light==FACTORY_LIGHT_IR) ui_factory_status(on?"红外灯已开启":"红外灯已关闭");
             else ui_factory_status(on?"白光灯已开启":"白光灯已关闭");
+        }
+        static int shown_rtsp=-2;
+        int stream_state=atomic_load(&rtsp_state);
+        if(shown_rtsp!=stream_state) {
+            ui_factory_rtsp(stream_state);
+            if(stream_state==2)ui_factory_status("RTSP已开启：8554 /rgb /ir /dvp");
+            else if(stream_state<0)ui_factory_status("RTSP失败，请检查相机与网络");
+            else if(stream_state==1||stream_state==3)ui_factory_status("RTSP正在处理，请稍候");
+            else if(shown_rtsp!=-2)ui_factory_status("RTSP已关闭");
+            shown_rtsp=stream_state;
         }
         int result=atomic_exchange(&source_result,0);
         if(result) {

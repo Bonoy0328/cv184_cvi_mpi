@@ -1,0 +1,143 @@
+SOURCE switching none -> RGB
+ROTATION_PIPELINE algorithm_and_preview_rotation=GDC CCW90 preview_csc=VPSS RGB888
+PREVIEW_CSC hardware VPSS RGB888 input=512x896 crop=2,4 480x854
+STATS elapsed=5 capture_fps=17.78 display_fps=18.18 frames=89 page=0 eth=1
+STATS elapsed=10 capture_fps=24.39 display_fps=24.59 frames=211 page=0 eth=1
+STATS elapsed=15 capture_fps=24.32 display_fps=24.52 frames=333 page=0 eth=1
+SOURCE switching RGB -> RGB
+ROTATION_PIPELINE algorithm_and_preview_rotation=GDC CCW90 preview_csc=VPSS RGB888
+RTSP started port=8554 paths=rgb,ir,dvp H264 native orientation, no UI; three concurrent clients
+RTSP first encoded frame rgb
+PREVIEW_CSC hardware VPSS RGB888 input=512x896 crop=2,4 480x854
+RTSP first encoded frame ir
+RTSP first encoded frame dvp
+STATS elapsed=20 capture_fps=14.79 display_fps=13.39 frames=407 page=6 eth=1
+STATS elapsed=25 capture_fps=15.00 display_fps=15.00 frames=482 page=6 eth=1
+STATS elapsed=30 capture_fps=14.93 display_fps=15.12 frames=557 page=6 eth=1
+STATS elapsed=35 capture_fps=14.99 display_fps=14.99 frames=632 page=6 eth=1
+RTSP client ir event=0 active=1
+RTSP client rgb event=0 active=1
+RTSP client dvp event=0 active=1
+STATS elapsed=40 capture_fps=14.99 display_fps=14.99 frames=707 page=6 eth=1
+STATS elapsed=45 capture_fps=15.00 display_fps=15.00 frames=782 page=6 eth=1
+STATS elapsed=50 capture_fps=14.99 display_fps=14.99 frames=857 page=6 eth=1
+STATS elapsed=55 capture_fps=15.00 display_fps=15.00 frames=932 page=6 eth=1
+STATS elapsed=60 capture_fps=14.99 display_fps=14.99 frames=1007 page=6 eth=1
+STATS elapsed=65 capture_fps=15.00 display_fps=15.00 frames=1082 page=6 eth=1
+RTSP client rgb event=1 active=0
+RTSP client ir event=1 active=0
+RTSP client dvp event=1 active=0
+STATS elapsed=70 capture_fps=14.99 display_fps=14.99 frames=1157 page=6 eth=1
+STATS elapsed=75 capture_fps=15.19 display_fps=15.19 frames=1233 page=6 eth=1
+STATS elapsed=80 capture_fps=15.00 display_fps=14.80 frames=1308 page=6 eth=1
+STATS elapsed=85 capture_fps=14.99 display_fps=14.99 frames=1383 page=6 eth=1
+STATS elapsed=90 capture_fps=14.99 display_fps=15.19 frames=1458 page=6 eth=1
+STATS elapsed=95 capture_fps=14.99 display_fps=14.79 frames=1533 page=6 eth=1
+RTSP client rgb event=0 active=1
+STATS elapsed=100 capture_fps=15.00 display_fps=15.00 frames=1608 page=6 eth=1
+RTSP client rgb event=1 active=0
+RTSP stopped rgb sent=1270 encoded=1270 dropped=0 network_dropped=0
+RTSP stopped ir sent=1270 encoded=1270 dropped=0 network_dropped=0
+RTSP stopped dvp sent=1270 encoded=1270 dropped=0 network_dropped=0
+STATS elapsed=105 capture_fps=11.97 display_fps=12.57 frames=1668 page=6 eth=1
+SOURCE switching RGB -> RGB
+ROTATION_PIPELINE algorithm_and_preview_rotation=GDC CCW90 preview_csc=VPSS RGB888
+PREVIEW_CSC hardware VPSS RGB888 input=512x896 crop=2,4 480x854
+STATS elapsed=110 capture_fps=15.59 display_fps=15.59 frames=1746 page=6 eth=1
+STATS elapsed=115 capture_fps=24.60 display_fps=24.40 frames=1869 page=6 eth=1
+STATS elapsed=120 capture_fps=24.20 display_fps=24.20 frames=1990 page=6 eth=1
+STATS elapsed=125 capture_fps=24.24 display_fps=24.05 frames=2112 page=6 eth=1
+STATS elapsed=130 capture_fps=23.79 display_fps=23.59 frames=2231 page=6 eth=1
+SOURCE switching RGB -> RGB
+ROTATION_PIPELINE algorithm_and_preview_rotation=GDC CCW90 preview_csc=VPSS RGB888
+RTSP started port=8554 paths=rgb,ir,dvp H264 native orientation, no UI; three concurrent clients
+RTSP first encoded frame rgb
+PREVIEW_CSC hardware VPSS RGB888 input=512x896 crop=2,4 480x854
+RTSP first encoded frame ir
+RTSP first encoded frame dvp
+STATS elapsed=135 capture_fps=14.59 display_fps=14.79 frames=2304 page=6 eth=1
+STATS elapsed=140 capture_fps=15.00 display_fps=15.00 frames=2379 page=6 eth=1
+STATS elapsed=145 capture_fps=14.94 display_fps=15.14 frames=2454 page=6 eth=1
+STATS elapsed=150 capture_fps=14.99 display_fps=14.99 frames=2529 page=6 eth=1
+STATS elapsed=155 capture_fps=14.99 display_fps=14.99 frames=2604 page=6 eth=1
+STATS elapsed=160 capture_fps=15.00 display_fps=15.00 frames=2679 page=6 eth=1
+STATS elapsed=165 capture_fps=14.99 display_fps=14.99 frames=2754 page=6 eth=1
+STATS elapsed=170 capture_fps=15.00 display_fps=15.00 frames=2829 page=6 eth=1
+STATS elapsed=175 capture_fps=14.99 display_fps=14.99 frames=2904 page=6 eth=1
+STATS elapsed=180 capture_fps=15.17 display_fps=15.17 frames=2980 page=6 eth=1
+STATS elapsed=185 capture_fps=15.00 display_fps=14.80 frames=3055 page=6 eth=1
+STATS elapsed=190 capture_fps=14.99 display_fps=15.19 frames=3130 page=6 eth=1
+RTSP client rgb event=0 active=1
+RTSP client ir event=0 active=1
+RTSP client dvp event=0 active=1
+STATS elapsed=195 capture_fps=14.99 display_fps=14.99 frames=3205 page=6 eth=1
+STATS elapsed=200 capture_fps=14.99 display_fps=14.99 frames=3280 page=6 eth=1
+STATS elapsed=205 capture_fps=14.95 display_fps=14.95 frames=3355 page=6 eth=1
+STATS elapsed=210 capture_fps=15.00 display_fps=15.00 frames=3430 page=6 eth=1
+STATS elapsed=215 capture_fps=15.13 display_fps=15.13 frames=3506 page=6 eth=1
+STATS elapsed=220 capture_fps=14.98 display_fps=14.98 frames=3581 page=6 eth=1
+STATS elapsed=225 capture_fps=14.99 display_fps=14.99 frames=3656 page=6 eth=1
+STATS elapsed=230 capture_fps=14.99 display_fps=14.99 frames=3731 page=6 eth=1
+SOURCE switching RGB -> DVP
+ROTATION_PIPELINE algorithm_and_preview_rotation=software CCW90 preview_csc=software
+STATS elapsed=235 capture_fps=18.58 display_fps=18.58 frames=3824 page=8 eth=1
+STATS elapsed=240 capture_fps=19.94 display_fps=18.74 frames=3924 page=8 eth=1
+STATS elapsed=245 capture_fps=19.99 display_fps=19.39 frames=4024 page=8 eth=1
+STATS elapsed=250 capture_fps=20.12 display_fps=19.12 frames=4125 page=8 eth=1
+RTSP client rgb event=1 active=0
+RTSP client ir event=1 active=0
+RTSP client dvp event=1 active=0
+STATS elapsed=255 capture_fps=19.95 display_fps=17.75 frames=4225 page=8 eth=1
+STATS elapsed=260 capture_fps=19.99 display_fps=17.59 frames=4325 page=8 eth=1
+STATS elapsed=265 capture_fps=19.99 display_fps=19.19 frames=4425 page=8 eth=1
+STATS elapsed=270 capture_fps=19.96 display_fps=19.17 frames=4525 page=8 eth=1
+RTSP stopped rgb sent=2111 encoded=2111 dropped=0 network_dropped=0
+RTSP stopped ir sent=2111 encoded=2111 dropped=0 network_dropped=0
+STATS elapsed=275 capture_fps=19.00 display_fps=17.40 frames=4620 page=6 eth=1
+RTSP stopped dvp sent=2110 encoded=2110 dropped=0 network_dropped=0
+SOURCE switching DVP -> DVP
+ROTATION_PIPELINE algorithm_and_preview_rotation=software CCW90 preview_csc=software
+STATS elapsed=280 capture_fps=10.80 display_fps=11.00 frames=4674 page=6 eth=1
+STATS elapsed=285 capture_fps=19.98 display_fps=19.98 frames=4774 page=6 eth=1
+STATS elapsed=290 capture_fps=20.00 display_fps=20.00 frames=4874 page=6 eth=1
+STATS elapsed=295 capture_fps=20.00 display_fps=20.00 frames=4974 page=6 eth=1
+STATS elapsed=300 capture_fps=19.99 display_fps=19.99 frames=5074 page=6 eth=1
+SOURCE switching DVP -> DVP
+ROTATION_PIPELINE algorithm_and_preview_rotation=software CCW90 preview_csc=software
+RTSP started port=8554 paths=rgb,ir,dvp H264 native orientation, no UI; three concurrent clients
+RTSP first encoded frame dvp
+RTSP first encoded frame rgb
+RTSP first encoded frame ir
+STATS elapsed=305 capture_fps=18.20 display_fps=18.00 frames=5165 page=6 eth=1
+RTSP client ir event=0 active=1
+RTSP client rgb event=0 active=1
+RTSP client dvp event=0 active=1
+STATS elapsed=310 capture_fps=19.99 display_fps=16.79 frames=5265 page=6 eth=1
+STATS elapsed=315 capture_fps=19.98 display_fps=16.39 frames=5365 page=6 eth=1
+RTSP client rgb event=1 active=0
+RTSP client ir event=1 active=0
+RTSP client dvp event=1 active=0
+STATS elapsed=320 capture_fps=19.99 display_fps=16.19 frames=5465 page=6 eth=1
+STATS elapsed=325 capture_fps=19.99 display_fps=17.39 frames=5565 page=6 eth=1
+STATS elapsed=330 capture_fps=20.00 display_fps=18.60 frames=5665 page=6 eth=1
+STATS elapsed=335 capture_fps=19.99 display_fps=19.19 frames=5765 page=6 eth=1
+STATS elapsed=340 capture_fps=20.00 display_fps=18.00 frames=5865 page=6 eth=1
+SOURCE switching DVP -> RGB
+ROTATION_PIPELINE algorithm_and_preview_rotation=GDC CCW90 preview_csc=VPSS RGB888
+PREVIEW_CSC hardware VPSS RGB888 input=512x896 crop=2,4 480x854
+STATS elapsed=345 capture_fps=15.79 display_fps=15.79 frames=5944 page=8 eth=1
+STATS elapsed=350 capture_fps=15.03 display_fps=14.84 frames=6021 page=6 eth=1
+STATS elapsed=355 capture_fps=15.00 display_fps=15.00 frames=6096 page=6 eth=1
+STATS elapsed=360 capture_fps=14.95 display_fps=14.95 frames=6171 page=6 eth=1
+STATS elapsed=365 capture_fps=15.00 display_fps=15.00 frames=6246 page=6 eth=1
+STATS elapsed=370 capture_fps=14.99 display_fps=14.99 frames=6321 page=6 eth=1
+STATS elapsed=375 capture_fps=14.99 display_fps=14.99 frames=6396 page=6 eth=1
+STATS elapsed=380 capture_fps=15.00 display_fps=15.00 frames=6471 page=6 eth=1
+STATS elapsed=385 capture_fps=14.99 display_fps=14.99 frames=6546 page=6 eth=1
+RTSP client rgb event=0 active=1
+STATS elapsed=390 capture_fps=15.19 display_fps=14.99 frames=6622 page=6 eth=1
+STATS elapsed=395 capture_fps=15.00 display_fps=15.20 frames=6697 page=6 eth=1
+STATS elapsed=400 capture_fps=14.96 display_fps=14.96 frames=6772 page=6 eth=1
+STATS elapsed=405 capture_fps=15.00 display_fps=15.00 frames=6847 page=6 eth=1
+RTSP client ir event=0 active=1
+STATS elapsed=410 capture_fps=15.00 display_fps=15.00 frames=6922 page=6 eth=1

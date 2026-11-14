@@ -36,7 +36,7 @@ static struct scaler algorithm_half={.group=1,.scale_pool=VB_INVALID_POOLID,.rot
 static struct scaler color={.group=2,.scale_pool=VB_INVALID_POOLID,.rotation_pool=VB_INVALID_POOLID};
 static struct scaler face_color={.group=3,.scale_pool=VB_INVALID_POOLID,.rotation_pool=VB_INVALID_POOLID};
 static pthread_mutex_t face_color_mutex=PTHREAD_MUTEX_INITIALIZER;
-static int hardware_rotation,hardware_color;
+static int hardware_rotation,hardware_color,compact_buffers;
 static void scaler_stop(struct scaler *s);
 #define CHECK(x) do { int rc=(x);if(rc){fprintf(stderr,"%s: %#x\n",#x,rc);return -1;} }while(0)
 static int preview_csc(int group)
@@ -58,11 +58,13 @@ static int scaler_start(struct scaler *s,unsigned input_w,unsigned input_h,
     /* This BSP checks group dimensions against each input frame exactly. */
     VPSS_GRP_ATTR_S group={.u32MaxW=input_w,.u32MaxH=input_h,.enPixelFormat=format,.stFrameRate={-1,-1}};
     VPSS_CHN_ATTR_S ch={.u32Width=w,.u32Height=h,.enVideoFormat=VIDEO_FORMAT_LINEAR,
-        .enPixelFormat=s==&face_color?PIXEL_FORMAT_BGR_888:s==&color?PIXEL_FORMAT_RGB_888:PIXEL_FORMAT_NV21,.stFrameRate={-1,-1},.u32Depth=2,
+        .enPixelFormat=s==&face_color?PIXEL_FORMAT_BGR_888:s==&color?PIXEL_FORMAT_RGB_888:PIXEL_FORMAT_NV21,.stFrameRate={-1,-1},.u32Depth=s!=&face_color&&compact_buffers?1:2,
         .stAspectRatio={.enMode=ASPECT_RATIO_NONE}};
     CHECK(CVI_VPSS_CreateGrp(s->group,&group));s->created=1;
     CHECK(CVI_VPSS_SetChnAttr(s->group,0,&ch));
-    VB_POOL_CONFIG_S pool={.u32BlkCnt=s==&face_color?2:4,.enRemapMode=VB_REMAP_MODE_CACHED};
+    /* Capture owns only one output at a time. RTSP mode uses a two-block
+     * pipeline to leave ION space for three encoders and recognition. */
+    VB_POOL_CONFIG_S pool={.u32BlkCnt=s==&face_color||compact_buffers?2:4,.enRemapMode=VB_REMAP_MODE_CACHED};
     /* With GDC enabled the BSP pads the VPSS intermediate frame in BOTH
      * dimensions too. Allocating just stride * original height corrupts UV
      * across VB blocks even if the separate GDC output pool is large enough. */
@@ -79,7 +81,7 @@ static int scaler_start(struct scaler *s,unsigned input_w,unsigned input_h,
     } else if(hardware_rotation) {
         /* GDC uses its own output pool, distinct from the VPSS output pool.
          * Both swapped dimensions must be aligned, including padded height. */
-        pool.u32BlkCnt=3;
+        pool.u32BlkCnt=compact_buffers?2:3;
         pool.u32BlkSize=COMMON_GetPicBufferSize(ALIGN(h,DEFAULT_ALIGN),ALIGN(w,DEFAULT_ALIGN),
             PIXEL_FORMAT_NV21,DATA_BITWIDTH_8,COMPRESS_MODE_NONE,DEFAULT_ALIGN);
         s->rotation_pool=CVI_VB_CreatePool(&pool);
@@ -103,8 +105,9 @@ static int start_scalers(enum camera_source source)
     if(source!=CAMERA_DVP&&scaler_start(&algorithm_half,1920,1080,960,540,PIXEL_FORMAT_NV21))return -1;
     return 0;
 }
-int media_scale_start(enum camera_source source)
+int media_scale_start_mode(enum camera_source source,int compact)
 {
+    compact_buffers=compact;
     const char *rotation=getenv("KY50_ROTATION"),*csc=getenv("KY50_PREVIEW_CSC");
     /* DVP retains its separately validated software path. RGB and IR share
      * group0, so it must remain NV21 even when preview switches without restart. */
@@ -120,6 +123,7 @@ int media_scale_start(enum camera_source source)
     printf("ROTATION_PIPELINE algorithm_and_preview_rotation=%s preview_csc=%s\n",hardware_rotation?"GDC CCW90":"software CCW90",hardware_color?"VPSS RGB888":"software");
     return 0;
 }
+int media_scale_start(enum camera_source source) { return media_scale_start_mode(source,0); }
 static int display_color(const VIDEO_FRAME_INFO_S *input,uint8_t *rgb,unsigned x,unsigned y)
 {
     const VIDEO_FRAME_S *in=&input->stVFrame;

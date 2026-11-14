@@ -10,7 +10,7 @@ enum ui_page { UI_HOME, UI_MENU, UI_INPUT, UI_FEATURE, UI_TOUCH_TEST,
     UI_USERS, UI_USER_ID, UI_USER_NAME, UI_USER_TYPES, UI_PALM_ENROLL, UI_USERS_MANAGE, UI_PARAMETERS, UI_FACE_IR_CALIBRATE };
 enum ui_action { UI_ACTION_NONE, UI_ACTION_RGB, UI_ACTION_IR, UI_ACTION_DVP,
     UI_ACTION_RELAY, UI_ACTION_BELL, UI_ACTION_SPEAKER,
-    UI_ACTION_WHITE_LIGHT, UI_ACTION_IR_LIGHT, UI_ACTION_FACE_IR_CALIBRATE };
+    UI_ACTION_WHITE_LIGHT, UI_ACTION_IR_LIGHT, UI_ACTION_FACE_IR_CALIBRATE, UI_ACTION_RTSP };
 /* All functions run in the UI thread. Snapshot is straight ARGB8888. */
 int ui_init(void);
 void ui_destroy(void);
@@ -29,6 +29,8 @@ uint64_t ui_monotonic_ms(void);
 enum ui_action ui_take_action(void);
 void ui_factory_status(const char *text);
 void ui_factory_lights(int white, int infrared);
+/* -1 failed, 0 off, 1 starting, 2 running, 3 stopping. */
+void ui_factory_rtsp(int state);
 void ui_face_ir_calibration_status(const FaceIrCalibrationStatus *status);
 void ui_set_source(const char *name);
 void ui_access_poll(void);

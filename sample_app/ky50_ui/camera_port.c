@@ -29,7 +29,7 @@ static ISP_SNS_OBJ_S *sns = &stSnsGc2083_Obj;
 static ISP_SENSOR_EXP_FUNC_S expfn;
 /* Fixed identity in MIPI mode: pipe0 IR, pipe1 RGB, independent of preview selection. */
 static int cameras=2, physical[2]={0,1}, preview_pipe, system_up, vb_up, thread_up;
-static int dvp_selected;
+static int dvp_selected, parallel_capture;
 static _Atomic uint64_t ir_capture_sequence;
 static pthread_t isp_thread[2];
 static struct {
@@ -51,7 +51,7 @@ static void *run_isp(void *arg)
 }
 static int ir_exposure_get(IrExposureReading *out)
 {
-    if(!out||dvp_selected||!state[0].isp||physical[0])return -1;
+    if(!out||(dvp_selected&&!parallel_capture)||!state[0].isp||physical[0])return -1;
     ISP_EXPOSURE_ATTR_S attr={0};ISP_EXP_INFO_S info={0};
     int rc=CVI_ISP_GetExposureAttr(0,&attr);
     if(!rc)rc=CVI_ISP_QueryExposureInfo(0,&info);
@@ -65,7 +65,7 @@ static int ir_exposure_get(IrExposureReading *out)
 }
 static int ir_exposure_set(int target)
 {
-    if(dvp_selected||!state[0].isp||physical[0]||target<1||target>255)return -1;
+    if((dvp_selected&&!parallel_capture)||!state[0].isp||physical[0]||target<1||target>255)return -1;
     ISP_EXPOSURE_ATTR_S attr={0},check={0};
     int rc=CVI_ISP_GetExposureAttr(0,&attr);
     if(rc||attr.bByPass||attr.enOpType!=OP_TYPE_AUTO)return -1;
@@ -230,35 +230,46 @@ static void pipeline_stop(void)
 }
 
 
-int media_camera_start(enum camera_source source)
+int media_camera_start_mode(enum camera_source source,int all)
 {
-    dvp_selected=source==CAMERA_DVP;
-    if(dvp_selected) return gc0328_start();
-    preview_pipe=source==CAMERA_RGB?1:0;
-    return pipeline_start();
+    parallel_capture=all;dvp_selected=source==CAMERA_DVP;
+    if(dvp_selected&&!all) return gc0328_start();
+    preview_pipe=source==CAMERA_DVP?2:source==CAMERA_RGB?1:0;
+    int rc=pipeline_start();
+    if(!rc&&all)rc=gc0328_start_parallel();
+    return rc;
 }
-int media_camera_get(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_GetChnFrame(dvp_selected?0:preview_pipe,0,frame,100); }
+int media_camera_start(enum camera_source source) { return media_camera_start_mode(source,0); }
+int media_camera_get(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_GetChnFrame(dvp_selected&&!parallel_capture?0:preview_pipe,0,frame,100); }
 int media_camera_select_preview(enum camera_source source)
 {
-    if(dvp_selected||source==CAMERA_DVP) return -1;
-    preview_pipe=source==CAMERA_RGB?1:0;return 0;
+    if(!parallel_capture&&(dvp_selected||source==CAMERA_DVP)) return -1;
+    dvp_selected=source==CAMERA_DVP;
+    preview_pipe=source==CAMERA_DVP?2:source==CAMERA_RGB?1:0;return 0;
 }
-int media_camera_release(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_ReleaseChnFrame(dvp_selected?0:preview_pipe,0,frame); }
+int media_camera_release(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_ReleaseChnFrame(dvp_selected&&!parallel_capture?0:preview_pipe,0,frame); }
 int media_camera_get_ir(VIDEO_FRAME_INFO_S *frame)
 {
-    if(dvp_selected) return -1;
+    if(dvp_selected&&!parallel_capture) return -1;
     return CVI_VI_GetChnFrame(0,0,frame,100);
 }
 int media_camera_release_ir(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_ReleaseChnFrame(0,0,frame); }
 int media_camera_get_rgb(VIDEO_FRAME_INFO_S *frame)
 {
-    if(dvp_selected)return -1;
+    if(dvp_selected&&!parallel_capture)return -1;
     return CVI_VI_GetChnFrame(1,0,frame,100);
 }
 int media_camera_release_rgb(VIDEO_FRAME_INFO_S *frame){return CVI_VI_ReleaseChnFrame(1,0,frame);}
+int media_camera_get_dvp(VIDEO_FRAME_INFO_S *frame)
+{
+    return parallel_capture?CVI_VI_GetChnFrame(2,0,frame,60):-1;
+}
+int media_camera_release_dvp(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_ReleaseChnFrame(2,0,frame); }
 void media_camera_stop(void)
 {
-    if(dvp_selected) gc0328_stop();else pipeline_stop();
+    if(parallel_capture) { gc0328_stop();pipeline_stop(); }
+    else if(dvp_selected) gc0328_stop();else pipeline_stop();
+    parallel_capture=0;
 }
 void media_system_stop(void)
 {
