@@ -23,11 +23,12 @@ cp "$src/stop.sh" "$dst/stop.sh"
 cp "$src/ky50_ui" "$dst/ky50_ui.new"
 chmod 755 "$dst/ky50_ui.new"
 mv "$dst/ky50_ui.new" "$dst/ky50_ui"
-mkdir -p "$dst/pva"
-for name in pva.model pva_face.model pvaConf.json manifest.json face_deployment_manifest.json face_pack_manifest.json face_source_SHA256SUMS; do
-    cp "$src/pva/$name" "$dst/pva/$name.new"
-    mv "$dst/pva/$name.new" "$dst/pva/$name"
-done
+# The package contains exactly the models selected at build time. Use a fresh
+# directory so switching to a smaller release cannot reuse an old model.
+rm -rf "$dst/pva"
+if [ -d "$src/pva" ]; then
+    cp -R "$src/pva" "$dst/pva"
+fi
 # BMRuntime stays on local /system; neither executable nor model depends on NFS.
 export LD_LIBRARY_PATH=/system/lib:/usr/lib:/lib
 mkdir -p "$dst/assets"
@@ -45,9 +46,10 @@ fi
 # /mnt/cfg and /mnt/data are each about 1 MiB on this board. Business data
 # belongs on the larger persistent system UBIFS, outside the installed app.
 umask 077
-mkdir -p /mnt/system/ky50-data/pva /mnt/system/ky50-data/avatars
+mkdir -p /mnt/system/ky50-data/avatars
+if [ -d "$dst/pva" ]; then mkdir -p /mnt/system/ky50-data/pva; fi
 # Do not import legacy template files. On a v1/v2 users database the
-# application clears old profiles and both SDK stores once, then uses schema 3.
+# application clears old profiles and both SDK stores once, then uses schema 4. Existing v3 users migrate without deletion.
 for name in ky50_i2c1 ky50_touch ky50_relay ky50_lights ky50_amp; do
     cp "$src/$name.ko" "$dst/$name.ko"
     # Upgrade only the relay protocol after the old app has closed its fd.

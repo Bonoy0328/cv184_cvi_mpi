@@ -36,7 +36,7 @@ int main(int argc,char **argv)
         "SELECT count(*) FROM users",
         "SELECT count(*) FROM credentials WHERE kind='palm' AND state=2",
         "SELECT count(*) FROM operations",
-        "SELECT count(*) FROM credentials WHERE kind IN('face','palm') AND state IN(1,2) AND (template_uuid IS NULL OR template_uuid NOT BETWEEN 0 AND 99)",
+        "SELECT count(*) FROM credentials WHERE kind IN('face','palm','fingerprint') AND state IN(1,2) AND (template_uuid IS NULL OR template_uuid NOT BETWEEN 0 AND 99)",
         "SELECT count(*) FROM credentials WHERE kind='face' AND state=2",
         "SELECT count(*) FROM (SELECT kind,template_uuid FROM credentials WHERE template_uuid IS NOT NULL GROUP BY kind,template_uuid HAVING count(*)>1)",
         "SELECT count(*) FROM attendance_events WHERE result='matched'",
@@ -44,8 +44,9 @@ int main(int argc,char **argv)
         "SELECT count(*) FROM attendance_events WHERE result='matched' AND user_id IS NULL",
         "SELECT count(*) FROM users WHERE state='deleting'",
         "PRAGMA user_version",
-        "PRAGMA journal_mode"};
-    const char *label[]={"integrity","users","registered_palms","pending_operations","invalid_template_bindings","registered_faces","duplicate_template_bindings","matched_events","unmatched_events","retained_deleted_user_events","pending_deletions","schema","journal_mode"};
+        "PRAGMA journal_mode",
+        "SELECT count(*) FROM credentials WHERE kind='fingerprint' AND state=2"};
+    const char *label[]={"integrity","users","registered_palms","pending_operations","invalid_template_bindings","registered_faces","duplicate_template_bindings","matched_events","unmatched_events","retained_deleted_user_events","pending_deletions","schema","journal_mode","registered_fingerprints"};
     if(sqlite3_exec(db,"BEGIN",NULL,NULL,NULL)!=SQLITE_OK)goto done;
     for(unsigned i=0;i<sizeof(sql)/sizeof(sql[0]);i++) {
         sqlite3_stmt *q=NULL;

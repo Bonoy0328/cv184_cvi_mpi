@@ -1,0 +1,58 @@
+1134
+46:4c:db:8d:bb:b5
+Filesystem                Size      Used Available Use% Mounted on
+tmpfs                    71.5M     38.6M     32.9M  54% /tmp
+192.168.31.57:/home/bonoy/NFS_Files
+                        502.4G    239.9G    237.0G  50% /mnt/data/opt
+DVP
+./ky50_ui --source RGB 
+KY50_DVP_CLOCK_WIRING=swapped
+LD_LIBRARY_PATH=/system/lib:/usr/lib:/lib
+PVA_FACE_PREPROCESS=direct
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+total 19552
+-rw-rw-r--    1 cvitek   user          1093 Nov 12 13:27 BUILD_INFO.json
+-rw-rw-r--    1 cvitek   user         47610 Nov 14 14:35 DEVELOPMENT.md
+-rw-rw-r--    1 cvitek   user         33100 Nov 14 14:35 README.md
+-rw-rw-r--    1 cvitek   user          2528 Nov 14 14:35 SHA256SUMS
+-rw-rw-r--    1 cvitek   user          5448 Nov 14 14:35 THIRD_PARTY.md
+-rw-rw-r--    1 cvitek   user         14054 Nov 14 14:35 USER_DATABASE.md
+-rwxrwxr-x    1 cvitek   user       4485576 Nov 14 14:35 access_inspect
+drwxrwxr-x    3 cvitek   user          4096 Nov 14 09:09 assets
+-rwxrwxr-x    1 cvitek   user           561 Nov 14 14:35 boot.sh
+-rwxr-xr-x    1 cvitek   user       1557960 Nov 14 14:35 device_authorize
+drwxrwxr-x   12 cvitek   user          4096 Nov 14 14:28 evidence
+-rwxrwxr-x    1 cvitek   user          1272 Nov 14 14:35 install-local.sh
+-rw-rw-r--    1 cvitek   user          6528 Nov 14 14:35 ky50_amp.ko
+-rw-rw-r--    1 cvitek   user          4492 Nov 14 14:35 ky50_i2c1.ko
+-rw-rw-r--    1 cvitek   user          6752 Nov 14 14:35 ky50_lights.ko
+-rw-rw-r--    1 cvitek   user          7068 Nov 14 14:35 ky50_relay.ko
+-rw-rw-r--    1 cvitek   user          7076 Nov 14 14:35 ky50_touch.ko
+-rwxrwxr-x    1 cvitek   user       8051020 Nov 14 14:35 ky50_ui
+drwxrwxr-x    2 cvitek   user          4096 Nov 14 14:12 licenses
+-rwxrwxr-x    1 cvitek   user         51572 Nov 11 14:43 overlay_check
+-rwxrwxr-x    1 cvitek   user         35364 Nov 14 14:35 pixel_check
+drwxrwxr-x    2 cvitek   user          4096 Nov 13 06:12 pva
+-rw-rw-rw-    1 root     root          9335 Nov 14 14:33 rtsp-runtime-summary.txt
+-rwxrwxr-x    1 cvitek   user       5614820 Nov 14 14:34 rtsp_check
+-rwxrwxr-x    1 cvitek   user          3928 Nov 14 14:35 run.sh
+-rwxrwxr-x    1 cvitek   user           859 Nov 14 14:35 soak.sh
+-rwxrwxr-x    1 cvitek   user           574 Nov 14 14:35 stop.sh
+drwxrwxr-x    2 cvitek   user          4096 Nov 14 14:28 tools
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x01
+PERF capture.vi n=101 avg_ms=37.00 max_ms=37.47
+PERF capture.preview n=101 avg_ms=12.12 max_ms=13.03
+PERF capture.ir n=101 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=101 avg_ms=49.99 max_ms=51.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=576097 hits=523 errors=0
+PALM_PIPELINE features=92 auth=26 held=44 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=1256287 taken=576103 replaced=680178 depth=0
+PERF ui.render n=145 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=100 avg_ms=4.34 max_ms=4.82
+PERF ui.process n=1272 avg_ms=0.01 max_ms=0.09
+STATS elapsed=52931 capture_fps=19.99 display_fps=19.99 frames=1269796 page=8 eth=1

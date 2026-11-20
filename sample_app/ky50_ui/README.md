@@ -4,6 +4,19 @@
 
 **后续开发入口：[ky50_ui 开发指南](DEVELOPMENT.md)**。2026-11-13人脸集成阶段已完成；当前双模态状态、验证边界、线程与数据约定、独立离场配置和新功能接入流程以该指南为准。下文带日期的旧包和性能记录保留其历史范围。
 
+## 产品功能开关与固件
+
+应用顶层 Makefile 中的三个编译宏均默认为 `0`。将 `KY50_ENABLE_FINGERPRINT`、`KY50_ENABLE_FACE` 或 `KY50_ENABLE_PALM` 设为 `1` 可分别启用指纹、人脸或掌静脉。可直接修改默认值，也可在构建时覆盖。例如，在本目录执行 `make -j4 KY50_ENABLE_FACE=1 package` 可生成仅启用人脸的应用包。更换开关后可直接增量编译。算法开启时仍需本机授权和匹配的模型。
+
+全关版保留用户管理、预览、切换镜头及工厂测试。注册方式列表按编译选择显示，人脸双摄校准入口随人脸开关显示。全关版不加载生物识别模型，也不需要设备算法授权。
+
+`cv1842hp_wevb_0014a_spinand` 的 SDK `pack_rootfs` 会编译应用并将运行文件装入 `/system/ky50-ui`。启动脚本 `/etc/init.d/S99zz_ky50_ui` 在媒体驱动加载后调用 `run.sh`，启动日志的前 64 KiB 保存在 `/tmp/ky50-ui-boot.log`。在已构建该板型的 SDK 根目录执行以下命令，可以重新生成固件。若要临时启用某项功能，请在 `pack_rootfs` 前导出对应变量，例如 `export KY50_ENABLE_FACE=1`。
+
+```bash
+source build/envsetup_soc.sh
+cvi_setup_env && pack_rootfs && pack_upgrade
+```
+
 ## 已实现的界面
 
 - RGB 画面逆时针 90°旋转，等比例缩放、居中裁剪铺满屏幕。
@@ -140,7 +153,7 @@ nohup sh /tmp/ky50-ui/soak.sh "$(cat /run/ky50-ui.pid)" 1800 > /tmp/ky50-ui-soak
 入口：菜单 → 高级设置 → 工厂测试。屏幕纯色顺序是红、绿、蓝、白、黑、灰；每次触摸抬起切下一色，第六次返回工厂页。全屏不叠加状态栏。
 
 - RGB / IR：切换 GC2083，并打开实时预览页，左上角返回工厂页。确认新 sensor 首帧经过缩放后，才保存选择。失败回滚原摄像头。RGB 与 IR 均 1920×1080、30 fps、逆时针旋转及等比裁剪。
-- DVP：GC0328 0x21/8-bit 寄存器，640×480 YUYV，片内 ISP，VI bypass → VPSS → 软件逆时针旋转/居中裁剪，实测约 20 fps。两块已交换 VIVO_D10/VIVO_CLK 的板均取得真实图像，第一块板用户已确认工厂页点击 DVP 后画面随手指变化正常。必须使用已核实的 `KY50_DVP_CLOCK_WIRING=swapped`；软件关键修正为 VS 低有效、VI 就绪后开启 sensor 输出、CIF 显式 YUYV 输出和 VPSS 640×480 输入尺寸。详见 `evidence/dvp/20261112/` 及 Doc 第 11.11 节之后的验收记录，应用运行验证不等同固件冷启动验收。
+- DVP：GC0328 0x21/8-bit 寄存器，640×480 YUYV，片内 ISP，VI bypass → VPSS → 软件逆时针旋转/居中裁剪，实测约 20 fps。默认开启芯片反相（Page0 `0x43=0x01`），输出白底黑色；独占预览和三路 RTSP 共用该初始化，摄像头重新初始化时自动恢复反相。两块已交换 VIVO_D10/VIVO_CLK 的板均取得真实图像，第一块板用户已确认工厂页点击 DVP 后画面随手指变化正常。必须使用已核实的 `KY50_DVP_CLOCK_WIRING=swapped`；软件关键修正为 VS 低有效、VI 就绪后开启 sensor 输出、CIF 显式 YUYV 输出和 VPSS 640×480 输入尺寸。基础验收见 `evidence/dvp/20261112/`，反相实测与固化见 [开发指南第13节](DEVELOPMENT.md#13-dvp-默认反相2026-11-15)；应用运行验证不等同固件冷启动验收。
 - 继电器：GPIOA21 LOCK 高电平吸合，只触发一次；独立内核 delayed_work 在 5 秒后关闭，重复点击不延长，不因离开页面丢失关闭动作，进程退出立即关闭。
 - Speaker：TinyALSA PCM 1/0，16 kHz 双声道输出，播放一次“识别成功，请开门”。语音资产源为单声道 PCM，运行时复制到左右声道；播放与 UI 独立线程。AMP 由 `ky50_amp.ko` 修正已刷内核忽略 DT active-low 的行为，GPIOA15 低=播放、高=关断。
 - 白光灯 / 红外灯：两个独立开关，白光 `LED_PWM` = GPIOA19（JTAG_CPU_TMS），红外 `ILED-PWM` = GPIOA8（SD0_CMD）；均使用 GPIO mux 3，高电平开、低电平关，不启用 PWM。应用每次启动默认红外常亮、白光关闭；之后可通过工厂按钮独立切换，切页保持状态，不保存灯状态。按钮显示开关动作和当前状态，操作失败显示错误；退出或进程释放设备时两路 GPIO 拉低。红外关闭后仍微亮的硬件问题按用户要求暂不处理。`ky50_lights.ko` 随包加载，设备为 `/dev/ky50-lights`。验证边界见 [灯控验证记录](evidence/lights/VALIDATION.md)。
@@ -169,7 +182,7 @@ nohup /mnt/system/ky50-ui/boot.sh >/tmp/ky50-ui-boot.log 2>&1 &
 `pva/pvaConf.json` 使用本地 `/tmp/ky50-ui/pva/pva.model`；授权文件为 `/mnt/cfg/ky50-ui/pva/deviceID.key`。三个最新 fused-input 模型按 tiny、large、small 顺序加密打包；模型在内存解密后加载，不写出明文文件。授权沿用库的现有校验，UI 不自动申请授权，不改请求地址/规则。`device_authorize` 随包交付，首次授权按库说明执行 `device_authorize 1`，也支持指定自定义保存目录。
 
 - 算法只接收 IR pipe0：1920×1080 → 960×540（宽高均减半）→ CCW90 → 连续 Y 平面 540×960。保持 YUV 接口，UV 填 128，库只读 Y 并复制到 RGB 三平面，模型内部完成归一化。
-- IR 背景时由同一 VI 帧产生预览与算法输入；实时显示持续推进，叠加最新算法结果（500ms没有新完成结果则隐藏）。RGB 背景时另外从 IR pipe0 取帧检测。不会将 RGB 送给 `pvaGetHandPose`。DVP 模式暂停手掌检测。
+- IR 背景时由同一 VI 帧产生预览与算法输入；实时显示持续推进，叠加最新算法结果（500ms没有新完成结果则隐藏）。RGB 背景时另外从 IR pipe0 取帧检测。不会将 RGB 送给 `pvaGetHandPose`。当前指纹三路模式在DVP预览下仍检测掌静脉/人脸，但不叠加其它镜头的框。
 - `HandPoseRes_t draw_copy = pose` 复制整个结果，再生成独立 `HandOverlay`。原始框和关键点仍为算法的 540×960 坐标，后续 `pvaGetFeat` 应继续使用原图和原结果。
 - 映射：`x_screen = round(x_algo * 486 / 540 - 2)`，`y_screen = round(y_algo * 864 / 960 - 4)`。比例/偏移取自当前预览 viewport。仅绘制时裁剪越界线条和点。
 - 首次进入须连续2帧检测true后才提特征；2026-11-13 起原始true即绘制检测框，确认前为红色；确认后每个true帧都调用`pvaGetFeat`，以`HandPoseRes_t.status`决定框和7个点颜色：OK绿色，其他红色。false帧不继续提特征/业务；显示按下文性能优化新增的3帧/150ms短暂漏检防抖。状态宏名/数值及“红外检测”提示条已移除。非OK不注册/识别；绘制仍使用独立坐标副本，只复制提特征后的status。
@@ -238,7 +251,7 @@ SIGUSR1 保存 `screen.ppm`（实际 UI 合成帧），另由下一次检测保�
 接口依据 `SDK/libpva_face/SDK_INTEGRATION_zh.md`。`init_pva` 一次加载手掌三模型及人脸四模型，退出统一 `deinit_pva`。默认配置开启人脸质量与活体检测；初始化失败会停用识别。
 
 - RGB pipe1：1920×1080 → 960×540 → CCW90 → 540×960 紧密 NV12。逐行处理实际 stride，旋转色度对后将 NV21 的 VU 交换成 UV，保留真实颜色。IR pipe0 保持原有完整半尺寸 Y 输入。
-- 采集线程串行复用现有半尺寸 VPSS group，不新增 VB pool；最新帧队列保存各自独立的 IR 和 RGB 算法缓冲。算法持有缓冲直到 Pose/Feat/业务调用全部结束，采集不会覆盖。RGB/IR 预览都采集这两路；DVP 暂停两种算法。两路是同一采集轮次取得的帧，不保证硬件同步。
+- 采集线程串行复用现有半尺寸 VPSS group，不新增 VB pool；最新帧队列保存各自独立的 IR 和 RGB 算法缓冲。算法持有缓冲直到 Pose/Feat/业务调用全部结束，采集不会覆盖。RGB/IR 预览都采集这两路；当前指纹三路模式在DVP预览下仍采集检测RGB/IR。两路是同一采集轮次取得的帧，不保证硬件同步。
 - 同一个算法线程每轮调用 `pvaGetHandPose(IR)` 与 `pvaGetFacePose(RGB_NV12, judgeMode=0)`。原始 hand=true 时只走掌静脉特征/识别；掌静脉质量失败或尚未完成两帧进入确认也不会改做人脸。只有原始 hand=false 且 face=true 才允许人脸特征/识别。IR 取帧/API 错误不视作“无手掌”。
 - 两个框和各自关键点独立绘制，可同时显示；复制 Pose 几何后才提特征。人脸仅检测时蓝色，实际执行人脸 Feat 后 OK 为绿色、失败为红色；框的颜色不表示身份已匹配。各自保留 3 次/150ms 漏检绘制防抖和 500ms 完成结果超时，防抖不参与业务判断。映射沿用当前预览的缩放/裁剪，无双目视差校正。
 - 用户管理已开放人脸注册，使用同一注册预览页、独立进度与模板库；默认单张采集，保存 3 条双 ROI 模板。注册人脸时需移开手掌。首页人脸识别也经过质量/活体、用户启用状态和连续两次同 UUID 匹配检查，再写 `method=face` 的考勤；成功后等待 20 次原始无脸检测解除保持。掌静脉注册、曝光反馈和成功保持逻辑继续沿用。
@@ -289,3 +302,12 @@ face_leave_frames=5
 ```
 
 无效或不可读的主应用配置会显示错误并停止识别，避免静默改变已保存的业务策略。原有显示防抖（3次/150ms、500ms结果超时）保持不变；离场帧数统计算法检测结果，不按摄像头采集帧数计数。
+
+指纹集成：DVP 640×480 YUYV 取 Y 并逆时针 90°，独立存在检测后才提特征和匹配。三路认证优先级为指纹、掌静脉、人脸；支持指纹注册/删除和独立 UUID。见 [开发指南 §14](DEVELOPMENT.md) 与 [存在检测验证](evidence/fingerprint/VALIDATION.md)。
+
+
+### 指纹三路运行性能（2026-11-15）
+
+量产以RGB为预览，DVP用于调试和指纹注册。三路优先级为指纹 > 掌静脉 > 人脸，空指纹不提特征。当前DVP算法输入默认VPSS原尺寸转换＋GDC270°，完整480×640 GRAY8；允许少量硬件灰度差异，失败自动回退软件。RGB/IR预览且RTSP关闭时，非阻塞取DVP，最多100ms缓存复用，重复sample_id不计确认或离场。SDK存在检测用等价NEON统计。
+
+RGB空场景三路实测：采集19.996→21.878fps，检测整轮98.125→94.990ms；相对原双路24.256fps仍有开销。不是成功识别时延或准确率保证。默认`run.sh --source RGB`；诊断回退可设`KY50_FINGER_ROTATION=software`，`compare`只用于120帧像素差异统计。参数、用户库和阈值0.87保留。详细实现及待验收项见[开发指南§14](DEVELOPMENT.md#14-三路指纹集成2026-11-15)与[验证报告](evidence/fingerprint/VALIDATION.md)。

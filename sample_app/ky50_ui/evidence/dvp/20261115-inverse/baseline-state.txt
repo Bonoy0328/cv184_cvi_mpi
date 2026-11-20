@@ -1,0 +1,149 @@
+46:4c:db:8d:bb:b5
+/tmp/ky50-ui/ky50_ui
+/tmp/ky50-ui
+46df27aa07f7963764fd9342c2e1170e52ee7f5d360e04e8f13c35bb7ecda240  /proc/1134/exe
+swapped
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=1256287 taken=576103 replaced=680178 depth=0
+PERF capture.vi n=100 avg_ms=36.84 max_ms=37.29
+PERF capture.preview n=100 avg_ms=12.34 max_ms=13.19
+PERF capture.ir n=100 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=100 avg_ms=50.00 max_ms=52.00
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.11
+PERF ui.present n=100 avg_ms=4.27 max_ms=4.77
+PERF ui.process n=1330 avg_ms=0.01 max_ms=0.07
+STATS elapsed=52421 capture_fps=19.98 display_fps=19.98 frames=1259593 page=8 eth=1
+SCALE_PERF group=0 vpss=2.05 map=0.25 rotate=1.85 convert=8.06 release=0.09 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=576097 hits=523 errors=0
+PALM_PIPELINE features=92 auth=26 held=44 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=1256287 taken=576103 replaced=680178 depth=0
+PERF capture.vi n=101 avg_ms=36.90 max_ms=37.33
+PERF capture.preview n=101 avg_ms=12.26 max_ms=13.08
+PERF capture.ir n=101 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=101 avg_ms=49.99 max_ms=51.00
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.02
+PERF ui.present n=100 avg_ms=4.29 max_ms=4.82
+PERF ui.process n=1317 avg_ms=0.01 max_ms=0.07
+STATS elapsed=52426 capture_fps=20.00 display_fps=20.00 frames=1259693 page=8 eth=1
+SCALE_PERF group=0 vpss=2.05 map=0.25 rotate=1.85 convert=7.99 release=0.09 ms
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=576097 hits=523 errors=0
+PALM_PIPELINE features=92 auth=26 held=44 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=1256287 taken=576103 replaced=680178 depth=0
+PERF capture.vi n=100 avg_ms=36.83 max_ms=37.30
+PERF capture.preview n=100 avg_ms=12.34 max_ms=13.22
+PERF capture.ir n=100 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=100 avg_ms=50.01 max_ms=51.00
+PERF ui.render n=149 avg_ms=0.01 max_ms=0.01
+PERF ui.present n=100 avg_ms=4.36 max_ms=4.77
+PERF ui.process n=1333 avg_ms=0.01 max_ms=0.09
+STATS elapsed=52431 capture_fps=19.98 display_fps=19.98 frames=1259793 page=8 eth=1
+SCALE_PERF group=0 vpss=2.05 map=0.25 rotate=1.85 convert=8.29 release=0.09 ms
+total 7908
+drwxr-xr-x    3 root     root           100 Nov 14 14:26 assets
+-rw-------    1 root     root          6528 Nov 14 14:26 ky50_amp.ko
+-rw-------    1 root     root          4492 Nov 14 14:26 ky50_i2c1.ko
+-rw-------    1 root     root          6752 Nov 14 14:26 ky50_lights.ko
+-rw-------    1 root     root          7068 Nov 14 14:26 ky50_relay.ko
+-rw-------    1 root     root          7076 Nov 14 14:26 ky50_touch.ko
+-rwxr-xr-x    1 root     root       8051020 Nov 14 14:26 ky50_ui
+drwxr-xr-x    2 root     root           180 Nov 14 14:26 pva
+-rwxr-xr-x    1 root     root           574 Nov 14 14:26 stop.sh
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		 640	 480	  BT	1MUX	  P
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	YUYV	 YUV		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  0	  0	  1		  0 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		  640		  480
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	 640	 480	  N	 N	   	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	 640	 480	   	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   21		 1418	 1418	    0		    0	 640	 480
+[VI Post_Dbg_Info]
+VIIspTopStatus0		:0x3fc		VIIspTopStatus1		:0x7ff
+[VI DMA_Dbg_Info]
+VIWdma1ErrStatus	:0x3000000	VIWdma1IdleStatus	:0xffffebee
+VIWdma2ErrStatus	:0x3000040	VIWdma2IdleStatus	:0xfffffffe
+VIWdma3ErrStatus	:0x3000040	VIWdma3IdleStatus	:0xffffffff
+VIRdma1ErrStatus	:0x3000000	VIRdma1IdleStatus	:0xffffffff
+VIRdma2ErrStatus	:0x3000000	VIRdma2IdleStatus	:0xffffffff
+VIRdma3ErrStatus	:0x3000000	VIRdma3IdleStatus	:0xffffffff
+[VI ISP_FE_0 FE_Dbg_Info]
+VIPreFERawDbgSts	:0x3fe		VIPreFEDbgInfo		:0x7fffe
+[VI ISP_FE_0]
+VIOutImgWidth		: 640
+VIOutImgHeight		: 480
+VIInImgWidth		: 640
+VIInImgHeight		: 480
+VIDevFPS		:  20
+VIFPS			:  20
+VISofCh0Cnt		:1439
+VIPreFECh0Cnt		:1438
+VIPostPipe0Cnt		:   0
+VIDropCnt		:   0
+VIDumpCnt		:   0
+[VI ISP_FE_0 Csi_Dbg_Info]
+VICsiIntStatus0		:0x6
+VICsiIntStatus1		:0x200000
+VICsiOverFlowCnt	:   0
+VICsiCh0Dbg0		:0x1a54a000
+VICsiCh0Dbg1		:0x0
+VICsiCh0Dbg2		:0x59f059f
+VICsiCh0Dbg3		:0x0
+VICsiCh0WidthGTCnt	:   0
+VICsiCh0WidthLSCnt	:   0
+VICsiCh0HeightGTCnt	:   0
+VICsiCh0HeightLSCnt	:   0
+[VI ISP_PIPE_0 Buf_Dbg_Info]
+VIYuvCh0OutBufEmpty	:   0

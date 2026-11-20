@@ -1,0 +1,35 @@
+GC0328 默认反相源码固化与板端验证，2026-11-15（北京时间）
+
+实现：gc0328.c 共用 start(int parallel) 的 Page0 format 表加入 0x43=0x01。
+位置：通用寄存器表之后，VI 配置及 sensor 输出开启之前。
+单路 gc0328_start()、并行 gc0328_start_parallel() 均覆盖；启动日志增加 inverse=on。
+不修改 RGB/IR、算法、像素转换、持久化配置或启动服务。
+
+构建：make -j8 package 退出0，无warning/error，SHA256SUMS校验全通过。
+strip ELF SHA256：b4e8650868724e93b3836522761c84cca02e6ab6931247c3a9a47aed9798ab87
+独立发布目录：主机 /home/bonoy/NFS_Files/ky50_dvp_inverse_20261115
+板端 /mnt/data/opt/ky50_dvp_inverse_20261115
+构建包、NFS副本、实际运行ELF哈希一致。原 ky50_rtsp_20261114 发布目录保留。
+
+板端 192.168.31.83：
+1. 正常停止旧应用，以新包 run.sh 无参数启动，沿用保存的 DVP 选择。
+   PID 1693；Page0 0x43=0x01；DVP pipe0；白底反相。未运行临时工具 on。
+2. 正常停止，以同一新包 run.sh --rtsp 启动。
+   PID 1887；Page0 0x43=0x01；DVP pipe2；屏幕及DVP RTSP整帧均反相。
+   python3 tools/check_rtsp.py 192.168.31.83 --seconds 10：
+   rgb: decoded=151，wall_seconds=11.54，decode_errors=0，pass=True。
+   ir:  decoded=151，wall_seconds=11.53，decode_errors=0，pass=True。
+   dvp: decoded=151，wall_seconds=11.53，decode_errors=0，pass=True。
+3. 正常停止，再以新包 run.sh 无参数启动，恢复 RTSP 关闭的 DVP 预览。
+   最终 PID 2107；实际ELF为上述哈希；Page0 0x43=0x01；采集20fps。
+   LostFrame=0、VbFail=0、CSI溢出/尺寸错误计数=0。保持此状态供用户使用。
+
+并行采样中 VbFail 非零（IR=170、RGB=205、DVP=92），LostFrame为0。
+本次仅验证默认反相、两条初始化路径、三路出流和应用重启，不宣称媒体全链路零告警。
+未改动资源管理来消除这些并行计数，也未开展长时间老化、固件烧写或整板断电测试。
+原先用户已经现场确认相同寄存器设置下白底黑色且显示正常；本次固化通过新程序
+重新初始化后的寄存器、送屏抓图和RTSP图像复核，不将此前确认冒充新的断电验收。
+
+开发记录：Doc/KY50_触控UI与RGB预览开发记录及扩展指南.md 第20节。
+工程指南：DEVELOPMENT.md 第13节；README.md 的DVP说明同步更新。
+先前 RESULT.txt 属于临时寄存器实验阶段，当前源码/运行状态以本文件为准。

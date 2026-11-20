@@ -1,0 +1,126 @@
+{
+  "off": {
+    "capture_fps": {
+      "mean": 24.256,
+      "n": 5,
+      "min": 24.0,
+      "max": 24.4
+    },
+    "display_fps": {
+      "mean": 24.376,
+      "n": 5,
+      "min": 24.0,
+      "max": 24.8
+    },
+    "capture.vi": {
+      "mean": 0.09,
+      "n": 4,
+      "min": 0.04,
+      "max": 0.13
+    },
+    "capture.preview": {
+      "mean": 14.322,
+      "n": 4,
+      "min": 14.13,
+      "max": 14.53
+    },
+    "capture.ir": {
+      "mean": 21.738,
+      "n": 4,
+      "min": 21.52,
+      "max": 22.0
+    },
+    "capture.interval": {
+      "mean": 41.315,
+      "n": 4,
+      "min": 40.92,
+      "max": 41.75
+    },
+    "biometric.detect": {
+      "mean": 90.883,
+      "n": 4,
+      "min": 90.36,
+      "max": 91.43
+    },
+    "hand_hits": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "face_hits": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "on": {
+    "capture_fps": {
+      "mean": 19.996,
+      "n": 5,
+      "min": 19.79,
+      "max": 20.2
+    },
+    "display_fps": {
+      "mean": 20.156,
+      "n": 5,
+      "min": 19.79,
+      "max": 20.4
+    },
+    "capture.vi": {
+      "mean": 0.062,
+      "n": 4,
+      "min": 0.03,
+      "max": 0.13
+    },
+    "capture.preview": {
+      "mean": 15.018,
+      "n": 4,
+      "min": 14.83,
+      "max": 15.43
+    },
+    "capture.ir": {
+      "mean": 29.177,
+      "n": 4,
+      "min": 28.95,
+      "max": 29.38
+    },
+    "capture.interval": {
+      "mean": 50.233,
+      "n": 4,
+      "min": 49.87,
+      "max": 50.61
+    },
+    "biometric.detect": {
+      "mean": 98.125,
+      "n": 4,
+      "min": 97.46,
+      "max": 98.89
+    },
+    "hand_hits": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "face_hits": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  }
+}

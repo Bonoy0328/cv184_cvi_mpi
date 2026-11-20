@@ -6,10 +6,11 @@
 int palm_frame_init(PalmFrame *f)
 {
     memset(f,0,sizeof(*f));f->yuv=malloc(Y_BYTES*3/2);f->rgb=malloc(RGB_BYTES);f->face_nv12=malloc(Y_BYTES*3/2);
-    if(!f->yuv||!f->rgb||!f->face_nv12){palm_frame_free(f);return -1;}
+    f->finger_gray=malloc(FINGER_BYTES);
+    if(!f->yuv||!f->rgb||!f->face_nv12||!f->finger_gray){palm_frame_free(f);return -1;}
     memset(f->yuv+Y_BYTES,128,Y_BYTES/2);return 0;
 }
-void palm_frame_free(PalmFrame *f) {free(f->yuv);free(f->rgb);free(f->face_nv12);memset(f,0,sizeof(*f));}
+void palm_frame_free(PalmFrame *f) {free(f->yuv);free(f->rgb);free(f->face_nv12);free(f->finger_gray);memset(f,0,sizeof(*f));}
 int palm_queue_init(PalmQueue *q)
 {
     memset(q,0,sizeof(*q));if(pthread_mutex_init(&q->lock,NULL))return -1;
@@ -32,10 +33,18 @@ int palm_queue_put_timed_pair(PalmQueue *q,const unsigned char *yuv,const unsign
                         const unsigned char *rgb,const HandViewport *view,int source,
                         unsigned epoch,uint64_t ms,int dump,const IrExposureSample *sample,const FaceIrPair *pair)
 {
+    return palm_queue_put_three(q,yuv,face_nv12,rgb,view,source,epoch,ms,dump,sample,pair,NULL,0);
+}
+int palm_queue_put_three(PalmQueue *q,const unsigned char *yuv,const unsigned char *face_nv12,
+ const unsigned char *rgb,const HandViewport *view,int source,unsigned epoch,uint64_t ms,int dump,
+ const IrExposureSample *sample,const FaceIrPair *pair,const uint8_t *finger_gray,uint64_t finger_id)
+{
     pthread_mutex_lock(&q->lock);
     /* Preserve an explicitly requested paired diagnostic snapshot until taken. */
     if(q->ready&&q->pending.dump){pthread_mutex_unlock(&q->lock);return 0;}
     if(q->ready)++q->replaced;
+    q->pending.have_finger=finger_gray!=NULL;q->pending.finger_id=finger_id;
+    if(finger_gray)memcpy(q->pending.finger_gray,finger_gray,FINGER_BYTES);
     q->pending.have_ir=yuv!=NULL;q->pending.have_face=face_nv12!=NULL;
     if(yuv)memcpy(q->pending.yuv,yuv,Y_BYTES);
     if(face_nv12)memcpy(q->pending.face_nv12,face_nv12,Y_BYTES*3/2);

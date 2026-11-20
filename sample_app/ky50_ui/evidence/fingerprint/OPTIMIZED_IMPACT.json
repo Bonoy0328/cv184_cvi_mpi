@@ -1,0 +1,66 @@
+{
+  "capture_fps": {
+    "mean": 21.878,
+    "n": 5,
+    "min": 21.59,
+    "max": 22.4
+  },
+  "display_fps": {
+    "mean": 22.118,
+    "n": 5,
+    "min": 21.79,
+    "max": 22.8
+  },
+  "capture.vi": {
+    "mean": 0.05,
+    "n": 4,
+    "min": 0.03,
+    "max": 0.11
+  },
+  "capture.preview": {
+    "mean": 14.363,
+    "n": 4,
+    "min": 14.15,
+    "max": 14.59
+  },
+  "capture.ir": {
+    "mean": 25.122,
+    "n": 4,
+    "min": 24.95,
+    "max": 25.3
+  },
+  "capture.interval": {
+    "mean": 45.63,
+    "n": 4,
+    "min": 45.19,
+    "max": 46.11
+  },
+  "capture.dvp_wait": {
+    "mean": 0.03,
+    "n": 4,
+    "min": 0.02,
+    "max": 0.04
+  },
+  "capture.dvp_gray": {
+    "mean": 3.652,
+    "n": 4,
+    "min": 3.59,
+    "max": 3.71
+  },
+  "capture.dvp_release": {
+    "mean": 0.062,
+    "n": 4,
+    "min": 0.02,
+    "max": 0.14
+  },
+  "biometric.detect": {
+    "mean": 94.99,
+    "n": 4,
+    "min": 94.18,
+    "max": 96.47
+  },
+  "window": "STATS 15..35 seconds; PERF batches following STATS 15..30",
+  "elf_sha256": "3528293d5b0fd79b221e0258e1758bd0afd60ff1d70ba2327afca4945971fcd7",
+  "conditions": "RGB preview, RTSP off, fingerprint enabled, all targets absent, no SSH or replay probes during 40 seconds",
+  "raw_log": "build/fingerprint-ui/optimized-clean-rgb.log"
+}

@@ -1,0 +1,11 @@
+{
+  "platform": "arm",
+  "negative_count": 70,
+  "positive_count": 55,
+  "old_false_positive": 70,
+  "new_false_positive": 0,
+  "new_false_negative": 0,
+  "mean_us": 2616.691352,
+  "median_us": 2672.229,
+  "max_us": 3291.507
+}

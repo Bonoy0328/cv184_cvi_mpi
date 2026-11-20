@@ -1,4 +1,11 @@
+#include "ky50_features.h"
 #include "hand_overlay.h"
+#include <unistd.h>
+#if !KY50_ENABLE_PALM
+#include "pvaConfig.h"
+#include "pvaFaceRecInternal.h"
+#include "pvaFingerprintInternal.h"
+#endif
 #include "pva.h"
 #include "pvaFaceRec.h"
 #include "deviceAuth.h"
@@ -17,9 +24,46 @@ static bool face_color_convert(const unsigned char* nv12,uint16_t w,uint16_t h,u
     return media_face_color_nv12(nv12,w,h,bgr,stride)==0;
 }
 static std::atomic<bool> ready;
-static bool face_enabled;
+static bool face_enabled,finger_enabled;
 static PalmParameters parameters;
 static FaceParameters face_parameters;
+static std::string filtered_config;
+
+// init_pva always initializes palm, and also loads every module enabled in its JSON.
+// Keep relative model paths valid when filtering a caller-supplied config.
+static bool start_modules(const char *config, nlohmann::json &settings)
+{
+#if KY50_ENABLE_PALM
+    bool filtered=false;
+    for(const char *name : {"facepose","fingerprint"}) {
+        bool allowed=std::strcmp(name,"facepose")==0 ? KY50_ENABLE_FACE : KY50_ENABLE_FINGERPRINT;
+        if(!allowed && settings.contains(name) && settings[name].value("enable",true)) {
+            settings[name]["enable"]=false;
+            filtered=true;
+        }
+    }
+    if(filtered) {
+        std::string pattern=std::string(config)+".ky50.XXXXXX";
+        int fd=mkstemp(&pattern[0]);
+        if(fd<0)return false;
+        filtered_config=pattern;
+        FILE *out=fdopen(fd,"w");
+        if(!out){close(fd);return false;}
+        auto json=settings.dump(4);
+        bool written=fwrite(json.data(),1,json.size(),out)==json.size();
+        if(fclose(out)!=0||!written)return false;
+        config=filtered_config.c_str();
+    }
+    return init_pva(const_cast<char*>(config));
+#else
+    // These are the same CV184X submodule initializers used by init_pva.
+    // The application has already started the media system and checked the device licence.
+    (void)settings;
+    return Config_8salWjIBOea585d::getInstance()->loadConfig(config)
+        && (!face_enabled || initPvaFace(config))
+        && (!finger_enabled || initPvaFingerprint(config));
+#endif
+}
 extern "C" int handpose_start(const char *config)
 {
     try {
@@ -27,10 +71,18 @@ extern "C" int handpose_start(const char *config)
         std::ifstream file(config);
         nlohmann::json settings;
         file >> settings;
-        face_enabled=settings.contains("facepose")&&settings["facepose"].value("enable",false);
-        parameters.hand_threshold=std::lround(settings.at("handpose").at("model_probability_threshold").get<double>()*100);
-        parameters.auth_threshold=std::lround(settings.at("feature").at("auth_threshold").get<double>()*100);
-        parameters.dynamic_level=settings.at("handpose").at("dynamic_detection_level").get<int>();
+        finger_enabled=KY50_ENABLE_FINGERPRINT&&settings.contains("fingerprint")&&settings["fingerprint"].value("enable",false);
+        // Existing bindings identify the p333 embedding space. Another model requires
+        // an explicit application migration, never automatic rebinding of its UUIDs.
+        if(finger_enabled&&settings["fingerprint"].value("model_variant",std::string("embed_p333"))!="embed_p333") {
+            std::fprintf(stderr,"FINGER unsupported app model binding (requires embed_p333)\n");return -1;
+        }
+        face_enabled=KY50_ENABLE_FACE&&settings.contains("facepose")&&settings["facepose"].value("enable",false);
+        if(KY50_ENABLE_PALM) {
+            parameters.hand_threshold=std::lround(settings.at("handpose").at("model_probability_threshold").get<double>()*100);
+            parameters.auth_threshold=std::lround(settings.at("feature").at("auth_threshold").get<double>()*100);
+            parameters.dynamic_level=settings.at("handpose").at("dynamic_detection_level").get<int>();
+        }
         if(face_enabled) {
             const auto &pose=settings.at("facepose"),&feature=settings.at("facefeature");
             face_parameters.detection_threshold=std::lround(pose.at("model_probability_threshold").get<double>()*100);
@@ -41,7 +93,7 @@ extern "C" int handpose_start(const char *config)
             face_parameters.auth_threshold=std::lround(feature.at("auth_threshold").get<double>()*100);
             face_parameters.filter_threshold=std::lround(feature.at("filter_threshold").get<double>()*100);
         }
-        std::printf("PALM defaults brightness=%d..%d offset=%.2f/%.2f\n",
+        if(KY50_ENABLE_PALM)std::printf("PALM defaults brightness=%d..%d offset=%.2f/%.2f\n",
             settings.at("handpose").at("brightness_threshold_min").get<int>(),
             settings.at("handpose").at("brightness_threshold_max").get<int>(),
             settings.at("handpose").at("horizontal_offset_tolerance").get<double>(),
@@ -50,17 +102,17 @@ extern "C" int handpose_start(const char *config)
         if(!pvacheckAuth(const_cast<char*>(key.c_str()))) {
             std::fprintf(stderr,"PALM device licence check failed: %s\n",key.c_str());return -1;
         }
-        ready=init_pva(const_cast<char*>(config));
+        ready=start_modules(config,settings);
         if(ready) {
             const char* mode=std::getenv("PVA_FACE_PREPROCESS");if(!mode)mode="direct";
-            if(std::strcmp(mode,"direct")&&std::strcmp(mode,"reference")&&std::strcmp(mode,"vpss")) {
+            if(face_enabled&&std::strcmp(mode,"direct")&&std::strcmp(mode,"reference")&&std::strcmp(mode,"vpss")) {
                 std::fprintf(stderr,"Invalid PVA_FACE_PREPROCESS: %s\n",mode);handpose_stop();return -1;
             }
             if(face_enabled&&!std::strcmp(mode,"vpss")&&!pvaSetFaceColorConverter(face_color_convert,nullptr)) {
                 handpose_stop();return -1;
             }
             std::printf("FACE_PREPROCESS mode=%s\n",mode);
-            std::printf("PVA ready: palm=IR Y, face=%s; unified init and serial worker\n",face_enabled?"RGB camera NV12":"disabled");
+
             return 0;
         }
     } catch(const std::exception& e) { std::fprintf(stderr,"PALM init: %s\n",e.what()); }
@@ -81,7 +133,15 @@ extern "C" int handpose_detect(uint8_t *yuv,uint16_t width,uint16_t height,HandP
 }
 extern "C" void handpose_stop(void)
 {
-    try { deinit_pva(); } catch(...) { std::fprintf(stderr,"PALM deinit failed\n"); }
+    try {
+#if KY50_ENABLE_PALM
+        deinit_pva();
+#else
+        if(face_enabled)deinitPvaFace();
+        if(finger_enabled)deinitPvaFingerprint();
+#endif
+    } catch(...) { std::fprintf(stderr,"PVA deinit failed\n"); }
+    if(!filtered_config.empty()){unlink(filtered_config.c_str());filtered_config.clear();}
     media_face_color_stop();
     ready=false;
 }
@@ -281,3 +341,38 @@ static int face_live_ir_region(const uint8_t *ir,uint16_t w,uint16_t h,const Pva
 extern "C" const FaceBackend ky50_face_backend={face_ids,face_exists,face_complete,face_remove,
     face_clear,face_capacity,face_features,face_enroll,face_recognize,face_pick_free,
     face_parameters_get,face_parameters_set,face_sample_capture,face_sample_features,face_sample_free,face_live_ir,face_live_ir_region};
+
+extern "C" int fingerprint_enabled(void) {return ready&&finger_enabled&&pvaGetFeatCapacityFingerprint()>0&&pvaGetFeatCapacityFingerprint()<=APP_FEATURE_BYTES;}
+static FingerprintSample_t finger_sample(const uint8_t *gray,uint16_t w,uint16_t h,uint64_t id) {
+    FingerprintSample_t s={};s.source_type=PVA_FINGERPRINT_SAMPLE_GRAY8;
+    s.image.data=gray;s.image.data_size=uint32_t(w)*h;s.image.width=w;s.image.height=h;s.image.stride=w;s.image.format=PVA_IMAGE_GRAY8;s.sample_id=id;return s;
+}
+static int finger_detect(const uint8_t *gray,uint16_t w,uint16_t h,uint64_t id,FingerprintRes_t *res) {
+    auto s=finger_sample(gray,w,h,id);
+    return pvaDetectFingerprint(&s,res);
+}
+static int finger_features(const uint8_t *gray,uint16_t w,uint16_t h,uint64_t id,FingerprintRes_t *res,uint8_t *out,uint32_t cap,uint32_t *size) {
+    auto s=finger_sample(gray,w,h,id);return pvaGetFingerprintFeat(&s,res,out,cap,size);
+}
+static int finger_ids(uint16_t *ids,int cap){return pvaDataBaseGetAllFingerprintIds(ids,cap);}
+static int finger_exists(uint16_t id){User_For_C_t u={};u.uuid=id;return pvaDataBaseExistUserFingerprint(&u)?1:0;}
+static int finger_complete(uint16_t id){
+    User_For_C_t u={};u.uuid=id;uint32_t cap=pvaDataBaseGetFeatSizeFingerprint(&u),size=0;
+    if(!cap)return 0;
+    if(cap>APP_TEMPLATE_BYTES)return -1;
+    std::vector<uint8_t> data(cap);bool ok=pvaDataBaseGetFeatFingerprint(&u,data.data(),cap,&size);
+    std::fill(data.begin(),data.end(),0);return ok&&size==cap?1:-1;
+}
+static int finger_remove(uint16_t id){return pvaDataBaseDeleteUserFingerprint(id)?0:-1;}
+static int finger_clear(void){return pvaClearRegisterBufferFingerprint()?0:-1;}
+static int finger_capacity(void){return pvaGetRegisterBufferCapacityFingerprint();}
+static int finger_free(void){uint16_t id=pvaDataBasePickFreeIdFingerprint();return id==UINT16_MAX?-1:id;}
+static int finger_enroll(User_For_C_t *u,const uint8_t *f,uint32_t size,ResgisRes_t *r){return pvaRegisterFingerprint(u,f,size,true,r)?0:-1;}
+static int finger_auth(const uint8_t *f,uint32_t size,User_For_C_t *u){return pvaGetAuthResFingerprint(f,size,u)?1:0;}
+static int finger_set_enrolling(int active){
+    const double ratio=active?0.20:0.15;
+    int rc=pvaSetMinAreaRatioFingerprint(ratio)?0:-1;
+    std::printf("FINGER_AREA mode=%s min_area_ratio=%.2f rc=%d\n",active?"enroll":"recognize",ratio,rc);
+    return rc;
+}
+extern "C" const FingerBackend ky50_finger_backend={finger_ids,finger_exists,finger_complete,finger_remove,finger_clear,finger_capacity,finger_free,finger_detect,finger_features,finger_enroll,finger_auth,finger_set_enrolling};

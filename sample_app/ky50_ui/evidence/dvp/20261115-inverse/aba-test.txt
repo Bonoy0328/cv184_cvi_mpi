@@ -1,0 +1,6 @@
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x00
+special_effect_after=0x00 inverse=0
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x00
+special_effect_after=0x00 inverse=0

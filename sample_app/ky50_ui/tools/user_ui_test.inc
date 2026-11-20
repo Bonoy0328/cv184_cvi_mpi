@@ -31,6 +31,14 @@ static int ui_face_parameters_set(const FaceParameters *p){ui_face_parameters=*p
 static int ui_live_ir(uint8_t *p,uint16_t w,uint16_t h){(void)p;(void)w;(void)h;return 1;}
 static const FaceBackend ui_face_backend={ui_face_ids,ui_face_exists,ui_face_exists,ui_face_remove,test_clear,
     ui_face_capacity,ui_face_features,ui_face_enroll,test_recognize,ui_face_pick_free,ui_face_parameters_get,ui_face_parameters_set,NULL,NULL,NULL,ui_live_ir,NULL};
+static int ui_finger_area;
+static int ui_finger_ids(uint16_t *ids,int cap){(void)ids;(void)cap;return 0;}
+static int ui_finger_exists(uint16_t id){(void)id;return 0;}
+static int ui_finger_capacity(void){return 50;}
+static int ui_finger_free(void){return 0;}
+static int ui_finger_gate(int active){ui_finger_area=active;return 0;}
+static const FingerBackend ui_finger_backend={.ids=ui_finger_ids,.exists=ui_finger_exists,.clear=test_clear,
+    .capacity=ui_finger_capacity,.pick_free=ui_finger_free,.set_enrolling=ui_finger_gate};
 static lv_obj_t *find_matrix(lv_obj_t *o)
 {
     if(lv_obj_check_type(o,&lv_buttonmatrix_class))return o;
@@ -48,7 +56,7 @@ static void tap_name_key(const char *label)
 }
 static void business_check(const char *images)
 {
-    char dir[]="/tmp/ky50-user-ui-XXXXXX",path[256];assert(mkdtemp(dir));assert(!access_open_biometrics(dir,&test_backend,&ui_face_backend));
+    char dir[]="/tmp/ky50-user-ui-XXXXXX",path[256];assert(mkdtemp(dir));assert(!access_open_modalities(dir,&test_backend,&ui_face_backend,&ui_finger_backend));
     AccessCommand policy={.type=ACCESS_APP_PARAMETERS,.app_parameters={5,5,5,1,0,0}};assert(!access_submit(&policy));access_poll(1);
     business_active=1;step();ui_show(UI_ADVANCED,0);step();tap(240,368);
     assert(ui_current_page()==UI_PARAMETERS);save(images,"parameters-default");
@@ -61,7 +69,7 @@ static void business_check(const char *images)
     tap(390,582);tap(390,582);tap(120,806);assert(ui_parameters.dynamic_level==4);
     for(int i=0;i<6;i++)tap(90,582);
     tap(120,806);assert(ui_parameters.dynamic_level==0);
-    access_close();ui_parameters=(PalmParameters){76,52,2};assert(!access_open_biometrics(dir,&test_backend,&ui_face_backend));step();
+    access_close();ui_parameters=(PalmParameters){76,52,2};assert(!access_open_modalities(dir,&test_backend,&ui_face_backend,&ui_finger_backend));step();
     ui_show(UI_PARAMETERS,0);step();assert(ui_parameters.hand_threshold==77&&ui_parameters.dynamic_level==0);save(images,"parameters-restarted");
     puts("PASS parameter touch: advanced route, +/- controls, save/apply, discard, limits, restart restore");
     tap(392,739);save(images,"face-parameters-detection-quality");
@@ -111,7 +119,7 @@ static void business_check(const char *images)
     tap(90,582);tap(120,806);assert(!app_config_load(dir,&app)&&app.strong_liveness==0);
     tap(390,582);tap(120,806);assert(!app_config_load(dir,&app)&&app.strong_liveness==1);
     access_close();ui_face_parameters=(FaceParameters){50,30,50,1,1,24,24};
-    assert(!access_open_biometrics(dir,&test_backend,&ui_face_backend));step();
+    assert(!access_open_modalities(dir,&test_backend,&ui_face_backend,&ui_finger_backend));step();
     assert(ui_face_parameters.detection_threshold==51&&ui_face_parameters.liveness_enable==1);
     assert(!app_config_load(dir,&app)&&app.palm_leave_frames==1&&app.face_leave_frames==6&&app.relay_seconds==6);
     assert(!app_config_load(dir,&app)&&app.match_confirmations==1&&app.success_cooldown_seconds==2&&app.strong_liveness==1);
@@ -127,12 +135,22 @@ static void business_check(const char *images)
     assert(!strcmp(user_ui_name_text(),"张Ab9"));save(images,"name-mixed");tap_name_key("确认");assert(ui_current_page()==UI_USER_TYPES);
     save(images,"user-types");tap(240,355);assert(ui_current_page()==UI_PALM_ENROLL);step();save(images,"face-start");
     uint8_t face_image[1]={0};HandPoseRes_t absent={0};FacePoseRes_t face_pose={0};
+    access_observe_finger(0,1,business_time);
     access_biometrics_frame(face_image,face_image,540,960,&absent,0,&face_pose,1,1,business_time+=1000);step();
     assert(ui_current_page()==UI_USER_TYPES&&ui_faces[0]);save(images,"face-complete");
     tap(240,455);assert(ui_current_page()==UI_PALM_ENROLL);step();save(images,"palm-start");
     uint8_t image[1]={0};HandPoseRes_t pose={0};
     for(int i=0;i<4;i++){access_frame(image,540,960,&pose,1,1,business_time+=1000);step();if(i==1)save(images,"palm-progress");}
-    assert(ui_current_page()==UI_USER_TYPES);save(images,"palm-complete");tap(50,100);assert(ui_current_page()==UI_USERS);save(images,"users-registered");
+    assert(ui_current_page()==UI_USER_TYPES);save(images,"palm-complete");
+    tap(240,555);assert(ui_current_page()==UI_PALM_ENROLL);step();
+    assert(ui_finger_area);save(images,"finger-fullscreen-start");
+    AccessSnapshot finger_state;access_snapshot(&finger_state,0);
+    assert(finger_state.registering&&finger_state.total==50);
+    finger_state.progress=10;finger_state.finger_enroll_phase=FINGER_WAIT_RELEASE;
+    snprintf(finger_state.message,sizeof(finger_state.message),"本轮10帧已采满，请抬起手指并等待2秒");
+    user_ui_update(&finger_state);business_active=0;step();save(images,"finger-fullscreen-release");business_active=1;
+    tap(50,100);step();assert(ui_current_page()==UI_USER_TYPES&&!ui_finger_area);
+    tap(50,100);assert(ui_current_page()==UI_USERS);save(images,"users-registered");
     /* Optional name and cancel registration. */
     tap(110,800);tap(90,395);tap(350,795);assert(ui_current_page()==UI_USER_NAME);tap_name_key("确认");assert(ui_current_page()==UI_USER_TYPES);
     tap(240,455);assert(ui_current_page()==UI_PALM_ENROLL);tap(50,100);step();assert(ui_current_page()==UI_USER_TYPES);

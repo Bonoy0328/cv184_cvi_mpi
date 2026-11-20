@@ -17,14 +17,15 @@ extern "C" {
 #define CREDENTIAL_FINGER 4u
 #define CREDENTIAL_CARD 8u
 #define CREDENTIAL_PASSWORD 16u
+#define APP_FINGER_MODEL_ID "cv184x-fingerprint-embed_p333-roi-20261116"
 enum credential_state { CRED_NONE, CRED_PENDING, CRED_REGISTERED, CRED_MISSING };
 typedef struct {
     int64_t record_id;
     uint16_t local_id;
     char employee_id[APP_EMPLOYEE_BYTES],name[APP_NAME_BYTES],avatar[APP_AVATAR_BYTES];
     unsigned registered;
-    int enabled,is_admin,deleting,palm_state,face_state;
-    int palm_uuid,face_uuid; /* -1: no template; each SDK namespace is independent. */
+    int enabled,is_admin,deleting,palm_state,face_state,finger_state;
+    int palm_uuid,face_uuid,finger_uuid; /* -1: no template; each SDK namespace is independent. */
 } AppUser;
 typedef struct { sqlite3 *db; char error[192]; } UserStore;
 typedef struct { uint16_t local_id; int deleting; unsigned modality; int template_uuid; } PendingOperation;
@@ -56,6 +57,8 @@ int store_create(UserStore *s,const char *employee,const char *name,AppUser *out
 int store_get_by_template(UserStore *s,unsigned kind,uint16_t template_uuid,AppUser *user);
 int store_templates_reset_pending(UserStore *s);
 int store_finish_templates_reset(UserStore *s);
+int store_fingerprint_reset_pending(UserStore *s);
+int store_finish_fingerprint_reset(UserStore *s);
 /* Modality-aware operations; wrappers below remain palm-only. */
 int store_prepare_enroll_kind(UserStore *s,uint16_t local_id,unsigned kind,uint16_t template_uuid);
 int store_finish_enroll_kind(UserStore *s,uint16_t local_id,int side,unsigned kind);

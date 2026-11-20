@@ -1,0 +1,11 @@
+{
+  "frames": 173,
+  "empty_no_finger": 118,
+  "finger_present": 55,
+  "finger_area_ok": 47,
+  "finger_area_small": 8,
+  "arm_host_geometry_equal": true,
+  "arm_host_artifact_differences": [],
+  "qualified_inputs_unchanged_from_baseline": true,
+  "empty_sample_batches": 2
+}

@@ -1,0 +1,3 @@
+4f4c08b6fc3f11d658f1f00851dd098826b99ec5bc1c622415fbd3b863ff2781  /tmp/gc0328_inverse_probe
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x00

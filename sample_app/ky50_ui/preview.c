@@ -1,3 +1,4 @@
+#include "ky50_features.h"
 /* Real LVGL renderer + real input callbacks, headless host verification. */
 #include "ui.h"
 #include <stdio.h>
@@ -136,14 +137,17 @@ int main(int argc,char **argv)
                 else if(k==7) assert(a==UI_ACTION_WHITE_LIGHT);
                 else if(k==8) assert(a==UI_ACTION_IR_LIGHT);
                 else if(k==9) assert(a==UI_ACTION_SPEAKER);
-                else if(k==13) assert(a==UI_ACTION_FACE_IR_CALIBRATE);
+                else if(k==13) assert(a==(KY50_ENABLE_FACE?UI_ACTION_FACE_IR_CALIBRATE:UI_ACTION_NONE));
                 else assert(a==UI_ACTION_NONE);
             }
-            ui_show(UI_FACE_IR_CALIBRATE,0);
-            FaceIrCalibrationStatus calibration={.state=FACE_IR_COLLECTING,.count=37};
-            snprintf(calibration.message,sizeof(calibration.message),"正在采集，请保持常用距离并缓慢小幅移动");
-            ui_face_ir_calibration_status(&calibration);step();save(dir,"face-ir-calibration");
-            tap(42,35);assert(ui_current_page()==UI_FACTORY);
+            assert(!!find_label(lv_screen_active(),"人脸双摄对齐")==KY50_ENABLE_FACE);
+            if(KY50_ENABLE_FACE) {
+                ui_show(UI_FACE_IR_CALIBRATE,0);
+                FaceIrCalibrationStatus calibration={.state=FACE_IR_COLLECTING,.count=37};
+                snprintf(calibration.message,sizeof(calibration.message),"正在采集，请保持常用距离并缓慢小幅移动");
+                ui_face_ir_calibration_status(&calibration);step();save(dir,"face-ir-calibration");
+                tap(42,35);assert(ui_current_page()==UI_FACTORY);
+            }
             lights_check(dir);rtsp_check(dir);
             tap(120,266);assert(ui_current_page()==UI_SCREEN_TEST);
             const unsigned colors[]={0xffff0000,0xff00ff00,0xff0000ff,0xffffffff,0xff000000,0xff808080};
@@ -164,6 +168,26 @@ int main(int argc,char **argv)
     tap(90,738);assert(!strcmp(ui_input_text(),""));
     for(int i=0;i<100;i++) {ui_show(UI_MENU,0);ui_show(UI_FEATURE,i%8);ui_show(UI_HOME,0);}
     ui_update(0,1794312000,0);step();save(dir,"disconnected");
-    clean_preview_check(dir);business_check(dir);
+    clean_preview_check(dir);
+    if(KY50_ENABLE_FACE&&KY50_ENABLE_PALM&&KY50_ENABLE_FINGERPRINT) {
+        business_check(dir);
+    } else {
+        char dbdir[]="/tmp/ky50-features-XXXXXX";
+        assert(mkdtemp(dbdir));
+        assert(!access_open_modalities(dbdir,KY50_ENABLE_PALM?&test_backend:NULL,
+            KY50_ENABLE_FACE?&ui_face_backend:NULL,KY50_ENABLE_FINGERPRINT?&ui_finger_backend:NULL));
+        business_active=1;
+        AccessCommand create={.type=ACCESS_CREATE,.employee_id="123"};
+        assert(!access_submit(&create));step();
+        ui_show(UI_USER_TYPES,0);step();
+        assert(!!find_label(lv_screen_active(),"人脸")==KY50_ENABLE_FACE);
+        assert(!!find_label(lv_screen_active(),"掌静脉")==KY50_ENABLE_PALM);
+        assert(!!find_label(lv_screen_active(),"指纹")==KY50_ENABLE_FINGERPRINT);
+        assert(find_label(lv_screen_active(),"卡"));
+        ui_show(UI_ADVANCED,0);step();
+        assert(!!find_label(lv_screen_active(),"参数设置")==KY50_BIOMETRICS);
+        access_close();business_active=0;
+        puts("PASS selected enrollment methods and parameter menu");
+    }
     ui_destroy();puts("PASS: alpha, UTC+8 midnight, 8 menu routes, real pointer callbacks, digits/delete/clear, 100 page cycles");return 0;
 }

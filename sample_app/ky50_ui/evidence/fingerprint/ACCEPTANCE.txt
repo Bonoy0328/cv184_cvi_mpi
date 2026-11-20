@@ -1,0 +1,5 @@
+2026-11-15 用户现场反馈：正常。
+范围：人脸/掌静脉/指纹识别、三者同时出现优先级、框跟随、提示、继电器、DVP注册方向、取消返回RGB。
+指纹灵敏度按要求暂缓，不作为本轮验收项。
+运行ELF SHA256=3528293d5b0fd79b221e0258e1758bd0afd60ff1d70ba2327afca4945971fcd7
+最终只读完整性：ok；users=1，registered_faces=1，registered_palms=1，registered_fingerprints=1；pending/invalid/duplicate=0；schema=4，journal_mode=wal。

@@ -1,0 +1,216 @@
+{
+  "tool": "TPU-MLIR v1.30.2-20260831",
+  "target": "cv184x",
+  "models": [
+    {
+      "default_accuracy_check_passed": true,
+      "compiled_model_correctness_passed": true,
+      "compiler_review": {
+        "subnet_modes": [
+          0
+        ],
+        "subnet_mode_reference": "/home/bonoy/CV184X_WS/SDK/libsophon/tpu-bmodel/model/model.fbs:120 (tpu:0 cpu:1)",
+        "cpu_subnet_count": 0,
+        "tpu_subnet_count": 1,
+        "operator_counts": {
+          "top.Input": 1,
+          "top.None": 1,
+          "top.Weight": 81,
+          "tpu.Lut": 28,
+          "tpu.Group": 3,
+          "tpu.Load": 81,
+          "tpu.Conv2D": 51,
+          "tpu.Store": 3,
+          "tpu.Yield": 3,
+          "tpu.Pool2D": 10,
+          "tpu.Mul": 9,
+          "tpu.Add": 6,
+          "tpu.Reshape": 1,
+          "tpu.MatMul": 1,
+          "tpu.Cast": 2,
+          "tpu.Reduce": 1,
+          "tpu.Clip": 1,
+          "tpu.Tile": 1,
+          "tpu.Div": 1
+        },
+        "bf16_present_in_l2_tail": true,
+        "external_output": "INT8 emb_int8 [1,128]",
+        "output_encoding": {
+          "operation": "replace terminal BF16-to-FP32 cast with calibrated BF16-to-INT8 cast",
+          "threshold_source": "2000-image emb_Div calibration table; no evaluation fitting",
+          "threshold": 0.3731401,
+          "scale": 0.0029381110236220472,
+          "zero_point": 0,
+          "dtype": "int8",
+          "name": "emb_int8"
+        },
+        "default_accuracy_tolerance": [
+          0.9,
+          0.8
+        ],
+        "default_accuracy_cosine_euclidean": [
+          0.9966058731079102,
+          0.9172901109490271
+        ],
+        "model_vs_tpu_mlir_tolerance": [
+          0.99,
+          0.9
+        ],
+        "model_vs_tpu_mlir_cosine_euclidean": [
+          0.9999174475669861,
+          0.9838822624849408
+        ],
+        "both_checks_passed": true,
+        "calibration_reused_without_changes": true
+      },
+      "model": "embed_p333",
+      "file": "embed_p333_cv184x_int8_u8in_q8out.bmodel",
+      "sha256": "182c052f74826cc1d9d853418a8575d2dd22507daa12e124141be8bfea363794",
+      "bytes": 1380352,
+      "original_onnx": "/home/bonoy/CV184X_WS/TPU_SDK/fingerprint_model/embed_p333.onnx",
+      "original_onnx_sha256": "65dcd948b51d929d87cc6187f80e3c6432ac53ca9f98b876a9c274d75122f4fa",
+      "calibration_count": 2000,
+      "evaluation_count": 500,
+      "input": {
+        "input_dtype": "uint8",
+        "input_name": "img_raw",
+        "input_shape": [
+          1,
+          1,
+          224,
+          224
+        ],
+        "input_bytes_per_sample": 50176,
+        "input_scale": 1,
+        "input_zero_point": 0
+      },
+      "output": {
+        "index": 0,
+        "name": "emb_int8",
+        "dtype": "int8",
+        "dtype_enum": 2,
+        "shape": [
+          1,
+          128
+        ],
+        "scale": 0.00293811108,
+        "zero_point": 0,
+        "bytes": 128,
+        "offset_bytes": 0
+      },
+      "normalization_fused": true,
+      "mean": 127.5,
+      "std": 127.5,
+      "customization_format": "GRAYSCALE",
+      "geometry": "INTER_AREA rescale ppi/500, center crop/pad white",
+      "ppi": 333,
+      "calibration_sensor_dpi": 500,
+      "report": "/home/bonoy/CV184X_WS/Doc/CV184X_\u6307\u7eb9\u6a21\u578b_embed_p333_\u91cf\u5316\u8bef\u5dee\u62a5\u544a_2000\u5f20_20261115.md"
+    },
+    {
+      "default_accuracy_check_passed": true,
+      "compiled_model_correctness_passed": true,
+      "compiler_review": {
+        "subnet_modes": [
+          0
+        ],
+        "subnet_mode_reference": "/home/bonoy/CV184X_WS/SDK/libsophon/tpu-bmodel/model/model.fbs:120 (tpu:0 cpu:1)",
+        "cpu_subnet_count": 0,
+        "tpu_subnet_count": 1,
+        "operator_counts": {
+          "top.Input": 1,
+          "top.None": 1,
+          "top.Weight": 81,
+          "tpu.Lut": 28,
+          "tpu.Group": 2,
+          "tpu.Load": 80,
+          "tpu.Conv2D": 51,
+          "tpu.Store": 2,
+          "tpu.Yield": 2,
+          "tpu.Pool2D": 10,
+          "tpu.Mul": 9,
+          "tpu.Add": 6,
+          "tpu.Reshape": 1,
+          "tpu.MatMul": 1,
+          "tpu.Cast": 2,
+          "tpu.Reduce": 1,
+          "tpu.Clip": 1,
+          "tpu.Tile": 1,
+          "tpu.Div": 1
+        },
+        "bf16_present_in_l2_tail": true,
+        "external_output": "INT8 emb_int8 [1,128]",
+        "output_encoding": {
+          "operation": "replace terminal BF16-to-FP32 cast with calibrated BF16-to-INT8 cast",
+          "threshold_source": "2000-image emb_Div calibration table; no evaluation fitting",
+          "threshold": 0.3866612,
+          "scale": 0.0030445763779527557,
+          "zero_point": 0,
+          "dtype": "int8",
+          "name": "emb_int8"
+        },
+        "default_accuracy_tolerance": [
+          0.9,
+          0.8
+        ],
+        "default_accuracy_cosine_euclidean": [
+          0.9952360987663269,
+          0.9021084278417049
+        ],
+        "model_vs_tpu_mlir_tolerance": [
+          0.99,
+          0.9
+        ],
+        "model_vs_tpu_mlir_cosine_euclidean": [
+          0.9999257922172546,
+          0.985105224054817
+        ],
+        "both_checks_passed": true,
+        "calibration_reused_without_changes": true
+      },
+      "model": "embed_w160b",
+      "file": "embed_w160b_cv184x_int8_u8in_q8out.bmodel",
+      "sha256": "5baf7934f4be1de6b8d2935eb233324a9018223907e26428bdf989a9bba2fad7",
+      "bytes": 1376256,
+      "original_onnx": "/home/bonoy/CV184X_WS/TPU_SDK/fingerprint_model/embed_w160b.onnx",
+      "original_onnx_sha256": "bf85b27e7626fc0b5260b5ee12d4585fa0401b1255beff06a6860c77fe95add7",
+      "calibration_count": 2000,
+      "evaluation_count": 500,
+      "input": {
+        "input_dtype": "uint8",
+        "input_name": "img_raw",
+        "input_shape": [
+          1,
+          1,
+          160,
+          160
+        ],
+        "input_bytes_per_sample": 25600,
+        "input_scale": 1,
+        "input_zero_point": 0
+      },
+      "output": {
+        "index": 0,
+        "name": "emb_int8",
+        "dtype": "int8",
+        "dtype_enum": 2,
+        "shape": [
+          1,
+          128
+        ],
+        "scale": 0.00304457638,
+        "zero_point": 0,
+        "bytes": 128,
+        "offset_bytes": 0
+      },
+      "normalization_fused": true,
+      "mean": 127.5,
+      "std": 127.5,
+      "customization_format": "GRAYSCALE",
+      "geometry": "user-confirmed SDK behavior: INTER_AREA fit long side to 160, center pad white",
+      "ppi": 0,
+      "calibration_sensor_dpi": 500,
+      "report": "/home/bonoy/CV184X_WS/Doc/CV184X_\u6307\u7eb9\u6a21\u578b_embed_w160b_\u91cf\u5316\u8bef\u5dee\u62a5\u544a_2000\u5f20_20261115.md"
+    }
+  ]
+}

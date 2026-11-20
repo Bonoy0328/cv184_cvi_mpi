@@ -130,7 +130,7 @@ static void discard_old_data(void)
     assert(!access_open_biometrics(dir,&palm,&face));access_snapshot(&snap,0);
     assert(!snap.ready&&!snap.count&&!hands[55]&&faces[77]);access_close();
     UserStore view;assert(!store_open(&view,path));
-    assert(scalar(view.db,"PRAGMA user_version")==3&&store_templates_reset_pending(&view)==1);
+    assert(scalar(view.db,"PRAGMA user_version")==4&&store_templates_reset_pending(&view)==1);
     assert(!scalar(view.db,"SELECT count(*) FROM users")&&!scalar(view.db,"SELECT count(*) FROM credentials"));
     assert(!scalar(view.db,"SELECT count(*) FROM attendance_events")&&!scalar(view.db,"SELECT count(*) FROM audit_events"));
     int target=0;assert(!store_ir_target_load(&view,&target)&&target==56);store_close(&view);
@@ -455,7 +455,7 @@ int main(void)
     assert(!access_open_biometrics(dir,&palm,&face));enroll_face(2);
     assert(!store_open(&view,path));assert(get_user(&view,1).face_state==CRED_MISSING&&get_user(&view,2).face_uuid==0);
     assert(!store_get_by_template(&view,CREDENTIAL_FACE,0,&mapped)&&mapped.local_id==2);
-    assert(scalar(view.db,"PRAGMA user_version")==3);store_close(&view);access_close();
+    assert(scalar(view.db,"PRAGMA user_version")==4);store_close(&view);access_close();
     clean_dir(dir);
     discard_old_data();
     rapid_reentry_checks();

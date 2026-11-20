@@ -34,6 +34,24 @@ static unsigned auth_epoch,observed_auth_epoch;
 static UserStore store;
 static const PalmBackend *palm;
 static const FaceBackend *face;
+static const FingerBackend *finger;
+static int observed_finger,finger_missing,finger_held,finger_latched,finger_candidates;
+static uint16_t finger_candidate;
+static uint64_t finger_observed_ms,finger_observed_id,finger_submitted_id,finger_unmatched;
+static uint8_t finger_press_features[FINGER_ENROLL_PER_PRESS][APP_FEATURE_BYTES];
+static uint32_t finger_press_sizes[FINGER_ENROLL_PER_PRESS];
+static int finger_presses_done,finger_press_count;
+static uint64_t finger_empty_since,finger_empty_last;
+#define FINGER_LEAVE_FRAMES 5
+static int finger_enrolling(void){return work.registering&&work.enrollment_modality==CREDENTIAL_FINGER;}
+/* Contact/lift tracking and authentication priority are separate. A small ROI
+ * (2 / status 108) cannot authenticate; it must not starve palm/face or cancel
+ * their work. It still counts as contact for enrollment and the success latch.
+ * Qualified fingerprints keep priority; unknown capture state stays blocked. */
+static int finger_blocks(void){return finger&&observed_finger!=0&&observed_finger!=2;}
+static void finger_complete(BioJob *job,uint64_t ms);
+static int user_uuid(const AppUser *u,unsigned kind){return kind==CREDENTIAL_FINGER?u->finger_uuid:kind==CREDENTIAL_FACE?u->face_uuid:u->palm_uuid;}
+static int user_state(const AppUser *u,unsigned kind){return kind==CREDENTIAL_FINGER?u->finger_state:kind==CREDENTIAL_FACE?u->face_state:u->palm_state;}
 static uint64_t face_next,face_unmatched,face_candidate_started;
 static uint16_t face_candidate;
 static int face_candidates,face_missing,face_held,face_latched;
@@ -54,8 +72,51 @@ static int hand_present,entry_streak,missing_streak,success_hold;
 static unsigned feature_total,auth_total,held_total;
 static void publish(void)
 {
-    work.verified_modalities=(success_hold?CREDENTIAL_PALM:0)|(face_held?CREDENTIAL_FACE:0);
+    work.verified_modalities=(success_hold?CREDENTIAL_PALM:0)|(face_held?CREDENTIAL_FACE:0)|(finger_held?CREDENTIAL_FINGER:0);
     pthread_mutex_lock(&lock);work.revision=shared.revision+1;shared=work;pthread_mutex_unlock(&lock);
+}
+static void finger_press_clear(void)
+{
+    memset(finger_press_features,0,sizeof(finger_press_features));
+    memset(finger_press_sizes,0,sizeof(finger_press_sizes));finger_press_count=0;
+    work.finger_enroll_samples=0;
+}
+static void finger_enroll_reset(void)
+{
+    finger_press_clear();finger_presses_done=0;finger_empty_since=finger_empty_last=0;
+    work.finger_enroll_phase=FINGER_WAIT_PRESS;work.finger_enroll_press=1;
+}
+static void finger_enroll_observe(int found,uint64_t ms)
+{
+    if(!finger_enrolling())return;
+    if(found<=0&&work.finger_enroll_phase==FINGER_COLLECT) {
+        /* Do not combine an incomplete press with a later press. SDK receives
+         * only whole ten-frame batches; roll back this press's UI progress. */
+        finger_press_clear();work.progress=finger_presses_done*FINGER_ENROLL_PER_PRESS;
+        work.finger_enroll_phase=FINGER_WAIT_RELEASE;
+        snprintf(work.message,sizeof(work.message),"本轮采集未完成，请抬起手指并等待2秒");publish();
+    }
+    if(found!=0){finger_empty_since=finger_empty_last=0;}
+    if(work.finger_enroll_phase==FINGER_WAIT_RELEASE&&found==0) {
+        if(!finger_empty_since||ms<finger_empty_last||ms-finger_empty_last>500)finger_empty_since=ms;
+        finger_empty_last=ms;
+        if(ms>=finger_empty_since&&ms-finger_empty_since>=2000) {
+            work.finger_enroll_phase=FINGER_WAIT_PRESS;
+            work.finger_enroll_press=finger_presses_done+1;
+            snprintf(work.message,sizeof(work.message),"请再次按压同一手指（第%d次，共5次）",finger_presses_done+1);
+            printf("FINGER_ENROLL released press=%d empty_ms=%llu\n",finger_presses_done+1,(unsigned long long)(ms-finger_empty_since));publish();
+        }
+    } else if(work.finger_enroll_phase==FINGER_WAIT_PRESS&&found>0) {
+        work.finger_enroll_phase=FINGER_COLLECT;
+        snprintf(work.message,sizeof(work.message),"正在采集第%d次按压，请保持手指不动",finger_presses_done+1);publish();
+    }
+}
+static int finger_enroll_restore(void)
+{
+    finger_enroll_reset();
+    int rc=finger&&finger->set_enrolling?finger->set_enrolling(0):-1;
+    if(rc){work.finger_ready=0;fprintf(stderr,"FINGER enrollment area restore failed\n");}
+    return rc;
 }
 static void recognized(unsigned modality,uint64_t ms)
 {
@@ -105,24 +166,29 @@ int access_snapshot(AccessSnapshot *s,unsigned previous)
 const char *access_data_directory(void){return data_directory;}
 static int template_exists(unsigned kind,uint16_t id)
 {
-    return kind==CREDENTIAL_FACE?(face?face->exists(id):-1):(palm?palm->exists(id):-1);
+    return kind==CREDENTIAL_FINGER?(finger?finger->exists(id):-1):kind==CREDENTIAL_FACE?(face?face->exists(id):-1):(palm?palm->exists(id):-1);
 }
 static int template_complete(unsigned kind,uint16_t id)
 {
-    return kind==CREDENTIAL_FACE?(face?face->complete(id):-1):(palm?palm->complete(id):-1);
+    return kind==CREDENTIAL_FINGER?(finger?finger->complete(id):-1):kind==CREDENTIAL_FACE?(face?face->complete(id):-1):(palm?palm->complete(id):-1);
 }
 static int delete_template_kind(unsigned kind,uint16_t id)
 {
     if(id>=APP_TEMPLATE_SLOTS)return -1;
     int exists=template_exists(kind,id);if(exists<0)return -1;
-    if(exists&&(kind==CREDENTIAL_FACE?face->remove(id):palm->remove(id)))return -1;
+    if(exists&&(kind==CREDENTIAL_FINGER?finger->remove(id):kind==CREDENTIAL_FACE?face->remove(id):palm->remove(id)))return -1;
     return template_exists(kind,id)==0?0:-1;
+}
+static int templates_available(const AppUser *u)
+{
+    return (u->palm_uuid<0||palm)&&(u->face_uuid<0||face)&&(u->finger_uuid<0||finger);
 }
 static int delete_all_templates(uint16_t local_id)
 {
     AppUser u;if(store_get(&store,local_id,&u))return -1;
     if(u.palm_uuid>=0&&delete_template_kind(CREDENTIAL_PALM,u.palm_uuid))return -1;
     if(u.face_uuid>=0&&delete_template_kind(CREDENTIAL_FACE,u.face_uuid))return -1;
+    if(u.finger_uuid>=0&&delete_template_kind(CREDENTIAL_FINGER,u.finger_uuid))return -1;
     return 0;
 }
 static int reset_old_templates(void)
@@ -140,6 +206,16 @@ static int reset_old_templates(void)
 }
 static int recover(void)
 {
+    if(finger) {
+        int reset=store_fingerprint_reset_pending(&store);if(reset<0)return -1;
+        if(reset) {
+            uint16_t ids[APP_TEMPLATE_SLOTS];int n=finger->ids(ids,APP_TEMPLATE_SLOTS);
+            if(n<0||n>APP_TEMPLATE_SLOTS||finger->clear())return -1;
+            for(int i=0;i<n;i++)if(delete_template_kind(CREDENTIAL_FINGER,ids[i]))return -1;
+            if(finger->ids(ids,APP_TEMPLATE_SLOTS)!=0||store_finish_fingerprint_reset(&store))return -1;
+            printf("FINGER_MIGRATION ROI contract applied; removed=%d old fingerprint templates; face/palm retained\n",n);
+        }
+    }
     int reset=store_templates_reset_pending(&store);
     if(reset<0||(reset&&reset_old_templates()))return -1;
     PendingOperation pending[APP_MAX_USERS];int n=store_pending(&store,pending,APP_MAX_USERS);
@@ -147,12 +223,15 @@ static int recover(void)
     for(int i=0;i<n;i++) {
         uint16_t id=pending[i].local_id;unsigned kind=pending[i].modality;
         if(pending[i].deleting) {
+            AppUser u;if(store_get(&store,id,&u))return -1;
+            if(!templates_available(&u))continue;
             if(delete_all_templates(id)||store_finish_delete(&store,id))return -1;
         } else {
             AppUser u;if(store_get(&store,id,&u))return -1;
             int template_uuid=pending[i].template_uuid;
             if(template_uuid<0||template_uuid>=APP_TEMPLATE_SLOTS||
-               template_uuid!=(kind==CREDENTIAL_FACE?u.face_uuid:u.palm_uuid))return -1;
+               template_uuid!=user_uuid(&u,kind))return -1;
+            if((kind==CREDENTIAL_PALM&&!palm)||(kind==CREDENTIAL_FACE&&!face)||(kind==CREDENTIAL_FINGER&&!finger))continue;
             int complete=template_complete(kind,template_uuid);
             if(complete<0)return -1;
             if(complete==1) {
@@ -161,28 +240,26 @@ static int recover(void)
         }
         printf("ACCESS recovered local_id=%u modality=%u template_uuid=%d operation=%s\n",id,kind,pending[i].template_uuid,pending[i].deleting?"delete":"enroll");
     }
-    refresh();uint8_t known[2][APP_TEMPLATE_SLOTS]={{0}};
+    refresh();uint8_t known[3][APP_TEMPLATE_SLOTS]={{0}};
+    const unsigned kinds[]={CREDENTIAL_PALM,CREDENTIAL_FACE,CREDENTIAL_FINGER};
+    const int enabled[]={!!palm,!!face,!!finger};
     for(int i=0;i<work.count;i++) {
         AppUser *u=&work.users[i];
-        for(int k=0;k<2;k++) {
-            int template_uuid=k?u->face_uuid:u->palm_uuid;
-            int state=k?u->face_state:u->palm_state;
-            if(template_uuid<0)continue;
-            if(template_uuid>=APP_TEMPLATE_SLOTS)return -1;
-            if((k?!!face:!!palm)&&state==CRED_REGISTERED) {
-                int exists=template_exists(k?CREDENTIAL_FACE:CREDENTIAL_PALM,template_uuid);if(exists<0)return -1;
-                if(!exists) {
-                    if(store_mark_missing_kind(&store,u->local_id,k?CREDENTIAL_FACE:CREDENTIAL_PALM))return -1;
-                    continue;
-                }
+        for(int k=0;k<3;k++) {
+            int id=user_uuid(u,kinds[k]);if(id<0)continue;
+            if(id>=APP_TEMPLATE_SLOTS)return -1;
+            if(enabled[k]&&user_state(u,kinds[k])==CRED_REGISTERED) {
+                int exists=template_exists(kinds[k],id);if(exists<0)return -1;
+                if(!exists){if(store_mark_missing_kind(&store,u->local_id,kinds[k]))return -1;continue;}
             }
-            known[k][template_uuid]=1;
+            known[k][id]=1;
         }
     }
     work.orphan_count=0;
-    for(int k=0;k<2;k++) {
-        if(k?!face:!palm)continue;
-        uint16_t ids[APP_TEMPLATE_SLOTS];n=k?face->ids(ids,APP_TEMPLATE_SLOTS):palm->ids(ids,APP_TEMPLATE_SLOTS);
+    for(int k=0;k<3;k++) {
+        if(!enabled[k])continue;
+        uint16_t ids[APP_TEMPLATE_SLOTS];
+        n=k==2?finger->ids(ids,APP_TEMPLATE_SLOTS):k==1?face->ids(ids,APP_TEMPLATE_SLOTS):palm->ids(ids,APP_TEMPLATE_SLOTS);
         if(n<0||n>APP_TEMPLATE_SLOTS)return -1;
         for(int i=0;i<n;i++)if(ids[i]>=APP_TEMPLATE_SLOTS||!known[k][ids[i]])++work.orphan_count;
     }
@@ -193,9 +270,13 @@ int access_open(const char *directory,const PalmBackend *backend)
     return access_open_biometrics(directory,backend,NULL);
 }
 int access_open_biometrics(const char *directory,const PalmBackend *backend,const FaceBackend *face_backend)
+{return access_open_modalities(directory,backend,face_backend,NULL);}
+int access_open_modalities(const char *directory,const PalmBackend *backend,const FaceBackend *face_backend,const FingerBackend *finger_backend)
 {
     trace_stall=getenv("KY50_TRACE_STALL")!=NULL;
-    face=face_backend;
+    face=face_backend;finger=finger_backend;
+    observed_finger=finger?-1:0;finger_missing=finger_held=finger_latched=finger_candidates=0;
+    finger_observed_ms=finger_observed_id=finger_submitted_id=finger_unmatched=0;
     ir_exposure_init(&exposure,NULL,-1);stored_ir_target=-1;
     ir_sample=(IrExposureSample){0};face_pair=(FaceIrPair){0};palm_submitted_sequence=0;
     memset(&work,0,sizeof(work));memset(&progress,0,sizeof(progress));
@@ -204,11 +285,13 @@ int access_open_biometrics(const char *directory,const PalmBackend *backend,cons
     if(mkdir(directory,0700)&&errno!=EEXIST)goto fail;
     char path[448];snprintf(path,sizeof(path),"%s/avatars",directory);if(mkdir(path,0700)&&errno!=EEXIST)goto fail;
     snprintf(path,sizeof(path),"%s/users.sqlite3",directory);if(store_open(&store,path))goto fail;
-    work.ready=1;work.palm_ready=!!palm;work.face_ready=!!face;
+    work.ready=1;work.palm_ready=!!palm;work.face_ready=!!face;work.finger_ready=!!finger;
+    finger_enroll_reset();
+    if(finger&&(!finger->set_enrolling||finger->set_enrolling(0)))work.finger_ready=0;
     if(recover()) {
         /* Keep incomplete operations visible and reserved. Recognition stays
          * disabled until consistent storage is available. */
-        work.ready=work.face_ready=work.palm_ready=0;snprintf(work.message,sizeof(work.message),"数据库操作待恢复，请重启重试");
+        work.ready=work.face_ready=work.palm_ready=work.finger_ready=0;snprintf(work.message,sizeof(work.message),"数据库操作待恢复，请重启重试");
     } else snprintf(work.message,sizeof(work.message),work.orphan_count?"发现未绑定模板，已保留":"用户数据已就绪");
     if(palm&&palm->parameters_get&&palm->parameters_set&&
        !palm->parameters_get(&work.parameters)&&palm_parameters_valid(&work.parameters)) {
@@ -257,7 +340,7 @@ int access_open_biometrics(const char *directory,const PalmBackend *backend,cons
     feature_total=auth_total=held_total=0;
     publish();return 0;
 fail:
-    work.ready=work.palm_ready=work.face_ready=0;snprintf(work.message,sizeof(work.message),"用户数据库不可用，请检查存储");publish();return -1;
+    work.ready=work.palm_ready=work.face_ready=work.finger_ready=0;snprintf(work.message,sizeof(work.message),"用户数据库不可用，请检查存储");publish();return -1;
 }
 static int cancel(const char *reason)
 {
@@ -265,7 +348,7 @@ static int cancel(const char *reason)
     uint16_t id=enrolling.local_id;
     work.registering=0;work.progress=work.total=0;progress=(ResgisRes_t){0};
     unsigned kind=work.enrollment_modality;
-    if(enrollment_is_face()){if(face)face->clear();}else if(palm)palm->clear();
+    if(kind==CREDENTIAL_FINGER){if(finger)finger->clear();finger_enroll_restore();}else if(enrollment_is_face()){if(face)face->clear();}else if(palm)palm->clear();
     if(delete_template_kind(kind,enrolling_template_uuid)||store_cancel_enroll_kind(&store,id,reason,kind)) {
         work.palm_ready=work.face_ready=0;event(ACCESS_EVENT_ERROR,id,"取消待恢复，请重启重试");return -1;
     }
@@ -273,14 +356,14 @@ static int cancel(const char *reason)
 }
 int access_start_async(void)
 {
-    if(bio_worker_start(palm,face))return -1;
+    if(bio_worker_start_modalities(palm,face,finger))return -1;
     async_enabled=1;palm_quality_ms=face_quality_ms=0;
     observed_hand=observed_face=-1;observed_hand_ms=observed_face_ms=maintenance_ms=0;return 0;
 }
 void access_close(void)
 {
     if(async_enabled){bio_worker_stop();async_enabled=0;}
-    cancel("application shutdown");store_close(&store);palm=NULL;face=NULL;
+    cancel("application shutdown");store_close(&store);palm=NULL;face=NULL;finger=NULL;
     ir_exposure_init(&exposure,NULL,-1);
 }
 void access_set_exposure_backend(const IrExposureBackend *backend)
@@ -296,7 +379,7 @@ void access_set_ir_sample(const IrExposureSample *sample)
 {
     ir_sample=sample?*sample:(IrExposureSample){0};
 }
-void access_detection_gap(void){observed_hand=observed_face=-1;observed_hand_ms=observed_face_ms=0;if(async_enabled)bio_worker_cancel(0);palm_quality_ms=face_quality_ms=0;entry_streak=missing_streak=0;face_candidates=face_missing=0;face_unmatched=0;}
+void access_detection_gap(void){finger_enroll_observe(-1,0);observed_finger=finger?-1:0;finger_observed_ms=0;finger_missing=finger_candidates=0;finger_unmatched=0;observed_hand=observed_face=-1;observed_hand_ms=observed_face_ms=0;if(async_enabled)bio_worker_cancel(0);palm_quality_ms=face_quality_ms=0;entry_streak=missing_streak=0;face_candidates=face_missing=0;face_unmatched=0;}
 void access_exposure_reset(void){ir_exposure_reset(&exposure);access_detection_gap();}
 void access_log_pipeline(void)
 {
@@ -360,13 +443,13 @@ static void set_app_parameters(const AppParameters *p)
     if(!work.ready||!work.app_parameters_ready)message="主应用配置不可用";
     else if(work.registering)message="注册进行中，请完成后再修改";
     else if(!app_parameters_valid(p))message="参数超出允许范围，请检查";
-    else if(p->strong_liveness&&(!face||!face->live_ir||!work.face_ready))message="红外人脸活体接口不可用";
+    else if(p->strong_liveness&&p->strong_liveness!=work.app_parameters.strong_liveness&&(!face||!face->live_ir||!work.face_ready))message="红外人脸活体接口不可用";
     else if(app_config_save(data_directory,p))message="保存失败，原参数仍生效";
     else {
         work.app_parameters=*p;rc=0;
-        candidate_count=face_candidates=0;face_candidate_started=0;
+        candidate_count=face_candidates=finger_candidates=0;face_candidate_started=0;
         /* Start a fresh streak under the new thresholds; saving never unlocks auth. */
-        missing_streak=face_missing=0;
+        missing_streak=face_missing=finger_missing=0;
         printf("ACCESS application saved palm=%d face=%d relay_seconds=%d match_confirmations=%d success_cooldown_seconds=%d strong_liveness=%d config=%s/app.conf\n",
             p->palm_leave_frames,p->face_leave_frames,p->relay_seconds,p->match_confirmations,p->success_cooldown_seconds,p->strong_liveness,data_directory);
     }
@@ -378,8 +461,8 @@ void access_poll(uint64_t ms)
     async_quiescing=0;
     pthread_mutex_lock(&lock);int recognize=auth_enabled;unsigned epoch=auth_epoch;pthread_mutex_unlock(&lock);
     if(async_enabled&&epoch!=observed_auth_epoch){bio_worker_cancel(0);observed_auth_epoch=epoch;}
-    if(async_enabled&&!recognize&&!work.registering)bio_worker_cancel(CREDENTIAL_FACE);
-    if(!recognize){candidate_count=latched=0;unmatched_since=0;face_candidates=face_latched=0;face_unmatched=0;}
+    if(async_enabled&&!recognize&&!work.registering){bio_worker_cancel(CREDENTIAL_FACE);bio_worker_cancel(CREDENTIAL_FINGER);}
+    if(!recognize){finger_candidates=0;finger_unmatched=0;candidate_count=latched=0;unmatched_since=0;face_candidates=face_latched=0;face_unmatched=0;}
     if(*work.recognition&&(!recognize||ms-last_event>2500)) {
         work.matched=0;work.recognition[0]=0;publish();
     }
@@ -407,39 +490,47 @@ void access_poll(uint64_t ms)
     } else if(c.type==ACCESS_ENROLL) {
         if(cancel("new registration"))goto finished;
         unsigned kind=c.modality?c.modality:CREDENTIAL_PALM;
-        int is_face=kind==CREDENTIAL_FACE;
-        if((kind!=CREDENTIAL_PALM&&!is_face)||(is_face?(!work.face_ready||!face):(!work.palm_ready||!palm))) {
-            work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,is_face?"人脸算法不可用":"掌静脉算法不可用");return;
+        int is_face=kind==CREDENTIAL_FACE,is_finger=kind==CREDENTIAL_FINGER;
+        if((kind!=CREDENTIAL_PALM&&!is_face&&!is_finger)||(is_finger?(!work.finger_ready||!finger):is_face?(!work.face_ready||!face):(!work.palm_ready||!palm))) {
+            work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,is_finger?"指纹算法不可用":is_face?"人脸算法不可用":"掌静脉算法不可用");return;
         }
         if(store_get(&store,c.local_id,&enrolling)||enrolling.deleting) {
             work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,"用户不存在或正在删除");return;
         }
-        if((is_face?enrolling.face_state:enrolling.palm_state)==CRED_REGISTERED||
-           (is_face?enrolling.face_state:enrolling.palm_state)==CRED_PENDING) {
+        if(user_state(&enrolling,kind)==CRED_REGISTERED||
+           user_state(&enrolling,kind)==CRED_PENDING) {
             work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,"该方式已注册或模板不可用，请勿重复注册");return;
         }
-        int template_uuid=is_face?(face->pick_free?face->pick_free():-1):(palm->pick_free?palm->pick_free():-1);
+        int template_uuid=is_finger?finger->pick_free():is_face?(face->pick_free?face->pick_free():-1):(palm->pick_free?palm->pick_free():-1);
         if(template_uuid<0||template_uuid>=APP_TEMPLATE_SLOTS||template_exists(kind,template_uuid)!=0) {
             work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,"该方式模板库已满或编号查询失败");return;
         }
-        int capacity=is_face?face->capacity():palm->capacity();
-        if(capacity<=0||(is_face?face->clear():palm->clear())||store_prepare_enroll_kind(&store,c.local_id,kind,template_uuid)) {
+        int capacity=is_finger?finger->capacity():is_face?face->capacity():palm->capacity();
+        if(capacity<=0||(is_finger&&capacity!=FINGER_ENROLL_TOTAL)||(is_finger?finger->clear():is_face?face->clear():palm->clear())) {
             work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,"无法开始注册，请重试");return;
         }
+        if(is_finger&&(!finger->set_enrolling||finger->set_enrolling(1))) {
+            finger_enroll_restore();work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,"指纹注册参数设置失败");return;
+        }
+        if(store_prepare_enroll_kind(&store,c.local_id,kind,template_uuid)) {
+            if(is_finger)finger_enroll_restore();
+            work.busy=0;event(ACCESS_EVENT_ERROR,c.local_id,"无法开始注册，请重试");return;
+        }
+        if(is_finger)finger_enroll_reset();
         progress=(ResgisRes_t){.status=STATUS_IN_REGISING,.total=capacity};
         enrolling_template_uuid=template_uuid;
-        printf("ACCESS enroll begin local_id=%u modality=%s template_uuid=%u\n",c.local_id,is_face?"face":"palm",enrolling_template_uuid);
+        printf("ACCESS enroll begin local_id=%u modality=%s template_uuid=%u\n",c.local_id,is_finger?"fingerprint":is_face?"face":"palm",enrolling_template_uuid);
         work.enrollment_modality=kind;
         work.registering=1;work.selected_id=c.local_id;work.progress=0;work.total=capacity;work.status=STATUS_FAILED;
         work.matched=0;work.recognition[0]=0;session_started=ms;next_feature=face_next=0;
-        snprintf(work.message,sizeof(work.message),"%s",is_face?"请正对摄像头，并移开手掌":"请将手掌放入画面，手指朝上");refresh();
+        snprintf(work.message,sizeof(work.message),"%s",is_finger?"请将同一手指放在指纹采集区":is_face?"请正对摄像头，并移开手掌":"请将手掌放入画面，手指朝上");refresh();
     } else if(c.type==ACCESS_CANCEL) {
         cancel("user cancelled");
     } else if(c.type==ACCESS_DELETE) {
         if(cancel("user deletion"))goto finished;
         int failed=0,deleted=0;
         for(int i=0;i<c.count;i++) {
-            AppUser u;if(store_get(&store,c.ids[i],&u)){failed++;continue;}
+            AppUser u;if(store_get(&store,c.ids[i],&u)||!templates_available(&u)){failed++;continue;}
             if(store_prepare_delete(&store,u.local_id)||delete_all_templates(u.local_id)||store_finish_delete(&store,u.local_id)){failed++;continue;}
             ++deleted;printf("ACCESS deleted local_id=%u\n",u.local_id);
         }
@@ -505,7 +596,7 @@ static int palm_feature_complete(HandPoseRes_t *pose,uint8_t *feat,int result,in
     ir_exposure_feedback(&exposure,found,pose->status,ms,sample);
     if(pose->status!=STATUS_OK) {
         candidate_count=0;unmatched_since=0;
-        if(work.registering&&!face_enrolling()&&work.status!=pose->status){work.status=pose->status;snprintf(work.message,sizeof(work.message),"%s",quality(pose->status));publish();}
+        if(work.registering&&work.enrollment_modality==CREDENTIAL_PALM&&work.status!=pose->status){work.status=pose->status;snprintf(work.message,sizeof(work.message),"%s",quality(pose->status));publish();}
         memset(feat,0,APP_FEATURE_BYTES);return 1;
     }
     int recognize;pthread_mutex_lock(&lock);recognize=auth_enabled;pthread_mutex_unlock(&lock);
@@ -514,7 +605,7 @@ static int palm_feature_complete(HandPoseRes_t *pose,uint8_t *feat,int result,in
        (work.registering&&!rgb_preview)||(!work.registering&&latched)||ms<next_feature) {
         memset(feat,0,APP_FEATURE_BYTES);return 1;
     }
-    if(face_enrolling()){memset(feat,0,APP_FEATURE_BYTES);return 1;}
+    if(face_enrolling()||finger_enrolling()||finger_blocks()){memset(feat,0,APP_FEATURE_BYTES);return 1;}
     /* Sequential independent async images already bound sampling. Keep the
      * original pacing for enrollment and the synchronous compatibility path. */
     next_feature=ms+((async_enabled&&!work.registering)?0:180);
@@ -553,7 +644,7 @@ static int palm_feature_complete(HandPoseRes_t *pose,uint8_t *feat,int result,in
 }
 static void palm_schedule(uint8_t *yuv,uint16_t w,uint16_t h,const HandPoseRes_t *pose,int rgb_preview,uint64_t ms)
 {
-    if(async_quiescing||!hand_present||!palm||!work.ready||!work.palm_ready||
+    if(finger_blocks()||finger_enrolling()||async_quiescing||!hand_present||!palm||!work.ready||!work.palm_ready||
        (ir_sample.valid&&ir_sample.sequence<=palm_submitted_sequence))return;
     int recognize;pthread_mutex_lock(&lock);recognize=auth_enabled;pthread_mutex_unlock(&lock);
     int combined=!work.registering&&recognize&&!success_hold&&!latched&&ms>=next_feature;
@@ -564,7 +655,7 @@ static void palm_schedule(uint8_t *yuv,uint16_t w,uint16_t h,const HandPoseRes_t
 }
 int access_frame(uint8_t *yuv,uint16_t w,uint16_t h,HandPoseRes_t *pose,int found,int rgb_preview,uint64_t ms)
 {
-    if(!pose||found<0){access_detection_gap();return 0;}
+    if(!pose||found<0){entry_streak=missing_streak=0;candidate_count=0;return 0;}
     if(found<=0) {
         entry_streak=0;
         if(hand_present&&++missing_streak>=work.app_parameters.palm_leave_frames) {
@@ -575,7 +666,7 @@ int access_frame(uint8_t *yuv,uint16_t w,uint16_t h,HandPoseRes_t *pose,int foun
             publish();
         }
         ir_exposure_feedback(&exposure,found,pose->status,ms,&ir_sample);
-        if(work.registering&&!face_enrolling()&&work.status!=STATUS_FAILED){work.status=STATUS_FAILED;snprintf(work.message,sizeof(work.message),"请将手掌放入画面");publish();}
+        if(work.registering&&work.enrollment_modality==CREDENTIAL_PALM&&work.status!=STATUS_FAILED){work.status=STATUS_FAILED;snprintf(work.message,sizeof(work.message),"请将手掌放入画面");publish();}
         if(!work.registering&&work.matched&&ms-last_event>2500){work.matched=0;work.recognition[0]=0;publish();}
         return 0;
     }
@@ -595,6 +686,7 @@ int access_frame(uint8_t *yuv,uint16_t w,uint16_t h,HandPoseRes_t *pose,int foun
         pose->status=palm_quality_ms&&ms-palm_quality_ms<1000?palm_quality_status:-1;
         return 1;
     }
+    if(finger_blocks()||finger_enrolling())return 1;
     uint8_t feat[APP_FEATURE_BYTES]={0};++feature_total;
     uint64_t begin=access_us();int result=palm->features(yuv,w,h,pose,feat);
     trace_stage("palm","feature",begin,result);
@@ -679,7 +771,7 @@ static void face_feature_complete(FacePoseRes_t *pose,uint8_t *feat,int result,c
 static void face_schedule(uint8_t *ir,uint8_t *nv12,uint16_t w,uint16_t h,FacePoseRes_t *pose,int rgb_preview,uint64_t ms)
 {
     int recognize;pthread_mutex_lock(&lock);recognize=auth_enabled;pthread_mutex_unlock(&lock);
-    if(work.registering&&!face_enrolling())return;
+    if(finger_blocks()||(work.registering&&!face_enrolling()))return;
     if(!work.registering&&(!recognize||face_held||face_latched))return;
     if((work.registering&&!rgb_preview)||ms<face_next)return;
     if(async_enabled) {
@@ -720,7 +812,7 @@ static void face_frame(uint8_t *ir,uint8_t *nv12,uint16_t w,uint16_t h,FacePoseR
     } else face_missing=0;
     /* Unknown IR is not permission to fall back to face recognition. Drawing
      * is independent and still uses the raw RGB Pose result. */
-    if(raw_hand!=0||found<=0||!face||!work.face_ready||!work.ready) {
+    if(finger_blocks()||raw_hand!=0||found<=0||!face||!work.face_ready||!work.ready) {
         face_candidates=0;face_unmatched=0;
         if(face_enrolling()) {
             snprintf(work.message,sizeof(work.message),"%s",raw_hand>0?"请移开手掌后注册人脸":raw_hand<0?"红外采集异常，请稍候":"请将人脸放入画面");publish();
@@ -751,14 +843,17 @@ int access_consume_results(uint64_t ms)
     if(bio_worker_take(&result)) {
         int valid=!async_quiescing&&ms>=result.submitted_ms&&ms-result.submitted_ms<=1500&&
             observed_hand_ms&&ms>=observed_hand_ms&&ms-observed_hand_ms<=250;
-        if(result.kind==CREDENTIAL_PALM)valid=valid&&observed_hand>0&&hand_present;
-        else valid=valid&&observed_hand==0&&observed_face>0&&
+        if(result.kind==CREDENTIAL_FINGER)valid=!async_quiescing&&ms>=result.submitted_ms&&ms-result.submitted_ms<=1500&&
+            observed_finger==1&&finger_observed_ms&&ms>=finger_observed_ms&&ms-finger_observed_ms<=250;
+        else if(result.kind==CREDENTIAL_PALM)valid=valid&&!finger_blocks()&&observed_hand>0&&hand_present;
+        else valid=valid&&!finger_blocks()&&observed_hand==0&&observed_face>0&&
             observed_face_ms&&ms>=observed_face_ms&&ms-observed_face_ms<=250;
         if(trace_stall)printf("BIO_RESULT modality=%s valid=%d wait_us=%llu age_ms=%llu\n",
-            result.kind==CREDENTIAL_FACE?"face":"palm",valid,
+            result.kind==CREDENTIAL_FINGER?"fingerprint":result.kind==CREDENTIAL_FACE?"face":"palm",valid,
             (unsigned long long)(access_us()-result.completed_us),(unsigned long long)(ms-result.submitted_ms));
         if(valid&&result.stage!=BIO_AUTH) {
-            if(result.kind==CREDENTIAL_PALM) {
+            if(result.kind==CREDENTIAL_FINGER)finger_complete(&result,ms);
+            else if(result.kind==CREDENTIAL_PALM) {
                 palm_feature_complete(&result.hand,result.feature,result.result,result.rgb_preview,&result.ir_sample,
                     result.stage==BIO_PALM_RECOGNIZE?&result:NULL,ms);
                 palm_quality_status=result.hand.status;palm_quality_ms=ms;
@@ -778,7 +873,7 @@ int access_consume_results(uint64_t ms)
 }
 void access_idle_maintenance(uint64_t ms)
 {
-    if(!store.db||work.registering||observed_hand!=0||observed_face!=0||
+    if(!store.db||work.registering||finger_blocks()||observed_hand!=0||observed_face!=0||
        (async_enabled&&bio_worker_busy())||ms<maintenance_ms)return;
     maintenance_ms=ms+1000;
     store_checkpoint(&store,0);
@@ -808,5 +903,127 @@ void access_biometrics_frame(uint8_t *ir,uint8_t *nv12,uint16_t w,uint16_t h,
         if(face_found>0&&hand_found==0&&face_quality_ms&&ms-face_quality_ms<1000) {
             pose->status=face_quality_status;pose->sharpness=face_quality_sharpness;
         }
+    }
+}
+
+void access_observe_finger(int found,uint64_t id,uint64_t ms)
+{
+    if(!finger)return;
+    if(!id||found<0) {
+        finger_enroll_observe(-1,ms);
+        observed_finger=-1;finger_observed_ms=0;finger_missing=finger_candidates=0;
+    } else {
+        if(id==finger_observed_id)return; /* A copied/stalled frame is not another observation. */
+        finger_observed_id=id;finger_observed_ms=ms;observed_finger=found;
+        finger_enroll_observe(found,ms);
+        if(finger_enrolling()&&work.finger_enroll_phase==FINGER_COLLECT) {
+            int quality=found==2?STATUS_FINGERPRINT_AREA_TOO_SMALL:found==1?STATUS_OK:STATUS_FAILED;
+            if(found>0&&work.status!=quality) {
+                work.status=quality;
+                snprintf(work.message,sizeof(work.message),"%s",found==2?"接触面积不足，请完整按压手指":"正在采集，请保持同一手指不动");publish();
+            }
+        }
+        if(found>0)finger_missing=0;
+        else {
+            finger_candidates=0;finger_unmatched=0;
+            if(finger_missing<FINGER_LEAVE_FRAMES&&++finger_missing==FINGER_LEAVE_FRAMES) {
+                finger_held=finger_latched=0;publish();
+                printf("FINGER_SESSION left false_frames=%d\n",finger_missing);
+            }
+        }
+    }
+    if(async_enabled) {
+        if(observed_finger!=1)bio_worker_cancel(CREDENTIAL_FINGER);
+        if(finger_blocks()){bio_worker_cancel(CREDENTIAL_PALM);bio_worker_cancel(CREDENTIAL_FACE);}
+    }
+    if(finger_blocks()){candidate_count=face_candidates=0;palm_quality_ms=face_quality_ms=0;}
+}
+static void finger_complete(BioJob *job,uint64_t ms)
+{
+    if(job->result!=STATUS_OK||job->finger.status!=STATUS_OK||!job->feature_size||job->feature_size>APP_FEATURE_BYTES) {
+        finger_candidates=0;
+        if(finger_enrolling()) {
+            work.status=job->result;snprintf(work.message,sizeof(work.message),"%s",job->result==STATUS_FINGERPRINT_AREA_TOO_SMALL?"接触面积不足，请完整按压手指":"指纹采集失败，请调整手指");publish();
+        }
+        return;
+    }
+    if(finger_enrolling()) {
+        if(work.finger_enroll_phase!=FINGER_COLLECT||finger_press_count>=FINGER_ENROLL_PER_PRESS)return;
+        memcpy(finger_press_features[finger_press_count],job->feature,job->feature_size);
+        finger_press_sizes[finger_press_count++]=job->feature_size;
+        work.finger_enroll_samples=finger_press_count;
+        work.progress=finger_presses_done*FINGER_ENROLL_PER_PRESS+finger_press_count;
+        work.total=FINGER_ENROLL_TOTAL;
+        if(finger_press_count<FINGER_ENROLL_PER_PRESS) {publish();return;}
+        User_For_C_t user={.uuid=enrolling_template_uuid,.isAdmin=enrolling.is_admin};
+        app_utf8_copy(user.userName,sizeof(user.userName),enrolling.name);
+        for(int i=0;i<FINGER_ENROLL_PER_PRESS;i++) {
+            if(finger->enroll(&user,finger_press_features[i],finger_press_sizes[i],&progress))progress.status=STATUS_REGIS_FAILED;
+            int expected=finger_presses_done*FINGER_ENROLL_PER_PRESS+i+1;
+            if((progress.status==STATUS_IN_REGISING||progress.status==STATUS_REGIS_SUCCESS)&&
+               (progress.total!=FINGER_ENROLL_TOTAL||progress.progress!=expected||
+                (progress.status==STATUS_REGIS_SUCCESS)!=(expected==FINGER_ENROLL_TOTAL)))progress.status=STATUS_REGIS_FAILED;
+            if(progress.status!=STATUS_IN_REGISING&&progress.status!=STATUS_REGIS_SUCCESS)break;
+        }
+        finger_press_clear();
+        work.status=progress.status;work.progress=progress.progress;work.total=progress.total;
+        if(progress.status==STATUS_REGIS_SUCCESS) {
+            uint16_t id=enrolling.local_id;work.registering=0;finger->clear();
+            printf("FINGER_ENROLL success local_id=%u fingerprint_uuid=%u progress=%d/%d presses=5\n",id,enrolling_template_uuid,progress.progress,progress.total);
+            int restored=finger_enroll_restore();
+            if(finger->complete(enrolling_template_uuid)!=1||store_finish_enroll_kind(&store,id,-1,CREDENTIAL_FINGER)) {
+                work.finger_ready=0;event(ACCESS_EVENT_ERROR,id,"指纹注册保存待恢复，请重启重试");
+            } else event(restored?ACCESS_EVENT_ERROR:ACCESS_EVENT_ENROLLED,id,restored?"指纹已保存，参数恢复失败，请重启":"指纹注册成功");
+        } else if(progress.status==STATUS_REGIS_FAILED||progress.status==STATUS_REGIS_FAILED_ALREADY_REGIS||progress.status==STATUS_REGIS_FAILED_MULTIY_REGIS) {
+            int status=progress.status;cancel("fingerprint enrollment rejected");
+            event(ACCESS_EVENT_ERROR,enrolling.local_id,status==STATUS_REGIS_FAILED_ALREADY_REGIS?"该指纹已注册，请勿重复注册":"指纹注册失败，请重试");
+        } else if(progress.status==STATUS_IN_REGISING) {
+            ++finger_presses_done;work.finger_enroll_phase=FINGER_WAIT_RELEASE;
+            finger_empty_since=finger_empty_last=0;
+            snprintf(work.message,sizeof(work.message),"本轮10帧已采满，请抬起手指并等待2秒");
+            printf("FINGER_ENROLL press_complete=%d progress=%d/50\n",finger_presses_done,work.progress);publish();
+        } else {cancel("fingerprint unexpected status");event(ACCESS_EVENT_ERROR,enrolling.local_id,"指纹注册失败，请重试");}
+        return;
+    }
+    pthread_mutex_lock(&lock);int enabled=auth_enabled;pthread_mutex_unlock(&lock);
+    if(!enabled||work.registering||finger_held||finger_latched||!job->auth_ran)return;
+    AppUser u;
+    int matched=job->auth_result>0&&!store_get_by_template(&store,CREDENTIAL_FINGER,job->user.uuid,&u)&&
+        u.enabled&&!u.deleting&&u.finger_state==CRED_REGISTERED;
+    if(matched) {
+        finger_unmatched=0;
+        if(!finger_candidates||finger_candidate!=job->user.uuid){finger_candidate=job->user.uuid;finger_candidates=1;}else ++finger_candidates;
+        if(finger_candidates>=work.app_parameters.match_confirmations&&!success_cooldown_remaining(ms)) {
+            uint64_t begin=access_us();int rc=store_record_match_kind(&store,&u,job->user.targetDist,ms,CREDENTIAL_FINGER);
+            trace_stage("fingerprint","attendance",begin,rc);
+            if(rc)snprintf(work.recognition,sizeof(work.recognition),"识别成功，记录保存失败");
+            else snprintf(work.recognition,sizeof(work.recognition),"指纹识别成功  %s\n工号 %s",*u.name?u.name:"未设置姓名",u.employee_id);
+            work.matched=1;work.score=job->user.targetDist;last_event=ms;finger_held=finger_latched=1;
+            recognized(CREDENTIAL_FINGER,ms);
+            printf("ACCESS fingerprint match local_id=%u finger_uuid=%u score=%.4f samples=%d\n",u.local_id,job->user.uuid,job->user.targetDist,finger_candidates);
+        }
+    } else {
+        finger_candidates=0;if(!finger_unmatched)finger_unmatched=ms;
+        if(ms-finger_unmatched>2000&&ms-last_event>=3000) {
+            store_record_unknown_kind(&store,ms,CREDENTIAL_FINGER);
+            snprintf(work.recognition,sizeof(work.recognition),"未识别到已注册用户");work.matched=-1;last_event=ms;finger_latched=1;publish();
+        }
+    }
+}
+void access_fingerprint_frame(const uint8_t *gray,uint16_t w,uint16_t h,uint64_t id,int dvp_preview,uint64_t ms)
+{
+    (void)dvp_preview; /* Registration uses an opaque UI, independent of preview source. */
+    if(!finger||!work.ready||!work.finger_ready||observed_finger!=1||!id||id!=finger_observed_id||id<=finger_submitted_id)return;
+    if(work.registering&&(!finger_enrolling()||work.finger_enroll_phase!=FINGER_COLLECT))return;
+    pthread_mutex_lock(&lock);int enabled=auth_enabled;pthread_mutex_unlock(&lock);
+    if(!work.registering&&(!enabled||finger_held||finger_latched))return;
+    BioJob job={.kind=CREDENTIAL_FINGER,.stage=work.registering?BIO_FEATURE:BIO_FINGER_RECOGNIZE,.sample_id=id,.submitted_ms=ms};
+    if(async_enabled) {
+        if(!async_quiescing&&bio_worker_submit(&job,gray,w,h,NULL)>0)finger_submitted_id=id;
+    } else {
+        finger_submitted_id=id;
+        job.result=finger->features(gray,w,h,id,&job.finger,job.feature,sizeof(job.feature),&job.feature_size);
+        if(!work.registering&&job.result==STATUS_OK) {job.auth_ran=1;job.auth_result=finger->recognize(job.feature,job.feature_size,&job.user);}
+        finger_complete(&job,ms);memset(&job,0,sizeof(job));
     }
 }

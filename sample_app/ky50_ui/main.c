@@ -1,5 +1,7 @@
+#include "ky50_features.h"
 #include "media.h"
 #include "ui.h"
+#include "user_ui.h"
 #include "input.h"
 #include "factory.h"
 #include "rtsp_stream.h"
@@ -24,18 +26,19 @@ static volatile sig_atomic_t snapshot_requested,page_test_requested;
 static atomic_int worker_stop;
 static atomic_int source_request,source_current,source_busy,source_result;
 static atomic_int rtsp_request=-1,rtsp_state;
+static int finger_enabled;
 static int rtsp_mode; /* capture thread only */
 static const char *settings_dir="/mnt/cfg/ky50-ui";
 static const char *pva_config="pva/pvaConf.json";
 static const char *user_data_dir="/mnt/system/ky50-data";
-static int hand_enabled=1,frame_hand_state;
-static atomic_int hand_ready,inference_stop,detection_gap;
+static int algorithms_enabled=1,frame_hand_state;
+static atomic_int pva_ready,inference_stop,detection_gap;
 static atomic_int result_stop;
 static atomic_uint media_epoch;
 static pthread_mutex_t algorithm_lock=PTHREAD_MUTEX_INITIALIZER;
 static PalmQueue palm_queue;
 static HandOverlayState overlay_state,face_overlay_state;
-static int face_enabled;
+static int face_enabled, queue_initialized;
 static unsigned overlay_epoch;
 static atomic_int hand_dump_requested;
 static unsigned hand_frames,hand_hits,ir_failures;
@@ -114,8 +117,31 @@ static uint64_t monotonic_us(void)
     struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);
     return (uint64_t)t.tv_sec*1000000+t.tv_nsec/1000;
 }
+/* Explicit, bounded DVP-only diagnostic. Never enabled during normal startup.
+ * The operator must arrange an empty collector before setting this directory.
+ * No RGB/IR frame, template, or qualified fingerprint is saved. */
+static void finger_empty_diagnostic(const PalmFrame *frame,int status)
+{
+    const char *dir=getenv("KY50_FINGER_EMPTY_DIAG");
+    static unsigned empty,small;static uint64_t started,last_id;static int done;
+    if(!dir||!*dir||done||!frame->have_finger||!frame->finger_id)return;
+    uint64_t now=monotonic_us();if(!started)started=now;
+    if(now-started>=60000000||(empty>=8&&small>=16)) {
+        printf("FINGER_EMPTY_DIAG done empty=%u small=%u\n",empty,small);done=1;return;
+    }
+    if(frame->finger_id==last_id)return;
+    last_id=frame->finger_id;
+    unsigned *count=status==STATUS_FINGERPRINT_NO_FINGER?&empty:status==STATUS_FINGERPRINT_AREA_TOO_SMALL?&small:NULL;
+    if(!count||*count>=(status==STATUS_FINGERPRINT_NO_FINGER?8u:16u))return;
+    char path[512];int n=snprintf(path,sizeof(path),"%s/status%d_%llu.gray",dir,status,(unsigned long long)frame->finger_id);
+    if(n<0||(size_t)n>=sizeof(path)){done=1;return;}
+    FILE *f=fopen(path,"wbx");if(!f){perror("FINGER_EMPTY_DIAG open");done=1;return;}
+    size_t bytes=fwrite(frame->finger_gray,1,FINGER_BYTES,f);int rc=fclose(f);
+    if(bytes!=FINGER_BYTES||rc){unlink(path);done=1;fprintf(stderr,"FINGER_EMPTY_DIAG write failed\n");return;}
+    ++*count;printf("FINGER_EMPTY_DIAG saved status=%d sample_id=%llu\n",status,(unsigned long long)frame->finger_id);
+}
 typedef struct { uint64_t total,max;unsigned count; } Perf;
-static Perf cap_perf[4],algorithm_perf[3],ui_perf[3];
+static Perf cap_perf[7],algorithm_perf[3],ui_perf[3];
 static void perf_add(Perf *p,uint64_t us) { p->total+=us;if(us>p->max)p->max=us;++p->count; }
 static void perf_log(const char *name,Perf *p) {
     printf("PERF %s n=%u avg_ms=%.2f max_ms=%.2f\n",name,p->count,p->count?p->total/(1000.0*p->count):0,p->max/1000.0);
@@ -143,12 +169,22 @@ static void *result_worker(void *unused)
 static void *inference_worker(void *unused)
 {
     (void)unused;PalmFrame frame;
+    if(!KY50_BIOMETRICS || !atomic_load(&pva_ready)) {
+        /* Profile management must stay responsive even without any algorithm. */
+        while(!atomic_load(&inference_stop)&&!atomic_load(&worker_stop)) {
+            pthread_mutex_lock(&algorithm_lock);
+            access_poll(ui_monotonic_ms());
+            pthread_mutex_unlock(&algorithm_lock);
+            usleep(20000);
+        }
+        return NULL;
+    }
     if(palm_frame_init(&frame)){atomic_store(&worker_stop,2);return NULL;}
     /* Linux nice is per-thread: UI and live capture keep normal priority. */
     if(setpriority(PRIO_PROCESS,0,3))perror("PALM worker nice");
-    if(atomic_load(&hand_ready)&&access_start_async()){fprintf(stderr,"BIO worker start failed\n");palm_frame_free(&frame);atomic_store(&worker_stop,2);return NULL;}
+    if(atomic_load(&pva_ready)&&access_start_async()){fprintf(stderr,"BIO worker start failed\n");palm_frame_free(&frame);atomic_store(&worker_stop,2);return NULL;}
     pthread_t results;int results_started=0;
-    if(atomic_load(&hand_ready)) {
+    if(atomic_load(&pva_ready)) {
         if(pthread_create(&results,NULL,result_worker,NULL)){
             fprintf(stderr,"BIO result consumer start failed\n");palm_frame_free(&frame);atomic_store(&worker_stop,2);return NULL;
         }
@@ -157,12 +193,13 @@ static void *inference_worker(void *unused)
     uint64_t hand_log=ui_monotonic_ms()+5000;
     unsigned last_hand_frames=0,last_hand_hits=0;uint64_t last_hand_us=0;
     int previous_found=-99,previous_quality=-99,calibration_was_active=0;
+    int previous_finger_status=-99;unsigned finger_observations=0;
     while(!atomic_load(&inference_stop)&&!atomic_load(&worker_stop)) {
         int have=palm_queue_take(&palm_queue,&frame);
         pthread_mutex_lock(&algorithm_lock);
         uint64_t now=ui_monotonic_ms();access_poll(now);
         if(atomic_exchange(&detection_gap,0)){access_detection_gap();hide_overlay();}
-        if(have&&frame.epoch==atomic_load(&media_epoch)&&atomic_load(&hand_ready)) {
+        if(have&&frame.epoch==atomic_load(&media_epoch)&&atomic_load(&pva_ready)) {
             if(now<frame.captured_ms||now-frame.captured_ms>250) {
                 access_detection_gap();hide_overlay();
             } else {
@@ -170,14 +207,32 @@ static void *inference_worker(void *unused)
                 /* Pose uses owned CPU images. Camera transitions may invalidate
                  * their epoch, but model teardown joins this thread first. */
                 pthread_mutex_unlock(&algorithm_lock);
-                int raw_found=frame.have_ir?handpose_detect(frame.yuv,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,&pose):-1;
+                FingerprintRes_t finger_res={0};
+                int finger_status=KY50_ENABLE_FINGERPRINT&&finger_enabled&&frame.have_finger?ky50_finger_backend.detect(frame.finger_gray,FINGER_WIDTH,FINGER_HEIGHT,frame.finger_id,&finger_res):STATUS_FINGERPRINT_DEVICE_FAILED;
+                finger_empty_diagnostic(&frame,finger_status);
+                if(finger_enabled&&(finger_status!=previous_finger_status||++finger_observations%60==0)) {
+                    printf("FINGER_PRESENCE status=%d present=%d qualified=%d sample_id=%llu elapsed_us=%llu\n",finger_status,finger_status==STATUS_OK||finger_status==STATUS_FINGERPRINT_AREA_TOO_SMALL,finger_status==STATUS_OK,
+                        (unsigned long long)frame.finger_id,(unsigned long long)(monotonic_us()-begin));previous_finger_status=finger_status;
+                }
+                pthread_mutex_lock(&algorithm_lock);
+                if(frame.epoch!=atomic_load(&media_epoch))goto stale_frame;
+                if(finger_enabled) {
+                    access_observe_finger(finger_status==STATUS_OK?1:finger_status==STATUS_FINGERPRINT_AREA_TOO_SMALL?2:finger_status==STATUS_FINGERPRINT_NO_FINGER?0:-1,frame.finger_id,ui_monotonic_ms());
+                    if(!face_ir_calibration_active())access_fingerprint_frame(frame.finger_gray,FINGER_WIDTH,FINGER_HEIGHT,frame.finger_id,frame.source==CAMERA_DVP,ui_monotonic_ms());
+                }
+                pthread_mutex_unlock(&algorithm_lock);
+                int raw_found=0;
+                if(KY50_ENABLE_PALM)
+                    raw_found=frame.have_ir?handpose_detect(frame.yuv,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,&pose):-1;
                 uint64_t hand_elapsed=monotonic_us()-begin;
                 pthread_mutex_lock(&algorithm_lock);
                 if(frame.epoch!=atomic_load(&media_epoch))goto stale_frame;
                 access_observe_hand(raw_found,ui_monotonic_ms());
                 pthread_mutex_unlock(&algorithm_lock);
                 FacePoseRes_t face_pose={0};
-                int raw_face=frame.have_face?facepose_detect(frame.face_nv12,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,&face_pose):-1;
+                int raw_face=0;
+                if(KY50_ENABLE_FACE&&face_enabled)
+                    raw_face=frame.have_face?facepose_detect(frame.face_nv12,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,&face_pose):-1;
                 pthread_mutex_lock(&algorithm_lock);
                 if(frame.epoch!=atomic_load(&media_epoch))goto stale_frame;
                 /* Detect both on their own camera data, regardless of priority.
@@ -190,13 +245,14 @@ static void *inference_worker(void *unused)
                 HandOverlay early_hand,early_face;
                 HandPoseRes_t early_pose=pose;early_pose.status=-1;
                 FacePoseRes_t early_face_pose=face_pose;early_face_pose.status=-1;
-                int early_h=raw_found>0&&!hand_map(&early_pose,&frame.view,&early_hand);
-                int early_f=raw_face>0&&!face_map(&early_face_pose,&frame.view,&early_face);
+                int early_h=frame.source!=CAMERA_DVP&&raw_found>0&&!hand_map(&early_pose,&frame.view,&early_hand);
+                int early_f=frame.source!=CAMERA_DVP&&raw_face>0&&!face_map(&early_face_pose,&frame.view,&early_face);
                 pthread_mutex_lock(&video_lock);
                 if(early_h&&overlay_state.valid)early_hand.status=overlay_state.drawing.status;
                 if(early_f&&face_overlay_state.valid)early_face.status=face_overlay_state.drawing.status;
                 hand_overlay_update(&overlay_state,early_h?&early_hand:NULL,raw_found==0?0:early_h?1:-1,ui_monotonic_ms());
                 hand_overlay_update(&face_overlay_state,early_f?&early_face:NULL,raw_face==0?0:early_f?1:-1,ui_monotonic_ms());
+                if(frame.source==CAMERA_DVP){hand_overlay_reset(&overlay_state);hand_overlay_reset(&face_overlay_state);}
                 overlay_epoch=frame.epoch;
                 pthread_mutex_unlock(&video_lock);
                 hand_time_us+=hand_elapsed;++hand_frames;perf_add(&algorithm_perf[0],elapsed);
@@ -209,20 +265,20 @@ static void *inference_worker(void *unused)
                 if(calibrating) {
                     if(!calibration_was_active)access_detection_gap();
                     PvaFaceGeometry ir_geometry={0};
-                    int ir_found=raw_face>0&&frame.have_ir&&face_ir_pair_valid(&frame.face_pair)?
+                    int ir_found=KY50_ENABLE_FACE&&raw_face>0&&frame.have_ir&&face_ir_pair_valid(&frame.face_pair)?
                         facepose_detect_ir(frame.yuv,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,&ir_geometry):0;
                     face_ir_calibration_feed(raw_face>0?&face_pose:NULL,ir_found>0?&ir_geometry:NULL,
                         HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,&frame.face_pair,ui_monotonic_ms());
                 } else {
                     if(calibration_was_active){access_detection_gap();printf("FACE_IR_CAL resumed\n");}
-                    access_biometrics_frame(frame.yuv,frame.face_nv12,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,
+                    access_biometrics_frame(frame.have_ir?frame.yuv:NULL,frame.face_nv12,HAND_INPUT_WIDTH,HAND_INPUT_HEIGHT,
                         &pose,raw_found,&face_pose,raw_face,frame.source==CAMERA_RGB,ui_monotonic_ms());
                 }
                 calibration_was_active=calibrating;
                 int found=raw_found>0;
                 face_copy.status=face_pose.status==STATUS_OK&&face_pose.sharpness==-2?-1:face_pose.status;
                 HandOverlay face_drawing;
-                int face_visible=raw_face>0&&!face_map(&face_copy,&frame.view,&face_drawing);
+                int face_visible=frame.source!=CAMERA_DVP&&raw_face>0&&!face_map(&face_copy,&frame.view,&face_drawing);
                 perf_add(&algorithm_perf[1],monotonic_us()-begin);
                 draw_copy.status=pose.status;
                 if(found!=previous_found||(found>0&&pose.status!=previous_quality)) {
@@ -232,14 +288,14 @@ static void *inference_worker(void *unused)
                     previous_found=found;previous_quality=pose.status;
                 }
                 perf_add(&algorithm_perf[2],(ui_monotonic_ms()-frame.captured_ms)*1000);
-                HandOverlay drawing;int visible=found>0&&!hand_map(&draw_copy,&frame.view,&drawing);
+                HandOverlay drawing;int visible=frame.source!=CAMERA_DVP&&found>0&&!hand_map(&draw_copy,&frame.view,&drawing);
                 pthread_mutex_lock(&video_lock);
                 /* Do not count a miss twice or replace this frame's geometry
                  * with coordinates belonging to a completed background job. */
                 if(visible&&overlay_state.valid)overlay_state.drawing.status=drawing.status;
                 if(face_visible&&face_overlay_state.valid)face_overlay_state.drawing.status=face_drawing.status;
                 pthread_mutex_unlock(&video_lock);
-                if(raw_found<0){if(frame.have_ir)atomic_store(&hand_ready,0);frame_hand_state=-1;}
+                if(raw_found<0){if(frame.have_ir)atomic_store(&pva_ready,0);frame_hand_state=-1;}
                 else {frame_hand_state=found?2:1;if(found)++hand_hits;}
                 if(frame.dump) {
                     if(face_visible)face_draw(frame.rgb,UI_WIDTH,UI_HEIGHT,&face_drawing);
@@ -274,6 +330,13 @@ frame_done:
 static int capture_rgb(enum camera_source source,unsigned char *rgb,unsigned char *ir_yuv,unsigned char *face_nv12)
 {
     IrExposureSample ir_sample={0};FaceIrPair pair={0};
+    static uint8_t finger_gray[FINGER_BYTES];
+    static uint64_t finger_sequence,last_finger_pts,finger_cached_ms;
+    static unsigned finger_epoch;
+    unsigned epoch=atomic_load(&media_epoch);
+    if(epoch!=finger_epoch){finger_cached_ms=0;finger_epoch=epoch;}
+    uint64_t finger_id=0;int have_finger=0;
+    int need_ir=atomic_load(&pva_ready)&&(KY50_ENABLE_PALM||face_enabled);
     VIDEO_FRAME_INFO_S f={0};int have_ir=0,have_face=0;uint64_t tick=monotonic_us();
     int rc=media_camera_get(&f);
     if(rc){atomic_store(&detection_gap,1);hide_overlay();return rc;}
@@ -281,53 +344,80 @@ static int capture_rgb(enum camera_source source,unsigned char *rgb,unsigned cha
     if(rtsp_mode)rtsp_stream_send(source,&f);
     if(source==CAMERA_IR)pair.ir_pts_us=f.stVFrame.u64PTS;
     else if(source==CAMERA_RGB)pair.rgb_pts_us=f.stVFrame.u64PTS;
-    if(source==CAMERA_IR&&atomic_load(&hand_ready))media_ir_sample(&f,&ir_sample);
+    if(source==CAMERA_IR&&need_ir)media_ir_sample(&f,&ir_sample);
     perf_add(&cap_perf[0],monotonic_us()-tick);tick=monotonic_us();
     HandViewport view={0};
     rc=media_scale_frame(&f,rgb,&view,source==CAMERA_IR);
     perf_add(&cap_perf[1],monotonic_us()-tick);tick=monotonic_us();
-    if(!rc&&source==CAMERA_IR&&atomic_load(&hand_ready))have_ir=media_ir_half_frame(&f,ir_yuv)==0;
-    if(!rc&&source==CAMERA_RGB&&atomic_load(&hand_ready)&&face_enabled)
+    if(!rc&&source==CAMERA_IR&&need_ir)have_ir=media_ir_half_frame(&f,ir_yuv)==0;
+    if(!rc&&source==CAMERA_RGB&&face_enabled)
         have_face=media_rgb_half_frame(&f,face_nv12)==0;
+    if(source==CAMERA_DVP&&finger_enabled) {
+        have_finger=media_fingerprint_frame(&f,finger_gray)==0;
+        if(have_finger){if(!finger_sequence||last_finger_pts!=f.stVFrame.u64PTS){last_finger_pts=f.stVFrame.u64PTS;++finger_sequence;finger_cached_ms=ui_monotonic_ms();}finger_id=finger_sequence;}
+        else finger_cached_ms=0;
+    }
     if(media_camera_release(&f))rc=-1;
     if(rc){atomic_store(&detection_gap,1);hide_overlay();return rc;}
-    if(source==CAMERA_RGB&&(atomic_load(&hand_ready)||rtsp_mode)) {
+    if(source!=CAMERA_IR&&(source!=CAMERA_DVP||finger_enabled||rtsp_mode)&&(need_ir||rtsp_mode)) {
         memset(&f,0,sizeof(f));int ir_rc=media_camera_get_ir(&f);
         if(!ir_rc) {
             pair.ir_pts_us=f.stVFrame.u64PTS;
             if(rtsp_mode)rtsp_stream_send(CAMERA_IR,&f);
-            if(atomic_load(&hand_ready)) {
+            if(need_ir) {
                 media_ir_sample(&f,&ir_sample);
                 ir_rc=media_ir_half_frame(&f,ir_yuv);
             }
             if(media_camera_release_ir(&f))ir_rc=-1;
         }
-        have_ir=atomic_load(&hand_ready)&&!ir_rc;
+        have_ir=need_ir&&!ir_rc;
     }
-    if(source==CAMERA_IR&&((atomic_load(&hand_ready)&&face_enabled)||rtsp_mode)) {
+    if(source!=CAMERA_RGB&&(source!=CAMERA_DVP||finger_enabled||rtsp_mode)&&((atomic_load(&pva_ready)&&face_enabled)||rtsp_mode)) {
         memset(&f,0,sizeof(f));int face_rc=media_camera_get_rgb(&f);
         if(!face_rc) {
             pair.rgb_pts_us=f.stVFrame.u64PTS;
             if(rtsp_mode)rtsp_stream_send(CAMERA_RGB,&f);
-            if(atomic_load(&hand_ready)&&face_enabled)face_rc=media_rgb_half_frame(&f,face_nv12);
+            if(atomic_load(&pva_ready)&&face_enabled)face_rc=media_rgb_half_frame(&f,face_nv12);
             if(media_camera_release_rgb(&f))face_rc=-1;
         }
-        have_face=atomic_load(&hand_ready)&&face_enabled&&!face_rc;
+        have_face=atomic_load(&pva_ready)&&face_enabled&&!face_rc;
     }
-    if(rtsp_mode) {
-        if(source==CAMERA_DVP) {
-            if(!media_camera_get_rgb(&f)){rtsp_stream_send(CAMERA_RGB,&f);media_camera_release_rgb(&f);}
-            if(!media_camera_get_ir(&f)){rtsp_stream_send(CAMERA_IR,&f);media_camera_release_ir(&f);}
-        } else if(!media_camera_get_dvp(&f)){rtsp_stream_send(CAMERA_DVP,&f);media_camera_release_dvp(&f);}
+    if(source!=CAMERA_DVP&&(finger_enabled||rtsp_mode)) {
+        memset(&f,0,sizeof(f));
+        uint64_t dvp_tick=monotonic_us();
+        /* Production RGB/IR preview must not wait for the slower DVP sensor.
+         * RTSP retains its existing acquisition policy. */
+        int dvp_rc=finger_enabled&&!rtsp_mode?media_camera_try_get_dvp(&f):media_camera_get_dvp(&f);
+        perf_add(&cap_perf[4],monotonic_us()-dvp_tick);
+        if(!dvp_rc) {
+            if(rtsp_mode)rtsp_stream_send(CAMERA_DVP,&f);
+            if(finger_enabled) {
+                dvp_tick=monotonic_us();
+                have_finger=media_fingerprint_frame(&f,finger_gray)==0;
+                perf_add(&cap_perf[5],monotonic_us()-dvp_tick);
+                if(have_finger){if(!finger_sequence||last_finger_pts!=f.stVFrame.u64PTS){last_finger_pts=f.stVFrame.u64PTS;++finger_sequence;finger_cached_ms=ui_monotonic_ms();}finger_id=finger_sequence;}
+                else finger_cached_ms=0;
+            }
+            dvp_tick=monotonic_us();
+            if(media_camera_release_dvp(&f)){have_finger=0;finger_cached_ms=0;}
+            perf_add(&cap_perf[6],monotonic_us()-dvp_tick);
+        } else if(finger_enabled&&finger_cached_ms) {
+            /* Own only a CPU copy, never retain a VI buffer. Repeated IDs do
+             * not refresh access_observe_finger or count as confirmations /
+             * departure frames. An outage beyond two DVP periods is unknown. */
+            uint64_t now=ui_monotonic_ms();
+            if(now>=finger_cached_ms&&now-finger_cached_ms<=100){have_finger=1;finger_id=finger_sequence;}
+        }
     }
     perf_add(&cap_perf[2],monotonic_us()-tick);
-    if(atomic_load(&hand_ready)&&source!=CAMERA_DVP&&!have_ir) {
+    if(!atomic_load(&pva_ready))return 0;
+    if(need_ir&&source!=CAMERA_DVP&&!have_ir) {
         if(++ir_failures==1||ir_failures%100==0)fprintf(stderr,"PALM IR frame unavailable count=%u; overlay cleared\n",ir_failures);
     }
-    if(!have_ir&&!have_face){atomic_store(&detection_gap,1);hide_overlay();}
+    if(!have_ir&&!have_face&&!have_finger){atomic_store(&detection_gap,1);hide_overlay();}
     else {
         int dump=atomic_exchange(&hand_dump_requested,0);
-        if(!palm_queue_put_timed_pair(&palm_queue,have_ir?ir_yuv:NULL,have_face?face_nv12:NULL,rgb,&view,source,atomic_load(&media_epoch),captured_ms,dump,&ir_sample,&pair)&&dump)
+        if(!palm_queue_put_three(&palm_queue,have_ir?ir_yuv:NULL,have_face?face_nv12:NULL,rgb,&view,source,atomic_load(&media_epoch),captured_ms,dump,&ir_sample,&pair,have_finger?finger_gray:NULL,have_finger?finger_id:0)&&dump)
             atomic_store(&hand_dump_requested,1);
     }
     return 0;
@@ -345,9 +435,9 @@ static void publish_frame(const unsigned char *rgb)
 }
 static int start_source(enum camera_source source,unsigned char *rgb,unsigned char *ir_yuv,unsigned char *face_nv12)
 {
-    int init=media_camera_start_mode(source,rtsp_mode);
+    int init=media_camera_start_mode(source,rtsp_mode||finger_enabled);
     if(init) return init;
-    if(media_scale_start_mode(source,rtsp_mode)) return -1;
+    if(media_scale_start_mode(source,rtsp_mode||finger_enabled)) return -1;
     if(rtsp_mode&&rtsp_stream_start())return -1;
     uint64_t deadline=ui_monotonic_ms()+3000;
     while(!atomic_load(&worker_stop)&&ui_monotonic_ms()<deadline) {
@@ -359,7 +449,7 @@ static int start_source(enum camera_source source,unsigned char *rgb,unsigned ch
  * Pose may finish on an owned old image, but that epoch cannot enter business. */
 static void invalidate_algorithm_input(void)
 {
-    atomic_fetch_add(&media_epoch,1);palm_queue_clear(&palm_queue);hide_overlay();
+    atomic_fetch_add(&media_epoch,1);if(queue_initialized)palm_queue_clear(&palm_queue);hide_overlay();
     access_detection_gap();
 }
 static void stop_source(void)
@@ -372,18 +462,31 @@ static void *capture_worker(void *unused)
 {
     (void)unused;
     unsigned char *rgb=malloc(UI_WIDTH*UI_HEIGHT*3);
-    unsigned char *ir_yuv=malloc(HAND_INPUT_WIDTH*HAND_INPUT_HEIGHT*3/2);
-    unsigned char *face_nv12=malloc(HAND_INPUT_WIDTH*HAND_INPUT_HEIGHT*3/2);
+    unsigned char *ir_yuv=NULL,*face_nv12=NULL;
     unsigned failures=0;int current=-1,attempted=0,inference_started=0;pthread_t inference;
-    if(!rgb||!ir_yuv||!face_nv12) { free(rgb);free(ir_yuv);free(face_nv12);atomic_store(&worker_stop,2);return NULL; }
-    if(palm_queue_init(&palm_queue)){free(rgb);free(ir_yuv);free(face_nv12);atomic_store(&worker_stop,2);return NULL;}
-    /* API remains YUV. UV is neutral and ignored by the CV184X library. */
-    memset(ir_yuv+HAND_INPUT_WIDTH*HAND_INPUT_HEIGHT,128,HAND_INPUT_WIDTH*HAND_INPUT_HEIGHT/2);
-    hand_ready=hand_enabled&&handpose_start(pva_config)==0;
-    face_enabled=hand_ready&&facepose_enabled();
-    access_open_biometrics(user_data_dir,hand_ready?&ky50_palm_backend:NULL,face_enabled?&ky50_face_backend:NULL);
-    face_ir_calibration_init(user_data_dir,"assets/face_ir_calibration.conf");
-    if(hand_ready)access_set_exposure_backend(&media_ir_exposure_backend);
+    if(!rgb){atomic_store(&worker_stop,2);return NULL;}
+    int sdk_started=KY50_BIOMETRICS&&algorithms_enabled&&handpose_start(pva_config)==0;
+    face_enabled=KY50_ENABLE_FACE&&sdk_started&&facepose_enabled();
+    finger_enabled=KY50_ENABLE_FINGERPRINT&&sdk_started&&fingerprint_enabled();
+    int palm_enabled=KY50_ENABLE_PALM&&sdk_started;
+    pva_ready=palm_enabled||face_enabled||finger_enabled;
+    if(KY50_BIOMETRICS&&pva_ready) {
+        size_t pixels=HAND_INPUT_WIDTH*HAND_INPUT_HEIGHT;
+        if(palm_enabled||face_enabled)ir_yuv=malloc(pixels*3/2);
+        if(face_enabled)face_nv12=malloc(pixels*3/2);
+        if(((palm_enabled||face_enabled)&&!ir_yuv)||(face_enabled&&!face_nv12)||palm_queue_init(&palm_queue)) {
+            handpose_stop();free(face_nv12);free(ir_yuv);free(rgb);
+            atomic_store(&worker_stop,2);return NULL;
+        }
+        queue_initialized=1;
+        if(ir_yuv)memset(ir_yuv+pixels,128,pixels/2);
+    }
+    access_open_modalities(user_data_dir,palm_enabled?&ky50_palm_backend:NULL,
+        KY50_ENABLE_FACE&&face_enabled?&ky50_face_backend:NULL,
+        KY50_ENABLE_FINGERPRINT&&finger_enabled?&ky50_finger_backend:NULL);
+    printf("KY50 biometrics active: fingerprint=%d face=%d palm=%d\n",finger_enabled,face_enabled,palm_enabled);
+    if(face_enabled)face_ir_calibration_init(user_data_dir,"assets/face_ir_calibration.conf");
+    if(palm_enabled)access_set_exposure_backend(&media_ir_exposure_backend);
     if(pthread_create(&inference,NULL,inference_worker,NULL))atomic_store(&worker_stop,2);
     else inference_started=1;
     uint64_t capture_log=ui_monotonic_ms()+5000;
@@ -399,7 +502,7 @@ static void *capture_worker(void *unused)
             int transient=target&0x100;target&=0xff;
             int previous=current,boot=!attempted,rc,result;
             atomic_store(&source_busy,1);
-            int select_only=stream_change<0&&attempted&&current>=0&&(rtsp_mode||(current!=CAMERA_DVP&&target!=CAMERA_DVP));
+            int select_only=stream_change<0&&attempted&&current>=0&&(rtsp_mode||finger_enabled||(current!=CAMERA_DVP&&target!=CAMERA_DVP));
             if(attempted&&!select_only) stop_source();
             attempted=1;
             printf("SOURCE switching %s -> %s\n",previous<0?"none":camera_source_name(previous),camera_source_name(target));
@@ -408,7 +511,7 @@ static void *capture_worker(void *unused)
                 pthread_mutex_lock(&algorithm_lock);invalidate_algorithm_input();
                 rc=media_camera_select_preview(target);
                 if(!rc&&((current==CAMERA_DVP)!=(target==CAMERA_DVP))) {
-                    media_scale_stop();rc=media_scale_start_mode(target,rtsp_mode);
+                    media_scale_stop();rc=media_scale_start_mode(target,rtsp_mode||finger_enabled);
                 }
                 pthread_mutex_unlock(&algorithm_lock);
                 if(!rc)rc=capture_rgb(target,rgb,ir_yuv,face_nv12);
@@ -427,7 +530,7 @@ static void *capture_worker(void *unused)
                     if(select_only) {
                         restored=media_camera_select_preview(fallback);
                         if(!restored&&((target==CAMERA_DVP)!=(fallback==CAMERA_DVP))) {
-                            media_scale_stop();restored=media_scale_start_mode(fallback,rtsp_mode);
+                            media_scale_stop();restored=media_scale_start_mode(fallback,rtsp_mode||finger_enabled);
                         }
                     } else restored=start_source(fallback,rgb,ir_yuv,face_nv12);
                     if(select_only&&!restored)restored=capture_rgb(fallback,rgb,ir_yuv,face_nv12);
@@ -459,15 +562,15 @@ static void *capture_worker(void *unused)
         failures=0;publish_frame(rgb);
         uint64_t now=ui_monotonic_ms();
         if(now>=capture_log) {
-            const char *names[]={"capture.vi","capture.preview","capture.ir","capture.interval"};
-            for(int i=0;i<4;i++)perf_log(names[i],&cap_perf[i]);
+            const char *names[]={"capture.vi","capture.preview","capture.ir","capture.interval","capture.dvp_wait","capture.dvp_gray","capture.dvp_release"};
+            for(int i=0;i<7;i++)perf_log(names[i],&cap_perf[i]);
             capture_log=now+5000;
         }
     }
     atomic_store(&inference_stop,1);if(inference_started)pthread_join(inference,NULL);
-    access_close();handpose_stop();
+    access_close();if(sdk_started)handpose_stop();
     if(attempted)stop_source();
-    palm_queue_destroy(&palm_queue);
+    if(queue_initialized)palm_queue_destroy(&palm_queue);
     free(face_nv12);free(ir_yuv);free(rgb);return NULL;
 }
 int main(int argc,char **argv)
@@ -475,7 +578,7 @@ int main(int argc,char **argv)
     const char *event=NULL;int test=0,override=-1;unsigned duration=0;
     for(int i=1;i<argc;i++) {
         if(!strcmp(argv[i],"--touch-test")) test=1;
-        else if(!strcmp(argv[i],"--no-handpose")) hand_enabled=0;
+        else if(!strcmp(argv[i],"--no-handpose")) algorithms_enabled=0;
         else if(!strcmp(argv[i],"--rtsp")){atomic_store(&rtsp_request,1);atomic_store(&rtsp_state,1);}
         else if(!strcmp(argv[i],"--pva-config")&&i+1<argc) pva_config=argv[++i];
         else if(!strcmp(argv[i],"--data-dir")&&i+1<argc) user_data_dir=argv[++i];
@@ -522,7 +625,7 @@ int main(int argc,char **argv)
     unsigned relay_sequence=0,presented_success=0;
     HandOverlay presented_hand_box={0},presented_face_box={0};
     enum ui_page last_page=ui_current_page();int before_enrollment=-1,before_calibration=-1;
-    printf("KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854, IR pipe0 palm + RGB pipe1 face; dual overlays, raw palm priority\n");
+    printf("KY50_UI LVGL 9.6.0 RGB/IR/DVP CCW90 480x854\n");
     rc=0;
     while(!quit&&!atomic_load(&worker_stop)) {
         uint64_t now=ui_monotonic_ms();
@@ -549,7 +652,7 @@ int main(int argc,char **argv)
         uint64_t draw_age=now>=overlay_state.updated_ms?now-overlay_state.updated_ms:0;
         if(now>=next)memcpy(rgb,latest,UI_WIDTH*UI_HEIGHT*3);
         pthread_mutex_unlock(&video_lock);
-        if(now>=next) {
+        if(KY50_ENABLE_PALM&&now>=next) {
             if(last_draw!=(draw&&good)) {
                 last_draw=draw&&good;
                 printf("PALM_DRAW visible=%d misses=%u result_age_ms=%llu\n",last_draw,draw_misses,(unsigned long long)draw_age);
@@ -563,9 +666,11 @@ int main(int argc,char **argv)
             (unsigned long long)(process_begin/1000),(unsigned long long)process_us);
         enum ui_page active_page=ui_current_page();
         if(active_page==UI_PALM_ENROLL&&last_page!=UI_PALM_ENROLL) {
-            before_enrollment=atomic_load(&source_current);
-            if(before_enrollment<0)before_enrollment=initial;
-            atomic_store(&source_request,CAMERA_RGB|0x100);
+            if(user_ui_enrollment_kind()!=CREDENTIAL_FINGER) {
+                before_enrollment=atomic_load(&source_current);
+                if(before_enrollment<0)before_enrollment=initial;
+                atomic_store(&source_request,CAMERA_RGB|0x100);
+            }
         } else if(active_page!=UI_PALM_ENROLL&&last_page==UI_PALM_ENROLL&&before_enrollment>=0) {
             atomic_store(&source_request,before_enrollment|0x100);before_enrollment=-1;
         }
@@ -596,7 +701,7 @@ int main(int argc,char **argv)
                 atomic_store(&rtsp_request,state==2?0:1);
             }
         } else if(action==UI_ACTION_FACE_IR_CALIBRATE) {
-            if(atomic_load(&source_busy)||!atomic_load(&hand_ready)||!face_enabled)
+            if(atomic_load(&source_busy)||!atomic_load(&pva_ready)||!face_enabled)
                 ui_factory_status("人脸或摄像头尚未就绪");
             else if(face_ir_calibration_begin(now))ui_factory_status("校准模块尚未就绪");
             else {

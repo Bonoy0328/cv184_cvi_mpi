@@ -1,0 +1,72 @@
+{
+  "method": {
+    "input_count": 173,
+    "repeats_per_variant_per_image": 16,
+    "pairs": 2768,
+    "total_calls": 5536,
+    "sdk_compile_flags": "-O3 -DNDEBUG -fPIC -fvisibility=hidden -fdata-sections -ffunction-sections -mfpu=neon -std=gnu++11",
+    "runtime": "one process, independent namespaces, alternating AB/BA, nice=10, UI continues",
+    "timed_scope": "center contrast + locateFingerprint + area status; no crop/embedding/NPU/match/API mutex/camera rotation",
+    "before_header_sha256": "7612e81d077eb7b7f0c3b14767c09f97db299edacbcf497ca1b8189bff83046b",
+    "after_header_sha256": "154c3cc69a2b5da97a2357f29c5ce1468a42a1c3aa20facd3291ad9a74812e82",
+    "binary_sha256": "cb24faa9ffe67f93132e4ca968ef724a51b6f62f981b54f40cea58f2e6310b25"
+  },
+  "paired_cpu_comparison": {
+    "empty_plain": {
+      "before_cpu_mean_ms": 0.13756049999996095,
+      "after_cpu_mean_ms": 0.1375776785714509,
+      "delta_ms": 1.7178571489945282e-05,
+      "change_percent": 0.012488011812950006,
+      "calls_per_variant": 1120
+    },
+    "empty_with_texture": {
+      "before_cpu_mean_ms": 4.460238229166692,
+      "after_cpu_mean_ms": 4.149213645833387,
+      "delta_ms": -0.31102458333330496,
+      "change_percent": -6.973272891556148,
+      "calls_per_variant": 768
+    },
+    "finger_area_ok": {
+      "before_cpu_mean_ms": 5.6741923936170116,
+      "after_cpu_mean_ms": 6.09599117021276,
+      "delta_ms": 0.4217987765957485,
+      "change_percent": 7.43363543806228,
+      "calls_per_variant": 752
+    },
+    "finger_area_small": {
+      "before_cpu_mean_ms": 5.4873765624999855,
+      "after_cpu_mean_ms": 5.947387500000094,
+      "delta_ms": 0.46001093750010824,
+      "change_percent": 8.383075815203988,
+      "calls_per_variant": 128
+    }
+  },
+  "runtime_log_samples": {
+    "sampled_not_all_frames": true,
+    "normal_runtime_without_benchmark": true,
+    "app_sha256": "3d3afc97265dd44bdb47d3ed3f0664a3c16bab2b2c574c5133c4c1ae380d15b7",
+    "states": {
+      "101": {
+        "n": 94,
+        "mean_ms": 13.63231914893617,
+        "p50_ms": 12.326,
+        "p95_ms": 25.752,
+        "max_ms": 38.07
+      },
+      "0": {
+        "n": 14,
+        "mean_ms": 16.279857142857143,
+        "p50_ms": 16.063499999999998,
+        "p95_ms": 28.106,
+        "max_ms": 28.106
+      },
+      "108": {
+        "n": 14,
+        "mean_ms": 13.963785714285715,
+        "p50_ms": 13.32,
+        "p95_ms": 23.052,
+        "max_ms": 23.052
+      }
+    }
+  }
+}

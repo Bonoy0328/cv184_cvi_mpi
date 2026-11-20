@@ -2,6 +2,7 @@
 #define KY50_ACCESS_H
 #include "access_store.h"
 #include "pvaTypeDef.h"
+#include "pvaFingerprint.h"
 #include "ir_exposure.h"
 #include "app_config.h"
 #include "face_ir_calibration.h"
@@ -41,6 +42,24 @@ typedef struct {
     int (*live_ir)(uint8_t *ir_nv12,uint16_t w,uint16_t h);
     int (*live_ir_region)(const uint8_t *ir_nv12,uint16_t w,uint16_t h,const PvaFaceGeometry *region);
 } FaceBackend;
+typedef struct {
+    int (*ids)(uint16_t*,int);
+    int (*exists)(uint16_t);
+    int (*complete)(uint16_t);
+    int (*remove)(uint16_t);
+    int (*clear)(void);
+    int (*capacity)(void);
+    int (*pick_free)(void);
+    int (*detect)(const uint8_t*,uint16_t,uint16_t,uint64_t,FingerprintRes_t*);
+    int (*features)(const uint8_t*,uint16_t,uint16_t,uint64_t,FingerprintRes_t*,uint8_t*,uint32_t,uint32_t*);
+    int (*enroll)(User_For_C_t*,const uint8_t*,uint32_t,ResgisRes_t*);
+    int (*recognize)(const uint8_t*,uint32_t,User_For_C_t*);
+    int (*set_enrolling)(int); /* Temporary area gate: 0.20 enrolling / 0.15 normal. */
+} FingerBackend;
+#define FINGER_ENROLL_PRESSES 5
+#define FINGER_ENROLL_PER_PRESS 10
+#define FINGER_ENROLL_TOTAL (FINGER_ENROLL_PRESSES*FINGER_ENROLL_PER_PRESS)
+enum finger_enroll_phase { FINGER_WAIT_PRESS, FINGER_COLLECT, FINGER_WAIT_RELEASE };
 enum access_command_type { ACCESS_CREATE, ACCESS_ENROLL, ACCESS_CANCEL, ACCESS_DELETE, ACCESS_PARAMETERS, ACCESS_FACE_PARAMETERS, ACCESS_APP_PARAMETERS };
 typedef struct {
     enum access_command_type type;
@@ -61,8 +80,9 @@ typedef struct AccessSnapshot {
     enum access_event event;
     uint16_t selected_id;
     int ready,palm_ready,count,busy,registering,progress,total,status,matched,orphan_count;
-    int face_ready;
+    int face_ready,finger_ready;
     unsigned enrollment_modality;
+    int finger_enroll_phase,finger_enroll_press,finger_enroll_samples;
     float score;
     char message[192],recognition[192];
     PalmParameters parameters;
@@ -84,6 +104,12 @@ extern "C" {
 #endif
 extern const PalmBackend ky50_palm_backend;
 extern const FaceBackend ky50_face_backend;
+extern const FingerBackend ky50_finger_backend;
+int fingerprint_enabled(void);
+int access_open_modalities(const char*,const PalmBackend*,const FaceBackend*,const FingerBackend*);
+/* found: 0 absent, 1 area-qualified, 2 present but area too small, -1 error. */
+void access_observe_finger(int found,uint64_t sample_id,uint64_t ms);
+void access_fingerprint_frame(const uint8_t *gray,uint16_t w,uint16_t h,uint64_t sample_id,int dvp_preview,uint64_t ms);
 /* UI thread: bounded queue and copies only. */
 int access_submit(const AccessCommand *command);
 void access_enable_recognition(int enabled);

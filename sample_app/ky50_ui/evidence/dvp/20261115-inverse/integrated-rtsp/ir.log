@@ -1,0 +1,18 @@
+Input #0, rtsp, from 'rtsp://192.168.31.83:8554/ir':
+  Metadata:
+    title           : session
+    comment         : N/A
+  Duration: N/A, start: 0.066667, bitrate: N/A
+    Stream #0:0: Video: h264 (Constrained Baseline), yuv420p(progressive), 960x540, 15 fps, 15 tbr, 90k tbn, 180k tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : session
+    comment         : N/A
+    encoder         : Lavf58.29.100
+    Stream #0:0: Video: wrapped_avframe, yuv420p, 960x540, q=2-31, 200 kb/s, 15 fps, 15 tbn, 15 tbc
+    Metadata:
+      encoder         : Lavc58.54.100 wrapped_avframe
+frame=   29 fps=0.0 q=-0.0 size=N/A time=00:00:01.86 bitrate=N/A speed=3.52x    frame=   37 fps= 35 q=-0.0 size=N/A time=00:00:02.40 bitrate=N/A speed= 2.3x    frame=   45 fps= 28 q=-0.0 size=N/A time=00:00:02.93 bitrate=N/A speed=1.84x    frame=   53 fps= 25 q=-0.0 size=N/A time=00:00:03.46 bitrate=N/A speed=1.62x    frame=   61 fps= 23 q=-0.0 size=N/A time=00:00:04.00 bitrate=N/A speed=1.51x    frame=   69 fps= 22 q=-0.0 size=N/A time=00:00:04.53 bitrate=N/A speed=1.42x    frame=   77 fps= 21 q=-0.0 size=N/A time=00:00:05.06 bitrate=N/A speed=1.37x    frame=   85 fps= 20 q=-0.0 size=N/A time=00:00:05.60 bitrate=N/A speed=1.32x    frame=   93 fps= 19 q=-0.0 size=N/A time=00:00:06.13 bitrate=N/A speed=1.28x    frame=  101 fps= 19 q=-0.0 size=N/A time=00:00:06.66 bitrate=N/A speed=1.25x    frame=  109 fps= 19 q=-0.0 size=N/A time=00:00:07.20 bitrate=N/A speed=1.23x    frame=  117 fps= 18 q=-0.0 size=N/A time=00:00:07.73 bitrate=N/A speed=1.21x    frame=  125 fps= 18 q=-0.0 size=N/A time=00:00:08.26 bitrate=N/A speed=1.19x    frame=  133 fps= 18 q=-0.0 size=N/A time=00:00:08.80 bitrate=N/A speed=1.18x    frame=  141 fps= 18 q=-0.0 size=N/A time=00:00:09.33 bitrate=N/A speed=1.17x    frame=  149 fps= 18 q=-0.0 size=N/A time=00:00:09.86 bitrate=N/A speed=1.16x    frame=  151 fps= 17 q=-0.0 Lsize=N/A time=00:00:10.00 bitrate=N/A speed=1.14x    
+video:79kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

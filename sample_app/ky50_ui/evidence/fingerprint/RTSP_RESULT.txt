@@ -1,0 +1,3 @@
+rgb rc=0 decoded=151 wall_seconds=11.72 decode_errors=0 pass=True
+ir rc=0 decoded=151 wall_seconds=11.72 decode_errors=0 pass=True
+dvp rc=0 decoded=151 wall_seconds=11.72 decode_errors=0 pass=True

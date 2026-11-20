@@ -1,0 +1,139 @@
+{
+  "successful_events": {
+    "fingerprint": 7,
+    "palm": 4,
+    "face": 2,
+    "finger_departure": 8,
+    "relay": 13
+  },
+  "first_nonempty_nearest_previous_stats_seconds": 130,
+  "log_last_stats_seconds": 195,
+  "events": [
+    [
+      135,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.8801 samples=1"
+    ],
+    [
+      135,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.9536 samples=1"
+    ],
+    [
+      140,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.9353 samples=1"
+    ],
+    [
+      140,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.9080 samples=1"
+    ],
+    [
+      145,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.8744 samples=1"
+    ],
+    [
+      145,
+      "ACCESS match local_id=0 palm_uuid=0 score=0.5611"
+    ],
+    [
+      150,
+      "ACCESS match local_id=0 palm_uuid=0 score=0.7372"
+    ],
+    [
+      150,
+      "ACCESS match local_id=0 palm_uuid=0 score=0.7159"
+    ],
+    [
+      155,
+      "ACCESS match local_id=0 palm_uuid=0 score=0.7704"
+    ],
+    [
+      155,
+      "ACCESS face match local_id=0 face_uuid=0 score=0.7633 confirm_ms=0 samples=1"
+    ],
+    [
+      160,
+      "ACCESS face match local_id=0 face_uuid=0 score=0.8444 confirm_ms=0 samples=1"
+    ],
+    [
+      165,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.8841 samples=1"
+    ],
+    [
+      170,
+      "ACCESS fingerprint match local_id=0 finger_uuid=0 score=0.9114 samples=1"
+    ]
+  ],
+  "final_presence_observations": [
+    [
+      165,
+      108
+    ],
+    [
+      165,
+      0
+    ],
+    [
+      165,
+      108
+    ],
+    [
+      165,
+      101
+    ],
+    [
+      165,
+      108
+    ],
+    [
+      165,
+      0
+    ],
+    [
+      165,
+      108
+    ],
+    [
+      165,
+      0
+    ],
+    [
+      165,
+      101
+    ],
+    [
+      165,
+      108
+    ],
+    [
+      165,
+      0
+    ],
+    [
+      170,
+      108
+    ],
+    [
+      170,
+      101
+    ],
+    [
+      170,
+      101
+    ],
+    [
+      175,
+      101
+    ],
+    [
+      185,
+      101
+    ],
+    [
+      190,
+      101
+    ],
+    [
+      195,
+      101
+    ]
+  ]
+}

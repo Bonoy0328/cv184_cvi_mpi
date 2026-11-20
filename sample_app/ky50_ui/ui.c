@@ -1,3 +1,4 @@
+#include "ky50_features.h"
 #include "ui.h"
 #include "lvgl.h"
 #include "user_ui.h"
@@ -127,12 +128,28 @@ static const struct {const char *title,*hint;int min,max,toggle;} parameter_rows
     {"掌静脉离场帧数","连续未检测到，范围 1-100 帧",1,APP_MAX_LEAVE_FRAMES,0},
     {"人脸离场帧数","连续未检测到，范围 1-100 帧",1,APP_MAX_LEAVE_FRAMES,0},
     {"继电器开启秒数","识别成功后开启，范围 1-60 秒",1,APP_MAX_RELAY_SECONDS,0},
-    {"匹配确认次数","人脸与掌静脉共用，范围 1-10 次",1,APP_MAX_MATCH_CONFIRMATIONS,0},
-    {"成功冷却秒数","两种模态共用，0 秒不额外等待",0,APP_MAX_SUCCESS_COOLDOWN_SECONDS,0},
+    {"匹配确认次数","范围 1-10 次",1,APP_MAX_MATCH_CONFIRMATIONS,0},
+    {"成功冷却秒数","0 秒不额外等待",0,APP_MAX_SUCCESS_COOLDOWN_SECONDS,0},
     {"强活体检测","仅控制IR，可与RGB同时开启",0,1,1}
 };
-static const int parameter_first[]={0,3,6,9,10,13},parameter_count[]={3,3,3,1,3,3};
-static int parameter_kind(void){return parameter_page>=4?2:parameter_page!=0;}
+/* Each page contains controls saved by the same backend. */
+static const struct { int kind,rows[3]; } parameter_pages_config[]={
+#if KY50_ENABLE_PALM
+    {0,{0,1,2}},
+#endif
+#if KY50_ENABLE_FACE
+    {1,{3,4,5}}, {1,{6,7,8}}, {1,{9,-1,-1}},
+#endif
+#if KY50_ENABLE_PALM || KY50_ENABLE_FACE
+    {2,{KY50_ENABLE_PALM?10:11,KY50_ENABLE_PALM&&KY50_ENABLE_FACE?11:12,
+        KY50_ENABLE_PALM&&KY50_ENABLE_FACE?12:-1}},
+    {2,{13,14,KY50_ENABLE_FACE?15:-1}},
+#else
+    {2,{12,13,14}},
+#endif
+};
+#define PARAMETER_PAGE_COUNT ((int)(sizeof(parameter_pages_config)/sizeof(parameter_pages_config[0])))
+static int parameter_kind(void){return parameter_pages_config[parameter_page].kind;}
 static int *parameter_field(int row)
 {
     int *fields[]={&parameter_draft.hand_threshold,&parameter_draft.auth_threshold,&parameter_draft.dynamic_level,
@@ -159,8 +176,8 @@ static void parameter_refresh(void)
     int kind=parameter_kind();
     int enabled=parameter_loaded[kind]&&ready[kind]&&!parameter_waiting[kind]&&!access_view.registering;
     for(int i=0;i<3;i++) {
-        int row=parameter_first[parameter_page]+i;
-        lv_obj_set_hidden(parameter_cards[i],i>=parameter_count[parameter_page]);if(i>=parameter_count[parameter_page])continue;
+        int row=parameter_pages_config[parameter_page].rows[i];
+        lv_obj_set_hidden(parameter_cards[i],row<0);if(row<0)continue;
         int value=*parameter_field(row);
         lv_label_set_text(parameter_title[i],parameter_rows[row].title);
         lv_label_set_text(parameter_hint[i],parameter_rows[row].hint);
@@ -172,8 +189,8 @@ static void parameter_refresh(void)
         for(int k=0;k<2;k++)lv_obj_set_state(parameter_controls[2*i+k],LV_STATE_DISABLED,
             !enabled||(k?value>=parameter_rows[row].max:value<=parameter_rows[row].min));
     }
-    lv_label_set_text_fmt(parameter_page_label,"%s %d/6",kind==2?"应用":kind?"人脸":"掌静脉",parameter_page+1);
-    for(int k=0;k<2;k++)lv_obj_set_state(parameter_pages[k],LV_STATE_DISABLED,k?parameter_page==5:parameter_page==0);
+    lv_label_set_text_fmt(parameter_page_label,"%s %d/%d",kind==2?"应用":kind?"人脸":"掌静脉",parameter_page+1,PARAMETER_PAGE_COUNT);
+    for(int k=0;k<2;k++)lv_obj_set_state(parameter_pages[k],LV_STATE_DISABLED,k?parameter_page==PARAMETER_PAGE_COUNT-1:parameter_page==0);
     lv_obj_set_state(parameter_save,LV_STATE_DISABLED,!enabled);
     lv_label_set_text(parameter_save_label,kind==2?"保存应用参数":kind?"保存人脸":"保存掌静脉");
     const char *message=kind==2?access_view.app_parameters_message:kind?access_view.face_parameters_message:access_view.parameters_message;
@@ -184,8 +201,8 @@ static void parameter_adjust(lv_event_t *e)
 {
     int kind=parameter_kind();
     if(!parameter_loaded[kind]||parameter_waiting[kind]||access_view.registering)return;
-    int id=(int)(intptr_t)lv_event_get_user_data(e),row=parameter_first[parameter_page]+id/2;
-    if(id/2>=parameter_count[parameter_page])return;
+    int id=(int)(intptr_t)lv_event_get_user_data(e),row=parameter_pages_config[parameter_page].rows[id/2];
+    if(row<0)return;
     int *value=parameter_field(row),next=*value+(id%2?1:-1);
     if(next>=parameter_rows[row].min&&next<=parameter_rows[row].max){*value=next;parameter_dirty[kind]=1;}
     parameter_refresh();
@@ -193,7 +210,7 @@ static void parameter_adjust(lv_event_t *e)
 static void parameter_turn(lv_event_t *e)
 {
     int next=parameter_page+((intptr_t)lv_event_get_user_data(e)?1:-1);
-    if(next>=0&&next<6){parameter_page=next;parameter_refresh();}
+    if(next>=0&&next<PARAMETER_PAGE_COUNT){parameter_page=next;parameter_refresh();}
 }
 static void parameter_submit(lv_event_t *e)
 {
@@ -324,6 +341,8 @@ static void key(lv_event_t *e)
 }
 void ui_show(enum ui_page next,int feature)
 {
+    if(!KY50_ENABLE_FACE&&next==UI_FACE_IR_CALIBRATE)next=UI_FACTORY;
+    if(!KY50_BIOMETRICS&&next==UI_PARAMETERS)next=UI_ADVANCED;
     user_ui_before_page(next);
     if(toast_timer) { lv_timer_delete(toast_timer);toast_timer=NULL; }
     link_label=clock_label=camera_label=input_label=toast=touch_label=factory_label=source_label=NULL;
@@ -406,6 +425,7 @@ void ui_show(enum ui_page next,int feature)
         lv_obj_t *bt=button(root,24,180,432,112,nav,UI_FACTORY);
         label(bt,LV_SYMBOL_SETTINGS,14,34,70,&lv_font_montserrat_32,ACCENT);
         label(bt,"工厂测试",84,35,320,&ky50_font_24,TEXT);
+        if(!KY50_BIOMETRICS)return;
         bt=button(root,24,312,432,112,nav,UI_PARAMETERS);
         label(bt,LV_SYMBOL_EDIT,14,34,70,&lv_font_montserrat_32,ACCENT);
         label(bt,"参数设置",84,35,320,&ky50_font_24,TEXT);
@@ -426,7 +446,7 @@ void ui_show(enum ui_page next,int feature)
             LV_SYMBOL_VIDEO,LV_SYMBOL_POWER,LV_SYMBOL_BELL,LV_SYMBOL_SHUFFLE,
             LV_SYMBOL_CHARGE,LV_SYMBOL_CHARGE,LV_SYMBOL_AUDIO,LV_SYMBOL_AUDIO,
             LV_SYMBOL_SD_CARD,LV_SYMBOL_SD_CARD,LV_SYMBOL_REFRESH};
-        for(int i=0;i<14;i++) {
+        for(int i=0;i<(KY50_ENABLE_FACE?14:13);i++) {
             lv_obj_t *bt=button(root,24+(i%2)*224,231+(i/2)*85,208,76,factory_action,i);
             int placeholder=i==5||i==6||(i>=10&&i<=12);
             int light=i==7||i==8;

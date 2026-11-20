@@ -35,6 +35,8 @@ static struct scaler preview={.group=0,.scale_pool=VB_INVALID_POOLID,.rotation_p
 static struct scaler algorithm_half={.group=1,.scale_pool=VB_INVALID_POOLID,.rotation_pool=VB_INVALID_POOLID};
 static struct scaler color={.group=2,.scale_pool=VB_INVALID_POOLID,.rotation_pool=VB_INVALID_POOLID};
 static struct scaler face_color={.group=3,.scale_pool=VB_INVALID_POOLID,.rotation_pool=VB_INVALID_POOLID};
+static struct scaler fingerprint_scaler={.group=7,.scale_pool=VB_INVALID_POOLID,.rotation_pool=VB_INVALID_POOLID};
+static int fingerprint_hw_failed,fingerprint_compare_count;
 static pthread_mutex_t face_color_mutex=PTHREAD_MUTEX_INITIALIZER;
 static int hardware_rotation,hardware_color,compact_buffers;
 static void scaler_stop(struct scaler *s);
@@ -62,6 +64,8 @@ static int scaler_start(struct scaler *s,unsigned input_w,unsigned input_h,
         .stAspectRatio={.enMode=ASPECT_RATIO_NONE}};
     CHECK(CVI_VPSS_CreateGrp(s->group,&group));s->created=1;
     CHECK(CVI_VPSS_SetChnAttr(s->group,0,&ch));
+    /* Identity-size conversion before fixed-angle rotation; no smoothing. */
+    if(s==&fingerprint_scaler)CHECK(CVI_VPSS_SetChnScaleCoefLevel(s->group,0,VPSS_SCALE_COEF_NEAREST));
     /* Capture owns only one output at a time. RTSP mode uses a two-block
      * pipeline to leave ION space for three encoders and recognition. */
     VB_POOL_CONFIG_S pool={.u32BlkCnt=s==&face_color||compact_buffers?2:4,.enRemapMode=VB_REMAP_MODE_CACHED};
@@ -69,8 +73,9 @@ static int scaler_start(struct scaler *s,unsigned input_w,unsigned input_h,
      * dimensions too. Allocating just stride * original height corrupts UV
      * across VB blocks even if the separate GDC output pool is large enough. */
     const int csc_only=s==&color||s==&face_color;
-    unsigned pool_w=hardware_rotation&&!csc_only?ALIGN(w,DEFAULT_ALIGN):w;
-    unsigned pool_h=hardware_rotation&&!csc_only?ALIGN(h,DEFAULT_ALIGN):h;
+    const int rotate_hw=hardware_rotation&&(s==&fingerprint_scaler||format!=PIXEL_FORMAT_YUYV);
+    unsigned pool_w=rotate_hw&&!csc_only?ALIGN(w,DEFAULT_ALIGN):w;
+    unsigned pool_h=rotate_hw&&!csc_only?ALIGN(h,DEFAULT_ALIGN):h;
     pool.u32BlkSize=COMMON_GetPicBufferSize(pool_w,pool_h,ch.enPixelFormat,
         DATA_BITWIDTH_8,COMPRESS_MODE_NONE,DEFAULT_ALIGN);
     s->scale_pool=CVI_VB_CreatePool(&pool);
@@ -78,7 +83,7 @@ static int scaler_start(struct scaler *s,unsigned input_w,unsigned input_h,
     CHECK(CVI_VPSS_AttachVbPool(s->group,0,s->scale_pool));s->attached=1;
     if(csc_only) {
         CHECK(preview_csc(s->group));
-    } else if(hardware_rotation) {
+    } else if(rotate_hw) {
         /* GDC uses its own output pool, distinct from the VPSS output pool.
          * Both swapped dimensions must be aligned, including padded height. */
         pool.u32BlkCnt=compact_buffers?2:3;
@@ -102,7 +107,7 @@ static int start_scalers(enum camera_source source)
 {
     if(scaler_start(&preview,source==CAMERA_DVP?640:1920,source==CAMERA_DVP?480:1080,
         864,source==CAMERA_DVP?648:486,source==CAMERA_DVP?PIXEL_FORMAT_YUYV:PIXEL_FORMAT_NV21))return -1;
-    if(source!=CAMERA_DVP&&scaler_start(&algorithm_half,1920,1080,960,540,PIXEL_FORMAT_NV21))return -1;
+    if((source!=CAMERA_DVP||compact_buffers)&&scaler_start(&algorithm_half,1920,1080,960,540,PIXEL_FORMAT_NV21))return -1;
     return 0;
 }
 int media_scale_start_mode(enum camera_source source,int compact)
@@ -111,8 +116,8 @@ int media_scale_start_mode(enum camera_source source,int compact)
     const char *rotation=getenv("KY50_ROTATION"),*csc=getenv("KY50_PREVIEW_CSC");
     /* DVP retains its separately validated software path. RGB and IR share
      * group0, so it must remain NV21 even when preview switches without restart. */
-    hardware_rotation=source!=CAMERA_DVP&&(!rotation||strcmp(rotation,"software"));
-    hardware_color=hardware_rotation&&(!csc||strcmp(csc,"software"));
+    hardware_rotation=!rotation||strcmp(rotation,"software");
+    hardware_color=source!=CAMERA_DVP&&hardware_rotation&&(!csc||strcmp(csc,"software"));
     if(start_scalers(source)) {
         media_scale_stop();
         if(!hardware_rotation)return -1;
@@ -120,7 +125,7 @@ int media_scale_start_mode(enum camera_source source,int compact)
         if(start_scalers(source))return -1;
         fprintf(stderr,"GDC initialization failed: using software rotation/CSC\n");
     }
-    printf("ROTATION_PIPELINE algorithm_and_preview_rotation=%s preview_csc=%s\n",hardware_rotation?"GDC CCW90":"software CCW90",hardware_color?"VPSS RGB888":"software");
+    printf("ROTATION_PIPELINE algorithm_rotation=%s preview_rotation=%s preview_csc=%s\n",algorithm_half.rotated_hw?"GDC CCW90":"software CCW90",preview.rotated_hw?"GDC CCW90":"software CCW90",hardware_color?"VPSS RGB888":"software");
     return 0;
 }
 int media_scale_start(enum camera_source source) { return media_scale_start_mode(source,0); }
@@ -296,7 +301,7 @@ static void scaler_stop(struct scaler *s)
     s->gdc_attached=s->rotated_hw=0;
     s->attached=s->started=s->enabled=s->created=s->reported=0;
 }
-void media_scale_stop(void) { scaler_stop(&color);scaler_stop(&algorithm_half);scaler_stop(&preview);
+void media_scale_stop(void) { scaler_stop(&fingerprint_scaler);fingerprint_hw_failed=fingerprint_compare_count=0;scaler_stop(&color);scaler_stop(&algorithm_half);scaler_stop(&preview);
     media_face_color_stop();
     memset(stage_time,0,sizeof(stage_time));memset(stage_count,0,sizeof(stage_count)); }
 
@@ -379,4 +384,77 @@ failed:
     if(have_output)CVI_VPSS_ReleaseChnFrame(face_color.group,0,&output);
     fprintf(stderr,"FACE_CSC conversion failed; feature job rejected\n");
     face_color_close();pthread_mutex_unlock(&face_color_mutex);return -1;
+}
+
+#include "fingerprint_image.h"
+static int fingerprint_software_frame(const VIDEO_FRAME_INFO_S *input,uint8_t *gray)
+{
+    const VIDEO_FRAME_S *v=&input->stVFrame;
+    if(v->enPixelFormat!=PIXEL_FORMAT_YUYV||v->u32Width!=640||v->u32Height!=480||v->s16OffsetTop||v->s16OffsetLeft||v->s16OffsetRight||v->s16OffsetBottom)return -1;
+    size_t size=(size_t)v->u32Stride[0]*v->u32Height;
+    if(v->u32Stride[0]<1280||size>v->u32Length[0])return -1;
+    uint8_t *p=CVI_SYS_MmapCache(v->u64PhyAddr[0],size);
+    if(!p||p==MAP_FAILED)return -1;
+    int rc=CVI_SYS_IonInvalidateCache(v->u64PhyAddr[0],p,size)?-1:
+        fingerprint_rotate_yuyv(p,size,640,480,v->u32Stride[0],gray,FINGER_BYTES);
+    CVI_SYS_Munmap(p,size);return rc;
+}
+
+static int fingerprint_hardware_frame(const VIDEO_FRAME_INFO_S *input,uint8_t *gray)
+{
+    struct scaler *s=&fingerprint_scaler;
+    if(fingerprint_hw_failed)return -1;
+    if(!s->started) {
+        if(scaler_start(s,640,480,640,480,PIXEL_FORMAT_YUYV)||!s->rotated_hw) {
+            scaler_stop(s);fingerprint_hw_failed=1;return -1;
+        }
+    }
+    VIDEO_FRAME_INFO_S out={0};uint8_t *mapped=NULL;size_t length=0;int rc=-1;
+    if(CVI_VPSS_SendFrame(s->group,input,60)||CVI_VPSS_GetChnFrame(s->group,0,&out,60))goto unavailable;
+    const VIDEO_FRAME_S *v=&out.stVFrame;
+    int left=v->s16OffsetLeft,right=v->s16OffsetRight,top=v->s16OffsetTop,bottom=v->s16OffsetBottom;
+    if(v->enPixelFormat!=PIXEL_FORMAT_NV21||left<0||right<0||top<0||bottom<0||
+       (int)v->u32Width-left-right!=FINGER_WIDTH||(int)v->u32Height-top-bottom!=FINGER_HEIGHT||
+       v->u32Stride[0]<v->u32Width)goto release;
+    length=(size_t)v->u32Stride[0]*v->u32Height;if(length>v->u32Length[0])goto release;
+    mapped=CVI_SYS_MmapCache(v->u64PhyAddr[0],length);if(!mapped||mapped==MAP_FAILED){mapped=NULL;goto release;}
+    if(CVI_SYS_IonInvalidateCache(v->u64PhyAddr[0],mapped,length))goto release;
+    for(unsigned y=0;y<FINGER_HEIGHT;y++)memcpy(gray+y*FINGER_WIDTH,mapped+(y+top)*v->u32Stride[0]+left,FINGER_WIDTH);
+    if(!s->reported++)printf("FINGER_ROTATION hardware group=7 source=640x480 output=%ux%u stride=%u offsets=%d,%d,%d,%d content=480x640\n",
+        v->u32Width,v->u32Height,v->u32Stride[0],left,right,top,bottom);
+    rc=0;
+release:
+    if(mapped)CVI_SYS_Munmap(mapped,length);
+    if(CVI_VPSS_ReleaseChnFrame(s->group,0,&out))rc=-1;
+    if(!rc)return 0;
+unavailable:
+    scaler_stop(s);fingerprint_hw_failed=1;fprintf(stderr,"FINGER GDC unavailable; software rotation retained\n");return -1;
+}
+int media_fingerprint_frame(const VIDEO_FRAME_INFO_S *input,uint8_t *gray)
+{
+    const VIDEO_FRAME_S *v=&input->stVFrame;
+    if(!gray||v->enPixelFormat!=PIXEL_FORMAT_YUYV||v->u32Width!=640||v->u32Height!=480||
+       v->s16OffsetTop||v->s16OffsetLeft||v->s16OffsetRight||v->s16OffsetBottom)return -1;
+    const char *mode=getenv("KY50_FINGER_ROTATION");
+    if((mode&&!strcmp(mode,"software"))||fingerprint_hw_failed)return fingerprint_software_frame(input,gray);
+    if(mode&&!strcmp(mode,"compare")&&fingerprint_compare_count<120) {
+        uint8_t *reference=malloc(FINGER_BYTES);if(!reference)return fingerprint_software_frame(input,gray);
+        uint64_t begin=scale_us();int sw=fingerprint_software_frame(input,reference);uint64_t sw_us=scale_us()-begin;
+        begin=scale_us();int hw=fingerprint_hardware_frame(input,gray);uint64_t hw_us=scale_us()-begin;
+        unsigned differences=0,max_error=0,error_sum=0;
+        if(!sw&&!hw)for(unsigned i=0;i<FINGER_BYTES;i++)if(gray[i]!=reference[i]) {
+            unsigned d=abs((int)gray[i]-reference[i]);++differences;error_sum+=d;if(d>max_error)max_error=d;
+        }
+        printf("FINGER_ROTATE_COMPARE frame=%d software_rc=%d hardware_rc=%d software_us=%llu hardware_us=%llu differences=%u max_error=%u error_sum=%u\n",
+            ++fingerprint_compare_count,sw,hw,(unsigned long long)sw_us,(unsigned long long)hw_us,differences,max_error,error_sum);
+        /* The VPSS YUYV -> NV21 path may change a small number of Y codes.
+         * Diagnostic mode logs the distribution and rejects gross differences
+         * (>1% of pixels or >32/255), geometry errors and hardware failures.
+         * This is a rotation diagnostic guard, not an authentication threshold. */
+        if(sw||hw||differences>FINGER_BYTES/100||max_error>32){fingerprint_hw_failed=1;scaler_stop(&fingerprint_scaler);if(!sw)memcpy(gray,reference,FINGER_BYTES);}
+        memset(reference,0,FINGER_BYTES);free(reference);
+        return sw?sw:0;
+    }
+    if(fingerprint_hardware_frame(input,gray))return fingerprint_software_frame(input,gray);
+    return 0;
 }

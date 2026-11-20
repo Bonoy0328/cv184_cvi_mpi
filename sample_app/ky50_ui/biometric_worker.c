@@ -12,6 +12,7 @@ static pthread_cond_t result_ready=PTHREAD_COND_INITIALIZER;
 static pthread_t thread;
 static const PalmBackend *palm;
 static const FaceBackend *face;
+static const FingerBackend *finger;
 static int started,stop,state; /* 0 idle, 1 worker owns input, 2 result */
 static unsigned generation,slot_generation;
 static BioJob slot;
@@ -51,16 +52,19 @@ static void *run(void *unused)
         pthread_mutex_lock(&mutex);int cancelled=stop||ticket!=generation;pthread_mutex_unlock(&mutex);
         if(cancelled)job.result=STATUS_FAILED;
         else if(job.stage==BIO_AUTH)
-            job.result=job.kind==CREDENTIAL_FACE?face->recognize(job.feature,&job.user):palm->recognize(job.feature,&job.user);
+            job.result=job.kind==CREDENTIAL_FINGER?finger->recognize(job.feature,job.feature_size,&job.user):job.kind==CREDENTIAL_FACE?face->recognize(job.feature,&job.user):palm->recognize(job.feature,&job.user);
+        else if(job.kind==CREDENTIAL_FINGER)
+            job.result=finger->features(image,w,h,job.sample_id,&job.finger,job.feature,sizeof(job.feature),&job.feature_size);
         else if(job.kind==CREDENTIAL_FACE)
             job.result=face->sample_features(snapshot,&job.face,job.feature);
         else job.result=palm->features(image,w,h,&job.hand,job.feature);
         if(job.result==STATUS_OK&&((job.stage==BIO_FACE_RECOGNIZE&&job.face.status==STATUS_OK)||
-           (job.stage==BIO_PALM_RECOGNIZE&&job.hand.status==STATUS_OK))) {
+           (job.stage==BIO_PALM_RECOGNIZE&&job.hand.status==STATUS_OK)||
+           (job.stage==BIO_FINGER_RECOGNIZE&&job.finger.status==STATUS_OK))) {
             pthread_mutex_lock(&mutex);cancelled=stop||ticket!=generation||us()-begin>1500000;pthread_mutex_unlock(&mutex);
             if(!cancelled) {
                 job.auth_ran=1;
-                job.auth_result=job.kind==CREDENTIAL_FACE?face->recognize(job.feature,&job.user):palm->recognize(job.feature,&job.user);
+                job.auth_result=job.kind==CREDENTIAL_FINGER?finger->recognize(job.feature,job.feature_size,&job.user):job.kind==CREDENTIAL_FACE?face->recognize(job.feature,&job.user):palm->recognize(job.feature,&job.user);
             }
         }
         /* Only successful RGB candidates need the extra IR work. A false IR
@@ -76,7 +80,7 @@ static void *run(void *unused)
                 (unsigned long long)job.ir_sample.sequence,(unsigned long long)(us()/1000));
         }
         if(getenv("KY50_TRACE_STALL"))printf("BIO_STAGE modality=%s stage=%s elapsed_us=%llu result=%d uptime_ms=%llu\n",
-            job.kind==CREDENTIAL_FACE?"face":"palm",job.stage==BIO_AUTH?"sdk_auth":job.stage==BIO_FEATURE?"feature":"feature_auth",
+            job.kind==CREDENTIAL_FINGER?"fingerprint":job.kind==CREDENTIAL_FACE?"face":"palm",job.stage==BIO_AUTH?"sdk_auth":job.stage==BIO_FEATURE?"feature":"feature_auth",
             (unsigned long long)(us()-begin),job.result,(unsigned long long)(us()/1000));
         if(image){memset(image,0,(size_t)w*h*(job.kind==CREDENTIAL_FACE?3:2)/2);free(image);}
         if(snapshot)face->sample_free(snapshot);
@@ -88,11 +92,12 @@ static void *run(void *unused)
     pthread_mutex_unlock(&mutex);
     return NULL;
 }
-int bio_worker_start(const PalmBackend *p,const FaceBackend *f)
+int bio_worker_start(const PalmBackend *p,const FaceBackend *f){return bio_worker_start_modalities(p,f,NULL);}
+int bio_worker_start_modalities(const PalmBackend *p,const FaceBackend *f,const FingerBackend *fp)
 {
     if(started)return -1;
-    if(!p||(f&&(!f->sample_capture||!f->sample_features||!f->sample_free)))return -1;
-    palm=p;face=f;stop=state=0;input=NULL;sample=NULL;++generation;
+    if((!p&&!f&&!fp)||(f&&(!f->sample_capture||!f->sample_features||!f->sample_free)))return -1;
+    palm=p;face=f;finger=fp;stop=state=0;input=NULL;sample=NULL;++generation;
     if(pthread_create(&thread,NULL,run,NULL))return -1;
     started=1;return 0;
 }
@@ -120,7 +125,9 @@ void bio_worker_cancel(unsigned kind)
 }
 int bio_worker_submit(const BioJob *job,const uint8_t *image,uint16_t w,uint16_t h,const uint8_t *ir)
 {
-    if(!started||!job||(job->kind!=CREDENTIAL_PALM&&job->kind!=CREDENTIAL_FACE))return -1;
+    if(!started||!job||(job->kind!=CREDENTIAL_PALM&&job->kind!=CREDENTIAL_FACE&&job->kind!=CREDENTIAL_FINGER))return -1;
+    if((job->kind==CREDENTIAL_PALM&&!palm)||(job->kind==CREDENTIAL_FACE&&!face)||
+       (job->kind==CREDENTIAL_FINGER&&!finger))return -1;
     pthread_mutex_lock(&mutex);
     if(state||stop){pthread_mutex_unlock(&mutex);return 0;}
     if(job->stage!=BIO_AUTH) {

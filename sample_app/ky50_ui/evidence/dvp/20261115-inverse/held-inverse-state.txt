@@ -1,0 +1,73 @@
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x00
+special_effect_after=0x01 inverse=1
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x01
+53330.06 4302.31
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		 640	 480	  BT	1MUX	  P
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	YUYV	 YUV		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  0	  0	  1		  0 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		  640		  480
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	 640	 480	  N	 N	   	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	 640	 480	   	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   21		 4914	 4914	    0		    0	 640	 480
+PALM_PIPELINE features=92 auth=26 held=44 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=1256287 taken=576103 replaced=680178 depth=0
+PERF capture.vi n=100 avg_ms=36.59 max_ms=37.25
+PERF capture.preview n=100 avg_ms=12.56 max_ms=22.95
+PERF capture.ir n=100 avg_ms=0.02 max_ms=0.05
+PERF capture.interval n=100 avg_ms=50.00 max_ms=60.00
+PERF ui.render n=149 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=100 avg_ms=4.45 max_ms=11.89
+PERF ui.process n=1390 avg_ms=0.01 max_ms=0.05
+STATS elapsed=52606 capture_fps=20.00 display_fps=20.00 frames=1263294 page=8 eth=1
+SNAPSHOT /tmp/ky50-ui/screen.ppm OK
+SCALE_PERF group=0 vpss=2.06 map=0.25 rotate=1.84 convert=8.34 release=0.09 ms

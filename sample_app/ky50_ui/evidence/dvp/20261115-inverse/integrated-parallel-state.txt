@@ -1,0 +1,115 @@
+/tmp/ky50-ui/ky50_ui
+b4e8650868724e93b3836522761c84cca02e6ab6931247c3a9a47aed9798ab87  /proc/1887/exe
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x01
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+	  1	 online		offline		offline
+	  2	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		1920	1080	MIPI	1MUX	  I
+	  1	  Y	   Y		1920	1080	MIPI	1MUX	  I
+	  2	  Y	   Y		 640	 480	  BT	1MUX	  P
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	N/A	 RGB		None
+	  1	0	0	0	0	N/A	 RGB		None
+	  2	0	0	0	0	YUYV	 YUV		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  1	  0	  1		  0 
+	  0	  1	  1		  1 
+	  2	  2	  1		  2 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		 1920		 1080
+	  1	    N		   0		 1920		 1080
+	  2	    N		   0		  640		  480
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+	  1	  0	1920	1080	  N	 N	NV21	  SDR8		  -1
+	  2	  0	 640	 480	  N	 N	   	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+	  1	  0	None		  2	 32
+	  2	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+	  1	  0	  N	 N	1920	1080	NV21	  SDR8		  None
+	  2	  0	  N	 N	 640	 480	   	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+	  1	  0	  0
+	  2	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+	  1	  0	  N	   0
+	  2	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+	  1	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+	  2	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   31		  316	  316	    0		  170	1920	1080
+	  1	  0	  Y	   31		  312	  312	    0		  205	1920	1080
+	  2	  0	  Y	   21		  207	  207	    0		   92	 640	 480
+RTSP first encoded frame rgb
+RTSP first encoded frame ir
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=64 avg_ms=8.90 max_ms=17.27
+PERF ui.process n=1243 avg_ms=0.06 max_ms=25.16
+STATS elapsed=5 capture_fps=14.98 display_fps=12.78 frames=75 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=0 hits=0 errors=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=92 avg_ms=11.86 max_ms=55.90
+PERF capture.preview n=92 avg_ms=18.99 max_ms=28.11
+PERF capture.ir n=92 avg_ms=17.33 max_ms=89.76
+PERF capture.interval n=91 avg_ms=49.24 max_ms=78.00
+SCALE_PERF group=0 vpss=2.30 map=0.26 rotate=2.82 convert=13.53 release=0.13 ms
+PERF ui.render n=146 avg_ms=0.02 max_ms=1.42
+PERF ui.present n=85 avg_ms=9.86 max_ms=23.60
+PERF ui.process n=1145 avg_ms=0.05 max_ms=3.34
+STATS elapsed=10 capture_fps=19.78 display_fps=16.98 frames=174 page=0 eth=1
+SNAPSHOT /tmp/ky50-ui/screen.ppm OK
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=0 hits=0 errors=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=100 avg_ms=9.19 max_ms=33.23
+PERF capture.preview n=100 avg_ms=21.93 max_ms=36.83
+PERF capture.ir n=100 avg_ms=16.60 max_ms=27.10
+PERF capture.interval n=100 avg_ms=50.26 max_ms=80.00
+SCALE_PERF group=0 vpss=2.27 map=0.31 rotate=2.74 convert=16.42 release=0.17 ms

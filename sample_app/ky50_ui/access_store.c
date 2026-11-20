@@ -60,13 +60,15 @@ int store_open(UserStore *s,const char *path)
     if(prepare(s,&q,"PRAGMA user_version")) goto fail;
     if(sqlite3_step(q)==SQLITE_ROW) version=sqlite3_column_int(q,0);
     sqlite3_finalize(q);
-    if(version!=0&&version!=1&&version!=2&&version!=3) { snprintf(s->error,sizeof(s->error),"Unsupported schema %d",version);goto fail; }
+    if(version!=0&&version!=1&&version!=2&&version!=3&&version!=4) { snprintf(s->error,sizeof(s->error),"Unsupported schema %d",version);goto fail; }
     int reset=version==1||version==2;
     if(exec(s,"BEGIN IMMEDIATE"))goto fail;
     /* User explicitly requested discarding v1/v2 data. Keep device parameters,
      * but persist a reset marker until BOTH SDK databases have been emptied. */
     if(reset&&exec(s,"DROP TABLE IF EXISTS operations; DROP TABLE IF EXISTS credentials; "
         "DROP TABLE IF EXISTS attendance_events; DROP TABLE IF EXISTS audit_events; DROP TABLE IF EXISTS users;"))goto rollback;
+    if(version==3&&exec(s,"DROP INDEX IF EXISTS credential_template; DROP TRIGGER IF EXISTS credential_changed; "
+        "ALTER TABLE credentials RENAME TO credentials_v3; ALTER TABLE operations RENAME TO operations_v3;"))goto rollback;
     if(exec(s,
         "CREATE TABLE IF NOT EXISTS users("
         "id INTEGER PRIMARY KEY AUTOINCREMENT,local_id INTEGER NOT NULL UNIQUE CHECK(local_id BETWEEN 0 AND 99),"
@@ -86,14 +88,14 @@ int store_open(UserStore *s,const char *path)
         "model_id TEXT NOT NULL DEFAULT '',hand_side INTEGER,registered_utc INTEGER,updated_utc INTEGER NOT NULL,"
         "last_error TEXT NOT NULL DEFAULT '',credential_ref TEXT NOT NULL DEFAULT '',face_direction INTEGER,"
         "details_json TEXT NOT NULL DEFAULT '{}',PRIMARY KEY(user_id,kind),"
-        "CHECK(kind NOT IN('face','palm') OR (state IN(0,3) AND template_uuid IS NULL) OR "
+        "CHECK(kind NOT IN('face','palm','fingerprint') OR (state IN(0,3) AND template_uuid IS NULL) OR "
         "(state IN(1,2) AND template_uuid IS NOT NULL AND template_uuid BETWEEN 0 AND 99)));"
         "CREATE UNIQUE INDEX IF NOT EXISTS credential_template ON credentials(kind,template_uuid) WHERE template_uuid IS NOT NULL;"
         "CREATE TRIGGER IF NOT EXISTS credential_changed AFTER UPDATE ON credentials BEGIN "
         "UPDATE users SET updated_utc=NEW.updated_utc WHERE id=NEW.user_id; END;"
         "CREATE TABLE IF NOT EXISTS operations(local_id INTEGER PRIMARY KEY REFERENCES users(local_id) ON DELETE CASCADE,"
         "kind TEXT NOT NULL CHECK(kind IN('enroll','delete')),created_utc INTEGER NOT NULL,"
-        "modality TEXT NOT NULL CHECK(modality IN('palm','face')),template_uuid INTEGER,"
+        "modality TEXT NOT NULL CHECK(modality IN('palm','face','fingerprint')),template_uuid INTEGER,"
         "CHECK(kind='delete' OR (template_uuid IS NOT NULL AND template_uuid BETWEEN 0 AND 99)));"
         "CREATE TABLE IF NOT EXISTS attendance_events(id INTEGER PRIMARY KEY AUTOINCREMENT,"
         "user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,local_id INTEGER,employee_id TEXT NOT NULL DEFAULT '',"
@@ -105,8 +107,10 @@ int store_open(UserStore *s,const char *path)
         "user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,local_id INTEGER,employee_id TEXT NOT NULL,name TEXT NOT NULL,"
         "action TEXT NOT NULL,detail TEXT NOT NULL,created_utc INTEGER NOT NULL,time_valid INTEGER NOT NULL);"
         "CREATE TABLE IF NOT EXISTS device_meta(key TEXT PRIMARY KEY,value TEXT NOT NULL);"
-        "INSERT OR REPLACE INTO device_meta VALUES('schema','3');"
-        "PRAGMA application_id=1264137520; PRAGMA user_version=3;"))goto rollback;
+        "INSERT OR REPLACE INTO device_meta VALUES('schema','4');"
+        "PRAGMA application_id=1264137520; PRAGMA user_version=4;"))goto rollback;
+    if(version==3&&exec(s,"INSERT INTO credentials SELECT * FROM credentials_v3; "
+        "INSERT INTO operations SELECT * FROM operations_v3; DROP TABLE operations_v3; DROP TABLE credentials_v3;"))goto rollback;
     if(reset&&exec(s,"INSERT OR REPLACE INTO device_meta VALUES('templates_reset_pending','1')"))goto rollback;
     if(exec(s,"COMMIT"))goto rollback;
     printf("USER_DB journal=WAL synchronous=FULL autocheckpoint_pages=256\n");
@@ -260,6 +264,7 @@ static void row(sqlite3_stmt *q,AppUser *u)
     u->enabled=sqlite3_column_int(q,5);u->is_admin=sqlite3_column_int(q,6);u->deleting=sqlite3_column_int(q,7);
     u->registered=sqlite3_column_int(q,8);u->palm_state=sqlite3_column_int(q,9);u->face_state=sqlite3_column_int(q,10);
     u->palm_uuid=sqlite3_column_int(q,11);u->face_uuid=sqlite3_column_int(q,12);
+    u->finger_state=sqlite3_column_int(q,13);u->finger_uuid=sqlite3_column_int(q,14);
 }
 #define USER_SELECT "SELECT u.id,u.local_id,u.employee_id,u.name,u.avatar_path,u.enabled,u.is_admin,u.state='deleting'," \
     "COALESCE((SELECT sum(CASE c.kind WHEN 'face' THEN 1 WHEN 'palm' THEN 2 WHEN 'fingerprint' THEN 4 WHEN 'card' THEN 8 ELSE 16 END) " \
@@ -267,7 +272,7 @@ static void row(sqlite3_stmt *q,AppUser *u)
     "COALESCE((SELECT state FROM credentials WHERE user_id=u.id AND kind='palm'),0)," \
     "COALESCE((SELECT state FROM credentials WHERE user_id=u.id AND kind='face'),0)," \
     "COALESCE((SELECT template_uuid FROM credentials WHERE user_id=u.id AND kind='palm'),-1)," \
-    "COALESCE((SELECT template_uuid FROM credentials WHERE user_id=u.id AND kind='face'),-1) FROM users u "
+    "COALESCE((SELECT template_uuid FROM credentials WHERE user_id=u.id AND kind='face'),-1),COALESCE((SELECT state FROM credentials WHERE user_id=u.id AND kind='fingerprint'),0),COALESCE((SELECT template_uuid FROM credentials WHERE user_id=u.id AND kind='fingerprint'),-1) FROM users u "
 int store_list(UserStore *s,AppUser *users,int capacity)
 {
     sqlite3_stmt *q=NULL;if(prepare(s,&q,USER_SELECT "ORDER BY u.id DESC"))return -1;
@@ -310,10 +315,10 @@ int store_create(UserStore *s,const char *employee,const char *name,AppUser *out
     if(finish(s,rc))return -1;
     return store_get(s,local_id,out);
 }
-static const char *modality_name(unsigned kind){return kind==CREDENTIAL_FACE?"face":"palm";}
+static const char *modality_name(unsigned kind){return kind==CREDENTIAL_FINGER?"fingerprint":kind==CREDENTIAL_FACE?"face":"palm";}
 int store_get_by_template(UserStore *s,unsigned kind,uint16_t template_uuid,AppUser *u)
 {
-    if((kind!=CREDENTIAL_FACE&&kind!=CREDENTIAL_PALM)||template_uuid>=APP_TEMPLATE_SLOTS)return -1;
+    if((kind!=CREDENTIAL_FACE&&kind!=CREDENTIAL_PALM&&kind!=CREDENTIAL_FINGER)||template_uuid>=APP_TEMPLATE_SLOTS)return -1;
     sqlite3_stmt *q=NULL;
     if(prepare(s,&q,USER_SELECT "WHERE u.id=(SELECT user_id FROM credentials WHERE kind=? AND template_uuid=?)"))return -1;
     sqlite3_bind_text(q,1,modality_name(kind),-1,SQLITE_STATIC);sqlite3_bind_int(q,2,template_uuid);
@@ -328,6 +333,26 @@ int store_finish_templates_reset(UserStore *s)
 {
     return exec(s,"DELETE FROM device_meta WHERE key='templates_reset_pending'");
 }
+int store_fingerprint_reset_pending(UserStore *s)
+{
+    sqlite3_stmt *q=NULL;
+    if(prepare(s,&q,"SELECT value FROM device_meta WHERE key='fingerprint.input_contract'"))return -1;
+    int rc=sqlite3_step(q),result=-1;
+    if(rc==SQLITE_DONE)result=1;
+    else if(rc==SQLITE_ROW)result=strcmp((const char*)sqlite3_column_text(q,0),APP_FINGER_MODEL_ID)!=0;
+    sqlite3_finalize(q);return result;
+}
+int store_finish_fingerprint_reset(UserStore *s)
+{
+    if(exec(s,"BEGIN IMMEDIATE"))return -1;
+    if(exec(s,"DELETE FROM operations WHERE kind='enroll' AND modality='fingerprint';"
+        "UPDATE credentials SET state=0,template_uuid=NULL,model_id='" APP_FINGER_MODEL_ID "',"
+        "registered_utc=NULL,updated_utc=strftime('%s','now'),last_error='ROI upgrade: re-enroll fingerprint' WHERE kind='fingerprint';"
+        "INSERT OR REPLACE INTO device_meta(key,value) VALUES('fingerprint.input_contract','" APP_FINGER_MODEL_ID "');")||exec(s,"COMMIT")) {
+        exec(s,"ROLLBACK");return -1;
+    }
+    return 0;
+}
 static int credential_update(UserStore *s,uint16_t local_id,int state,const char *detail,int side,unsigned kind,int template_uuid)
 {
     sqlite3_stmt *q=NULL;
@@ -340,7 +365,7 @@ static int credential_update(UserStore *s,uint16_t local_id,int state,const char
     time_t now=time(NULL);sqlite3_bind_int64(q,4,now);sqlite3_bind_int(q,5,side);sqlite3_bind_int(q,6,state);
     sqlite3_bind_int64(q,7,now);sqlite3_bind_int(q,8,local_id);
     sqlite3_bind_text(q,9,modality_name(kind),-1,SQLITE_STATIC);
-    sqlite3_bind_text(q,10,kind==CREDENTIAL_FACE?"cv184x-face-1000-20261113":"cv184x-fused-20261111",-1,SQLITE_STATIC);
+    sqlite3_bind_text(q,10,kind==CREDENTIAL_FINGER?APP_FINGER_MODEL_ID:kind==CREDENTIAL_FACE?"cv184x-face-1000-20261113":"cv184x-fused-20261111",-1,SQLITE_STATIC);
     return done(s,q);
 }
 static int operation(UserStore *s,uint16_t local_id,const char *kind,unsigned modality,int template_uuid)
@@ -358,9 +383,9 @@ static int clear_operation(UserStore *s,uint16_t local_id)
 }
 int store_prepare_enroll_kind(UserStore *s,uint16_t local_id,unsigned kind,uint16_t template_uuid)
 {
-    if((kind!=CREDENTIAL_FACE&&kind!=CREDENTIAL_PALM)||template_uuid>=APP_TEMPLATE_SLOTS)return -1;
+    if((kind!=CREDENTIAL_FACE&&kind!=CREDENTIAL_PALM&&kind!=CREDENTIAL_FINGER)||template_uuid>=APP_TEMPLATE_SLOTS)return -1;
     AppUser u;if(store_get(s,local_id,&u)||u.deleting)return -1;
-    int state=kind==CREDENTIAL_FACE?u.face_state:u.palm_state;
+    int state=kind==CREDENTIAL_FINGER?u.finger_state:kind==CREDENTIAL_FACE?u.face_state:u.palm_state;
     if(state!=CRED_NONE&&state!=CRED_MISSING)return -1;
     if(exec(s,"BEGIN IMMEDIATE"))return -1;
     int rc=operation(s,local_id,"enroll",kind,template_uuid);
@@ -371,8 +396,8 @@ int store_prepare_enroll_kind(UserStore *s,uint16_t local_id,unsigned kind,uint1
 int store_finish_enroll_kind(UserStore *s,uint16_t local_id,int hand_side,unsigned kind)
 {
     AppUser u;if(store_get(s,local_id,&u))return -1;
-    int template_uuid=kind==CREDENTIAL_FACE?u.face_uuid:u.palm_uuid;
-    if(template_uuid<0||(kind==CREDENTIAL_FACE?u.face_state:u.palm_state)!=CRED_PENDING)return -1;
+    int template_uuid=kind==CREDENTIAL_FINGER?u.finger_uuid:kind==CREDENTIAL_FACE?u.face_uuid:u.palm_uuid;
+    if(template_uuid<0||(kind==CREDENTIAL_FINGER?u.finger_state:kind==CREDENTIAL_FACE?u.face_state:u.palm_state)!=CRED_PENDING)return -1;
     if(exec(s,"BEGIN IMMEDIATE"))return -1;
     int rc=credential_update(s,local_id,CRED_REGISTERED,"",hand_side,kind,template_uuid);
     if(!rc)rc=clear_operation(s,local_id);
@@ -408,9 +433,9 @@ int store_finish_delete(UserStore *s,uint16_t local_id)
 }
 int store_pending(UserStore *s,PendingOperation *ops,int capacity)
 {
-    sqlite3_stmt *q=NULL;if(prepare(s,&q,"SELECT local_id,kind='delete',modality='face',COALESCE(template_uuid,-1) FROM operations ORDER BY created_utc"))return -1;
+    sqlite3_stmt *q=NULL;if(prepare(s,&q,"SELECT local_id,kind='delete',CASE modality WHEN 'fingerprint' THEN 4 WHEN 'face' THEN 1 ELSE 2 END,COALESCE(template_uuid,-1) FROM operations ORDER BY created_utc"))return -1;
     int n=0,rc;while((rc=sqlite3_step(q))==SQLITE_ROW){if(n==capacity){sqlite3_finalize(q);return -1;}
-        ops[n].local_id=sqlite3_column_int(q,0);ops[n].deleting=sqlite3_column_int(q,1);ops[n].modality=sqlite3_column_int(q,2)?CREDENTIAL_FACE:CREDENTIAL_PALM;ops[n++].template_uuid=sqlite3_column_int(q,3);}
+        ops[n].local_id=sqlite3_column_int(q,0);ops[n].deleting=sqlite3_column_int(q,1);ops[n].modality=sqlite3_column_int(q,2);ops[n++].template_uuid=sqlite3_column_int(q,3);}
     sqlite3_finalize(q);return rc==SQLITE_DONE?n:-1;
 }
 int store_mark_missing_kind(UserStore *s,uint16_t local_id,unsigned kind)
@@ -446,7 +471,7 @@ static int record(UserStore *s,const AppUser *u,float score,uint64_t ms,unsigned
         sqlite3_bind_text(q,3,u?u->employee_id:"",-1,SQLITE_TRANSIENT);sqlite3_bind_text(q,4,u?u->name:"",-1,SQLITE_TRANSIENT);
         sqlite3_bind_text(q,5,u?"matched":"unmatched",-1,SQLITE_STATIC);sqlite3_bind_double(q,6,score);
         sqlite3_bind_int64(q,7,now);sqlite3_bind_int(q,8,now>=1704067200);sqlite3_bind_int64(q,9,ms);sqlite3_bind_text(q,10,modality_name(kind),-1,SQLITE_STATIC);
-        int template_uuid=u?(kind==CREDENTIAL_FACE?u->face_uuid:u->palm_uuid):-1;
+        int template_uuid=u?(kind==CREDENTIAL_FINGER?u->finger_uuid:kind==CREDENTIAL_FACE?u->face_uuid:u->palm_uuid):-1;
         if(template_uuid>=0)sqlite3_bind_int(q,11,template_uuid);else sqlite3_bind_null(q,11);
         rc=done(s,q);
     }

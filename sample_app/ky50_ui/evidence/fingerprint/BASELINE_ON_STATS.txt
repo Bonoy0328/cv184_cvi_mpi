@@ -1,0 +1,98 @@
+FINGER_PRESENCE status=101 present=0 sample_id=1 elapsed_us=1039
+PERF ui.render n=147 avg_ms=0.02 max_ms=0.32
+PERF ui.present n=76 avg_ms=11.81 max_ms=25.23
+PERF ui.process n=1086 avg_ms=0.07 max_ms=26.83
+STATS elapsed=5 capture_fps=14.32 display_fps=15.12 frames=72 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=45 hits=0 infer_ms=11.16 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=45 hits=0 errors=0
+PERF biometric.detect n=45 avg_ms=98.20 max_ms=120.23
+PERF palm.access n=45 avg_ms=0.01 max_ms=0.09
+PERF palm.age n=45 avg_ms=164.96 max_ms=205.00
+PERF capture.vi n=90 avg_ms=0.60 max_ms=51.46
+PERF capture.preview n=90 avg_ms=15.23 max_ms=35.21
+PERF capture.ir n=90 avg_ms=28.29 max_ms=40.51
+PERF capture.interval n=89 avg_ms=49.87 max_ms=67.00
+FINGER_PRESENCE status=101 present=0 sample_id=119 elapsed_us=4643
+PERF ui.render n=145 avg_ms=0.10 max_ms=9.06
+PERF ui.present n=102 avg_ms=14.05 max_ms=35.38
+PERF ui.process n=859 avg_ms=0.08 max_ms=6.50
+STATS elapsed=10 capture_fps=20.00 display_fps=20.40 frames=172 page=0 eth=1
+PERF capture.vi n=101 avg_ms=0.03 max_ms=0.07
+PERF capture.preview n=101 avg_ms=14.69 max_ms=28.51
+PERF capture.ir n=101 avg_ms=28.47 max_ms=42.13
+PERF capture.interval n=101 avg_ms=49.53 max_ms=72.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=9.23 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=96 hits=0 errors=0
+PERF biometric.detect n=51 avg_ms=98.18 max_ms=131.49
+PERF palm.access n=51 avg_ms=0.01 max_ms=0.02
+PERF palm.age n=51 avg_ms=160.76 max_ms=220.00
+FINGER_PRESENCE status=101 present=0 sample_id=238 elapsed_us=1053
+PERF ui.render n=145 avg_ms=0.02 max_ms=0.14
+PERF ui.present n=102 avg_ms=12.85 max_ms=40.17
+PERF ui.process n=902 avg_ms=0.07 max_ms=6.95
+STATS elapsed=15 capture_fps=20.20 display_fps=20.40 frames=273 page=0 eth=1
+PERF capture.vi n=101 avg_ms=0.03 max_ms=0.05
+PERF capture.preview n=101 avg_ms=14.83 max_ms=28.02
+PERF capture.ir n=101 avg_ms=29.22 max_ms=40.41
+PERF capture.interval n=101 avg_ms=49.87 max_ms=64.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=52 hits=0 infer_ms=10.58 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=148 hits=0 errors=0
+PERF biometric.detect n=52 avg_ms=97.46 max_ms=123.72
+PERF palm.access n=52 avg_ms=0.01 max_ms=0.02
+PERF palm.age n=52 avg_ms=166.42 max_ms=207.00
+FINGER_PRESENCE status=101 present=0 sample_id=356 elapsed_us=1024
+PERF ui.render n=145 avg_ms=0.05 max_ms=4.85
+PERF ui.present n=99 avg_ms=12.79 max_ms=37.31
+PERF ui.process n=940 avg_ms=0.06 max_ms=7.76
+STATS elapsed=20 capture_fps=19.79 display_fps=19.79 frames=372 page=0 eth=1
+PERF capture.vi n=100 avg_ms=0.03 max_ms=0.06
+PERF capture.preview n=100 avg_ms=15.43 max_ms=27.70
+PERF capture.ir n=100 avg_ms=28.95 max_ms=43.17
+PERF capture.interval n=100 avg_ms=50.32 max_ms=71.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=9.65 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=199 hits=0 errors=0
+PERF biometric.detect n=51 avg_ms=98.41 max_ms=117.38
+PERF palm.access n=51 avg_ms=0.01 max_ms=0.02
+PERF palm.age n=51 avg_ms=171.10 max_ms=199.00
+PERF ui.render n=146 avg_ms=0.02 max_ms=1.12
+PERF ui.present n=101 avg_ms=12.72 max_ms=26.03
+PERF ui.process n=912 avg_ms=0.09 max_ms=7.56
+STATS elapsed=25 capture_fps=20.00 display_fps=20.20 frames=472 page=0 eth=1
+FINGER_PRESENCE status=101 present=0 sample_id=473 elapsed_us=1079
+PERF capture.vi n=99 avg_ms=0.06 max_ms=3.41
+PERF capture.preview n=99 avg_ms=14.96 max_ms=31.00
+PERF capture.ir n=99 avg_ms=29.38 max_ms=44.49
+PERF capture.interval n=99 avg_ms=50.61 max_ms=68.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=9.14 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=250 hits=0 errors=0
+PERF biometric.detect n=51 avg_ms=97.74 max_ms=115.72
+PERF palm.access n=51 avg_ms=0.01 max_ms=0.02
+PERF palm.age n=51 avg_ms=164.45 max_ms=209.00
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.09
+PERF ui.present n=102 avg_ms=12.38 max_ms=25.44
+PERF ui.process n=949 avg_ms=0.06 max_ms=4.18
+STATS elapsed=30 capture_fps=19.80 display_fps=20.40 frames=571 page=0 eth=1
+FINGER_PRESENCE status=101 present=0 sample_id=590 elapsed_us=2189
+PERF capture.vi n=100 avg_ms=0.13 max_ms=10.13
+PERF capture.preview n=100 avg_ms=14.85 max_ms=29.31
+PERF capture.ir n=100 avg_ms=29.16 max_ms=40.06
+PERF capture.interval n=100 avg_ms=50.13 max_ms=67.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=51 hits=0 infer_ms=9.39 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=301 hits=0 errors=0
+PERF biometric.detect n=51 avg_ms=98.89 max_ms=115.50
+PERF palm.access n=51 avg_ms=0.01 max_ms=0.02
+PERF palm.age n=51 avg_ms=164.16 max_ms=198.00
+PERF ui.render n=146 avg_ms=0.01 max_ms=0.05
+PERF ui.present n=100 avg_ms=13.99 max_ms=32.15
+PERF ui.process n=877 avg_ms=0.07 max_ms=5.35
+STATS elapsed=35 capture_fps=20.19 display_fps=19.99 frames=672 page=0 eth=1
+PERF capture.vi n=101 avg_ms=0.07 max_ms=4.30
+PERF capture.preview n=101 avg_ms=14.73 max_ms=26.93
+PERF capture.ir n=101 avg_ms=28.71 max_ms=42.14
+PERF capture.interval n=101 avg_ms=49.93 max_ms=66.00
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=50 hits=0 infer_ms=10.17 state=1
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=351 hits=0 errors=0
+PERF biometric.detect n=50 avg_ms=100.39 max_ms=116.04
+PERF palm.access n=50 avg_ms=0.01 max_ms=0.02
+PERF palm.age n=50 avg_ms=167.00 max_ms=206.00
+FINGER_PRESENCE status=101 present=0 sample_id=709 elapsed_us=1027

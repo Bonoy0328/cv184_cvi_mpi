@@ -1,0 +1,111 @@
+/tmp/ky50-ui/ky50_ui
+b4e8650868724e93b3836522761c84cca02e6ab6931247c3a9a47aed9798ab87  /proc/1693/exe
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x01
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		 640	 480	  BT	1MUX	  P
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	YUYV	 YUV		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  0	  0	  1		  0 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		  640		  480
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	 640	 480	  N	 N	   	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	 640	 480	   	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   21		  124	  124	    0		    0	 640	 480
+[I][pva] PALM_CONFIG second_keypoint=0
+
+[facerec] face_1000_20261112 pack=/tmp/ky50-ui/pva/pva_face.model index=0 sha256=f43aab3beed5f79fa5fc7fcde41f250a062d889a933a9b9998ac2520b071b31f
+[CV184X] loaded scrfd_2_5g_kps input=input.1_raw [1,3,480,640] bytes=921600 outputs=9
+[CV184X] output=446_Sigmoid dtype=UINT8 bytes=9600 scale=0.00392156886 zp=0
+[CV184X] output=466_Sigmoid dtype=UINT8 bytes=2400 scale=0.00392156886 zp=0
+[CV184X] output=486_Sigmoid dtype=UINT8 bytes=600 scale=0.00392156886 zp=0
+[CV184X] output=449_Reshape dtype=INT8 bytes=38400 scale=0.0350356624 zp=0
+[CV184X] output=469_Reshape dtype=UINT8 bytes=9600 scale=0.0231084377 zp=0
+[CV184X] output=489_Reshape dtype=INT8 bytes=2400 scale=0.03987303 zp=0
+[CV184X] output=452_Reshape dtype=INT8 bytes=96000 scale=0.0228177533 zp=0
+[CV184X] output=472_Reshape dtype=INT8 bytes=24000 scale=0.02850057 zp=0
+[CV184X] output=492_Reshape dtype=INT8 bytes=6000 scale=0.015922565 zp=0
+[facerec] face_1000_20261112 pack=/tmp/ky50-ui/pva/pva_face.model index=1 sha256=6d88808c1c2bd39ed58cef2c3a143bf0b5f5a62b12352866500ec34e3a4f289a
+[CV184X] loaded w600k_mbf input=input.1_raw [1,3,112,112] bytes=37632 outputs=1
+[CV184X] output=516_BatchNormalization dtype=INT8 bytes=512 scale=0.0384951942 zp=0
+[facerec] face_1000_20261112 pack=/tmp/ky50-ui/pva/pva_face.model index=2 sha256=34d6fdeb1f9a3c3cbc147a018c42f481b55b2e08363f728e46a938572acd6419
+[CV184X] loaded lightqnet_dm100 input=input:0_raw [1,3,96,96] bytes=27648 outputs=1
+[CV184X] output=confidence_st:0_Sigmoid dtype=UINT8 bytes=1 scale=0.00392156886 zp=0
+[facerec] face_1000_20261112 pack=/tmp/ky50-ui/pva/pva_face.model index=3 sha256=2ccf8e248a900763b51332bb93b3acd06c0c0fb761aab1674536744f1c1f6fbd
+[CV184X] loaded best_224 input=input_raw [1,3,224,224] bytes=150528 outputs=1
+[CV184X] output=output_Gemm dtype=INT8 bytes=3 scale=0.238919243 zp=0
+[facerec] liveness rgb=1 ir_ready=1 resize_method=1 (0=reference,1=bilinear,2=nearest)
+init pva cost 712 ms
+FACE_PREPROCESS mode=direct
+PVA ready: palm=IR Y, face=RGB camera NV12; unified init and serial worker
+USER_DB journal=WAL synchronous=FULL autocheckpoint_pages=256
+ACCESS parameters loaded source=defaults hand=76 auth=52 dynamic=2
+FACE_PARAMETERS detection=0.50 quality=1/0.30 liveness=0/0.20 auth=0.24 filter=0.24 applied
+ACCESS face parameters loaded source=database detection=50 quality=1/30 liveness=0/20 auth=24 filter=24
+ACCESS departure palm=3 face=3 consecutive misses relay_seconds=1 match_confirmations=1 success_cooldown_seconds=0 strong_liveness=1 config=/mnt/system/ky50-data/app.conf ready=1
+FACE_IR_CAL load=device result=0 mapped=1 rms=4.847 samples=120
+IR_AE saved_target=20; apply only after hand detection
+SOURCE switching none -> DVP
+GC0328 I2C2/0x21 chip_id=0x9d expected=0x9d
+GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped, inverse=on
+ROTATION_PIPELINE algorithm_and_preview_rotation=software CCW90 preview_csc=software
+ROTATED group=0 source=864x648 stride=896/896 offsets=L0 R0 T0 B0 rotated=648x864 copy=84,4 480x854 display crop
+PERF ui.render n=145 avg_ms=0.01 max_ms=0.04
+PERF ui.present n=85 avg_ms=4.41 max_ms=9.77
+PERF ui.process n=1333 avg_ms=0.05 max_ms=36.15
+STATS elapsed=5 capture_fps=16.19 display_fps=16.99 frames=81 page=0 eth=1
+PALM_STATS source=IR pipe=0 input=540x960 Y-only uncropped frames=0 hits=0 infer_ms=0.00 state=0
+FACE_STATS source=RGB pipe=1 input=540x960 NV12 frames=0 hits=0 errors=0
+PALM_PIPELINE features=0 auth=0 held=0 present=0 entry=0 missing=0 success_hold=0
+PERF biometric.detect n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.access n=0 avg_ms=0.00 max_ms=0.00
+PERF palm.age n=0 avg_ms=0.00 max_ms=0.00
+PALM_QUEUE posted=0 taken=0 replaced=0 depth=0
+PERF capture.vi n=98 avg_ms=36.07 max_ms=60.94
+PERF capture.preview n=98 avg_ms=12.89 max_ms=21.37
+PERF capture.ir n=98 avg_ms=0.02 max_ms=0.02
+PERF capture.interval n=97 avg_ms=50.06 max_ms=60.00
+SCALE_PERF group=0 vpss=2.05 map=0.26 rotate=1.84 convert=8.79 release=0.10 ms
+SNAPSHOT /tmp/ky50-ui/screen.ppm OK

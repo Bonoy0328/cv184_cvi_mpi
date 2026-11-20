@@ -1,13 +1,16 @@
 #ifndef KY50_BIOMETRIC_WORKER_H
 #define KY50_BIOMETRIC_WORKER_H
 #include "access.h"
-enum bio_stage { BIO_FEATURE, BIO_AUTH, BIO_FACE_RECOGNIZE, BIO_PALM_RECOGNIZE };
+enum bio_stage { BIO_FEATURE, BIO_AUTH, BIO_FACE_RECOGNIZE, BIO_PALM_RECOGNIZE, BIO_FINGER_RECOGNIZE };
 typedef struct {
     unsigned kind;
     enum bio_stage stage;
     HandPoseRes_t hand;
     FacePoseRes_t face;
     uint8_t feature[APP_FEATURE_BYTES];
+    FingerprintRes_t finger;
+    uint32_t feature_size;
+    uint64_t sample_id;
     User_For_C_t user;
     int result,auth_result,rgb_preview;
     uint64_t submitted_ms;
@@ -18,6 +21,7 @@ typedef struct {
     int require_ir_liveness,ir_live_result;
     uint64_t ir_live_us,completed_us;
 } BioJob;
+int bio_worker_start_modalities(const PalmBackend*,const FaceBackend*,const FingerBackend*);
 int bio_worker_start(const PalmBackend *palm,const FaceBackend *face);
 void bio_worker_stop(void);
 int bio_worker_busy(void);

@@ -10,4 +10,5 @@ void user_ui_shutdown(void);
 const char *user_ui_employee_text(void);
 const char *user_ui_name_text(void);
 const char *user_ui_composition(void);
+unsigned user_ui_enrollment_kind(void);
 #endif

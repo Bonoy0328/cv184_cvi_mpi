@@ -1,0 +1,24 @@
+{
+  "recorded_date": "2026-11-15",
+  "timezone": "Asia/Shanghai",
+  "command": [
+    "make -j8 package"
+  ],
+  "nfs_release": "ky50_dvp_inverse_20261115",
+  "cvi_mpi_base_commit": "41d983b8ee5c6ffac012b044794cfac2e8432e11",
+  "working_tree_changes": [
+    "gc0328.c default inverse",
+    "README.md DVP behavior",
+    "DEVELOPMENT.md section 13"
+  ],
+  "sha256": {
+    "build/deploy/ky50_ui": "b4e8650868724e93b3836522761c84cca02e6ab6931247c3a9a47aed9798ab87",
+    "gc0328.c": "e0fca03239b11a2038bde288920aa6fb7f660b0c0dbb4de57f7e1ed1dda28cf7",
+    "gc0328_regs.h": "bb2b1807a79bf6c5935972dafc6e30c21f8d8ca520237d8c220bc39780119c97",
+    "scale.c": "461144cb5afa1705196fd755bf68e051406596f74d46836980e9f8bd8142a5d9",
+    "camera_port.c": "1ee4adfa208e44a7dd6c420fc17f4bb4e587b1ced18724f0a20772aa13f34a67",
+    "pva/lib/libpva.a": "243f00f05240eda21685d5143be8136fc3f22f7df6dc048a279a8746e43e9e5f"
+  },
+  "validation": "Default DVP restart and parallel RTSP restart read Page0 0x43=0x01; each RTSP decoded 151 frames in 10s test with zero decode errors; final PID 2107, DVP inverse on, RTSP off.",
+  "limits": "NFS application deployment; no firmware/autostart update or power-cycle validation. Parallel VbFail nonzero; see INTEGRATION.txt."
+}

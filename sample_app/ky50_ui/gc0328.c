@@ -114,8 +114,9 @@ static int start(int parallel)
     }
     /* Y Cb Y Cr; VS low-valid, HREF high-valid, falling-edge data launch.
      * 0x46=0x03 gives SOF but no complete frames with this TTL receiver.
+     * Page0 0x43 bit0 inverts luminance too: white-background fingerprint.
      * Exact 640x480 crop; outputs stay disabled during VI setup. */
-    static const unsigned char format[][2]={{0xfe,0},{0x44,0x22},{0x46,0x02},
+    static const unsigned char format[][2]={{0xfe,0},{0x43,0x01},{0x44,0x22},{0x46,0x02},
         {0x50,1},{0x51,0},{0x52,0},{0x53,0},{0x54,0},{0x55,1},{0x56,0xe0},
         {0x57,2},{0x58,0x80},{0xf1,0},{0xf2,0}};
     for(unsigned i=0;i<sizeof(format)/sizeof(format[0]);i++) CHECK(reg_write(format[i][0],format[i][1]));
@@ -142,7 +143,7 @@ static int start(int parallel)
         .enCompressMode=COMPRESS_MODE_NONE,.u32Depth=2,.u32BindVbPool=(unsigned)-1};
     CHECK(CVI_VI_SetChnAttr(capture_dev,0,&channel));CHECK(CVI_VI_EnableChn(capture_dev,0));channel_up=1;
     CHECK(reg_write(0xf2,1));CHECK(reg_write(0xf1,7));
-    printf("GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped\n");
+    printf("GC0328 streaming 640x480 YUYV BT601, VS low-valid/HREF high-valid, wiring=swapped, inverse=on\n");
     return 0;
 }
 int gc0328_start(void) { return start(0); }

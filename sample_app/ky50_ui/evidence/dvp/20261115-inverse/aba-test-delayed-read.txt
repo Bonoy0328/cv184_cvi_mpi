@@ -1,0 +1,96 @@
+c991cd846ea80ab172e0fdf0c1c60e9255f61440ec5f4385ef6e3e7fa6407c09  /tmp/gc0328_inverse_probe
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x00
+special_effect_after=0x01 inverse=1
+GC0328 chip_id=0x9d page=0x00
+special_effect_before=0x01
+special_effect_after=0x00 inverse=0
+
+-------------------------------MODULE PARAM-------------------------------------
+	DetectErrFrame	DropErrFrame
+		0		0
+
+-------------------------------VI MODE------------------------------------------
+	DevID	PrerawFE	Postraw		Scaler
+	  0	 online		offline		offline
+
+-------------------------------VI DEV ATTR1-------------------------------------
+	DevID	DevEn	BindPipe	Width	Height	IntfM	WkM	ScanM
+	  0	  Y	   Y		 640	 480	  BT	1MUX	  P
+
+-------------------------------VI DEV ATTR2-------------------------------------
+	DevID	AD0	AD1	AD2	AD3	Seq	DataType	WDRMode
+	  0	0	0	0	0	YUYV	 YUV		None
+
+-------------------------------VI BIND ATTR-------------------------------------
+	MipiId	DevID	PipeNum		PipeId
+	  0	  0	  1		  0 
+
+-------------------------------VI DEV TIMING ATTR-------------------------------
+	DevID	DevTimingEn	DevFrmRate	DevWidth	DevHeight
+	  0	    N		   0		  640		  480
+
+-------------------------------VI CHN ATTR1-------------------------------------
+	PipeID	ChnID	Width	Height	Mirror	Flip	PixFmt	VideoFmt	BindPool
+	  0	  0	 640	 480	  N	 N	   	  SDR8		  -1
+
+-------------------------------VI CHN ATT2--------------------------------------
+	PipeID	ChnID	CompressMode	Depth	Align
+	  0	  0	None		  2	 32
+
+-------------------------------VI CHN OUTPUT RESOLUTION-------------------------
+	DevID	ChnID	Mirror	Flip	Width	Height	PixFmt	VideoFmt	CompressMode
+	  0	  0	  N	 N	 640	 480	   	  SDR8		  None
+
+-------------------------------VI CHN ROTATE INFO-------------------------------
+	DevID	ChnID	Rotate
+	  0	  0	  0
+
+-------------------------------VI CHN EARLY INTERRUPT INFO----------------------
+	PipeID	ChnID	Enable	LineCnt
+	  0	  0	  N	   0
+
+-------------------------------VI CHN CROP INFO---------------------------------
+	PipeID	ChnID	CropEn	CoorType	CoorX	CoorY	Width	Height	TrimX	TrimY	TrimWid	TrimHgt
+	  0	  0	  N	  RAT		   0	   0	   0	   0	   0	  0	  0	   0
+
+-------------------------------VI CHN STATUS------------------------------------
+	PipeID	ChnID	Enable	FrameRate	IntCnt	RecvPic	LostFrame	VbFail	Width	Height
+	  0	  0	  Y	   21		 4160	 4160	    0		    0	 640	 480
+[VI Post_Dbg_Info]
+VIIspTopStatus0		:0x3fc		VIIspTopStatus1		:0x7ff
+[VI DMA_Dbg_Info]
+VIWdma1ErrStatus	:0x3000000	VIWdma1IdleStatus	:0xffffebee
+VIWdma2ErrStatus	:0x3000040	VIWdma2IdleStatus	:0xfffffffe
+VIWdma3ErrStatus	:0x3000040	VIWdma3IdleStatus	:0xffffffff
+VIRdma1ErrStatus	:0x3000000	VIRdma1IdleStatus	:0xffffffff
+VIRdma2ErrStatus	:0x3000000	VIRdma2IdleStatus	:0xffffffff
+VIRdma3ErrStatus	:0x3000000	VIRdma3IdleStatus	:0xffffffff
+[VI ISP_FE_0 FE_Dbg_Info]
+VIPreFERawDbgSts	:0x3fe		VIPreFEDbgInfo		:0x7fffe
+[VI ISP_FE_0]
+VIOutImgWidth		: 640
+VIOutImgHeight		: 480
+VIInImgWidth		: 640
+VIInImgHeight		: 480
+VIDevFPS		:  20
+VIFPS			:  20
+VISofCh0Cnt		:4181
+VIPreFECh0Cnt		:4180
+VIPostPipe0Cnt		:   0
+VIDropCnt		:   0
+VIDumpCnt		:   0
+[VI ISP_FE_0 Csi_Dbg_Info]
+VICsiIntStatus0		:0x6
+VICsiIntStatus1		:0x200000
+VICsiOverFlowCnt	:   0
+VICsiCh0Dbg0		:0x4c89c000
+VICsiCh0Dbg1		:0x0
+VICsiCh0Dbg2		:0x10551055
+VICsiCh0Dbg3		:0x0
+VICsiCh0WidthGTCnt	:   0
+VICsiCh0WidthLSCnt	:   0
+VICsiCh0HeightGTCnt	:   0
+VICsiCh0HeightLSCnt	:   0
+[VI ISP_PIPE_0 Buf_Dbg_Info]
+VIYuvCh0OutBufEmpty	:   0

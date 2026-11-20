@@ -1,3 +1,4 @@
+#include "ky50_features.h"
 #include "user_ui.h"
 #include "ime.h"
 #include <stdio.h>
@@ -14,7 +15,7 @@ extern const lv_font_t ky50_font_20,ky50_font_24;
 #define MUTED 0x9eafc1
 static AccessSnapshot data;
 static lv_obj_t *parent,*message_label,*employee_label,*name_area,*keyboard,*composition_label,*candidate_labels[5];
-static lv_obj_t *progress_bar,*progress_label,*selected_label;
+static lv_obj_t *progress_bar,*progress_label,*selected_label,*finger_round_label;
 static enum ui_page current=UI_HOME;
 static char employee[APP_EMPLOYEE_BYTES],name[APP_NAME_BYTES],composition[8];
 static uint16_t selected_id=UINT16_MAX;
@@ -79,10 +80,11 @@ static void show_avatar(lv_obj_t *row,const AppUser *u)
     lv_obj_t *tile=box(row,12,16,58,64,0x284159,255,10);
     box(tile,21,10,16,16,MUTED,255,8);box(tile,13,30,32,23,MUTED,255,12);
 }
+static const int registration_enabled[]={KY50_ENABLE_FACE,KY50_ENABLE_PALM,KY50_ENABLE_FINGERPRINT,1,1};
 static void types_text(unsigned mask,char *out,size_t n)
 {
     static const char *names[]={"人脸","掌静脉","指纹","卡","密码"};out[0]=0;
-    for(int i=0;i<5;i++)if(mask&(1u<<i)){size_t len=strlen(out);snprintf(out+len,n-len,"%s%s",len?" / ":"",names[i]);}
+    for(int i=0;i<5;i++)if(registration_enabled[i]&&(mask&(1u<<i))){size_t len=strlen(out);snprintf(out+len,n-len,"%s%s",len?" / ":"",names[i]);}
     if(!*out)snprintf(out,n,"未注册");
 }
 static unsigned selection_count(void){unsigned n=0;for(int i=0;i<APP_MAX_USERS;i++)n+=!!selected[i];return n;}
@@ -109,7 +111,7 @@ static void delete_selected(lv_event_t *e)
     if(data.busy){message("正在删除，请稍候");return;}
     for(int i=0;i<APP_MAX_USERS;i++)if(selected[i])c.ids[c.count++]=i;
     if(!c.count){message("请先勾选需要删除的用户");return;}
-    if(!submit(&c))message("正在删除用户及掌静脉数据");
+    if(!submit(&c))message("正在删除用户数据");
 }
 static void users_page(int managing)
 {
@@ -131,8 +133,8 @@ static void users_page(int managing)
         n=text(row,line,82,39,managing?292:348,&ky50_font_20,MUTED);lv_obj_set_style_text_align(n,LV_TEXT_ALIGN_LEFT,0);lv_label_set_long_mode(n,LV_LABEL_LONG_DOT);
         types_text(u->registered,line,sizeof(line));
         if(u->deleting)snprintf(line,sizeof(line),"删除待重试");
-        else if(u->face_state==CRED_MISSING)snprintf(line,sizeof(line),"人脸需重新注册");
-        else if(u->palm_state==CRED_MISSING)snprintf(line,sizeof(line),"掌静脉需重新注册");
+        else if(KY50_ENABLE_FACE&&u->face_state==CRED_MISSING)snprintf(line,sizeof(line),"人脸需重新注册");
+        else if(KY50_ENABLE_PALM&&u->palm_state==CRED_MISSING)snprintf(line,sizeof(line),"掌静脉需重新注册");
         n=text(row,line,82,69,managing?292:348,&ky50_font_20,ACCENT);lv_obj_set_style_text_align(n,LV_TEXT_ALIGN_LEFT,0);
         if(managing) {
             lv_obj_t *check=lv_checkbox_create(row);lv_checkbox_set_text(check,"");lv_obj_set_pos(check,382,29);
@@ -272,11 +274,11 @@ static unsigned enrollment_kind=CREDENTIAL_PALM;
 static void registration_type(lv_event_t *e)
 {
     int type=(int)(intptr_t)lv_event_get_user_data(e);AppUser *u=selected_user();
-    if(type>1){message("此注册方式暂未实现");return;}
+    if(type>2){message("此注册方式暂未实现");return;}
     if(!u||u->deleting){message("用户不可用");return;}
-    if((type==0?u->face_state:u->palm_state)==CRED_REGISTERED){message("该方式已注册");return;}
-    if(type==0?!data.face_ready:!data.palm_ready){message("算法不可用");return;}
-    enrollment_kind=type==0?CREDENTIAL_FACE:CREDENTIAL_PALM;
+    if((type==2?u->finger_state:type==0?u->face_state:u->palm_state)==CRED_REGISTERED){message("该方式已注册");return;}
+    if(type==2?!data.finger_ready:type==0?!data.face_ready:!data.palm_ready){message("算法不可用");return;}
+    enrollment_kind=type==2?CREDENTIAL_FINGER:type==0?CREDENTIAL_FACE:CREDENTIAL_PALM;
     AccessCommand c={.type=ACCESS_ENROLL,.local_id=u->local_id,.modality=enrollment_kind};if(!submit(&c))ui_show(UI_PALM_ENROLL,0);
 }
 static void types_page(void)
@@ -287,22 +289,40 @@ static void types_page(void)
     text(card,*u->name?u->name:"未设置姓名",82,12,340,&ky50_font_24,TEXT);
     char id[64];snprintf(id,sizeof(id),"ID  %s",u->employee_id);text(card,id,82,54,340,&ky50_font_20,MUTED);
     static const char *titles[]={"人脸","掌静脉","指纹","卡","密码"};
+    int row=0;
     for(int i=0;i<5;i++) {
-        lv_obj_t *b=button(parent,24,316+i*100,432,86,NULL,registration_type,i);
-        text(b,titles[i],22,26,150,&ky50_font_24,i<=1?TEXT:MUTED);
-        text(b,u->registered&(1u<<i)?"已注册":i<=1?"点击注册":"暂未实现",208,28,202,&ky50_font_20,i<=1?ACCENT:MUTED);
+        if(!registration_enabled[i])continue;
+        lv_obj_t *b=button(parent,24,316+row++*100,432,86,NULL,registration_type,i);
+        text(b,titles[i],22,26,150,&ky50_font_24,i<=2?TEXT:MUTED);
+        text(b,u->registered&(1u<<i)?"已注册":i<=2?"点击注册":"暂未实现",208,28,202,&ky50_font_20,i<=2?ACCENT:MUTED);
     }
 }
 static void enroll_page(void)
 {
-    heading(enrollment_kind==CREDENTIAL_FACE?"人脸注册":"掌静脉注册",UI_USER_TYPES);
+    heading(enrollment_kind==CREDENTIAL_FINGER?"指纹注册":enrollment_kind==CREDENTIAL_FACE?"人脸注册":"掌静脉注册",UI_USER_TYPES);
+    if(enrollment_kind==CREDENTIAL_FINGER) {
+        lv_obj_set_style_bg_color(parent,lv_color_hex(BG),0);
+        lv_obj_set_style_bg_opa(parent,LV_OPA_COVER,0);
+        text(parent,"请使用同一手指完成5次按压",24,230,432,&ky50_font_24,TEXT);
+        finger_round_label=text(parent,"第1次 / 共5次",24,298,432,&ky50_font_24,ACCENT);
+        progress_label=text(parent,"0%",24,360,432,&ky50_font_24,TEXT);
+        progress_bar=lv_bar_create(parent);lv_obj_set_pos(progress_bar,40,420);lv_obj_set_size(progress_bar,400,24);
+        lv_bar_set_range(progress_bar,0,100);lv_bar_set_value(progress_bar,0,LV_ANIM_OFF);
+        lv_obj_set_style_bg_color(progress_bar,lv_color_hex(0x36506a),0);
+        lv_obj_set_style_bg_color(progress_bar,lv_color_hex(ACCENT),LV_PART_INDICATOR);
+        lv_obj_set_style_bg_opa(progress_bar,LV_OPA_COVER,0);lv_obj_set_style_bg_opa(progress_bar,LV_OPA_COVER,LV_PART_INDICATOR);
+        lv_obj_set_pos(message_label,28,492);lv_obj_set_width(message_label,424);
+        text(parent,"每次采集10帧\n采满后请抬起手指，保持离开2秒",28,630,424,&ky50_font_20,MUTED);
+        text(parent,"点击返回可取消本次注册",28,750,424,&ky50_font_20,MUTED);
+        message("请将同一手指放在指纹采集区");return;
+    }
     /* Transparent middle: the main RGB preview and IR-derived overlay remain
      * at full-screen coordinates. No additional inset or rescaling. */
     lv_obj_set_style_bg_opa(parent,0,0);
     box(parent,0,0,480,174,BG,220,0); /* Place below existing heading objects. */
     lv_obj_move_to_index(lv_obj_get_child(parent,-1),0);
     lv_obj_t *bottom=box(parent,0,674,480,180,BG,235,0);
-    text(bottom,enrollment_kind==CREDENTIAL_FACE?"请正对摄像头，并移开手掌":"请保持同一只手掌，手指朝上",12,10,456,&ky50_font_20,TEXT);
+    text(bottom,enrollment_kind==CREDENTIAL_FINGER?"请保持同一手指在指纹采集区":enrollment_kind==CREDENTIAL_FACE?"请正对摄像头，并移开手掌":"请保持同一只手掌，手指朝上",12,10,456,&ky50_font_20,TEXT);
     progress_bar=lv_bar_create(bottom);lv_obj_set_pos(progress_bar,24,58);lv_obj_set_size(progress_bar,432,20);
     lv_bar_set_range(progress_bar,0,data.total>0?data.total:1);lv_bar_set_value(progress_bar,data.progress,LV_ANIM_OFF);
     lv_obj_set_style_bg_color(progress_bar,lv_color_hex(0x36506a),0);
@@ -311,14 +331,14 @@ static void enroll_page(void)
     lv_obj_set_style_radius(progress_bar,10,0);lv_obj_set_style_radius(progress_bar,10,LV_PART_INDICATOR);
     progress_label=text(bottom,"准备采集",24,88,432,&ky50_font_24,TEXT);
     text(bottom,"返回可取消本次注册",20,130,440,&ky50_font_20,MUTED);
-    message("正在准备 RGB 画面和红外采集");
+    message(enrollment_kind==CREDENTIAL_FINGER?"正在准备指纹画面":"正在准备 RGB 画面和红外采集");
 }
 void user_ui_before_page(enum ui_page next)
 {
     if(current==UI_USER_NAME&&name_area)app_utf8_copy(name,sizeof(name),lv_textarea_get_text(name_area));
     if(current==UI_PALM_ENROLL&&next!=UI_PALM_ENROLL){AccessCommand c={.type=ACCESS_CANCEL};access_submit(&c);}
     access_enable_recognition(next==UI_HOME);
-    current=next;parent=message_label=employee_label=name_area=keyboard=composition_label=progress_bar=progress_label=selected_label=NULL;
+    current=next;parent=message_label=employee_label=name_area=keyboard=composition_label=progress_bar=progress_label=selected_label=finger_round_label=NULL;
     for(int i=0;i<5;i++)candidate_labels[i]=NULL;
 }
 int user_ui_build(lv_obj_t *root,enum ui_page next)
@@ -351,8 +371,15 @@ void user_ui_update(const AccessSnapshot *snapshot)
     if(current==UI_USERS||current==UI_USERS_MANAGE) {
         ui_show(current,0);if(event_new)message(data.message);
     } else if(current==UI_PALM_ENROLL) {
-        if(progress_bar){lv_bar_set_range(progress_bar,0,data.total>0?data.total:1);lv_bar_set_value(progress_bar,data.progress,LV_ANIM_OFF);}
-        if(progress_label)lv_label_set_text_fmt(progress_label,"注册进度  %d / %d",data.progress,data.total);
+        if(enrollment_kind==CREDENTIAL_FINGER) {
+            int percent=data.total>0?data.progress*100/data.total:0;if(percent<0)percent=0;if(percent>100)percent=100;
+            if(progress_bar)lv_bar_set_value(progress_bar,percent,LV_ANIM_OFF);
+            if(progress_label)lv_label_set_text_fmt(progress_label,"%d%%",percent);
+            if(finger_round_label)lv_label_set_text_fmt(finger_round_label,"第%d次 / 共5次",data.finger_enroll_press>0?data.finger_enroll_press:1);
+        } else {
+            if(progress_bar){lv_bar_set_range(progress_bar,0,data.total>0?data.total:1);lv_bar_set_value(progress_bar,data.progress,LV_ANIM_OFF);}
+            if(progress_label)lv_label_set_text_fmt(progress_label,"注册进度  %d / %d",data.progress,data.total);
+        }
         message(data.message);
     } else if(event_new)message(data.message);
 }
@@ -360,3 +387,5 @@ void user_ui_shutdown(void){ime_close();ime_available=0;}
 const char *user_ui_employee_text(void){return employee;}
 const char *user_ui_name_text(void){return name_area?lv_textarea_get_text(name_area):name;}
 const char *user_ui_composition(void){return composition;}
+
+unsigned user_ui_enrollment_kind(void){return enrollment_kind;}

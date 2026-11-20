@@ -264,6 +264,10 @@ int media_camera_get_dvp(VIDEO_FRAME_INFO_S *frame)
 {
     return parallel_capture?CVI_VI_GetChnFrame(2,0,frame,60):-1;
 }
+int media_camera_try_get_dvp(VIDEO_FRAME_INFO_S *frame)
+{
+    return parallel_capture?CVI_VI_GetChnFrame(2,0,frame,0):-1;
+}
 int media_camera_release_dvp(VIDEO_FRAME_INFO_S *frame) { return CVI_VI_ReleaseChnFrame(2,0,frame); }
 void media_camera_stop(void)
 {
